@@ -1106,3 +1106,8 @@ Merge made by the 'ort' strategy.
  1 file changed, 6 insertions(+), 7 deletions(-)
 2026-03-28 03:10:03 爬取已在运行，跳过任务执行，仅更新状态
 2026-03-28 03:10:03 统计: 4城市, 416个PDF, 爬取运行中 (PID: 655688)
+To https://github.com/calinchow-del/renwu.git
+   e59a021..475fd68  main -> main
+2026-03-28 03:10:05 推送成功
+2026-03-28 03:10:05 ===== Worker结束 =====
+2026-03-28 03:15:01 ===== Worker启动 =====
