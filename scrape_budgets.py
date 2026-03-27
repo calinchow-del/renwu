@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-中国百强城市2026年部门预算爬取脚本 v2
-策略：并发爬取 + 深度搜索 + 智能匹配
+中国百强城市2026年部门预算爬取脚本 v3
+策略：只下载各部门"部门预算"主文件，不下载下属单位
 """
 
 import json
@@ -36,9 +36,9 @@ HEADERS = {
 }
 TIMEOUT = 20
 RETRY = 2
-MAX_WORKERS = 5          # 并发城市数
-DELAY_PAGE = 0.3          # 同域名请求间隔
-DELAY_CITY = 1            # 城市间间隔
+MAX_WORKERS = 3
+DELAY_PAGE = 0.3
+DELAY_CITY = 1
 
 # ========== 32个目标委办局 ==========
 TARGET_DEPTS = [
@@ -52,10 +52,7 @@ TARGET_DEPTS = [
     "气象局", "应急管理局", "审计局", "政府办公厅", "统计局", "信访局",
 ]
 
-# 关键词 -> 标准部门名  (用于模糊匹配)
-# 顺序重要：长匹配优先
 MATCH_RULES = [
-    # 特殊：交警必须在公安前
     (["公安局交通警察", "公安交通管理", "交警局", "交通警察局", "交警支队"], "公安局交通警察局"),
     (["卫生健康委", "卫健委", "卫生健康局", "卫生局"], "卫生健康委员会"),
     (["教育局", "教育委员会", "教育委"], "教育局"),
@@ -101,7 +98,7 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-# ========== 进度管理（线程安全）==========
+# ========== 进度管理 ==========
 progress_lock = threading.Lock()
 
 def load_progress():
@@ -111,19 +108,8 @@ def load_progress():
                 data = json.load(f)
         except (json.JSONDecodeError, IOError):
             return {"completed": {}, "failed": []}
-
-        # === 格式兼容：旧格式(completed_cities)迁移到新格式(completed dict) ===
         if 'completed' not in data:
             data['completed'] = {}
-        if 'completed_cities' in data:
-            for city_key in data.get('completed_cities', []):
-                if city_key not in data['completed']:
-                    details = data.get('city_details', {}).get(city_key, {})
-                    data['completed'][city_key] = {
-                        "found": len(details.get('found_departments', [])),
-                        "downloaded": len(details.get('downloaded_files', [])),
-                        "time": "migrated"
-                    }
         if 'failed' not in data:
             data['failed'] = []
         return data
@@ -139,13 +125,11 @@ def save_progress(progress):
 # ========== 核心工具 ==========
 
 def fix_url(url):
-    """HTTPS降级为HTTP，避免服务器SSL错误"""
     if url and url.startswith('https://'):
         return 'http://' + url[8:]
     return url
 
 def fetch(session, url, timeout=TIMEOUT):
-    """带重试的页面获取"""
     url = fix_url(url)
     for i in range(RETRY):
         try:
@@ -153,32 +137,73 @@ def fetch(session, url, timeout=TIMEOUT):
             r.encoding = r.apparent_encoding or 'utf-8'
             if r.status_code == 200:
                 return r
-        except Exception as e:
+        except Exception:
             if i < RETRY - 1:
                 time.sleep(1)
     return None
 
 def match_dept(text, city=""):
-    """将文本匹配到32个目标部门之一"""
     if not text or len(text.strip()) < 2:
         return None
     t = text.strip()
-    # 去掉城市前缀
     for p in [city + "市", city, "市"]:
         if p and t.startswith(p):
             t = t[len(p):]
-    # 按规则匹配
     for keywords, dept in MATCH_RULES:
         for kw in keywords:
             if kw in t:
-                # 防止"公安局"误匹配交警
                 if dept == "公安局" and ("交通" in t or "交警" in t):
                     return "公安局交通警察局"
                 return dept
     return None
 
+def is_main_dept_budget(text, dept_name, city):
+    """判断是否为部门主预算文件（非下属单位）"""
+    t = text.strip()
+    # 必须含"部门预算"或"预算"关键词
+    if "预算" not in t:
+        return False, 0
+    
+    score = 0
+    
+    # 最高优先：含"部门预算"
+    if "部门预算" in t:
+        score += 100
+    
+    # 高优先：含部门全称 + 预算
+    for keywords, dept in MATCH_RULES:
+        if dept == dept_name:
+            for kw in keywords:
+                if kw in t:
+                    score += 50
+                    break
+            break
+    
+    # 含"2026"加分
+    if "2026" in t:
+        score += 20
+    
+    # 减分项：明显是下属单位
+    sub_unit_keywords = [
+        "中心", "研究院", "研究所", "学校", "学院", "医院", "站",
+        "大队", "支队", "总队", "干部", "老干", "活动室", "活动中心",
+        "服务中心", "事务中心", "管理所", "监测", "培训", "幼儿园",
+        "纪念馆", "博物馆", "图书馆", "文化馆", "美术馆", "展示馆",
+        "福利院", "救助", "戒毒", "疗养", "供应站", "试验场",
+        "分局", "管理局", "监管局",  # 下辖分局
+        "本级", "本部",
+    ]
+    
+    # 如果同时含"部门预算"则不减分（因为部门整体预算文件有时也含这些词）
+    if "部门预算" not in t:
+        for kw in sub_unit_keywords:
+            if kw in t:
+                score -= 80
+                break
+    
+    return score > 0, score
+
 def download_pdf(session, url, path):
-    """下载PDF文件"""
     url = fix_url(url)
     try:
         r = session.get(url, timeout=60, stream=True, verify=False)
@@ -192,13 +217,12 @@ def download_pdf(session, url, path):
         pass
     return False
 
-def safe_filename(s, maxlen=60):
+def safe_filename(s, maxlen=80):
     return re.sub(r'[\\/:*?"<>|\s]', '_', s)[:maxlen]
 
 # ========== 页面解析 ==========
 
 def extract_all_links(session, url, city):
-    """从页面提取所有链接，返回 [(text, full_url, dept_match)] """
     r = fetch(session, url)
     if not r:
         return [], ""
@@ -220,8 +244,8 @@ def extract_all_links(session, url, city):
 
 def find_dept_budgets(session, budget_url, city):
     """
-    在预算页面及其子页面中查找32个部门的预算链接
-    返回 {dept_name: [(text, url, is_pdf), ...]}
+    查找各部门的"部门预算"主文件
+    返回 {dept_name: [(text, url, is_pdf, score), ...]}
     """
     found = {}
     visited = set()
@@ -234,22 +258,22 @@ def find_dept_budgets(session, budget_url, city):
         if not links:
             return
 
-        sub_pages = []  # 可能包含更多部门链接的子页面
+        sub_pages = []
 
         for text, link_url, dept in links:
             if dept:
                 is_pdf = link_url.lower().endswith('.pdf')
+                is_main, score = is_main_dept_budget(text, dept, city)
+                
                 if dept not in found:
                     found[dept] = []
-                # 去重
-                if not any(u == link_url for _, u, _ in found[dept]):
-                    found[dept].append((text, link_url, is_pdf))
+                
+                if not any(u == link_url for _, u, _, _ in found[dept]):
+                    found[dept].append((text, link_url, is_pdf, score))
             else:
-                # 可能是翻页或子分类链接
                 if depth < 2 and any(kw in text for kw in ['部门预算', '预算公开', '2026', '下一页', '更多']):
                     sub_pages.append(link_url)
 
-        # 翻页/子页面探索（限制数量避免爆炸）
         for sub_url in sub_pages[:10]:
             time.sleep(DELAY_PAGE)
             scan_page(sub_url, depth + 1)
@@ -257,7 +281,7 @@ def find_dept_budgets(session, budget_url, city):
     scan_page(budget_url)
     return found
 
-# ========== 常见预算路径探测 ==========
+# ========== 预算路径探测 ==========
 
 COMMON_BUDGET_PATHS = [
     "/zwgk/zdly/czxx/bmczyjs/", "/zwgk/zdly/czzj/bmyjshsgjf/ys/",
@@ -273,7 +297,6 @@ COMMON_BUDGET_PATHS = [
 ]
 
 def probe_budget_page(session, website, city):
-    """探测城市预算页面"""
     for path in COMMON_BUDGET_PATHS:
         url = urljoin(fix_url(website), path)
         r = fetch(session, url, timeout=10)
@@ -286,7 +309,6 @@ def probe_budget_page(session, website, city):
 # ========== 处理单个城市 ==========
 
 def process_city(city_info, progress):
-    """处理一个城市，返回结果"""
     rank = city_info['rank']
     city = city_info['city']
     website = fix_url(city_info['website'])
@@ -295,14 +317,12 @@ def process_city(city_info, progress):
     city_folder = str(BASE_DIR / city_key)
     os.makedirs(city_folder, exist_ok=True)
 
-    # 确保progress结构正确
     progress.setdefault('completed', {})
     progress.setdefault('failed', [])
 
-    # 跳过已完成
     if city_key in progress.get('completed', {}):
         prev = progress['completed'][city_key]
-        if prev.get('found', 0) >= 10:  # 已找到10+个部门就跳过
+        if prev.get('found', 0) >= 10:
             logger.info(f"[{city}] 已完成({prev['found']}个部门)，跳过")
             return
 
@@ -316,76 +336,91 @@ def process_city(city_info, progress):
 
     result = {"found": 0, "downloaded": 0, "depts": [], "missing": []}
 
-    # 确定预算页面URL
     if not budget_url:
         budget_url = probe_budget_page(session, website, city)
         if not budget_url:
             budget_url = website
             logger.warning(f"  [{city}] 未找到预算专页，用官网首页")
 
-    # 查找部门预算链接
     logger.info(f"  [{city}] 扫描: {budget_url}")
     dept_links = find_dept_budgets(session, budget_url, city)
 
-    # 如果找到的太少，再试官网首页
     if len(dept_links) < 5 and budget_url != website:
         logger.info(f"  [{city}] 找到太少({len(dept_links)})，再扫描官网首页")
         more = find_dept_budgets(session, website, city)
         for dept, links in more.items():
             if dept not in dept_links:
                 dept_links[dept] = links
+            else:
+                # 合并，去重
+                existing_urls = {u for _, u, _, _ in dept_links[dept]}
+                for item in links:
+                    if item[1] not in existing_urls:
+                        dept_links[dept].append(item)
 
-    # 下载每个部门的预算文件
+    # 每个部门只下载1个最佳文件（部门预算主文件）
     for dept_name, links in dept_links.items():
-        logger.info(f"  [{city}] ✓ {dept_name} ({len(links)}个链接)")
+        # 按score排序，取最高分
+        links_sorted = sorted(links, key=lambda x: x[3], reverse=True)
+        best = links_sorted[0]
+        text, url, is_pdf, score = best
+        
+        logger.info(f"  [{city}] ✓ {dept_name} -> {text} (score:{score})")
         result['depts'].append(dept_name)
 
-        for text, url, is_pdf in links[:3]:  # 每部门最多3个文件
-            fname = safe_filename(dept_name) + "_" + safe_filename(text)
-            if is_pdf:
-                save_path = os.path.join(city_folder, fname + ".pdf")
+        # 统一文件名：{部门名}_2026年部门预算.pdf
+        clean_dept = safe_filename(dept_name)
+        
+        if is_pdf:
+            save_path = os.path.join(city_folder, f"{clean_dept}_2026年部门预算.pdf")
+            if not os.path.exists(save_path):
+                if download_pdf(session, url, save_path):
+                    result['downloaded'] += 1
+                    logger.info(f"    下载: {os.path.basename(save_path)}")
+                else:
+                    logger.warning(f"    下载失败: {url}")
+            else:
+                result['downloaded'] += 1
+        else:
+            # 进入子页面找PDF
+            time.sleep(DELAY_PAGE)
+            sub_links, _ = extract_all_links(session, url, city)
+            
+            # 在子页面中也优先找"部门预算"PDF
+            pdf_candidates = []
+            for st, su, _ in sub_links:
+                if su.lower().endswith('.pdf'):
+                    is_main, s = is_main_dept_budget(st, dept_name, city)
+                    pdf_candidates.append((st, su, s))
+            
+            if pdf_candidates:
+                # 取最高分的PDF
+                pdf_candidates.sort(key=lambda x: x[2], reverse=True)
+                best_pdf = pdf_candidates[0]
+                save_path = os.path.join(city_folder, f"{clean_dept}_2026年部门预算.pdf")
                 if not os.path.exists(save_path):
-                    if download_pdf(session, url, save_path):
+                    if download_pdf(session, best_pdf[1], save_path):
                         result['downloaded'] += 1
                         logger.info(f"    下载: {os.path.basename(save_path)}")
                 else:
                     result['downloaded'] += 1
             else:
-                # 进入子页面找PDF
-                time.sleep(DELAY_PAGE)
-                sub_links, _ = extract_all_links(session, url, city)
-                pdf_found = False
-                for st, su, _ in sub_links:
-                    if su.lower().endswith('.pdf'):
-                        pname = safe_filename(dept_name) + "_" + safe_filename(st) + ".pdf"
-                        save_path = os.path.join(city_folder, pname)
-                        if not os.path.exists(save_path):
-                            if download_pdf(session, su, save_path):
-                                result['downloaded'] += 1
-                                pdf_found = True
-                                logger.info(f"    下载: {os.path.basename(save_path)}")
-                        else:
-                            result['downloaded'] += 1
-                            pdf_found = True
-                        break  # 每个部门子页面只取第一个PDF
-                if not pdf_found:
-                    # 保存HTML
-                    r = fetch(session, url)
-                    if r:
-                        hpath = os.path.join(city_folder, fname + ".html")
-                        with open(hpath, 'w', encoding='utf-8') as f:
-                            f.write(r.text)
-                        result['downloaded'] += 1
-            time.sleep(DELAY_PAGE)
+                # 没有PDF，保存HTML
+                r = fetch(session, url)
+                if r:
+                    hpath = os.path.join(city_folder, f"{clean_dept}_2026年部门预算.html")
+                    with open(hpath, 'w', encoding='utf-8') as f:
+                        f.write(r.text)
+                    result['downloaded'] += 1
+        
+        time.sleep(DELAY_PAGE)
 
-    # 记录未找到的部门
     for dept in TARGET_DEPTS:
         if dept not in result['depts']:
             result['missing'].append(dept)
 
     result['found'] = len(result['depts'])
 
-    # 写汇总文件
     with open(os.path.join(city_folder, "爬取汇总.txt"), 'w', encoding='utf-8') as f:
         f.write(f"城市: {city} (排名{rank})\n")
         f.write(f"官网: {website}\n预算页: {budget_url}\n")
@@ -398,7 +433,6 @@ def process_city(city_info, progress):
         for d in result['missing']:
             f.write(f"  ✗ {d}\n")
 
-    # 更新进度
     with progress_lock:
         progress.setdefault('completed', {})
         progress['completed'][city_key] = {
@@ -419,12 +453,15 @@ def run(start=1, end=100):
     cities = [c for c in cities if start <= c['rank'] <= end]
 
     progress = load_progress()
+    
+    # 重置进度，重新爬取（因为v3改了策略）
+    progress['completed'] = {}
+    save_progress(progress)
 
     logger.info(f"开始爬取 {len(cities)} 个城市, 32个目标部门")
+    logger.info(f"策略: 每部门只下载1个部门预算主文件")
     logger.info(f"并发数: {MAX_WORKERS}")
-    logger.info(f"已完成: {len(progress.get('completed', {}))} 个城市(found>=10自动跳过)")
 
-    # 优先处理有预算URL的城市
     with_url = [c for c in cities if c.get('budget_url')]
     without_url = [c for c in cities if not c.get('budget_url')]
     ordered = with_url + without_url
@@ -437,7 +474,7 @@ def run(start=1, end=100):
         for city_info in ordered:
             f = pool.submit(process_city, city_info, progress)
             futures[f] = city_info
-            time.sleep(0.5)  # 错开启动
+            time.sleep(0.5)
 
         for f in as_completed(futures):
             city_info = futures[f]
@@ -451,7 +488,6 @@ def run(start=1, end=100):
 
     logger.info("=" * 60)
     logger.info(f"全部完成! 总计找到 {total_found} 个部门匹配, 下载 {total_downloaded} 个文件")
-    logger.info(f"进度文件: {PROGRESS_FILE}")
     logger.info("=" * 60)
 
 
