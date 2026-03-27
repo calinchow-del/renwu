@@ -1375,3 +1375,13 @@ fatal: unable to access 'https://github.com/calinchow-del/renwu.git/': gnutls_ha
 2026-03-28 04:40:02 git pull二次失败
 2026-03-28 04:40:02 任务状态: running (非pending，跳过)
 2026-03-28 04:40:02 统计: 4城市, 416个PDF, 爬取运行中 (PID: 655688)
+fatal: unable to access 'https://github.com/calinchow-del/renwu.git/': gnutls_handshake() failed: The TLS connection was non-properly terminated.
+2026-03-28 04:40:02 推送失败，2秒后重试...
+fatal: unable to access 'https://github.com/calinchow-del/renwu.git/': gnutls_handshake() failed: The TLS connection was non-properly terminated.
+2026-03-28 04:40:04 推送失败，4秒后重试...
+fatal: unable to access 'https://github.com/calinchow-del/renwu.git/': gnutls_handshake() failed: The TLS connection was non-properly terminated.
+2026-03-28 04:40:08 推送失败，6秒后重试...
+fatal: unable to access 'https://github.com/calinchow-del/renwu.git/': gnutls_handshake() failed: The TLS connection was non-properly terminated.
+2026-03-28 04:40:14 推送失败，8秒后重试...
+2026-03-28 04:40:22 ===== Worker结束 =====
+2026-03-28 04:45:01 ===== Worker启动 =====
