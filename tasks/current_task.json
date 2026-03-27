@@ -1,7 +1,9 @@
 {
   "id": "task_001",
-  "command": "python3 /root/renwu/scrape_budgets.py --start 1 --end 100 --workers 5",
-  "status": "pending",
-  "description": "全量爬取100个城市32个委办局的2026年预算",
-  "created_at": "2026-03-27 20:30:00"
+  "command": "echo 'scrape already running via nohup'",
+  "status": "running",
+  "description": "全量爬取100个城市32个委办局的2026年预算 - 已在服务器手动启动",
+  "created_at": "2026-03-27 20:30:00",
+  "started_at": "2026-03-27 20:16:00",
+  "note": "爬取进程PID 655688已通过nohup启动，worker只需推送结果"
 }
