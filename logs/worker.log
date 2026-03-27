@@ -345,3 +345,8 @@ From https://github.com/calinchow-del/renwu
 Already up to date.
 2026-03-27 23:00:03 任务状态: running (非pending，跳过)
 2026-03-27 23:00:03 统计: 4城市, 416个PDF, 爬取运行中 (PID: 655688)
+To https://github.com/calinchow-del/renwu.git
+   00faff7..5ff15a6  main -> main
+2026-03-27 23:00:07 推送成功
+2026-03-27 23:00:07 ===== Worker结束 =====
+2026-03-27 23:05:01 ===== Worker启动 =====
