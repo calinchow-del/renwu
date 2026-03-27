@@ -10,9 +10,13 @@ import re
 import time
 import logging
 import hashlib
+import urllib3
 from urllib.parse import urljoin, urlparse, unquote
 from pathlib import Path
 from concurrent.futures import ThreadPoolExecutor, as_completed
+
+# 禁用SSL警告
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 import requests
 from bs4 import BeautifulSoup
@@ -140,8 +144,15 @@ class BudgetScraper:
         with open(PROGRESS_FILE, 'w', encoding='utf-8') as f:
             json.dump(self.progress, f, ensure_ascii=False, indent=2)
 
+    def _fix_url(self, url):
+        """将HTTPS转为HTTP避免SSL错误"""
+        if url and url.startswith('https://'):
+            return url.replace('https://', 'http://', 1)
+        return url
+
     def fetch_page(self, url, encoding=None):
-        """获取页面内容，带重试"""
+        """获取页面内容，带重试，自动降级HTTP"""
+        url = self._fix_url(url)
         for attempt in range(RETRY_COUNT):
             try:
                 resp = self.session.get(url, timeout=TIMEOUT, allow_redirects=True)
@@ -160,6 +171,7 @@ class BudgetScraper:
 
     def download_file(self, url, save_path):
         """下载文件（PDF等）"""
+        url = self._fix_url(url)
         for attempt in range(RETRY_COUNT):
             try:
                 resp = self.session.get(url, timeout=60, stream=True)
