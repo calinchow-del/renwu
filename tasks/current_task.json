@@ -1,9 +1,7 @@
 {
-  "id": "task_006",
-  "command": "pkill -9 -f scrape_budgets.py 2>/dev/null; sleep 3; cd /root/renwu && python3 scrape_budgets.py --start 1 --end 100 --workers 5",
-  "status": "running",
-  "description": "v6重启: 修复僵尸进程+单城市超时+断点续爬",
-  "created_at": "2026-03-28 05:30:00",
-  "started_at": "2026-03-28 07:15:02",
-  "note": "自动重启(进程已死)"
+  "id": "task_007",
+  "command": "cd /root/renwu && bash batch_scrape.sh",
+  "status": "pending",
+  "description": "v7分批爬取: 每批10城市，2并发，避免进程崩溃",
+  "created_at": "2026-03-28 07:15:00"
 }
