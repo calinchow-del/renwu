@@ -40,3 +40,13 @@ fatal: could not read Username for 'https://github.com': No such device or addre
 2026-03-27 20:35:16 推送失败，8秒后重试...
 2026-03-27 20:35:24 ===== Worker结束 =====
 2026-03-27 20:40:01 ===== Worker启动 =====
+From https://github.com/calinchow-del/renwu
+ * branch            main       -> FETCH_HEAD
+error: cannot rebase: You have unstaged changes.
+error: Please commit or stash them.
+2026-03-27 20:40:02 git pull失败，尝试强制同步...
+From https://github.com/calinchow-del/renwu
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+2026-03-27 20:40:03 任务状态:  (非pending，跳过)
+2026-03-27 20:40:03 统计: 0城市, 416个PDF, 爬取运行中 (PID: 655688)
