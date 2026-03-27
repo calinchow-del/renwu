@@ -106,12 +106,33 @@ progress_lock = threading.Lock()
 
 def load_progress():
     if PROGRESS_FILE.exists():
-        with open(PROGRESS_FILE, 'r', encoding='utf-8') as f:
-            return json.load(f)
+        try:
+            with open(PROGRESS_FILE, 'r', encoding='utf-8') as f:
+                data = json.load(f)
+        except (json.JSONDecodeError, IOError):
+            return {"completed": {}, "failed": []}
+
+        # === 格式兼容：旧格式(completed_cities)迁移到新格式(completed dict) ===
+        if 'completed' not in data:
+            data['completed'] = {}
+        if 'completed_cities' in data:
+            for city_key in data.get('completed_cities', []):
+                if city_key not in data['completed']:
+                    details = data.get('city_details', {}).get(city_key, {})
+                    data['completed'][city_key] = {
+                        "found": len(details.get('found_departments', [])),
+                        "downloaded": len(details.get('downloaded_files', [])),
+                        "time": "migrated"
+                    }
+        if 'failed' not in data:
+            data['failed'] = []
+        return data
     return {"completed": {}, "failed": []}
 
 def save_progress(progress):
     with progress_lock:
+        progress.setdefault('completed', {})
+        progress.setdefault('failed', [])
         with open(PROGRESS_FILE, 'w', encoding='utf-8') as f:
             json.dump(progress, f, ensure_ascii=False, indent=2)
 
@@ -274,6 +295,10 @@ def process_city(city_info, progress):
     city_folder = str(BASE_DIR / city_key)
     os.makedirs(city_folder, exist_ok=True)
 
+    # 确保progress结构正确
+    progress.setdefault('completed', {})
+    progress.setdefault('failed', [])
+
     # 跳过已完成
     if city_key in progress.get('completed', {}):
         prev = progress['completed'][city_key]
@@ -375,6 +400,7 @@ def process_city(city_info, progress):
 
     # 更新进度
     with progress_lock:
+        progress.setdefault('completed', {})
         progress['completed'][city_key] = {
             "found": result['found'],
             "downloaded": result['downloaded'],
@@ -396,6 +422,7 @@ def run(start=1, end=100):
 
     logger.info(f"开始爬取 {len(cities)} 个城市, 32个目标部门")
     logger.info(f"并发数: {MAX_WORKERS}")
+    logger.info(f"已完成: {len(progress.get('completed', {}))} 个城市(found>=10自动跳过)")
 
     # 优先处理有预算URL的城市
     with_url = [c for c in cities if c.get('budget_url')]
