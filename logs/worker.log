@@ -395,3 +395,17 @@ To https://github.com/calinchow-del/renwu.git
 2026-03-27 23:15:05 推送成功
 2026-03-27 23:15:05 ===== Worker结束 =====
 2026-03-27 23:20:01 ===== Worker启动 =====
+From https://github.com/calinchow-del/renwu
+ * branch            main       -> FETCH_HEAD
+   ded1af9..874fa95  main       -> origin/main
+error: cannot rebase: You have unstaged changes.
+error: Please commit or stash them.
+2026-03-27 23:20:03 git pull失败，尝试强制同步...
+From https://github.com/calinchow-del/renwu
+ * branch            main       -> FETCH_HEAD
+Merge made by the 'ort' strategy.
+ scrape_budgets.py       | 57 +++++++++++++++++++------------------------------
+ tasks/current_task.json | 14 ++++++------
+ 2 files changed, 28 insertions(+), 43 deletions(-)
+2026-03-27 23:20:03 爬取已在运行，跳过任务执行，仅更新状态
+2026-03-27 23:20:03 统计: 4城市, 416个PDF, 爬取运行中 (PID: 655688)
