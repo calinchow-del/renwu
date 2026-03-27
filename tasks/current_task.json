@@ -1,8 +1,9 @@
 {
   "id": "task_005",
   "command": "pkill -f scrape_budgets.py 2>/dev/null; sleep 3; cd /root/renwu && python3 scrape_budgets.py --start 1 --end 100 --workers 5",
-  "status": "pending",
+  "status": "running",
   "description": "重启爬取: 进程已死, 从断点续爬100城市x32委办局",
   "created_at": "2026-03-28 03:10:00",
-  "note": "上次进程在rm -rf时被杀死, worker检测到running状态跳过了重启"
+  "note": "检测到爬取已在运行",
+  "started_at": "2026-03-28 03:10:03"
 }
