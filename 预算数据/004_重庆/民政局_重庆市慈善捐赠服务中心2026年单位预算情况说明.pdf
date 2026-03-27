@@ -1,0 +1,777 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="force-rendering" content="webkit" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,maximum-scale=1.0, user-scalable=0" />
+		<meta name="format-detection" content="telephone = no" />
+		<!--站点类-->
+<meta name="SiteName" content="重庆市民政局">
+<meta name="SiteDomain" content="mzj.cq.gov.cn/">
+<meta name="SiteIDCode" content="5000000096">
+		
+<!--栏目类-->
+<meta name="ColumnName" content="预算公开">
+ <meta name="ColumnDescription" content="本栏目发布预算公开相关信息,便于您了解相应信息。">
+ <meta name="ColumnKeywords" content="预算公开 预算/决算 法定主动公开内容">
+ <meta name="ColumnType" content="预算公开"> 
+
+<!--文章类-->
+<meta name="ArticleTitle" content="重庆市慈善捐赠服务中心2026年单位预算情况说明">
+<meta name="PubDate" content="2026-03-02 08:03">
+<meta name="ContentSource" content="市民政局">
+
+<meta name="Keywords" content="民政局,预算公开,重庆市民政局,重庆市慈善捐赠服务中心2026年单位预算情况说明">
+
+<meta name="Author" content="市民政局">
+<meta name="Description" content="<!--!doctype-->
+　　">
+<meta name="Image" content="https://mzj.cq.gov.cn/zwgk_218/fdzdgknr/ysjs/ysgk/202603/W020260302290724569519_ORIGIN.jpg">
+<meta name="Url" content="//mzj.cq.gov.cn/zwgk_218/fdzdgknr/ysjs/ysgk/202603/t20260302_15477610.html">
+		<title>重庆市慈善捐赠服务中心2026年单位预算情况说明_重庆市民政局</title>
+		<link rel="icon" href="../../../../../images/yjtc_ico.png">
+		<link rel="stylesheet" href="../../../../../images/y-base.css" />
+		<link rel="stylesheet" href="../../../../../images/header-footer.css" />
+		<link rel="stylesheet" href="../../../../../images/y-listcontent.css" />
+		<link rel="stylesheet" href="../../../../../images/header-footer-media.css" />
+		<link rel="stylesheet" href="../../../../../images/y-listcontent-media.css" />
+
+		<script type="text/javascript" src="../../../../../images/jquery.min.js"></script>
+		<script type="text/javascript" src="../../../../../images/set.js"></script>
+		<script type="text/javascript" src="../../../../../images/jft.js"></script>
+		<script type="text/javascript" src="../../../../../images/y-base.js"></script>
+
+		<!--[if lt ie 11]>
+		<script type="text/javascript" src="../../../../../images/html5shiv.js"></script>
+		<script type="text/javascript" src="../../../../../images/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+
+		<div class="header head-2025">
+
+			<link rel="stylesheet" href="//mzj.cq.gov.cn/images/xcConfirm.css" async="async" defer="defer">
+		<script type="text/javascript" src="//mzj.cq.gov.cn/images/xcConfirm.js"></script>
+		<script type="text/javascript" src="//mzj.cq.gov.cn//images/jft.js" async="async" defer="defer"></script>
+		<script id="_trs_ta_js" src="//ta.trs.cn/c/js/ta.js?mpid=3597" async="async" defer="defer"></script>
+
+			<div class="top">
+				<div class="w145">
+					<div class="fl">
+						<a href="http://www.gov.cn" target="_blank">中国政府网</a>
+						<a href="http://www.cq.gov.cn" target="_blank">重庆市人民政府网</a>
+					</div>
+					<div class="fr">
+						<a href="javascript:void(0)" id="login" class="cq-login">登录</a>
+						<a href="javascript:void(0)" id="register" class="cq-register cq-register-gr">注册</a>
+						<a href="https://zwykb.cq.gov.cn/v2/grzx/" id="loginusername" class="cq-user-name" style="display: none;"></a>
+						<a href="javascript:void(0)" id="logout" class="cq-logout" style="display: none;">注销</a>
+
+						<a href="javascript:void(0)" id="ST_translate" onclick="do_simple_to_traditional();">繁體版</a>
+						<a href="javascript:;" onclick="aria.start()">无障碍</a>
+						<a href="javascript:;" onclick="aria.oldFixedStart()">适老版</a>
+						<a href="https://www.cq.gov.cn/ggbf_search/AImhww/" target="_blank">智能机器人</a>
+						<a href="javascript:void(0)">支持IPV6</a>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+			<script src="//cq.gov.cn/images/crypto-js.min.js"></script>
+<script src="//cq.gov.cn/images/DECRYPT.js"></script>
+<script src="//cq.gov.cn/images/ykb-request.js"></script>
+<script src="//cq.gov.cn/images/ykb-api.js"></script>
+<script src="//cq.gov.cn/images/ykb-base.js?v=1.2"></script>
+<input type="text" hidden id="loginSiteId" value="218" />
+<script>
+  $(function () {
+    //获取用户信息-有额外的操作可以在回调中使用
+    getUserInfo(function (res) {
+      if(res!=200){
+        // 校验国家政务网登录 start
+        checkLoginGj()
+        // 校验国家政务网登录 end
+      }
+    })
+  })
+</script>
+
+			<div class="logo"><img src="//mzj.cq.gov.cn/images/2025-logo.png" /></div>
+			<div class="search">
+				<input type="text" id="textfield" onkeydown="if(event.keyCode==13){submitsearch($('#textfield').val());}" />
+				<input type="button" id="toSearch" onclick="submitsearch($('#searchWord').val())" />
+
+			</div>
+		</div>
+		<div class="head-nav">
+			<div class="w145">
+				<ul class="clearfix">
+					<li><a href="//mzj.cq.gov.cn/">网站首页</a></li>
+					<li><a href="//mzj.cq.gov.cn/zwgk_218/">政务公开</a></li>
+					<li><a href="//mzj.cq.gov.cn/mzbm/">政务服务</a></li>
+					<li><a href="//mzj.cq.gov.cn/hdjl_218/">互动交流</a></li>
+					<li><a href="//mzj.cq.gov.cn/ssmz/">数说民政</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<script>
+			function submitsearch() {
+				var result = $("#textfield").val();
+				result = $.trim(result);
+				var reg = /[`~!@#$%^&*_+<>{}\/'[\]]/im;
+				if (reg.test(result)) {
+					window.wxc.xcConfirm('您输入的信息包含非法字符!', window.wxc.xcConfirm.typeEnum.info)
+					return false;
+				}
+				if (result == "请输入关键词" || result == "" || result == null) {
+					window.wxc.xcConfirm('请输入检索条件!', window.wxc.xcConfirm.typeEnum.info)
+					return false;
+				} else {
+					result = result.replace("-", "\-");
+					result = result.replace("(", "\(");
+					result = result.replace(")", "\)");
+				}
+				window.location.href="//mzj.cq.gov.cn/cqs/searchResultPC.html?tenantId=73&configTenantId=73&areaCode=500000118&searchWord=" + encodeURI(result);
+			}
+		</script>
+
+		<script>
+			var uri = window.location.pathname;
+			jQuery(".head-nav ul li").each(function () {
+				jQuery(this).removeClass("active");
+			});
+			if (uri.indexOf("/zwgk_218/") >= 0) {
+				jQuery(".head-nav ul li").eq(1).addClass('active');
+			} else if (uri.indexOf("/mzbm/") >= 0) {
+				jQuery(".head-nav ul li").eq(2).addClass('active');
+			}else if (uri.indexOf("/hdjl_218/") >= 0) {
+				jQuery(".head-nav ul li").eq(3).addClass('active');
+			} else if (uri.indexOf("/ssmz/") >= 0) {
+				jQuery(".head-nav ul li").eq(4).addClass('active');
+			} else {
+				jQuery(".head-nav ul li").eq(0).addClass('active');
+			}
+		</script>
+		
+		<div class="w145">
+			<div class="dqwz"><img src="//mzj.cq.gov.cn//images/img_dqwz.png" async="async" defer="defer" /><span>您当前的位置：</span><a href="https://mzj.cq.gov.cn/" title="首页">首页</a>/<a href="https://mzj.cq.gov.cn/zwgk_218/" title="政务公开">政务公开</a>/<a href="https://mzj.cq.gov.cn/zwgk_218/fdzdgknr/" title="法定主动公开内容">法定主动公开内容</a>/<a href="https://mzj.cq.gov.cn/zwgk_218/fdzdgknr/ysjs/" title="预算/决算">预算/决算</a><span>/</span><span>预算公开</span></div>
+			
+			<div class="Article">
+				<div id="fiezhiCon" class="pic-fz" style="display:none;"><img src="../../../../../images/icon-fz.png" /></div>
+				<div class="zw-table clearfix">
+					<ul class="clearfix">
+						<li class="tit"><span>索引号</span></li>
+						<li><span>115000000092759914/2026-00153</span></li>
+						<li class="tit"><span>主题分类</span></li>
+						<li><span>财政</span></li>
+						<li class="tit"><span>体裁分类</span></li>
+						<li><span>财政预算、决算</span></li>
+							
+						<li class="tit"><span>发布机构</span></li>
+						<li><span>市民政局</span></li>
+						<li class="tit"><span>成文日期</span></li>
+						<li><span>2026-03-02</span></li>
+						<li class="tit"><span>发布日期</span></li>
+						<li><span>2026-03-02</span></li>
+					
+						<li class="tit"><span>标题</span></li>
+						<li class="bt"><span>重庆市慈善捐赠服务中心2026年单位预算情况说明</span></li>
+							
+						<li class="tit"><span>发文字号</span></li>
+						<li><span>无</span></li>
+						<li class="tit"><span>有 效 性</span></li>
+						<li><span id="yxxVal"></span></li>
+						<li class="tit"><span></span></li>
+						<li><span></span></li>
+					</ul>
+				</div>
+				
+				<div class="Title">重庆市慈善捐赠服务中心2026年单位预算情况说明</div>
+				<div class="Date">
+					<span>日期：2026-03-02</span>
+					<span>来源：市民政局</span>
+					<div class="zh">字&nbsp;号：<i>大</i><i class="selected">中</i><i>小</i></div>
+				</div>
+				<div class="Content">
+					<div class="nrvideo pic-video" style="display:none" id="a1">
+						<script type="text/javascript">
+							var hasVideo = "";
+							var videoArr = hasVideo.split("/masvod");
+							var html ='';
+                                
+							if(videoArr.length > 1) {
+								$("#a1").css("display","block");
+								for(var i = 1; i < videoArr.length; i++) {
+                                        				html += '<video width="100%" height="auto" preload="auto" controls="controls" poster="">';
+                                        				html += '<source src="/masvod' + videoArr[i] + '" type="video/mp4">';
+                                        				html += '</video>';
+								}
+								$(".nrvideo").html(html);
+							}
+						</script>
+					</div>
+
+					<div class="trs_editor_view TRS_UEDITOR trs_paper_default trs_default"><p><meta http-equiv="content-type" content="text/html; charset=utf-8"/><title></title></p><p style="text-align: center"><img src="./W020260302290724569519_ORIGIN.jpg" title="2026030222c8c35d_0.jpg" alt="" data-uploadpic="U020260302290543041787_ORIGIN.jpg" needdownload="true" data-needdownload="true" picname="2026030222c8c35d_0.jpg" oldsrc="W020260302290724569519_ORIGIN.jpg" /></p><p style="text-align: center"><img src="./W020260302290725321449_ORIGIN.jpg" title="2026030222c8c35d_1.jpg" alt="" data-uploadpic="U020260302290543091397_ORIGIN.jpg" needdownload="true" data-needdownload="true" picname="2026030222c8c35d_1.jpg" oldsrc="W020260302290725321449_ORIGIN.jpg" /></p><p style="text-align: center"><img src="./W020260302290725906365_ORIGIN.jpg" title="2026030222c8c35d_2.jpg" alt="" data-uploadpic="U020260302290543087508_ORIGIN.jpg" needdownload="true" data-needdownload="true" picname="2026030222c8c35d_2.jpg" oldsrc="W020260302290725906365_ORIGIN.jpg" /></p><p style="text-align: center"><img src="./W020260302290726614019_ORIGIN.jpg" title="2026030222c8c35d_3.jpg" alt="" data-uploadpic="U020260302290543132746_ORIGIN.jpg" needdownload="true" data-needdownload="true" picname="2026030222c8c35d_3.jpg" oldsrc="W020260302290726614019_ORIGIN.jpg" /></p><p style="text-align: center"><img src="./W020260302290727674768_ORIGIN.jpg" title="2026030222c8c35d_4.jpg" alt="" data-uploadpic="U020260302290543092198_ORIGIN.jpg" needdownload="true" data-needdownload="true" picname="2026030222c8c35d_4.jpg" oldsrc="W020260302290727674768_ORIGIN.jpg" /></p><p style="text-align: center"><img src="./W020260302290728195874_ORIGIN.jpg" title="2026030222c8c35d_5.jpg" alt="" data-uploadpic="U020260302290543083109_ORIGIN.jpg" needdownload="true" data-needdownload="true" picname="2026030222c8c35d_5.jpg" oldsrc="W020260302290728195874_ORIGIN.jpg" /></p><p style="text-align: center"><img src="./W020260302290728954855_ORIGIN.jpg" title="2026030222c8c35d_6.jpg" alt="" data-uploadpic="U020260302290544823680_ORIGIN.jpg" needdownload="true" data-needdownload="true" picname="2026030222c8c35d_6.jpg" oldsrc="W020260302290728954855_ORIGIN.jpg" /></p><p style="text-align: center"><img src="./W020260302290729484400_ORIGIN.jpg" title="2026030222c8c35d_7.jpg" alt="" data-uploadpic="U020260302290545250336_ORIGIN.jpg" needdownload="true" data-needdownload="true" picname="2026030222c8c35d_7.jpg" oldsrc="W020260302290729484400_ORIGIN.jpg" /></p><p style="text-align: center"><img src="./W020260302290729817876_ORIGIN.jpg" title="2026030222c8c35d_8.jpg" alt="" data-uploadpic="U020260302290545362304_ORIGIN.jpg" needdownload="true" data-needdownload="true" picname="2026030222c8c35d_8.jpg" oldsrc="W020260302290729817876_ORIGIN.jpg" /></p><p style="text-align: center"><img src="./W020260302290730473326_ORIGIN.jpg" title="2026030222c8c35d_9.jpg" alt="" data-uploadpic="U020260302290545662642_ORIGIN.jpg" needdownload="true" data-needdownload="true" picname="2026030222c8c35d_9.jpg" oldsrc="W020260302290730473326_ORIGIN.jpg" /></p><p style="text-align: center"><img src="./W020260302290731259624_ORIGIN.jpg" title="2026030222c8c35d_10.jpg" alt="" data-uploadpic="U020260302290545606856_ORIGIN.jpg" needdownload="true" data-needdownload="true" picname="2026030222c8c35d_10.jpg" oldsrc="W020260302290731259624_ORIGIN.jpg" /></p><p style="text-align: center"><img src="./W020260302290731612394_ORIGIN.jpg" title="2026030222c8c35d_11.jpg" alt="" data-uploadpic="U020260302290545683183_ORIGIN.jpg" needdownload="true" data-needdownload="true" picname="2026030222c8c35d_11.jpg" oldsrc="W020260302290731612394_ORIGIN.jpg" /></p><p style="text-align: center"><img src="./W020260302290732123371_ORIGIN.jpg" title="2026030222c8c35d_12.jpg" alt="" data-uploadpic="U020260302290546554828_ORIGIN.jpg" needdownload="true" data-needdownload="true" picname="2026030222c8c35d_12.jpg" oldsrc="W020260302290732123371_ORIGIN.jpg" /></p><p style="text-align: center"><img src="./W020260302290732521963_ORIGIN.jpg" title="2026030222c8c35d_13.jpg" alt="" data-uploadpic="U020260302290546752228_ORIGIN.jpg" needdownload="true" data-needdownload="true" picname="2026030222c8c35d_13.jpg" oldsrc="W020260302290732521963_ORIGIN.jpg" /></p><p style="text-align: center"><img src="./W020260302290733032847_ORIGIN.jpg" title="2026030222c8c35d_14.jpg" alt="" data-uploadpic="U020260302290547269627_ORIGIN.jpg" needdownload="true" data-needdownload="true" picname="2026030222c8c35d_14.jpg" oldsrc="W020260302290733032847_ORIGIN.jpg" /></p><p style="text-align: center"><img src="./W020260302290733834411_ORIGIN.jpg" title="2026030222c8c35d_15.jpg" alt="" data-uploadpic="U020260302290547230783_ORIGIN.jpg" needdownload="true" data-needdownload="true" picname="2026030222c8c35d_15.jpg" oldsrc="W020260302290733834411_ORIGIN.jpg" /></p><p style="text-align: center"><img src="./W020260302290734390113_ORIGIN.jpg" title="2026030222c8c35d_16.jpg" alt="" data-uploadpic="U020260302290547738109_ORIGIN.jpg" needdownload="true" data-needdownload="true" picname="2026030222c8c35d_16.jpg" oldsrc="W020260302290734390113_ORIGIN.jpg" /></p><p style="text-align: center"><img src="./W020260302290734759030_ORIGIN.jpg" title="2026030222c8c35d_17.jpg" alt="" data-uploadpic="U020260302290547711391_ORIGIN.jpg" needdownload="true" data-needdownload="true" picname="2026030222c8c35d_17.jpg" oldsrc="W020260302290734759030_ORIGIN.jpg" /></p><p style="text-align: center"><img src="./W020260302290735275765_ORIGIN.jpg" title="2026030222c8c35d_18.jpg" alt="" data-uploadpic="U020260302290548717995_ORIGIN.jpg" needdownload="true" data-needdownload="true" picname="2026030222c8c35d_18.jpg" oldsrc="W020260302290735275765_ORIGIN.jpg" /></p><p style="text-align: center"><img src="./W020260302290735764678_ORIGIN.jpg" title="2026030222c8c35d_19.jpg" alt="" data-uploadpic="U020260302290550417801_ORIGIN.jpg" needdownload="true" data-needdownload="true" picname="2026030222c8c35d_19.jpg" oldsrc="W020260302290735764678_ORIGIN.jpg" /></p><p><!--!doctype--></p><p><br/></p></div>
+				</div>
+
+				<div class="Xg">
+					<script type="text/javascript">
+						var hasFJ='';
+						if(hasFJ!=''){
+							var FJarr=hasFJ.replace(/<br\s*\/?>/gi,"");
+							document.write('<div class="hd">相关附件</div><div class="bd fj2025">');
+							for(var i=1;i<=FJarr.length;i++){
+								document.write(""+FJarr[i-1]+"");
+							}
+							document.write('</div>');
+
+							$('.fj2025 a').each(function(){
+								$(this).attr('_href',$(this).attr('href')).css({'cursor':'pointer','margin-top':'0.15rem','display':'block'});
+								$(this).removeAttr('href');
+							})
+							$('.fj2025 a').click(function(){
+								downloadFj($(this).text(),$(this).attr('_href'));
+							})
+						}
+					</script>
+
+					
+					
+					
+
+					
+					
+					
+
+					
+					
+					
+
+					
+
+					
+
+					
+
+					
+
+					
+
+					<!---->
+
+					
+
+					
+				</div>
+			</div>
+		</div>
+		
+		<div class="footer footer-2025">
+			<div class="drop-groups clearfix">
+				<div class="w145">
+					<div class="drop-down" class="cur">
+						<p class="tag">
+							<a href="//mzj.cq.gov.cn/2022_yqlj/zgzfw/" target="_blank">
+								中国政府网
+							</a>
+						</p>
+					</div>
+					<div class="drop-down">
+						<p class="tag">
+							<a href="//mzj.cq.gov.cn/2022_yqlj/mzbwz/" target="_blank">
+								民政部网站
+							</a>
+						</p>
+					</div>
+					<div class="drop-down">
+						<p class="tag">
+							<a href="//mzj.cq.gov.cn/2022_yqlj/szfwz/" target="_blank">
+								市政府网站
+							</a>
+						</p>
+					</div>
+					<div class="drop-down">
+						<p class="tag">地方民政部门网站</p>
+						<div class="link-hide">
+							<div class="w145 main">
+								<ul>
+									
+									<li><a href="http://mzj.beijing.gov.cn/" target="_blank">北京民政</a></li>
+									
+									<li><a href="https://mz.tj.gov.cn/" target="_blank">天津民政</a></li>
+									
+									<li><a href="http://minzheng.hebei.gov.cn/" target="_blank">河北民政</a></li>
+									
+									<li><a href="http://mzt.shanxi.gov.cn/" target="_blank">山西民政</a></li>
+									
+									<li><a href="http://mzt.nmg.gov.cn/" target="_blank">内蒙古民政</a></li>
+									
+									<li><a href="http://mzt.ln.gov.cn/" target="_blank">辽宁民政</a></li>
+									
+									<li><a href="http://mzt.jl.gov.cn/" target="_blank">吉林民政</a></li>
+									
+									<li><a href="http://mzt.hlj.gov.cn/" target="_blank">黑龙江民政</a></li>
+									
+									<li><a href="https://mzj.sh.gov.cn/" target="_blank">上海民政</a></li>
+									
+									<li><a href="http://mzt.jiangsu.gov.cn/" target="_blank">江苏民政</a></li>
+									
+									<li><a href="http://mzt.zj.gov.cn/" target="_blank">浙江民政</a></li>
+									
+									<li><a href="http://mz.ah.gov.cn/" target="_blank">安徽民政</a></li>
+									
+									<li><a href="http://mzt.fujian.gov.cn/" target="_blank">福建民政</a></li>
+									
+									<li><a href="http://mzt.jiangxi.gov.cn/" target="_blank">江西民政</a></li>
+									
+									<li><a href="http://mzt.shandong.gov.cn/" target="_blank">山东民政</a></li>
+									
+									<li><a href="https://mzt.henan.gov.cn/" target="_blank">河南民政</a></li>
+									
+									<li><a href="http://mzt.hubei.gov.cn/" target="_blank">湖北民政</a></li>
+									
+									<li><a href="http://mzt.hunan.gov.cn/" target="_blank">湖南民政</a></li>
+									
+									<li><a href="http://smzt.gd.gov.cn/" target="_blank">广东民政</a></li>
+									
+									<li><a href="http://mzt.gxzf.gov.cn/" target="_blank">广西民政</a></li>
+									
+									<li><a href="http://mz.hainan.gov.cn/" target="_blank">海南民政</a></li>
+									
+									<li><a href="http://mzj.cq.gov.cn/" target="_blank">重庆民政</a></li>
+									
+									<li><a href="http://mzt.sc.gov.cn/" target="_blank">四川民政</a></li>
+									
+									<li><a href="http://mzt.guizhou.gov.cn/" target="_blank">贵州民政</a></li>
+									
+									<li><a href="http://ynmz.yn.gov.cn/" target="_blank">云南民政</a></li>
+									
+									<li><a href="http://mzt.xizang.gov.cn/" target="_blank">西藏民政</a></li>
+									
+									<li><a href="http://mzt.shaanxi.gov.cn/" target="_blank">陕西民政</a></li>
+									
+									<li><a href="http://mzt.gansu.gov.cn/" target="_blank">甘肃民政</a></li>
+									
+									<li><a href="http://mca.nx.gov.cn/" target="_blank">宁夏民政</a></li>
+									
+									<li><a href="http://mzt.xinjiang.gov.cn/" target="_blank">新疆民政</a></li>
+									 
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="drop-down">
+						<p class="tag">市政府部门网站</p>
+						<div class="link-hide">
+							<div class="w145 main">
+								<ul>
+									
+									<li><a href="http://fzggw.cq.gov.cn/" target="_blank">市发展改革委</a></li>
+									
+									<li><a href="http://jw.cq.gov.cn/" target="_blank">市教委</a></li>
+									
+									<li><a href="http://kjj.cq.gov.cn/" target="_blank">市科技局</a></li>
+									
+									<li><a href="http://jjxxw.cq.gov.cn/" target="_blank">市经济信息委</a></li>
+									
+									<li><a href="http://mzzjw.cq.gov.cn" target="_blank">市民族宗教委</a></li>
+									
+									<li><a href="http://gaj.cq.gov.cn/" target="_blank">市公安局</a></li>
+									
+									<li><a href="http://mzj.cq.gov.cn" target="_blank">市民政局</a></li>
+									
+									<li><a href="http://sfj.cq.gov.cn" target="_blank">市司法局</a></li>
+									
+									<li><a href="http://czj.cq.gov.cn/" target="_blank">市财政局</a></li>
+									
+									<li><a href="http://rlsbj.cq.gov.cn/" target="_blank">市人力社保局</a></li>
+									
+									<li><a href="http://ghzrzyj.cq.gov.cn" target="_blank">市规划自然资源局</a></li>
+									
+									<li><a href="http://sthjj.cq.gov.cn" target="_blank">市生态环境局</a></li>
+									
+									<li><a href="http://zfcxjw.cq.gov.cn/" target="_blank">市住房城乡建委</a></li>
+									
+									<li><a href="http://sww.cq.gov.cn" target="_blank">市商务委</a></li>
+									
+									<li><a href="http://cgj.cq.gov.cn/" target="_blank">市城市管理局</a></li>
+									
+									<li><a href="http://jtj.cq.gov.cn/" target="_blank">市交通运输委</a></li>
+									
+									<li><a href="http://slj.cq.gov.cn/" target="_blank">市水利局</a></li>
+									
+									<li><a href="http://nyncw.cq.gov.cn/" target="_blank">市农业农村委</a></li>
+									
+									<li><a href="http://whlyw.cq.gov.cn/" target="_blank">市文化旅游委</a></li>
+									
+									<li><a href="http://wsjkw.cq.gov.cn/" target="_blank">市卫生健康委</a></li>
+									
+									<li><a href="http://yjj.cq.gov.cn" target="_blank">市应急局</a></li>
+									
+									<li><a href="http://sjj.cq.gov.cn/" target="_blank">市审计局</a></li>
+									
+									<li><a href="http://zfwb.cq.gov.cn/" target="_blank">市政府外办</a></li>
+									
+									<li><a href="http://gzw.cq.gov.cn/" target="_blank">市国资委</a></li>
+									
+									<li><a href="http://scjgj.cq.gov.cn/" target="_blank">市场监管局</a></li>
+									
+									<li><a href="http://tyj.cq.gov.cn" target="_blank">市体育局</a></li>
+									
+									<li><a href="http://tjj.cq.gov.cn/" target="_blank">市统计局</a></li>
+									
+									<li><a href="http://jgswj.cq.gov.cn" target="_blank">市机关事务局</a></li>
+									
+									<li><a href="http://jrjgj.cq.gov.cn/" target="_blank">市金融监管局</a></li>
+									
+									<li><a href="http://xfb.cq.gov.cn/" target="_blank">市信访办</a></li>
+									
+									<li><a href="http://dsjj.cq.gov.cn/index.html" target="_blank">市大数据发展局</a></li>
+									
+									<li><a href="http://zfkawlb.cq.gov.cn/index.html" target="_blank">市政府口岸物流办</a></li>
+									
+									<li><a href="http://rmfkb.cq.gov.cn/" target="_blank">市人民防空办</a></li>
+									
+									<li><a href="http://ggzyjyjgj.cq.gov.cn/" target="_blank">市公共资源交易监管局</a></li>
+									
+									<li><a href="http://lyj.cq.gov.cn/" target="_blank">市林业局</a></li>
+									
+									<li><a href="http://yaojianju.cq.gov.cn" target="_blank">市药监局</a></li>
+									
+									<li><a href="http://zscqj.cq.gov.cn" target="_blank">市知识产权局</a></li>
+									
+									<li><a href="http://gxq.cq.gov.cn/" target="_blank">西部科学城重庆高新区管委会</a></li>
+									
+									<li><a href="http://ws.cq.gov.cn" target="_blank">万盛经开区管委会</a></li>
+									
+									<li><a href="http://jkq.cq.gov.cn" target="_blank">重庆经开区管委会</a></li>
+									
+									<li><a href="http://gxhzs.cq.gov.cn/" target="_blank">市供销合作社</a></li>
+									 
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="drop-down">
+						<p class="tag">直属单位网站</p>
+						<div class="link-hide">
+							<div class="w145 main">
+								<ul>
+									
+									<li><a href="http://mzj.cq12349.cn/cqkfyy/html/index.html" target="_blank">重庆市民政中西医结合医院网站</a></li>
+									
+									<li><a href="http://mzj.cq12349.cn/cqaxzy/html/index.html" target="_blank">重庆市爱心庄园网站</a></li>
+									
+									<li><a href="http://mzj.cq12349.cn/cqchild/html/index.html" target="_blank">重庆市儿童福利院网站</a></li>
+									
+									<li><a href="http://mzj.cq12349.cn/cq3fly/html/index.html" target="_blank">重庆市第三社会福利院网站</a></li>
+									
+									<li><a href="http://mzj.cq12349.cn/cq2fly/html/index.html" target="_blank">重庆市第二社会福利院网站</a></li>
+									
+									<li><a href="http://mzj.cq12349.cn/cqyfyl/html/index.html" target="_blank">重庆市第一社会福利院网站</a></li>
+									
+									<li><a href="http://mzj.cq12349.cn/cqbzglzx/html/index.html" target="_blank">重庆市殡葬事业管理中心网站</a></li>
+									
+									<li><a href="http://www.cq11yy.cn/" target="_blank">重庆市第十一人民医院网站</a></li>
+									 
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="drop-down">
+						<p class="tag">区县民政部门网站</p>
+						<div class="link-hide">
+							<div class="w145 main">
+								<ul>
+									
+									<li><a href="https://www.ljxq.gov.cn/bm/qmzj/" target="_blank">重庆市两江新区民政局</a></li>
+									
+									<li><a href="http://www.wz.gov.cn/bmjz_89642/bm/mzj/" target="_blank">重庆市万州区民政局</a></li>
+									
+									<li><a href="https://www.qianjiang.gov.cn/bmjd/xzfgzbm/qmzj/" target="_blank">重庆市黔江区民政局</a></li>
+									
+									<li><a href="http://www.fl.gov.cn/bm/mzj/" target="_blank">重庆市涪陵区民政局</a></li>
+									
+									<li><a href="http://www.cqyz.gov.cn/bm_229/qmzj/?PVGJXX=1XVCEZ" target="_blank">重庆市渝中区民政局</a></li>
+									
+									<li><a href="http://www.ddk.gov.cn/bm/qmzj/" target="_blank">重庆市大渡口区民政局</a></li>
+									
+									<li><a href="http://www.cqspb.gov.cn/bm/qmzj_63735/" target="_blank">重庆市沙坪坝区民政局</a></li>
+									
+									<li><a href="http://cqjlp.gov.cn/bmjz/qzfbm_97119/qmzj_97717/" target="_blank">重庆市九龙坡区民政局</a></li>
+									
+									<li><a href="http://www.cqna.gov.cn/bm/qmzj/" target="_blank">重庆市南岸区民政局</a></li>
+									
+									<li><a href="https://www.beibei.gov.cn/bm/qmzj/" target="_blank">重庆市北碚区民政局</a></li>
+									
+									<li><a href="http://www.cqbn.gov.cn/bmjz/bm/mzj/" target="_blank">重庆市巴南区民政局</a></li>
+									
+									<li><a href="http://www.cqcs.gov.cn/bm/qmzj_75252/" target="_blank">重庆市长寿区民政局</a></li>
+									
+									<li><a href="http://www.jiangjin.gov.cn/bm/qmzj_69006/" target="_blank">重庆市江津区民政局</a></li>
+									
+									<li><a href="http://www.hc.gov.cn/bmjd/bm_100475/mzj/" target="_blank">重庆市合川区民政局</a></li>
+									
+									<li><a href="http://www.cqyc.gov.cn/bm/qmzj_87639/" target="_blank">重庆市永川区民政局</a></li>
+									
+									<li><a href="http://www.cqnc.gov.cn/qzfbm_197/mzj/" target="_blank">重庆市南川区民政局</a></li>
+									
+									<li><a href="http://www.cqqj.gov.cn/bm/qmzj/" target="_blank">重庆市綦江区民政局</a></li>
+									
+									<li><a href="http://www.dazu.gov.cn/qzfbm/qmzj/" target="_blank">重庆市大足区民政局</a></li>
+									
+									<li><a href="https://www.cqstl.gov.cn/bm/qmzj_71103/" target="_blank">重庆市铜梁区民政局</a></li>
+									
+									<li><a href="http://www.bishan.gov.cn/bmjz/bm_97237/qmzj_97244/" target="_blank">重庆市璧山区民政局</a></li>
+									
+									<li><a href="http://www.cqtn.gov.cn/bm/qmzj/" target="_blank">重庆市潼南区民政局</a></li>
+									
+									<li><a href="http://www.rongchang.gov.cn/bm/qmzj/" target="_blank">重庆市荣昌区民政局</a></li>
+									
+									<li><a href="http://www.cqkz.gov.cn/kz/fzhggwyh_81047/" target="_blank">重庆市开州区民政局</a></li>
+									
+									<li><a href="http://www.cqlp.gov.cn/mzj/" target="_blank">重庆市梁平区民政局</a></li>
+									
+									<li><a href="http://cqwl.gov.cn/bmjz_sites/bm/mzj/" target="_blank">重庆市武隆区民政局</a></li>
+									
+									<li><a href="http://www.cqck.gov.cn/bm/mzj/" target="_blank">城口县民政局</a></li>
+									
+									<li><a href="http://www.cqfd.gov.cn/bm/mzj/" target="_blank">丰都县民政局</a></li>
+									
+									<li><a href="http://www.zhongxian.gov.cn/bm/zxmzj/" target="_blank">忠县民政局</a></li>
+									
+									<li><a href="http://www.cqsdj.gov.cn/bmjz/bm/mzj/" target="_blank">垫江县民政局</a></li>
+									
+									<li><a href="https://www.yunyang.gov.cn/bm_257/xmzj/" target="_blank">云阳县民政局</a></li>
+									
+									<li><a href="http://www.cqfj.gov.cn/bm_168/mzj/" target="_blank">奉节县民政局</a></li>
+									
+									<li><a href="http://cqws.gov.cn/xzfbm_73744/fzhggwyh_74180/" target="_blank">巫山县民政局</a></li>
+									
+									<li><a href="http://www.cqwx.gov.cn/bm/xmzj/" target="_blank">巫溪县民政局</a></li>
+									
+									<li><a href="http://cqszx.gov.cn/bm/xmzj/" target="_blank">石柱土家族自治县民政局</a></li>
+									
+									<li><a href="http://www.cqxs.gov.cn/bm/mzj/" target="_blank">秀山土家族苗族自治县民政局</a></li>
+									
+									<li><a href="http://youyang.gov.cn/bmjz_sites/bm/mzj/" target="_blank">酉阳土家族苗族自治县民政局</a></li>
+									
+									<li><a href="http://www.psx.gov.cn/zfbm_174/fzhggwyh_83016/" target="_blank">彭水苗族土家族自治县民政局</a></li>
+									 
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="w145">
+				<div class="foot-l fl">
+					<div class="link-nav">
+						<a href="//mzj.cq.gov.cn/wadt/">网站地图</a>
+						<a href="//mzj.cq.gov.cn/bqsm/">版权声明</a>
+						<a href="//mzj.cq.gov.cn/lxwm/">联系我们</a>
+					</div>
+					<div class="wzxx">
+						Copyright©mzj.cq.gov.cn All Rights Reserved. 重庆市民政局版权所有&nbsp;&nbsp;主办单位：重庆市民政局<br/>
+						<a>政府网站标识码:5000000096</a>&nbsp;&nbsp;
+						<a href="https://beian.miit.gov.cn" target="_blank">ICP备案：渝ICP备19006321号-1</a>&nbsp;&nbsp;
+						<a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=50019002501567" target="_blank">渝公网安备50019002501567号</a>
+					</div>
+					
+				</div>
+				<div class="foot-r fr">
+					<div class="r-pic">
+						<a href="https://zfwzgl.www.gov.cn/exposure/jiucuo.html?site_code=5000000096&url=http%3A%2F%2Fmzj.cq.gov.cn%2F" target="_blank" class="wzjc"><img src="//mzj.cq.gov.cn/images/yjtc_img_wzjc.png" /></a>
+						<a href="http://wza.isc.org.cn/rzpt/bsgl/dt/20250709/4130.html" target="_blank" class="slh"><img src="//mzj.cq.gov.cn/images/yjtc_img_slh.png" /></a>
+						<a href="http://bszs.conac.cn/sitename?method=show&id=2E14D0C1668B6610E053012819ACF34B" target="_blank" class="dzjg"><img src="//mzj.cq.gov.cn/images/yjtc_img_dzjg.png" /></a>
+						<a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=50019002501567" target="_blank" class="wj"><img src="//mzj.cq.gov.cn/images/yjtc_img_wj.png" /></a>
+					</div>
+					<div class="r-ewm">
+						<ul>
+							<li>
+								<div class="box">
+									<img src="//mzj.cq.gov.cn/images/yjtc_img_ewm.png" />政务微信
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+
+		<script type="text/javascript">
+			// 定义后缀名与 MIME 类型的映射表
+			var mimeTypeMap = {
+				'txt': 'text/plain',
+				'html': 'text/html',
+				'css': 'text/css',
+				'js': 'application/javascript',
+				'json': 'application/json',
+				'png': 'image/png',
+				'jpg': 'image/jpeg',
+				'jpeg': 'image/jpeg',
+				'gif': 'image/gif',
+				'svg': 'image/svg+xml',
+				'pdf': 'application/pdf',
+				'doc': 'application/msword',
+				'docx': 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+				'xls': 'application/vnd.ms-excel',
+				'xlsx': 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+				'.ppt': 'application/vnd.ms-powerpoint',
+				'.pptx': 'application/vnd.openxmlformats-officedocument.presentationml.presentation',
+				'.wps': 'application/msword',
+				'.et': 'application/vnd.ms-excel',
+				'zip': 'application/zip',
+				'mp3': 'audio/mpeg',
+				'mp4': 'video/mp4'
+			};
+
+			// 根据文件名获取 MIME 类型的函数
+			function getMimeType(fileName) {
+				// 提取文件后缀（如 "test.txt" → "txt"）
+				var ext = fileName.split('.').pop().toLowerCase();
+				// 从映射表获取，默认使用二进制流类型（通用但不精确）
+				return mimeTypeMap[ext] || 'application/octet-stream';
+			}
+
+			function downloadFj(fileName, filePath) {
+				var mimeType = getMimeType(fileName);
+
+				// 兼容 IE/360 兼容模式
+				if (window.navigator.msSaveOrOpenBlob) {
+					try {
+						// 请求前端项目内的静态文件
+						var xhr = new XMLHttpRequest();
+						xhr.open('GET', filePath, true);
+						xhr.responseType = 'blob';
+
+						xhr.onload = function() {
+							if (xhr.status === 200) {
+								var blob = xhr.response;
+								if (window.navigator.msSaveOrOpenBlob) {
+									window.navigator.msSaveBlob(blob, fileName);
+								} else {
+									var a = document.createElement('a');
+									a.href = URL.createObjectURL(blob);
+									a.download = fileName;
+									a.click();
+									URL.revokeObjectURL(a.href);
+								}
+							} else {
+								console.error('文件不存在');
+							}
+						};
+
+						xhr.onerror = function() {
+							console.error('下载失败');
+						};
+
+						xhr.send();
+					} catch (err) {
+						console.error('下载失败：', err);
+					}
+				} else {
+					// 现代浏览器：使用 download 属性
+					var a = document.createElement('a');
+					a.href = filePath;
+					a.download = fileName;
+					a.click();
+					// 释放 URL 对象（避免内存泄漏）
+					URL.revokeObjectURL(a.href);
+				}
+			}
+		</script>
+
+		<script defer async type="text/javascript" src="//gov.govwza.cn/dist/aria.js?appid=e7f8ab531003f83b2a8d506444b46857" charset="utf-8" id="ariascripts"></script>
+		
+		<script type="text/javascript">
+			var fzTime = "";
+			var now = Date.now();
+			if (fzTime != "") {
+				fzTime = new Date(fzTime.replace(/-/g, '/'));
+				if (fzTime.getTime() < now) {
+					$("#fiezhiCon").css("display", "block");
+					$('#yxxVal').html('废止')
+				} else {
+					$('#yxxVal').html('有效')
+				}
+			} else {
+				$('#yxxVal').html('有效')
+			}
+
+			$(function() {
+				var fontIndex = 1;
+				$(".zh i").click(function() {
+					var fontIndexCur = $(".zh i").index($(this));
+					$(".Content *").each(function() {
+						//获取para的字体大小
+						var thisEle = $(this).css("font-size");
+						//parseFloat的第二个参数表示转化的进制，10就表示转为10进制
+						var textFontSize = parseFloat(thisEle, 10);
+						//javascript自带方法
+						var unit = thisEle.slice(-2); //获取单位
+						textFontSize += (fontIndex - fontIndexCur) * 2;
+						$(this).css("font-size", textFontSize + unit);
+					})
+
+					//设置
+					fontIndex = fontIndexCur;
+					$(".zh i").removeClass('selected');
+					$(this).addClass("selected");
+				});
+			});
+		</script>
+
+		<div id="NewsArticleID" style="display:none;">15477610</div>
+<div id="NewsArticleTitle" style="display:none;">重庆市慈善捐赠服务中心2026年单位预算情况说明</div>
+<div id="NewsEditionNumber" style="display:none;">164789</div>
+<div id="NewsEditionName" style="display:none;">预算公开</div>
+
+<div id="NewsArticleType" style="display:none;">20</div>
+<div id="NewsArticleSource" style="display:none;"></div>
+<div id="NewsArticleAuthor" style="display:none;"></div>
+<div id="NewsArticlePubDay" style="display:none;">2026-03-02</div>
+
+<script>
+function getCookie(name) {
+	var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
+	if (arr = document.cookie.match(reg))
+		return unescape(arr[2]);
+	else
+		return null;
+}
+function setTaCookie(objValue) {
+	var str = "_trs_user" + "=" + encodeURIComponent(objValue);
+	str += "; path=/;";
+	document.cookie = str;
+}
+$.ajax({
+	url:"/IGI/nbhd/langcaoLogin.do?method=getLoginUer",
+	type:"get",
+	data:{},
+	async:true,
+	timeout:3000,
+	dataType:"json",
+	success:function(data){
+		if(data.statusCode == 200){
+			//用户已经登录
+			var ta_user = getCookie('_trs_user');
+			if(ta_user==""||ta_user==null||ta_user=="undefined"){
+				var useName = data.datas.USERNAME;
+				setTaCookie(useName);
+			} //如果cookie没有该值，则设置该属性
+
+			
+		}else{
+			//没有登录
+			setTaCookie("");
+		}
+	}
+});
+
+</script>
+		<!--./t20260302_15477610_wap.html-->
+	</body>
+</html>

@@ -1,0 +1,750 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="renderer" content="webkit" />
+		<meta name="force-rendering" content="webkit" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+		<meta name="viewport"
+			content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+		<title>国家统计局无锡调查队-首页</title>
+<meta name="description" content="中国无锡,无锡市人民政府,无锡市国家统计局无锡调查队" />
+<meta name="keywords" content="中国无锡,无锡市人民政府,无锡市国家统计局无锡调查队" />
+<meta name="SiteName" content="国家统计局无锡调查队"/>
+		<link rel="stylesheet" type="text/css" href="/static_2023/css/style.css" />
+		<link rel="stylesheet" type="text/css" href="/static_2023/css/common.css" />
+		<link rel="stylesheet" href="/static_2023/css/swiper.min.css">
+		<script type="text/javascript" src="https://www.wuxi.gov.cn/static_common/js/jquery.js"></script>
+		<script type="text/javascript" src="https://www.wuxi.gov.cn/static_common/js/jquery.tab.js"></script>
+		<script type="text/javascript" src="https://www.wuxi.gov.cn/static_common/js/jquery.SuperSlide.js"></script>
+		<script type="text/javascript" src="https://www.wuxi.gov.cn/static_common/js/jquery.touchSlider.js"></script>
+		<script type="text/javascript" src="https://www.wuxi.gov.cn/static_common/js/swiper.min.js"></script>
+        <script type="text/javascript" src="https://www.wuxi.gov.cn/static2016/js/checkLogin_t.js"></script>
+        <script type="text/javascript" src="https://www.wuxi.gov.cn/static2016/js/blue_ipv6.js"></script> 
+        <script type="text/javascript" src="https://www.wuxi.gov.cn/static_common/js/wbj_12345.js"></script>
+        <script type="text/javascript" src="https://www.wuxi.gov.cn/static_common/js/website_group.js"></script>
+        <script type="text/javascript" src="https://www.wuxi.gov.cn/static_common/js/wzq_common.js"></script>
+<script src="//wza.wuxi.gov.cn/wza/wza2.min.js?appid=oZrM7kige1mie1t"></script>
+<!-- 新检索JS -->
+<script src="//www.wuxi.gov.cn/static_common/js/wzq_search_common.js"></script>
+
+<script>
+$(function(){
+//改变头部当前栏目样式的,方法在head中
+    changeHeadStyle('001');
+});
+</script>
+		
+	</head>
+
+	<body class="site_crtt index_page">
+		<input type="hidden" id="rootId" value="网站首页" />
+<script>
+   
+var prePage = document.referrer;
+  
+String.prototype.Trim = function()  
+{ 
+	return this.replace(/(^\s*)|(\s*$)/g, ""); 
+}
+
+String.prototype.LTrim = function() 
+{ 
+	return this.replace(/(^\s*)/g, ""); 
+} 
+
+String.prototype.Rtrim = function() 
+{ 
+	return this.replace(/(\s*$)/g, ""); 
+} 
+
+function isNull(str) { 
+	if (str == ""){ 
+		return true;
+	} 
+	var regu = "^[ ]+$"; 
+	var re = new RegExp(regu); 
+	return re.test(str); 
+}
+
+    
+    function _loadUserLoginInfo() {
+        var str = "";
+        
+        if(checkLogin()) {
+            
+            var loginUser = getLoginUser();
+            str += "<em>欢迎您："+ loginUser +"</em>";
+            str += '<ul class="userList">';
+            str += "<li><a href='/fzlm/hdjlgny/lxblgny/wdhx/index.shtml'>我的信件</a></li>";
+
+            str += "<li><a target=\"_blank\" href='https://www.jszwfw.gov.cn/jsjis/front/modify/permodify_show.do'>修改个人信息</li>";
+            str += "<li><a target=\"_blank\" href='https://www.jszwfw.gov.cn/jsjis/front/login/modifypwd_step1.do'>修改密码</li>";
+            str += "<li><a href=\"javascript:loginOut();\">退出</a></li>";
+            str += "</ul>";
+        }else{
+            var localurl = window.location.href; 
+            str += '<i><a class="user" href="https://sso.wuxi.gov.cn/auth-center2/login.html?gotoUrl='+localurl+'">用户登录</a></i>';
+        }
+        $("#loginHead").empty();
+        $("#loginHead").append(str);
+        
+    }
+    
+    $(document).ready(function(){
+        _loadUserLoginInfo();
+    });
+
+
+function selectFrom(iFirstValue, iLastValue) {
+    var iChoces = Math.abs(iLastValue - iFirstValue) + 1;
+    return Math.floor(Math.random() * iChoces + iFirstValue);
+}
+
+</script>
+<div class="header">
+			<div class="head_top clearfix">
+				<div class="head_top_inner">
+					<div class="wel fl">欢迎访问国家统计局无锡调查队网站</div>
+					<div class="user fl" id="loginHead">
+						
+					</div>
+					<ol class="edtion fr clearfix">
+						<li class="ipv6"><img src="/static_2023/images/ipv6.png" alt="本站支持IPV6" /></li>
+						<li><a href="javascript:void(0);" onclick="jft()">繁体</a></li>
+					</ol>
+				</div>
+			</div>
+			<div class="banner">
+				<div class="w1200">
+					<h1 class="logo"><a href="/index.shtml"><img src="/static_2023/images/logo.png" alt="国家统计局无锡调查队" /></a></h1>
+					<div class="search_wza clearfix">
+						<ul class="searchbox fl clearfix">
+							<li><input class="ipt01" placeholder="请输入查询关键字" onFocus="return refocus();"  onkeydown="EnterSub(event);" onBlur="return reblur();" id="query" type="text" ></li>
+							<li><input class="btn01" value="搜索" name="" type="button" onclick="javascript:sub();return false;" ></li>
+						</ul>
+						<ul class="slh_wza fl clearfix">
+							<li id="wza_head_li"><a href="javascript:void(0)" id="wza2-enable" title="无障碍浏览" class="btn_wza">无障碍浏览</a></li>
+							<!--<li class="older_mode"><span role="button" class="btn_slh">长者模式</span></li>-->
+						</ul>
+					</div>
+<script>
+function openWin(a,i,d,f){var c=window.screen.availWidth,m=window.screen.availHeight,i=i||(c-120),d=d||(m-80),b=(c-30-i)/2,k=(m-10-d)/2,j=window.open(a,"_blank","height="+d+", width="+i+", top="+k+", left="+b+", toolbar=no, menubar=no, scrollbars=no, resizable=1, location=no, status=no");if(j&&!!f){try{j.focus();j.moveTo(0,0);j.resizeTo(c,m)}catch(g){}}}function openUrl(a){typeof Player!=="undefined"?Player.fn._open_url(a):openWin(a,null,null,true)};
+</script>
+<script>
+  var font = "t";
+  function jft() {
+    zh_tran(font);
+    if (font == "s")
+      font = "t";
+    else
+      font = "s";
+  }
+</script>
+<script>
+  function refocus(){     
+     var getquery=document.getElementById("query");
+     getquery.value="";
+	 getquery.autocomplete="off";
+	 getquery.focus(); 
+	 
+  }  
+  function reblur(){
+     var getquery=document.getElementById("query");
+	 if (getquery.value==""){
+        getquery.value="请输入搜索关键字";	 
+	 }
+  }   
+String.prototype.trim=function(){
+	return this.replace(/(^\s*)|(\s*$)/g,"");
+}
+
+//站内提交方法
+function sub(){
+	//必需，先将文本转换为utf-8
+	var fixvalue = document.getElementById("query").value;
+	fixvalue = fixvalue.replace(/\~|\!|\*|\?|\^|\\|\(|\)|\[|\]|\+|\-|\:|\{|\}|\"/g,"");
+    var dst = "国家统计局无锡调查队";
+	if(fixvalue.trim()=="" || fixvalue.trim()=="请输入搜索关键字"){
+		document.getElementById("query").value = "";
+		alert("关键字不能为空！");
+        document.getElementById("query").focus();
+		return false;
+	}
+	else{
+        search_2024_wzq(encodeURIComponent(dst),encodeURIComponent(fixvalue),'');
+	}
+	//必需，最后将文本转换为gb2312
+	return false;
+}
+
+
+//站内回车提交方法
+function EnterSub(e){
+		var len=arguments.length;
+		var event;
+		if(len==1){
+			event = arguments[0];
+		}
+		//var evt = event ? event : (window.event ? window.event : null);
+		if (e.keyCode == 13)    {
+        	//必需，先将文本转换为utf-8
+			var fixvalue = document.getElementById("query").value;
+			fixvalue = fixvalue.replace(/\~|\!|\*|\?|\^|\\|\(|\)|\[|\]|\+|\-|\:|\{|\}|\"/g,"");
+            var dst = "国家统计局无锡调查队";
+			if(fixvalue.trim()=="" || fixvalue.trim()=="请输入搜索关键字"){
+				document.getElementById("query").value = "";
+				alert("关键字不能为空！");
+              document.getElementById("query").focus();
+				return false;
+			}
+			else{
+                search_2024_wzq(encodeURIComponent(dst),encodeURIComponent(fixvalue),'');
+			}
+			return false;
+    	}
+	}
+
+</script> 
+				</div>
+			</div>
+			<div class="nav no_q_nav large_spacing white">
+				<!--no_q_nav large_spacing-->
+				<div class="nav_inner clearfix">
+					<ul class="nav_ul hoversytle2 fl clearfix">
+						<!--hoversytle1 hoversytle2-->
+						<li id="chan_001"><a href="/index.shtml" title="网站首页">网站首页</a></li>
+						<li id="chan_25072"><a href="/zfxxgk/index.shtml" title="政府信息公开" target="_blank">政府信息公开</a></li>
+						<li id="chan_25114"><a href="/hdjl/index.shtml" title="互动交流">互动交流</a></li>
+						<li id="chan_002"><a href="http://wx.jszwfw.gov.cn:7002/ipgs/ipgs/gotoWxQjdFwListZRR.do" title="政务服务">政务服务</a></li>
+						<li id="chan_25207"><a href="/fzlm/xgxz/bbxz/index.shtml" title="相关下载">相关下载</a></li>
+					</ul>
+				</div>
+			</div>
+
+<script>
+//改变头部当前栏目样式的
+function changeHeadStyle(id){
+   if(id == "25073" || id == "25075" || id == "25191" || id == "25197"){
+       $("#chan_001").addClass("cur");
+   }else{
+       $("#chan_"+id).addClass("cur");
+   }
+    
+}
+</script>
+
+		</div>
+
+		<div class="topnews tex_cen">
+		    <div class="whitebox mgt20 index_ztzl">
+				<div class="swiper swiper-container">
+					<ul class="swiper-wrapper">
+						<li class="swiper-slide"><img src="/static_2023/images/gdtp_2025_1.jpg" /></li>
+						<li class="swiper-slide"><img src="/static_2023/images/gdtp_2025_2.jpg" /></li>
+					</ul>
+					<div class="swiper-button-prev"></div>
+					<div class="swiper-button-next"></div>
+				</div>
+
+			</div>
+		</div>
+		<div class="container">
+			<div class="whitebox clearfix index_focus mgt20 ">
+				<div class="main_image swiper-container">
+					<ul class="swiper-wrapper">
+						<li class="swiper-slide"><a href="https://liuyan.www.gov.cn/2025wwzfgzbgtjy/bmdf.html?q=js" title="@国务院 我来说" target="_blank">
+								<div class="pic"><img src="/uploadfiles/202403/11/2024031114440137422340.jpg" alt="@国务院 我来说" /></div>
+								<div class="tit">@国务院 我来说</div>
+							</a></li>
+						<li class="swiper-slide"><a href="https://wjk.jsrd.gov.cn:8004/#/home" title="江苏省法规规章规范性文件数据库" target="_blank">
+								<div class="pic"><img src="/uploadfiles/202312/18/2023121815104562059789.jpg" alt="江苏省法规规章规范性文件数据库" /></div>
+								<div class="tit">江苏省法规规章规范性文件数据库</div>
+							</a></li>
+						<li class="swiper-slide"><a href="/doc/2026/02/13/4736387.shtml" title="无锡队开展“跃马扬鞭 数绘新篇” 新春联欢活动" target="_blank">
+								<div class="pic"><img src="/uploadfiles/202602/25/2026022512391960440217.jpg" alt="无锡队开展“跃马扬鞭 数绘新篇” 新春联欢活动" /></div>
+								<div class="tit">无锡队开展“跃马扬鞭 数绘新篇” 新春联欢</div>
+							</a></li>
+						<li class="swiper-slide"><a href="/doc/2026/02/12/4736386.shtml" title="无锡队召开2025年度工作总结表彰会" target="_blank">
+								<div class="pic"><img src="/uploadfiles/202602/25/2026022512371278850485.jpg" alt="无锡队召开2025年度工作总结表彰会" /></div>
+								<div class="tit">无锡队召开2025年度工作总结表彰会</div>
+							</a></li>
+						<li class="swiper-slide"><a href="/doc/2026/01/06/4715189.shtml" title="无锡队开展“科技兴农筑梦行 凝心聚力绘新篇”工会活动" target="_blank">
+								<div class="pic"><img src="/uploadfiles/202601/09/2026010914244686646720.jpg" alt="无锡队开展“科技兴农筑梦行 凝心聚力绘新篇”工会活动" /></div>
+								<div class="tit">无锡队开展“科技兴农筑梦行 凝心聚力绘新</div>
+							</a></li>
+					</ul>
+					<div class="swiper-pagination"></div>
+					<div class="swiper-button-prev swiper-button-white"></div>
+					<div class="swiper-button-next swiper-button-white"></div>
+				</div>
+				
+
+				<div class="w535 fr">
+					<div class="box01">
+						<div class="title">
+							<ol class="clearfix">
+								<li><a href="/gzdt/index.shtml" title="工作动态">工作动态</a></li>
+								<li><a href="/zscd/index.shtml" title="政声传递">政声传递</a></li>
+							</ol>
+						</div>
+						<div class="box01_con">
+							<ul class="list01">
+								<li><a href="/doc/2026/03/12/4749581.shtml" target="_blank" title="无锡市召开第四次全国农业普查领导小组会议">无锡市召开第四次全国农业普查领导小组会议</a><span class="riqi fr">03-12</span></li>
+								<li><a href="/doc/2026/03/11/4749580.shtml" target="_blank" title="无锡队参加市级机关义务植树活动">无锡队参加市级机关义务植树活动</a><span class="riqi fr">03-11</span></li>
+								<li><a href="/doc/2026/03/06/4749579.shtml" target="_blank" title="无锡队开展“传承好家风 奋进新征程”  妇女节主题活动">无锡队开展“传承好家风 奋进新征程”  妇女节主题活动</a><span class="riqi fr">03-06</span></li>
+								<li><a href="/doc/2026/03/04/4749578.shtml" target="_blank" title="无锡队召开无锡市第四次全国农业普查遥感测量专班会议">无锡队召开无锡市第四次全国农业普查遥感测量专班会议</a><span class="riqi fr">03-04</span></li>
+								<li><a href="/doc/2026/02/13/4736387.shtml" target="_blank" title="无锡队开展“跃马扬鞭 数绘新篇” 新春联欢活动">无锡队开展“跃马扬鞭 数绘新篇” 新春联欢活动</a><span class="riqi fr">02-13</span></li>
+								<li><a href="/doc/2026/02/12/4736386.shtml" target="_blank" title="无锡队召开2025年度工作总结表彰会">无锡队召开2025年度工作总结表彰会</a><span class="riqi fr">02-12</span></li>
+								<li><a href="/doc/2026/02/10/4736385.shtml" target="_blank" title="无锡队开展春节前走访慰问困难群众活动">无锡队开展春节前走访慰问困难群众活动</a><span class="riqi fr">02-10</span></li>
+							</ul>
+							<span class="more"><a href="/gzdt/index.shtml" title="更多">更多</a></span>
+						</div>
+						<div class="box01_con">
+							<ul class="list01">
+								<li><a href="https://www.gov.cn/yaowen/liebiao/202603/content_7062604.htm" target="_blank" title="李强主持召开国务院常务会议 讨论通过《国务院2026年重点工作分工方案》等">李强主持召开国务院常务会议 讨论通过《国务院2026年重</a><span class="riqi fr">03-13</span></li>
+								<li><a href="https://www.gov.cn/zhuanti/2026nztj/2026qglh/yw/202603/content_7061863.htm" target="_blank" title="第二场“部长通道”：回应关切真抓实干">第二场“部长通道”：回应关切真抓实干</a><span class="riqi fr">03-10</span></li>
+								<li><a href="https://www.gov.cn/zhuanti/2026nztj/2026qglh/yw/202603/content_7061712.htm" target="_blank" title="听民意 汇民智 | “今天的反馈很全面也很务实”——全国人大代表张雨霏与国家体育总局工作人员面对面">听民意 汇民智 | “今天的反馈很全面也很务实”——全国</a><span class="riqi fr">03-09</span></li>
+								<li><a href="https://www.gov.cn/zhuanti/2026nztj/2026qglh/yw/202603/content_7061326.htm" target="_blank" title="政府工作报告里的变与不变">政府工作报告里的变与不变</a><span class="riqi fr">03-08</span></li>
+								<li><a href="https://www.gov.cn/zhuanti/2026nztj/2026qglh/yw/202603/content_7060997.htm" target="_blank" title="听民意 汇民智 | 国务院办公厅和国务院有关部门旁听全国两会，将代表委员真知灼见化为实招硬招">听民意 汇民智 | 国务院办公厅和国务院有关部门旁听全国</a><span class="riqi fr">03-06</span></li>
+								<li><a href="https://www.gov.cn/zhuanti/2026nztj/2026qglh/yw/202603/content_7061207.htm" target="_blank" title="“十五五”规划纲要草案的新指标、新看点">“十五五”规划纲要草案的新指标、新看点</a><span class="riqi fr">03-08</span></li>
+								<li><a href="https://www.gov.cn/yaowen/liebiao/202602/content_7059026.htm" target="_blank" title="李强主持召开国务院常务会议 对抓紧做好春节假期后政府工作作出部署">李强主持召开国务院常务会议 对抓紧做好春节假期后政府</a><span class="riqi fr">02-24</span></li>
+							</ul>
+							<span class="more"><a href="/zscd/index.shtml" title="更多">更多</a></span>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="whitebox mgt20 clearfix">
+				<div class="w750 fl">
+					<div class="box01 style01">
+						<div class="title">
+							<ol class="clearfix">
+								<li class="no_more"><a href="javascript:void(0)">最新公开信息</a></li>
+								<li><a href="/zfxxgk/xxgkml/fgwjjjd/index.shtml" title="法规文件及解读">法规文件及解读</a></li>
+								<li><a href="/zfxxgk/xxgkml/ghjh/index.shtml" title="规划计划">规划计划</a></li>
+								<li><a href="/zfxxgk/xxgkml/czxx/index.shtml" title="财政信息">财政信息</a></li>
+								<li><a href="/zfxxgk/xxgkml/zdgz/index.shtml" title="重点工作">重点工作</a></li>
+							</ol>
+						</div>
+						<div class="box01_con">
+							<ul class="list02">
+								<li><span class="tit"><em>[调查数据]</em><a href="/doc/2026/03/16/4746025.shtml" target="_blank" title="2026年2月份住宅销售价格指数">2026年2月份住宅销售价格指数</a></span><span class="riqi fr">03-16</span></li>
+								<li><span class="tit"><em>[调查数据]</em><a href="/doc/2026/03/09/4742825.shtml" target="_blank" title="2026年2月份居民消费价格指数">2026年2月份居民消费价格指数</a></span><span class="riqi fr">03-09</span></li>
+								<li><span class="tit"><em>[调查数据]</em><a href="/doc/2026/02/13/4734080.shtml" target="_blank" title="2026年1月份住宅销售价格指数">2026年1月份住宅销售价格指数</a></span><span class="riqi fr">02-13</span></li>
+								<li><span class="tit"><em>[调查数据]</em><a href="/doc/2026/02/12/4733463.shtml" target="_blank" title="2026年1月份居民消费价格指数">2026年1月份居民消费价格指数</a></span><span class="riqi fr">02-12</span></li>
+								<li><span class="tit"><em>[调查数据]</em><a href="/doc/2026/02/04/4728795.shtml" target="_blank" title="2025年无锡城乡居民收支情况表">2025年无锡城乡居民收支情况表</a></span><span class="riqi fr">02-04</span></li>
+								<li><span class="tit"><em>[调查数据]</em><a href="/doc/2026/01/19/4720087.shtml" target="_blank" title=" 2025年12月份住宅销售价格指数"> 2025年12月份住宅销售价格指数</a></span><span class="riqi fr">01-19</span></li>
+								<li><span class="tit"><em>[调查数据]</em><a href="/doc/2026/01/12/4715962.shtml" target="_blank" title="2025年12月份居民消费价格指数">2025年12月份居民消费价格指数</a></span><span class="riqi fr">01-12</span></li>
+							</ul>
+						</div>
+						<div class="box01_con">
+							<ul class="list02">
+								<li><span class="tit"><em>[其他文件]</em><a href="/doc/2025/11/06/4677960.shtml" target="_blank" title="中共中央办公厅 国务院办公厅印发 《关于更加有效发挥统计监督职能作用的意见》">中共中央办公厅 国务院办公厅印发 《关于更加有效发挥统计监督职能作用的意见...</a></span><span class="riqi fr">11-06</span></li>
+								<li><span class="tit"><em>[其他文件]</em><a href="/doc/2025/11/06/4677957.shtml" target="_blank" title="中共中央办公厅 国务院办公厅印发《防范和惩治统计造假、弄虚作假督察工作规定》">中共中央办公厅 国务院办公厅印发《防范和惩治统计造假、弄虚作假督察工作规...</a></span><span class="riqi fr">11-06</span></li>
+								<li><span class="tit"><em>[文件修改废止]</em><a href="/doc/2015/02/27/1422927.shtml" target="_blank" title="《统计严重失信企业信用管理办法》（国家统计局令第35号）">《统计严重失信企业信用管理办法》（国家统计局令第35号）</a></span><span class="riqi fr">02-27</span></li>
+								<li><span class="tit"><em>[文件修改废止]</em><a href="/doc/2009/07/23/1422147.shtml" target="_blank" title="中华人民共和国统计法">中华人民共和国统计法</a></span><span class="riqi fr">07-23</span></li>
+							</ul>
+						</div>
+						<div class="box01_con">
+							<ul class="list02">
+								<li><span class="tit"><em>[年度工作计划总结]</em><a href="/doc/2019/07/15/2581496.shtml" target="_blank" title="2018年工作总结和2019年工作思路">2018年工作总结和2019年工作思路</a></span><span class="riqi fr">07-15</span></li>
+								<li><span class="tit"><em>[年度工作计划总结]</em><a href="/doc/2018/08/23/1916930.shtml" target="_blank" title="2017年工作总结和2018年工作思路">2017年工作总结和2018年工作思路</a></span><span class="riqi fr">08-23</span></li>
+								<li><span class="tit"><em>[年度工作计划总结]</em><a href="/doc/2017/08/17/1430652.shtml" target="_blank" title="2016年工作总结和2017年工作思路">2016年工作总结和2017年工作思路</a></span><span class="riqi fr">08-17</span></li>
+								<li><span class="tit"><em>[年度工作计划总结]</em><a href="/doc/2016/03/08/1430741.shtml" target="_blank" title="2015年工作总结和2016年工作思路">2015年工作总结和2016年工作思路</a></span><span class="riqi fr">03-08</span></li>
+								<li><span class="tit"><em>[年度工作计划总结]</em><a href="/doc/2015/02/01/1430763.shtml" target="_blank" title="2014年工作总结和2015年工作思路">2014年工作总结和2015年工作思路</a></span><span class="riqi fr">02-01</span></li>
+								<li><span class="tit"><em>[年度工作计划总结]</em><a href="/doc/2014/02/01/1430777.shtml" target="_blank" title="2013年工作总结和2014年工作思路">2013年工作总结和2014年工作思路</a></span><span class="riqi fr">02-01</span></li>
+							</ul>
+						</div>
+						<div class="box01_con">
+							<ul class="list02">
+								<li><span class="tit"><em>[部门预决算]</em><a href="/doc/2019/07/26/2592132.shtml" target="_blank" title="国家统计局2018年度部门决算">国家统计局2018年度部门决算</a></span><span class="riqi fr">07-26</span></li>
+								<li><span class="tit"><em>[部门预决算]</em><a href="/doc/2018/08/24/1924637.shtml" target="_blank" title="国家统计局2017年度部门决算">国家统计局2017年度部门决算</a></span><span class="riqi fr">08-24</span></li>
+								<li><span class="tit"><em>[部门预决算]</em><a href="/doc/2017/07/14/1440201.shtml" target="_blank" title="国家统计局2016年度部门决算">国家统计局2016年度部门决算</a></span><span class="riqi fr">07-14</span></li>
+							</ul>
+						</div>
+						<div class="box01_con">
+							<ul class="list02">
+								<li><span class="tit"><em>[重点工作执行情况]</em><a href="/doc/2019/07/15/2581499.shtml" target="_blank" title="2019年工作要点">2019年工作要点</a></span><span class="riqi fr">07-15</span></li>
+								<li><span class="tit"><em>[重点工作执行情况]</em><a href="/doc/2018/08/23/1916614.shtml" target="_blank" title="2018年工作要点">2018年工作要点</a></span><span class="riqi fr">08-23</span></li>
+								<li><span class="tit"><em>[重点工作执行情况]</em><a href="/doc/2017/08/17/1430717.shtml" target="_blank" title="2017年工作要点">2017年工作要点</a></span><span class="riqi fr">08-17</span></li>
+								<li><span class="tit"><em>[重点工作执行情况]</em><a href="/doc/2016/02/01/1430687.shtml" target="_blank" title="2016年工作要点">2016年工作要点</a></span><span class="riqi fr">02-01</span></li>
+								<li><span class="tit"><em>[重点工作执行情况]</em><a href="/doc/2015/02/01/1430675.shtml" target="_blank" title="2015年工作要点">2015年工作要点</a></span><span class="riqi fr">02-01</span></li>
+								<li><span class="tit"><em>[重点工作执行情况]</em><a href="/doc/2014/02/01/1430633.shtml" target="_blank" title="2014年工作要点">2014年工作要点</a></span><span class="riqi fr">02-01</span></li>
+								<li><span class="tit"><em>[重点工作执行情况]</em><a href="/doc/2013/02/01/1430630.shtml" target="_blank" title="2013年工作要点">2013年工作要点</a></span><span class="riqi fr">02-01</span></li>
+							</ul>
+						</div>
+					</div>
+					<ul class="xxgk_list clearfix">
+						<li class="sp05"><a href="/zfxxgk/xxgkml/index.shtml" title="法定主动公开内容" target="_blank">法定主动公开内容</a></li>
+                        <li class="sp06"><a href="http://www.js.gov.cn/col/col59348/index.html" title="江苏省政府信息公开申请须知"><em>江苏省政府</em><br />信息公开申请须知</a></li>
+						<li class="sp03"><a href="/zfxxgk/wzndgzbb/index.shtml" title="网站年度工作报表" style="color:red">网站年度工作报表</a></li>
+					</ul>
+					<!--<div class="slide_govinfo_left">
+						<div class="hd">
+							<ul></ul>
+						</div>
+						<div class="bd">
+							<dl>
+								<dd>
+									<ul class="xxgk_list clearfix">
+					                    <li class="sp06"><a href="" title="江苏省政府信息公开申请须知"><em>江苏省政府</em><br />信息公开申请须知</a></li>
+									</ul>
+								</dd>
+							</dl>
+						</div>
+					</div>-->
+
+				</div>
+				<div class="w390 fr">
+					<div class="box01 style02">
+						<div class="title">
+							<ol class="clearfix">
+								<li><a href="/gggs/index.shtml" title="公告公示">公告公示</a></li>
+							</ol>
+						</div>
+						<div class="box01_con box01_con_gggs">
+							<ul class="list03">
+								<li><a href="/doc/2025/02/27/4508775.shtml" target="_blank" title="国家统计局无锡调查队关于招聘驾驶员名单的公示">国家统计局无锡调查队关于招聘驾驶员名</a><span class="riqi">02-27</span></li>
+								<li><a href="/doc/2024/04/07/4281773.shtml" target="_blank" title="国家统计局无锡调查队关于编外用工招聘递补人员名单公示">国家统计局无锡调查队关于编外用工招聘</a><span class="riqi">04-07</span></li>
+								<li><a href="/doc/2024/03/19/4242669.shtml" target="_blank" title="国家统计局无锡调查队关于编外用工招聘拟聘用人员名单的公示">国家统计局无锡调查队关于编外用工招聘</a><span class="riqi">03-19</span></li>
+								<li><a href="/doc/2023/11/29/4121703.shtml" target="_blank" title="关于无锡地区调查队系统优秀村（社区）调查员拟推荐对象的公示">关于无锡地区调查队系统优秀村（社区）</a><span class="riqi">11-29</span></li>
+								<li><a href="http://www.gov.cn/premier/2022-08/16/content_5705604.htm" target="_blank" title="李克强主持召开经济大省政府主要负责人经济形势座谈会">李克强主持召开经济大省政府主要负责人</a><span class="riqi">08-17</span></li>
+							</ul>
+							<span class="more"><a href="/gggs/index.shtml" title="更多">更多</a></span>
+							<div class="contact">纪检举报邮箱：wxdcd_jj@dcd.stats.gov.cn<br/>
+						<!--纪检举报电话：0510-81823810<br/>-->
+						违法举报电话：0510-81823837<br/>
+                        违法举报邮箱：wxdcd_zhc@dcd.stats.gov.cn</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+			<div class="whitebox mgt20 index_ztzl01">
+                <div class="box01 style02 mgb20">
+				    <div class="title">
+							<ol class="clearfix">
+								<li>网上直报入口</li>
+							</ol>
+				    </div>
+				</div>
+				<div class="swiper swiper-container">
+					<ul class="swiper-wrapper">
+						<li class="swiper-slide"><a href="http://219.235.129.115:9092/xmydr/queryLoginInfo.do" title="畜牧业调查国家样本用户" target="_blank"><img src="/static_2023/images/xmydcgjybyh_2023.jpg" alt="畜牧业调查国家样本用户" /></a></li>
+						<li class="swiper-slide"><a href="https://jszd.stats.gov.cn/pmi/" title="采购经理调查用户" target="_blank"><img src="/static_2023/images/cgjldcyh_2023.jpg" alt="采购经理调查用户" /></a></li>
+						<li class="swiper-slide"><a href="http://222.191.227.8:7001/webtj/index.jsp?zydm=JT" title="企业集团单位用户" target="_blank"><img src="/static_2023/images/qyjtdwyh_2023.jpg" alt="企业集团单位用户" /></a></li>
+						<li class="swiper-slide"><a href="http://219.235.129.115:7011/dr/queryLoginInfo.do" title="规下服务业抽样调查企业填报登录" target="_blank"><img src="/static_2023/images/gxfwycydcqydbdl_2023.jpg" alt="规下服务业抽样调查企业填报登录" /></a></li>
+						<li class="swiper-slide"><a href="http://219.235.129.147/bjstat_web/yyaq/loginca.jsp" title="采购经理用户（国家样本）" target="_blank"><img src="/static_2023/images/cgjlyh_2023.jpg" alt="采购经理用户（国家样本）" /></a></li>
+						<li class="swiper-slide"><a href="http://219.235.129.90:7003/bjstat_web/yyaq/loginca.jsp?ppi=true" title="工业生产者价格调查用户" target="_blank"><img src="/static_2023/images/gysczjgdcyh_2023.jpg" alt="工业生产者价格调查用户" /></a></li>
+						<li class="swiper-slide"><a href="http://219.235.129.90:7003/bjstat_web/yyaq/loginca.jsp" title="规下工业企业填报用户" target="_blank"><img src="/static_2023/images/gxgyqytbyh_2023.jpg" alt="规下工业企业填报用户" /></a></li>
+					</ul>
+					<div class="swiper-button-prev"></div>
+					<div class="swiper-button-next"></div>
+				</div>
+
+			</div>
+			<div class="whitebox mgt20 clearfix">
+				<div class="w750 fl">
+					<div class="box01">
+						<div class="title clearfix">
+							<ol class="fl clearfix">
+								<li><a href="/zdbz/dczd/index.shtml" title="制度标准">制度标准</a></li>
+								<li><a href="/fzlm/xgxz/bbxz/index.shtml" title="相关下载">相关下载</a></li>
+							</ol>
+						</div>
+						<div class="box01_con box01_con_gggs">
+							<span class="more"><a href="/zdbz/dczd/index.shtml">更多</a></span>
+							<div class="tableXj tableXj_row_two">
+								<ul class="list02">
+								<li><span class="tit"><a href="/doc/2026/01/16/4718701.shtml" target="_blank" title="农业产值和价格综合统计报表制度主要内容（2024年统计年报和2025年定期统计报表）">农业产值和价格综合统计报表制度主要内容（2024年统计年报和2025年定期统计</a></span><span class="riqi fr">01-16</span></li>
+								<li><span class="tit"><a href="/doc/2026/01/16/4718697.shtml" target="_blank" title="住户收支与生活状况调查方案主要内容（2024年统计年报和2025年定期统计报表）">住户收支与生活状况调查方案主要内容（2024年统计年报和2025年定期统计报表</a></span><span class="riqi fr">01-16</span></li>
+								<li><span class="tit"><a href="/doc/2026/01/16/4718677.shtml" target="_blank" title="农民工监测调查方案主要内容（2024年统计年报和2025年定期统计报表）">农民工监测调查方案主要内容（2024年统计年报和2025年定期统计报表）</a></span><span class="riqi fr">01-16</span></li>
+								<li><span class="tit"><a href="/doc/2026/01/16/4718668.shtml" target="_blank" title="流通和消费价格统计报表制度主要内容（2024年统计年报和2025年定期统计报表）">流通和消费价格统计报表制度主要内容（2024年统计年报和2025年定期统计报表</a></span><span class="riqi fr">01-16</span></li>
+								<li><span class="tit"><a href="/doc/2026/01/16/4718665.shtml" target="_blank" title="劳动力调查制度主要内容（2025年定期统计报表）">劳动力调查制度主要内容（2025年定期统计报表）</a></span><span class="riqi fr">01-16</span></li>
+								<li><span class="tit"><a href="/doc/2026/01/16/4718644.shtml" target="_blank" title="工业生产者价格统计调查制度主要内容（2025年定期统计报表）">工业生产者价格统计调查制度主要内容（2025年定期统计报表）</a></span><span class="riqi fr">01-16</span></li>
+							</ul>
+							</div>
+						</div>
+						<div class="box01_con box01_con_gggs">
+							<span class="more"><a href="/fzlm/xgxz/bbxz/index.shtml">更多</a></span>
+							<div class="tableXj tableXj_row_two">
+								<ul class="list02">
+							</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="w390 fr">
+					<div class="box01 style02">
+						<div class="title">
+							<ol class="clearfix">
+								<li><a href="/hdjl/dczj/index.shtml">调查征集</a></li>
+							</ol>
+						</div>
+						<div class="box01_con box01_con_gggs" id="zz">
+						
+						</div>
+                        <script>
+                        $(function() {
+                          $.ajax({
+                            type:"post",
+                            url:"/intertidwebapp/survey/getTopicList",
+                            data:{
+                              chanId: 25119,
+                              num: 2
+                            },
+                            dataType:'json',
+                            success:function(data){
+                              var topics = data.topics;
+                              var tHtml = "";
+                              var tSummary = "";
+                              var tTitle = "";
+                              tHtml += '<span class="more"><a href="/hdjl/dczj/index.shtml">更多</a></span>';
+                              if(topics != undefined && topics.length > 0){
+                                for(var i =0;i<topics.length;i++){
+                                    tTitle = (topics[i].title == null ? '' : topics[i].title);
+                                    if (tTitle.length > 30) {
+                                      tTitle = tTitle.substring(0,30) + '...';
+                                    }
+                                    
+                                    tSummary = "";
+                                    // tSummary = (topics[i].summary == null ? '' : topics[i].summary);
+                                    if (tSummary.length > 50) {
+                                      tSummary = tSummary.substring(0,50)+'...';
+                                    }
+                                    if (topics[i].channelType == 4) {
+                                      if(topics[i].isEnd){
+                                        tHtml += '<div class="zj_list"><dl><dt><a href="/fzlm/hdjlgny/dcxqy/index.shtml?id='+topics[i].id+'" target="_blank">'+tTitle+'</a> </dt><dd>'+tSummary+'</dd></dl><ul><li class="date">发布时间：'+topics[i].startDateString.substring(0,10)+'<span>|</span>截止时间：'+topics[i].endDateString.substring(0,10)+'</li><li><a href="/fzlm/hdjlgny/dcxqy/index.shtml?id='+topics[i].id+'" class="btn_zjz">查看结果</a></li></ul></div>';
+                                      }else{
+                                        tHtml += '<div class="zj_list"><dl><dt><a href="/fzlm/hdjlgny/dcxqy/index.shtml?id='+topics[i].id+'" target="_blank">'+tTitle+'</a> </dt><dd>'+tSummary+'</dd></dl><ul><li class="date">发布时间：'+topics[i].startDateString.substring(0,10)+'<span>|</span>截止时间：'+topics[i].endDateString.substring(0,10)+'</li><li><a href="/fzlm/hdjlgny/dcxqy/index.shtml?id='+topics[i].id+'" class="btn_zjz">参与调查</a></li></ul></div>';
+                                      }
+                                    } else {
+                                      if(topics[i].isEnd){
+                                        tHtml += '<div class="zj_list"><dl><dt><a href="/fzlm/hdjlgny/myzjxqy/index.shtml?chanDocId='+topics[i].id+'&docId='+topics[i].docId+'" target="_blank">'+tTitle+'</a> </dt><dd>'+tSummary+'</dd></dl><ul><li class="date">发布时间：'+topics[i].startDateString.substring(0,10)+'<span>|</span>截止时间：'+topics[i].endDateString.substring(0,10)+'</li><li><a href="/fzlm/hdjlgny/myzjxqy/index.shtml?chanDocId='+topics[i].id+'&docId='+topics[i].docId+'" class="btn_zjz">查看结果</a></li></ul></div>';
+                                      }else{
+                                        tHtml += '<div class="zj_list"><dl><dt><a href="/fzlm/hdjlgny/myzjxqy/index.shtml?chanDocId='+topics[i].id+'&docId='+topics[i].docId+'" target="_blank">'+tTitle+'</a> </dt><dd>'+tSummary+'</dd></dl><ul><li class="date">发布时间：'+topics[i].startDateString.substring(0,10)+'<span>|</span>截止时间：'+topics[i].endDateString.substring(0,10)+'</li><li><a href="/fzlm/hdjlgny/myzjxqy/index.shtml?chanDocId='+topics[i].id+'&docId='+topics[i].docId+'" class="btn_zjz">参与调查</a></li></ul></div>';
+                                      }
+                                    }
+                                }
+                              }
+                              $("#zz").html(tHtml);
+                            },
+                            error: function(XMLHttpRequest, textStatus, errorThrown) {
+                              var msg = XMLHttpRequest.responseText;
+                              // alert(msg);
+                            }
+                          });
+                        });
+                        </script>
+					</div>
+				</div>
+			</div>
+			<!--custom row-->
+			<div class="whitebox mgt20 clearfix">
+				<div class="box01">
+					<div class="title no_more clearfix">
+						<ol class="fl clearfix">
+							<li class="no_more"><a href="javascript:void(0)">专题专栏</a></li>
+							<li class="no_more"><a href="javascript:void(0)">统计网站</a></li>
+							<li class="no_more"><a href="javascript:void(0)">无锡政府网站</a></li>
+						</ol>
+					</div>
+					<div class="box01_con">
+						<ul class="list_link col_e">
+							<li><a href="/ztzl/tjkfr/index.shtml" target="_blank" title="统计开放日">统计开放日</a></li>
+							<li><a href="/ztzl/sxqygs/zljs/" target="_blank" title="失信企业公示">失信企业公示</a></li>
+							<li><a href="/ztzl/sxrygs/zljs/index.shtml" target="_blank" title="失信人员公示">失信人员公示</a></li>
+							<li><a href="/ztzl/sqxzjcgszl/index.shtml" target="_blank" title="涉企行政检查公示专栏">涉企行政检查公示专栏</a></li>
+						</ul>
+					</div>
+					<div class="box01_con">
+						<ul class="list_link col_d">
+							<li><a href="http://www.stats.gov.cn/" target="_blank" title="国家统计局">国家统计局</a></li>
+							<li><a href="http://jszd.stats.gov.cn" target="_blank" title="江苏调查总队">江苏调查总队</a></li>
+							<li><a href="http://tj.jiangsu.gov.cn/" target="_blank" title="江苏省统计局">江苏省统计局</a></li>
+							<li><a href="http://tj.wuxi.gov.cn/" target="_blank" title="无锡市统计局">无锡市统计局</a></li>
+						</ul>
+					</div>
+					<div class="box01_con">
+						<ul class="list_link col_b">
+							<li><a href="http://www.wuxi.gov.cn" target="_blank" title="无锡市人民政府">无锡市人民政府</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!--custom row end-->
+		</div>
+
+		<div style="clear: both; height: 0px; font-size: 0px; line-height: 0px; border: 0px none;"></div>
+<script type="text/javascript" src="https://www.wuxi.gov.cn/static2016/js/Traditionalconversion.js"></script>
+<div class="footer">
+			<div class="footer_bot"><!--<a class="dzjg_ico" target="_blank" href="https://bszs.conac.cn/sitename?method=show&id=0A695CE6E1CE7854E053022819ACB832"><img data-bd-imgshare-binded="1" src="https://www.wuxi.gov.cn/static2016/images/dzjg_red.png" alt="党政机关" id="imgConac" vspace="0" hspace="0" border="0"></a>--> <!--<a class="jcjcjcjc" href="https://zfwzgl.www.gov.cn/exposure/jiucuo.html?site_code=3202000032&url=https%3A%2F%2Ftyj.wuxi.gov.cn%2F" target="_blank"><img src="/static_2023/images/jiucuo.png" alt="我要纠错" ></a>-->
+              <script type="text/javascript">document.write(unescape("%3Cspan id='_ideConac' %3E%3C/span%3E%3Cscript  src='https://dcs.conac.cn/js/nis/32/02/00/b35324c778d8098b754310eb803ce4dc/12320200466308023B-20004997.js' type='text/javascript'%3E%3C/script%3E"));</script>
+				<p class="foot_info"><a href="/fzlm/wzdt/index.shtml" target="_blank">站点地图</a></p>
+				<p class="copyright font14 lh25 white">
+<a href="http://beian.miit.gov.cn" target="_blank">苏ICP备09024546号</a>  <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32021102000707" target="_blank">公安备案号：32021102000707</a>  </p>
+			</div>
+		</div>
+        
+
+<div class="floating">
+			<dl>
+				<dd>
+					<div class="float_ico">
+						<div class="erweima"><img src="/static_2023/images/icon_ew_2023.png" alt="微信" /></div>
+						<p class="img"><img src="/static_2023/images/ico21.png" alt="微信" /></p>
+						<p class="word">微信</p>
+					</div>
+				</dd>
+				<dd>
+					<div><a href="https://www.wuxi.gov.cn/ghwd/znwd/index.html" target="_blank">
+							<p class="img"><img src="/static_2023/images/ico23.png" alt="智能问答" /></p>
+							<p class="word">智能问答</p>
+						</a></div>
+				</dd>
+				<dd>
+					<div><a href="https://wxsfj.wuxi.gov.cn/wxpf/" target="_blank">
+							<p class="img"><img src="/static_2023/images/ico24.png" alt="无锡普法" /></p>
+							<p class="word">无锡普法</p>
+						</a></div>
+				</dd>
+				<dd>
+					<div id="goTop" title="返回顶部">
+						<p class="img"><img src="/static_2023/images/ico25.png" alt="返回顶部" /></p>
+						<p class="word">返回顶部</p>
+					</div>
+				</dd>
+			</dl>
+			<script type="text/javascript">
+				//回顶部
+				$(".float_ico").hover(function() {
+					$(this).children('.erweima').toggle()
+				});
+				$("#goTop").click(function() {
+					$('body,html').animate({
+						scrollTop: 0
+					}, 1000);
+					return false;
+				});
+			</script>
+		</div>
+
+<!--手机版导航/start-->
+		<div class="menu-btn"></div>
+		<div class="m-menu">
+			<dl>
+				<dt><a href="/index.shtml">网站首页</a></dt>
+			</dl>
+			<dl>
+				<dt><a href="/zfxxgk/index.shtml">政府信息公开</a></dt>
+				<dd>
+					<!--<ul>
+            <li><a></a></li>
+         </ul>-->
+				</dd>
+			</dl>
+			<dl>
+				<dt><a href="/hdjl/index.shtml">互动交流</a></dt>
+				<dd>
+					<!--<ul>
+            <li><a></a></li>
+         </ul>-->
+				</dd>
+			</dl>
+			<dl>
+				<dt><a href="https://wx.jszwfw.gov.cn/ipgs/ipgs/gotoQjdV6.do" target="_blank">政务服务</a></dt>
+				<dd></dd>
+			</dl>
+			<dl>
+				<dt><a href="/ztzl/tjkfr/index.shtml">专题专栏</a></dt>
+			</dl>
+		</div>
+		<!--手机版导航/end-->
+
+<script type="text/javascript" src="/static_2023/js/main.js"></script>
+
+		<div id="mydiv">
+  <link rel="stylesheet" type="text/css" href="//www.wuxi.gov.cn/static_common/css/ts.css" />
+  <div class="pushad">
+    <a href="http://zzxszy.people.cn/GB/458759/index.html" target="blank">
+      <img src="//www.wuxi.gov.cn/static_2023/images/zyzzxszy.jpg" style="width:100%;display:block;margin-top:5px">
+    </a> 
+  </div>
+  <div class="tnew" style="padding:0;">
+    <span class="closeAd closeAd1">
+      <img src="//www.wuxi.gov.cn/static_2023/images/i35.gif" alt="关闭">
+    </span>
+  </div>
+</div>
+<script>
+  $('.closeAd1').each(function(){
+    $(this).click(function(){
+      $(this).parent().hide();$(this).parent().parent().find('.pushad').hide();
+    })
+  })
+  
+  $(function(){
+    wza2.subscribe('after', 'TOGGLE', function(action, state) {
+      if (state.enable === true) {
+        $("#mydiv").css("display","none");
+      }else{
+        $("#mydiv").css("display","");
+      }
+    });
+    wza2.subscribe('after', 'INITIAL_FROM_STORAGE', function(action, state) {
+      if (state.enable === true) {
+        $("#mydiv").css("display","none");
+      }else{
+        $("#mydiv").css("display","");
+      }
+    });
+    /*长者版隐藏*/
+    if($("body").hasClass("web_older")){
+      $("#mydiv").css("display","none");
+    }else{
+      $("#mydiv").css("display","");
+    }
+  })
+  
+</script>
+		<script type="text/javascript">
+			//tab
+			$(function() {
+				var mobile_flag = isMobile();
+				if (mobile_flag) {
+					$(".box01").tab({
+						tabs: ".title ol li",
+						evtype: "click",
+						box: ".box01_con"
+					});
+					$(".box02").tab({
+						tabs: "h2 ol li",
+						evtype: "click",
+						box: ".box02_con"
+					});
+					$(".title ol li a", "h2 ol li a").click(function() {
+						return false;
+					})
+				} else {
+					$(".box01").tab({
+						tabs: ".title ol li",
+						evtype: "mouseover focus",
+						box: ".box01_con"
+					});
+					$(".box02").tab({
+						tabs: "h2 ol li",
+						evtype: "mouseover focus",
+						box: ".box02_con"
+					});
+				}
+			})
+		</script>
+<script type="text/javascript" src="//www.wuxi.gov.cn/static_common/js/hotkeys.js"></script>
+<script type="text/javascript" src="//www.wuxi.gov.cn/static_common/js/jquery.cookies.js"></script>
+<script type="text/javascript" src="/static_older/older.js"></script>
+<script type="text/javascript" src="/static_older/index.js"></script>
+
+	</body>
+</html>

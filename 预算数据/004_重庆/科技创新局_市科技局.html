@@ -1,0 +1,1547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>重庆市科学技术局门户网站</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+<!--站点类-->
+<meta name="SiteName" content="重庆市科学技术局门户网站">
+<meta name="SiteDomain" content="kjj.cq.gov.cn">
+<meta name="SiteIDCode" content="5000000045">
+
+<!--栏目类-->
+<meta name="ColumnName" content="">
+
+  
+	<meta name="ColumnDescription" content="">
+
+
+  
+	<meta name="ColumnKeywords" content="">
+
+
+  
+	<meta name="ColumnType" content="">
+
+
+    <link rel="stylesheet" href="./images/common.css">
+    <link rel="stylesheet" href="./images/color.css">
+    <link rel="stylesheet" href="./images/main.css">
+    <link rel="stylesheet" href="./images/style.css">
+    <script type="text/javaScript" src="./images/jquery.min.js"></script>
+    <script type="text/javaScript" src="./images/common.js"></script>
+    <script type="text/javaScript" src="./images/index.js"></script>
+    <link rel="stylesheet" href="/images/xcConfirm.css">
+    <script type="text/javascript" src="/images/xcConfirm.js"></script>
+    <!--[if IE 8]>
+    <script type="text/javascript" src="./images/jquery.min.v1.js"></script>
+    <script src="/images/common.js"></script>
+    <script src="/images/index.js"></script>
+    <script src="/images/js.js"></script>
+    <script src="/images/xcConfirm.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="./images/index-style.css">
+<style>
+.main2-link a:nth-of-type(14) span{
+    background: url(/images/kqkd0429.png) center center no-repeat;
+background-size: 100% 100%;
+}
+</style>
+</head>
+<body>
+<!-- 头部start -->
+<link rel="stylesheet" href="/images/h5style.css">
+<div class="top">
+    <div class="wrap">
+        <div class="top-login clearfix" style="padding-top: 10px">
+            <a class="lf" href="//www.gov.cn/" target="_blank">中国政府网</a>
+            <span class="lf">&nbsp;|&nbsp;</span>
+            <a class="lf" href="//www.cq.gov.cn/" target="_blank">重庆市人民政府网</a>
+            <a class="ghb rt" style="margin-left:10px;" href="javascript:;" onclick="aria.oldFixedStart()" clickhide="false">关怀版</a>
+              <a class="rt" href="javascript:;" style="margin-left:10px;" onclick="aria.start()" clickhide="false">无障碍</a>
+            <a class="rt cq-register cq-register-gr " id="topRegister" href="javascript:void(0)">注册</a>
+            <a class="rt cq-logout" href="javascript:void(0)" id="topLogout" style="display:none;">注销</a>
+            <span class="rt huo">&nbsp;|&nbsp;</span>
+            <a class="rt cq-login" id="topLogin" href="javascript:void(0)">登录</a><span class="rt cq-user-name" id="topUserName"></span>
+            
+        </div>
+        <script src="//cq.gov.cn/images/crypto-js.min.js"></script>
+<script src="//cq.gov.cn/images/DECRYPT.js"></script>
+<script src="//cq.gov.cn/images/ykb-request.js"></script>
+<script src="//cq.gov.cn/images/ykb-api.js"></script>
+<script src="//cq.gov.cn/images/ykb-base.js?v=1.2"></script>
+<input type="text" hidden id="loginSiteId" value="176" />
+<script>
+  $(function () {
+    //获取用户信息-有额外的操作可以在回调中使用
+    getUserInfo(function (res) {
+      if(res!=200){
+        // 校验国家政务网登录 start
+        checkLoginGj()
+        // 校验国家政务网登录 end
+      }
+    })
+  })
+</script>
+        <!---飘红--->
+        <!-- <a href="//www.gov.cn/zhuanti/zggcddescqgdbdh/index.htm" target="_blank" style="float: right;width: 652px;height: 79px;margin-top: 22px;"></a> -->
+
+        <div class="logo clearfix">
+            <a class="lf" href="/"><img src="./images/logo.png" /></a>
+            <div class="xhy-hntr rt clearfix">
+                <div class="xhy-search tyh-search lf">
+                    <input id="textfield" class="inputbox" type="text" maxlength="50" onkeydown="if(event.keyCode==13){submitsearch();}" onfocus="if(this.value=='请输入搜索内容'){this.value='';}" onblur="if(this.value==''){this.value='请输入搜索内容';}" placeholder="请输入搜索内容" />
+                    <button id="toSearch" onclick="submitsearch()" ></button>
+                </div>
+                <script>
+                    function submitsearch(){
+                        var result = $("#textfield").val();
+                        result = $.trim(result);
+                        var reg = /[`~!@#$%^&*_+<>{}\/'[\]]/im;
+                        
+                        if (result == "请输入搜索内容" || result == "" || result == null) {
+                            window.wxc.xcConfirm('请输入检索条件!', window.wxc.xcConfirm.typeEnum.info)
+                            return false;
+                        } else {
+                            result = result.replace("-", "\-");
+                            result = result.replace("(", "\(");
+                            result = result.replace(")", "\)");
+                        }
+                        window.location.href=  "/cqs/searchResultPC.html?tenantId=83&configTenantId=83&areaCode=500000114&searchWord=" + encodeURI(result);
+                        //window.location.href="/cq/index.html?sitecode=06ea63ecd64542c7b1ce37f54906a4df&siteid=49&keyWork=" + encodeURI(result);
+                    }
+                </script>
+            </div>
+        </div>
+        <div class="top-menu clearfix">
+            <div class="menu">
+                <a class="cur" href="/"><img src="./images/col-icon1.png" /><span>首页</span></a>
+                <a href="./zwgk_176/"><img src="./images/col-icon2.png" /><span>政务公开</span></a>
+                <a href="./ykb_176/" target="_blank"><img src="./images/col-icon3.png" /><span>渝快办</span></a>
+                <a href="./hdjl_176/"><img src="./images/col-icon4.png" /><span>互动交流</span></a>
+                <!--<a href=""><img src="./images/col-icon5.png" /><span></span></a>-->
+                <a href="./ztzl_176/"><img src="./images/col-icon6-kjj.png" /><span>专题专栏</span></a>
+                <img class="menu-img" src="./images/menu.png" />
+                <img class="menu-img2" src="./images/menu-2.png" />
+            </div>
+        </div>
+        <div class="xj-lb-tt lb-tt3 lb-tt4" id="toutiao" style="display:none;">
+            <a href="javascript:void(0)"><img class="img" src="./images/news.png" alt="" /></a>
+            <div class="m-lb-tt">
+                <div class="lb-tt-bnr lb-tt-bnr2">
+                    
+                </div>
+            </div>
+        </div>
+        <script>
+            if($("#toutiao .lb-tt-item").length>0){
+                $("#toutiao").css("display","block");
+            }
+        </script>
+    </div>
+</div>
+
+<div class="main_1">
+    <div class="wrap clearfix">
+        <div class="fade-box lf">
+            <div class="fade-img">
+                
+                    <a href="http://www.cq.gov.cn/ywdt/jrcq/202603/t20260320_15557787.html" target="_blank"><img src="./zwxx_176/tpxw/202603/W020260323352177292676.png" alt="市委常委会举行会议 听取全市树立和践行正确政绩观学习教育情况汇报 研究部署中央巡视反馈意见整改等工作 市委书记袁家军主持并讲话" width="600px" /></a>
+                
+                    <a href="https://www.gov.cn/yaowen/liebiao/202603/content_7062408.htm" target="_blank"><img src="./zwxx_176/tpxw/202603/W020260313542055438282.jpg" alt="十四届全国人大四次会议在京闭幕" width="600px" /></a>
+                
+                    <a href="https://www.cq.gov.cn/ywdt/jrcq/202602/t20260225_15454603.html" target="_blank"><img src="./zwxx_176/tpxw/202602/W020260226351833943812.png" alt="市委常委会举行会议 深入学习贯彻习近平总书记重要讲话精神 研究部署树立和践行正确政绩观学习教育工作 市委书记袁家军主持并讲话" width="600px" /></a>
+                
+                    <a href="./zwxx_176/bmdt/202602/t20260212_15440450.html" target="_blank"><img src="./zwxx_176/bmdt/202602/W020260213368052975489.jpg" alt="市科技局召开2025年度工作总结大会" width="600px" /></a>
+                
+                    <a href="./zwxx_176/bmdt/202602/t20260205_15383528.html" target="_blank"><img src="./zwxx_176/bmdt/202602/W020260206530922793515.jpg" alt="2025年市科技局系统第三届趣味运动会成功举行" width="600px" /></a>
+                
+                    <a href="./zwxx_176/bmdt/202601/t20260116_15326773.html" target="_blank"><img src="./zwxx_176/bmdt/202601/W020260127340612820493.jpg" alt="市科技局举办2025年度重庆市科学技术奖政策宣讲及提名工作培训会" width="600px" /></a>
+                
+            </div>
+            <div class="fade-txt">
+                 
+                    
+                        <a href="http://www.cq.gov.cn/ywdt/jrcq/202603/t20260320_15557787.html" target="_blank" style="display: block;">市委常委会举行会议 听取全市树立和践行正确...</a>
+                    
+                    
+                        <a href="https://www.gov.cn/yaowen/liebiao/202603/content_7062408.htm" target="_blank" style="display: none;">十四届全国人大四次会议在京闭幕</a>
+                    
+                        <a href="https://www.cq.gov.cn/ywdt/jrcq/202602/t20260225_15454603.html" target="_blank" style="display: none;">市委常委会举行会议 深入学习贯彻习近平总...</a>
+                    
+                        <a href="./zwxx_176/bmdt/202602/t20260212_15440450.html" target="_blank" style="display: none;">市科技局召开2025年度工作总结大会</a>
+                    
+                        <a href="./zwxx_176/bmdt/202602/t20260205_15383528.html" target="_blank" style="display: none;">2025年市科技局系统第三届趣味运动会成功举行</a>
+                    
+                        <a href="./zwxx_176/bmdt/202601/t20260116_15326773.html" target="_blank" style="display: none;">市科技局举办2025年度重庆市科学技术奖政策...</a>
+                    
+                
+            </div>
+            <div class="fade-num">
+                 
+                    
+                        <span class="cur"></span>
+                    
+                    
+                        <span></span>
+                    
+                        <span></span>
+                    
+                        <span></span>
+                    
+                        <span></span>
+                    
+                        <span></span>
+                    
+                
+            </div>
+        </div>
+        <div class="main_tab rt">
+            <div class="tab-parent kjj-tab-parent">
+                <ul class="tab-list-bool clearfix">
+                    <li class="cur"><a href="http://www.gov.cn/pushinfo/v150203/index.htm" target="_blank">国务院信息</a></li>
+                    <li class=""><a href="//www.cq.gov.cn/ywdt/jrcq/" target="_blank">今日重庆</a></li>
+                    <li class=""><a href="./zwxx_176/bmdt/">工作动态</a></li>
+                 
+                    <li class=""><a href="./zwxx_176/tzgg/">通知公告</a></li>
+                    <li class=""><a href="./zwxx_176/xwbd/">新闻报道</a></li>
+                </ul>
+                <img class="tab-img-1" src="./images/tab-img-1.png" />
+            </div>
+            <div class="tab-group">
+                <ul class="tab-item" style="display: none;" id="gwyinfo"></ul>
+                <ul class="tab-item" style="display: none;" id="cqjrcq"></ul>
+                <ul class="tab-item" style="display: block;">
+                    
+                        <li class="clearfix">
+                            <a href="./zwxx_176/bmdt/202603/t20260323_15560790.html" target="_blank" title="市科技局召开2026年科技成果转化“5+X”机制改革启动会">市科技局召开2026年科技成果转化“5+X”机制改革启动会</a>
+                            <span>2026-03-23</span>
+                        </li>
+                    
+                        <li class="clearfix">
+                            <a href="https://www.cq.gov.cn/ywdt/jrcq/202603/t20260316_15530086.html" target="_blank" title="2026年重庆GDP预计增长5%以上 超1400个市级重点项目年度计划投资超5000亿元">2026年重庆GDP预计增长5%以上 超1400个市级重点项目年度计划投资超5000亿元</a>
+                            <span>2026-03-16</span>
+                        </li>
+                    
+                        <li class="clearfix">
+                            <a href="./zwxx_176/bmdt/202603/t20260306_15509870.html" target="_blank" title="市科技局开展“三八”国际劳动妇女节庆祝活动">市科技局开展“三八”国际劳动妇女节庆祝活动</a>
+                            <span>2026-03-06</span>
+                        </li>
+                    
+                        <li class="clearfix">
+                            <a href="./zwxx_176/bmdt/202603/t20260305_15498178.html" target="_blank" title="市科技局党委召开树立和践行正确政绩观学习教育动员部署会">市科技局党委召开树立和践行正确政绩观学习教育动员部署会</a>
+                            <span>2026-03-05</span>
+                        </li>
+                    
+                        <li class="clearfix">
+                            <a href="./zwxx_176/bmdt/202603/t20260305_15498058.html" target="_blank" title="市科技局党委理论学习中心组（扩大）举行2026年第2次学习会">市科技局党委理论学习中心组（扩大）举行2026年第2次学习会</a>
+                            <span>2026-03-05</span>
+                        </li>
+                    
+                        <li class="clearfix">
+                            <a href="https://www.cq.gov.cn/ywdt/jrcq/202603/t20260304_15487808.html" target="_blank" title="重庆首次跻身全球科技创新中心100强 今年定下新目标，从七方面再突破">重庆首次跻身全球科技创新中心100强 今年定下新目标，从七方面再突破</a>
+                            <span>2026-03-04</span>
+                        </li>
+                    
+                    <div class="list-more h5show">
+                      <a href="./zwxx_176/bmdt/">查看更多>></a>
+                    </div>
+                </ul>
+                
+                <ul class="tab-item" style="display: none;">
+                    
+                        <li class="clearfix">
+                            <a href="./zwxx_176/tzgg/202603/t20260327_15572707.html" target="_blank" title="2025年度重庆市科学技术奖受理项目公示">2025年度重庆市科学技术奖受理项目公示</a>
+                            <span>2026-03-27</span>
+                        </li>
+                    
+                        <li class="clearfix">
+                            <a href="./zwxx_176/tzgg/202603/t20260327_15572005.html" target="_blank" title="关于公示重庆市2026年第一批拟更名高新技术企业名单的通知">关于公示重庆市2026年第一批拟更名高新技术企业名单的通知</a>
+                            <span>2026-03-27</span>
+                        </li>
+                    
+                        <li class="clearfix">
+                            <a href="./zwxx_176/tzgg/202603/t20260327_15571487.html" target="_blank" title="重庆市科学技术局关于申报2026年度企业科技攻关联合行动计划项目的通知">重庆市科学技术局关于申报2026年度企业科技攻关联合行动计划项目的通知</a>
+                            <span>2026-03-27</span>
+                        </li>
+                    
+                        <li class="clearfix">
+                            <a href="./zwxx_176/tzgg/202603/t20260327_15571201.html" target="_blank" title="重庆市科学技术局关于下达2026年度重庆市第三批科研项目计划的通知">重庆市科学技术局关于下达2026年度重庆市第三批科研项目计划的通知</a>
+                            <span>2026-03-27</span>
+                        </li>
+                    
+                        <li class="clearfix">
+                            <a href="./zwxx_176/tzgg/202603/t20260326_15567381.html" target="_blank" title="关于公示2026年第三批拟入库科技型企业名单的通知">关于公示2026年第三批拟入库科技型企业名单的通知</a>
+                            <span>2026-03-26</span>
+                        </li>
+                    
+                        <li class="clearfix">
+                            <a href="./zwxx_176/tzgg/202603/t20260323_15560962.html" target="_blank" title="重庆市科学技术局关于印发《2026年全市高新技术产业开发区高质量发展工作要点》的通知">重庆市科学技术局关于印发《2026年全市高新技术产业开发区高质量发展工作要点》的通知</a>
+                            <span>2026-03-23</span>
+                        </li>
+                    
+                    <div class="list-more h5show">
+                      <a href="./zwxx_176/tzgg/">查看更多>></a>
+                    </div>
+                </ul>
+<ul class="tab-item" style="display: none;">
+                    
+                        <li class="clearfix">
+                            <a href="https://h.xinhuaxmt.com/vh512/share/13005098?docid=13005098&newstype=1001&d=13525d9" target="_blank" title="李强主持召开国务院常务会议">李强主持召开国务院常务会议</a>
+                            <span>2026-03-16</span>
+                        </li>
+                    
+                        <li class="clearfix">
+                            <a href="https://content-static.cctvnews.cctv.com/snow-book/index.html?item_id=17989700629994020473&toc_style_id=feeds_default&share_to=wechat&track_id=493e0b0e-a078-4056-b7df-35d0487b8e28" target="_blank" title="视频丨代表委员积极建言献策 有关部门全面记录梳理高效转办回应">视频丨代表委员积极建言献策 有关部门全面记录梳理高效转办回应</a>
+                            <span>2026-03-10</span>
+                        </li>
+                    
+                        <li class="clearfix">
+                            <a href="https://www.peopleapp.com/column/30051596913-500007385075" target="_blank" title="第二场部长通道 回应关切真抓实干（现场·部长通道）">第二场部长通道 回应关切真抓实干（现场·部长通道）</a>
+                            <span>2026-03-10</span>
+                        </li>
+                    
+                        <li class="clearfix">
+                            <a href="https://content-static.cctvnews.cctv.com/snow-book/index.html?item_id=3791285225425095504&toc_style_id=feeds_default&share_to=wechat&track_id=c61b6a85-20bc-4ecf-a644-502987326643" target="_blank" title="世界看两会丨国际人士：中国高质量发展为全球经济注入稳定性">世界看两会丨国际人士：中国高质量发展为全球经济注入稳定性</a>
+                            <span>2026-03-10</span>
+                        </li>
+                    
+                        <li class="clearfix">
+                            <a href="https://h.xinhuaxmt.com/vh512/share/12998093?docid=12998093&newstype=1001&d=13525d4&channel=weixin&time=1772985258837" target="_blank" title="听民意 汇民智|“今天的反馈很全面也很务实”——全国人大代表张雨霏与国家体育总局工作人员面对面">听民意 汇民智|“今天的反馈很全面也很务实”——全国人大代表张雨霏与国家体育总局工作人员面对面</a>
+                            <span>2026-03-09</span>
+                        </li>
+                    
+                        <li class="clearfix">
+                            <a href="https://content-static.cctvnews.cctv.com/snow-book/index.html?item_id=5546596795561239646&toc_style_id=feeds_default&share_to=wechat&track_id=5c826241-1db6-4947-a248-1823997d4994" target="_blank" title="中国经济信心说丨读懂“十五五”主要指标的深意">中国经济信心说丨读懂“十五五”主要指标的深意</a>
+                            <span>2026-03-09</span>
+                        </li>
+                    
+                    <div class="list-more h5show">
+                      <a href="./zwxx_176/xwbd/">查看更多>></a>
+                    </div>
+                </ul>
+            </div>
+        </div>
+
+
+        <!--飘红样式-->
+        <style>
+            /* .top .logo{
+              margin-top: 130px;
+            } */
+            .ph-mid{
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            /* .top{
+              background: url(/images/pc_bg_20d.jpg) center top no-repeat!important;
+            }
+
+            .top-menu a.cur,.top-menu a:hover,.top-menu .menu{
+              background: #C10805;
+            }
+            .top .lo{
+              margin-top: 130px;
+            }
+            .xhy-search input{
+              color: #C10805;
+            }
+            .xhy-search{
+              background: rgba(255, 255, 255, 0.5);
+            }
+            .xhy-search input::-webkit-input-placeholder{
+              color: #C10805;
+            }
+            .xhy-search input::-moz-placeholder{
+              color: #C10805;
+            }
+            .xhy-search input::-ms-input-placeholder{
+              color: #C10805;
+            }
+            .top-menu{margin-top:60px;} */
+        </style>
+
+        <div class="mid_logo lf" style="width:100%;">
+            
+                
+                    <a class="lf w70 h100p" href="./ykb_176/" target="_blank"><img class="pcshow" src="./ggbf_search/ggw/201912/W020191227361538504793_842.png" /><img class="h5show" src="./ggbf_search/ggw/201912/W020191225529055654316_ORIGIN.png" /></a>
+                
+                
+                    <a class="rt w28 h100p" href="https://tousu.www.gov.cn/dc/index.htm" target="_blank"><img class="pcshow" src="./ggbf_search/ggw/201912/W020191227362338862448.png" /><img class="h5show" src="./ggbf_search/ggw/201912/W020191227529192670948_ORIGIN.png" /></a>
+                
+            
+            <div class="clear"></div>
+        </div>
+
+    </div>
+</div>
+<!-- 头图部分end-->
+<!-- 办事热点部分start -->
+<div class="main_2">
+    <div class="wrap clearfix">
+
+        <div class="main2-c">
+            <div class="tit">
+                <a class="ywt active" target="_blank" href="https://zwykb.cq.gov.cn/v2/fwqd/bmfwqd/?orgcode=500000114">
+                    <!-- <img src="./images/ywtbsx-ed.png" /> -->
+                </a>
+                <a class="xxxt">
+                    <!-- <img src="./images/cqskjglxt.png" /> -->
+                </a>
+            </div>
+            <!-- <div class="main2-desc"></div> -->
+            <div class="ywt-wrap ykb-kjj">
+                <!-- <div class="ywt-img">
+                    <a style="width: 1120px;"target="_blank">
+                        <img src="./images/ywt-grbs.png" />
+                    </a>
+                </div> -->
+                <!-- <div class="ywt-box">
+                
+                    <a href="https://zwykb.cq.gov.cn/v2/bszn.html?rowGuid=c8dabe1c-6ab1-4a46-a670-d726ada45fa3&itemId=f1d2045b-e6bb-49c6-8b8c-29ca9e4aa480" target="_blank"><span></span><i>技术合同认定登记</i></a>
+                
+                    <a href="https://zwykb.cq.gov.cn/v2/bszn.html?rowGuid=b95de9da-89d6-4ac0-bc30-7be2f7ee26c6&itemId=81d0920f-6cd0-40bb-bee8-91cd31caf751" target="_blank"><span></span><i>科技成果登记</i></a>
+                
+                    <a href="https://zwykb.cq.gov.cn/v2/bszn.html?rowGuid=22434f40-5f42-453f-adcb-37ab6fb2f756&itemId=2b0b4f24-d669-4be8-aec7-ba3438a101a3" target="_blank"><span></span><i>外国人来华工作许可</i></a>
+                
+                    <a href="https://zwykb.cq.gov.cn/v2/bljggs/index.html?orgCode=500000114" target="_blank"><span></span><i>办理结果公示</i></a>
+                
+                </div> -->
+
+                <!-- <div class="ywt-img">
+                    <a style="width: 1120px;">
+                        <img src="./images/ywt-frbs.png" />
+                    </a>
+                </div> -->
+                <div class="ywt-box">
+                
+                    <a href="https://zwykb.cq.gov.cn/v2/bszn.html?rowGuid=b95de9da-89d6-4ac0-bc30-7be2f7ee26c6&itemId=81d0920f-6cd0-40bb-bee8-91cd31caf751" target="_blank"><span></span><i>科技成果登记</i></a>
+                
+                    <a href="https://zwykb.cq.gov.cn/v2/bszn.html?rowGuid=c8dabe1c-6ab1-4a46-a670-d726ada45fa3&itemId=f1d2045b-e6bb-49c6-8b8c-29ca9e4aa480" target="_blank"><span></span><i>技术合同认定登记</i></a>
+                
+                    <a href="https://zwykb.cq.gov.cn/v2/bszn.html?rowGuid=f18ad8bd-da8a-4fcf-8bec-3963a9b0e797&itemId=72a5e611-abec-478e-af38-0f2eb04847c5" target="_blank"><span></span><i>重庆市科学技术奖项评审</i></a>
+                
+                    <a href="https://zwykb.cq.gov.cn/v2/bszn.html?rowGuid=357cbb43-e0ff-4de4-8ce9-6c9a3aa05e2f&itemId=4114224c-631c-4553-8ef5-5e46b163dca4" target="_blank"><span></span><i>实验动物生产许可新申请</i></a>
+                
+                    <a href="https://zwykb.cq.gov.cn/v2/bszn.html?rowGuid=e12489a9-767e-455d-900d-5efb766a62c1&itemId=fb14d431-beea-4e14-8fdd-c1bf409c4dcf" target="_blank"><span></span><i>实验动物生产许可变更</i></a>
+                
+                    <a href="https://zwykb.cq.gov.cn/v2/bszn.html?rowGuid=053827f9-fce6-4b16-873a-f3684fbb0a70&itemId=006a9395-2b53-4fa3-9122-2a0ccd6a69f4" target="_blank"><span></span><i>实验动物使用许可新申请</i></a>
+                
+                    <a href="https://zwykb.cq.gov.cn/v2/bszn.html?rowGuid=a4235cbe-e90f-49b3-bdbf-2becb441fd42&itemId=ac7ada0f-0048-4777-80ab-e74f657e906e" target="_blank"><span></span><i>实验动物使用许可变更</i></a>
+                
+                    <a href="https://zwykb.cq.gov.cn/v2/bszn.html?rowGuid=22434f40-5f42-453f-adcb-37ab6fb2f756" target="_blank"><span></span><i>外国人来华工作许可</i></a>
+                
+                    <a href="https://zwykb.cq.gov.cn/v2/bljggs/index.html?orgCode=500000114" target="_blank"><span></span><i>办理结果公示</i></a>
+                
+              </div>
+
+                    <!-- <div class="list-more h5show">
+                      <a href="//zwykb.cq.gov.cn/sxqd/szqlfwqd/?orgcode=500000114">查看更多>></a>
+                    </div> -->
+            </div>
+            <!-- <a style="display: block;width: 270px;font-size: 17px;" href="//kjj.cq.gov.cn/zwxx_176/tzgg/202009/t20200930_7940363.html"  target="_blank" class="title"><img src="./images/bsrd.png" />重庆市科技管理信息系统</a> -->
+            <div class="main2-link clearfix ykb-kjj" style="display:none;">
+                <div class="ywt-box">
+                
+                    <a href="http://www.csti.cn/govwebnew/index.htm?forwardClient=2&jumpFlag=false" target="_blank"><span></span><i>科技平台</i></a>
+                
+                    <a href="http://www.csti.cn/govwebnew/index.htm?forwardClient=3&jumpFlag=false" target="_blank"><span></span><i>科技型企业</i></a>
+                
+                    <a href="http://www.csti.cn/govwebnew/index.htm?forwardClient=6&jumpFlag=false" target="_blank"><span></span><i>科技特派员</i></a>
+                
+                    <a href="http://kjjl.csti.cn" target="_blank"><span></span><i>科技奖励</i></a>
+                
+                    <a href="http://www.csti.cn/govwebnew/index.htm?forwardClient=3&jumpFlag=false" target="_blank"><span></span><i>加计扣除异议项目鉴定</i></a>
+                
+                    <a href="https://zsjz.cqcxcyct.com/api/v1/auth/auth_request" target="_blank"><span></span><i>知识价值信用贷款</i></a>
+                
+                    <a href="http://www.csti.cn/govwebnew/index.htm?forwardClient=4&jumpFlag=false" target="_blank"><span></span><i>科技人才</i></a>
+                
+                    <a href="http://www.csti.cn/" target="_blank"><span></span><i>科技资源共享</i></a>
+                
+                    <a href="http://cgdj.tech110.net" target="_blank"><span></span><i>国家科技成果在线登记系统</i></a>
+                
+                    <a href="https://ctmht.chinatorch.org.cn/admin/login" target="_blank"><span></span><i>技术合同登记</i></a>
+                
+                    <a href="http://www.csti.cn/govwebnew/index.htm?jumpFlag=false" target="_blank"><span></span><i>科企快贷</i></a>
+                
+                    <a href="https://zhgg.csti.cn/web/kjzj/login" target="_blank"><span></span><i>自然科学基金专家评审</i></a>
+                
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 办事热点部分end -->
+<!-- 国务院部分start -->
+<div class="main_3">
+    <div class="wrap">
+        <div class="ban-container">
+            <div class="ban-more-box">
+                <div class="ban-more-img">
+                    
+                        <p><a class="img-link" href="https://www.gov.cn/zhengce/zczhjd/" target="_blank"><img src="http://kjj.cq.gov.cn/ztzl_176/415771/images/P020230801376121711500.jpg" width="268" /></a></p>
+                    
+                        <p><a class="img-link" href="./ztzl_176/kjjh/" target="_blank"><img src="http://kjj.cq.gov.cn/ztzl_176/kjjh/images/P020200204713979493916.jpg" width="268" /></a></p>
+                    
+                        <p><a class="img-link" href="./ztzl_176/anscyxfan/" target="_blank"><img src="http://kjj.cq.gov.cn/ztzl_176/anscyxfan/images/P020200602590065373093.png" width="268" /></a></p>
+                    
+                        <p><a class="img-link" href="./ztzl_176/2023zpzb/" target="_blank"><img src="http://kjj.cq.gov.cn/ztzl_176/2023zpzb/images/P020231228527452258855.jpg" width="268" /></a></p>
+                    
+                        <p><a class="img-link" href="http://kjj.cq.gov.cn/zwgk_176/zwxxgkml/zfwzgznb/index.html" target="_blank"><img src="http://kjj.cq.gov.cn/ztzl_176/345023/images/P020220215404868013973.png" width="268" /></a></p>
+                    
+                        <p><a class="img-link" href="./ztzl_176/szqh/" target="_blank"><img src="http://kjj.cq.gov.cn/ztzl_176/szqh/images/P020251112404286751838.jpg" width="268" /></a></p>
+                    
+                </div>
+            </div>
+            <div class="ban-more-btn ban-more-left"></div>
+            <div class="ban-more-btn ban-more-right"></div>
+        </div>
+        <div class="main3-con clearfix kjj1-bt">
+            <div class="m3c-right rt">
+                <div class="m3c-rt-list">
+                    <a class="title" href="//kjj.cq.gov.cn/zwgk_176/zfxxgkzn/">政府信息公开</a>
+                    <a class="gkzl-l" href="./zwgk_176/zfxxgkzn/"><img src="./images/gkzn.png" /><img class="cur" src="./images/gkzn-m.png" /><span>政府信息公开指南</span></a>
+                    <a class="gkzl-l" href="./zwgk_176/zfxxgkzd/"><img src="./images/gkzd.png" /><img class="cur" src="./images/gkzd-m.png" /><span>政府信息公开制度</span></a>
+                    <a class="gkzl-l" href="./zwgk_176/fdzdgknr/"><img src="./images/gkml.png" /><img class="cur" src="./images/gkml-m.png" /><span>法定主动公开内容</span></a>
+                    <a class="gkzl-l" href="./zwgk_176/zfxxgknb/"><img src="./images/gknb.png" /><img class="cur" src="./images/gknb-m.png" /><span>政府信息公开年报</span></a>
+
+
+
+                </div>
+              </div>
+            <div class="m3c-left lf">
+                <div class="m3c-col lf kjj1-bt1">
+                    <div class="tab-parent">
+                        <ul class="tab-list-bool">
+                         
+                            <li class="cur"><a href="//www.cq.gov.cn/zwgk/zfxxgkzl/fdzdgknr/lzyj/index.html" target="_blank">市政府文件</a></li>
+                        </ul>
+                    </div>
+                    <div class="tab-group">
+         
+                        <!-- <ul class="tab-item" style="display: none;" id='cqszfwj'>
+                           
+                                <li class="clearfix">
+                                    <a href="http://www.cq.gov.cn/zwgk/zfxxgkzl/fdzdgknr/lzyj/index.html" target="_blank" title="市政府文件">市政府文件</a>
+                                    <span class="rt">2020-08-10</span>
+                                </li>
+                            
+                                <li class="clearfix">
+                                    <a href="./zwgk_176/szfwj/202003/t20200330_6589630.html" target="_blank" title="重庆市人民政府办公厅关于印发重庆市降低社会保险费率综合方案的通知">重庆市人民政府办公厅关于印发重庆市降低社会保险费率综合方案的通知</a>
+                                    <span class="rt">2019-05-08</span>
+                                </li>
+                            
+                                <li class="clearfix">
+                                    <a href="./zwgk_176/szfwj/202003/t20200330_6589631.html" target="_blank" title="重庆市人民政府关于奉节县、石柱县退出国家扶贫开发工作重点县的通知">重庆市人民政府关于奉节县、石柱县退出国家扶贫开发工作重点县的通知</a>
+                                    <span class="rt">2019-05-08</span>
+                                </li>
+                            
+                                <li class="clearfix">
+                                    <a href="./zwgk_176/szfwj/202003/t20200330_6588144.html" target="_blank" title="重庆市人民政府办公厅关于调整万州区等36个区县（自治县）集中式饮用水水源保护区的通知">重庆市人民政府办公厅关于调整万州区等36个区县（自治县）集中式饮用水水源保护区的通知</a>
+                                    <span class="rt">2018-03-26</span>
+                                </li>
+                            
+                        </ul> -->
+
+                        <ul class="tab-item" style="display: none;" id="cqszfwj"></ul>
+                    </div>
+                </div>
+                <div class="m3c-col lf kjj1-bt2">
+                    <div class="tab-parent">
+                        <ul class="tab-list-bool">
+                            <li class="cur"><a href="./zwgk_176/zwxxgkml/zcwj/">政策文件</a></li>
+                            <li class=""><a href="./kjzcfg/">科技政策解读</a></li>
+                           <li class=""><a href="./zwgk_176/zwxxgkml/zczxwdk_1/">政策咨询问答库</a></li>
+                        </ul>
+                    </div>
+                    <div class="tab-group">
+                      <ul class="tab-item" style="display: block;">
+                        
+                        <li class="clearfix">
+                          <a href="./zwgk_176/zwxxgkml/zcwj/xzgfxwj/202603/t20260313_15527902.html" target="_blank" title="重庆市科学技术局 重庆市财政局 中共重庆市委金融委员会办公室关于印发重庆市种子投资基金管理办法的通知">重庆市科学技术局 重庆市财政局 中共重庆...</a>
+                          <span>2026-03-06</span>
+                        </li>
+                        
+                        <li class="clearfix">
+                          <a href="./zwgk_176/zwxxgkml/zcwj/xzgfxwj/202512/t20251222_15260980.html" target="_blank" title="重庆市科学技术局关于印发重庆市科学技术奖励办法实施细则的通知">重庆市科学技术局关于印发重庆市科学技术...</a>
+                          <span>2025-12-12</span>
+                        </li>
+                        
+                        <li class="clearfix">
+                          <a href="./zwgk_176/zwxxgkml/zcwj/qtwj/202512/t20251210_15232870.html" target="_blank" title="重庆市科学技术局重庆市教育委员会重庆市人力资源和社会保障局关于区县加快构建环大学创新创业服务体系的指导意见">重庆市科学技术局重庆市教育委员会重庆市...</a>
+                          <span>2025-12-10</span>
+                        </li>
+                        
+                        <li class="clearfix">
+                          <a href="./zwgk_176/zwxxgkml/zcwj/xzgfxwj/202510/t20251013_15076331.html" target="_blank" title="重庆市科学技术局关于印发重庆市实验动物许可证管理办法的通知">重庆市科学技术局关于印发重庆市实验动物...</a>
+                          <span>2025-10-13</span>
+                        </li>
+                        
+                        <li class="clearfix">
+                          <a href="./zwgk_176/zwxxgkml/zcwj/xzgfxwj/202511/t20251120_15176898.html" target="_blank" title="重庆市科学技术局关于印发重庆市科技型企业入库实施细则的通知">重庆市科学技术局关于印发重庆市科技型企...</a>
+                          <span>2025-10-11</span>
+                        </li>
+                        
+                    <div class="list-more h5show">
+                      <a href="./zwgk_176/zwxxgkml/zcwj/">查看更多>></a>
+                    </div>
+                      </ul>
+                      <ul class="tab-item" style="display: none;">
+                        
+                        <li class="clearfix">
+                          <a href="./kjzcfg/202603/t20260313_15528552.html" target="_blank" title="《重庆市科学技术奖励办法实施细则》 政策解读">《重庆市科学技术奖励办法实施细则》 政策...</a>
+                          <span>2026-03-13</span>
+                        </li>
+                        
+                        <li class="clearfix">
+                          <a href="./kjzcfg/202603/t20260313_15528504.html" target="_blank" title="《重庆市种子投资基金管理办法》政策解读">《重庆市种子投资基金管理办法》政策解读</a>
+                          <span>2026-03-13</span>
+                        </li>
+                        
+                        <li class="clearfix">
+                          <a href="./kjzcfg/202510/t20251031_15131042.html" target="_blank" title="《重庆市科技型企业入库实施细则》政策解读">《重庆市科技型企业入库实施细则》政策解读</a>
+                          <span>2025-10-31</span>
+                        </li>
+                        
+                        <li class="clearfix">
+                          <a href="./kjzcfg/202510/t20251017_15089713.html" target="_blank" title="《重庆市实验动物许可证管理办法》政策解读">《重庆市实验动物许可证管理办法》政策解读</a>
+                          <span>2025-10-17</span>
+                        </li>
+                        
+                        <li class="clearfix">
+                          <a href="./kjzcfg/202510/t20251014_15077810.html" target="_blank" title="《重庆市科技专家库管理办法》政策解读">《重庆市科技专家库管理办法》政策解读</a>
+                          <span>2025-10-14</span>
+                        </li>
+                        
+                    <div class="list-more h5show">
+                      <a href="./kjzcfg/">查看更多>></a>
+                    </div>
+                      </ul>
+                      <ul class="tab-item" style="display: none;">
+                        
+                        <li class="clearfix">
+                          <a href="./zwgk_176/zwxxgkml/zczxwdk_1/wdzt/jjgl/202603/t20260316_15531222.html" target="_blank" title="二、《办法》主要内容有哪些？">二、《办法》主要内容有哪些？</a>
+                          <span>2026-03-16</span>
+                        </li>
+                        
+                        <li class="clearfix">
+                          <a href="./zwgk_176/zwxxgkml/zczxwdk_1/wdzt/jjgl/202603/t20260316_15531169.html" target="_blank" title="一、《办法》修订的背景是什么？">一、《办法》修订的背景是什么？</a>
+                          <span>2026-03-16</span>
+                        </li>
+                        
+                        <li class="clearfix">
+                          <a href="./zwgk_176/zwxxgkml/zczxwdk_1/wdzt/kxjsjlbf/202603/t20260316_15531079.html" target="_blank" title="八、在完善异议处理方面有哪些举措？">八、在完善异议处理方面有哪些举措？</a>
+                          <span>2026-03-16</span>
+                        </li>
+                        
+                        <li class="clearfix">
+                          <a href="./zwgk_176/zwxxgkml/zczxwdk_1/wdzt/kxjsjlbf/202603/t20260316_15531073.html" target="_blank" title="七、在加大奖励力度方面有哪些举措？">七、在加大奖励力度方面有哪些举措？</a>
+                          <span>2026-03-16</span>
+                        </li>
+                        
+                        <li class="clearfix">
+                          <a href="./zwgk_176/zwxxgkml/zczxwdk_1/wdzt/kxjsjlbf/202603/t20260316_15531059.html" target="_blank" title="六、在完善评审组织机构方面有哪些举措？">六、在完善评审组织机构方面有哪些举措？</a>
+                          <span>2026-03-16</span>
+                        </li>
+                        
+                    <div class="list-more h5show">
+                      <a href="./zwgk_176/zwxxgkml/zczxwdk_1/">查看更多>></a>
+                    </div>
+                      </ul>
+                    </div>
+                </div>
+              </div>
+            <div class="m3c-left lf">
+                <div class="m3c-col-list lf">
+                    <a href="./zwgk_176/fdzdgknr/jgzn/fzrxx/"><img src="./images/ldxx.png" /><span>负责人信息</span></a>
+                    <a href="./zwgk_176/fdzdgknr/jgzn/"><img src="./images/jgzn.png" /><span>机构职能</span></a>
+                    <a href="./zwgk_176/zwxxgkml/qzqd/" target="_blank"><img src="./images/qzqd.png" /><span>权责清单</span></a>
+                    <a href="./zwgk_176/fdzdgknr/czyjs/"><img src="./images/czyjs.png" /><span>预算/决算</span></a>
+                </div>
+
+                <div class="kjj1-m3c-col-bl lf kjj1-bt3">
+                    <div class="tab-parent">
+                        <ul class="tab-list-bool">
+                            <li class="cur"><a href="./zwgk_176/zwxxgkml/zxtablqkgk/">政协提案办理情况公开</a></li>
+                            <li class=""><a href="./zwgk_176/zwxxgkml/rddbjyblqkgk/">人大代表建议办理情况公开</a></li>
+                        </ul>
+                    </div>
+                    <div class="tab-group">
+                        <ul class="tab-item" style="display: block;">
+                            
+                                <li class="clearfix">
+                                    <a href="./zwgk_176/zwxxgkml/zxtablqkgk/202505/t20250523_14652904.html" target="_blank" title="重庆市科学技术局关于 市政协六届三次会议第0892号提案答复的函">重庆市科学技术局关于 市政协六届三次会议...</a>
+                                    <span>2025-05-23</span>
+                                </li>
+                            
+                                <li class="clearfix">
+                                    <a href="./zwgk_176/zwxxgkml/zxtablqkgk/202505/t20250523_14652667.html" target="_blank" title="重庆市科学技术局关于 市政协六届三次会议第0890号提案答复的函">重庆市科学技术局关于 市政协六届三次会议...</a>
+                                    <span>2025-05-23</span>
+                                </li>
+                            
+                                <li class="clearfix">
+                                    <a href="./zwgk_176/zwxxgkml/zxtablqkgk/202505/t20250523_14652655.html" target="_blank" title="重庆市科学技术局关于 市政协六届三次会议第0886号提案答复的函">重庆市科学技术局关于 市政协六届三次会议...</a>
+                                    <span>2025-05-23</span>
+                                </li>
+                            
+                                <li class="clearfix">
+                                    <a href="./zwgk_176/zwxxgkml/zxtablqkgk/202505/t20250523_14652600.html" target="_blank" title="重庆市科学技术局关于 市政协六届三次会议第0898号提案答复的函">重庆市科学技术局关于 市政协六届三次会议...</a>
+                                    <span>2025-05-23</span>
+                                </li>
+                            
+                                <li class="clearfix">
+                                    <a href="./zwgk_176/zwxxgkml/zxtablqkgk/202505/t20250523_14652579.html" target="_blank" title="重庆市科学技术局关于 市政协六届三次会议第0900号提案答复的函">重庆市科学技术局关于 市政协六届三次会议...</a>
+                                    <span>2025-05-23</span>
+                                </li>
+                            
+                    <div class="list-more h5show">
+                      <a href="./zwgk_176/zwxxgkml/zxtablqkgk/">查看更多>></a>
+                    </div>
+                        </ul>
+                        <ul class="tab-item" style="display: none;">
+                            
+                                <li class="clearfix">
+                                    <a href="./zwgk_176/zwxxgkml/rddbjyblqkgk/202508/t20250828_14945701.html" target="_blank" title="重庆市科学技术局 关于市六届人大三次会议第0275号建议办理情况的答复函">重庆市科学技术局 关于市六届人大三次会议...</a>
+                                    <span>2025-08-28</span>
+                                </li>
+                            
+                                <li class="clearfix">
+                                    <a href="./zwgk_176/zwxxgkml/rddbjyblqkgk/202505/t20250523_14652183.html" target="_blank" title="重庆市科学技术局 关于市六届人大三次会议第0881号代表建议办理情况的答复函">重庆市科学技术局 关于市六届人大三次会议...</a>
+                                    <span>2025-05-23</span>
+                                </li>
+                            
+                                <li class="clearfix">
+                                    <a href="./zwgk_176/zwxxgkml/rddbjyblqkgk/202505/t20250523_14652164.html" target="_blank" title="重庆市科学技术局 关于市六届人大三次会议第1332号代表建议办理情况的答复函">重庆市科学技术局 关于市六届人大三次会议...</a>
+                                    <span>2025-05-23</span>
+                                </li>
+                            
+                                <li class="clearfix">
+                                    <a href="./zwgk_176/zwxxgkml/rddbjyblqkgk/202505/t20250523_14652121.html" target="_blank" title="重庆市科学技术局 关于市六届人大三次会议第0919号代表建议办理情况的答复函">重庆市科学技术局 关于市六届人大三次会议...</a>
+                                    <span>2025-05-23</span>
+                                </li>
+                            
+                                <li class="clearfix">
+                                    <a href="./zwgk_176/zwxxgkml/rddbjyblqkgk/202505/t20250523_14652093.html" target="_blank" title="重庆市科学技术局 关于市六届人大三次会议第0957号代表建议办理情况的答复函">重庆市科学技术局 关于市六届人大三次会议...</a>
+                                    <span>2025-05-23</span>
+                                </li>
+                            
+                    <div class="list-more h5show">
+                      <a href="./zwgk_176/zwxxgkml/rddbjyblqkgk/">查看更多>></a>
+                    </div>
+                        </ul>
+                    </div>
+                </div>
+                <div class="kjj1-m3c-col-br lf">
+                    <div class="tab-parent">
+                        <ul class="tab-list-bool">
+                            <li class="cur"><a href="./zwgk_176/fdzdgknr/czyjs/">预算/决算</a></li>
+                        </ul>
+                    </div>
+                    <div class="tab-group">
+                        <ul class="tab-item" style="display: block;">
+                            
+                                <li class="clearfix">
+                                    <a href="./zwgk_176/fdzdgknr/czyjs/202603/t20260302_15478130.html" target="_blank" title="重庆市科学技术局2026年部门预算情况说明">重庆市科学技术局2026年部门预算情况说明</a>
+                                </li>
+                            
+                                <li class="clearfix">
+                                    <a href="./zwgk_176/fdzdgknr/czyjs/202603/t20260302_15478123.html" target="_blank" title="重庆市科学技术局（本级）2026年单位预算情况说明">重庆市科学技术局（本级）2026年单位预算...</a>
+                                </li>
+                            
+                                <li class="clearfix">
+                                    <a href="./zwgk_176/fdzdgknr/czyjs/202603/t20260302_15478108.html" target="_blank" title="重庆市科技资源统筹服务中心（原重庆生产力促进中心）2026年单位预算情况说明">重庆市科技资源统筹服务中心（原重庆生产...</a>
+                                </li>
+                            
+                                <li class="clearfix">
+                                    <a href="./zwgk_176/fdzdgknr/czyjs/202603/t20260302_15478090.html" target="_blank" title="重庆市健康资源创新研究院2026年单位预算情况说明">重庆市健康资源创新研究院2026年单位预算...</a>
+                                </li>
+                            
+                                <li class="clearfix">
+                                    <a href="./zwgk_176/fdzdgknr/czyjs/202603/t20260302_15477994.html" target="_blank" title="重庆信息与智慧医学研究院2026年单位预算情况说明">重庆信息与智慧医学研究院2026年单位预算...</a>
+                                </li>
+                            
+                    <div class="list-more h5show">
+                      <a href="./zwgk_176/fdzdgknr/czyjs/">查看更多>></a>
+                    </div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="m3c-right rt">
+                <div class="m3c-mail">
+                    <a href="./hdjl_176/" class="title">互动交流</a>
+                    <div class="kjj1-xinxiang">
+                        <a href="./hdjl_176/gkxx/">公开信箱</a>
+                        
+                        <a href="./hdjl_176/zqszfzxft/">在线访谈</a>
+                        <a href="./hdjl_176/yjzj/">意见征集</a>
+                        <!--  -->
+                    </div>
+
+                </div>
+               
+            </div>
+        </div>
+        <!-- <div class="index-float1">
+          <a  onclick="disnone()"style="display: block;position: absolute;top: -20px;left: -10px;width: 20px;height: 20px;cursor: pointer;z-index: 101;"><img src="./images/m3-close.png" /></a>
+
+           <a target="_blank" href="//tpgj.cctv.com/">
+          <img style="width:100%" src="./images/kjjpc625.jpg" />
+          </a>
+          </div> -->
+    </div>
+    <table width="1006px;" border="0" cellspacing="0" cellpadding="0" align="center" style="margin: 8px auto" class="pcshow">
+        <tbody>
+        <tr>
+            
+                
+                    <td height="47" align="left" valign="middle"><a href="http://www.cq.gov.cn/" target="_blank"><img src="./ggbf_search/kjyqlj/202001/W020200113579987757960.jpg" /></a></td>
+                
+                
+                    <td align="left" valign="middle"><a href="http://www.most.gov.cn/" target="_blank"><img src="./ggbf_search/kjyqlj/202001/W020200113358163972521_ORIGIN.jpg" /></a></td>
+                
+                    <td align="left" valign="middle"><a href="http://www.cae.cn" target="_blank"><img src="./ggbf_search/kjyqlj/202001/W020200113586897240492.jpg" /></a></td>
+                
+                    <td align="left" valign="middle"><a href="http://www.cas.cn" target="_blank"><img src="./ggbf_search/kjyqlj/202001/W020200113587668746109.jpg" /></a></td>
+                
+                    <td align="left" valign="middle"><a href="http://www.cast.org.cn" target="_blank"><img src="./ggbf_search/kjyqlj/202001/W020200113588153463957.jpg" /></a></td>
+                
+            
+        </tr>
+        </tbody>
+    </table>
+    <div class="index-linkbar h5show">
+      <div class="list">
+        
+        <a href="http://www.cq.gov.cn/" target="_blank"><img src="./ggbf_search/kjyqlj/202001/W020200113579987757960.jpg" /></a>
+        
+        <a href="http://www.most.gov.cn/" target="_blank"><img src="./ggbf_search/kjyqlj/202001/W020200113358163972521_ORIGIN.jpg" /></a>
+        
+        <a href="http://www.cae.cn" target="_blank"><img src="./ggbf_search/kjyqlj/202001/W020200113586897240492.jpg" /></a>
+        
+        <a href="http://www.cas.cn" target="_blank"><img src="./ggbf_search/kjyqlj/202001/W020200113587668746109.jpg" /></a>
+        
+        <a href="http://www.cast.org.cn" target="_blank"><img src="./ggbf_search/kjyqlj/202001/W020200113588153463957.jpg" /></a>
+        
+      </div>
+    </div>
+</div>
+<!-- 国务院部分end -->
+
+<!-- <div class="share">
+    
+        
+  <a href="javascript:void(0)" style="cursor:default;"><img src="./images/weixin.png" /><img style="display: none" class="erweima" src="//kjj.cq.gov.cn/ggbf_search/xmt/202002/W020200320344959823106.png"</a />
+        
+        
+  <a href="javascript:void(0)" style="cursor:default;"><img src="./images/weibo.png" /><img style="display: none" class="erweima" src="//kjj.cq.gov.cn/ggbf_search/xmt/202002/W020200320345084384164.png" /></a>
+        
+    
+</div> -->
+<div class="share">
+  
+    <a href="javascript:void(0)" style="cursor:default;">
+      <img src="//kjj.cq.gov.cn/ggbf_search/xmt/202002/W020200320344959823106.png" />
+      <img style="display: none" class="erweima" src="//kjj.cq.gov.cn/ggbf_search/xmt/202002/W020200204632211937466.jpg" />
+    </a>
+  
+    <a href="javascript:void(0)" style="cursor:default;">
+      <img src="//kjj.cq.gov.cn/ggbf_search/xmt/202002/W020200320345084384164.png" />
+      <img style="display: none" class="erweima" src="//kjj.cq.gov.cn/ggbf_search/xmt/202002/W020200204632678486184.png" />
+    </a>
+  
+</div>
+<div class="footer">
+  <div class="wrap">
+    <div class="drop-groups clearfix">
+      <div class="drop-down lf">
+        <p class="tag">国务院部门网站</p>
+        <ul class="drop-lists">
+          
+            <li><a href="http://www.mfa.gov.cn/" target="_blank">外交部</a></li>
+          
+            <li><a href="http://www.mod.gov.cn/" target="_blank">国防部</a></li>
+          
+            <li><a href="http://www.ndrc.gov.cn" target="_blank">国家发展和改革委员会</a></li>
+          
+            <li><a href="http://www.moe.gov.cn/" target="_blank">教育部</a></li>
+          
+            <li><a href="http://www.most.gov.cn" target="_blank">科学技术部</a></li>
+          
+            <li><a href="https://www.miit.gov.cn/" target="_blank">工业和信息化部</a></li>
+          
+            <li><a href="http://www.mps.gov.cn" target="_blank">公安部</a></li>
+          
+            <li><a href="http://www.mca.gov.cn/" target="_blank">民政部</a></li>
+          
+            <li><a href="http://www.moj.gov.cn/" target="_blank">司法部</a></li>
+          
+            <li><a href="http://www.mof.gov.cn/" target="_blank">财政部</a></li>
+          
+            <li><a href="http://www.mohrss.gov.cn/" target="_blank">人力资源和社会保障部</a></li>
+          
+            <li><a href="http://www.mnr.gov.cn/" target="_blank">自然资源部</a></li>
+          
+            <li><a href="http://www.mee.gov.cn/" target="_blank">生态环境部</a></li>
+          
+            <li><a href="http://www.mohurd.gov.cn/" target="_blank">住房和城乡建设部</a></li>
+          
+            <li><a href="http://www.mot.gov.cn/" target="_blank">交通运输部</a></li>
+          
+            <li><a href="http://www.mwr.gov.cn/" target="_blank">水利部</a></li>
+          
+            <li><a href="http://www.moa.gov.cn/" target="_blank">农业农村部</a></li>
+          
+            <li><a href="http://www.mofcom.gov.cn/" target="_blank">商务部</a></li>
+          
+            <li><a href="http://www.mct.gov.cn" target="_blank">文化和旅游部</a></li>
+          
+            <li><a href="http://www.nhc.gov.cn/" target="_blank">国家卫生健康委员会</a></li>
+          
+            <li><a href="http://www.mva.gov.cn" target="_blank">退役军人事务部</a></li>
+          
+            <li><a href="http://www.mem.gov.cn/" target="_blank">应急管理部</a></li>
+          
+            <li><a href="http://www.pbc.gov.cn/" target="_blank">人民银行</a></li>
+          
+            <li><a href="http://www.audit.gov.cn/" target="_blank">审计署</a></li>
+          
+            <li><a href="http://www.moe.gov.cn/jyb_sy/China_Language/" target="_blank">国家语言文字工作委员会</a></li>
+          
+            <li><a href="http://www.caea.gov.cn" target="_blank">国家原子能机构</a></li>
+          
+            <li><a href="http://nnsa.mee.gov.cn/" target="_blank">国家核安全局</a></li>
+          
+            <li><a href="http://www.sasac.gov.cn" target="_blank">国务院国有资产监督管理委员会</a></li>
+          
+            <li><a href="http://www.customs.gov.cn/" target="_blank">海关总署</a></li>
+          
+            <li><a href="http://www.chinatax.gov.cn" target="_blank">国家税务总局</a></li>
+          
+            <li><a href="http://www.samr.gov.cn/" target="_blank">国家市场监督管理总局</a></li>
+          
+            <li><a href="http://www.nrta.gov.cn/" target="_blank">国家广播电视总局</a></li>
+          
+            <li><a href="http://www.sport.gov.cn" target="_blank">国家体育总局</a></li>
+          
+            <li><a href="http://www.stats.gov.cn" target="_blank">国家统计局</a></li>
+          
+        </ul>
+      </div>
+      <div class="drop-down lf">
+        <p class="tag">地方政府网站</p>
+        <ul class="drop-lists">
+          
+            <li><a href="http://www.beijing.gov.cn/" target="_blank">北京</a></li>
+          
+            <li><a href="http://www.tj.gov.cn/" target="_blank">天津</a></li>
+          
+            <li><a href="http://www.hebei.gov.cn/" target="_blank">河北</a></li>
+          
+            <li><a href="http://www.shanxi.gov.cn/" target="_blank">山西</a></li>
+          
+            <li><a href="http://www.ln.gov.cn/" target="_blank">辽宁</a></li>
+          
+            <li><a href="http://www.nmg.gov.cn/" target="_blank">内蒙古</a></li>
+          
+            <li><a href="http://www.jl.gov.cn/" target="_blank">吉林</a></li>
+          
+            <li><a href="http://www.hlj.gov.cn/" target="_blank">黑龙江</a></li>
+          
+            <li><a href="http://www.sh.gov.cn/" target="_blank">上海</a></li>
+          
+            <li><a href="http://www.jiangsu.gov.cn/" target="_blank">江苏</a></li>
+          
+            <li><a href="http://www.zj.gov.cn/" target="_blank">浙江</a></li>
+          
+            <li><a href="http://www.ah.gov.cn/" target="_blank">安徽</a></li>
+          
+            <li><a href="http://www.fujian.gov.cn/" target="_blank">福建</a></li>
+          
+            <li><a href="http://www.jiangxi.gov.cn/" target="_blank">江西</a></li>
+          
+            <li><a href="http://www.shandong.gov.cn/" target="_blank">山东</a></li>
+          
+            <li><a href="http://www.henan.gov.cn/" target="_blank">河南</a></li>
+          
+            <li><a href="http://www.hubei.gov.cn/" target="_blank">湖北</a></li>
+          
+            <li><a href="http://www.hunan.gov.cn/" target="_blank">湖南</a></li>
+          
+            <li><a href="http://www.gd.gov.cn/" target="_blank">广东</a></li>
+          
+            <li><a href="http://www.gxzf.gov.cn/" target="_blank">广西</a></li>
+          
+            <li><a href="http://www.hainan.gov.cn/" target="_blank">海南</a></li>
+          
+            <li><a href="http://www.cq.gov.cn" target="_blank">重庆</a></li>
+          
+            <li><a href="http://www.sc.gov.cn/" target="_blank">四川</a></li>
+          
+            <li><a href="http://www.guizhou.gov.cn/" target="_blank">贵州</a></li>
+          
+            <li><a href="http://www.yn.gov.cn/" target="_blank">云南</a></li>
+          
+            <li><a href="http://www.xizang.gov.cn/" target="_blank">西藏</a></li>
+          
+            <li><a href="http://www.shaanxi.gov.cn/" target="_blank">陕西</a></li>
+          
+            <li><a href="http://www.gansu.gov.cn/" target="_blank">甘肃</a></li>
+          
+            <li><a href="http://www.qinghai.gov.cn/" target="_blank">青海</a></li>
+          
+            <li><a href="http://www.nx.gov.cn/" target="_blank">宁夏</a></li>
+          
+            <li><a href="http://www.xinjiang.gov.cn/" target="_blank">新疆</a></li>
+          
+            <li><a href="http://www.gov.hk/sc/residents/" target="_blank">香港</a></li>
+          
+            <li><a href="http://portal.gov.mo/web/guest/welcomepage;jsessionid=D7630ED4AF99A5CEF281CF8C77C92729" target="_blank">澳门</a></li>
+          
+            <li><a href="http://www.gwytb.gov.cn/" target="_blank">台湾</a></li>
+          
+            <li><a href="http://www.xjbt.gov.cn/" target="_blank">新疆生产建设兵团</a></li>
+          
+        </ul>
+      </div>
+      <div class="drop-down lf">
+        <p class="tag">市政府部门网站</p>
+        <ul class="drop-lists">
+          
+            <li><a href="http://fzggw.cq.gov.cn/" target="_blank">市发展改革委</a></li>
+          
+            <li><a href="http://jw.cq.gov.cn/" target="_blank">市教委</a></li>
+          
+            <li><a href="http://kjj.cq.gov.cn/" target="_blank">市科技局</a></li>
+          
+            <li><a href="http://jjxxw.cq.gov.cn/" target="_blank">市经济信息委</a></li>
+          
+            <li><a href="http://mzzjw.cq.gov.cn" target="_blank">市民族宗教委</a></li>
+          
+            <li><a href="http://gaj.cq.gov.cn/" target="_blank">市公安局</a></li>
+          
+            <li><a href="http://mzj.cq.gov.cn" target="_blank">市民政局</a></li>
+          
+            <li><a href="http://sfj.cq.gov.cn" target="_blank">市司法局</a></li>
+          
+            <li><a href="http://czj.cq.gov.cn/" target="_blank">市财政局</a></li>
+          
+            <li><a href="http://rlsbj.cq.gov.cn/" target="_blank">市人力社保局</a></li>
+          
+            <li><a href="http://ghzrzyj.cq.gov.cn" target="_blank">市规划自然资源局</a></li>
+          
+            <li><a href="http://sthjj.cq.gov.cn" target="_blank">市生态环境局</a></li>
+          
+            <li><a href="http://zfcxjw.cq.gov.cn/" target="_blank">市住房城乡建委</a></li>
+          
+            <li><a href="http://cgj.cq.gov.cn/" target="_blank">市城市管理局</a></li>
+          
+            <li><a href="http://jtj.cq.gov.cn/" target="_blank">市交通局</a></li>
+          
+            <li><a href="http://slj.cq.gov.cn/" target="_blank">市水利局</a></li>
+          
+            <li><a href="http://nyncw.cq.gov.cn/" target="_blank">市农业农村委</a></li>
+          
+            <li><a href="http://sww.cq.gov.cn" target="_blank">市商务委</a></li>
+          
+            <li><a href="http://whlyw.cq.gov.cn/" target="_blank">市文化旅游委</a></li>
+          
+            <li><a href="http://wsjkw.cq.gov.cn/" target="_blank">市卫生健康委</a></li>
+          
+            <li><a href="http://yjj.cq.gov.cn" target="_blank">市应急局</a></li>
+          
+            <li><a href="http://sjj.cq.gov.cn/" target="_blank">市审计局</a></li>
+          
+            <li><a href="http://zfwb.cq.gov.cn/" target="_blank">市政府外办</a></li>
+          
+            <li><a href="http://gzw.cq.gov.cn/" target="_blank">市国资委</a></li>
+          
+            <li><a href="http://scjgj.cq.gov.cn/" target="_blank">市市场监管局</a></li>
+          
+            <li><a href="http://tyj.cq.gov.cn" target="_blank">市体育局</a></li>
+          
+            <li><a href="http://tjj.cq.gov.cn/" target="_blank">市统计局</a></li>
+          
+            <li><a href="http://jgswj.cq.gov.cn" target="_blank">市机关事务局</a></li>
+          
+            <li><a href="http://jrjgj.cq.gov.cn/" target="_blank">市金融监管局</a></li>
+          
+            <li><a href="http://xfb.cq.gov.cn/" target="_blank">市信访办</a></li>
+          
+            <li><a href="http://rmfkb.cq.gov.cn/" target="_blank">市人民防空办</a></li>
+          
+            <li><a href="http://ggzyjyjgj.cq.gov.cn/" target="_blank">市公共资源交易监管局</a></li>
+          
+            <li><a href="http://lyj.cq.gov.cn/" target="_blank">市林业局</a></li>
+          
+            <li><a href="http://yaojianju.cq.gov.cn" target="_blank">市药监局</a></li>
+          
+            <li><a href="http://zscqj.cq.gov.cn" target="_blank">市知识产权局</a></li>
+          
+            <li><a href="http://ljxq.cq.gov.cn/" target="_blank">两江新区管委会</a></li>
+          
+            <li><a href="http://ws.cq.gov.cn" target="_blank">万盛经开区管委会</a></li>
+          
+            <li><a href="http://gxq.cq.gov.cn" target="_blank">高新区管委会</a></li>
+          
+            <li><a href="http://jkq.cq.gov.cn" target="_blank">重庆经开区管委会</a></li>
+          
+            <li><a href="http://gxhzs.cq.gov.cn/" target="_blank">市供销合作社</a></li>
+          
+        </ul>
+      </div>
+      <div class="drop-down lf">
+        <p class="tag">各地科技网站</p>
+        <ul class="drop-lists">
+          
+            <li><a href="http://kw.beijing.gov.cn/" target="_blank">北京</a></li>
+          
+            <li><a href="http://stcsm.sh.gov.cn" target="_blank">上海</a></li>
+          
+            <li><a href="http://kxjs.tj.gov.cn/" target="_blank">天津</a></li>
+          
+            <li><a href="http://kjt.shanxi.gov.cn/" target="_blank">山西</a></li>
+          
+            <li><a href="http://kjt.jl.gov.cn/" target="_blank">吉林</a></li>
+          
+            <li><a href="http://kjt.fujian.gov.cn/" target="_blank">福建</a></li>
+          
+            <li><a href="http://gdstc.gd.gov.cn/" target="_blank">广东</a></li>
+          
+            <li><a href="http://kjt.zj.gov.cn/" target="_blank">浙江</a></li>
+          
+            <li><a href="http://kjt.yn.gov.cn/" target="_blank">云南</a></li>
+          
+            <li><a href="http://kjt.hunan.gov.cn/" target="_blank">湖南</a></li>
+          
+            <li><a href="http://kjt.jiangxi.gov.cn/" target="_blank">江西</a></li>
+          
+            <li><a href="http://kjt.guizhou.gov.cn/" target="_blank">贵州</a></li>
+          
+            <li><a href="http://kjt.hubei.gov.cn" target="_blank">湖北</a></li>
+          
+            <li><a href="http://dost.hainan.gov.cn/" target="_blank">海南</a></li>
+          
+            <li><a href="http://kxjst.jiangsu.gov.cn/" target="_blank">江苏</a></li>
+          
+            <li><a href="http://kjt.ah.gov.cn/" target="_blank">安徽</a></li>
+          
+            <li><a href="http://kjt.sc.gov.cn/" target="_blank">四川</a></li>
+          
+            <li><a href="http://kjt.shaanxi.gov.cn/" target="_blank">陕西</a></li>
+          
+            <li><a href="https://kjt.henan.gov.cn/" target="_blank">河南</a></li>
+          
+            <li><a href="http://sti.xizang.gov.cn/" target="_blank">西藏</a></li>
+          
+            <li><a href="http://kjt.shandong.gov.cn/" target="_blank">山东</a></li>
+          
+            <li><a href="http://stic.sz.gov.cn/" target="_blank">深圳</a></li>
+          
+            <li><a href="http://www.itc.gov.hk/" target="_blank">香港</a></li>
+          
+            <li><a href="http://kjt.xinjiang.gov.cn/" target="_blank">新疆</a></li>
+          
+            <li><a href="http://kjt.ln.gov.cn/" target="_blank">辽宁</a></li>
+          
+            <li><a href="http://kjt.nx.gov.cn/" target="_blank">宁夏</a></li>
+          
+            <li><a href="http://kjt.qinghai.gov.cn/" target="_blank">青海</a></li>
+          
+            <li><a href="http://kjt.hebei.gov.cn/" target="_blank">河北</a></li>
+          
+            <li><a href="http://kjt.gansu.gov.cn/" target="_blank">甘肃</a></li>
+          
+            <li><a href="http://kjt.gxzf.gov.cn/" target="_blank">广西</a></li>
+          
+            <li><a href="http://kjt.hlj.gov.cn/" target="_blank">黑龙江</a></li>
+          
+            <li><a href="https://kjt.nmg.gov.cn/" target="_blank">内蒙古</a></li>
+          
+        </ul>
+      </div>
+      <div class="drop-down lf">
+        <p class="tag">直属单位</p>
+        <ul class="drop-lists">
+          
+            <li><a href="http://www.cqast.org.cn/Index.shtml" target="_blank">重庆市科学技术研究院</a></li>
+          
+            <li><a href="http://kjj.cq.gov.cn/zwgk_176/fdzdgknr/jgzn/xsjg/202409/t20240905_13599080.html" target="_blank">重庆市科技资源统筹服务中心</a></li>
+          
+        </ul>
+      </div>
+      <div class="drop-down lf">
+        <p class="tag">高等院校</p>
+        <ul class="drop-lists">
+          
+            <li><a href="http://www.scfai.edu.cn/" target="_blank">四川美术学院</a></li>
+          
+            <li><a href="http://www.cqust.edu.cn/" target="_blank">重庆科技学院</a></li>
+          
+            <li><a href="http://www.sisu.edu.cn/" target="_blank">四川外国语大学</a></li>
+          
+            <li><a href="http://www.cqmu.edu.cn/" target="_blank">重庆医科大学</a></li>
+          
+            <li><a href="http://www.cqjtu.edu.cn/" target="_blank">重庆交通大学</a></li>
+          
+            <li><a href="http://www.swu.edu.cn/" target="_blank">西南大学</a></li>
+          
+            <li><a href="http://www.sanxiau.edu.cn/" target="_blank">重庆三峡学院</a></li>
+          
+            <li><a href="https://www.cqnu.edu.cn/" target="_blank">重庆师范大学</a></li>
+          
+            <li><a href="https://www.ctbu.edu.cn/" target="_blank">重庆工商大学</a></li>
+          
+            <li><a href="http://www.cqupt.edu.cn/" target="_blank">重庆邮电大学</a></li>
+          
+            <li><a href="http://www.swupl.edu.cn/" target="_blank">西南政法大学</a></li>
+          
+            <li><a href="http://www.cqu.edu.cn/" target="_blank">重庆大学</a></li>
+          
+        </ul>
+      </div>
+      <div class="drop-down lf">
+        <p class="tag">友情链接</p>
+        <ul class="drop-lists">
+          
+            <li><a href="https://www.cqcxcyct.com/enterpServices.html" target="_blank">科技企业创新发展信息平台</a></li>
+          
+            <li><a href="https://www.cqcxcyct.com/" target="_blank">重庆创新创业投资服务平台</a></li>
+          
+        </ul>
+      </div>
+    </div>
+    <div class="f-info clearfix">
+      <div class="f-info-left lf">
+        <div class="f-info-div">
+         
+          
+<a href="//kjj.cq.gov.cn/ggbf_search/lxwo/">联系我们</a>
+          <span>|</span>
+<a href="https://kjj.cq.gov.cn/hdjl_176/gkxx/wyxx/">公开信箱</a>
+<span>|</span>
+          <a href="//kjj.cq.gov.cn/ggbf_search/wzdt/">网站地图</a>
+          <span>|</span>
+          <a href="//kjj.cq.gov.cn/ggbf_search/bqsm/">版权声明</a>
+        </div>
+        <p class="f-info-p"><span>主办单位：重庆市科学技术局</span><span>地址：两江新区新溉大道2号生产力大厦</span><span>邮编：401147</span><span>电话： 67605835</span></p>
+        <p class="f-info-p"><a style="color: #fff;font-size: 14px;" href="//beian.miit.gov.cn/">ICP备案：渝ICP备19010548号-1</a> <span>网站标识码：5000000045</span> <a href="//www.beian.gov.cn/portal/registerSystemInfo?recordcode=50011202502481">渝公网安备 50011202502481号</a></p>
+      </div>
+      <div class="f-info-right rt">
+        <a href="//www.beian.gov.cn/portal/registerSystemInfo?recordcode=50011202502481">
+          <img src="/images/zwgk_gaba.png" />
+        </a>
+        <a href="//bszs.conac.cn/sitename?method=show&id=05FADB2500D22257E053012819ACA71A">
+          <img src="/images/zwgk_dzjg.png" />
+        </a>
+        <div class="zfzc">
+          <script id="_jiucuo_" sitecode='5000000045' src='https://zfwzgl.www.gov.cn/exposure/jiucuo.js'></script>
+        </div>
+<a class="wzaic" target="_blank" href="http://wza.isc.org.cn/rzpt/bsgl/dt/20260122/4377.html">
+          <img src="/images/slyhwzafw.jpg" />
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .drop-down {width: 170px;}
+  .drop-lists {
+    width: 170px;
+    left: 0;
+    max-height: 300px;
+  }
+  .zfzc{
+display:inline-block;
+    margin-left: 20px;
+    margin-top: 10px;
+  }
+  .top-menu a{width:222px;}
+.f-info-left {
+    width: 713px;
+}
+</style>
+<script type="text/javascript">
+    // 定义后缀名与 MIME 类型的映射表
+    var mimeTypeMap = {
+        'txt': 'text/plain',
+        'html': 'text/html',
+        'css': 'text/css',
+        'js': 'application/javascript',
+        'json': 'application/json',
+        'png': 'image/png',
+        'jpg': 'image/jpeg',
+        'jpeg': 'image/jpeg',
+        'gif': 'image/gif',
+        'svg': 'image/svg+xml',
+        'pdf': 'application/pdf',
+        'doc': 'application/msword',
+        'docx': 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+        'xls': 'application/vnd.ms-excel',
+        'xlsx': 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+        'zip': 'application/zip',
+        'mp3': 'audio/mpeg',
+        'mp4': 'video/mp4'
+    };
+
+    // 根据文件名获取 MIME 类型的函数
+    function getMimeType(fileName) {
+        // 提取文件后缀（如 "test.txt" → "txt"）
+        var ext = fileName.split('.').pop().toLowerCase();
+        // 从映射表获取，默认使用二进制流类型（通用但不精确）
+        return mimeTypeMap[ext] || 'application/octet-stream';
+    }
+
+    function downloadFj(fileName, filePath) {
+        var mimeType = getMimeType(fileName);
+
+        // 兼容 IE/360 兼容模式
+        if (window.navigator.msSaveOrOpenBlob) {
+            try {
+                // 请求前端项目内的静态文件
+                var xhr = new XMLHttpRequest();
+                xhr.open('GET', filePath, true);
+                xhr.responseType = 'blob';
+                
+                xhr.onload = function() {
+                    if (xhr.status === 200) {
+                        var blob = xhr.response;
+                        if (window.navigator.msSaveOrOpenBlob) {
+                            window.navigator.msSaveBlob(blob, fileName);
+                        } else {
+                            var a = document.createElement('a');
+                            a.href = URL.createObjectURL(blob);
+                            a.download = fileName;
+                            a.click();
+                            URL.revokeObjectURL(a.href);
+                        }
+                    } else {
+                        console.error('文件不存在');
+                    }
+                };
+                
+                xhr.onerror = function() {
+                    console.error('下载失败');
+                };
+                
+                xhr.send();
+            } catch (err) {
+                console.error('下载失败：', err);
+            }
+        } else {
+            // 现代浏览器：使用 download 属性
+            var a = document.createElement('a');
+            a.href = filePath;
+            a.download = fileName;
+            a.click();
+            // 释放 URL 对象（避免内存泄漏）
+            URL.revokeObjectURL(a.href);
+        }
+    }
+</script>
+<script id="_trs_ta_js" src="//www.cq.gov.cn/c/js/ta.js?mpid=3982" async="async" defer="defer"></script>
+<script type="text/javascript" src="/images/esdToolsInit.js" async="async" defer="defer"></script>
+<script defer async type="text/javascript" src="//gov.govwza.cn/dist/aria.js?appid=0685fb1f8c0985a2414ec1a6710798ee" charset="utf-8" id="ariascripts"></script>
+<script>
+//表格处理
+if($(window).width() < 768){
+  $(".zwxl-article table").each(function(index){
+    $(this).after("<div class='table-c-index-"+index+"' style='width:100%;overflow-x:auto;'></div>");
+    $(".table-c-index-"+index).append(this.outerHTML)
+    $(this).remove();
+  })
+}
+</script>
+<!--<script>
+/***
+ *判断屏幕大小更改网页缩放比例
+ */
+function initScreen() {
+  var viewport = document.querySelector("meta[name=viewport]");
+  if(!viewport){
+    $("head").append('<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">')
+  }
+  if(!document.querySelector("meta[http-equiv]")){
+    $("head").append('<meta http-equiv="X-UA-Compatible" content="ie=edge">')
+  }
+  var viewport = document.querySelector("meta[name=viewport]");
+  var winWidth = $(window).width();
+  var size = winWidth / 1200;
+  if (winWidth < 480) {
+    viewport.setAttribute('content', 'width=device-width, initial-scale=1.0, user-scalable=yes');
+    $("html").css({"transform":"scale("+size+")","transform-origin":"0 0",'width':'1200px','height':($("body").height()*size)+'px' });
+  }
+}
+$(function(){
+  initScreen()
+})
+</script>
+
+
+<script>
+if($(window).width()<981){
+  var localType = window.location.href.substring(window.location.href.lastIndexOf('/')+1,window.location.href.length);
+  var localHref = window.location.href.substring(0,window.location.href.lastIndexOf('/')+1);
+  var localHref2 = window.location.href.substring(0,window.location.href.lastIndexOf('.html'));
+  var localHref3 = window.location.href.substring(0,window.location.href.lastIndexOf('/'));
+  if(localType ==''||localType =='index.html'){
+    var toUrl = localHref + 'wap.html';
+  }else if(localType.indexOf('detail.html')!=-1){
+    var toUrl = localHref2 + '_wap.html'+window.location.href.substring(window.location.href.lastIndexOf('.html')+5,window.location.href.length);
+  }else{
+    if(window.location.href.indexOf('searchResultPC')!=-1){
+      var toUrl = window.location.href.replace('searchResultPC','searchResultWap');
+    }else{
+      var toUrl = localHref2 + '_wap.html';
+    }
+  }
+  // $.ajax({
+  //   url : toUrl,
+  //   success : function(data) {
+  //     window.location.href=toUrl ;
+  //   },
+  //   error:function(){
+  //     console.log("获取失败");
+  //   }
+  // });
+  headUrlStatus(toUrl,function(){
+    window.location.href=toUrl;
+  },function(){
+    console.log('error')
+  })
+  function headUrlStatus(url, callbackSuccess, callbackError) {
+    var xmlhttp = new XMLHttpRequest()
+    xmlhttp.open('HEAD', url, false)
+    xmlhttp.onreadystatechange = () => {
+      if (xmlhttp.readyState == 4) {
+        if (xmlhttp.status == 200) {
+          callbackSuccess()
+        } else {
+          callbackError()
+        }
+      }
+    }
+    xmlhttp.send()
+    return
+  }
+}
+</script>-->
+
+<script>
+    //动态获取国务院信息
+    $(function(){
+        var date = "";
+        $.ajax({
+            url : '//www.gov.cn/pushinfo/v150203/pushinfo.jsonp',
+            dataType : "jsonp",
+            jsonp : "pushInfoJsonpCallBack",
+            jsonpCallback:"pushInfoJsonpCallBack",
+            success : function(data) {
+                $.each(data,function(i,json){
+                    if (i == 6){ return false;}
+                    date = json.pubDate;
+                    $("#gwyinfo").append('<li class="clearfix"><a href="'+json.link+'" target="_blank" title="'+json.title+'">'+json.title+'</a><span>'+date+'</span></li>')
+                })
+                $("#gwyinfo").append('<div class="list-more h5show"><a target="_blank" href="http://www.gov.cn/pushinfo/v150203/index.htm">查看更多>></a></div>');
+            },
+            error:function(){
+                console.log("获取失败");
+            }
+        });
+        $.ajax({
+            url : '//www.gov.cn/govweb/jsonTag/tp/zczx.jsonp',
+            dataType : "jsonp",
+            jsonp : "zczxJsonpCallBack",
+            jsonpCallback:"zczxJsonpCallBack",
+            success : function(data) {
+                $.each(data,function(i,json){
+                    if (i == 5){ return false;}
+                    date = json.PUBTIME;
+                    $("#gwywj").append("<li class='clearfix'><a href='"+json.URL+"' title='"+json.TITLE+"' target='_blank'>"+json.TITLE+"</a><span class='rt'>"+date+"</span></li>");
+                })
+            },
+            error:function(){
+                console.log("获取失败");
+            }
+        });
+        $.ajax({
+            url : '//www.cq.gov.cn/ywdt/jrzq/index.json',
+            dataType : "jsonp",
+            jsonp : "cqjrcq",
+            jsonpCallback:"cqjrcq",
+            success : function(data) {
+                data=data.datas;
+                $.each(data,function(i,json){
+                    if (i == 6){ return false;}
+                    date = json.docreltime;
+                    $("#cqjrcq").append("<li class='clearfix'><a href='"+json.url+"' title='"+json.title+"' target='_blank'>"+json.title+"</a><span class='rt'>"+date+"</span></li>");
+                })
+                $("#cqjrcq").append('<div class="list-more h5show"><a target="_blank" href="//www.cq.gov.cn/ywdt/jrcq/">查看更多>></a></div>');
+            },
+            error:function(){
+                console.log("获取失败");
+            }
+        });
+        $.ajax({
+            url : "//www.cq.gov.cn/zwgk/zfxxgkzl/fdzdgknr/lzyj/index.json",
+            dataType : "jsonp",
+            jsonp : "cqszfwj",
+            jsonpCallback:"cqszfwj",
+            success : function(data) {
+                data=data.datas;
+                $.each(data,function(i,json){
+                    if (i == 5){ return false;}
+                    date = json.docreltime;
+                    $("#cqszfwj").append("<li class='clearfix'><a href='"+json.url+"' title='"+json.title+"' target='_blank'>"+json.title+"</a><span class='rt'>"+date+"</span></li>");
+                })
+                $("#cqszfwj").append('<div class="list-more h5show"><a target="_blank" href="//www.cq.gov.cn/zwgk/zfxxgkzl/fdzdgknr/lzyj/index.html">查看更多>></a></div>');
+            },
+            error:function(){
+                console.log("获取失败");
+            }
+        });
+    });
+    function disnone(){
+        $(".index-float1").hide()
+    }
+
+    if($(window).width()<=768){
+      $('.tab-list-bool li a').removeAttr('href');
+      $('.main2-c .tit a').removeAttr('href');
+      jQuery(".index-linkbar .list").bannerRollLR({
+        len:3,
+        type:'left',
+        moveTime:3000,
+      });
+    }
+</script>
+<script type="text/javascript" src="./images/grayscale.js"></script>
+<!--[if IE 8]>
+<script src="/images/grayscale.js"></script>
+<![endif]-->
+<script type="text/javascript">
+    $(".tit a").on({
+        mouseover:function(){
+            $(this).parent().find("a").removeClass("active");
+            $(this).addClass("active");
+            $(this).parent().siblings(".ykb-kjj").hide();
+            $(this).parent().siblings(".ykb-kjj").eq($(this).index()).show();
+        },
+        mouseout:function(){
+        }
+    })
+    window.onload=function(){
+        var kaishishijian = new Date("2020/04/04 00:00:00");
+        var jieshushijian = new Date("2020/04/04 23:59:59");
+        var dangqianshijian = Date.now();
+        if(kaishishijian.getTime() < dangqianshijian && dangqianshijian < jieshushijian.getTime()){
+            grayscale(document.body);
+        }
+    }
+</script>
+</body>
+</html>

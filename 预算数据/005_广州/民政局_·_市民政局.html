@@ -1,0 +1,1367 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<title>广州市民政局网站</title>
+<meta name="SiteName" content="广州市民政局网站">
+<meta name="SiteDomain" content="mzj.gz.gov.cn">
+<meta name="SiteIDCode" content="4401000047">	
+<meta name="ColumnName" content="广州市民政局网站-首页">
+<meta name="ColumnDescription" content="欢迎浏览广州市民政局网站">
+<meta name="ColumnKeywords" content="广州市民政局,网站,信息公开,互动平台,网上办事">
+<meta name="ColumnType" content="首页">
+<meta name="Keywords" content="民政,婚姻登记,帮扶工作,求助,长者饭堂,慈善,养老,为老,信息公开,殡葬,救助,社会福利,福彩" />
+<meta name="description" content="广州市民政局 民政为民 民政爱民" /><script>window.NFCMS_SITE_ID=200022;window.NFCMS_PUB_TYPE="page";window.NFCMS_PAGE_ID="76";</script><script src="//statistics.gd.gov.cn/scripts/s.js?t=1774604671" async></script>
+
+		<link rel="stylesheet" type="text/css" href="/global/common.css">
+		<link rel="stylesheet" type="text/css" href="/global/index.css">
+		<script type="text/javascript" src="/global/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="/global/jquery.SuperSlide.2.1.1.js"></script>
+		<script src="/global/jquery.xdomainrequest.min.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			.sgql {
+				margin: 0px auto;
+				text-align: center;
+			}
+			
+			.sgql img {
+				width: 100%;
+			}
+			
+			.pageMain {
+				margin: 0px;
+			}
+            
+            /** 今日头条 Start add by Rr  **/
+            .toutiao {text-align:center; background:#f9f9f9; margin:0px; padding:10px;color:#105ca8;}
+            .toutiao span {display:block; line-height:2em;}
+            .toutiao a {;color:#105ca8;}
+            .toutiao a:hover {color:#cc0000;}
+            /** 今日头条 End add by Rr **/
+
+		</style>
+	</head>
+
+	<body class="home_body" style=";"><!-- isGrayscaleCSS是否黑白化 -->
+		<!--header Start-->
+
+			
+        <script type="text/javascript" src="/global/common.js"></script>
+		<script type="text/javascript" src="/global/font.js"></script>
+		<div style="opacity:0;text-indent:-9999px;width:0;height:0;overflow:hidden">
+<a href="javascript:void(0)" aria-label="欢迎访问广州市民政局网站，请用 alt 加右键开启智能盲道功能，按 alt 加 4打开导航区，按 tab 键切换读取导航区元素；按 alt 加 5 打开视窗区，按 tab 键切换读取视窗区元素；按 alt 加 6 打开交互区，按 tab 键切换读取交互区元素；按 alt 加 7 打开服务区，按 tab 键切换读取服务区元素；按 alt 加 L 开启或关闭语音阅读声音；按 shift 加上方向键开启或关闭大字幕；按 alt 加问号打开智能盲道帮助页面；按 alt 加 q 键退出智能盲道；按 alt 加 9 退出无障碍服务。" target="_self"
+role="alert" id="wza-intro"></a>
+</div>
+<script>
+	// tab 切换
+	window.$bindArrow = function (obj) {
+		var $tabs = $(obj.tabs)
+		var $tabsPanel = $(obj.tabsPanel)
+		var $index = obj.initPos || 0
+		$tabs.bind(
+		{
+			keydown: function(ev){
+				var LEFT_ARROW = 37;
+				var UP_ARROW = 38;
+				var RIGHT_ARROW = 39;
+				var DOWN_ARROW = 40;
+
+				var k = ev.which || ev.keyCode;
+
+				if (k >= LEFT_ARROW && k <= DOWN_ARROW){
+					if (k == LEFT_ARROW || k == UP_ARROW){
+						if ($index > 0) {
+							$index--;
+						}
+						else {
+							$index = $tabs.length - 1;
+						}
+					}
+					else if (k == RIGHT_ARROW || k == DOWN_ARROW){
+						if ($index < ($tabs.length - 1)){
+							$index++;
+						}
+						else {
+							$index = 0;
+						}
+					}
+					// $($tabs.get($index)).click();
+					setFocus($index)
+					ev.preventDefault();
+				}
+			},
+			// click: function(ev){
+			// 	$index = $.inArray(this, $tabs.get())
+			// 	setFocus($index)
+			// }
+		})
+
+		//初始化
+		init()
+
+		function setChildNode($index) {
+			$tabs.find(obj.childNode).attr(
+			{
+				tabindex: '-1',
+				'aria-selected': 'false'
+			})
+
+			$($tabs.get($index)).find(obj.childNode).attr(
+			{
+				tabindex: '0',
+				'aria-selected': 'true'
+			})
+		}
+
+		function init() {
+			var initCount =  0;
+			if (obj.childNode) {
+				setChildNode(initCount)
+			}
+			$tabs.attr(
+			{
+				tabindex: '-1',
+				'aria-selected': 'false'
+			}).removeClass(obj.active)
+
+			$($tabs.get($index)).attr(
+			{
+				tabindex: '0',
+				'aria-selected': 'true'
+			}).addClass(obj.active)
+		}
+
+		function initTree(p, cb) {
+			
+			for (var i = 0; i < p.children.length; i++) {
+				// 遍历第一级子元素
+				var child = p.children[i];
+				if(cb){
+					cb(child);
+				}
+				// 递归
+				initTree(child);
+			}
+		}
+		
+		function setFocus($index) {
+			$tabs.attr(
+			{
+				tabindex: '-1',
+				'aria-selected': 'false'
+			}).removeClass(obj.active)
+
+			$($tabs.get($index)).attr(
+			{
+				tabindex: '0',
+				'aria-selected': 'true'
+			}).addClass(obj.active).focus()
+			// 控制区块显隐方式
+			if(obj.type === 'display'){
+				$tabsPanel.hide()
+
+				$($tabsPanel.get($index)).show()
+			}else if(obj.type === 'animate'){
+				// do something
+
+				// $tabsPanel.each(function(){
+				// 	initTree(this, function(ele){
+				// 		$(ele).attr({
+				// 			tabindex: '-1',
+				// 		});
+				// 	})
+				// });
+
+				// initTree($($tabsPanel.get($index)), function(ele){
+				// 	$(ele).attr({
+				// 		tabindex: '0',
+				// 	});
+				// })
+				$tabsPanel.attr(
+				{
+					tabindex: '-1',
+				});
+				$($tabsPanel.get($index)).attr(
+				{
+					tabindex: '0',
+				});
+			}
+			if (obj.childNode) {
+				setChildNode($index)
+			}
+		}
+	}
+
+	// select 切换
+	window.$bindSelect = function(obj) {  
+		var $selectedItem = $(obj.selectedItem)
+		var $menus = $(obj.menus)
+		var $index = 0     
+		$selectedItem.attr(
+			{
+				tabindex: '0',
+				role: 'menu'
+			})
+		$menus.attr(
+			{
+				role: 'menuitem'
+			})
+		$selectedItem.bind(
+			{
+				keydown: function(ev, inx) {
+					var SPACE = 32
+					var ESC = 27  
+					var ENTER = 13        
+					var k = ev.which || ev.keyCode;
+					if (k == SPACE || k == ENTER) {
+						if(ev.preventDefault){
+							ev.preventDefault();
+						}else{
+							window.event.returnValue = false;
+						}
+						setFocus(ev)
+					}
+					if (k == ESC) {
+						setClose(ev)
+					}
+
+				}
+			})
+
+		function setClose(ev) {
+			var target = $(ev.target)
+			var selectedItem = target.closest(obj.selectedItem)
+			var panel = selectedItem.find(obj.menus)
+			panel.hide()
+			selectedItem.focus()
+		}
+
+		function setFocus(ev) {
+			var panel = $(ev.target).find(obj.menus)
+			$menus.hide()
+			panel.show()
+		}
+	}
+</script>
+		<!-- 2021-06-28 用于100周年<div style="width:100%; height:110px;background:url(http://mzj.gz.gov.cn/global/th_71.png) no-repeat center top;"><br></div> -->
+		<!-- 2022-10-15 用于20大 background:url(http://mzj.gz.gov.cn/images/qgdbhy_th20.png) no-repeat center top;
+		<div class="container header" style="height:100px;">
+			<img src="http://mzj.gz.gov.cn/images/qgdbhy_th20_link_a.png" style="position:absolute; right:0em; cursor:pointer; " onclick="javascript:window.location.href='http://www.gov.cn/zhuanti/zggcddescqgdbdh/index.htm'">
+		</div>
+		--> 
+		<div class="headerbox">
+			<div class="container header" style="margin-top:5px; background:url(http://mzj.gz.gov.cn/global/bg_header_nav.png) no-repeat center top 0;"><!--2021-07-05 add bg -->
+				<div class="logo"><img src="/global/logo_new.png" title="广州市民政局" alt="广州市民政局"></div>
+				
+				<div class="lang" aria-label="您已进入工具栏服务区。" altdes="服务区" wzades="提供网站工具栏服务。">
+					<a name="StranLink" class="Channel" id="StranLink" onclick="jft()" href="javascript:void(0)" style="margin-right:5px; cursor: pointer;">繁體</a> |
+                    <!--<a target="_blank" href="http://www.gzmz.gov.cn/gzmzen/index.shtml">English</a> | -->
+					<a href="http://mzj.gz.gov.cn/hdjlpt/query?via=pc" target="_blank">统一身份认证登录</a> |					<a name="StranLink" class="Channel" href="https://mzj.gz.gov.cn/znjqr" style="margin-left:5px; margin-right:5px;cursor: pointer;">智能机器人</a> |					<a style="margin-left:5px; cursor: pointer;" id="wza">无障碍</a> |
+                    <a style="margin-left:5px; cursor: pointer;" id="slh">长者助手</a>
+				</div>
+				<ul class="mainnav" aria-label="您已进入首页及一级栏目导航区。" altdes="导航区" wzades="提供首页、动态、公开、服务、互动、专题栏目入口。">
+					<li class="acur" id="index">
+						<a title="首页" href="/">首页</a>
+					</li>
+					<li id="mzzxbg">
+						<a title="动态" href="http://mzj.gz.gov.cn/dt/mzdt/index.html">动态</a>					</li>
+					<li id="zwgkbg">
+						<a title="公开" href="http://mzj.gz.gov.cn/gk/index.html">公开</a>					</li>
+					<li class="space" id="space"></li>
+					<li id="ywdtbg">
+						<a title="服务" target="_blank" href="http://www.gdzwfw.gov.cn/portal/branch-hall?orgCode=007483164">服务</a>
+					</li>
+					<li id="hdjlbg">
+						<a title="互动" href="http://mzj.gz.gov.cn/hdjlpt">互动</a>					</li>
+					<li id="ztzlbg">
+						<a title="专题" href="http://mzj.gz.gov.cn/zt/index.html">专题</a>					</li>
+				</ul>
+			</div>
+			<div class="banner">
+				<div class="container">
+					<div class="search" aria-label="您已进入全站搜索交互区，本区域包含1个文本输入框和1个提交按钮。请输入关键词，按回车键进行网站内容搜索。" altdes="交互区" wzades="输入关键词可对网站内容进行搜索。">
+						<script>
+											function sousuo() {
+					window.location = "http://search.gd.gov.cn/search/local_msg/200022?keywords=" + $("#txt_search1").val();
+				} 
+						</script>
+							<p class="field">
+								<i class="icon-lock icon-large"></i>
+								<input id="txt_search1"  name="keywords" type="text" class="searchTxt" placeholder="请输入关键字搜索">
+							</p>
+							<input type="submit" class="searchBtn" value="搜索" onclick='sousuo()'>
+					</div>
+					<div class="search_rc"><span>搜索热词：</span>
+						<a class="reci" href="http://search.gd.gov.cn/search/local_msg/200022?keywords=长者饭堂" target="_blank">长者饭堂</a>
+						<a class="reci" href="http://search.gd.gov.cn/search/local_msg/200022?keywords=帮扶工作" target="_blank">帮扶</a>
+						<a class="reci" href="http://search.gd.gov.cn/search/local_msg/200022?keywords=求助" target="_blank">求助</a>
+						<a class="reci" href="http://search.gd.gov.cn/search/local_msg/200022?keywords=慈善" target="_blank">慈善</a>
+						<a class="reci" href="http://search.gd.gov.cn/search/local_msg/200022?keywords=殡葬" target="_blank">殡葬</a>
+						<a class="reci" href="http://search.gd.gov.cn/search/local_msg/200022?keywords=婚姻登记" target="_blank">婚姻登记</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+            //简转繁
+            var font = "t";
+            function jft() {
+                zh_tran(font);
+                if (font == "s") {
+                    font = "t";
+                    document.getElementById("StranLink").innerHTML = "繁體";
+                } else {
+                    font = "s";
+                    document.getElementById("StranLink").innerHTML = "简体";
+                }
+            }
+        </script>
+		<script language="javascript">
+			//弹出指定大小的窗口 add by Rr 2021-04-14
+			function openScript(url, width, height) {
+				//获得窗口的垂直位置;
+  				var iTop = (window.screen.availHeight-30-height)/2;
+				//获得窗口的水平位置; 
+  				var iLeft = (window.screen.availWidth-10-width)/2; 
+  				var Win = window.open(url,"openScript",'width=' + width + ',height=' + height + ',top=' + iTop + ',left=' + iLeft + ',resizable=0,scrollbars=yes,menubar=no,status=n0' );
+		}
+		</script>
+<style>
+	.m_ghb{display:none;}
+	@media (max-width: 768px) {
+		.header .m_ghb{
+			display:block;    
+			position: absolute;
+			right: 6px;
+			top: 6px;
+			padding: 1px 10px;
+			color: #ffffff;
+			background: #da4a4a;
+			border-radius: 40px;
+		}
+	}
+</style>
+<script src="//service.gd.gov.cn/wza/wza.js?app=mzj-gz"></script>
+<script src="https://slhsrv.southcn.com/wza/slh.js?app=mzj.gz.gov.cn" referrerpolicy="origin"></script>
+<script>
+    // IE8 兼容配置 
+window.onload = function() { 
+cnillWzaInstance.startInit("http://mzj.gz.gov.cn/js/cnill_polyfill.swf"); 
+}
+document.getElementById("wza").onclick = function() { 
+// 执行实例的init方法 
+cnillWzaInstance.init(); 
+// cnillWzaInstance为全局变量 
+}
+    // 适老化
+    document.getElementById("slh").onclick = function() {
+        // 执行实例的init方法
+        slhInstance.init();  // cnillWzaInstance为全局变量
+    }
+
+
+// 使用方法：>>> javascript:confirmAndNavigate("http://gov.cn");	
+function confirmAndNavigate(url) {
+    // 显示确认提示框
+    if (window.confirm("您正在跳出广州市民政局网站。您确定要离开当前页面吗？")) {
+        // 如果用户确认，则跳转到指定的URL
+        window.location.href = url;
+    }
+}
+</script>
+
+			<!--header End-->
+			<!-- 标题广告 右方 浮动的小图标 -->
+			<div class="easybtn">
+				<!--
+				<dl>
+					<dt class="wx"><a></a></dt>
+					<dd><i></i><img src="/global/wx.jpg" alt="广州市民政局" title="广州市民政局"><span>广州市民政局</span></dd>
+				</dl>
+				-->
+				<!--
+				<dl>
+					<dt class="wb"><a></a></dt>
+					<dd><i></i>
+						<a href="#" target="_blank"><img src="/global/snwb.jpg" alt="民政微博" title="民政微博"><span>民政微博</span></a>
+					</dd>
+				</dl>
+				-->
+				<!--
+				<dl>
+					<dt class="sj"><a></a></dt>
+					<dd><i></i><img src="/global/sjb.png" alt="广州市民政局" title="广州市民政局"><span>广州市民政局</span></dd>
+				</dl>
+				-->
+				<!--
+				<dl>
+					<dt class="jqr"><a href="//wxpt.gzmz.gov.cn/gzmzj/gzmzjWebPage" target="_blank"></a></dt>
+				</dl>
+				-->
+			</div>
+			<div class="container">
+          <!-- 今日头条 Start add by Rr -->
+          <div class="toutiao" aria-label="您已进入头条视窗区。" altdes="视窗区" wzades="展示头条信息。">
+						<!-- 今日头条首条 -->
+                            <span style="font-size:24px; text-overflow:ellipsis;white-space:nowrap;overflow:hidden;display: block;"><a class="toutiao" href="http://mzj.gz.gov.cn/dt/toutiao/content/post_10738376.html" target="_blank" title="习近平：牢牢把握雄安新区功能定位 努力建设新时代创新高地和推动高质量发展样板">习近平：牢牢把握雄安新区功能定位 努力建设新时代创新高地和推动高质量发展样板</a></span>
+						
+            <span style="font-size:16px; margin-top:10px; morgin-bottom:10px; text-overflow:ellipsis;white-space:nowrap;overflow:hidden;">
+        	    <!-- 今日头条第2条 -->
+															<a class="toutiao" href="http://mzj.gz.gov.cn/dt/toutiao/content/post_10738375.html" target="_blank" title="总书记的人民情怀 | “干事创业一定要树立正确政绩观”">总书记的人民情怀 | “干事创业一定要树立正确政绩观”</a>
+														|
+							<!-- 今日头条第3条 -->
+																	<a class="toutiao" href="http://mzj.gz.gov.cn/dt/toutiao/content/post_10726948.html" target="_blank" title="蓝图已经绘就 奋进正当其时——习近平总书记同出席2026年全国两会人大代表、政协委员共商国是纪实">蓝图已经绘就 奋进正当其时——习近平总书记同出席2026年全国两会人大代表、政协委员共商国是纪实</a>
+								            </span>
+	     	  </div>
+  	      <div class="space20"></div>
+    	    <!-- 今日头条 End add by Rr -->
+
+				<div class="pageMain">
+					<div class="Hmoetab" aria-label="您已进入图片新闻、民政动态、政声传递、公告公示、媒体关注、快速导航视窗区，本区域包含图片新闻、民政动态、政声传递、公告公示、媒体关注、快速导航六个栏目，请按上、下、左、右方向键切换栏目，定位动态后按回车键打开动态链接。" altdes="视窗区" wzades="展示图片新闻、民政动态、政声传递、公告公示、媒体关注、快速导航信息。">
+						<div class="hometabHd">
+							<ul role="tablist">
+								<li class="li0" role="tab" aria-label="您已进入图片新闻视窗区">
+										<a href="http://mzj.gz.gov.cn/dt/mzdt/index.html" target="_blank">图片新闻<i></i></a>
+								</li>								<li class="li1 on" role="tab" aria-label="您已进入民政动态视窗区">
+
+																			<a href="http://mzj.gz.gov.cn/dt/mzdt/index.html" target="_blank">民政动态<i></i></a>
+									
+								</li>
+								<li class="li2" role="tab" aria-label="您已进入政声传递视窗区">
+
+									<a href="//www.gd.gov.cn/xxts/" target="_blank">政声传递<i></i></a>
+
+								</li>
+								<!--<li class="li4"><a title="民政要闻" href="" target="_blank">民政要闻<i></i></a></li>-->
+								<li class="li3" role="tab" aria-label="您已进入公告公示视窗区">
+
+																			<a href="http://mzj.gz.gov.cn/dt/gggs/index.html" target="_blank">公告公示<i></i></a>
+									
+								</li>
+								<li class="li4" role="tab" aria-label="您已进入媒体关注视窗区">
+																			<a href="http://mzj.gz.gov.cn/dt/mtgz/index.html" target="_blank">媒体关注<i></i></a>
+									
+								</li>
+
+								<li class="li5" role="tab" aria-label="您已进入快捷导航视窗区">
+									<a href="//mzj.gz.gov.cn/qt/db/wzdt/index.html">快捷导航<i></i></a>
+								</li>
+							</ul>
+						</div>
+						<div class="hometabBd">
+							<div style="display: none;" role="tabpanel">
+								<div class="home_tpxw" style="display:block;">
+									<div class="bd">
+										<ul style="position: relative; width: 100px; height: 370px;">																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																															<li style="position: absolute; width: 100px; left: 0px; top: 0px; display: none;" id="lbt">
+													<span class="xwtp">
+													<a target="_blank" href="http://mzj.gz.gov.cn/dt/mzdt/content/post_10649400.html"> <img src="http://mzj.gz.gov.cn/img/1/1561/1561586/10649400.png" title="局机关离退休干部党支部集中开展2026年第一季度学习交流活动" alt="局机关离退休干部党支部集中开展2026年第一季度学习交流活动"> </a></span>
+													<p class="txtbg">
+														<span class="txt"><a href="http://mzj.gz.gov.cn/dt/mzdt/content/post_10649400.html" target="_blank" title="局机关离退休干部党支部集中开展2026年第一季度学习交流活动">局机关离退休干部党支部集中开展2026年第一季度学习交流活动</a></span>
+                     				<span class="zy">　　1月9日，为加强离退休干部思想政治建设，引导老同志持续深化理论武装，永葆政治本色，积极为民政事业高质量发展贡献智慧和力量，广州市民政局机关4个离退休干部党支部集中开展第一季度学习交流活动。　　学习交流活动分两个环节进行。在集中学习环节，与会老同志集中学习《习近平关于……</span>
+													</p>
+												</li>																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																<li style="position: absolute; width: 100px; left: 0px; top: 0px; display: none;" id="lbt">
+													<span class="xwtp">
+													<a target="_blank" href="http://mzj.gz.gov.cn/dt/mzdt/content/post_10509213.html"> <img src="http://mzj.gz.gov.cn/img/1/1515/1515524/10509213.jpg" title="局机关离退休党支部赴爱国主义教育基地开展主题参观学习" alt="局机关离退休党支部赴爱国主义教育基地开展主题参观学习"> </a></span>
+													<p class="txtbg">
+														<span class="txt"><a href="http://mzj.gz.gov.cn/dt/mzdt/content/post_10509213.html" target="_blank" title="局机关离退休党支部赴爱国主义教育基地开展主题参观学习">局机关离退休党支部赴爱国主义教育基地开展主题参观学习</a></span>
+                     				<span class="zy">　　在纪念中国人民抗日战争暨世界反法西斯战争胜利80周年暨“沙基惨案”发生100周年的重要历史节点，为深入弘扬爱国主义精神、传承红色基因，局机关离退休党支部组织离退休党员干部，前往广州市银河烈士陵园爱国主义教育基地，开展了一场主题鲜明、内容丰富的参观学习活动。　　本次活……</span>
+													</p>
+												</li>																																																																								<li style="position: absolute; width: 100px; left: 0px; top: 0px; display: none;" id="lbt">
+													<span class="xwtp">
+													<a target="_blank" href="http://mzj.gz.gov.cn/dt/mzdt/content/post_10503581.html"> <img src="http://mzj.gz.gov.cn/img/1/1513/1513376/10503581.jpg" title="广州市民政局组团赴西藏波密县开展对口支援工作" alt="广州市民政局组团赴西藏波密县开展对口支援工作"> </a></span>
+													<p class="txtbg">
+														<span class="txt"><a href="http://mzj.gz.gov.cn/dt/mzdt/content/post_10503581.html" target="_blank" title="广州市民政局组团赴西藏波密县开展对口支援工作">广州市民政局组团赴西藏波密县开展对口支援工作</a></span>
+                     				<span class="zy">　　10月中旬，广州市民政局党组成员、驻局纪检监察组组长陈和勤，市管一级调研员李又文率局机关相关处室、有关直属单位、部分社会组织及会员企业负责人或代表与市协作办公室相关处室负责同志组成调研帮扶组，前往波密县开展实地调研、民生帮扶、走访慰问、项目考察等工作，进一步深化“粤……</span>
+													</p>
+												</li>																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																										<li style="position: absolute; width: 100px; left: 0px; top: 0px; display: none;" id="lbt">
+													<span class="xwtp">
+													<a target="_blank" href="http://mzj.gz.gov.cn/dt/mzdt/content/post_10376681.html"> <img src="http://mzj.gz.gov.cn/img/1/1469/1469347/10376681.jpg" title="闻令而动 有呼必应！市民政局党员干部冲锋在前助力筑牢蚊媒防控网" alt="闻令而动 有呼必应！市民政局党员干部冲锋在前助力筑牢蚊媒防控网"> </a></span>
+													<p class="txtbg">
+														<span class="txt"><a href="http://mzj.gz.gov.cn/dt/mzdt/content/post_10376681.html" target="_blank" title="闻令而动 有呼必应！市民政局党员干部冲锋在前助力筑牢蚊媒防控网">闻令而动 有呼必应！市民政局党员干部冲锋在前助力筑牢蚊媒防控网</a></span>
+                     				<span class="zy">　　当前，登革热、基孔肯雅热等蚊媒传染病风险叠加，广州疫情防控进入攻坚关键期。市民政局党组坚持把防疫作为当务之急抓紧抓实，第一时间召开专题会议部署，第一时间开展灭蚊行动，第一时间组织党员干部挺膺担当、冲锋在前，用实际行动助力广州用最快速度、最短时间打赢疫情歼灭战，以“党……</span>
+													</p>
+												</li>																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																		<li style="position: absolute; width: 100px; left: 0px; top: 0px; display: none;" id="lbt">
+													<span class="xwtp">
+													<a target="_blank" href="http://mzj.gz.gov.cn/dt/mzdt/content/post_10273212.html"> <img src="http://mzj.gz.gov.cn/img/1/1428/1428149/10273212.jpg" title="黄埔结婚登记中心首日囍迎集体婚礼广州政企协作共筑甜蜜经济文化街区" alt="黄埔结婚登记中心首日囍迎集体婚礼广州政企协作共筑甜蜜经济文化街区"> </a></span>
+													<p class="txtbg">
+														<span class="txt"><a href="http://mzj.gz.gov.cn/dt/mzdt/content/post_10273212.html" target="_blank" title="黄埔结婚登记中心首日囍迎集体婚礼广州政企协作共筑甜蜜经济文化街区">黄埔结婚登记中心首日囍迎集体婚礼广州政企协作共筑甜蜜经济文化街区</a></span>
+                     				<span class="zy">　　为巩固婚俗改革成效，进一步擦亮“花城有囍”结婚登记颁证品牌，促进甜蜜经济发展，2025年5月18日，广州市民政局、黄埔区人民政府在黄埔区南岗融德里历史文化街区联合举办“融系良缘·立业黄埔”广州市“花城有囍”集体婚礼活动，通过开展黄埔区民政局婚姻登记处驻南岗结婚登记中……</span>
+													</p>
+												</li>																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																														</ul>
+									</div>
+									<div class="hd">
+										<ul>
+										<!-- hd2 -->
+										</ul>
+									</div>
+									<script>
+											var ct = $('#lbt').html();
+											ct = ct.replace(/&nbsp;/g, ''); 
+											$('#lbt').html(ct);
+											</script>
+								</div>
+							</div>
+							<div class="mzdt" style="display:none;" role="tabpanel">
+
+								<!-- 民政动态首条 -->									<span class="mzdt_title">
+            						<a href="http://mzj.gz.gov.cn/dt/mzdt/content/post_10733257.html" target="_blank" title="市民政局召开传达贯彻习近平总书记重要讲话精神暨全国两会精神干部大会">	市民政局召开传达贯彻习近平总书记重要讲话精神暨全国两会精神干部大会	</a>
+            					</span>
+									<span class="mzdt_memo">
+            						　　3月17日上午，市民政局召开传达贯彻习近平总书记重要讲话精神暨全国两会精神干部大会，深入学习习近平总书记在今年两会期间的系列重要讲话，学习贯彻全国两会的各项部署，推动两会精神在民政领域落地落实。局党组书记、局长、一级巡视员苏佩主持会议并讲话，在家局领导以及局机...
+            					</span>
+								
+								<ul class="common_newslist">
+
+									<!-- 民政动态首条6(排队第1条) -->										<li>
+											<a href="http://mzj.gz.gov.cn/dt/mzdt/content/post_10745657.html" target="_blank" title="市受助人员安置中心开展“党旗辉映社工日志愿情暖安置家”志愿服务活动"> 市受助人员安置中心开展“党旗辉映社工日志愿情暖安置家”志愿服务活动 </a>
+											<span>2026-03-27</span>
+										</li>
+																			<li>
+											<a href="http://mzj.gz.gov.cn/dt/mzdt/content/post_10745648.html" target="_blank" title="市民政局团委召开清明党团志愿服务培训会议"> 市民政局团委召开清明党团志愿服务培训会议 </a>
+											<span>2026-03-27</span>
+										</li>
+																			<li>
+											<a href="http://mzj.gz.gov.cn/dt/mzdt/content/post_10745636.html" target="_blank" title="市受助人员安置中心举办树立和践行正确政绩观学习教育读书班第一次集中学习会"> 市受助人员安置中心举办树立和践行正确政绩观学习教育读书班第一次集中学习会 </a>
+											<span>2026-03-27</span>
+										</li>
+																			<li>
+											<a href="http://mzj.gz.gov.cn/dt/mzdt/content/post_10745625.html" target="_blank" title="除夕逆行扑山火，平凡厨师显担当"> 除夕逆行扑山火，平凡厨师显担当 </a>
+											<span>2026-03-27</span>
+										</li>
+																			<li>
+											<a href="http://mzj.gz.gov.cn/dt/mzdt/content/post_10745616.html" target="_blank" title="党建引领强党性 实干笃行践政绩——市民政发展研究中心以主题党日践行正确政绩观"> 党建引领强党性 实干笃行践政绩——市民政发展研究中心以主题党日践行正确政绩观 </a>
+											<span>2026-03-27</span>
+										</li>
+																			<li>
+											<a href="http://mzj.gz.gov.cn/dt/mzdt/content/post_10745612.html" target="_blank" title="市救助管理站市区分站离退休人员第一、第二党支部圆满完成换届选举工作"> 市救助管理站市区分站离退休人员第一、第二党支部圆满完成换届选举工作 </a>
+											<span>2026-03-27</span>
+										</li>
+																			<li>
+											<a href="http://mzj.gz.gov.cn/dt/mzdt/content/post_10745598.html" target="_blank" title="“树立和践行正确政绩观，推动特困服务高质量发展——特困政策解读与实务指导” 市民政局精神病院举办专题培训"> “树立和践行正确政绩观，推动特困服务高质量发展——特困政策解读与实务指导” 市民政局精神病院举办专题培训 </a>
+											<span>2026-03-27</span>
+										</li>
+									
+								</ul>
+							</div>
+							<div style="display: none;" role="tabpanel">
+								<ul id="zscd" class="common_newslist">
+								</ul>
+								<ul id="zscd2" class="common_newslist">
+								</ul>
+							</div>
+							<!--<div>
+          <div class="mzyw">
+            <div class="hd common_tabtitle">
+              <ul>
+                <li><a href="#"  target="_blank">	</a></li>
+                <li><a href="#"  target="_blank">	</a></li>
+                <li><a href="#"  target="_blank">	</a></li>
+              </ul>
+            </div>
+            <div class="ywbd">
+              <ul class="common_newslist" style="display:block;">
+                 
+
+              </ul>
+              <ul class="common_newslist">
+                 
+
+              </ul>
+              <ul class="common_newslist">
+                 
+
+              </ul>
+            </div>
+          </div>
+        </div>-->
+							<div style="display: none;" role="tabpanel">
+								<ul class="common_newslist">
+
+									<!-- 公告公示16880 -->										<li>
+											<a href="http://mzj.gz.gov.cn/dt/gggs/content/post_10736866.html" target="_blank" title="广州市民政局直属事业单位2025年第一次公开招聘工作人员拟聘用人员公示（第一批）"> 广州市民政局直属事业单位2025年第一次公开招聘工作人员拟聘用人员公示（第一批） </a>
+											<span>2026-03-23</span>
+										</li>
+																			<li>
+											<a href="http://mzj.gz.gov.cn/dt/gggs/content/post_10734547.html" target="_blank" title="广州市民政局关于2026年清明祭扫工作的通告"> 广州市民政局关于2026年清明祭扫工作的通告 </a>
+											<span>2026-03-23</span>
+										</li>
+																			<li>
+											<a href="http://mzj.gz.gov.cn/dt/gggs/content/post_10734508.html" target="_blank" title="广州市2026年清明现场祭扫网上预约指引"> 广州市2026年清明现场祭扫网上预约指引 </a>
+											<span>2026-03-23</span>
+										</li>
+																			<li>
+											<a href="http://mzj.gz.gov.cn/dt/gggs/content/post_10734310.html" target="_blank" title="2026年实施预约祭扫措施的重点祭扫场所名单（52家）"> 2026年实施预约祭扫措施的重点祭扫场所名单（52家） </a>
+											<span>2026-03-23</span>
+										</li>
+																			<li>
+											<a href="http://mzj.gz.gov.cn/dt/gggs/content/post_10733569.html" target="_blank" title="广州市民政局2025年度行政许可实施和监督管理情况公告"> 广州市民政局2025年度行政许可实施和监督管理情况公告 </a>
+											<span>2026-03-19</span>
+										</li>
+																			<li>
+											<a href="https://www.gz.gov.cn/hdjlpt/yjzj/answer/49353" target="_blank" title="广州市民政局关于公开征求《广州市民政局关于进一步完善最低生活保障工作的通知（试行）(公开征求意见稿）》意见及公平竞争相关意见的公告"> 广州市民政局关于公开征求《广州市民政局关于进一步完善最低生活保障工作的通知（试行）(公开征求意见稿）》意见及公平竞争相关意见的公告 </a>
+											<span>2026-03-17</span>
+										</li>
+																			<li>
+											<a href="http://mzj.gz.gov.cn/dt/gggs/content/post_10729548.html" target="_blank" title="广州市民政局关于印发广州市社会组织专家库成员名单的通知"> 广州市民政局关于印发广州市社会组织专家库成员名单的通知 </a>
+											<span>2026-03-17</span>
+										</li>
+																			<li>
+											<a href="https://www.gz.gov.cn/hdjlpt/yjzj/answer/49306" target="_blank" title="广州市民政局关于公开征求《广州市公办养老机构入住评估轮候管理办法（公开征求意见稿）》及公平竞争相关意见的公告"> 广州市民政局关于公开征求《广州市公办养老机构入住评估轮候管理办法（公开征求意见稿）》及公平竞争相关意见的公告 </a>
+											<span>2026-03-16</span>
+										</li>
+																			<li>
+											<a href="http://mzj.gz.gov.cn/dt/gggs/content/post_10713596.html" target="_blank" title="关于委托第三方承办2026年度广州市社会组织等级评估工作服务项目的比选公告"> 关于委托第三方承办2026年度广州市社会组织等级评估工作服务项目的比选公告 </a>
+											<span>2026-03-06</span>
+										</li>
+																			<li>
+											<a href="http://mzj.gz.gov.cn/dt/gggs/content/post_10711306.html" target="_blank" title="广州市民政局关于委托第三方机构作为2026年第十三届广州市社会组织公益创投活动承办单位的比选公告"> 广州市民政局关于委托第三方机构作为2026年第十三届广州市社会组织公益创投活动承办单位的比选公告 </a>
+											<span>2026-03-05</span>
+										</li>
+																			<li>
+											<a href="http://mzj.gz.gov.cn/dt/gggs/content/post_10697735.html" target="_blank" title="广州市民政局地名公告（20260225）"> 广州市民政局地名公告（20260225） </a>
+											<span>2026-02-25</span>
+										</li>
+									
+								</ul>
+							</div>
+							<div style="display: none;" role="tabpanel">
+								<ul class="common_newslist">
+									<!-- 聚合政策解读28140 --><!-- 媒体关注16902 -->										<li>
+											<a href="http://mzj.gz.gov.cn/dt/mtgz/content/post_10742294.html" target="_blank" title="（新快报）54岁男子找工作屡次碰壁 广州救助站暖心助其再就业"> （新快报）54岁男子找工作屡次碰壁 广州救助站暖心助其再就业 </a>
+											<span>2026-03-26</span>
+										</li>
+																			<li>
+											<a href="http://mzj.gz.gov.cn/dt/mtgz/content/post_10727414.html" target="_blank" title="（中国报道）每月最高800元！养老服务惠民生 消费补贴暖民心"> （中国报道）每月最高800元！养老服务惠民生 消费补贴暖民心 </a>
+											<span>2026-03-16</span>
+										</li>
+																			<li>
+											<a href="http://mzj.gz.gov.cn/dt/mtgz/content/post_10709539.html" target="_blank" title="（中国社会报）发挥慈善会枢纽作用  促进慈善信托发展"> （中国社会报）发挥慈善会枢纽作用  促进慈善信托发展 </a>
+											<span>2026-03-04</span>
+										</li>
+																			<li>
+											<a href="http://mzj.gz.gov.cn/dt/mtgz/content/post_10697288.html" target="_blank" title="（广州日报）广州市民政局多措并举保障民生 撬动高质量发展新格局"> （广州日报）广州市民政局多措并举保障民生 撬动高质量发展新格局 </a>
+											<span>2026-02-25</span>
+										</li>
+																			<li>
+											<a href="http://mzj.gz.gov.cn/dt/mtgz/content/post_10693042.html" target="_blank" title="（中国社会报）推动民政事业与城市发展同频共振"> （中国社会报）推动民政事业与城市发展同频共振 </a>
+											<span>2026-02-14</span>
+										</li>
+																			<li>
+											<a href="http://mzj.gz.gov.cn/dt/mtgz/content/post_10679512.html" target="_blank" title="（人民网）一则寻亲启事，照亮二十年的坚守"> （人民网）一则寻亲启事，照亮二十年的坚守 </a>
+											<span>2026-02-06</span>
+										</li>
+																			<li>
+											<a href="http://mzj.gz.gov.cn/dt/mtgz/content/post_10665337.html" target="_blank" title="（中国民政）以高质量政策理论研究助力广州民政事业高质量发展"> （中国民政）以高质量政策理论研究助力广州民政事业高质量发展 </a>
+											<span>2026-01-28</span>
+										</li>
+																			<li>
+											<a href="http://mzj.gz.gov.cn/dt/mtgz/content/post_10649669.html" target="_blank" title="（中国民政杂志）以惠民生和促消费“双引擎”探索广州特色民政发展新路径"> （中国民政杂志）以惠民生和促消费“双引擎”探索广州特色民政发展新路径 </a>
+											<span>2026-01-16</span>
+										</li>
+																			<li>
+											<a href="http://mzj.gz.gov.cn/dt/mtgz/content/post_10634370.html" target="_blank" title="（中国社会报）科学谋划和实施“十五五”民政工作"> （中国社会报）科学谋划和实施“十五五”民政工作 </a>
+											<span>2026-01-08</span>
+										</li>
+																			<li>
+											<a href="http://mzj.gz.gov.cn/dt/mtgz/content/post_10614622.html" target="_blank" title="（人民网）广州市民政局帮扶梅州茶阳镇：解民忧暖民心，助力乡村振兴"> （人民网）广州市民政局帮扶梅州茶阳镇：解民忧暖民心，助力乡村振兴 </a>
+											<span>2025-12-29</span>
+										</li>
+																			<li>
+											<a href="http://mzj.gz.gov.cn/dt/mtgz/content/post_10598890.html" target="_blank" title="（中国社会报）汇聚慈善力量 共创美好生活——2025年中国公益慈善项目交流展示会亮点扫描"> （中国社会报）汇聚慈善力量 共创美好生活——2025年中国公益慈善项目交流展示会亮点扫描 </a>
+											<span>2025-12-18</span>
+										</li>
+									
+								</ul>
+							</div>
+
+							<div class="ztzlpiclist" style="display: none;" role="tabpanel">
+								<div class="bd">
+									<div class="tempWrap" style="overflow:hidden; position:relative; height:340px">
+										<div class="ulWrap" style="top: -115.166px; position: relative; padding: 0px; margin: 0px;">
+											<!-- 专题专栏（article:5753461） --><ul class=" list-paddingleft-2">
+    <li>
+        <p>
+            <!-- 政声传递 --><a href="https://www.gd.gov.cn/xxts/" target="_blank"><img class="nfw-cms-img" img-id="1540220" src="http://mzj.gz.gov.cn/img/1/1540/1540220/5753461.jpg" alt="_rr_zt_zhengShengChuanDi.jpg"/></a>
+        </p>
+    </li>
+    <li>
+        <p>
+            <!-- 法治政府建设 --><a href="http://mzj.gz.gov.cn/gk/fazhizhengfujianshe/" target="_blank"><img class="nfw-cms-img" img-id="514086" src="http://mzj.gz.gov.cn/img/0/514/514086/5753461.jpg" alt="_rr_zt_faZhiZhengFuJianShe.jpg"/></a>
+        </p>
+    </li>
+    <li>
+        <p>
+            <!--社会组织信息平台--><a href="http://112.94.64.136:8088/home/pubbase/xxgsAllGZShzz" target="_blank"><img class="nfw-cms-img" img-id="1344850" src="http://mzj.gz.gov.cn/img/1/1344/1344850/5753461.jpg" alt="zhuanTiRuKou_2024_sheHuiZuZhi_v1.jpg"/></a>
+        </p>
+    </li>
+    <li>
+        <!--为老平台-->
+        <p>
+            <a href="https://wlpt.mzj.gz.gov.cn/" target="_blank"><img class="nfw-cms-img" img-id="229085" src="http://mzj.gz.gov.cn/img/0/229/229085/5753461.jpg" alt="huanTiRuKou_2020_wlpt.jpg"/></a>
+ &nbsp; &nbsp; &nbsp; &nbsp;
+        </p>
+    </li>
+    <li>
+        <p>
+            <a href="http://www.gdhy.gov.cn/" target="_blank"><img class="nfw-cms-img" img-id="86271" src="http://mzj.gz.gov.cn/img/0/86/86271/5753461.png" alt="zhuanTiRuKou_2017_hunYinDengJi.png"/></a>
+        </p>
+    </li>
+    <li>
+        <p>
+            <!--殡葬信息--><a href="http://mzj.gz.gov.cn/bzxx" target="_blank"><img class="nfw-cms-img" img-id="1343854" src="http://mzj.gz.gov.cn/img/1/1343/1343854/5753461.jpg" alt="zhuanTiRuKou_2024_binZangXinXi.jpg"/></a>
+        </p>
+    </li>
+    <li>
+        <p>
+            <!--福彩中心--><a href="http://mzj.gz.gov.cn/gzfcw" target="_blank"><img class="nfw-cms-img" img-id="157510" src="http://mzj.gz.gov.cn/img/0/157/157510/5753461.jpg" alt="广州福彩图标.jpg"/></a>
+        </p>
+    </li>
+    <li>
+        <p>
+            <!--老人院--><a href="http://mzj.gz.gov.cn/lry" target="_blank"><img class="nfw-cms-img" img-id="476369" src="http://mzj.gz.gov.cn/img/0/476/476369/5753461.jpg" alt="20210913-老人院首页logo.jpg"/></a>
+        </p>
+    </li>
+    <li>
+        <p>
+            <!--东升医院--><a href="http://mzj.gz.gov.cn/dsyy" target="_blank"><img class="nfw-cms-img" img-id="1548974" src="http://mzj.gz.gov.cn/img/1/1548/1548974/5753461.jpg" alt="zhuanTiRuKou_2025_dongShengYiYuan.jpg"/></a>
+        </p>
+    </li>
+</ul>
+<ul class=" list-paddingleft-2">
+    <li>
+        <p>
+            <a href="https://www.gdzwfw.gov.cn/portal/v2/public/duty-service?region=440100&deptCode=007483164" target="_blank"><img class="nfw-cms-img" img-id="86270" src="http://mzj.gz.gov.cn/img/0/86/86270/5753461.jpg" alt="zhuanTiRuKou_2017_fuWuQingDan.jpg"/></a>
+        </p>
+    </li>
+    <li>
+        <p>
+            <a href="https://tousu.www.gov.cn/dc/2024yxyshjjs/index.htm" target="_blank"><img class="nfw-cms-img" img-id="1517199" src="http://mzj.gz.gov.cn/img/1/1517/1517199/5753461.jpg" alt="ducha_A.jpg"/></a>
+        </p>
+    </li>
+    <li>
+        <p>
+            <a target="_blank" href="https://www.gov.cn/zhengce/zczhjd/"><img class="nfw-cms-img" img-id="1517200" src="http://mzj.gz.gov.cn/img/1/1517/1517200/5753461.jpg" alt="juchuo_A.jpg"/></a>
+        </p>
+    </li>
+    <li>
+        <p>
+            <a href="http://sthjj.gz.gov.cn/mlgz/index.html" target="_blank"><img class="nfw-cms-img" img-id="1517201" src="http://mzj.gz.gov.cn/img/1/1517/1517201/5753461.jpg" alt="meili_A.jpg"/></a>
+        </p>
+    </li>
+</ul>										</div>
+									</div>
+								</div>
+								<div class="hd">
+									<ul>
+										<li class="on">1</li>
+										<li class="">2</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="space20"></div>
+					<div class="Hmoebox clearfix">
+						<div>
+							<div class="hbox">
+								
+								<div class="hb_con">
+
+									<!--嵌入9136101 重点链接-->
+									<p><a href="https://tousu.www.gov.cn/dc/2024yxyshjjs/index.htm" target="_blank"><img class="rr_ImageLink_hp_left_etr" img-id="980390" src="http://mzj.gz.gov.cn/img/0/980/980390/9136101.jpg" alt="2023-07-29gwyhlwdcptzt.jpg"/></a><br/></p><p><a target="_blank" href="https://www.gov.cn/zhengce/zczhjd/"><img class="rr_ImageLink_hp_left_etr" img-id="980560" src="http://mzj.gz.gov.cn/img/0/980/980560/9136101.jpg" alt="2023-07-30zyjcssxg.jpg"/></a><!-- 重要举措 --></p><p><a href="https://www.gz.gov.cn/gz12345/" target="_blank" textvalue="只支持选中一个链接时生效"><img class="nfw-cms-img" img-id="1589432" src="http://mzj.gz.gov.cn/img/1/1589/1589432/9136101.jpg" alt="2026-03-10link12345.jpg"/></a></p><!-- 从稿件引用重点链接，id为9136101 《首页-中部-左边 图片链接》 -->
+
+									<div class="xxgklm clearfix" aria-label="您已进入信息公开指南、信息公开目录、信息公开年报、依申请公开、规范性文件、部门文件视窗区，请按tab键切换栏目下的动态，定位动态后按回车键打开动态链接。" altdes="视窗区" wzades="提供信息公开指南、信息公开目录、信息公开年报、依申请公开、规范性文件、部门文件入口。">
+										<ul>
+
+											<li>
+
+												<a href="https://mzj.gz.gov.cn/gkmlpt/guide" target="_blank"> 信息公开指南 </a>
+
+											</li>
+											<li>
+
+												<a href="https://mzj.gz.gov.cn/gkmlpt/index" target="_blank"> 信息公开目录 </a>
+
+											</li>
+											<li>
+
+												<a href="/gkmlpt/annualreport" target="_blank"> 信息公开年报 </a>
+
+											</li>
+											<li>
+												<a href="https://ysqgk.gd.gov.cn/200020/choice" target="_blank"> 依申请公开 </a>
+											</li>
+
+											<li>
+
+												<a href="https://mzj.gz.gov.cn/gkmlpt/policy" target="_blank"> 政策 </a>
+
+											</li>
+											<li>
+
+												<a href="https://mzj.gz.gov.cn/gkmlpt/policy#346" target="_blank"> 部门文件 </a>
+
+											</li>
+
+										</ul>
+									</div>
+									<div aria-label="您已进入重点领域信息公开、五公开专栏、社会公益事业建设、民政行政法规库、建设项目、政府采购、互动平台、网上信访视窗区，请按tab键切换栏目下的动态，定位动态后按回车键打开动态链接。" altdes="视窗区" wzades="提供重点领域信息公开、五公开专栏、社会公益事业建设、防疫信息、民政行政法规库、建设项目、政府采购、互动平台、网上信访入口。">
+									<div class="sgklm clearfix">
+										<ul>
+											<li>
+																									<a href="http://mzj.gz.gov.cn/gk/zdlyxxgk/index.html" target="_blank"> 重点领域信息公开 </a>
+																							</li>
+											<li>
+																									<a href="http://mzj.gz.gov.cn/gk/wgkzl/index.html" target="_blank"> 五公开专栏 </a>
+																							</li>
+										</ul>
+									</div>
+									<div class="xxgklm clearfix">
+										<ul>
+											<li>
+																									<a href="http://mzj.gz.gov.cn/gk/zdlyxxgk/shgysyjs/index.html" target="_blank"> 社会公益事业建设 </a>
+																							</li>
+											<li>
+													<a href="//mzj.gz.gov.cn/gk/jytablgz/index.html"> 建议提案办理工作 </a>
+											</li>
+											<li>
+																									<a href="http://mzj.gz.gov.cn/gk/zdlyxxgk/jsxm/index.html" target="_blank"> 建设项目 </a>
+																							</li>
+											<li>
+																									<a href="http://mzj.gz.gov.cn/gk/zdlyxxgk/zfcg/index.html" target="_blank"> 政府采购 </a>
+																							</li>
+										</ul>
+									</div>
+
+									<div class="space10"></div>
+
+									<div class="xxgklm clearfix">
+										<ul>
+
+											<li>
+																									<a href="http://mzj.gz.gov.cn/gk/mzXingZhengFaGuiKu/index.html" target="_blank"> 民政行政法规库 </a>
+																							</li>
+											<li>
+													<a href="//mzj.gz.gov.cn/hdjlpt" target="_blank"> 互动平台 </a>
+											</li>
+										</ul>
+									</div>
+
+									<div class="space10"></div>
+
+									<div class="qtgklm clearfix">
+										<ul>
+											<li>
+												<a href="http://mzj.gz.gov.cn/zwgk/zfxxgkml/zfxxgkml/zzjg/lxfs" target="_blank" style="line-height:1em;""> 安全生产举报　　网上信访　 </a>
+											</li>
+										</ul>
+									</div>
+
+									</div>
+									<div class="smgklm clearfix" aria-label="您已进入城乡社区治理、公益慈善信息、服务机构一览表视窗区，请按tab键切换栏目下的动态，定位动态后按回车键打开动态链接。" altdes="视窗区" wzades="提供城乡社区治理、公益慈善信息、服务机构一览表入口。">
+										<ul>
+
+											<li> <a id="42089" target="_blank" href=" http://mzj.gz.gov.cn/gk/gycsxx/index.html">公益慈善信息</a></li>
+
+											<li> <a id="17097" target="_blank" href=" http://mzj.gz.gov.cn/gk/fwjgylb/index.html">服务机构一览表</a></li>
+
+											<li> <a id="17032" target="_blank" href=" http://mzj.gz.gov.cn/gk/zdlyxxgk/zzglxx/index.html">殡葬管理服务信息</a></li>
+										</ul>
+									</div>
+									<div class="gzbg clearfix" aria-label="您已进入政府信息公开工作年度报告、网站工作年度报表、财政预决算视窗区，请按tab键切换栏目下的动态，定位动态后按回车键打开动态链接。" altdes="视窗区" wzades="提供政府信息公开工作年度报告、网站工作年度报表、财政预决算入口。">
+										<ul>
+											<li>
+												<a target="_blank" href="/gkmlpt/annualreport">政府信息公开工作年度报告</a>
+											</li>
+											<li>
+												<!-- <a target="_blank" href="/gkmlpt/content/4/4460/post_4460509.html">网站工作2018年度报表</a> -->
+												<a target="_blank" href="/gkmlpt/index#359">网站工作年度报表</a>
+											</li>
+											<li>
+												<a href="/gkmlpt/index#351" target="_blank">财政预决算</a>
+											</li>
+										</ul>
+									</div>
+
+									<div class="space15"></div>
+									
+								</div>
+							</div>
+						</div>
+						<div>
+							<div class="hbox">
+								
+								<div class="hb_con">
+									<div class="hdjl_btn clearfix" aria-label="您已进入局长信箱、接访预告、意见征集、在线访谈视窗区，请按tab键切换栏目下的动态，定位动态后按回车键打开动态链接。" altdes="视窗区" wzades="提供局长信箱、接访预告、意见征集、在线访谈入口。">
+										<ul>
+
+											<li class="li_0">
+												
+												<a href="/hdjlpt/ldxx" target="_blank"><i></i> 局长信箱 </a>
+
+											</li>
+											<li class="li_1">
+
+												<a href="http://mzj.gz.gov.cn/hd/jfyg/index.html" target="_blank"><i></i> 接访预告 </a>
+
+											</li>											<li class="li_2">
+
+												<a href="/hdjlpt/c_cat?name=zjdc" target="_blank"><i></i> 意见征集 </a>
+
+											</li>
+											<li class="li_3">
+
+												<a href="/hdjlpt/c_cat?name=zxft" target="_blank"><i></i> 在线访谈 </a>
+
+											</li>
+										</ul>
+									</div>
+									<div class="space20" style="display:none;"></div>
+									<div class="mb15"></div>
+									<div class="hdtab" aria-label="您已进入意见征集视窗区。" altdes="视窗区" wzades="展示意见征集信息。">
+										<div class="common_tabtitle">
+											<ul class="hd clearfix">
+												<li class="on">
+													<a href="/hdjlpt/c_cat?name=zjdc" target="_blank" title="意见征集">意见征集</a>
+												</li>
+											</ul>
+										</div>
+										<div class="zcjd_list bd">
+											<ul>
+
+																									<li>
+														<a href="https://www.gz.gov.cn/hdjlpt/yjzj/answer/49353" target="_blank" title="广州市民政局关于公开征求《广州市民政局关于进一步完善最低生活保障工作的通知（试行）(公开征求意见稿）》意见及公平竞争相关意见的公告" class="title">广州市民政局关于公开征求《广州市...</a>
+														<span>2026-03-17</span>
+													</li>
+																									<li>
+														<a href="https://www.gz.gov.cn/hdjlpt/yjzj/answer/49306" target="_blank" title="广州市民政局关于公开征求《广州市公办养老机构入住评估轮候管理办法（公开征求意见稿）》及公平竞争相关意见的公告" class="title">广州市民政局关于公开征求《广州市...</a>
+														<span>2026-03-16</span>
+													</li>
+																									<li>
+														<a href="https://www.gz.gov.cn/hdjlpt/yjzj/answer/47541" target="_blank" title="广州市民政局关于公开征求《 广州市民政局 广州市财政局关于减免殡葬服务费用有关问题的通知（公开征求意见稿）》及公平竞争相关意见的公告" class="title">广州市民政局关于公开征求《 广州...</a>
+														<span>2025-11-27</span>
+													</li>
+																									<li>
+														<a href="https://www.gz.gov.cn/hdjlpt/yjzj/answer/46419" target="_blank" title="广州市民政局关于公开征求《广州市居民家庭经济状况核对办法(公开征求意见稿）》意见及公平竞争相关意见的公告" class="title">广州市民政局关于公开征求《广州市...</a>
+														<span>2025-10-09</span>
+													</li>
+																									<li>
+														<a href="https://www.gz.gov.cn/hdjlpt/yjzj/answer/45952" target="_blank" title="广州市民政局关于公开征求《关于推进老年人意外伤害保险工作的通知（公开征求意见稿）》及公平竞争相关意见的公告" class="title">广州市民政局关于公开征求《关于推...</a>
+														<span>2025-09-08</span>
+													</li>
+																									<li>
+														<a href="http://mzj.gz.gov.cn/hdjlpt/yjzj/answer/45433" target="_blank" title="关于公开征集《广州市民政事业发展“十五五”规划》编制意见建议的公告" class="title">关于公开征集《广州市民政事业发展...</a>
+														<span>2025-08-13</span>
+													</li>
+																									<li>
+														<a href="https://www.gz.gov.cn/hdjlpt/yjzj/answer/43824" target="_blank" title="广州市民政局关于征求广东省地方标准《未成年人救助保护机构服务规范（征求意见稿）》意见的公告" class="title">广州市民政局关于征求广东省地方标...</a>
+														<span>2025-05-22</span>
+													</li>
+												
+											</ul>
+										</div>
+
+
+									</div>
+									
+									<div class="mb15"></div>
+									<div class="space20"></div>
+
+									<div class="hdtab" aria-label="您已进入结果反馈视窗区。" altdes="视窗区" wzades="展示结果反馈信息。">
+										<div class="common_tabtitle">
+											<ul class="hd clearfix">
+												<li class="on">
+
+														<a href="/hdjlpt/c_cat?name=jgfk" target="_blank" title="结果反馈">结果反馈</a>
+
+												</li>
+						
+											</ul>
+										</div>
+
+										<div class="zcjd_list bd">
+											<ul>
+
+																									<li>
+														<a href="http://mzj.gz.gov.cn/hd/jgfk/content/post_10589041.html" target="_blank" title="广州市民政局关于《广州市民政局 广州市财政局关于减免殡葬服务费用有关问题的通知（公开征求意见稿）》意见征集的情况说明" class="title">广州市民政局关于《广州市民政局 ...</a>
+														<span>2025-12-11</span>
+													</li>
+																									<li>
+														<a href="http://mzj.gz.gov.cn/hd/jgfk/content/post_10510330.html" target="_blank" title="广州市民政局关于《广州市居民家庭经济状况核对办法(公开征求意见稿）》意见征集的情况说明" class="title">广州市民政局关于《广州市居民家庭...</a>
+														<span>2025-10-28</span>
+													</li>
+																									<li>
+														<a href="http://mzj.gz.gov.cn/hd/jgfk/content/post_10463147.html" target="_blank" title="广州市民政局关于《广州市殡葬设施专项规划（2022-2035年）》（公开征求意见稿）》意见征集的情况说明" class="title">广州市民政局关于《广州市殡葬设施...</a>
+														<span>2025-09-26</span>
+													</li>
+																									<li>
+														<a href="http://mzj.gz.gov.cn/hd/jgfk/content/post_10460975.html" target="_blank" title="《关于推进老年人意外伤害保险工作的通知（征求意见稿）》意见征集的情况说明" class="title">《关于推进老年人意外伤害保险工作...</a>
+														<span>2025-09-25</span>
+													</li>
+																									<li>
+														<a href="http://mzj.gz.gov.cn/hd/jgfk/content/post_10347134.html" target="_blank" title="广州市民政局关于《未成年人救助保护机构服务规范（征求意见稿）》意见征集的情况说明" class="title">广州市民政局关于《未成年人救助保...</a>
+														<span>2025-07-09</span>
+													</li>
+																									<li>
+														<a href="http://mzj.gz.gov.cn/hd/jgfk/content/post_10267156.html" target="_blank" title="广州市民政局关于《关于进一步做好我市特殊困难老年人入住养老机构资助工作的通知（征求意见稿）》意见征集的情况说明" class="title">广州市民政局关于《关于进一步做好...</a>
+														<span>2025-05-16</span>
+													</li>
+																									<li>
+														<a href="http://mzj.gz.gov.cn/hd/jgfk/content/post_10123070.html" target="_blank" title="广州市民政局关于《广州市民政局2025年绣花式城市治理年度计划（征求意见稿）》意见征集的情况说明" class="title">广州市民政局关于《广州市民政局2...</a>
+														<span>2025-02-20</span>
+													</li>
+																									<li>
+														<a href="http://mzj.gz.gov.cn/hd/jgfk/content/post_10018262.html" target="_blank" title="广州市民政局关于《广州市民政局关于公开征求2025年市本级福利彩票公益金拟资助项目的公告》意见征集的情况说明" class="title">广州市民政局关于《广州市民政局关...</a>
+														<span>2024-12-10</span>
+													</li>
+																									<li>
+														<a href="http://mzj.gz.gov.cn/hd/jgfk/content/post_9947452.html" target="_blank" title="广州市民政局关于《广州市民政局 广州市财政局 广州市残疾人联合会关于印发广州市老年人居家适老化改造工作实施方案的通知（公开征求意见稿）》意见征集的情况说明" class="title">广州市民政局关于《广州市民政局 ...</a>
+														<span>2024-10-29</span>
+													</li>
+																									<li>
+														<a href="http://mzj.gz.gov.cn/hd/jgfk/content/post_10023558.html" target="_blank" title="广州市民政局关于《广州市民政局代管房管理办法（公开征求意见稿）》意见征集的情况说明" class="title">广州市民政局关于《广州市民政局代...</a>
+														<span>2024-10-25</span>
+													</li>
+																									<li>
+														<a href="http://mzj.gz.gov.cn/hd/jgfk/content/post_9902090.html" target="_blank" title="关于地铁十二号线东段工程车站初定名称征求意见有关情况的说明" class="title">关于地铁十二号线东段工程车站初定...</a>
+														<span>2024-10-08</span>
+													</li>
+												
+											</ul>
+										</div>
+
+										<div class="bd">
+
+											<div style="display: none;">
+												<ul class="common_newslist2">
+
+												</ul>
+											</div>
+										</div>
+										
+										<div class="space15"></div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+						<div>
+							<div class="hbox">
+								
+            					<div class="hb_con">
+									<div aria-label="您已进入党史学习教育、法治政府建设、婚姻登记网上预约系统、广东政务服务网、权责清单办事指南视窗区，请按tab键切换栏目下的动态，定位动态后按回车键打开动态链接。" altdes="视窗区" wzades="提供党史学习教育、法治政府建设、公办养老机构轮候申请及排序查询、婚姻登记网上预约系统、广东政务服务网、权责清单办事指南入口。">
+
+									<!--嵌入9252431 重点链接-->
+									<div class="zztb">
+    <ul class=" list-paddingleft-2">
+        <li class="color01">
+            <p>
+                <a href="https://mzj.gz.gov.cn/gk/fazhizhengfujianshe/" target="_blank">法治政府建设</a>
+            </p>
+        </li>
+        <li class="color01">
+            <p>
+                <a href="https://wlpt.mzj.gz.gov.cn/" target="_blank">广州市为老服务综合平台</a>
+            </p>
+        </li>
+        <li class="color02">
+            <p>
+                <a href="http://112.94.64.136:8088/home/pubbase/xxgsAllGZShzz" target="_blank">广州市社会组织公共服务信息平台</a>
+            </p>
+        </li>
+        <li class="color02">
+            <p>
+                <a href="http://112.94.69.100:8090/portal/business/dmMsgAccess/getPlaceNames" target="_blank">区划地名信息</a>
+            </p>
+        </li>
+        <li class="color03">
+            <p>
+                <a href="https://www.gdhy.gov.cn/" target="_blank">婚姻登记网上预约系统</a>
+            </p>
+        </li>
+    </ul>
+</div><!-- 从稿件引用重点链接，id为9252431 《首页-中部-右边 文字链接》 -->
+                               
+                                    <div class="wbsgs">
+										<ul class="clearfix">
+											<li>
+												<!-- 2021-10-13更换banner <a href="//www.gdzwfw.gov.cn/portal/branch-hall?orgCode=007483164" target="_blank"><img src="/global/mzjpic_03.jpg" alt=""></a>-->
+												<a href="//www.gdzwfw.gov.cn/portal/branch-hall?orgCode=007483164" target="_blank"><img src="/images/zhuanTiRuKou_2021_binYiYeWuLiuChengChaXun.jpg" alt="广东政务服务网" title="广东政务服务网"></a>
+											</li>
+											<li><!--权责清单-->
+												<a href="//www.gdzwfw.gov.cn/portal/affairs-public-duty-list?region=440100&deptCode=007483164" target="_blank"><img src="/global/mzjpic_05.jpg" alt="权责清单" title="权责清单"></a>
+											</li>
+										</ul>
+									</div>
+									</div>
+                                    
+									<div class="Hmoelm_tab" aria-label="您已进入公开、接访预告视窗区，本区域包含公开、接访预告两个栏目，请按上、下、左、右方向键切换栏目，按tab键切换栏目下的动态，定位动态后按回车键打开动态链接。" altdes="视窗区" wzades="展示公开、接访预告信息。">
+										<div class="common_tabtitle">
+											<ul class="hd clearfix">
+												<!-- ADD script by RaoNing -->
+												<script>
+													function hd_switch(objID)
+													{
+														document.getElementById('hd_17000').style.display='none';
+														document.getElementById('hd_17066').style.display='none';
+													
+														document.getElementById(objID).style.display='';
+													}
+												</script>
+												<li class="on" onmousemove="hd_switch('hd_17000');">
+
+																											<a href="http://mzj.gz.gov.cn/gk/index.html" target="_self" title="公开">公开</a>
+													
+												</li>
+												
+												<li onmousemove="hd_switch('hd_17066');"><!-- ADD by RaoNing -->
+																										<a href="http://mzj.gz.gov.cn/hd/jfyg/index.html" target="_self" title="">接访预告</a>
+																									</li>
+											</ul>
+										</div>
+
+										<div class="zcjd_list bd" id="hd_17000">
+											<ul>
+
+																									<li>
+														<a href="http://mzj.gz.gov.cn/zwgk/zfxxgkml/zfxxgkml/gzdt/content/post_10745658.html" target="_blank" title="市受助人员安置中心开展“党旗辉映社工日志愿情暖安置家”志愿服务活动" class="title">市受助人员安置中心开展“党旗辉映...</a>
+														<span>2026-03-27</span>
+													</li>
+																									<li>
+														<a href="http://mzj.gz.gov.cn/zwgk/zfxxgkml/zfxxgkml/gzdt/content/post_10745649.html" target="_blank" title="市民政局团委召开清明党团志愿服务培训会议" class="title">市民政局团委召开清明党团志愿服务...</a>
+														<span>2026-03-27</span>
+													</li>
+																									<li>
+														<a href="http://mzj.gz.gov.cn/zwgk/zfxxgkml/zfxxgkml/gzdt/content/post_10745637.html" target="_blank" title="市受助人员安置中心举办树立和践行正确政绩观学习教育读书班第一次集中学习会" class="title">市受助人员安置中心举办树立和践行...</a>
+														<span>2026-03-27</span>
+													</li>
+																									<li>
+														<a href="http://mzj.gz.gov.cn/zwgk/zfxxgkml/zfxxgkml/gzdt/content/post_10745626.html" target="_blank" title="除夕逆行扑山火，平凡厨师显担当" class="title">除夕逆行扑山火，平凡厨师显担当</a>
+														<span>2026-03-27</span>
+													</li>
+																									<li>
+														<a href="http://mzj.gz.gov.cn/zwgk/zfxxgkml/zfxxgkml/gzdt/content/post_10745617.html" target="_blank" title="党建引领强党性 实干笃行践政绩——市民政发展研究中心以主题党日践行正确政绩观" class="title">党建引领强党性 实干笃行践政绩—...</a>
+														<span>2026-03-27</span>
+													</li>
+																									<li>
+														<a href="http://mzj.gz.gov.cn/zwgk/zfxxgkml/zfxxgkml/gzdt/content/post_10745613.html" target="_blank" title="市救助管理站市区分站离退休人员第一、第二党支部圆满完成换届选举工作" class="title">市救助管理站市区分站离退休人员第...</a>
+														<span>2026-03-27</span>
+													</li>
+																									<li>
+														<a href="http://mzj.gz.gov.cn/zwgk/zfxxgkml/zfxxgkml/gzdt/content/post_10745599.html" target="_blank" title="“树立和践行正确政绩观，推动特困服务高质量发展——特困政策解读与实务指导” 市民政局精神病院举办专题培训" class="title">“树立和践行正确政绩观，推动特困...</a>
+														<span>2026-03-27</span>
+													</li>
+																									<li>
+														<a href="http://mzj.gz.gov.cn/zwgk/zfxxgkml/zfxxgkml/gzdt/content/post_10745587.html" target="_blank" title="以叙事赋能成长，以历奇温暖同行——市老人院社工周专题培训圆满开展" class="title">以叙事赋能成长，以历奇温暖同行—...</a>
+														<span>2026-03-27</span>
+													</li>
+																									<li>
+														<a href="http://mzj.gz.gov.cn/zwgk/zfxxgkml/zfxxgkml/gzdt/content/post_10745575.html" target="_blank" title="赋能社工凝力量 专业提升促发展——市福利院开展2026年社工节活动" class="title">赋能社工凝力量 专业提升促发展—...</a>
+														<span>2026-03-27</span>
+													</li>
+																									<li>
+														<a href="http://mzj.gz.gov.cn/zwgk/zfxxgkml/zfxxgkml/gzdt/content/post_10745571.html" target="_blank" title="广州市民政局举办社会组织年检年报专题培训" class="title">广州市民政局举办社会组织年检年报...</a>
+														<span>2026-03-27</span>
+													</li>
+																									<li>
+														<a href="http://mzj.gz.gov.cn/zwgk/zfxxgkml/zfxxgkml/gzdt/content/post_10745550.html" target="_blank" title="知责明责、清廉担当——局精神病院举办2026年“清风影院”（第一期）观影活动" class="title">知责明责、清廉担当——局精神病院...</a>
+														<span>2026-03-27</span>
+													</li>
+																									<li>
+														<a href="http://mzj.gz.gov.cn/zwgk/zfxxgkml/zfxxgkml/gzdt/content/post_10744912.html" target="_blank" title="强化技能守底线 规范操作护健康——市救助站组织医务人员开展规范注射技术专题培训" class="title">强化技能守底线 规范操作护健康—...</a>
+														<span>2026-03-27</span>
+													</li>
+																									<li>
+														<a href="http://mzj.gz.gov.cn/zwgk/zfxxgkml/zfxxgkml/gzdt/content/post_10744812.html" target="_blank" title="传承雷锋精神 守护生命健康——市救助站医务科党支部开展志愿服务主题党日活动" class="title">传承雷锋精神 守护生命健康——市...</a>
+														<span>2026-03-27</span>
+													</li>
+												
+											</ul>
+										</div>
+
+										<div class="zcjd_list bd" id="hd_17066" style="display:none;"><!-- ADD by RaoNing -->
+											<ul>
+
+																									<li>
+														<a href="http://mzj.gz.gov.cn/hd/jfyg/content/post_10729655.html" target="_blank" title="2026年3月23日广州市民政局领导接访预告" class="title">2026年3月23日局领导接访预...</a>
+														<span>2026-03-17</span>
+													</li>
+																									<li>
+														<a href="http://mzj.gz.gov.cn/hd/jfyg/content/post_10694712.html" target="_blank" title="2026年2月24日广州市民政局领导接访预告" class="title">2026年2月24日局领导接访预...</a>
+														<span>2026-02-22</span>
+													</li>
+																									<li>
+														<a href="http://mzj.gz.gov.cn/hd/jfyg/content/post_10647272.html" target="_blank" title="2026年1月23日广州市民政局领导接访预告" class="title">2026年1月23日局领导接访预...</a>
+														<span>2026-01-15</span>
+													</li>
+																									<li>
+														<a href="http://mzj.gz.gov.cn/hd/jfyg/content/post_10597016.html" target="_blank" title="2025年12月23日广州市民政局领导接访预告" class="title">2025年12月23日局领导接访...</a>
+														<span>2025-12-17</span>
+													</li>
+																									<li>
+														<a href="http://mzj.gz.gov.cn/hd/jfyg/content/post_10554291.html" target="_blank" title="2025年11月24日广州市民政局领导接访预告" class="title">2025年11月24日局领导接访...</a>
+														<span>2025-11-18</span>
+													</li>
+																									<li>
+														<a href="http://mzj.gz.gov.cn/hd/jfyg/content/post_10492334.html" target="_blank" title="2025年10月23日广州市民政局领导接访预告" class="title">2025年10月23日局领导接访...</a>
+														<span>2025-10-16</span>
+													</li>
+																									<li>
+														<a href="http://mzj.gz.gov.cn/hd/jfyg/content/post_10451047.html" target="_blank" title="2025年9月23日广州市民政局领导接访预告" class="title">2025年9月23日局领导接访预...</a>
+														<span>2025-09-17</span>
+													</li>
+																									<li>
+														<a href="http://mzj.gz.gov.cn/hd/jfyg/content/post_10406048.html" target="_blank" title="2025年8月25日广州市民政局领导接访预告" class="title">2025年8月25日局领导接访预...</a>
+														<span>2025-08-18</span>
+													</li>
+																									<li>
+														<a href="http://mzj.gz.gov.cn/hd/jfyg/content/post_10359770.html" target="_blank" title="2025年7月23日广州市民政局领导接访预告" class="title">2025年7月23日局领导接访预...</a>
+														<span>2025-07-17</span>
+													</li>
+																									<li>
+														<a href="http://mzj.gz.gov.cn/hd/jfyg/content/post_10310165.html" target="_blank" title="2025年6月23日广州市民政局领导接访预告" class="title">2025年6月23日局领导接访预...</a>
+														<span>2025-06-13</span>
+													</li>
+																									<li>
+														<a href="http://mzj.gz.gov.cn/hd/jfyg/content/post_10260741.html" target="_blank" title="2025年5月23日广州市民政局领导接访预告" class="title">2025年5月23日局领导接访预...</a>
+														<span>2025-05-13</span>
+													</li>
+																									<li>
+														<a href="http://mzj.gz.gov.cn/hd/jfyg/content/post_10230528.html" target="_blank" title="2025年4月23日广州市民政局领导接访预告" class="title">2025年4月23日局领导接访预...</a>
+														<span>2025-04-23</span>
+													</li>
+																									<li>
+														<a href="http://mzj.gz.gov.cn/hd/jfyg/content/post_10161740.html" target="_blank" title="2025年3月24日广州市民政局领导接访预告" class="title">2025年3月24日局领导接访预...</a>
+														<span>2025-03-17</span>
+													</li>
+												
+											</ul>
+										</div>
+
+									</div>
+                                    
+                            
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- 2dcodes s -->
+					<div class="Hmoebox clearfix" aria-label="您已进入二维码图片视窗区。" altdes="视窗区" wzades="展示广州市民政局网站、广州民政公众号、互联网+督查、粤省事、穗康码、穗好办二维码图片信息。">
+						<div>
+							<div class="hbox">
+							<p><img class="nfw-cms-img" img-id="97786" src="http://mzj.gz.gov.cn/img/0/97/97786/5799482.jpg" alt="公众号 区01.jpg"/></p><!-- 从稿件引用广告图，id为57994821 -->
+							</div>
+					</div>
+
+						<div>
+							<div class="hbox">
+							<p><img class="nfw-cms-img" img-id="1589472" src="http://mzj.gz.gov.cn/img/1/1589/1589472/5799697.jpg" alt="底部二维码 区02#2.jpg"/></p><!-- 从稿件引用广告图，id为5799697 -->
+							</div>
+					</div>
+
+						<div>
+							<div class="hbox">
+							<p><img class="nfw-cms-img" img-id="975421" src="http://mzj.gz.gov.cn/img/0/975/975421/5799845.jpg" alt="5799845.jpg"/></p><!-- 从稿件引用广告图，id为5799845 -->
+							</div>
+					</div>
+
+					</div>
+					<div class="space20"></div>
+					<!-- 2dcodes e -->
+				</div>
+			</div>
+			<div id="pc1" style="position: absolute; z-index: 999; display: none; left: 632.195px; top: 436.083px;">
+				<div>
+
+				</div>
+				<span class="close_btn">关闭窗口</span></div>
+			<script type="text/javascript" src="/global/AdMove.js"></script>
+			<script type="text/javascript" src="/global/index.js"></script>
+			<!-- <script src="/global/jquery.xdomainrequest.min.js" type="text/javascript" charset="utf-8"></script> -->
+
+			<!--footer Start-->
+
+					<div class="footer">
+			<div class="footer_nav" aria-label="您已进入广东省统一身份认证平台、帮助信息、网站地图、联系我们视窗区，本区域包含广东省统一身份认证平台、帮助信息、网站地图、联系我们四个栏目，请按tab键切换栏目，定位后按回车键打开动态链接。" altdes="视窗区" wzades="提供广东省统一身份认证平台、帮助信息、网站地图、联系我们入口。">
+
+				<a href="https://tyrz.gd.gov.cn/pscp/sso/static/?redirect_uri=https%3A%2F%2Fcloud.gd.gov.cn%2Fsxauth%2Fsx%2Fuserinfo%3Fapp%3Dlyzx%26redirect_uri%3Dhttps%253A%252F%252Fhdjl.gd.gov.cn%252Fsx%252Flogined%253Fredirect_uri%253Dhttp%25253A%25252F%25252Fmzj.gz.gov.cn%25252Fhdjlpt%25252Fsx%25252Ffinallogined%25253Fredirect_uri%25253Dhttp%2525253A%2525252F%2525252Fmzj.gz.gov.cn%2525252Fhdjlpt%2525252Fzixun%2525253Fvia%2525253Dpc%26mode%3Doauth&client_id=gdsjyhpt" target="_blank">广东省统一身份认证平台</a>|
+				<a href="http://mzj.gz.gov.cn/qt/db/bzxx/index.html" target="_self" title="帮助信息">帮助信息</a>|
+
+				<a href="http://mzj.gz.gov.cn/qt/db/wzdt/index.html" target="_self" title="网站地图">网站导航</a>|
+
+				<a href="http://mzj.gz.gov.cn/qt/db/lxwm/index.html" target="_self" title="联系我们">联系我们</a>
+			</div>
+			<div class="container">
+				<div class="footer_copyright" style="font-size:12px;">
+					<div aria-label="您已进入网站标识视窗区。" altdes="视窗区" wzades="展示网站标识信息。">
+
+						广州市民政局&nbsp;版权所有　主办单位：广州市民政局　联系我们：020-12345<br>
+						网站标识码：4401000047　ICP备案号：<a target='_blank' href='https://beian.miit.gov.cn/'>粤ICP备19102105号-2</a> <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44010402001232"><img style="HEIGHT: 16px; WIDTH: 16px" border="0" alt="beianbgs" src="/global/2a6f05f41ba44436b472cc32a919a796.png">粤公网安备 44010402001232号 </a><br> 
+ 						您是本网站第
+						<span style="color:red;"><script>window.NFCMS_SITE_ID=200022;window.NFCMS_PUB_TYPE="page";window.NFCMS_PAGE_ID="1413";</script><script src="//statistics.gd.gov.cn/scripts/s.js?t=1768285042" async></script><span id="NFCMS-SITE-VISIT-4">-</span><script>setTimeout(function(){var s = document.createElement("script");s.type = "text/javascript";s.src = "//statistics.gd.gov.cn/jsonp/site/sum?site=200022&callback=NFCMS_CB_SITE_VISIT_4&t=" + Math.random().toString(35).substr(2);window.NFCMS_CB_SITE_VISIT_4 = function(data){document.getElementById("NFCMS-SITE-VISIT-4").innerHTML = data.count;document.body.removeChild(s);};document.body.appendChild(s);}, 10);</script></span>位访客
+						<script type="text/javascript" src="/collectJs"></script>
+					</div>
+					<div class="dzjg" aria-label="您已进入党政机关网站标识视窗区。" altdes="视窗区" wzades="展示党政机关网站标识。">
+						<script type="text/javascript">document.write(unescape("%3Cspan id='_ideConac' %3E%3C/span%3E%3Cscript  src='https://dcs.conac.cn/js/20/296/0000/60418426/CA202960000604184260003.js' type='text/javascript'%3E%3C/script%3E"));</script>
+					</div>
+					<div class="jiucuo" aria-label="您已进入我为政府网站找错平台视窗区。" altdes="视窗区" wzades="提供我为政府网站找错平台入口。">
+						<script id="_jiucuo_" sitecode='4401000047' src='https://zfwzgl.www.gov.cn/exposure/jiucuo.js'></script>
+						<script>$("#_span_jiucuo img").attr("title","政府网站找错").attr("alt","政府网站找错");</script>
+					</div>
+					<div class="slhwzabs" aria-label="您已进入适老化无障碍服务视窗区。" altdes="视窗区" wzades="展示适老化无障碍服务标识。">
+						<img id="imgslhwzabs" src='http://mzj.gz.gov.cn/global/slh_wza.png' title="适老化无障碍服务标识">
+					</div>
+				</div>
+			</div>
+		</div>
+		<script language="JavaScript">
+			var _trackDataType = "web";
+			var _trackData = _trackData || [];
+		</script>
+
+
+			<!--footer End-->
+
+<script type="text/javascript">
+	// 适配用中文名称访问网站问题（2025-02-14Rr）
+	if (window.location.hostname === 'xn--dgt90bddpv83yktk.xn--zfr164b') {
+		console.log('用中文域名【广州市民政局.政务】访问本网站');
+
+		// 获取页面上所有的<img>元素
+		var images = document.getElementsByTagName('img');
+		
+		// 遍历所有图片元素
+		for (var i = 0; i < images.length; i++) {
+			var src = images[i].src;
+			
+			// 检查并替换域名
+			if (src.includes('mzj.gz.gov.cn')) {
+				images[i].src = src.replace('mzj.gz.gov.cn', 'xn--dgt90bddpv83yktk.xn--zfr164b');
+			}
+		}		
+
+
+	} else {
+		console.log('不是用中文域名【广州市民政局.政务】访问本网站');
+	}
+</script>
+
+<script type="text/javascript">
+	 window.$bindArrow({
+        type: 'display',
+        // 切换页头
+        tabs: '.hometabHd ul li',
+        // 切换内容
+        tabsPanel: '.hometabBd>div',
+        // 切换高亮
+        active: 'on'
+    })
+</script>
+	</body>
+
+</html>

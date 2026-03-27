@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="robots" content="all">
+		<meta name="googlebot" content="all">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		    <link rel="shortcut icon" type="image/x-icon" href="http://cq.wenming.cn/cs2025indextest/images/P020250326577032499095.png" />
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="keywords" content="">
+		<meta name="Description" content="重庆文明网"/>
+		<title>中共重庆市委宣传部2026年部门预算情况说明-重庆文明网</title>
+
+		<link rel="stylesheet" href="http://images.wenming.cn/web_cq/images/x_cq_base.css">
+		<style type="text/css">
+
+			.main{width: 1200px;margin: 0 auto;padding-top: 15px;}
+			.navbox:hover{margin-bottom: 30px;}
+			.fbt-wz {font-size: 14px;line-height: 36px;color: #666;}
+			.fbt-wz a{color: #666;}
+			.content{padding-top: 20px;}
+			.content .content-title{margin-bottom: 20px;font-family: '微软雅黑';font-size: 26px;line-height:50px;text-align:center;font-weight:normal;}
+			.content .content-pl{position: relative; border-bottom:1px solid #ededed; padding-bottom:10px;color: #666;margin-bottom: 15px;}
+			.content .content-pl span{margin-right: 10px;}
+			.content .content-pl a{color: #666;}
+			.content a:hover{text-decoration: underline;}
+			.content-text,.content-text p,.content-text div{MARGIN-TOP: 30px;MARGIN-BOTTOM: 30px;LINE-HEIGHT: 1.8;FONT-FAMILY: "宋体";font-size: 16px;}
+			#vdo{text-align: center;}
+            .content-text p,.content-text div{margin: 20px 0 20px 0;}
+			.bj{text-align: right;margin: 30px 0;padding-top:10px;border-top: 1px solid #ccc;}
+                        b{font:revert}
+		</style>
+    	<script src="http://images1.wenming.cn/web_cq/images/x_jquery-3.7.0.min.js"></script>
+		<script src="http://images.wenming.cn/web_cq/images/x_jquery.SuperSlide.2.1.3.js"></script>
+	</head>
+	<body>
+        <!--头部 作为html引入 -->
+	    <!--头部 作为html引入 -->
+<div class="header">
+    <!--top-->
+    <div class="topbox">
+        <div class="top">
+            <!-- <div class="left">重庆市委宣传部 &nbsp; 重庆市委文明办 &nbsp; 主办</div> -->
+            <div class="right">
+                <a  target="_blank" href="http://www.wenming.cn/">中国文明网</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                <!--<a  target="_blank" href="http://cq.wenming.cn/xsy">旧版</a>&nbsp;&nbsp;|&nbsp;&nbsp;-->
+                <a   href="http://cq.wenming.cn/">返回首页</a>&nbsp;&nbsp;
+
+            </div>
+        </div>
+    </div>
+
+    <!--logo-->
+    <div class="logobox">
+        <img src="http://images.wenming.cn/web_cq/images/ad2.png" class="left" />
+    </div>
+
+    <!--nav-->
+    
+    <div class="navbox">
+        <ul class="nav">
+            <li class="nav-list">
+                <a class="nav-lista" href="http://cq.wenming.cn/">首页</a>
+                <!-- <ul class="nav-childs">
+                    <li><a  target="_blank" href="http://cq.wenming.cn/tt/">头条</a></li>
+                    <li><a  target="_blank" href="http://cq.wenming.cn/jjcq/">要闻</a></li>
+                    <li><a  target="_blank" href="http://cq.wenming.cn/gdtp/">要图</a></li>
+                    <li><a  target="_blank" href="http://cq.wenming.cn/csgongzuodongtai/">工作动态</a></li>
+                    <li><a  target="_blank" href="http://cq.wenming.cn/csqwfb/">权威发布</a></li>
+                    <li><a  target="_blank" href="http://cq.wenming.cn/wpsp/">文明网评</a></li>
+                    <li><a  target="_blank" href="http://cq.wenming.cn/jswmjb/">简报信息</a></li>
+                </ul> -->
+            </li>
+            <!-- <li class="nav-list">
+                <a class="nav-lista" href="javascript:;">理响重庆</a>
+            </li> -->
+            <li class="nav-list">
+                <!-- http://cq.wenming.cn/cswmpy/ -->
+                <a class="nav-lista"  href="javascript:;">文明培育</a>
+                <ul class="nav-childs">
+                    <!-- <li style="margin-left: 150px;"><a  target="_blank" href="http://cq.wenming.cn/cswmpy/csddmf/">道德模范</a></li>
+                    <li><a  target="_blank" href="http://cq.wenming.cn/cswmpy/csxsdhsn">新时代好少年</a></li> -->
+                    <!-- <li><a  target="_blank" href="http://cq.wenming.cn/dddx/cqhr/">重庆好人</a></li> -->
+                    <li><a onclick="scrollTopWMPY()"  href="javascript:;">道德模范</a></li>
+                    <li><a onclick="scrollTopWMPY()"  href="javascript:;">新时代好少年</a></li> 
+                    <li><a  target="_blank" href="http://cq.wenming.cn/cswmpy/cswcnr/">未成年人思想道德建设</a></li> 
+                    <li><a  target="_blank" href="http://cq.wenming.cn/cswmpy/cspinpailm/">未成年人心理健康</a></li> 
+                    <li><a  target="_blank" href="http://cq.wenming.cn/cswmpy/csxnxs/">小案小事</a></li> 
+                    <li><a  target="_blank" href="http://cq.wenming.cn/cswmpy/cs_haorentuan/">好人团</a></li>
+                </ul>
+                <script>
+                    function scrollTopWMPY(){
+                        $('html, body').animate({
+                            scrollTop: $('#trends').offset().top - 50
+                        }, 500); // 500ms 动画时间
+                    }
+                </script>
+            </li>
+
+            <li class="nav-list">
+                <a class="nav-lista"   href="javascript:;">文明实践</a>
+                <ul class="nav-childs">
+                    <li style="margin-left: 260px;"><a  target="_blank" href="https://cqwmsj.cbg.cn/">重庆新时代文明实践云平台</a></li>
+                    <li><a  target="_blank" href="http://cq.wenming.cn/cswmsj/cstszs/">他山之石</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-list">
+                <a class="nav-lista"  href="javascript:;">文明创建</a>
+                <ul class="nav-childs">
+                    <li style="margin-left: 360px;"><a  target="_blank" href="http://cq.wenming.cn/wmcj/wmcc/">文明城区</a></li>
+                    <li><a  target="_blank" href="http://cq.wenming.cn/wmcj/wmcz/">文明村镇</a></li>
+                    <li><a  target="_blank" href="http://cq.wenming.cn/wmcj/wmdw/">文明单位</a></li>
+                    <li><a  target="_blank" href="http://cq.wenming.cn/wmcj/wmjt/">文明家庭</a></li>
+                    <li><a  target="_blank" href="http://cq.wenming.cn/wmcj/wmxy/">文明校园</a></li>
+                </ul>
+            </li>                    
+
+            <li class="nav-list">
+                <a class="nav-lista" target="_blank"  href="http://cq.wenming.cn/xcxx/">区县交流</a>
+            </li>
+            <li class="nav-list">
+                <a class="nav-lista" target="_blank"  href="http://cq.wenming.cn/csqwfb/">权威发布</a>
+            </li>
+            <li class="nav-list">
+                <a class="nav-lista" target="_blank"  href="http://cq.wenming.cn/cscxal/">创新案例</a>
+            </li>
+            <li class="nav-list">
+                <a class="nav-lista" target="_blank"  href="http://cq.wenming.cn/csdangjtl/">党建统领</a>
+            </li>
+
+        <div class="searchbox ">
+            <input type="text" id="searchTerm" style="font-size:15px" />
+            <img src="http://images1.wenming.cn/web_cq/images/2018lh_search_1.png" onclick="searchOnBaidu()" class="submit" />
+        </div>
+        <script>
+            function searchOnBaidu() {
+            var searchTerm = document.getElementById('searchTerm').value;
+            window.open('https://www.baidu.com/s?wd=' + encodeURIComponent(searchTerm) + " site:cq.wenming.cn") ;
+        }
+        </script>
+
+        </ul>
+
+    </div>
+</div>
+		
+		<!--主体内容-->
+		<div class="main">
+			<div class="fbt-wz">
+				<a href="../../" title="首页" class="CurrChnlCls">首页</a>&nbsp;&gt;&nbsp;<a href="../" title="公告公示" class="CurrChnlCls">公告公示</a>&nbsp;&gt;&nbsp;正文
+			</div>
+			<div class="content">
+				<h1 class="content-title">中共重庆市委宣传部2026年部门预算情况说明</h1>
+				<div class="content-pl">
+
+<span>发布时间：2026-03-02</span>
+					
+						<span>来源：
+							重庆市委宣传部
+						</span>
+					
+					
+				
+			    	<!--span>发布时间：2026年03月02日 11:43:02</span-->
+			    	<!-------------------------------分享左边--------------------------------------------------->
+					  <!-- 订阅分享 -->
+					  <style type="text/css">
+						.bsharebox1 { width:auto; display:block; font-size:12px; float:right; }
+					    .shareBnt1 { margin:0; padding:0; }
+						.bsharebox1 dt {display:block; float:left; font-size:14px; padding-top:4px; padding-right:5px; }
+					    .bsharebox1 dd { width:32px; height:25px; padding:0; margin:0 3px; display:block; position:relative; background:#eee; float:left; }
+					    .sizebtn{cursor: pointer;user-select: none;}	
+					  </style>
+
+					  <script type="text/javascript" charset="utf-8">
+					    function changeSize(type){
+					    	if(type === 'add'){
+					    		var curSize = parseFloat($('.content-text').css('font-size')) + 2;
+					    	}else{
+					    		var curSize = (parseFloat($('.content-text').css('font-size')) - 2) > 12? (parseFloat($('.content-text').css('font-size')) - 2) : 12;
+					    	}
+					    	$('.content-text').css('font-size',curSize);
+				    		$('.content-text p').css('font-size',curSize);
+				    		$('.content-text div').css('font-size',curSize);
+					    }
+                        function pagePrint(){
+					    	$('.header').hide();
+					    	$('.main').css('width','1000px');
+					    	$('body').css('min-width','1000px');
+					    	window.print();
+					    	$('.header').show();
+					    	$('.main').css('width','1200px');
+					    	$('body').css('min-width','1200px');
+					    }
+					    
+					    </script>
+					    <div class="bsharebox1">
+						  <dl class="shareBnt1">
+						  	<dt>字号：</dt>
+						  	<dt class="sizebtn" onclick="changeSize()">[小]</dt>
+						  	<dt class="sizebtn" onclick="changeSize('add')">[大]</dt>
+							<dt class="sizebtn" onclick="pagePrint()">【打印】</dt>
+
+						  </dl>
+						</div>
+					  <!-- 订阅分享 -->
+					  <!-------------------------------分享左边内容部分--------------------------------------------------->
+			    </div>
+			     
+
+			    <div class="content-text">                                           
+			    	        <div class=TRS_Editor><div class="Custom_UnionStyle">
+<p align="justify" style=";&#10;;;&#10;text-autospace:ideograph-numeric;;text-align:justify;&#10;text-justify:inter-ideograph;;&#10;"><font style="line-height: 175%;" size="4" face="新宋体">　　<span style="line-height: 175%;"><b>一、单位基本情况</b></span></font></p>
+<p align="justify" style=";&#10;;;&#10;text-autospace:ideograph-numeric;;text-align:justify;&#10;text-justify:inter-ideograph;;&#10;"><font style="line-height: 175%;" size="4" face="新宋体">　　<span style="line-height: 175%;">（一）</span><span style="line-height: 175%;">主要职责</span></font></p>
+<p align="justify" style=";&#10;;;&#10;text-autospace:ideograph-numeric;;text-align:justify;&#10;text-justify:inter-ideograph;;&#10;"><font style="line-height: 175%;" size="4" face="新宋体">　　<span style="line-height: 175%;">统筹协调推进全市宣传思想文化领域法治建设，统筹协调全市党的意识形态工作，统筹指导协调全市理论研究、理论学习、理论宣传工作，负责规划组织全市思想政治工作，负责指导、协调全市精神文明建设工作，统筹分析研判和引导社会舆论，指导协调各新闻单位工作，组织全市突发公共事件应急新闻工作，统筹规划和指导协调新闻出版事业、产业发展，监督管理出版物内容质量和印刷发行业，组织指导协调全市“扫黄打非”工作，负责有关报社、通讯社驻渝分支机构等的服务监督管理和全市新闻记者证的监制管理，统筹协调对外宣传工作，统筹组织国际传播能力建设，负责人权宣传工作的组织协调。统筹协调组织开展新闻发布工作，负责组织开展新闻领域对外交流与合作。从宏观上统筹指导协调互联网宣传和信息内容管理工作，统筹协调数字新媒体的建设管理，协调组织全市中华优秀传统文化传承发展有关工作，指导协调推动群众文化建设。负责管理电影行政事务，统筹指导协调文化体制改革和文化事业、文化产业及旅游业发展，指导协调市级国有文化资产监管工作。承担市委宣传思想文化工作领导小组办公室日常工作，组织开展宣传思想文化领域重大问题调查研究，协调推动解决重点难点问题。承担市委全面深化改革委员会文化体制改革专项小组日常工作。受市委委托，会同市委组织部管理新闻、文化、出版、社会科学研究和互联网信息等市级宣传思想文化单位的领导干部。负责组织开展全市宣传思想文化系统干部教育培训和人才工作。</span></font></p>
+<p align="justify" style=";&#10;;;&#10;text-autospace:ideograph-numeric;;text-align:justify;&#10;text-justify:inter-ideograph;;&#10;"><font style="line-height: 175%;" size="4" face="新宋体">　　<span style="line-height: 175%;">（二）</span><span style="line-height: 175%;">机构设置</span></font></p>
+<p align="justify" style=";&#10;;;&#10;text-autospace:ideograph-numeric;;text-align:justify;&#10;text-justify:inter-ideograph;;&#10;"><font style="line-height: 175%;" size="4" face="新宋体">　　<span style="line-height: 175%;">市委宣传部加挂市人民政府新闻办公室、市新闻出版局（市版权局）、市电影局牌子，市</span><span style="line-height: 175%;">委</span><span style="line-height: 175%;">精神文明建设办公室设在市委宣传部。部机关内设2</span><span style="line-height: 175%;">4</span><span style="line-height: 175%;">个职能处室</span><span style="line-height: 175%;">，</span><span style="line-height: 175%;">各处室规范简称依次为：</span><span style="line-height: 175%;">办公室、市委宣传思想文化工作领导小组办公室协调处、政策研究室（法规处）、理论处、意识形态工作处、新闻处、出版处、文化艺术处、宣传教育处（全民国防教育处）、文化产业发展指导处、舆情信息处、对外新闻处、新闻发布处、国际传播处、传媒监管处、电影处、印刷发行处、版权管理处、组织干部处、文明创建处、文明实践处、文明培育处、机关党办、离退休人员工作处</span><span style="line-height: 175%;">。</span><span style="line-height: 175%;">下设二级预算单位</span><span style="line-height: 175%;">6个，分别是：</span><span style="line-height: 175%;">重庆市社会思想动态研究中心、重庆市</span><span style="line-height: 175%;">出版监测</span><span style="line-height: 175%;">中心、重庆市版权保护中心、重庆市新时代文明实践指导中心</span><span style="line-height: 175%;">、重庆红岩革命历史文化中心</span><span style="line-height: 175%;">、</span><span style="line-height: 175%;">重庆市新闻工作者协会机关秘书处。</span></font></p>
+<p align="justify" style=";&#10;;;&#10;text-autospace:ideograph-numeric;;text-align:justify;&#10;text-justify:inter-ideograph;;&#10;"><font style="line-height: 175%;" size="4" face="新宋体">　　<b><span style="line-height: 175%;">二、</span><span style="line-height: 175%;">部门收支总体情况</span></b></font></p>
+<p align="justify" style=";&#10;;;&#10;text-autospace:ideograph-numeric;;text-align:justify;&#10;text-justify:inter-ideograph;;&#10;"><font style="line-height: 175%;" size="4" face="新宋体">　　<span style="line-height: 175%;">（一）收入预算：</span><span style="line-height: 175%;">202</span><span style="line-height: 175%;">6</span><span style="line-height: 175%;">年年初预算数45,369.18万元，其中：一般公共预算拨款37,891.58万元，政府性基金预算拨款4,066.60万元，事业收入资金2,898.00万元，其他收入资金513.00万元；收入</span><span style="line-height: 175%;">比202</span><span style="line-height: 175%;">5</span><span style="line-height: 175%;">年</span><span style="line-height: 175%;">增加2,734.52万元，主要是一般公共预算拨款增加</span><span style="line-height: 175%;">800.94</span><span style="line-height: 175%;">万元</span><span style="line-height: 175%;">，</span><span style="line-height: 175%;">政府性基金预算拨款增加</span><span style="line-height: 175%;">1</span><span style="line-height: 175%;">,</span><span style="line-height: 175%;">066.60</span><span style="line-height: 175%;">万元</span><span style="line-height: 175%;">，事业收入资金</span><span style="line-height: 175%;">增加353.98万元，其他收入资金增加</span><span style="line-height: 175%;">513.00万元。</span></font></p>
+<p align="justify" style=";&#10;;;&#10;text-autospace:ideograph-numeric;;text-align:justify;&#10;text-justify:inter-ideograph;;&#10;"><font style="line-height: 175%;" size="4" face="新宋体">　　<span style="line-height: 175%;">按照我市预算</span><span style="line-height: 175%;">管理要求</span><span style="line-height: 175%;">，结转金额已纳入相应性质的资金收入中进行反映，上述收入包括202</span><span style="line-height: 175%;">5</span><span style="line-height: 175%;">年结转并编制到202</span><span style="line-height: 175%;">6</span><span style="line-height: 175%;">年预算的资金。</span></font></p>
+<p align="justify" style=";&#10;;;&#10;text-autospace:ideograph-numeric;;text-align:justify;&#10;text-justify:inter-ideograph;;&#10;"><font style="line-height: 175%;" size="4" face="新宋体">　　<span style="line-height: 175%;">（二）支出预算：</span><span style="line-height: 175%;">202</span><span style="line-height: 175%;">6</span><span style="line-height: 175%;">年年初预算数45,369.18万元</span><span style="line-height: 175%;">。</span><span style="line-height: 175%;">按支出功能分类，包括</span><span style="line-height: 175%;">一般公共服务支出22,022.92万元，教育支出9.30万元，文化旅游体育与传媒支出19527.61</span><span style="line-height: 175%;">万元，</span><span style="line-height: 175%;">社</span><span style="line-height: 175%;">会保障和就业支出2,164.46万元，卫生健康支出610.90万元，资源勘探工业信息等支出371.13</span><span style="line-height: 175%;">万元，</span><span style="line-height: 175%;">住房保障支出662.86万元</span><span style="line-height: 175%;">。比202</span><span style="line-height: 175%;">5</span><span style="line-height: 175%;">年</span><span style="line-height: 175%;">增加2,734.52万元，主要是基本支出增加659.75万元，项目支出增加2,074.77万元。</span></font></p>
+<p align="justify" style=";&#10;;;&#10;text-autospace:ideograph-numeric;;text-align:justify;&#10;text-justify:inter-ideograph;;&#10;"><font style="line-height: 175%;" size="4" face="新宋体">　　<b><span style="line-height: 175%;">三、</span><span style="line-height: 175%;">财政拨款</span><span style="line-height: 175%;">情况说明</span></b></font></p>
+<p align="justify" style=";&#10;;;&#10;text-autospace:ideograph-numeric;;text-align:justify;&#10;text-justify:inter-ideograph;;&#10;"><font style="line-height: 175%;" size="4" face="新宋体">　　<span style="line-height: 175%;">202</span><span style="line-height: 175%;">6</span><span style="line-height: 175%;">年一般公共预算财政拨款收入37,891.58万元，一般公共预算财政拨款支出37,891.58万元，比202</span><span style="line-height: 175%;">5</span><span style="line-height: 175%;">年增加</span><span style="line-height: 175%;">800.94</span><span style="line-height: 175%;">万元。其中：基本支出12,899.62万元，主要用于保障在职人员工资福利及社会保险缴费、离休人员离休费、退休人员补助等，保障部门正常运转的各项商品服务支出，比202</span><span style="line-height: 175%;">5</span><span style="line-height: 175%;">年增加</span><span style="line-height: 175%;">726.21</span><span style="line-height: 175%;">万元，主要原因是</span><span style="line-height: 175%;">新招录进入一批职工，导致人员经费增加</span><span style="line-height: 175%;">；项目支出24,991.96万元，主要用于</span><span style="line-height: 175%;">理论舆论、内宣外宣、文化文明、人才建设、全媒体建设、文化产业项目扶持和</span><span style="line-height: 175%;">开展文物保护和博物馆运维等</span><span style="line-height: 175%;">重点工作，比202</span><span style="line-height: 175%;">5</span><span style="line-height: 175%;">年增加</span><span style="line-height: 175%;">74.73</span><span style="line-height: 175%;">万元，主要原因是新增了科技影视产业奖补资金</span><span style="line-height: 175%;">1</span><span style="line-height: 175%;">000万元</span><span style="line-height: 175%;">、</span><span style="line-height: 175%;">压减重报广电全媒体体系建设专项资金190万元，以及重庆歌乐山烈士陵园烈士纪念设施提质改造工程完工结项资金减少700万元等</span><span style="line-height: 175%;">。</span></font></p>
+<p align="justify" style=";&#10;;;&#10;text-autospace:ideograph-numeric;;text-align:justify;&#10;text-justify:inter-ideograph;;&#10;"><font style="line-height: 175%;" size="4" face="新宋体">　　<span style="line-height: 175%;">202</span><span style="line-height: 175%;">6</span><span style="line-height: 175%;">年政府性基金预算财政拨款收入4,066.60万元，政府性基金预算支出4,066.60万元，主要用于</span><span style="line-height: 175%;">支持全市电影事业高质量发展和川渝红色故事讲解员大赛等</span><span style="line-height: 175%;">重点工作，比</span><span style="line-height: 175%;">202</span><span style="line-height: 175%;">5</span><span style="line-height: 175%;">年增加</span><span style="line-height: 175%;">1</span><span style="line-height: 175%;">,</span><span style="line-height: 175%;">066.60</span><span style="line-height: 175%;">万元，主要原因是</span><span style="line-height: 175%;">2025年度结转1,036.60万元，市文化旅游委划转红岩文化中心川渝红色故事讲解员大赛资金30万元</span><span style="line-height: 175%;">。</span></font></p>
+<p align="justify" style=";&#10;;;&#10;text-autospace:ideograph-numeric;;text-align:justify;&#10;text-justify:inter-ideograph;;&#10;"><font style="line-height: 175%;" size="4" face="新宋体">　　<b><span style="line-height: 175%;">四、</span><span style="line-height: 175%;">“</span><span style="line-height: 175%;">三公</span><span style="line-height: 175%;">”</span><span style="line-height: 175%;">经费情况说明</span></b></font></p>
+<p align="justify" style=";&#10;;;&#10;text-autospace:ideograph-numeric;;text-align:justify;&#10;text-justify:inter-ideograph;;&#10;"><font style="line-height: 175%;" size="4" face="新宋体">　　<span style="line-height: 175%;">202</span><span style="line-height: 175%;">6</span><span style="line-height: 175%;">年</span><span style="line-height: 175%;">“</span><span style="line-height: 175%;">三公</span><span style="line-height: 175%;">”</span><span style="line-height: 175%;">经费预算</span><span style="line-height: 175%;">275.80</span><span style="line-height: 175%;">万元，</span><span style="line-height: 175%;">与</span><span style="line-height: 175%;">202</span><span style="line-height: 175%;">5</span><span style="line-height: 175%;">年</span><span style="line-height: 175%;">持平</span><span style="line-height: 175%;">。其中：因公出国（境）费用</span><span style="line-height: 175%;">100.00</span><span style="line-height: 175%;">万元，公务接待费</span><span style="line-height: 175%;">63.80</span><span style="line-height: 175%;">万元，公务用车运行维护费</span><span style="line-height: 175%;">112.00</span><span style="line-height: 175%;">万元，公务用车购置费</span><span style="line-height: 175%;">0</span><span style="line-height: 175%;">万元，</span><span style="line-height: 175%;">均与上年持平，积极响应了过紧日子要求，严格控制“三公”经费支出</span><span style="line-height: 175%;">。</span></font></p>
+<p align="justify" style=";&#10;;;&#10;text-autospace:ideograph-numeric;;text-align:justify;&#10;text-justify:inter-ideograph;;&#10;"><font style="line-height: 175%;" size="4" face="新宋体">　　<span style="line-height: 175%;"><b>五、其他重要事项的情况说明</b></span></font></p>
+<p align="justify" style=";&#10;;;&#10;text-autospace:ideograph-numeric;;text-align:justify;&#10;text-justify:inter-ideograph;;&#10;"><font style="line-height: 175%;" size="4" face="新宋体">　　<span style="line-height: 175%;">（一）</span><span style="line-height: 175%;">机关运行经费。</span><span style="line-height: 175%;">202</span><span style="line-height: 175%;">6</span><span style="line-height: 175%;">年一般公共预算财政拨款运行经费</span><span style="line-height: 175%;">910.53</span><span style="line-height: 175%;">万元，</span><span style="line-height: 175%;">比202</span><span style="line-height: 175%;">5</span><span style="line-height: 175%;">年</span><span style="line-height: 175%;">增加</span><span style="line-height: 175%;">0.09</span><span style="line-height: 175%;">万元</span><span style="line-height: 175%;">；主要用于办公费、印刷费、邮电费、水电</span><span style="line-height: 175%;">费、物管费、差旅费、会议费、培训费及其他商品和服务支出等。</span></font></p>
+<p align="justify" style=";&#10;;;&#10;text-autospace:ideograph-numeric;;text-align:justify;&#10;text-justify:inter-ideograph;;&#10;"><font style="line-height: 175%;" size="4" face="新宋体">　　<span style="line-height: 175%;">（二）</span><span style="line-height: 175%;">政府采购情况。</span><span style="line-height: 175%;">所属各预算单位政府采购预算总额</span><span style="line-height: 175%;">712.49</span><span style="line-height: 175%;">万元：政府采购货物预算</span><span style="line-height: 175%;">486.50</span><span style="line-height: 175%;">万元、政府采购工程预算</span><span style="line-height: 175%;">0</span><span style="line-height: 175%;">万元、政府采购服务预算</span><span style="line-height: 175%;">225.99</span><span style="line-height: 175%;">万元；其中一般公共预算拨款政府采购</span><span style="line-height: 175%;">504.98</span><span style="line-height: 175%;">万元：政府采购货物预算</span><span style="line-height: 175%;">480.50</span><span style="line-height: 175%;">万元、政府采购工程预算</span><span style="line-height: 175%;">0</span><span style="line-height: 175%;">万元、政府采购服务预算</span><span style="line-height: 175%;">24.48</span><span style="line-height: 175%;">万元。</span></font></p>
+<p align="justify" style=";&#10;;;&#10;text-autospace:ideograph-numeric;;text-align:justify;&#10;text-justify:inter-ideograph;;&#10;"><font style="line-height: 175%;" size="4" face="新宋体">　　<span style="line-height: 175%;">（三）</span><span style="line-height: 175%;">绩效目标设置情况。</span><span style="line-height: 175%;">202</span><span style="line-height: 175%;">6</span><span style="line-height: 175%;">年项目支出均实行了绩效目标管理，涉及一般公共预算财政拨款24,991.96万元。</span></font></p>
+<p align="justify" style=";&#10;;;&#10;text-autospace:ideograph-numeric;;text-align:justify;&#10;text-justify:inter-ideograph;;&#10;"><font style="line-height: 175%;" size="4" face="新宋体">　　<span style="line-height: 175%;">（四）</span><span style="line-height: 175%;">国有资产占有使用情况。</span><span style="line-height: 175%;">截</span><span style="line-height: 175%;">至</span><span style="line-height: 175%;">202</span><span style="line-height: 175%;">5</span><span style="line-height: 175%;">年12月，所属各预算单位共有车辆</span><span style="line-height: 175%;">16</span><span style="line-height: 175%;">辆，其中业务用车</span><span style="line-height: 175%;">6</span><span style="line-height: 175%;">辆，机要通信用车</span><span style="line-height: 175%;">3</span><span style="line-height: 175%;">辆，应急保障用车</span><span style="line-height: 175%;">7</span><span style="line-height: 175%;">辆。202</span><span style="line-height: 175%;">6</span><span style="line-height: 175%;">年一般公共预算</span><span style="line-height: 175%;">未</span><span style="line-height: 175%;">安排购置车辆</span><span style="line-height: 175%;">。</span></font></p>
+<p align="justify" style=";&#10;;;&#10;text-autospace:ideograph-numeric;;text-align:justify;&#10;text-justify:inter-ideograph;;&#10;"><font style="line-height: 175%;" size="4" face="新宋体">　　<span style="line-height: 175%;">（五）委托业务费情况。</span><span style="line-height: 175%;">2026年委托业务费涉及财拨资金17</span><span style="line-height: 175%;">,</span><span style="line-height: 175%;">804.62万元，主要用于理论武装、文化文艺、宣传教育和全民国防教育、电影、新闻宣传、文化文明，以及文化产业项目扶持和支持重报集团、重庆广电集团（总台）全媒体建设等相关工作。</span></font></p>
+<p align="justify" style=";&#10;;;&#10;text-autospace:ideograph-numeric;;text-align:justify;&#10;text-justify:inter-ideograph;;&#10;"><font style="line-height: 175%;" size="4" face="新宋体">　　<span style="line-height: 175%;"><b>六、专业性名词解释</b></span></font></p>
+<p align="justify" style=";&#10;;;&#10;text-autospace:ideograph-numeric;;text-align:justify;&#10;text-justify:inter-ideograph;;&#10;"><font style="line-height: 175%;" size="4" face="新宋体">　　<span style="line-height: 175%;">（一）财政拨款收入：</span><span style="line-height: 175%;">指本年度从本级财政部门取得的财政拨款</span><span style="line-height: 175%;">，</span><span style="line-height: 175%;">包括一般公共预算财政拨款、政府性基金预算财政拨款和国有资本经营预算财政拨款。</span></font></p>
+<p align="justify" style=";&#10;;;&#10;text-autospace:ideograph-numeric;;text-align:justify;&#10;text-justify:inter-ideograph;;&#10;"><font style="line-height: 175%;" size="4" face="新宋体">　　<span style="line-height: 175%;">（二）基本支出：</span><span style="line-height: 175%;">指为保障机构正常运转、完成日常工作任务而发生的人员经费和公用经费。</span></font></p>
+<p align="justify" style=";&#10;;;&#10;text-autospace:ideograph-numeric;;text-align:justify;&#10;text-justify:inter-ideograph;;&#10;"><font style="line-height: 175%;" size="4" face="新宋体">　　<span style="line-height: 175%;">（</span><span style="line-height: 175%;">三</span><span style="line-height: 175%;">）项目支出：</span><span style="line-height: 175%;">指在基本支出之外为完成特定行政任务和事业发展目标所发生的支出。</span></font></p>
+<p align="justify" style=";&#10;;;&#10;text-autospace:ideograph-numeric;;text-align:justify;&#10;text-justify:inter-ideograph;;&#10;"><font style="line-height: 175%;" size="4" face="新宋体">　　<span style="line-height: 175%;">（</span><span style="line-height: 175%;">四</span><span style="line-height: 175%;">）“三公”经费：</span><span style="line-height: 175%;">指用财政拨款安排的因公出国</span><span style="line-height: 175%;">（</span><span style="line-height: 175%;">境</span><span style="line-height: 175%;">）</span><span style="line-height: 175%;">费、公务用车购置及运行维护费、公务接待费。其中</span><span style="line-height: 175%;">，</span><span style="line-height: 175%;">因公出国</span><span style="line-height: 175%;">（</span><span style="line-height: 175%;">境</span><span style="line-height: 175%;">）</span><span style="line-height: 175%;">费反映单位公务出国</span><span style="line-height: 175%;">（</span><span style="line-height: 175%;">境</span><span style="line-height: 175%;">）</span><span style="line-height: 175%;">的国际旅费、国外城市间交通费、住宿费、伙食费、培训费、公杂费等支出</span><span style="line-height: 175%;">；</span><span style="line-height: 175%;">公务用车购置费反映单位公务用车购置支出</span><span style="line-height: 175%;">（</span><span style="line-height: 175%;">含车辆购置税</span><span style="line-height: 175%;">）；</span><span style="line-height: 175%;">公务用车运行维护费反映单位按规定保留的公务用车燃料费、维修费、过路过桥费、保险费、安全奖励费用等支出</span><span style="line-height: 175%;">；</span><span style="line-height: 175%;">公务接待费反映单位按规定开支的各类公务接待</span><span style="line-height: 175%;">（</span><span style="line-height: 175%;">含外宾接待</span><span style="line-height: 175%;">）</span><span style="line-height: 175%;">支出。</span></font></p>
+<p align="justify" style=";&#10;;;&#10;text-autospace:ideograph-numeric;;text-align:justify;&#10;text-justify:inter-ideograph;;&#10;"><font style="line-height: 175%;" size="4" face="新宋体">　　<span style="line-height: 175%;">（五）机关运行经费：</span><span style="line-height: 175%;">为保障行政单位（含参照公务员法管理的事业单位）运行用于购买货物和服务等的各项公用经费，包括办公及印刷费、邮电费、差旅费、会议费、福利费、日常维护费、专用材料及一般设备购置费、办公用房水电费、办公用房物业管理费、公务用车运行维护费以及其他费用。</span></font></p>
+<p align="justify" style=";&#10;text-autospace:ideograph-numeric;;text-align:justify;&#10;text-justify:inter-ideograph;;&#10;"><font style="line-height: 175%;" size="4" face="新宋体">　　<span style="line-height: 175%;">（</span><span style="line-height: 175%;">六</span><span style="line-height: 175%;">）上年结转结余资金</span><span style="line-height: 175%;">：包括财政拨款结转、财政拨款结余、财政专户管理资金结转结余和单位资金结转结余。财政拨款结转是指项目实施周期内，年度预算执行结束时，预算未全部执行或因故未执行，下年需要按照原用途继续使用的财政拨款资金。财政拨款结余是指当年预算工作目标已完成，或者因故终止，当年剩余的财政拨款资金。财政专户管理资金结转结余、单位资金结转结余是指年度预算执行结束时,当年实际剩余的财政专户资金、单位资金。</span></font></p>
+<p><font style="line-height: 175%;" size="4" face="新宋体">　　<span style="text-align: justify; line-height: 175%;">部门预算公开联系人：</span><span style="text-align: justify; line-height: 175%;">黄仕恒 &nbsp;&nbsp;&nbsp;</span><span style="text-align: justify; line-height: 175%;">联系方式：</span><span style="text-align: justify; line-height: 175%;">023</span><span style="text-align: justify; line-height: 175%;">—63898304</span></font><span style="font-family: 新宋体; font-size: large;">&nbsp;</span></p>
+<p><font style="line-height: 175%;" size="4" face="新宋体">　　<a href="http://images.wenming.cn/web_cq/gggs/202603/W020260302537384806293.pdf" OLDSRC="W020260302537384806293.pdf">1．中共重庆市委宣传部</a><br />
+</font></p>
+<p><font size="4"><span style="font-family: 新宋体;">　　</span><a href="http://images1.wenming.cn/web_cq/gggs/202603/W020260302421824996655.pdf" oldsrc="W020260302421824996655.pdf">2．中共重庆市委宣传部（本级）</a><br />
+</font></p>
+<p><font size="4"><span style="font-family: 新宋体;">　　</span><a href="http://images.wenming.cn/web_cq/gggs/202603/W020260302421825205723.pdf" oldsrc="W020260302421825205723.pdf">3．重庆市社会思想动态研究中心</a><br />
+</font></p>
+<p><font size="4"><span style="font-family: 新宋体;">　　</span><a href="http://images1.wenming.cn/web_cq/gggs/202603/W020260302421825525665.pdf" oldsrc="W020260302421825525665.pdf">4．重庆市出版监测中心</a><br />
+</font></p>
+<p><font size="4"><span style="font-family: 新宋体;">　　</span><a href="http://images.wenming.cn/web_cq/gggs/202603/W020260302421825729798.pdf" oldsrc="W020260302421825729798.pdf">5．重庆市版权保护中心</a><br />
+</font></p>
+<p><font size="4"><span style="font-family: 新宋体;">　　</span><a href="http://images1.wenming.cn/web_cq/gggs/202603/W020260302421825917702.pdf" oldsrc="W020260302421825917702.pdf">6．重庆市新时代文明实践指导中心</a><br />
+</font></p>
+<p><font size="4"><span style="font-family: 新宋体;">　　</span><a href="http://images.wenming.cn/web_cq/gggs/202603/W020260302421826137528.pdf" oldsrc="W020260302421826137528.pdf">7．重庆市新闻工作者协会</a><br />
+</font></p>
+<p><font size="4"><span style="font-family: 新宋体;">　　</span><a href="http://images1.wenming.cn/web_cq/gggs/202603/W020260302421826301033.pdf" oldsrc="W020260302421826301033.pdf">8．重庆红岩革命历史文化中心</a></font></p>
+</div></div>					
+					<div class="bj" style="font-size:14px;color:#666">
+						责任编辑：宋璞
+					</div>
+
+			    </div>
+			</div>
+		</div>
+		
+		<!-- footer 作为html引入 -->
+		<!--文明网相关链接-->
+        <div class="cft mtop24 relate w1200">
+            <div class="hd">
+                <ul>
+                    <li class="on"></li>
+                    <li>地方文明网站</li>
+                </ul>
+            </div>
+            <div class="bd">
+                <ul>     
+                    <li></li>               
+                    <li>
+<a href="https://www.bjwmb.gov.cn/" target="_blank">首都文明网</a> | 
+<a href="http://hb.wenming.cn/" target="_blank">河北文明网</a> | 
+<a href="http://www.hbwmw.gov.cn/" target="_blank">湖北文明网</a> | 
+<a href="http://ln.wenming.cn/" target="_blank">辽宁文明网</a> | 
+<a href="http://www.qhwmw.com/" target="_blank">青海文明网</a> | 
+<a href="http://gx.wenming.cn/" target="_blank">广西文明网</a> | 
+<a href="http://ah.wenming.cn/" target="_blank">安徽文明网</a> | 
+<!-- <a href="http://www.jswmw.com/" target="_blank" >江苏文明网</a> |  -->
+<a href="https://www.jxwmw.cn/" target="_blank">江西文明网</a> | 
+<a href="http://hlj.wenming.cn/" target="_blank">龙江文明网</a> | 
+<a href="http://sx.wenming.cn/" target="_blank">山西文明网</a> | 
+<a href="http://hun.wenming.cn/" target="_blank">湖南文明网</a> | 
+<a href="http://hen.wenming.cn/" target="_blank">河南文明网</a> | 
+<a href="https://www.shwm.gov.cn/TrueCMS/shwmw/index.html" target="_blank">上海文明网</a> | 
+<a href="http://gz.wenming.cn/" target="_blank">贵州文明网</a> | 
+<a href="http://xj.wenming.cn/" target="_blank">新疆文明网</a> | 
+<a href="http://nx.wenming.cn/" target="_blank">宁夏文明网</a> | 
+<a href="http://wmf.fjsen.com/" target="_blank">福建文明网</a> | 
+<a href="http://sd.wenming.cn/" target="_blank">山东文明网</a> | 
+<a href="http://yn.wenming.cn/" target="_blank">云南文明网</a> | 
+<a href="http://www.tjwenming.cn/" target="_blank">天津文明网</a> | 
+<a href="https://www.hiwenming.com/" target="_blank">海南文明网</a> | 
+<a href="https://www.scwmw.cn/" target="_blank">四川文明网</a> | 
+<a href="http://www.zjwmw.com/" target="_blank">浙江文明网</a> | 
+<a href="http://jl.wenming.cn/" target="_blank">吉林文明网</a> | 
+<a href="http://nmg.wenming.cn/" target="_blank">内蒙文明网</a> | 
+<a href="http://www.godppgs.gov.cn/" target="_blank">甘肃文明网</a> | 
+<a href="http://gd.wenming.cn/" target="_blank">广东文明网</a> | 
+<a href="https://www.sxxc.gov.cn/#/index" target="_blank">陕西文明网</a> | 
+<a href="http://ls.wenming.cn/" target="_blank">西藏文明网</a> | 
+<a href="http://www.btwmw.net/" target="_blank">兵团文明网</a> 
+
+   
+
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <script type="text/javascript">
+            jQuery(".relate").slide({ mainCell: ".bd ul" });
+        </script>
+        <!--footer-->
+        <div class="footer">
+            重庆市委宣传部 重庆市委文明办主办<br />
+            重庆文明网版权所有 未经书面授权 不得复制或建立镜像<br />
+            京ICP备第030140号 互联网新闻信息服务许可证号 1012010003<br />
+            联系电话：023-63895419
+        </div>
+	</body>
+</html>

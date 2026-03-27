@@ -1,0 +1,850 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="renderer" content="webkit" />
+		<meta name="force-rendering" content="webkit" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+		<title>无锡市国有资产监督管理委员会-首页</title>
+<meta name="SiteName" content="无锡市国有资产监督管理委员会"/>
+<meta name="SiteDomain" content="gzw.wuxi.gov.cn/"/>
+<meta name="SiteIDCode" content="3202000069"/>
+		<link rel="stylesheet" type="text/css" href="/static_2023/css/style.css" />
+		<link rel="stylesheet" type="text/css" href="/static_2023/css/common.css" />
+		<link rel="stylesheet" href="/static_2023/css/swiper.min.css">
+		<script type="text/javascript" src="https://www.wuxi.gov.cn/static_common/js/jquery.js"></script>
+		<script type="text/javascript" src="https://www.wuxi.gov.cn/static_common/js/jquery.tab.js"></script>
+		<script type="text/javascript" src="https://www.wuxi.gov.cn/static_common/js/jquery.SuperSlide.js"></script>
+		<script type="text/javascript" src="https://www.wuxi.gov.cn/static_common/js/jquery.touchSlider.js"></script>
+		<script type="text/javascript" src="https://www.wuxi.gov.cn/static_common/js/swiper.min.js"></script>
+        <script type="text/javascript" src="https://www.wuxi.gov.cn/static2016/js/checkLogin_t.js"></script>
+        <script type="text/javascript" src="https://www.wuxi.gov.cn/static2016/js/blue_ipv6.js"></script> 
+        <script type="text/javascript" src="https://www.wuxi.gov.cn/static_common/js/wbj_12345.js"></script>
+        <script type="text/javascript" src="https://www.wuxi.gov.cn/static_common/js/website_group.js"></script>
+        <script type="text/javascript" src="https://www.wuxi.gov.cn/static_common/js/wzq_common.js"></script>
+<script src="//wza.wuxi.gov.cn/wza/wza2.min.js?appid=ntPrh3nTu6mGRPb"></script>
+<!-- 新检索JS -->
+<script src="//www.wuxi.gov.cn/static_common/js/wzq_search_common.js"></script>
+
+	</head>
+
+	<body class="site_guoziwei index_page">
+		<input type="hidden" id="rootId" value="网站首页" />
+<script>
+   
+var prePage = document.referrer;
+  
+String.prototype.Trim = function()  
+{ 
+	return this.replace(/(^\s*)|(\s*$)/g, ""); 
+}
+
+String.prototype.LTrim = function() 
+{ 
+	return this.replace(/(^\s*)/g, ""); 
+} 
+
+String.prototype.Rtrim = function() 
+{ 
+	return this.replace(/(\s*$)/g, ""); 
+} 
+
+function isNull(str) { 
+	if (str == ""){ 
+		return true;
+	} 
+	var regu = "^[ ]+$"; 
+	var re = new RegExp(regu); 
+	return re.test(str); 
+}
+
+    
+    function _loadUserLoginInfo() {
+        var str = "";
+        
+        if(checkLogin()) {
+            
+            var loginUser = getLoginUser();
+            str += "<em>欢迎您："+ loginUser +"</em>";
+            str += '<ul class="userList">';
+            str += "<li><a href='/fzlm/hdjlgny/lxblgny/wdhx/index.shtml'>我的12345信件</a></li>";
+            str += "<li><a href='/fzlm/xxgkgny/ysqgk/wdysqgk/index.shtml'>我的依申请公开</a></li>";
+
+            str += "<li><a target=\"_blank\" href='https://www.jszwfw.gov.cn/jsjis/front/modify/permodify_show.do'>修改个人信息</li>";
+            str += "<li><a target=\"_blank\" href='https://www.jszwfw.gov.cn/jsjis/front/login/modifypwd_step1.do'>修改密码</li>";
+            str += "<li><a href=\"javascript:loginOut();\">退出</a></li>";
+            str += "</ul>";
+        }else{
+            var localurl = window.location.href; 
+            str += '<i><a class="user" href="https://sso.wuxi.gov.cn/auth-center2/login.html?gotoUrl='+localurl+'">用户登录</a></i>';
+        }
+        $("#loginHead").empty();
+        $("#loginHead").append(str);
+        
+    }
+    
+    $(document).ready(function(){
+        _loadUserLoginInfo();
+    });
+
+
+function selectFrom(iFirstValue, iLastValue) {
+    var iChoces = Math.abs(iLastValue - iFirstValue) + 1;
+    return Math.floor(Math.random() * iChoces + iFirstValue);
+}
+
+</script>
+<div class="header">
+			<div class="head_top clearfix">
+				<div class="head_top_inner">
+					<div class="wel fl">欢迎访问国有资产监督管理委员会网站</div>
+					<div class="user fl" id="loginHead">
+						
+					</div>
+					<ol class="edtion fr clearfix">
+						<li class="ipv6"><img src="/static_2023/images/ipv6.png" alt="本站支持IPV6" /></li>
+						<li><a href="javascript:void(0);" onclick="jft()">繁体</a></li>
+					</ol>
+				</div>
+			</div>
+			<div class="banner">
+				<div class="w1200">
+					<h1 class="logo"><a href="/index.shtml"><img src="/static_2023/images/logo.png" alt="无锡市人民政府国有资产监督管理委员会" /></a></h1>
+					<div class="search_wza clearfix">
+						<ul class="searchbox fl clearfix">
+							<li><input class="ipt01" placeholder="请输入查询关键字" onFocus="return refocus();"  onkeydown="EnterSub(event);" onBlur="return reblur();" id="query" type="text" ></li>
+							<li><input class="btn01" value="搜索" name="" type="button" onclick="javascript:sub();return false;" ></li>
+						</ul>
+						<ul class="slh_wza fl clearfix">
+							<li id="wza_head_li"><a href="javascript:void(0)" id="wza2-enable" title="无障碍浏览" class="btn_wza">无障碍浏览</a></li>
+							<!--<li class="older_mode"><span role="button" class="btn_slh">长者模式</span></li>-->
+						</ul>
+					</div>
+<script>
+function openWin(a,i,d,f){var c=window.screen.availWidth,m=window.screen.availHeight,i=i||(c-120),d=d||(m-80),b=(c-30-i)/2,k=(m-10-d)/2,j=window.open(a,"_blank","height="+d+", width="+i+", top="+k+", left="+b+", toolbar=no, menubar=no, scrollbars=no, resizable=1, location=no, status=no");if(j&&!!f){try{j.focus();j.moveTo(0,0);j.resizeTo(c,m)}catch(g){}}}function openUrl(a){typeof Player!=="undefined"?Player.fn._open_url(a):openWin(a,null,null,true)};
+</script>
+<script>
+  var font = "t";
+  function jft() {
+    zh_tran(font);
+    if (font == "s")
+      font = "t";
+    else
+      font = "s";
+  }
+</script>
+<script>
+  function refocus(){     
+     var getquery=document.getElementById("query");
+     getquery.value="";
+	 getquery.autocomplete="off";
+	 getquery.focus(); 
+	 
+  }  
+  function reblur(){
+     var getquery=document.getElementById("query");
+	 if (getquery.value==""){
+        getquery.value="请输入搜索关键字";	 
+	 }
+  }   
+String.prototype.trim=function(){
+	return this.replace(/(^\s*)|(\s*$)/g,"");
+}
+
+//站内提交方法
+function sub(){
+	//必需，先将文本转换为utf-8
+	//document.charset = "utf-8";	
+	var fixvalue = document.getElementById("query").value;
+	fixvalue = fixvalue.replace(/\~|\!|\*|\?|\^|\\|\(|\)|\[|\]|\+|\-|\:|\{|\}|\"/g,"");
+    var dst = "无锡市国有资产监督管理委员会";
+	if(fixvalue.trim()=="" || fixvalue.trim()=="请输入搜索关键字"){
+		document.getElementById("query").value = "";
+		alert("关键字不能为空！");
+        document.getElementById("query").focus();
+		return false;
+	}
+	else{
+        search_2024_wzq(encodeURIComponent(dst),encodeURIComponent(fixvalue),'');
+	}
+	//必需，最后将文本转换为gb2312
+	return false;
+}
+
+
+//站内回车提交方法
+function EnterSub(e){
+		var len=arguments.length;
+		var event;
+		if(len==1){
+			event = arguments[0];
+		}
+		//var evt = event ? event : (window.event ? window.event : null);
+		if (e.keyCode == 13)    {
+        	//必需，先将文本转换为utf-8
+			//document.charset = "utf-8";	
+			var fixvalue = document.getElementById("query").value;
+			fixvalue = fixvalue.replace(/\~|\!|\*|\?|\^|\\|\(|\)|\[|\]|\+|\-|\:|\{|\}|\"/g,"");
+            var dst = "无锡市国有资产监督管理委员会";
+			if(fixvalue.trim()=="" || fixvalue.trim()=="请输入搜索关键字"){
+				document.getElementById("query").value = "";
+				alert("关键字不能为空！");
+              document.getElementById("query").focus();
+				return false;
+			}
+			else{
+                search_2024_wzq(encodeURIComponent(dst),encodeURIComponent(fixvalue),'');
+			}
+			return false;
+    	}
+	}
+
+</script> 
+				</div>
+			</div>
+			<div class="nav no_q_nav large_spacing white">
+				<!--no_q_nav large_spacing-->
+				<div class="nav_inner clearfix">
+					<ul class="nav_ul hoversytle2 fl clearfix">
+						<!--hoversytle1 hoversytle2-->
+						<li class="cur"><a href="/index.shtml" title="网站首页">网站首页</a></li>
+                        <li><a href="/gzdt/index.shtml" title="工作动态">工作动态</a></li>
+                        <li><a href="/gggs/index.shtml" title="公告公示">公告公示</a></li>
+						<li><a href="/zfxxgk/index.shtml" title="政府信息公开" target="_blank">政府信息公开</a></li>
+						<li><a href="/hdjl/index.shtml" title="互动交流">互动交流</a></li>
+						<li><a href="/ztzl/index.shtml" title="专题专栏">专题专栏</a></li> 
+					</ul>
+				</div>
+			</div>
+
+
+		</div>
+
+
+		<div class="container mgt30">
+			<div class="whitebox clearfix index_focus">
+				<div class="main_image swiper-container">
+					<ul class="swiper-wrapper">
+						<li class="swiper-slide"><a href="https://liuyan.www.gov.cn/2025wwzfgzbgtjy/bmdf.html?q=js" title="@国务院 我来说" target="_blank">
+								<div class="pic"><img src="/uploadfiles/202403/11/2024031114440137422340.jpg" alt="@国务院 我来说" /></div>
+								<div class="tit">@国务院 我来说</div>
+							</a></li>
+						<li class="swiper-slide"><a href="https://wjk.jsrd.gov.cn:8004/#/home" title="江苏省法规规章规范性文件数据库" target="_blank">
+								<div class="pic"><img src="/uploadfiles/202312/18/2023121815104562059789.jpg" alt="江苏省法规规章规范性文件数据库" /></div>
+								<div class="tit">江苏省法规规章规范性文件数据库</div>
+							</a></li>
+						<li class="swiper-slide"><a href="http://www.jiangsu.gov.cn/col/col88123/index.html" title="江苏全力推动经济运行率先整体好转" target="_blank">
+								<div class="pic"><img src="/uploadfiles/202303/16/2023031609221099523859.jpg" alt="江苏全力推动经济运行率先整体好转" /></div>
+								<div class="tit">江苏全力推动经济运行率先整体好转</div>
+							</a></li>
+						<li class="swiper-slide"><a href="/doc/2025/01/24/4488811.shtml" title="市国资委领导深入市属国企开展安全生产督导" target="_blank">
+								<div class="pic"><img src="/uploadfiles/202501/27/2025012712315464953330.jpg" alt="市国资委领导深入市属国企开展安全生产督导" /></div>
+								<div class="tit">市国资委领导深入市属国企开展安全生产督导</div>
+							</a></li>
+						<li class="swiper-slide"><a href="/doc/2025/01/08/4473636.shtml" title="市国资委党委专题听取2024年度市属企业党委书记抓基层党建工作述职" target="_blank">
+								<div class="pic"><img src="/uploadfiles/202501/08/2025010817054257764310.jpg" alt="市国资委党委专题听取2024年度市属企业党委书记抓基层党建工作述职" /></div>
+								<div class="tit">市国资委党委专题听取2024年度市属企业党委</div>
+							</a></li>
+					</ul>
+					<div class="swiper-pagination"></div>
+					<div class="swiper-button-prev swiper-button-white"></div>
+					<div class="swiper-button-next swiper-button-white"></div>
+				</div>
+				
+
+				<div class="w535 fr">
+					<div class="box01">
+						<div class="title">
+							<ol class="clearfix">
+								<li><a href="/gzdt/index.shtml" title="工作动态">工作动态</a></li>
+								<li><a href="/szyw/index.shtml" title="政声传递">政声传递</a></li>
+							</ol>
+						</div>
+						<div class="box01_con">
+							<ul class="list01">
+								<li><a href="/doc/2026/03/25/4750138.shtml" target="_blank" title="太湖云推出安全可控的本地化AI智能主机LakeClaw">太湖云推出安全可控的本地化AI智能主机LakeClaw</a><span class="riqi fr">03-25</span></li>
+								<li><a href="/doc/2026/03/12/4744549.shtml" target="_blank" title="践行国企担当 彰显民生温度  无锡国资国企迎新春工作交出亮眼答卷">践行国企担当 彰显民生温度  无锡国资国企迎新春工作交</a><span class="riqi fr">03-12</span></li>
+								<li><a href="/doc/2026/02/28/4739041.shtml" target="_blank" title="市市政集团扎实做好春节安全保障工作">市市政集团扎实做好春节安全保障工作</a><span class="riqi fr">02-28</span></li>
+								<li><a href="/doc/2026/02/14/4735151.shtml" target="_blank" title="市国资委主要领导督导检查市属企业安全生产工作">市国资委主要领导督导检查市属企业安全生产工作</a><span class="riqi fr">02-14</span></li>
+								<li><a href="/doc/2026/01/30/4726988.shtml" target="_blank" title="市国资委开展“换位跑一次”活动">市国资委开展“换位跑一次”活动</a><span class="riqi fr">01-30</span></li>
+								<li><a href="/doc/2026/01/27/4724159.shtml" target="_blank" title="市城建发展集团积极推动数据要素价值化破题">市城建发展集团积极推动数据要素价值化破题</a><span class="riqi fr">01-27</span></li>
+								<li><a href="/doc/2026/01/16/4720730.shtml" target="_blank" title="无锡机场高新区前置货站投运">无锡机场高新区前置货站投运</a><span class="riqi fr">01-16</span></li>
+							</ul>
+							<span class="more"><a href="/gzdt/index.shtml">更多</a></span>
+						</div>
+						<div class="box01_con">
+							<ul class="list01">
+								<li><a href="https://www.gov.cn/yaowen/liebiao/202603/content_7062604.htm" target="_blank" title="李强主持召开国务院常务会议 讨论通过《国务院2026年重点工作分工方案》等">李强主持召开国务院常务会议 讨论通过《国务院2026年重</a><span class="riqi fr">03-13</span></li>
+								<li><a href="https://www.gov.cn/zhuanti/2026nztj/2026qglh/yw/202603/content_7061863.htm" target="_blank" title="第二场“部长通道”：回应关切真抓实干">第二场“部长通道”：回应关切真抓实干</a><span class="riqi fr">03-10</span></li>
+								<li><a href="https://www.gov.cn/zhuanti/2026nztj/2026qglh/yw/202603/content_7061712.htm" target="_blank" title="听民意 汇民智 | “今天的反馈很全面也很务实”——全国人大代表张雨霏与国家体育总局工作人员面对面">听民意 汇民智 | “今天的反馈很全面也很务实”——全国</a><span class="riqi fr">03-09</span></li>
+								<li><a href="https://www.gov.cn/zhuanti/2026nztj/2026qglh/yw/202603/content_7061326.htm" target="_blank" title="政府工作报告里的变与不变">政府工作报告里的变与不变</a><span class="riqi fr">03-08</span></li>
+								<li><a href="https://www.gov.cn/zhuanti/2026nztj/2026qglh/yw/202603/content_7060997.htm" target="_blank" title="听民意 汇民智 | 国务院办公厅和国务院有关部门旁听全国两会，将代表委员真知灼见化为实招硬招">听民意 汇民智 | 国务院办公厅和国务院有关部门旁听全国</a><span class="riqi fr">03-06</span></li>
+								<li><a href="https://www.gov.cn/zhuanti/2026nztj/2026qglh/yw/202603/content_7061207.htm" target="_blank" title="“十五五”规划纲要草案的新指标、新看点">“十五五”规划纲要草案的新指标、新看点</a><span class="riqi fr">03-08</span></li>
+								<li><a href="https://www.gov.cn/yaowen/liebiao/202602/content_7059026.htm" target="_blank" title="李强主持召开国务院常务会议 对抓紧做好春节假期后政府工作作出部署">李强主持召开国务院常务会议 对抓紧做好春节假期后政府</a><span class="riqi fr">02-24</span></li>
+							</ul>
+							<span class="more"><a href="/szyw/index.shtml">更多</a></span>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="whitebox mgt20 clearfix">
+				<div class="w750 fl">
+					<div class="box01 style01">
+						<div class="title">
+							<ol class="clearfix">
+								<li class="no_more"><a href="javascript:void(0)" title="最新公开信息">最新公开信息</a></li>
+								<li><a href="/zfxxgk/xxgkml/fgwjjjd/index.shtml" title="法规文件及解读">法规文件及解读</a></li>
+								<li><a href="/zfxxgk/xxgkml/ghjh/index.shtml" title="规划计划">规划计划</a></li>
+								<li><a href="/zfxxgk/xxgkml/czxx/index.shtml" title="财政信息">财政信息</a></li>
+								<li><a href="/zfxxgk/xxgkml/zdgz/index.shtml" title="重点工作">重点工作</a></li>
+							</ol>
+						</div>
+						<div class="box01_con">
+							<ul class="list02">
+								<li><span class="tit"><em>[部门预决算]</em><a href="/doc/2026/02/13/4734396.shtml" target="_blank" title="无锡市国企改革发展服务中心2026年度单位预算公开">无锡市国企改革发展服务中心2026年度单位预算公开</a></span><span class="riqi fr">02-13</span></li>
+								<li><span class="tit"><em>[部门预决算]</em><a href="/doc/2026/02/13/4734393.shtml" target="_blank" title="无锡市人民政府国有资产监督管理委员会（本级）2026年度单位预算公开">无锡市人民政府国有资产监督管理委员会（本级）2026年度单位预算公开</a></span><span class="riqi fr">02-13</span></li>
+								<li><span class="tit"><em>[部门预决算]</em><a href="/doc/2026/02/13/4734388.shtml" target="_blank" title="无锡市人民政府国有资产监督管理委员会2026年度部门预算公开">无锡市人民政府国有资产监督管理委员会2026年度部门预算公开</a></span><span class="riqi fr">02-13</span></li>
+								<li><span class="tit"><em>[专项资金]</em><a href="/doc/2026/02/13/4734381.shtml" target="_blank" title="无锡市人民政府国有资产监督管理委员会（本级）2026年度部门整体支出绩效目标">无锡市人民政府国有资产监督管理委员会（本级）2026年度部门整体支出绩效目标</a></span><span class="riqi fr">02-13</span></li>
+								<li><span class="tit"><em>[专项资金]</em><a href="/doc/2026/02/13/4734373.shtml" target="_blank" title="无锡市国资委2026年度项目支出绩效目标">无锡市国资委2026年度项目支出绩效目标</a></span><span class="riqi fr">02-13</span></li>
+							</ul>
+						</div>
+						<div class="box01_con">
+							<ul class="list02">
+								<li><span class="tit"><em>[政策解读]</em><a href="/doc/2025/08/08/4718254.shtml" target="_blank" title="《市政府关于加强新形势下市属国有企业监管的实施意见》政策解读">《市政府关于加强新形势下市属国有企业监管的实施意见》政策解读</a></span><span class="riqi fr">08-08</span></li>
+								<li><span class="tit"><em>[部门文件]</em><a href="/doc/2025/03/04/4513496.shtml" target="_blank" title="市国资委关于印发《无锡市市属企业基金尽职免责及绩效评价优化实施办法（试行）》的通知">市国资委关于印发《无锡市市属企业基金尽职免责及绩效评价优化实施办法（试行...</a></span><span class="riqi fr">03-04</span></li>
+								<li><span class="tit"><em>[政策解读]</em><a href="/doc/2024/11/18/4476735.shtml" target="_blank" title="《无锡市市属国有企业投资监督管理办法》政策解读">《无锡市市属国有企业投资监督管理办法》政策解读</a></span><span class="riqi fr">11-18</span></li>
+								<li><span class="tit"><em>[部门文件]</em><a href="/doc/2024/11/18/4450020.shtml" target="_blank" title="无锡市市属国有企业投资监督管理办法">无锡市市属国有企业投资监督管理办法</a></span><span class="riqi fr">11-18</span></li>
+								<li><span class="tit"><em>[政策解读]</em><a href="/doc/2024/03/31/4476720.shtml" target="_blank" title="《无锡市市属企业基金业务管理暂行办法》政策解读">《无锡市市属企业基金业务管理暂行办法》政策解读</a></span><span class="riqi fr">03-31</span></li>
+							</ul>
+						</div>
+						<div class="box01_con">
+							<ul class="list02">
+								<li><span class="tit"><em>[年度工作计划总结]</em><a href="/doc/2025/07/17/4614639.shtml" target="_blank" title="2024年工作总结及2025年工作思路">2024年工作总结及2025年工作思路</a></span><span class="riqi fr">07-17</span></li>
+								<li><span class="tit"><em>[年度工作计划总结]</em><a href="/doc/2024/04/10/4432744.shtml" target="_blank" title="2023年工作总结和2024年工作打算">2023年工作总结和2024年工作打算</a></span><span class="riqi fr">04-10</span></li>
+								<li><span class="tit"><em>[年度工作计划总结]</em><a href="/doc/2023/03/21/3912113.shtml" target="_blank" title="2022年工作总结和2023年工作打算">2022年工作总结和2023年工作打算</a></span><span class="riqi fr">03-21</span></li>
+								<li><span class="tit"><em>[年度工作计划总结]</em><a href="/doc/2022/02/25/3877703.shtml" target="_blank" title="2021年工作总结和2022年工作思路">2021年工作总结和2022年工作思路</a></span><span class="riqi fr">02-25</span></li>
+								<li><span class="tit"><em>[专项规划及解读]</em><a href="/doc/2021/09/24/3468417.shtml" target="_blank" title="无锡市国资国企“十四五”发展规划">无锡市国资国企“十四五”发展规划</a></span><span class="riqi fr">09-24</span></li>
+							</ul>
+						</div>
+						<div class="box01_con">
+							<ul class="list02">
+								<li><span class="tit"><em>[部门预决算]</em><a href="/doc/2026/02/13/4734396.shtml" target="_blank" title="无锡市国企改革发展服务中心2026年度单位预算公开">无锡市国企改革发展服务中心2026年度单位预算公开</a></span><span class="riqi fr">02-13</span></li>
+								<li><span class="tit"><em>[部门预决算]</em><a href="/doc/2026/02/13/4734393.shtml" target="_blank" title="无锡市人民政府国有资产监督管理委员会（本级）2026年度单位预算公开">无锡市人民政府国有资产监督管理委员会（本级）2026年度单位预算公开</a></span><span class="riqi fr">02-13</span></li>
+								<li><span class="tit"><em>[部门预决算]</em><a href="/doc/2026/02/13/4734388.shtml" target="_blank" title="无锡市人民政府国有资产监督管理委员会2026年度部门预算公开">无锡市人民政府国有资产监督管理委员会2026年度部门预算公开</a></span><span class="riqi fr">02-13</span></li>
+								<li><span class="tit"><em>[专项资金]</em><a href="/doc/2026/02/13/4734381.shtml" target="_blank" title="无锡市人民政府国有资产监督管理委员会（本级）2026年度部门整体支出绩效目标">无锡市人民政府国有资产监督管理委员会（本级）2026年度部门整体支出绩效目标</a></span><span class="riqi fr">02-13</span></li>
+								<li><span class="tit"><em>[专项资金]</em><a href="/doc/2026/02/13/4734373.shtml" target="_blank" title="无锡市国资委2026年度项目支出绩效目标">无锡市国资委2026年度项目支出绩效目标</a></span><span class="riqi fr">02-13</span></li>
+							</ul>
+						</div>
+						<div class="box01_con">
+							<ul class="list02">
+								<li><span class="tit"><em>[重点工作执行情况]</em><a href="/doc/2025/06/10/4590943.shtml" target="_blank" title="无锡硕放机场改扩建工程迈入新阶段">无锡硕放机场改扩建工程迈入新阶段</a></span><span class="riqi fr">06-10</span></li>
+								<li><span class="tit"><em>[重点工作执行情况]</em><a href="/doc/2025/06/10/4590932.shtml" target="_blank" title="蠡湖未来城DN1400给水管工程圆满竣工">蠡湖未来城DN1400给水管工程圆满竣工</a></span><span class="riqi fr">06-10</span></li>
+								<li><span class="tit"><em>[重点工作执行情况]</em><a href="/doc/2025/05/21/4578172.shtml" target="_blank" title="交通集团以品质工程匠心“绘”城">交通集团以品质工程匠心“绘”城</a></span><span class="riqi fr">05-21</span></li>
+								<li><span class="tit"><em>[重点工作执行情况]</em><a href="/doc/2025/01/03/4469820.shtml" target="_blank" title="市市政集团建成启用全市首座地下污水处理厂">市市政集团建成启用全市首座地下污水处理厂</a></span><span class="riqi fr">01-03</span></li>
+								<li><span class="tit"><em>[重点工作执行情况]</em><a href="/doc/2024/07/04/4343637.shtml" target="_blank" title="无锡至宜兴城际轨道交通工程正式开建">无锡至宜兴城际轨道交通工程正式开建</a></span><span class="riqi fr">07-04</span></li>
+							</ul>
+						</div>
+					</div>
+					<ul class="xxgk_list clearfix">
+						<li class="sp01"><a href="/zfxxgk/xxgkzn/index.shtml" title="政府信息公开指南" target="_blank">政府信息公开指南</a></li>
+						<li class="sp02"><a href="/zfxxgk/xxgkzd/index.shtml" title="政府信息公开制度" target="_blank">政府信息公开制度</a></li>
+						<li class="sp03"><a href="/zfxxgk/zfwzndgzbb/index.shtml" title="网站年度工作报表" style="color:red">网站年度工作报表</a></li>
+					</ul>
+					<div class="slide_govinfo_left">
+						<div class="hd">
+							<ul></ul>
+						</div>
+						<div class="bd">
+							<dl>
+								<dd>
+									<ul class="xxgk_list clearfix">
+										<li class="sp03"><a href="/zfxxgk/xxgkgzndbg/index.shtml" title="政府信息公开年报">政府信息公开年报</a></li>
+					                    <li class="sp05"><a href="/zfxxgk/xxgkml/index.shtml" title="法定主动公开内容" target="_blank">法定主动公开内容</a></li>
+					                    <li class="sp06"><a href="http://www.js.gov.cn/col/col59348/index.html" title="江苏省政府信息公开申请须知"><em>江苏省政府</em><br />信息公开申请须知</a></li>
+									</ul>
+								</dd>
+								<dd>
+									<ul class="xxgk_list clearfix">
+										<li class="sp101"><a href="/fzlm/xxgkgny/ysqgk/index.shtml" title="依申请公开">依申请公开</a></li>
+					                    <li class="sp102"><a href="http://gzw.wuxi.gov.cn//fzlm/hdjlgny/zrqd1/index.shtml" title="责任清单">责任清单</a></li>
+					                    <li class="sp103"><a href="/zfxxgk/xxgkml/gyqyxx/index.shtml" title="国有企业信息">国有企业信息</a></li>
+									</ul>
+								</dd>
+							</dl>
+						</div>
+					</div>
+
+				</div>
+				<div class="w390 fr">
+					<div class="box01 style02">
+						<div class="title">
+							<ol class="clearfix">
+								<li><a href="/gggs/index.shtml" title="公告公示">公告公示</a></li>
+							</ol>
+						</div>
+						<div class="box01_con box01_con_gggs">
+							<ul class="list03">
+								<li><a href="/doc/2025/05/07/4558352.shtml" target="_blank" title="关于对《关于加强新形势下市属国有企业监管的实施意见（征求意见稿）》公开征求意见的 公告">关于对《关于加强新形势下市属国有企业</a><span class="riqi">05/07</span></li>
+								<li><a href="/doc/2023/02/27/3896189.shtml" target="_blank" title="市国资委直属事业单位招聘公告">市国资委直属事业单位招聘公告</a><span class="riqi">02/27</span></li>
+								<li><a href="/doc/2021/06/18/3329109.shtml" target="_blank" title="公  示">公  示</a><span class="riqi">06/18</span></li>
+								<li><a href="/doc/2021/06/11/3322692.shtml" target="_blank" title="市国资委“我为群众办实事” 项目清单（第二批）公布！">市国资委“我为群众办实事” 项目清单</a><span class="riqi">06/11</span></li>
+								<li><a href="/doc/2021/05/26/3303744.shtml" target="_blank" title="市国资委“我为群众办实事” 项目清单来啦！">市国资委“我为群众办实事” 项目清单</a><span class="riqi">05/26</span></li>
+								<li><a href="/doc/2020/10/30/3078047.shtml" target="_blank" title="无锡市国资委关于公布重大投资评审专家和评审咨询机构名单的通知">无锡市国资委关于公布重大投资评审专家</a><span class="riqi">10/30</span></li>
+								<li><a href="/doc/2020/08/05/2996013.shtml" target="_blank" title="市国资委关于公开征集重大投资评审专家和咨询机构的公告">市国资委关于公开征集重大投资评审专家</a><span class="riqi">08/05</span></li>
+								<li><a href="/doc/2020/06/08/2944827.shtml" target="_blank" title="2019年依法行政工作报告">2019年依法行政工作报告</a><span class="riqi">06/08</span></li>
+							</ul>
+							<span class="more"><a href="/gggs/index.shtml">更多</a></span>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<!--custom row-->
+			<div class="whitebox mgt20 block_b clearfix">
+				<div class="box01 style01 fl">
+					<div class="title">
+						<ol class="clearfix">
+							<li><a href="/ztzl/jgqy/cxfz/index.shtml" title="监管企业">监管企业</a></li>
+						</ol>
+					</div>
+					<div class="box01_con box01_con_gggs">
+						<div class="sub_box">
+							<ol class="sub_title">
+								<li class="cur"><a href="/ztzl/jgqy/qykx/index.shtml">企业快讯</a></li>
+								<li><a href="/ztzl/jgqy/cxfz/index.shtml">创新发展</a></li>
+								<li><a href="/ztzl/jgqy/aqsc/index.shtml">安全生产</a></li>
+							</ol>
+							<div class="sub_con">
+								<ul class="list01">
+									<li><a href="/doc/2026/03/25/4750147.shtml" target="_blank" title="市太湖新城集团全力做好锡马赛前保障">市太湖新城集团全力做好锡马赛前保障</a><span class="riqi">03/25</span></li>
+									<li><a href="/doc/2026/03/25/4750140.shtml" target="_blank" title="无锡首单公共数据产品交易落地">无锡首单公共数据产品交易落地</a><span class="riqi">03/25</span></li>
+									<li><a href="/doc/2026/03/18/4747330.shtml" target="_blank" title="人才集团强化引才服务助力无锡春季双选会顺利举行">人才集团强化引才服务助力无锡春季双选会顺利举行</a><span class="riqi">03/18</span></li>
+									<li><a href="/doc/2026/03/18/4747303.shtml" target="_blank" title="春节不打烊，无锡空港喜迎“开门红”">春节不打烊，无锡空港喜迎“开门红”</a><span class="riqi">03/18</span></li>
+									<li><a href="/doc/2026/02/15/4735160.shtml" target="_blank" title="市文旅集团成功举办江苏省首场线下数字人大型演唱会">市文旅集团成功举办江苏省首场线下数字人大型演唱会</a><span class="riqi">02/15</span></li>
+									<li><a href="/doc/2026/02/15/4735154.shtml" target="_blank" title="交通集团护航“安全、有序、温馨、智慧”春运路">交通集团护航“安全、有序、温馨、智慧”春运路</a><span class="riqi">02/15</span></li>
+								</ul>
+							</div>
+                            <div class="sub_con">
+								<ul class="list01">
+									<li><a href="/doc/2026/03/25/4750143.shtml" target="_blank" title="锡创投携手维梧资本落地20亿元创新药加速器基金">锡创投携手维梧资本落地20亿元创新药加速器基金</a><span class="riqi">03/25</span></li>
+									<li><a href="/doc/2026/03/18/4747334.shtml" target="_blank" title="车路云一体化赋能我市城市管理AI场景应用">车路云一体化赋能我市城市管理AI场景应用</a><span class="riqi">03/18</span></li>
+									<li><a href="/doc/2026/02/02/4727055.shtml" target="_blank" title="粮食集团三向发力推动绿色智慧储粮高质量发展">粮食集团三向发力推动绿色智慧储粮高质量发展</a><span class="riqi">02/02</span></li>
+									<li><a href="/doc/2026/01/20/4720739.shtml" target="_blank" title="江苏太极以科技创新赋能产业链升级">江苏太极以科技创新赋能产业链升级</a><span class="riqi">01/20</span></li>
+									<li><a href="/doc/2025/12/31/4711927.shtml" target="_blank" title="产发金服三举措深化产融协同发展">产发金服三举措深化产融协同发展</a><span class="riqi">12/31</span></li>
+									<li><a href="/doc/2025/12/25/4707403.shtml" target="_blank" title="华光环能持续推动企业高质量发展">华光环能持续推动企业高质量发展</a><span class="riqi">12/25</span></li>
+								</ul>
+							</div>
+                            <div class="sub_con">
+								<ul class="list01">
+									<li><a href="/doc/2026/02/15/4735158.shtml" target="_blank" title="换位体验察民情 闭环管理提质效">换位体验察民情 闭环管理提质效</a><span class="riqi">02/15</span></li>
+									<li><a href="/doc/2026/02/02/4727044.shtml" target="_blank" title="产业集团三举措以“实体化”赋能安全治理">产业集团三举措以“实体化”赋能安全治理</a><span class="riqi">02/02</span></li>
+									<li><a href="/doc/2025/12/16/4702161.shtml" target="_blank" title="市交通集团组织开展消防宣传月系列活动">市交通集团组织开展消防宣传月系列活动</a><span class="riqi">12/16</span></li>
+									<li><a href="/doc/2025/12/04/4693289.shtml" target="_blank" title="无锡客运全力保障“研”途无忧">无锡客运全力保障“研”途无忧</a><span class="riqi">12/04</span></li>
+									<li><a href="/doc/2025/10/26/4671364.shtml" target="_blank" title="江苏资产实干笃行“五举措”当好风险化解主力军">江苏资产实干笃行“五举措”当好风险化解主力军</a><span class="riqi">10/26</span></li>
+									<li><a href="/doc/2025/09/25/4654675.shtml" target="_blank" title="无锡公交集团实现惠山片区五所公办高中定制全覆盖">无锡公交集团实现惠山片区五所公办高中定制全覆盖</a><span class="riqi">09/25</span></li>
+								</ul>
+							</div>
+						</div>
+						<span class="more"><a href="/ztzl/jgqy/cxfz/index.shtml">更多</a></span>
+					</div>
+				</div>
+				<div class="box01 style01 fr">
+					<div class="title">
+						<ol class="clearfix">
+							<li><a href="/ztzl/gyqyggshtsxd/index.shtml" title="国有企业改革深化提升行动">国有企业改革深化提升行动</a></li>
+						</ol>
+					</div>
+                  <div class="box01_con box01_con_gggs">
+                    <ul class="list01">
+                      <li><a href="/doc/2026/01/04/4711929.shtml" target="_blank" title="海太半导体三举措建强数字化水平">海太半导体三举措建强数字化水平</a><span class="riqi">01/04</span></li>
+                      <li><a href="/doc/2025/12/25/4707419.shtml" target="_blank" title="思源水务被成功认定为2025年省级专精特新中小企业">思源水务被成功认定为2025年省级专精特新中小企业</a><span class="riqi">12/25</span></li>
+                      <li><a href="/doc/2025/12/04/4693287.shtml" target="_blank" title="市市政集团年度7项为民办实事项目圆满收官">市市政集团年度7项为民办实事项目圆满收官</a><span class="riqi">12/04</span></li>
+                      <li><a href="/doc/2025/11/26/4688677.shtml" target="_blank" title="南方泵业持续深耕主业领域">南方泵业持续深耕主业领域</a><span class="riqi">11/26</span></li>
+                      <li><a href="/doc/2025/11/12/4681092.shtml" target="_blank" title="产业集团主导管理的集成电路专项母基金成功设立20亿元市场化子基金">产业集团主导管理的集成电路专项母基金成功设立20亿元市场化子基...</a><span class="riqi">11/12</span></li>
+                      <li><a href="/doc/2025/11/05/4677235.shtml" target="_blank" title="市太湖新城集团助力“无废城市”建设">市太湖新城集团助力“无废城市”建设</a><span class="riqi">11/05</span></li>
+                      <li><a href="/doc/2025/10/30/4673924.shtml" target="_blank" title="交通集团多式联运平台赋能公共数据场景应用">交通集团多式联运平台赋能公共数据场景应用</a><span class="riqi">10/30</span></li>
+                    </ul>
+                    <span class="more"><a href="/ztzl/gyqyggshtsxd/index.shtml">更多</a></span>
+                  </div>
+				</div>
+			</div>
+			<!--custom row end-->
+			<div class="whitebox mgt20 clearfix">
+				<div class="w750 fl">
+					<div class="box01 style03">
+						<div class="title clearfix">
+							<ol class="fl clearfix">
+								<li><a href="/fzlm/hdjlgny/lxblgny/xjlb/index.shtml">来信办理</a></li>
+							</ol>
+						</div>
+						<div class="box01_con box01_con_gggs tableXj_row_two">
+							<span class="more"><a href="/fzlm/hdjlgny/lxblgny/xjlb/index.shtml">更多</a></span>
+							<p class="zx_btn white clearfix"><a href="/fzlm/hdjlgny/lxblgny/wyxx/index.shtml" class="sp01">我要写信</a><a href="/fzlm/hdjlgny/lxblgny/wdhx/index.shtml" class="sp02">我的回信</a></p>
+							<div class="tableXj" id="letterList1">
+							
+							</div>
+                            <script>
+                            $(function() {
+                                wbj_index_dl("1", "5", "WX0034","letterList1","/fzlm/hdjlgny/lxblgny/xjxq/index.shtml","37");
+                            
+                            });
+                            </script>
+						</div>
+						
+						<div class="box01_con box01_con_gggs">
+							
+						</div>
+					</div>
+				</div>
+				<div class="w390 fr">
+					<div class="box01 style02">
+						<div class="title">
+							<ol class="clearfix">
+								<li><a href="/hdjl/dczj/index.shtml">调查征集</a></li>
+							</ol>
+						</div>
+						<div class="box01_con box01_con_gggs" id="zz">
+						
+						</div>
+                        <script>
+                        $(function() {
+                          $.ajax({
+                            type:"post",
+                            url:"/intertidwebapp/survey/getTopicList",
+                            data:{
+                              chanId: 7041,
+                              num: 2
+                            },
+                            dataType:'json',
+                            success:function(data){
+                              var topics = data.topics;
+                              var tHtml = "";
+                              var tSummary = "";
+                              var tTitle = "";
+                              tHtml += '<span class="more"><a href="/hdjl/dczj/index.shtml">更多</a></span>';
+                              if(topics != undefined && topics.length > 0){
+                                for(var i =0;i<topics.length;i++){
+                                    tTitle = (topics[i].title == null ? '' : topics[i].title);
+                                    if (tTitle.length > 30) {
+                                      tTitle = tTitle.substring(0,30) + '...';
+                                    }
+                                    
+                                    tSummary = "";
+                                    // tSummary = (topics[i].summary == null ? '' : topics[i].summary);
+                                    if (tSummary.length > 50) {
+                                      tSummary = tSummary.substring(0,50)+'...';
+                                    }
+                                    if (topics[i].channelType == 4) {
+                                      if(topics[i].isEnd){
+                                        tHtml += '<div class="zj_list"><dl><dt><a href="/fzlm/hdjlgny/dcxqy/index.shtml?id='+topics[i].id+'" target="_blank">'+tTitle+'</a> </dt><dd>'+tSummary+'</dd></dl><ul><li class="date">发布时间：'+topics[i].startDateString.substring(0,10)+'<span>|</span>截止时间：'+topics[i].endDateString.substring(0,10)+'</li><li><a href="/fzlm/hdjlgny/dcxqy/index.shtml?id='+topics[i].id+'" class="btn_zjz">查看结果</a></li></ul></div>';
+                                      }else{
+                                        tHtml += '<div class="zj_list"><dl><dt><a href="/fzlm/hdjlgny/dcxqy/index.shtml?id='+topics[i].id+'" target="_blank">'+tTitle+'</a> </dt><dd>'+tSummary+'</dd></dl><ul><li class="date">发布时间：'+topics[i].startDateString.substring(0,10)+'<span>|</span>截止时间：'+topics[i].endDateString.substring(0,10)+'</li><li><a href="/fzlm/hdjlgny/dcxqy/index.shtml?id='+topics[i].id+'" class="btn_zjz">参与调查</a></li></ul></div>';
+                                      }
+                                    } else {
+                                      if(topics[i].isEnd){
+                                        tHtml += '<div class="zj_list"><dl><dt><a href="/fzlm/hdjlgny/myzjxqy/index.shtml?chanDocId='+topics[i].id+'&docId='+topics[i].docId+'" target="_blank">'+tTitle+'</a> </dt><dd>'+tSummary+'</dd></dl><ul><li class="date">发布时间：'+topics[i].startDateString.substring(0,10)+'<span>|</span>截止时间：'+topics[i].endDateString.substring(0,10)+'</li><li><a href="/fzlm/hdjlgny/myzjxqy/index.shtml?chanDocId='+topics[i].id+'&docId='+topics[i].docId+'" class="btn_zjz">查看结果</a></li></ul></div>';
+                                      }else{
+                                        tHtml += '<div class="zj_list"><dl><dt><a href="/fzlm/hdjlgny/myzjxqy/index.shtml?chanDocId='+topics[i].id+'&docId='+topics[i].docId+'" target="_blank">'+tTitle+'</a> </dt><dd>'+tSummary+'</dd></dl><ul><li class="date">发布时间：'+topics[i].startDateString.substring(0,10)+'<span>|</span>截止时间：'+topics[i].endDateString.substring(0,10)+'</li><li><a href="/fzlm/hdjlgny/myzjxqy/index.shtml?chanDocId='+topics[i].id+'&docId='+topics[i].docId+'" class="btn_zjz">参与调查</a></li></ul></div>';
+                                      }
+                                    }
+                                }
+                              }
+                              $("#zz").html(tHtml);
+                            },
+                            error: function(XMLHttpRequest, textStatus, errorThrown) {
+                              var msg = XMLHttpRequest.responseText;
+                              // alert(msg);
+                            }
+                          });
+                        });
+                        </script>
+					</div>
+				</div>
+			</div>
+
+			<div class="whitebox mgt20 index_ztzl">
+				<div class="swiper swiper-container">
+					<ul class="swiper-wrapper">
+						<li class="swiper-slide"><a href="http://www.sasac.gov.cn/" target="_blank"><img src="/static_2023/images/pic01.jpg" alt="国务院国有资产监督管理委员会" /></a></li>
+                        <li class="swiper-slide"><a href="http://jsgzw.jiangsu.gov.cn/" target="_blank"><img src="/static_2023/images/pic07.jpg" alt="江苏省国有资产监督管理委员会" /></a></li>
+                        <li class="swiper-slide"><a href="https://58.215.18.116/cqcxpt/#/" target="_blank"><img src="/static_2023/images/qycqxxcxpt.jpg" alt="无锡市国资委监管企业产权信息查询平台" /></a></li>
+                        <li class="swiper-slide"><a href="http://www.wxcq.com.cn/wuxicq/wxgzgqhzpt/cooperation_platform.html" target="_blank"><img src="/static_2023/images/pic09.jpg" alt="无锡市国资国企合作平台" /></a></li>
+						<li class="swiper-slide"><a href="https://www.wxwater.com.cn/WangTing/#/Login" target="_blank"><img src="/static_2023/images/pic02.jpg" alt="水务网上营业厅" /></a></li>
+						<li class="swiper-slide"><a href="https://wxsfj.wuxi.gov.cn/wxpf/" target="_blank"><img src="/static_2023/images/pic03.jpg" alt="无锡普法" /></a></li>
+						<li class="swiper-slide"><a href="https://tousu.www.gov.cn/dc/sqlsf/index.htm" target="_blank"><img src="/static_2023/images/pic04.jpg" alt="国务院互联网+调查" /></a></li>
+						<li class="swiper-slide"><a href="https://www.gov.cn/hudong/index.htm" target="_blank"><img src="/static_2023/images/pic05.jpg" alt="国务院@你" /></a></li>
+                        <li class="swiper-slide"><a href="/ztzl/fzzl/index.shtml" target="_blank"><img src="/static_2023/images/pic06.jpg" alt="反诈专栏" /></a></li>
+					</ul>
+					<div class="swiper-button-prev"></div>
+					<div class="swiper-button-next"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="links visible-lg-inline">
+			<div class="container clearfix">
+				<h2 class="fl white">相关链接</h2>
+				<div class="links_tab">
+					<h4><span>省级国资委</span><span>监管企业网站</span><span>市级国资委</span><span>友情链接</span></h4>
+					<div class="link_info">
+						<ul class="clear d-n">
+							<li><a href="http://gzw.sz.gov.cn/" target="_blank" title="深圳市国有资产监督管理委员会">深圳市国有资产监督管理委员会</a></li>
+							<li><a href="http://www.gzw.sh.gov.cn/" target="_blank" title="上海市国有资产监督管理委员会">上海市国有资产监督管理委员会</a></li>
+							<li><a href="http://sasac.tj.gov.cn/" target="_blank" title="天津市国有资产监督管理委员会">天津市国有资产监督管理委员会</a></li>
+							<li><a href="http://jsgzw.jiangsu.gov.cn/" target="_blank" title="江苏省国有资产监督管理委员会">江苏省国有资产监督管理委员会</a></li>
+						</ul>
+						<ul class="clear d-n">
+							<li><a href="http://www.glgc.com.cn/" target="_blank" title="无锡市国联发展（集团）有限公司">无锡市国联发展（集团）有限公司</a></li>
+							<li><a href="   http://www.wxcig.com/default.aspx                    " target="_blank" title="无锡市交通产业集团有限公司">无锡市交通产业集团有限公司</a></li>
+							<li><a href="https://www.wxszjt.com/" target="_blank" title="无锡市市政公用产业集团有限公司">无锡市市政公用产业集团有限公司</a></li>
+							<li><a href="http://www.wxidg.com/" target="_blank" title="无锡产业发展集团有限公司">无锡产业发展集团有限公司</a></li>
+							<li><a href="http://www.junahotels.com/" target="_blank" title="无锡君来酒店管理集团有限公司">无锡君来酒店管理集团有限公司</a></li>
+							<li><a href="http://www.wuxiairport.com/index.shtml" target="_blank" title="无锡苏南国际机场集团有限公司">无锡苏南国际机场集团有限公司</a></li>
+							<li><a href="http://www.wxmetro.net/front/index.html" target="_blank" title="无锡地铁集团有限公司">无锡地铁集团有限公司</a></li>
+							<li><a href="https://www.wxcjfzjt.com/#/" target="_blank" title="无锡城建发展集团有限公司">无锡城建发展集团有限公司</a></li>
+							<li><a href="http://www.wuxiwenlv.com/" target="_blank" title="无锡市文化旅游发展集团有限公司">无锡市文化旅游发展集团有限公司</a></li>
+						</ul>
+						<ul class="clear d-n">
+							<li><a href="http://gzw.nanjing.gov.cn/" target="_blank" title="南京市国有资产监督管理委员会">南京市国有资产监督管理委员会</a></li>
+							<li><a href="http://gzw.xz.gov.cn/" target="_blank" title="徐州市国有资产监督管理委员会">徐州市国有资产监督管理委员会</a></li>
+							<li><a href="http://czj.changzhou.gov.cn/" target="_blank" title="常州市国有资产监督管理委员会">常州市国有资产监督管理委员会</a></li>
+							<li><a href="http://guozw.suzhou.gov.cn/" target="_blank" title="苏州市国有资产监督管理委员会">苏州市国有资产监督管理委员会</a></li>
+							<li><a href="http://gzw.nantong.gov.cn/" target="_blank" title="南通市国有资产监督管理委员会">南通市国有资产监督管理委员会</a></li>
+							<li><a href="http://gzw.lyg.gov.cn/" target="_blank" title="连云港市国有资产监督管理委员会">连云港市国有资产监督管理委员会</a></li>
+							<li><a href="http://czj.huaian.gov.cn/" target="_blank" title="淮安市国有资产监督管理委员会">淮安市国有资产监督管理委员会</a></li>
+							<li><a href="http://jsycgzw.yancheng.gov.cn/" target="_blank" title="盐城市国有资产监督管理委员会">盐城市国有资产监督管理委员会</a></li>
+							<li><a href="http://gzw.yangzhou.gov.cn/" target="_blank" title="扬州市国有资产监督管理委员会">扬州市国有资产监督管理委员会</a></li>
+							<li><a href="http://gzw.zhenjiang.gov.cn/" target="_blank" title="镇江市国有资产监督管理委员会">镇江市国有资产监督管理委员会</a></li>
+							<li><a href="http://czj.taizhou.gov.cn/" target="_blank" title="泰州市国有资产监督管理委员会">泰州市国有资产监督管理委员会</a></li>
+							<li><a href="http://sqgzw.suqian.gov.cn/" target="_blank" title="宿迁市国有资产监督管理委员会">宿迁市国有资产监督管理委员会</a></li>
+						</ul>
+						<ul class="clear d-n">
+							<li><a href="http://www.thmz.com/col34/" target="_blank" title="无锡广播电视台">无锡广播电视台</a></li>
+							<li><a href="http://www.wxrb.com/" target="_blank" title="无锡新传媒">无锡新传媒</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div style="clear: both; height: 0px; font-size: 0px; line-height: 0px; border: 0px none;"></div>
+<script type="text/javascript" src="https://www.wuxi.gov.cn/static2016/js/Traditionalconversion.js"></script>
+<div class="footer">
+			<div class="footer_bot"> <a class="dzjg_ico" target="_blank" href="//bszs.conac.cn/sitename?method=show&id=08B91DE166225FC3E053022819AC4D62"><img data-bd-imgshare-binded="1" src="https://www.wuxi.gov.cn/static2016/images/dzjg_red.png" alt="党政机关" id="imgConac" vspace="0" hspace="0" border="0"></a> <a class="jcjcjcjc" href="https://zfwzgl.www.gov.cn/exposure/jiucuo.html?site_code=3202000069&url=https%3A%2F%2Fgzw.wuxi.gov.cn%2F" target="_blank"><img src="/static_2023/images/jiucuo.png" alt="我要纠错" ></a>
+				<p class="foot_info">
+                <a href="/fzlm/ysaq/index.shtml" target="_blank">隐私安全</a><i>|</i>
+                <a href="/fzlm/lxwm/index.shtml" target="_blank">联系我们</a><i>|</i>
+                <a href="/fzlm/wzdt/index.shtml" target="_blank">站点地图</a><!--<i>|</i><a href="#" class="Correction_t">我要纠错</a>-->
+                </p>
+				<p class="copyright font14 lh25 white">
+无锡市人民政府国有资产监督管理委员会版权所有 无锡市人民政府国有资产监督管理委员会主办<br/>
+<a href="http://beian.miit.gov.cn" target="_blank">苏ICP备09024546号</a>  <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32021102000707" target="_blank">公安备案号：32021102000707</a>  网站标识码：3202000069</p>
+			</div>
+		</div>
+        
+        
+<!--<div class="page_mark"></div>
+  <div class="index_dialog" aria-hidden="false" tabindex="0" role="alertdialog">
+    <div class="dialog_content">
+       <h3>我要纠错</h3>
+       <div class="dialog_arc">
+  <iframe src="/fzlm/hdjlgny/wyjc/index.shtml" frameborder="0" scrolling="auto" width="100%" height="470"></iframe>
+         </div>
+    </div>
+    <i class="dialog_close"></i>
+  </div>-->
+<script>
+//网站纠错
+  /*$(function(){
+    $(".Correction_t").click(function(){
+      show_dialog()
+    })
+    var show_dialog = function(){ 
+      $(".page_mark").show();
+      $("body").css("overflow-y","hidden");
+      $(".index_dialog").show();
+    }; 
+    $(".index_dialog .dialog_close").click(function(){
+      $(".page_mark").hide();
+      $("body").removeAttr("style")
+      $(".index_dialog").hide();
+    })
+  })*/
+</script> 
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?cb9550f766bd5a3c53ea964aad9bff39";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<div class="floating">
+			<dl>
+                <dd>
+                    <div class="float_ico">
+                        <div class="erweima"><img src="/static_2023/images/gzwgzh.png" alt="公众号" /></div><p class="img"><img src="/static_2023/images/ico21.png" alt="公众号" /></p><p class="word">公众号</p></div>
+                </dd>
+				<dd>
+					<div><a href="https://www.wuxi.gov.cn/ghwd/znwd/index.html" title="智能问答" target="_blank">
+							<p class="img"><img src="/static_2023/images/ico23.png" alt="智能问答" /></p>
+							<p class="word">智能问答</p>
+						</a></div>
+				</dd>
+				<dd>
+					<div><a href="https://wxsfj.wuxi.gov.cn/wxpf/" title="无锡普法" target="_blank">
+							<p class="img"><img src="/static_2023/images/ico24.png" alt="无锡普法" /></p>
+							<p class="word">无锡普法</p>
+						</a></div>
+				</dd>
+				<dd>
+					<div id="goTop" title="返回顶部">
+						<p class="img"><img src="/static_2023/images/ico25.png" alt="返回顶部" /></p>
+						<p class="word">返回顶部</p>
+					</div>
+				</dd>
+			</dl>
+			<script type="text/javascript">
+				//回顶部
+				$(".float_ico").hover(function() {
+					$(this).children('.erweima').toggle()
+				});
+				$("#goTop").click(function() {
+					$('body,html').animate({
+						scrollTop: 0
+					}, 1000);
+					return false;
+				});
+			</script>
+		</div>
+
+<!--手机版导航/start-->
+		<div class="menu-btn"></div>
+		<div class="m-menu">
+			<dl>
+				<dt><a href="/index.shtml">网站首页</a></dt>
+			</dl>
+			<dl>
+				<dt><a href="/zfxxgk/index.shtml">政府信息公开</a></dt>
+				<dd>
+					<!--<ul>
+            <li><a></a></li>
+         </ul>-->
+				</dd>
+			</dl>
+			<dl>
+				<dt><a href="/hdjl/index.shtml">互动交流</a></dt>
+				<dd>
+					<!--<ul>
+            <li><a></a></li>
+         </ul>-->
+				</dd>
+			</dl>
+			<dl>
+				<dt><a href="https://wx.jszwfw.gov.cn/ipgs/ipgs/gotoQjdV6.do" target="_blank">政务服务</a></dt>
+				<dd></dd>
+			</dl>
+			<dl>
+				<dt><a href="/ztzl/jgqy/cxfz/index.shtml">专题专栏</a></dt>
+			</dl>
+		</div>
+		<!--手机版导航/end-->
+
+<script type="text/javascript" src="/static_2023/js/main.js"></script>
+
+		<div id="mydiv">
+  <link rel="stylesheet" type="text/css" href="//www.wuxi.gov.cn/static_common/css/ts.css" />
+  <div class="pushad">
+    <a href="http://zzxszy.people.cn/GB/458759/index.html" target="blank">
+      <img src="//www.wuxi.gov.cn/static_2023/images/zyzzxszy.jpg" style="width:100%;display:block;margin-top:5px">
+    </a> 
+  </div>
+  <div class="tnew" style="padding:0;">
+    <span class="closeAd closeAd1">
+      <img src="//www.wuxi.gov.cn/static_2023/images/i35.gif" alt="关闭">
+    </span>
+  </div>
+</div>
+<script>
+  $('.closeAd1').each(function(){
+    $(this).click(function(){
+      $(this).parent().hide();$(this).parent().parent().find('.pushad').hide();
+    })
+  })
+  
+  $(function(){
+    wza2.subscribe('after', 'TOGGLE', function(action, state) {
+      if (state.enable === true) {
+        $("#mydiv").css("display","none");
+      }else{
+        $("#mydiv").css("display","");
+      }
+    });
+    wza2.subscribe('after', 'INITIAL_FROM_STORAGE', function(action, state) {
+      if (state.enable === true) {
+        $("#mydiv").css("display","none");
+      }else{
+        $("#mydiv").css("display","");
+      }
+    });
+    /*长者版隐藏*/
+    if($("body").hasClass("web_older")){
+      $("#mydiv").css("display","none");
+    }else{
+      $("#mydiv").css("display","");
+    }
+  })
+  
+</script>
+		<script type="text/javascript">
+			//tab
+			$(function() {
+				var mobile_flag = isMobile();
+				if (mobile_flag) {
+					$(".box01").tab({
+						tabs: ".title ol li",
+						evtype: "click",
+						box: ".box01_con"
+					});
+					$(".box02").tab({
+						tabs: "h2 ol li",
+						evtype: "click",
+						box: ".box02_con"
+					});
+					$(".sub_box").tab({
+						tabs: ".sub_title li",
+						evtype: "click",
+						box: ".sub_con"
+					});
+					$(".title ol li a", "h2 ol li a").click(function() {
+						return false;
+					})
+				} else {
+					$(".box01").tab({
+						tabs: ".title ol li",
+						evtype: "mouseover focus",
+						box: ".box01_con"
+					});
+					$(".box02").tab({
+						tabs: "h2 ol li",
+						evtype: "mouseover focus",
+						box: ".box02_con"
+					});
+					$(".sub_box").tab({
+						tabs: ".sub_title li",
+						evtype: "mouseover focus",
+						box: ".sub_con"
+					});
+				}
+			})
+		</script>
+<script type="text/javascript" src="//www.wuxi.gov.cn/static_common/js/hotkeys.js"></script>
+<script type="text/javascript" src="//www.wuxi.gov.cn/static_common/js/jquery.cookies.js"></script>
+<script type="text/javascript" src="/static_older/older.js"></script>
+<script type="text/javascript" src="/static_older/index.js"></script>
+
+	</body>
+</html>

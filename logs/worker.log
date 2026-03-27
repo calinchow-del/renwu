@@ -1,0 +1,17 @@
+2026-03-27 20:20:01 ===== Worker启动 =====
+From https://github.com/calinchow-del/renwu
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+2026-03-27 20:20:02 执行任务 [task_001]: python3 /root/renwu/scrape_budgets.py --start 1 --end 100 --workers 5
+Fri Mar 27 20:25:01 CST 2026 worker已在运行
+2026-03-27 20:30:01 ===== Worker启动 =====
+From https://github.com/calinchow-del/renwu
+ * branch            main       -> FETCH_HEAD
+   cf90086..3ca4a8f  main       -> origin/main
+Updating cf90086..3ca4a8f
+Fast-forward
+ tasks/current_task.json |  10 ++--
+ worker.sh               | 118 ++++++++++++++++++++++++++----------------------
+ 2 files changed, 71 insertions(+), 57 deletions(-)
+2026-03-27 20:30:02 任务状态:  (非pending，跳过)
+2026-03-27 20:30:02 统计: 已完成0城市, 416个PDF

@@ -1,0 +1,1319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>武汉市医疗保障局</title>
+    <meta name="keywords" content="武汉市医疗保障局">
+    <meta name="description" content="武汉市医疗保障局">
+    <meta name="SiteName" content="武汉市医疗保障局">
+    <meta name="SiteDomain" content="ybj.wuhan.gov.cn">
+    <meta name="SiteIDCode" content="4201000099">
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <link rel="shortcut icon" href="./material/images/icos.png">
+    <link rel="stylesheet" href="./material/2025/libs/swiper-bundle.min.css" />
+    <script src="./material/2025/libs/swiper-bundle.min.js"></script>
+    <script src="./material/2025/libs/jquery-1.11.3.min.js"></script>
+    <script src="./material/2025/libs/jquery.SuperSlide.2.1.3.js"></script>
+    <link rel="stylesheet" href="./material/2025/css/base.css">
+    <link rel="stylesheet" href="./material/2025/css/index.css">
+    <script>
+        /**
+        * 判断是否是pc设备
+        */
+        function IsPC() {
+            var userAgentInfo = navigator.userAgent;
+            var Agents = ["Android", "iPhone", "SymbianOS", "Windows Phone", "iPod"];
+            var flag = true;
+            for (var v = 0; v < Agents.length; v++) {
+                if (userAgentInfo.indexOf(Agents[v]) > 0) {
+                    flag = false;
+                    break;
+                }
+            }
+            if (window.screen.width >= 768) {
+                flag = true;
+            }
+            return flag;
+        }
+        if (!IsPC()) {
+            window.location.href = "./m/";
+        }
+    </script>
+    <!-- 额外css样式 -->
+    <style>
+        .h_body_bg {
+            background: linear-gradient(180deg, #79CFFF 0%, #EBF7FE 100%);
+            padding-top: 20px;
+            /* max-width: 1460px; */
+
+        }
+
+        .h_body_bg1 {
+            background-color: #EBF7FE;
+            padding-top: 20px;
+            border-radius: 4px;
+            min-width: 1460px;
+        }
+
+        .white_1460 {
+            width: 1460px;
+            background-color: #fff;
+            border-radius: 4px;
+            padding-bottom: 10px;
+            margin: 58px auto 0;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            min-width: 1460px;
+        }
+
+        .white_1461 {
+            background-color: #EBF7FE;
+            padding-top: 10px;
+            border-radius: 4px;
+            padding-bottom: 20px;
+        }
+
+        .h_body {
+            background: linear-gradient(180deg, #B9E1FE 0%, #E2F6FF 100%);
+            width: 100%;
+            min-width: 1460px;
+        }
+
+        .h_1920 {
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .h_body header {
+            height: 377px;
+            background-image: url(./material/2025/img/bg.jpg);
+            background-position: center center;
+            background-size: 1920px 377px;
+            background-repeat: no-repeat;
+
+        }
+
+        .h_body .main-logo {
+            margin-top: 0px;
+            height: 213px;
+            object-fit: cover;
+        }
+
+        .h_body .nav-bar {
+            margin-top: 54px;
+        }
+
+        .h_body .container {
+            margin-top: 0px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .h_body .swiper-slide a {
+            display: block;
+        }
+
+        .h_body .swiper-slide a .title {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            padding: 12px 20px;
+            color: white;
+            /* background-color: #3333; */
+        }
+
+        .h_body .tab-news .tabs .tab-item a{
+            display: block;
+        }
+        
+        .h_body .tab-news .tabs .tab-item.active a{
+            color: #fff;
+        }
+
+        .h_body .notice_box {
+            margin-top: 12px;
+        }
+
+        .h_body .img_box {
+            margin-top: 12px;
+        }
+
+        .h_body .gongkai_box {
+            background-color: #fff;
+            height: 452px;
+            margin-top: 16px;
+            background-image: unset;
+            width: 1460px;
+            margin: 0 auto 0;
+        }
+
+        .h_body .gongkai_box .gongkai_main {
+            height: 370px;
+            margin-top: 26px;
+            padding: 2px 30px;
+        }
+
+        .h_body .gongkai_box .gongkai_main .section01 {
+            padding-top: 0px;
+        }
+
+        .h_body .gongkai_box .gongkai_main .tabs {
+            height: 46px;
+            margin-bottom: 12px;
+        }
+
+        .h_body .gongkai_box .gongkai_main .section01 .rightBox .imgBox {
+            margin-bottom: 8px;
+        }
+
+        .h_body .gongkai_box .gongkai_main .list01#list01 .item:nth-child(n+2) img {
+            display: none;
+        }
+
+        .h_body .hudong_box {
+            margin: 12px auto 0;
+            background-color: #fff;
+            width: 1460px;
+            padding: 20px;
+            border-radius: 4px;
+        }
+
+        .hudong_box .zhuanti_box a:first-child {
+            display: block;
+        }
+
+        .hudong_box .zhuanti_box a:first-child img {
+            width: 442px;
+        }
+    </style>
+</head>
+
+<body class="h_body">
+    <!-- 头部 -->
+    <div class="h_1920">
+        <header>
+            <div class="header-top" style="width: 1400px;">
+                <img class="login-icon" src="./material/2025/img/logo2x.png" alt="" />
+                <a class="login-link"
+                    href="http://oauth.hubei.gov.cn:9090/uias/mainChain.do?appCode=hbzwfw&code=90000&checkUser=1&flag=false">登录</a>
+                <div class="h_line"></div>
+                <a class="register-link"
+                    href="https://oauth.hubei.gov.cn:8443/hbyzw/zwfw/personInfo/personInfoReg.jsp?appCode=hbzwfw">注册</a>
+                <script>
+                    //处理
+                </script>
+            </div>
+            <div class="header-bottom">
+                <img class="main-logo" src="./material/2025/img/guohui.png" alt="" />
+                <div class="search-container">
+                    <input type="text" class="search-box" id="textfield" placeholder="请输入关键词" />
+                    <button class="search-button" id="search-button">
+                        <img class="search-icon" src="./material/2025/img/ss@2x.png" alt="" />
+                        搜索
+                    </button>
+                    <script>
+                        function chkSearch() {
+                            if ($('#textfield').val() == '' || $('#textfield').val().length == 0) {
+                                // alert('请输入关键字');
+                                return false;
+                            }
+                            var keywords = encodeURI($('#textfield').val());
+                            $url = '/SITE/whs_70/search.html?searchWord=' + keywords + '&siteId=61&pageSize=10';
+                            window.open($url, '_blank');
+                        }
+                        $('#textfield').on('keypress', function (event) {
+                            if (event.keyCode == 13) {
+                                chkSearch();
+                            }
+                        });
+                        $('#search-button').click(function () {
+                            chkSearch();
+                        });
+                    </script>
+                </div>
+                <!-- 新增导航栏 -->
+                <div class="nav-bar">
+                    <div class="w_1460" style="width: 1320px;">
+                        <a class="nav-item" href="https://ybj.wuhan.gov.cn/">
+                            <img class="nav-icon" src="./material/2025/img/nav1.png" alt="Icon" />
+                            首页
+                        </a>
+                        <div class="separator"></div>
+                        <a class="nav-item" href="https://ybj.wuhan.gov.cn/zwgk_52/xxgkzn/">
+                            <img class="nav-icon" src="./material/2025/img/nav2.png" alt="Icon" />
+                            政府信息公开
+                        </a>
+                        <div class="separator"></div>
+                        <a class="nav-item" href="https://ybj.wuhan.gov.cn/bsfw/">
+                            <img class="nav-icon" src="./material/2025/img/nav3.png" alt="Icon" />
+                            咨询服务
+                        </a>
+                        <div class="separator"></div>
+                        <a class="nav-item" href="https://ybj.wuhan.gov.cn/hdjl/">
+                            <img class="nav-icon" src="./material/2025/img/nav4.png" alt="Icon" />
+                            互动交流
+                        </a>
+                        <div class="separator"></div>
+                        <a class="nav-item" href="https://ybj.wuhan.gov.cn/bmdt/ztzl/">
+                            <img class="nav-icon" src="./material/2025/img/nav5.png" alt="Icon" />
+                            专题专栏
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <div class="h_body_bg">
+        <div class="white_1460">
+            <!-- <div class="white"></div> -->
+            <div class="container">
+                <!-- 左边的 Swiper 幻灯片 -->
+                <div class="swiper-container">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            
+                                
+                                    <div class="swiper-slide">
+                                        <a href="https://mp.weixin.qq.com/s/4wYWtToeHMOAWeqKw9qb6A" target="_blank">
+                                            <img src="./zwgk_52/ybdt/jdt/202603/W020260317593602277950.jpg" alt="" />
+                                            <div class="title">
+                                                医保基金使用监管条例实施细则4月施行！这些行为将受到处罚
+                                            </div>
+                                        </a>
+                                    </div>
+                                
+                            
+                                
+                                    <div class="swiper-slide">
+                                        <a href="https://mp.weixin.qq.com/s/E2MV_2PTGp3qWzJtBHeNTw" target="_blank">
+                                            <img src="./zwgk_52/ybdt/jdt/202602/W020260228579471796342_ORIGIN.png" alt="" />
+                                            <div class="title">
+                                                最后1天！抓紧时间！错过要等待
+                                            </div>
+                                        </a>
+                                    </div>
+                                
+                            
+                                
+                                    <div class="swiper-slide">
+                                        <a href="https://mp.weixin.qq.com/s/pIfHgVvuOhu9y4HFUHMxNw" target="_blank">
+                                            <img src="./zwgk_52/ybdt/jdt/202602/W020260213371068465952.jpg" alt="" />
+                                            <div class="title">
+                                                国家医疗保障局办公室关于对精神疾病类医保定点医疗机构开展集体约谈的通知
+                                            </div>
+                                        </a>
+                                    </div>
+                                
+                            
+                                
+                                    <div class="swiper-slide">
+                                        <a href="https://mp.weixin.qq.com/s/3GaW5WSOcG9GfqrOFYu8Aw" target="_blank">
+                                            <img src="./zwgk_52/ybdt/jdt/202602/W020260202384451621301.jpg" alt="" />
+                                            <div class="title">
+                                                2025年1-12月职工医保个人账户共济4.64亿人次，共济金额687.7亿元
+                                            </div>
+                                        </a>
+                                    </div>
+                                
+                            
+                                
+                                    <div class="swiper-slide">
+                                        <a href="./zwgk_52/ybdt/jdt/202601/t20260116_2713148.shtml" target="_blank">
+                                            <img src="./zwgk_52/ybdt/jdt/202601/W020260116644689094902.jpg" alt="" />
+                                            <div class="title">
+                                                人民日报头版：心之所系、行之所至
+                                            </div>
+                                        </a>
+                                    </div>
+                                
+                            
+                                
+                                    <div class="swiper-slide">
+                                        <a href="https://mp.weixin.qq.com/s/Dd9HTltcBtEUHCWmVB03GA" target="_blank">
+                                            <img src="./zwgk_52/ybdt/jdt/202512/W020251231378626254382.jpg" alt="" />
+                                            <div class="title">
+                                                国家医保局党组书记、局长章轲：着力构建智慧医保服务新格局 助力完善多层次医疗保障体系
+                                            </div>
+                                        </a>
+                                    </div>
+                                
+                            
+                                
+                                    <div class="swiper-slide">
+                                        <a href="https://mp.weixin.qq.com/s/cJj7c3HYwpmYUm-woYNstg" target="_blank">
+                                            <img src="./zwgk_52/ybdt/jdt/202512/W020251219409018163873.jpg" alt="" />
+                                            <div class="title">
+                                                2018-2025年中央财政累计为医疗保障投入超3万亿元，惠及超180亿人次看病报销
+                                            </div>
+                                        </a>
+                                    </div>
+                                
+                            
+                        </div>
+                        <div class="swiper-info">
+                            <span class="slide-title"></span>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                    <script>
+                        // 初始化 Swiper
+                        var swiper = new Swiper(".mySwiper", {
+                            autoplay: {
+                                delay: 3000, // 自动播放间隔时间，单位为毫秒
+                            },
+                            pagination: {
+                                el: ".swiper-pagination",
+                            },
+                        });
+                    </script>
+                </div>
+                <!-- 右边的导航栏 -->
+                <div class="tab-news">
+                    <div class="tabs" id="tab-news">
+                        <div class="tab-item tab-item1" tab=1><a href="https://www.hubei.gov.cn/szyw/" target="_blank">时政要闻</a></div>
+                        <div class="tab-item tab-item2" tab=2><a href="https://www.gov.cn/pushinfo/v150203/index.htm" target="_blank">国务院</a></div>
+                        <div class="tab-item tab-item3" tab=3><a href="https://www.hubei.gov.cn/zwgk/hbyw/hbywqb/" target="_blank">湖北省</a></div>
+                        <div class="tab-item tab-item2" tab=4><a href="https://www.wuhan.gov.cn/sy/whyw/" target="_blank">武汉要闻</a></div>
+                        <div class="tab-item tab-item3 active" tab=5><a href="https://ybj.wuhan.gov.cn/zwgk_52/ybdt/" target="_blank">医保动态</a></div>
+                    </div>
+                    <!-- 时政要闻 -->
+                    <div class="news-list news-list1" style="display: none;" id="szyw">
+
+                    </div>
+                    <!-- 国务院信息 -->
+                    <div class="news-list news-list2" style="display: none;" id="gwy">
+
+                    </div>
+                    <!-- 湖北要闻 -->
+                    <div class="news-list news-list3" style="display: none;" id="hbyw">
+
+                    </div>
+                    <!-- 武汉要闻 -->
+                    <div class="news-list news-list4" style="display: none;" id="whyw">
+
+                    </div>
+                    <!-- 医保动态 -->
+                    <div class="news-list news-list5">
+                        
+                            <div class="news-item">
+                                <div class="title">
+                                    <a href="./bmdt/qzpb/202303/t20230307_2165734.shtml" target="_blank">武汉市打击欺诈骗取医保基金最新举报电话</a>
+                                </div>
+                                <div class="time">
+                                    2023-08-25
+                                </div>
+                            </div>
+                        
+                            <div class="news-item">
+                                <div class="title">
+                                    <a href="https://mp.weixin.qq.com/s/4wYWtToeHMOAWeqKw9qb6A" target="_blank">医保基金使用监管条例实施细则4月施行！这些行为将受到处罚</a>
+                                </div>
+                                <div class="time">
+                                    2026-03-17
+                                </div>
+                            </div>
+                        
+                            <div class="news-item">
+                                <div class="title">
+                                    <a href="https://mp.weixin.qq.com/s/E2MV_2PTGp3qWzJtBHeNTw" target="_blank">最后1天！抓紧时间！错过要等待</a>
+                                </div>
+                                <div class="time">
+                                    2026-02-28
+                                </div>
+                            </div>
+                        
+                            <div class="news-item">
+                                <div class="title">
+                                    <a href="https://mp.weixin.qq.com/s/pIfHgVvuOhu9y4HFUHMxNw" target="_blank">国家医疗保障局办公室关于对精神疾病类医保定点医疗机构开展集体约谈的通知</a>
+                                </div>
+                                <div class="time">
+                                    2026-02-13
+                                </div>
+                            </div>
+                        
+                            <div class="news-item">
+                                <div class="title">
+                                    <a href="https://mp.weixin.qq.com/s/6Ml3tfD8tVf2eKC6eh-STw" target="_blank">全国医保基金管理突出问题专项整治工作总结暨2026年工作部署会在京召开</a>
+                                </div>
+                                <div class="time">
+                                    2026-01-30
+                                </div>
+                            </div>
+                        
+                            <div class="news-item">
+                                <div class="title">
+                                    <a href="./zwgk_52/ybdt/ybyw/202601/t20260116_2713153.shtml" target="_blank">人民日报头版：心之所系、行之所至</a>
+                                </div>
+                                <div class="time">
+                                    2026-01-16
+                                </div>
+                            </div>
+                        
+                            <div class="news-item">
+                                <div class="title">
+                                    <a href="https://mp.weixin.qq.com/s/ngRl9EOtsGOfiPAm-poj-w" target="_blank">人民日报：推进基本医保省级统筹</a>
+                                </div>
+                                <div class="time">
+                                    2025-12-31
+                                </div>
+                            </div>
+                        
+                            <div class="news-item">
+                                <div class="title">
+                                    <a href="https://mp.weixin.qq.com/s/a9pbrVcu4zKPGTK2ts_b7A" target="_blank">国家医疗保障局办公室关于印发医保基金清算提质增效三年行动计划的通知</a>
+                                </div>
+                                <div class="time">
+                                    2025-12-19
+                                </div>
+                            </div>
+                        
+                            <div class="news-item">
+                                <div class="title">
+                                    <a href="https://mp.weixin.qq.com/s/G6KrEFgDftRtyKkKz52DKg" target="_blank">我国首例执行政府指导价脑机接口手术在武汉实施</a>
+                                </div>
+                                <div class="time">
+                                    2025-12-08
+                                </div>
+                            </div>
+                        
+                    </div>
+
+                    <script>
+                        $(".tab-news .tab-item").mouseover(function () {
+                            $(".tab-news .tab-item").removeClass('active')
+                            $(this).addClass('active')
+                            $(".news-list").hide()
+                            let tab = $(this).attr('tab')
+                            $(".news-list" + tab).show()
+                        })
+
+                        //构建itme
+                        function _buildItem(title, url, time) {
+                            return '<div class="news-item">\
+                        <div class="title">\
+                            <a href="'+ url + '" target="_blank">' + title + '</a>\
+                        </div>\
+                        <div class="time">'+ time + '</div>\
+                    </div>';
+                        }
+
+                        // 填充数据
+                        $(function () {
+                            setTimeout(function () {
+                                getYWJsonp('.news-list#szyw', 'https://www.hubei.gov.cn/szyw/pushinfo.jsonp', '时政要闻', 0);
+                            }, 100);
+                            setTimeout(function () {
+                                getYWJsonp('.news-list#hbyw', 'https://www.hubei.gov.cn/zwgk/hbyw/hbywqb/pushinfo.jsonp', '湖北要闻', 0);
+                            }, 400);
+                            setTimeout(function () {
+                                getYWJsonp('.news-list#gwy', 'https://www.gov.cn/pushinfo/v150203/pushinfo.jsonp', '国务院要闻', 0);
+                            }, 700);
+                            setTimeout(function () {
+                                getYWJsonp('.news-list#whyw', 'https://www.wuhan.gov.cn/whszfwz/xwxx/xwts/tsjsonp/pushinfo.jsonp', '武汉要闻', 0);
+                            }, 1000);
+                        });
+
+                        function getYWJsonp(listEl, url, tag, c) {
+                            $.ajax({
+                                url: url,
+                                dataType: "jsonp",
+                                jsonp: "pushInfoJsonpCallBack",
+                                jsonpCallback: "pushInfoJsonpCallBack",
+                                timeout: 10000,
+                                success: function (data) {
+                                    $.each(data, function (i, json) {
+                                        if (i > 8) {
+                                            return;
+                                        }
+                                        $(listEl).append(_buildItem(json.title, json.link, json.pubDate));
+                                    });
+                                },
+                                error: function () {
+                                    console.log("获取" + tag + "数据失败，自动重试");
+                                    if (c < 3) {
+                                        setTimeout(function () {
+                                            getYWJsonp(listEl, url, tag, c + 1);
+                                        }, 1200);
+                                    } else {
+                                        $(listEl).html("获取" + tag + "数据失败，请手动刷新");
+                                    }
+                                }
+                            });
+                        }
+                    </script>
+                </div>
+            </div>
+            <div class="notice_box flex">
+                <a class="notice_box_L" href="https://ybj.wuhan.gov.cn/zwgk_52/ybdt/tzgg/">
+                    <img src="./material/2025/img/notice.png" alt="" />
+                </a>
+                <div class="notice_box_R">
+                    <ul class="infoList">
+                        
+                            <li>
+                                <a href="./zwgk_52/ybdt/tzgg/202511/t20251113_2677217.shtml" target="_blank">医疗保障基金现场检查公告</a>
+                                <span>[
+                                    11-13]
+                                </span>
+                            </li>
+                        
+                            <li>
+                                <a href="./zwgk_52/ybdt/tzgg/202510/t20251031_2670726.shtml" target="_blank">关于中医骨伤类、中医特殊疗法类医疗服务项目价格调整方案的公示</a>
+                                <span>[
+                                    10-31]
+                                </span>
+                            </li>
+                        
+                            <li>
+                                <a href="./zwgk_52/ybdt/tzgg/202510/t20251009_2656721.shtml" target="_blank">关于武汉市基本医疗保险和生育保险医疗收费原始票据遗失报销情况的公示</a>
+                                <span>[
+                                    10-09]
+                                </span>
+                            </li>
+                        
+                    </ul>
+                </div>
+            </div>
+            <!--script type="text/javascript">
+                jQuery(".notice_box").slide({ mainCell: ".notice_box_R ul", autoPlay: true, effect: "leftMarquee", vis: 3, interTime: 50, loop: true });
+            </script-->
+
+            <div class="img_box flex w_1398">
+                <a style="display: block;" href="https://ybj.wuhan.gov.cn/bmdt/qzpb/" target="_blank"><img src="./material/2025/img/img1.png" alt="" /></a>
+                <a style="display: block;" href="https://ybj.wuhan.gov.cn/bsfw/ydjy/" target="_blank"><img src="./material/2025/img/img2.png" alt="" /></a>
+              <a style="display: block;" href="https://ybj.wuhan.gov.cn/zwgk_52/ybdt/20th_szqhjs/" target="_blank"><img src="./material/2025/img/12届四中全会.png" alt="" /></a>
+                <a style="display: block;" href="https://ybj.wuhan.gov.cn/whybj_cbdj/" target="_blank"><img src="./material/2025/img/img3.png" alt="" /></a>
+                <a style="display: block;"
+                    href="http://zwfw.hubei.gov.cn/s/web/zwgk/qzqd.html?department=11420100MB1537846A"
+                    target="_blank"><img src="./material/2025/img/img4.png" alt="" /></a>
+            </div>
+        </div>
+    </div>
+    <div class="h_body_bg1">
+        <div class="w_100 gongkai_box">
+            <div class="w_1398">
+                <div class="gongkai_title_box">
+                    <div class="line_l"></div>
+                    <img src="./material/2025/img/line_l.png" alt="" />
+                    <span>政府信息公开</span>
+                    <img src="./material/2025/img/line_r.png" alt="" />
+                    <div class="line_r"></div>
+                </div>
+            </div>
+            <div class="w_1460 gongkai_main">
+                <div class="section section01">
+                    <div class="section-container">
+                        <div class="leftBox">
+                            <div class="tabs" id="tab01">
+                                <div class="tab-item active choose" tab="1">政策法规</div>
+                                <div class="tab-item" tab="2">政策解读</div>
+                                <a class="more" href="https://ybj.wuhan.gov.cn/zwgk_52/zcfgyjd/zcfg/">查看更多></a>
+                            </div>
+                            <style>
+
+                            </style>
+                            <div class="list01" id="list01">
+                                
+                                    <div class="item">
+                                        <div class="title">
+                                            <a href="./zwgk_52/zcfgyjd/zcfg/202512/t20251215_2695416.shtml"
+                                                title="市医保局现行有效行政规范性文件目录"
+                                                target="_blank">
+                                                <img src="./material/2025/img/new_file.png" alt="" />
+                                                市医保局现行有效行政规范性文件目录
+                                            </a>
+                                        </div>
+                                        <div class="time">
+                                            2025-12-15
+                                        </div>
+                                    </div>
+                                
+                                    <div class="item">
+                                        <div class="title">
+                                            <a href="./zwgk_52/zcfgyjd/zcfg/202508/t20250814_2633600.shtml"
+                                                title="省医疗保障局关于印发《湖北省医疗保障行政执法公示办法（试行）》《湖北省医疗保障行政 执法全过程记录办法（试行）》《湖北省医疗保障重大行政执法决定法制审核办法 （试行）》的通知"
+                                                target="_blank">
+                                                <img src="./material/2025/img/new_file.png" alt="" />
+                                                省医疗保障局关于印发《湖北省医疗保障行政执法公示办法（试行）》《湖北省医疗保障行政 执法全过程记录办法（试行）》《湖北省医疗保障重大行政执法决定法制审核办法 （试行）》的通知
+                                            </a>
+                                        </div>
+                                        <div class="time">
+                                            2025-07-04
+                                        </div>
+                                    </div>
+                                
+                                    <div class="item">
+                                        <div class="title">
+                                            <a href="./zwgk_52/zcfgyjd/zcfg/202412/t20241231_2510555.shtml"
+                                                title="市医疗保障局关于印发武汉市医疗保障不予 处罚事项清单、从轻处罚事项清单、减轻处罚事项清单的通知"
+                                                target="_blank">
+                                                <img src="./material/2025/img/new_file.png" alt="" />
+                                                市医疗保障局关于印发武汉市医疗保障不予 处罚事项清单、从轻处罚事项清单、减轻处罚事项清单的通知
+                                            </a>
+                                        </div>
+                                        <div class="time">
+                                            2024-12-31
+                                        </div>
+                                    </div>
+                                
+                                    <div class="item">
+                                        <div class="title">
+                                            <a href="./zwgk_52/zcfgyjd/zcfg/202412/t20241216_2498166.shtml"
+                                                title="市医保局现行有效行政规范性文件目录"
+                                                target="_blank">
+                                                <img src="./material/2025/img/new_file.png" alt="" />
+                                                市医保局现行有效行政规范性文件目录
+                                            </a>
+                                        </div>
+                                        <div class="time">
+                                            2024-12-16
+                                        </div>
+                                    </div>
+                                
+                                    <div class="item">
+                                        <div class="title">
+                                            <a href="./zwgk_52/zcfgyjd/zcfg/202409/t20240930_2462745.shtml"
+                                                title="关于2025年度城乡居民基本医疗保险参保缴费的通告"
+                                                target="_blank">
+                                                <img src="./material/2025/img/new_file.png" alt="" />
+                                                关于2025年度城乡居民基本医疗保险参保缴费的通告
+                                            </a>
+                                        </div>
+                                        <div class="time">
+                                            2024-08-30
+                                        </div>
+                                    </div>
+                                
+                                    <div class="item">
+                                        <div class="title">
+                                            <a href="./zwgk_52/zcfgyjd/zcfg/202404/t20240401_2382809.shtml"
+                                                title="《市医疗保障局 市财政局关于优化积极生育医疗保障具体措施的通知》"
+                                                target="_blank">
+                                                <img src="./material/2025/img/new_file.png" alt="" />
+                                                《市医疗保障局 市财政局关于优化积极生育医疗保障具体措施的通知》
+                                            </a>
+                                        </div>
+                                        <div class="time">
+                                            2024-04-01
+                                        </div>
+                                    </div>
+                                
+                                <!-- <div class="item">
+                                <div class="title">
+                                    <a href="javascript:;">
+                                        <img src="./material/2025/img/new_file.png" alt="" />
+                                        111国务院关于印发《深入实施以人为本的新型城镇化战略五市人民政府关于进一步促进既有住宅增设电梯工作的指导
+                                    </a>
+                                </div>
+                                <div class="time">2024-07-31</div>
+                            </div> -->
+                            </div>
+                            <div class="list01" style="display: none;" id="list02">
+                                
+                                    <div class="item">
+                                        <div class="title">
+                                            <a href="./zwgk_52/zcfgyjd/zcjd/202512/t20251231_2705018.shtml"
+                                                title="【文字解读】《关于印发〈湖北省基本医保基金即时结算经办规程（试行）〉的通知》政策解读"
+                                                target="_blank">
+                                                【文字解读】《关于印发〈湖北省基本医保基金即时结算经办规程（试行）〉的通知》政策解读
+                                            </a>
+                                        </div>
+                                        <div class="time">
+                                            2025-11-27
+                                        </div>
+                                    </div>
+                                
+                                    <div class="item">
+                                        <div class="title">
+                                            <a href="./zwgk_52/zcfgyjd/zcjd/202508/t20250814_2633601.shtml"
+                                                title="【文字解读】关于印发《〈湖北省医疗保障行政执法公示办法（试行）〉〈湖北省医疗保障行政执法全过程记录办法（试行）〉〈湖北省医疗保障重大行政执法决定法制审核办法（试行）〉的通知》政策解读"
+                                                target="_blank">
+                                                【文字解读】关于印发《〈湖北省医疗保障行政执法公示办法（试行）〉〈湖北省医疗保障行政执法全过程记录办法（试行）〉〈湖北省医疗保障重大行政执法决定法制审核办法（试行）〉的通知》政策解读
+                                            </a>
+                                        </div>
+                                        <div class="time">
+                                            2025-07-04
+                                        </div>
+                                    </div>
+                                
+                                    <div class="item">
+                                        <div class="title">
+                                            <a href="./zwgk_52/zcfgyjd/zcjd/202412/t20241231_2510558.shtml"
+                                                title="武汉市医疗保障不予处罚事项清单、从轻处罚事项清单、减轻处罚事项清单解读"
+                                                target="_blank">
+                                                武汉市医疗保障不予处罚事项清单、从轻处罚事项清单、减轻处罚事项清单解读
+                                            </a>
+                                        </div>
+                                        <div class="time">
+                                            2024-12-31
+                                        </div>
+                                    </div>
+                                
+                                    <div class="item">
+                                        <div class="title">
+                                            <a href="./zwgk_52/zcfgyjd/zcjd/202409/t20240930_2462751.shtml"
+                                                title="2024年居民医保最新缴费标准公布！与往年相比有哪些新变化？"
+                                                target="_blank">
+                                                2024年居民医保最新缴费标准公布！与往年相比有哪些新变化？
+                                            </a>
+                                        </div>
+                                        <div class="time">
+                                            2024-08-30
+                                        </div>
+                                    </div>
+                                
+                                    <div class="item">
+                                        <div class="title">
+                                            <a href="./zwgk_52/zcfgyjd/zcjd/202404/t20240401_2382813.shtml"
+                                                title="《关于优化积极生育医疗保障具体措施的通知》政策解读"
+                                                target="_blank">
+                                                《关于优化积极生育医疗保障具体措施的通知》政策解读
+                                            </a>
+                                        </div>
+                                        <div class="time">
+                                            2024-04-01
+                                        </div>
+                                    </div>
+                                
+                                    <div class="item">
+                                        <div class="title">
+                                            <a href="./zwgk_52/zcfgyjd/zcjd/202403/t20240327_2379927.shtml"
+                                                title="关于废止《武汉市欺诈骗取医疗保障基金行为举报奖励实施细则》政策解读"
+                                                target="_blank">
+                                                关于废止《武汉市欺诈骗取医疗保障基金行为举报奖励实施细则》政策解读
+                                            </a>
+                                        </div>
+                                        <div class="time">
+                                            2024-03-18
+                                        </div>
+                                    </div>
+                                
+                            </div>
+                        </div>
+                        <script>
+                            $("#tab01 .tab-item").mouseover(function () {
+                                $(this).addClass('active')
+                            })
+                            $("#tab01 .tab-item").mouseout(function () {
+                                $("#tab01 .tab-item").removeClass('active')
+                            })
+                            $("#tab01 .tab-item").click(function () {
+                                $(this).addClass('choose').siblings().removeClass('choose').removeClass('active')
+                                $(".list01").hide()
+                                let tab = $(this).attr('tab')
+                                $("#list0" + tab).show()
+                            })
+                        </script>
+                        <div class="rightBox">
+                            <div class="imgBox img01">
+                                <a href="https://ybj.wuhan.gov.cn/zwgk_52/xxgkzn/">
+                                    <img src="./material/2025/img/gongkai1.png" alt="" />
+                                    <div class="gongkai_img_t">信息公开指南</div>
+                                </a>
+                            </div>
+                            <div class="imgBox img02">
+                                <a href="https://ybj.wuhan.gov.cn/zwgk_52/xxgk/qtzdgknr/jytabl/">
+                                    <img src="./material/2025/img/gongkai2.png" alt="" />
+                                    <div class="gongkai_img_t">建议提案</div>
+                                </a>
+                            </div>
+                            <div class="imgBox img03">
+                                <a href="https://ybj.wuhan.gov.cn/zwgk_52/xxgknb/">
+                                    <img src="./material/2025/img/gongkai3.png" alt="" />
+                                    <div class="gongkai_img_t">信息公开年报</div>
+                                </a>
+                            </div>
+                            <div class="imgBox img04">
+                                <a href="https://ybj.wuhan.gov.cn/zwgk_52/ysqgk/">
+                                    <img src="./material/2025/img/gongkai4.png" alt="" />
+                                    <div class="gongkai_img_t">依申请公开</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="white_1461">
+        <div class="hudong_box flex">
+            <div class="hudong_box1">
+                <div class="hudong_box_title_box flex">
+                    <div class="hudong_box_title">互动交流</div>
+                    <a href="http://ybj.wuhan.gov.cn/ybjznwd/index.shtml" style="display: block;">
+                        <img src="./material/2025/img/robot.png" alt="" style="width: 150px;" />
+                    </a>
+                </div>
+                <div class="hudong">
+                    <img src="./material/2025/img/hudong.png" alt="" />
+                    <div class="rightBox">
+                        <div class="imgBox">
+                            <a href="https://ybj.wuhan.gov.cn/hdjl/jzxx/">
+                                <img src="./material/2025/img/hudong1.png" alt="" />
+                                <div class="gongkai_img_t">局长信箱</div>
+                            </a>
+                        </div>
+                        <div class="imgBox">
+                            <a href="https://ybj.wuhan.gov.cn/hdjl/dczj/">
+                                <img src="./material/2025/img/hudong2.png" alt="" />
+                                <div class="gongkai_img_t">意见征集</div>
+                            </a>
+                        </div>
+                        <div class="imgBox">
+                            <a href="https://ybj.wuhan.gov.cn/hdjl/zxts/">
+                                <img src="./material/2025/img/hudong3.png" alt="" />
+                                <div class="gongkai_img_t">咨询投诉</div>
+                            </a>
+                        </div>
+                        <div class="imgBox">
+                            <a href="https://ybj.wuhan.gov.cn/hdjl/zxft/">
+                                <img src="./material/2025/img/hudong4.png" alt="" />
+                                <div class="gongkai_img_t">在线访谈</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hudong_box1">
+                <div class="hudong_box_title_box flex">
+                    <div class="hudong_box_title">咨询服务</div>
+                    <a class="more" href="https://ybj.wuhan.gov.cn/bsfw/" target="_blank">查看更多></a>
+                </div>
+                <div class="zixun_box">
+                    <a href="https://ybj.wuhan.gov.cn/bsfw/cjwtjd/">
+                        <div class="zixun">
+                            <img class="logo" src="./material/2025/img/zixun1.png" alt="" />
+                            <div>常见问题解答</div>
+                            <img class="zixun_r" src="./material/2025/img/zixun_r.png" alt="" />
+                        </div>
+                    </a>
+                    <a href="https://ybj.wuhan.gov.cn/bsfw/jbylbx/">
+                        <div class="zixun">
+                            <img class="logo" src="./material/2025/img/zixun2.png" alt="" />
+                            <div>基本医疗保险</div>
+                            <img class="zixun_r" src="./material/2025/img/zixun_r.png" alt="" />
+                        </div>
+                    </a>
+                    <a href="https://ybj.wuhan.gov.cn/bsfw/ydjy/">
+                        <div class="zixun">
+                            <img class="logo" src="./material/2025/img/zixun3.png" alt="" />
+                            <div>异地就医</div>
+                            <img class="zixun_r" src="./material/2025/img/zixun_r.png" alt="" />
+                        </div>
+                    </a>
+                    <a href="https://ybj.wuhan.gov.cn/bsfw/yyfwjgyzbcg/">
+                        <div class="zixun">
+                            <img class="logo" src="./material/2025/img/zixun4.png" alt="" />
+                            <div>医药服务价格与招标采购</div>
+                            <img class="zixun_r" src="./material/2025/img/zixun_r.png" alt="" />
+                        </div>
+                    </a>
+                    <a href="https://ybj.wuhan.gov.cn/bsfw/ddyycx/">
+                        <div class="zixun">
+                            <img class="logo" src="./material/2025/img/zixun5.png" alt="" />
+                            <div>定点医院查询</div>
+                            <img class="zixun_r" src="./material/2025/img/zixun_r.png" alt="" />
+                        </div>
+                    </a>
+                    <a href="https://ybj.wuhan.gov.cn/bsfw/ddydcx/">
+                        <div class="zixun">
+                            <img class="logo" src="./material/2025/img/zixun6.png" alt="" />
+                            <div>定点药店查询</div>
+                            <img class="zixun_r" src="./material/2025/img/zixun_r.png" alt="" />
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="hudong_box1">
+                <div class="hudong_box_title_box flex">
+                    <div class="hudong_box_title">专题专栏</div>
+                    <a class="more" href="https://ybj.wuhan.gov.cn/bmdt/ztzl/">查看更多></a>
+                </div>
+                <div class="zhuanti_box">
+                    <a href="https://ybj.wuhan.gov.cn/zwgk_52/ybdt/ybyw/202401/t20240119_2345978.shtml"
+                        title="关于居民医保缴费增长的问题，答复来了->" target="_blank">
+                        <img src="./material/2025/img/zhuanti.png" style="margin-bottom:10px;" alt="" />
+                    </a>
+                    
+                        <a class="zhuanti_list" href="./zwgk_52/ybdt/ybyw/202401/t20240119_2345978.shtml"
+                            title="关于居民医保缴费增长的问题，答复来了——" target="_blank">
+                            关于居民医保缴费增长的问题，答复来了——
+                        </a>
+                    
+                        <a class="zhuanti_list" href="./zwgk_52/ybdt/ybyw/202401/t20240108_2338297.shtml"
+                            title="国家医保局再次约谈上药第一生化 督促降低感染危重症患者用药不合理高价" target="_blank">
+                            国家医保局再次约谈上药第一生化 督促降低感染危重症患者用药不合理高价
+                        </a>
+                    
+                        <a class="zhuanti_list" href="./zwgk_52/ybdt/mtdt/202312/t20231229_2331961.shtml"
+                            title="维护医保基金安全 | 医保凭证可兑现和购买保健品？揭开药店欺诈骗保面纱" target="_blank">
+                            维护医保基金安全 | 医保凭证可兑现和购买保健品？揭开药店欺诈骗保面纱
+                        </a>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 通用底部 -->
+    <!-- 底部内容 -->
+<style>
+    footer {
+        margin-top: 0;
+        /* min-width: 1920px; */
+        height: 240px;
+        background: #0D48A2;
+        padding-top: 28px;
+        box-sizing: border-box;
+    }
+
+    footer .footer_main {
+        width: 1200px;
+        margin: 0 auto;
+    }
+
+    footer .footer_main_box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    footer .footer_main_box .cusSelect {
+        width: 388px;
+        height: 40px;
+        background: #295dac;
+        border-radius: 2px;
+        line-height: 40px;
+        text-align: center;
+        position: relative;
+        color: #e1e8f3;
+        cursor: pointer;
+    }
+
+    footer .cusSelect .select {
+        position: absolute;
+        right: 22px;
+        top: 18px;
+        width: 0;
+        height: 0;
+        border-top: 5px solid #bfcee6;
+        border-right: 5px solid transparent;
+        border-left: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+    }
+
+    footer .cusSelect .cusOpSet {
+        min-width: 100%;
+        max-height: 322px;
+        display: none;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        border: 1px solid #ccc;
+        position: absolute;
+        left: 0;
+        overflow-y: auto;
+        background-color: #fff;
+        z-index: 100;
+    }
+
+    footer .cusSelect .cusOption {
+        width: auto;
+        line-height: inherit;
+        font-size: inherit;
+        background-color: inherit;
+        padding: 0;
+        white-space: nowrap;
+    }
+
+    footer .cusSelect .cusOption a {
+        text-decoration: none;
+        color: #333;
+        display: block;
+        padding: 0 10px;
+    }
+
+    footer .cusSelect .cusOption:hover {
+        background-color: #0d48a2;
+    }
+
+    footer .cusSelect .cusOption:hover a {
+        color: #fff;
+    }
+
+    footer .footer_box {
+        width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 37px;
+
+    }
+
+    footer .footer_box_L {}
+
+    footer .footer_box_L .text1 {
+        display: flex;
+        align-items: center;
+        margin-bottom: 4px;
+        color: #b6c8e3;
+    }
+
+    footer .footer_box_L .text1 a {
+        color: #b6c8e3;
+    }
+
+    footer .footer_box_L .blod {
+        font-weight: 600;
+    }
+
+    footer .footer_box_L .text {
+        font-weight: 400;
+        font-size: 15px;
+        color: #b6c8e3;
+        line-height: 20px;
+        text-align: left;
+        font-style: normal;
+    }
+
+    footer .footer_box_L .line {
+        width: 1px;
+        height: 14px;
+        background-color: #b6c8e3;
+        margin: 0 8px;
+    }
+
+    footer .footer_box_L .guohui {
+        margin-right: 4px;
+    }
+
+    footer .footer_box_R {
+        display: flex;
+        align-items: center;
+
+    }
+
+    footer .footer_box_R a {
+        margin-right: 10px;
+    }
+
+    footer .footer_box_R .pic01 {
+        width: 100%;
+
+    }
+
+    footer .footer_box_R .pic02 {
+        width: 100%;
+    }
+</style>
+
+<footer>
+    <div class="footer_main">
+        <div class="footer_main_box">
+            <div class="cusSelect" id="gjbw">
+                <div class="select"></div>
+                <div class="cusTitle">国家医疗保障局</div>
+                <ul class="cusOpSet" style="bottom: 40px; left: 0px; right: unset; display: none;">
+                    <li class="cusOption"><a href="https://www.nhsa.gov.cn/">国家医疗保障局</a>
+                    </li>
+                </ul>
+            </div>
+            <span class="shu"></span>
+
+            <div class="cusSelect" id="sqszf">
+                <div class="select"></div>
+                <div class="cusTitle">各省医保网站</div>
+                <ul class="cusOpSet" style="bottom: 40px; left: 0px; right: unset; display: none;">
+                    <li class="cusOption"><a href="https://ybj.jiangsu.gov.cn/">江苏省医疗保障局</a>
+                    </li>
+                    <li class="cusOption"><a href="https://ylbzj.sc.gov.cn/">四川省医疗保障局</a>
+                    </li>
+                    <li class="cusOption"><a href="https://hsa.gd.gov.cn/">广东省医疗保障局</a>
+                    </li>
+                    <li class="cusOption"><a href="http://ybj.zj.gov.cn/">浙江省医疗保障局</a>
+                    </li>
+                    <li class="cusOption"><a href="https://ybj.fujian.gov.cn/">福建省医疗保障局</a>
+                    </li>
+                </ul>
+            </div>
+            <span class="shu"></span>
+
+            <div class="cusSelect" id="zgajg">
+                <div class="select"></div>
+                <div class="cusTitle">市州医保网站</div>
+                <ul class="cusOpSet" style="bottom: 40px; left: 0px; right: unset; display: none;">
+                    <li class="cusOption"><a href="https://ybj.wuhan.gov.cn/">武汉市</a>
+                    </li>
+                    <li class="cusOption"><a href="https://ybj.huangshi.gov.cn/">黄石市</a>
+                    </li>
+                    <li class="cusOption"><a href="https://ybj.yichang.gov.cn/">宜昌市</a>
+                    </li>
+                    <li class="cusOption"><a href="http://ybj.xiangyang.gov.cn/">襄阳市</a>
+                    </li>
+                    <li class="cusOption"><a href="http://ylbzj.jingmen.gov.cn/">荆门市</a>
+                    </li>
+                    <li class="cusOption"><a href="https://ybj.ezhou.gov.cn/">鄂州市</a>
+                    </li>
+                    <li class="cusOption"><a href="https://sylbzj.xiaogan.gov.cn/">孝感市</a>
+                    </li>
+                    <li class="cusOption"><a href="https://ybj.hg.gov.cn/">黄冈市</a></li>
+                    <li class="cusOption"><a href="https://www.xiantao.gov.cn/bmxxgk/sybj/">仙桃市</a></li>
+                    <li class="cusOption"><a href="https://www.hbqj.gov.cn/xxgk/xxgkml/szfbmxxgkml/sylbzj/">潜江市</a>
+                    </li>
+                    <li class="cusOption"><a href="https://www.tianmen.gov.cn/zwgk/bmhxzxxgkml/bm/sylbzj/">天门市</a>
+                    </li>
+                    <li class="cusOption"><a href="http://ybj.snj.gov.cn/">神农架林区</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <script>
+            $(".cusTitle").click(function () {
+                $(this).parent(".cusSelect").siblings(".cusSelect").children(".cusOpSet").hide()
+                $(this).next(".cusOpSet").toggle()
+            })
+        </script>
+        <div class="footer_box">
+            <div class="footer_box_L">
+                <div class="text1 blod" style="margin-bottom:6px;">
+                    <a href="../../wzxx/zddt/"><span class="text">网站地图</span></a>
+                    <div class="line"></div>
+                    <a href="../../wzxx/lxwm/"><span class="text">联系我们</span></a>
+                    <div class="line"></div>
+                    <a href="../../wzxx/bqsm/"><span class="text">版权声明</span></a>
+                </div>
+                <div class="text1">
+                    <span
+                        class="text">版权所有：武汉市医疗保障局&nbsp;&nbsp;&nbsp;&nbsp;主办：武汉市医疗保障局&nbsp;&nbsp;&nbsp;&nbsp;地址：武汉市江汉区青年路263号</span>
+                </div>
+                <div class="text1">
+                    <span class="text">医保咨询服务热线：12345&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;对外工作电话：027—87812393
+                        (工作日：上午8:30–12:00，下午2:30–5:30)</span>
+                </div>
+                <div class="text1">
+                    <a target="_blank" href="https://beian.miit.gov.cn">鄂ICP备20001624号-1</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a target="_blank"
+                        href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=42010302002175">
+                        <img src="../../material/2025/img/footer/icon_ga.png" />&nbsp;&nbsp;鄂公网安备
+                        42010302002175号</a>&nbsp;&nbsp;&nbsp;&nbsp;网站标识码：4201000099
+                </div>
+            </div>
+            <div class="footer_box_R">
+                <a
+                    href="https://zfwzgl.www.gov.cn/exposure/jiucuo.html?site_code=4201000099&url=http%3A%2F%2Fybj.wuhan.gov.cn%2F"><img class="pic01" src="../../material/2025/img/footer/pic01.png" alt="" /></a>
+                <a href="https://bszs.conac.cn/sitename?method=show&id=A69F207C8197EEA2E05310291AAC1925"><img class="pic02" src="../../material/2025/img/footer/pic02.png" alt="" /></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- 侧边栏内容 -->
+<link rel="stylesheet" href="../../material/css/layer.css?v=3.1.1" id="layuicss-layer" />
+<link type="text/css" rel="stylesheet" href="../../material/css/wltz.css" />
+<script type="text/javascript" src="../../material/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../material/js/wltz.js"></script>
+
+<!-------------模态框开始------------------->
+<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+        <button type="button" class="bootstrap-close" data-dismiss="modal" aria-hidden="true"></button>
+    </div>
+    <div class="modal-body">
+        <p>您所访问的页面将跳转到第三方网站，确定要继续吗?</p>
+        <input id="modalOuterURL" type="hidden" />
+    </div>
+    <div class="modal-footer">
+        <button class="bootstrap-btn default-btn" data-dismiss="modal" aria-hidden="true">放弃</button>
+        <button class="bootstrap-btn primary-btn" onclick="toRedirect()">继续访问</button>
+    </div>
+</div>
+<!-------------模态框结束------------------->
+<!-- 无障碍 -->
+<div class="fixed-right">
+    <a id="wuzhangai" href="javascript:void(0);"></a>
+</div>
+
+<style>
+    .fixed-right {
+        position: fixed;
+        top: 220px;
+        right: 18px;
+        z-index: 1000;
+    }
+
+    #wuzhangai {
+        display: block;
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        background-color: #fff;
+        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAABA9JREFUWAntV01sVFUUPufNMHRaIaEgAsFGCRBN+QlhWlpmkKBOExIjhBATNTEuJHHHghDYCAZjXJm4MLJgBQlRFyYsgEXfSKMzU9uZllhIQwhKIKLGmBSVWugwcw/fnfaO772+N+9RF268zfSee853ft75uW+G6D9eHMX/+Ph44teJqRNK5C2Nt5jPrGxvPdbZ2VmJot8ME28mNLIZ5+qIOSOQI+Dp41HDm+9uRVE0T+7E+vGc8qh0pACiGpsPLlIAuuZe4348LybKOVIP6IbTNTdpN00YxcH/mLAMhN4D/flSP4lk/QxB+caiRHuqp2fdX37yKLzQJmShjUGGhGjdZOWPviB5FH5oBux86UsReS3IGDPlIbsULOdpsazz2e2pq36Y0AD6C8PvkqKTfspReXDyIL4g8fyu3i23vDqhJYiTNeBVetwzStWiqpUtfnqhAbyY6brOzL/4KT8G7weVjPmWyfci0m+/nycmP8tmug/AuZCQzsKbgQ6ZbWA+NHLoNErLlppu5VXfb089fd/InfucANBwbBfK52Bwd27o8scAX2OLB0RJcAAiz/a9sO0bp+Go9JwAcsWRg5j73XUD1VqPDmA2A81srrWL5T1o1j+DQImF8uPO7u6fvPJGqrRgcHC8/e/a5B0RSurUsyXpl9PbvtMyjONtZKdD0/NZcDTZwsmOHTs23XXqu5pwqjb1unY+CzhlnOsz+L5N5DTWjMYkPDFN99NejCsAJWqfAcQXLPzA0Hq3LMo5z/OimXq9et4eWKMBSP/NXT2b7zjBL6W7vkB/LCFRy5z8EHozMrfXYJQi3VOu5QmAVyLZ+u93FwoHBFXD9qmX3+x8KT+6tUrVRgAYzi70Eb5OsDJ6rhKAOVEXCC01gH+zL07KFThtzD+ysejr/OUNTpvuAJhu1oXMawZKpRVOYBhtF0Y6ct+WTulPf76s7w9KpVIPsY26dFm5yuAKANGer4ORpuo0HXQphhxEascUyTv6wySrG3Ch+hibM8obHEAiQWcxrw80GLU6bBdGXWBjxLvnisO9aJy3DV+YTxsav2KGGjQIjKNrElwZqN9UzJ/MKsREVT/H6zjlNOCl7cGRjejuC+DHZmQ82JfpumhwSVpsM3HjhsSb5Ukj07srAM1Y1d52HKUoaBrrGVyvQ7gFP9K35Axr5v/Y2FibnS8fl5oawmMt0Vzo3W5ptfY7cZnMc/esGL2KIK5Cfg8Zed8pR8bnrtzw8FKp8Fcow06HtAYjV4jpNySyA07XI53/jDHTXY7H09nerdccOqGkbwBaa0AkXiuW30N6D8FhWzNLeLJ8jK0D+rtDM5yfLDAAAy4Wx5ZPSeUNdOUrmOP1yMBTqKP+ZYo3GxeR0rPZTMqUzKhF3h8BgnBhZCzKzbcAAAAASUVORK5CYII=);
+        background-repeat: no-repeat;
+        background-size: 32px 32px;
+        background-position: center center;
+        box-shadow: 0 0 8px rgb(0 0 0 / 10%);
+    }
+
+    #wuzhangai:hover {
+        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAABB9JREFUWAntVl1oVEcUPufemzVpLK3VWhUJVupPobshJCmGPFQEBaVU6c/SJFB8qLtRoUFsSV+aLi1FFEoLSqLxSWF344pSxBZai0t/rJGi5uchtT9SUVxCaYOan9WbvcczN87mzu7d3ZvtQ186cJkz53znzDczZ85cgP+4oZf534gkfL+kzI+A4C0bj3B87dKKrpOR4AMv/sUwRjGjtD2avFOOmUgn68Tw/ayuTEHz5CdX7gS76Zx2j7I3Ah6DlQPzRoDPPC+4my4PVFrhiYBIOEDYz+FS9seyrSsd/39EyR0oWQf84dg3QLTRLRIi/lble7Lh0sEtd93sXnRecsBfKBARrZp6cGdTIbsXvZdC9D0HChYORu8E2qMvFLQT3icyzg73BofdMCWPoDYcb7fI6nFznoMurWva8wOHW/7M9Sl5BKTpyVynMsaVBFDn5leSwFBP8BoC3nZznoPud8PSz7vhXXNAvH7XUmb34OHWHZzpRAhJfoDa3ALYOsRzhgafSDs7ZI+Wve9XPmYMXPwsOCXtzj6PAGc21oZjX/CWba7ffeJTBo/wDiQJqDABomev9rR95wzsVc4jwEnXISYXATIZax13I6RZScgUDfmcP9y3VUe6UwhVocEfP3e33My1Z7dKGJr2JJ6amJy+xbtQBYBkIDRfPdJ6Udj8oegN7mqEXFZDHAeNaoZ72sac/koSjk9kWmYmZwjSUTm5cNAQXJPIGayoTDRfI705F6MQ4Hx7VQLQV/mxlEXPafWtc1yOzHnUlOuXmwMrbQDC9aGDr91ygldtqOj79by5gPNjkVNfTCYLawFoWxZDJHJKaQoBDr5UWJHwLwXFg5PBoEjDQ7n6YmP/zmg9J2+WAB9vYyRCWiSClvRTjoBfvX+EgbdqoQT8m96XWTPEdcR5/x8/MxpX3g2FAJ/zdXtChJWNuxJL5jJ5fShREwjFjoqPn3BRP+Byb4PJq7nsjGNa6jGoBAjP2mACLT093eF0LCWbaHbxzr0tPsYuz+IR7GucHQMqeaAQ8BkYZWBagLlAvBfY2aeAZ4OoUl041gSE26VWBzomZQStX8p2T6DcBIXATKXCzwWQV6KDZcXrwvEGJUDOwB9K+KeBvrTxtg1/GjjS9pWEzX+i6hyX8tkKifS0tIleISAUa5cZH7LDj0LmrF2RIer3h2L7RJUUOtkC735dHQjFGWv2M9sFQs+7dsMH816XGNFfOLD1HqH+CtvED8k9LmgRoZeN9fntxd2nF06Z6VNM4SVpZVIZnmGIx6O82hoer2aCs9cYYaxC15uvdL85In289K4EhOP6SNL4O5X6gJ/TvVwfqosF46v2A2jGDvHvUAznZitIQIID7acXg5Vu5er0MvGqebufQaBJtt/kHbnARSs62NtqH5n0mUv/EGbWUpoNJz2bAAAAAElFTkSuQmCC);
+    }
+
+    @media screen and (max-width: 1200px) {
+        .fixed-right {
+            display: none;
+        }
+    }
+</style>
+
+<script>
+    // 无障碍
+    addBarrierFree();
+    // 注意：1.文件路径   2.对应的script标签中的data值
+    function addBarrierFree() {
+        var url = "https://ybj.wuhan.gov.cn";  // 对应网站的链接
+        var str = '<link href="' + url + '/material/wza/indeci/static/css/iconfont.css" rel="stylesheet" type="text/css" />' +
+            '<link href="' + url + '/material/wza/indeci/static/css/indeci.css" rel="stylesheet" type="text/css" />' +
+            '<script src="' + url + '/material/wza/indeci/static/js/iframe.js" id="barrierFree" data="sn=E9F64E36437800DB611D2EB99CFCDCC60CB734F93284C7F6C2D6672907F7F9CB&amp;rcode=69047647BFF3264DC4F720EC496F4C9DE64127830D4A3F44C1895794DECA9222003EC03B6082B1D616EB3045AA4B89DED1621AC006BC1ECE526A815EAB0E557F87C09512033ED9916A75F5EED3D4274C391C8E37E9E15C8144236094FB01FBA6F86869BBB475FFAF5C1A0FEE6F0B64FB0EDAE139B80F00B2C9CB179C701736A1&helpsrc=/material/wza/help.html"><\/script>';
+        $('body').append(str);
+    }
+    //如果已开启无障碍功能，则不再显示无障碍入口按钮
+    if (window.localStorage.getItem("isOpenTool")==true) {
+        $('.fixed-right #wuzhangai').hide();
+    }
+</script>
+
+<!----- 切换无slide 开始-------->
+<script>
+    $('.tab a:not(.more)').mouseover(function (event) {
+        $(this).addClass('current').siblings('a:not(.more)').removeClass('current');
+        $(this).parents('.tab-pane').find('.pane').children('ul,div').hide().eq($(this).index()).addClass('animated slideInRight').show();
+    });
+</script>
+
+<!-- 网站统计 -->
+<script type="text/javascript">
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        }
+        else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+
+        var src = (document.location.protocol == "http:") ? "http://js.passport.qihucdn.com/11.0.1.js?b2f9b512c582283daa0fa60a1f245f2c" : "https://jspassport.ssl.qhimg.com/11.0.1.js?b2f9b512c582283daa0fa60a1f245f2c";
+        document.write('<script src="' + src + '" id="sozz"><\/script>');
+    });
+</script>
+<script id="_trs_ta_js" src="//ta.trs.cn/c/js/ta.js?mpid=3413" async="async" defer="defer"></script>
+
+</body>
+
+</html>
