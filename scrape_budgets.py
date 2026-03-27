@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-中国百强城市2026年部门预算爬取脚本 v5
-修复: KeyError'completed'、进度丢失、线程安全
+中国百强城市2026年部门预算爬取脚本 v6
+修复: 僵尸线程、单城市超时、进度丢失、断点续爬
 """
 
 import json
@@ -337,13 +337,13 @@ def process_city(city_info, progress):
     city_folder = str(BASE_DIR / city_key)
     os.makedirs(city_folder, exist_ok=True)
 
-    # 线程安全检查是否已完成
+    # 线程安全检查是否已完成（>=5个部门就跳过，避免重复爬取）
     try:
         with progress_lock:
             completed = progress.get('completed', {})
             if city_key in completed:
                 prev = completed[city_key]
-                if isinstance(prev, dict) and prev.get('found', 0) >= 10:
+                if isinstance(prev, dict) and prev.get('found', 0) >= 5:
                     logger.info(f"[{city}] 已完成({prev['found']}个部门)，跳过")
                     return {"found": prev['found'], "downloaded": prev.get('downloaded', 0)}
     except Exception as e:
@@ -493,6 +493,8 @@ def run(start=1, end=100):
     total_found = 0
     total_downloaded = 0
 
+    CITY_TIMEOUT = 300  # 单城市最多5分钟
+
     with ThreadPoolExecutor(max_workers=MAX_WORKERS) as pool:
         futures = {}
         for city_info in ordered:
@@ -503,15 +505,21 @@ def run(start=1, end=100):
         for f in as_completed(futures):
             city_info = futures[f]
             try:
-                result = f.result()
+                result = f.result(timeout=CITY_TIMEOUT)
                 if result and isinstance(result, dict):
                     total_found += result.get('found', 0)
                     total_downloaded += result.get('downloaded', 0)
+            except TimeoutError:
+                logger.error(f"[{city_info['city']}] 超时({CITY_TIMEOUT}秒)，跳过")
+                try:
+                    city_key = f"{city_info['rank']:03d}_{city_info['city']}"
+                    update_city_progress(progress, city_key, 0, 0)
+                except:
+                    pass
             except Exception as e:
                 logger.error(f"[{city_info['city']}] 线程异常: {e}")
                 import traceback
                 logger.error(traceback.format_exc())
-                # 即使线程异常也要记录
                 try:
                     city_key = f"{city_info['rank']:03d}_{city_info['city']}"
                     update_city_progress(progress, city_key, 0, 0)
