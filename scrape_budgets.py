@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-中国百强城市2026年部门预算爬取脚本 v10
-修复: 去除多线程(消除竞态条件)、改善错误恢复、增强路径探测
+中国百强城市2026年部门预算爬取脚本 v11
+修复: 移除https→http转换、html.parser替代lxml、减少超时、更好错误隔离
 """
 
 import json
@@ -33,9 +33,10 @@ HEADERS = {
     'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8',
     'Accept-Encoding': 'gzip, deflate',
 }
-TIMEOUT = 25
-RETRY = 3
+TIMEOUT = 15
+RETRY = 2
 MAX_WORKERS = 1  # v10: 顺序处理,不用多线程
+MAX_PROBE_PATHS = 15  # v11: 最多探测15个路径就停止
 DELAY_PAGE = 0.5
 DELAY_CITY = 2
 
@@ -156,13 +157,7 @@ def count_city_files(city_key):
 
 # ========== 核心工具 ==========
 
-def fix_url(url):
-    if url and url.startswith('https://'):
-        return 'http://' + url[8:]
-    return url
-
 def fetch(session, url, timeout=TIMEOUT):
-    url = fix_url(url)
     for i in range(RETRY):
         try:
             r = session.get(url, timeout=timeout, allow_redirects=True, verify=False)
@@ -222,7 +217,6 @@ def is_main_dept_budget(text, dept_name, city):
     return score > 0, score
 
 def download_pdf(session, url, path):
-    url = fix_url(url)
     try:
         r = session.get(url, timeout=60, stream=True, verify=False)
         if r.status_code == 200:
@@ -245,12 +239,9 @@ def extract_all_links(session, url, city):
     if not r:
         return [], ""
     try:
-        soup = BeautifulSoup(r.text, 'lxml')
+        soup = BeautifulSoup(r.text, 'html.parser')
     except:
-        try:
-            soup = BeautifulSoup(r.text, 'html.parser')
-        except:
-            return [], r.text
+        return [], r.text
     results = []
     seen_urls = set()
     for a in soup.find_all('a', href=True):
@@ -258,7 +249,7 @@ def extract_all_links(session, url, city):
         href = a['href'].strip()
         if not text or not href or href.startswith('#') or href.startswith('javascript'):
             continue
-        full = urljoin(fix_url(url), href)
+        full = urljoin(url, href)
         if full in seen_urls:
             continue
         seen_urls.add(full)
@@ -340,15 +331,20 @@ COMMON_BUDGET_PATHS = [
 ]
 
 def probe_budget_page(session, website, city):
+    probed = 0
     for path in COMMON_BUDGET_PATHS:
-        url = urljoin(fix_url(website), path)
+        if probed >= MAX_PROBE_PATHS:
+            logger.info(f"  [{city}] 已探测{probed}个路径,达到上限,停止探测")
+            break
+        url = urljoin(website, path)
         try:
-            r = fetch(session, url, timeout=10)
+            r = fetch(session, url, timeout=5)
             if r and len(r.text) > 500 and '预算' in r.text:
                 logger.info(f"  [{city}] 探测到预算页: {url}")
                 return url
         except:
             pass
+        probed += 1
         time.sleep(0.2)
     return None
 
@@ -357,41 +353,42 @@ def probe_budget_page(session, website, city):
 def process_city(city_info, progress):
     rank = city_info['rank']
     city = city_info['city']
-    website = fix_url(city_info['website'])
-    budget_url = fix_url(city_info.get('budget_url') or '')
+    website = city_info['website']
+    budget_url = city_info.get('budget_url') or ''
     city_key = f"{rank:03d}_{city}"
     city_folder = str(BASE_DIR / city_key)
-    os.makedirs(city_folder, exist_ok=True)
-
-    # ===== 磁盘检测: 已有>=5个文件就跳过 =====
-    existing_count = count_city_files(city_key)
-    if existing_count >= 5:
-        logger.info(f"[{city}] 磁盘已有{existing_count}个文件，跳过")
-        update_city_progress(progress, city_key, existing_count, existing_count)
-        return {"found": existing_count, "downloaded": existing_count}
-
-    # 也检查progress文件(作为备用)
-    try:
-        completed = progress.get('completed', {})
-        if city_key in completed:
-            prev = completed[city_key]
-            if isinstance(prev, dict) and prev.get('found', 0) >= 5:
-                logger.info(f"[{city}] 进度记录已完成({prev['found']}个部门)，跳过")
-                return {"found": prev['found'], "downloaded": prev.get('downloaded', 0)}
-    except Exception as e:
-        logger.warning(f"[{city}] 读取进度异常: {e}")
-
-    logger.info(f"{'='*50}")
-    logger.info(f"[{rank}] {city} (已有{existing_count}个文件)")
-    logger.info(f"{'='*50}")
-
-    session = requests.Session()
-    session.headers.update(HEADERS)
-    session.verify = False
 
     result = {"found": 0, "downloaded": 0, "depts": [], "missing": []}
 
     try:
+        os.makedirs(city_folder, exist_ok=True)
+
+        # ===== 磁盘检测: 已有>=5个文件就跳过 =====
+        existing_count = count_city_files(city_key)
+        if existing_count >= 5:
+            logger.info(f"[{city}] 磁盘已有{existing_count}个文件，跳过")
+            update_city_progress(progress, city_key, existing_count, existing_count)
+            return {"found": existing_count, "downloaded": existing_count}
+
+        # 也检查progress文件(作为备用)
+        try:
+            completed = progress.get('completed', {})
+            if city_key in completed:
+                prev = completed[city_key]
+                if isinstance(prev, dict) and prev.get('found', 0) >= 5:
+                    logger.info(f"[{city}] 进度记录已完成({prev['found']}个部门)，跳过")
+                    return {"found": prev['found'], "downloaded": prev.get('downloaded', 0)}
+        except Exception as e:
+            logger.warning(f"[{city}] 读取进度异常: {e}")
+
+        logger.info(f"{'='*50}")
+        logger.info(f"[{rank}] {city} (已有{existing_count}个文件)")
+        logger.info(f"{'='*50}")
+
+        session = requests.Session()
+        session.headers.update(HEADERS)
+        session.verify = False
+
         if not budget_url:
             budget_url = probe_budget_page(session, website, city)
             if not budget_url:
@@ -533,7 +530,7 @@ def run(start=1, end=100):
 
     logger.info(f"开始爬取 {len(cities)} 个城市, 32个目标部门")
     logger.info(f"已完成: {disk_done}个城市, 有URL: {len(with_url)}, 无URL需探测: {len(without_url)}")
-    logger.info(f"v10: 顺序处理模式(更稳定)")
+    logger.info(f"v11: 顺序处理模式(移除https转换、html.parser、减超时)")
 
     total_found = 0
     total_downloaded = 0
