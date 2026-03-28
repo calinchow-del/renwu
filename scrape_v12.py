@@ -46,8 +46,8 @@ USER_AGENTS = [
     'Mozilla/5.0 (Macintosh; Intel Mac OS X 14_5) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.5 Safari/605.1.15',
     'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36',
 ]
-TIMEOUT = 40
-RETRY = 4
+TIMEOUT = 20
+RETRY = 2
 MAX_LIST_PAGES = 50       # 最多翻50页列表页
 MAX_DETAIL_PER_DEPT = 3   # 每个部门最多进3个详情页找PDF
 DELAY_PAGE = 0.2
@@ -185,7 +185,7 @@ def fetch(session, url, timeout=TIMEOUT):
     for try_url in urls_to_try:
         for i in range(RETRY):
             try:
-                r = session.get(try_url, timeout=timeout, allow_redirects=True, verify=False)
+                r = session.get(try_url, timeout=(8, timeout), allow_redirects=True, verify=False)
                 r.encoding = r.apparent_encoding or 'utf-8'
                 if r.status_code == 200:
                     return r
