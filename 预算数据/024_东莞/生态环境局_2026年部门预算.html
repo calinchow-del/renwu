@@ -1,0 +1,995 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=7; IE=8" >
+<title>跳转中...</title>
+<link href="css/loading.css" rel="stylesheet" type="text/css">
+<script src="/code/xhtml/js/jquery/172/jquery.js"></script>
+<style>
+strong {
+	color:red;
+}
+.loading3 {
+	border-radius: 50%;
+	font-size: 20px;
+	height: 100px;
+	line-height: 90px;
+	position: relative;
+	text-align: center;
+	width: 100px;
+}
+.loading3 > div:nth-child(2), .loading3 > div:nth-child(3) {
+ background-color: rgba(255, 255, 255, 0.2);
+ border: 5px solid #FFF;
+ border-radius: 50%;
+ box-shadow: 0 0 5px 0 #009933;
+ height: 100px;
+ position: absolute;
+ top: 0px;
+
+    /* set top and bottom border widths to 0 */
+    border-top-width: 0;
+ border-bottom-width: 0;
+
+    /* css3 animation */
+    -webkit-animation: anim3 2s linear infinite;
+ -moz-animation: anim3 2s linear infinite;
+ -ms-animation: anim3 2s linear infinite;
+ -o-animation: anim3 2s linear infinite;
+ animation: anim3 2s linear infinite;
+}
+.loading3 > div:nth-child(2) {
+ border-color: #FFF;
+ left: 0px;
+ width: 90px;
+}
+.loading3 > div:nth-child(3) {
+ border-color: #009933;
+ left: -5px;
+ width: 100px;
+
+    /* css3 delay */
+    -webkit-animation-delay:0.5s;
+ -moz-animation-delay:0.5s;
+ -ms-animation-delay:0.5s;
+ -o-animation-delay:0.5s;
+ animation-delay:0.5s;
+}
+
+/* css3 keyframes - animation 3 */
+@-webkit-keyframes anim3 {
+ from {
+-webkit-transform: rotateY(0deg);
+}
+ 50% {
+-webkit-transform: rotateY(180deg);
+}
+to {
+	-webkit-transform: rotateY(360deg);
+}
+}
+@-moz-keyframes anim3 {
+ from {
+-moz-transform: rotateY(0deg);
+}
+ 50% {
+-moz-transform: rotateY(180deg);
+}
+to {
+	-moz-transform: rotateY(360deg);
+}
+}
+@-ms-keyframes anim3 {
+ from {
+-ms-transform: rotateY(0deg);
+}
+ 50% {
+-ms-transform: rotateY(180deg);
+}
+to {
+	-ms-transform: rotateY(360deg);
+}
+}
+@-o-keyframes anim3 {
+ from {
+-o-transform: rotateY(0deg);
+}
+ 50% {
+-o-transform: rotateY(180deg);
+}
+to {
+	-o-transform: rotateY(360deg);
+}
+}
+@keyframes anim3 {
+ from {
+transform: rotateY(0deg);
+}
+ 50% {
+transform: rotateY(180deg);
+}
+to {
+	transform: rotateY(360deg);
+}
+}
+body {
+	margin:0;
+	color: #999999
+}
+.main {
+	width: 500px;
+	margin:auto;
+	padding:200px 0 0 0;
+}
+.fl {
+	float:left;
+}
+.fr {
+	float:right;
+	width:350px;
+	line-height:25px;
+}
+.cl {
+	clear:both;
+}
+a {
+	display: block;
+	text-align: center;
+	font-size: 20px;
+	margin-top: 200px;
+}
+.loading {
+	width: 100px;
+	height: 40px;
+	padding:15px 0 0 0;
+}
+.loading span {
+	display: inline-block;
+	width: 8px;
+	height: 100%;
+	border-radius: 4px;
+	background: lightgreen;
+	-webkit-animation: load 1s ease infinite;
+	animation: load 1s ease infinite;
+}
+@-webkit-keyframes load {
+0%, 100% {
+height: 40px;
+background: lightgreen;
+}
+50% {
+height: 70px;
+margin: -15px 0;
+background: lightblue;
+}
+}
+.loading span:nth-child(2) {
+-webkit-animation-delay:0.2s;
+animation-delay:0.2s;
+}
+.loading span:nth-child(3) {
+-webkit-animation-delay:0.4s;
+animation-delay:0.4s;
+}
+.loading span:nth-child(4) {
+-webkit-animation-delay:0.6s;
+animation-delay:0.6s;
+}
+.loading span:nth-child(5) {
+-webkit-animation-delay:0.8s;
+animation-delay:0.8s;
+}
+</style>
+<script type="text/javascript">
+	$(document).ready(function(){      
+		var name = decodeURI(getArgsFromHref(window.location.href,'from'));
+		if(name == ''){
+			//异常处理
+			$('strong').parent().html('from,请在地址栏添加你要访问的部门或镇街,具体方法为在.html后面加上?from=xxx,其中xxx为你要访问的部门');
+			return;
+		}
+		
+		var url = $('span:contains("-'+ name +'")').attr('data-from');
+		if(typeof(url) === 'undefined'){
+			//异常处理
+			$('strong').parent().html('查无此部门，请在该页面添加白名单！');
+			return;
+		}
+		
+		//$('strong').html($('span:contains("-'+ name +'")').text());
+		$('strong').html(name);
+		setTimeout(function(){window.location.href=url;},3000);		
+			
+	});
+		
+	function getArgsFromHref(sHref, sArgName){
+	
+		var args    = sHref.split("?");
+		var retval = "";
+
+		if(args[0] == sHref) /*参数为空*/
+
+
+
+
+
+
+
+
+
+
+
+
+		{
+		   return retval; /*无需做任何处理*/
+		}  
+		var str = args[1];
+		args = str.split("&");
+		for(var i = 0; i < args.length; i ++)
+		{
+		  str = args[i];
+		  var arg = str.split("=");
+		  if(arg.length <= 1) continue;
+		  if(arg[0] == sArgName) retval = arg[1]; 
+		}
+		return retval;
+	}
+		
+			</script>
+</head>
+<body>
+<div class="main">
+  <div class="fl loading"> <span></span> <span></span> <span></span> <span></span> <span></span> </div>
+  <div class="fr"> 此内容由  <strong></strong> 提供服务 <br>
+    页面跳转中，请您稍候···</div>
+  <div class="cl"></div>
+</div>
+<div style="TEXT-ALIGN: center; display: none"> <span data-from="http://dgjj.dg.gov.cn/" target="_blank">-中共东莞市纪律检查委员会（东莞市监察委员会）</span> <span data-from="http://www.dg.gov.cn/" target="_blank">-中共东莞市委办公室</span>
+<span data-from="http://www.ccdi.gov.cn/" target="_blank">-中央纪委监察部网站</span>
+<span data-from="https://www.sg.gov.cn/">-韶关</span>
+<span data-from="http://www.beijing.gov.cn">-北京</span> 
+  
+ <span data-from="http://www.jl.gov.cn">-吉林</span> 
+<span data-from="http://www.bjsupervision.gov.cn/" target="_blank">-北京纪检</span>
+<span data-from="http://www.gxjjw.gov.cn" target="_blank">-广西省纪委</span>
+<span data-from="http://www.ccdijl.gov.cn/" target="_blank">-吉林省监察厅</span>
+<span data-from="http://www.shjcw.gov.cn" target="_blank">-上海市纪委</span>
+<span data-from="http://www.zjsjw.gov.cn" target="_blank">-浙江省纪委</span>
+<span data-from="http://www.gzjjjc.gov.cn" target="_blank">-广州市纪委</span>
+  <span data-from="http://www.gdqy.gov.cn">-清远</span>
+  <span data-from="http://www.yangjiang.gov.cn">-阳江</span>
+<span data-from="http://www.qyjj.gov.cn" target="_blank">-清远市纪委</span>
+      <span data-from="http://www.sg.gov.cn" target="_blank">-韶关市纪委</span>
+      <span data-from="http://www.yjlz.gov.cn" target="_blank">-阳江市纪委</span>
+       <span data-from="http://czj.dg.gov.cn" target="_blank">东莞市财政局</span>
+      <span data-from="http://www.dg.gov.cn" target="_blank">-东莞市政府网</span>
+<span data-from="http://www.gdjct.gd.gov.cn/" target="_blank">-南粤清风网</span>
+ <span data-from="http://www.dg.gov.cn/wsxf" target="_blank">-市信访局</span>
+  <span data-from="http://bmj.dg.gov.cn/" target="_blank">-市国家保密局</span>
+   <span data-from="http://dgzzb.dg.gov.cn/" target="_blank">-中共东莞市委组织部</span>
+   <span data-from="https://www.hmo.gov.cn/" target="_blank">-国务院港澳办</span>
+   <span data-from="https://gd.huaxia.com/gdtb/" target="_blank">-粤台视窗</span>
+   <span data-from="http://hmo.gd.gov.cn/" target="_blank">-省港澳办</span>
+    
+     <span data-from="http://dg.wenming.cn/" target="_blank">-中共东莞市委宣传部</span>
+     <span data-from="http://www.timedg.com/" target="_blank">-东莞报业传媒集团</span>
+      <span data-from="http://www.sun0769.com/" target="_blank">-东莞广播电视台</span>
+         <span data-from="https://zgw.dg.gov.cn/" target="_blank">-中共东莞市直属机关工作委员会</span>
+          <span data-from="http://dgtga.dg.gov.cn/" target="_blank">-中共东莞市委台湾工作办公室</span>
+           <span data-from="http://dgbb.dg.gov.cn/" target="_blank">-中共东莞市委机构编制委员会办公室</span> 
+           <span data-from="http://dx.dg.gov.cn/" target="_blank">-中共东莞市委党校</span> 
+           
+             <span data-from="https://library.ougd.cn/" target="_blank">-数字图书馆</span> 
+             <span data-from="http://www.dg.gov.cn/" target="_blank">-市人民政府办公室</span> 
+              <span data-from="http://im.dg.gov.cn" target="_blank">-市工业和信息化局</span> 
+              <span data-from="http://edu.dg.gov.cn" target="_blank">-市教育局</span> 
+              <span data-from="http://dgstb.dg.gov.cn" target="_blank">-市科学技术局</span> 
+              <span data-from="http://gaj.dg.gov.cn/" target="_blank">-市公安局</span> 
+              <span data-from="http://mzj.dg.gov.cn" target="_blank">-市民政局</span>
+               <span data-from="http://dgsfj.dg.gov.cn/" target="_blank">-市司法局</span>
+                <span data-from="http://czj.dg.gov.cn/" target="_blank">-市财政局</span> 
+                <span data-from="http://dghrss.dg.gov.cn/" target="_blank">-市人力资源和社会保障局</span> 
+                 <span data-from="http://nr.dg.gov.cn/" target="_blank">-市自然资源局</span> 
+                 <span data-from="http://dgepb.dg.gov.cn/" target="_blank">-市生态环境局</span> 
+                 <span data-from="http://zjj.dg.gov.cn/" target="_blank">-市住房和城乡建设局</span>
+                  <span data-from="http://jtj.dg.gov.cn/" target="_blank">-市交通运输局</span> 
+                  <span data-from="http://dgwater.dg.gov.cn/" target="_blank">-市水务局</span> 
+                  <span data-from="http://nyncj.dg.gov.cn" target="_blank">-市农业农村局</span> 
+                  <span data-from="http://lyj.dg.gov.cn/" target="_blank">-市林业局</span> 
+                  <span data-from="http://dgboc.dg.gov.cn" target="_blank">-市商务局</span> 
+                    <span data-from="http://tjj.dg.gov.cn/" target="_blank">-市统计局</span>
+                    <span data-from="http://dgamr.dg.gov.cn/" target="_blank">-市市场监督管理局</span>
+                    <span data-from="http://dgamr.dg.gov.cn/" target="_blank">-东莞市市场监督管理局（知识产权局）</span>
+                  <span data-from="http://wglt.dg.gov.cn/" target="_blank">-市文化广电旅游体育局</span>
+                   <span data-from="http://dghb.dg.gov.cn/" target="_blank">-市卫生健康局</span> 
+                   <span data-from="http://audit.dg.gov.cn/" target="_blank">-市审计局</span>
+                    <span data-from="http://dgfao.dg.gov.cn/" target="_blank">-市外事侨务局（市港澳事务局）</span>
+
+                     <span data-from="http://dgcg.dg.gov.cn/" target="_blank">-市城市管理和综合执法局</span> 
+                     <span data-from="http://jrj.dg.gov.cn/" target="_blank">-市金融工作局</span> 
+                     <span data-from="http://dag.dg.cn/" target="_blank">-市档案馆</span> 
+
+                     <span data-from="http://www.dg.gov.cn/gzw/" target="_blank">-市人民政府国有资产监督管理委员会</span> 
+                     <span data-from="http://rsks.gd.gov.cn/" target="_blank">-市人事考试管理办公室</span> 
+                     <span data-from="http://dzj.dg.gov.cn/" target="_blank">-市地震局</span> 
+                     <span data-from="http://fipc.dg.gov.cn/" target="_blank">-市外商投资促进中心</span> 
+                     <span data-from="http://fipc.dg.gov.cn/" target="_blank">-投资东莞</span> 
+                     <span data-from="http://www.dgswhg.com/" target="_blank">-市文化馆</span> 
+                     <span data-from="http://www.dglib.cn/" target="_blank">-市图书馆</span> 
+                      <span data-from="http://dgtga.dg.gov.cn/" target="_blank">-市人民政府台湾事务局</span> 
+                      <span data-from="http://dgbdc.dg.gov.cn/" target="_blank">-市不动产登记中心</span> 
+                      <span data-from="http://glj.dg.gov.cn/" target="_blank">-市公路管理局</span> 
+                      <span data-from="http://dgcjj.dg.gov.cn/" target="_blank">-市城建工程管理局</span> 
+                      <span data-from="http://www.dg.gov.cn/dgcoop/" target="_blank">-市供销合作联社</span> 
+                      <span data-from="http://dggjj.dg.gov.cn" target="_blank">-市住房公积金管理中心</span> 
+                      <span data-from="http://dg.gov.cn/ccpit/" target="_blank">-中国国际贸易促进委员会东莞市委员会</span> 
+                      <span data-from="http://dgrd.dg.gov.cn/" target="_blank">-市人大</span> 
+                      <span data-from="http://dgzx.dg.gov.cn/" target="_blank">-市政协</span> 
+                      <span data-from="http://www.dgcourt.gov.cn/" target="_blank">-市中级人民法院</span> 
+                      <span data-from="http://dyfy.dg.gov.cn/" target="_blank">-第一人民法院</span> 
+                      <span data-from="http://defy.dg.gov.cn/" target="_blank">-第二人民法院</span> 
+                      <span data-from="https://www.dsfy.dg.gov.cn/" target="_blank">-第三人民法院</span> 
+                      <span data-from="http://www.dongguan.jcy.gov.cn/" target="_blank">-市人民检察院</span> 
+                      <span data-from="http://sqjcy.dg.gov.cn/" target="_blank">-第一市区人民检察院</span> 
+                      <span data-from="http://www.dongguandesq.jcy.gov.cn/" target="_blank">-第二市区人民检察院</span> 
+                      <span data-from="http://dssqjcy.dg.gov.cn/" target="_blank">-第三市区人民检察院</span> 
+                      <span data-from="http://dgwomen.dg.gov.cn/" target="_blank">-市妇女联合会</span> 
+                      <span data-from="http://www.dgyouth.gd.cn/" target="_blank">-共青团东莞市委员会</span> 
+                      <span data-from="http://dgzgh.dg.gov.cn/" target="_blank">-市总工会</span> 
+                      <span data-from="http://www.dggsl.org/" target="_blank">-市工商联</span> 
+                      
+                      <span data-from="http://ql.dg.gov.cn/" target="_blank">-市侨联</span> 
+                      <span data-from="http://www.gddgdpf.org.cn/" target="_blank">-市残疾人联合会</span>
+                       <span data-from="http://www.dgkx.gov.cn/" target="_blank">-市科学技术协会</span> 
+                       <span data-from="http://www.dghszh.org.cn/" target="_blank">-市红十字会</span> 
+                       <span data-from="http://guangdong.chinatax.gov.cn/gdsw/dgsw/dgsw_index.shtml" target="_blank">-市税务局</span> 
+                       <span data-from="http://gd.cma.gov.cn/dgsqxj/" target="_blank">-市气象局</span> 
+                       <span data-from="http://gd.spb.gov.cn/gdsyzglj/c106323/indexshi.shtml" target="_blank">-市邮政管理局</span> 
+                       <span data-from="http://gd.189.cn/" target="_blank">-东莞电信</span> 
+                       <span data-from="http://gdzd.stats.gov.cn/dgdcd/" target="_blank">-国家统计局东莞调查队</span> 
+                       
+                           <span data-from="http://ssl.dg.gov.cn/" target="_blank">-松山湖(生态园)</span>
+                            <span data-from="http://bhwxq.dg.gov.cn/" target="_blank">-东莞滨海湾新区网站</span> 
+                            <span data-from="http://dgsx.dg.gov.cn/" target="_blank">-东莞水乡</span> 
+                            <span data-from="http://www.mfa.gov.cn">-外交部</span> 
+                            <span data-from="http://www.ndrc.gov.cn">-发展改革委</span>
+                             <span data-from="http://www.moe.gov.cn">-教育部</span> 
+                             <span data-from="http://www.most.gov.cn">-科技部</span> 
+                             <span data-from="http://www.miit.gov.cn">-工业和信息化部</span>
+                              <span data-from="http://www.mps.gov.cn">-公安部</span> 
+                               <span data-from="http://www.mca.gov.cn">-民政部</span> 
+                               <span data-from="http://www.moj.gov.cn">-司法部</span> 
+                               <span data-from="http://www.mof.gov.cn">-财政部</span> 
+                               <span data-from="http://www.mohrss.gov.cn">-人力资源社会保障部</span> 
+                               <span data-from="http://www.mnr.gov.cn/">-自然资源部</span> 
+                               <span data-from="http://www.mohurd.gov.cn">-住房和城乡建设部</span>
+                                <span data-from="http://www.12306.cn/mormhweb/">-铁道部</span> 
+                                <span data-from="http://www.mwr.gov.cn">-水利部</span>
+                                 <span data-from="http://www.mofcom.gov.cn">-商务部</span> 
+                                  <span data-from="http://www.pbc.gov.cn">-人民银行</span> 
+                                  <span data-from="http://www.audit.gov.cn">-审计署</span> 
+                                  <span data-from="http://www.sasac.gov.cn">-国资委</span> 
+                                  <span data-from="http://www.customs.gov.cn">-海关总署</span> 
+                                  <span data-from="http://www.chinatax.gov.cn">-税务总局</span> 
+                                     <span data-from="http://www.sport.gov.cn">-体育总局</span>
+                                      <span data-from="https://www.mem.gov.cn/">-安全监管总局</span> 
+    									<span data-from="https://www.mem.gov.cn/">-国家应急管理部</span> 
+  										<span data-from="http://yjgl.gd.gov.cn/">-广东省应急管理厅</span> 
+                                      <span data-from="http://www.stats.gov.cn">-统计局</span> 
+                                      <span data-from="http://www.forestry.gov.cn">-林业局</span>
+                               
+                                      <span data-from="http://www.ggj.gov.cn">-国管局</span> 
+                                      <span data-from="http://www.gqb.gov.cn">-侨办</span> 
+                                      <span data-from="http://www.hmo.gov.cn">-港澳办</span>
+                                    
+                                       <span data-from="http://www.xinhuanet.com">-新华社</span> 
+                                       <span data-from="http://www.cas.cn">-中科院</span> 
+                                       <span data-from="http://www.cssn.cn">-社科院</span> 
+ 														 
+                                       <span data-from="http://www.cae.cn">-工程院</span> 
+                                       <span data-from="http://www.drc.gov.cn">-发展研究中心</span> 
+                                        <span data-from="http://www.cma.gov.cn">-气象局</span> 
+                                        <span data-from="http://www.csrc.gov.cn">-证监会</span>
+                                         <span data-from="http://www.ssf.gov.cn">-社保基金会</span>
+                                          <span data-from="http://www.nsfc.gov.cn">-自然科学基金会</span>
+                                           <span data-from="http://www.scio.gov.cn">-新闻办</span> 
+                                            <span data-from="http://www.gjxfj.gov.cn">-信访局</span>
+                                             <span data-from="http://www.lswz.gov.cn/">-粮食局</span> 
+                                             <span data-from="http://www.sastind.gov.cn">-国防科工局</span> 
+                                             <span data-from="http://www.tobacco.gov.cn">-烟草局</span> 
+                                             <span data-from="http://www.safea.gov.cn">-外专局</span> 
+                                             <span data-from="http://www.caac.gov.cn">-民航局</span> 
+                                             <span data-from="http://www.satcm.gov.cn">-中医药局</span> 
+                                       
+                                              <span data-from="http://www.cnsa.gov.cn">-航天局</span>
+                                               <span data-from="http://www.caea.gov.cn">-原子能机构</span> 
+                                           
+                                                <span data-from="http://www.tj.gov.cn">-天津</span>
+                                                 <span data-from="http://www.hebei.gov.cn">-河北</span>
+                                      
+                                                   <span data-from="http://www.nmg.gov.cn">-内蒙古</span> 
+                                                   <span data-from="http://www.ln.gov.cn">-辽宁</span>
+                                                    <span data-from="http://www.hlj.gov.cn">-黑龙江</span> 
+                                                    <span data-from="http://www.shanghai.gov.cn">-上海</span> 
+                                                    <span data-from="http://www.jiangsu.gov.cn">-江苏</span>
+                                                      <span data-from="http://www.ah.gov.cn">-安徽</span> 
+                                                      <span data-from="http://www.fujian.gov.cn">-福建</span>
+                                                       <span data-from="http://www.jiangxi.gov.cn">-江西</span> 
+                                                       <span data-from="http://www.shandong.gov.cn">-山东</span> 
+                                                       <span data-from="http://www.henan.gov.cn">-河南</span> 
+                                                       <span data-from="http://www.hubei.gov.cn">-湖北</span> 
+                                                       <span data-from="http://www.gd.gov.cn">-广东</span>
+                                                        <span data-from="http://www.gxzf.gov.cn">-广西</span> 
+                                                        <span data-from="http://www.hainan.gov.cn">-海南</span> 
+                                                     
+                                                        <span data-from="http://www.sc.gov.cn">-四川</span> 
+                                                        <span data-from="http://www.yn.gov.cn">-云南</span> 
+                                                        <span data-from="http://www.xizang.gov.cn">-西藏</span> 
+                                                        <span data-from="http://www.shaanxi.gov.cn">-陕西</span> 
+                                                        <span data-from="http://www.gansu.gov.cn">-甘肃</span> 
+                                                        <span data-from="http://www.nx.gov.cn">-宁夏</span> 
+                                                      
+                                                        <span data-from="http://www.xinjiang.gov.cn">-新疆</span> 
+                                                        <span data-from="http://www.gddrc.gov.cn">-省发展改革委</span> 
+                                                        <span data-from="http://www.gd.gov.cn/">-省府办公厅</span> 
+                                                        <span data-from="http://gdii.gd.gov.cn/">-省经济和信息化委，省国防科工办</span> 
+                                                        <span data-from="http://www.gdjct.gd.gov.cn">-省监察厅</span> 
+                                                        <span data-from="http://www.gdhrss.gov.cn">-省人力资源社会保障厅</span> 
+                                                        <span data-from="http://nr.gd.gov.cn/">-省国土资源厅</span> 
+                                                        <span data-from="http://www.gdcic.net">-省住房城乡建设厅</span> 
+                                             
+                                                         <span data-from="http://www.gdfao.gd.gov.cn">-省外办</span>
+                                                   
+  
+  
+  
+  
+                                                          <span data-from="http://amr.gd.gov.cn/">-省知识产权局</span> 
+                                                     
+                                                         
+                                                           <span data-from="http://www.qb.gd.gov.cn">-省侨办</span> 
+                                                           <span data-from="http://hmo.gd.gov.cn">-省港澳办</span> 
+                                                           <span data-from="http://gdjr.gd.gov.cn/">-省金融办</span> 
+                                        
+                                                           <span data-from="http://gdjyj.gd.gov.cn/">-省监狱局</span> 
+                                        
+                                                           <span data-from="http://mpa.gd.gov.cn/">-省食品药品监管局</span> 
+                                                         
+                                                
+                                                            <span data-from="http://www.bmj.gd.gov.cn">-省保密局</span> 
+                                                            
+                                                      
+                                                                                                                                  
+                                                           
+                                                            <span data-from="http://www.gzb.ac.cn">-省科学院</span> 
+                                                            <span data-from="http://www.gdass.gov.cn">-省社科院</span> 
+                                                            <span data-from="http://www.gdaas.cn">-省农科院</span> 
+                                                            
+                                                            <span data-from="http://www.da.gd.gov.cn">-省档案局</span> 
+                                           
+                                                           
+                                                    
+                                                       
+                                                   
+                                                            <span data-from="http://www.gz.gov.cn">-广州</span> 
+                                                            <span data-from="http://www.sz.gov.cn">-深圳</span>
+                                                             <span data-from="http://www.zhuhai.gov.cn">-珠海</span> 
+                                                             <span data-from="http://www.shantou.gov.cn">-汕头</span> 
+                                                             <span data-from="http://www.foshan.gov.cn">-佛山</span> 
+                                                             
+                                                              <span data-from="http://www.heyuan.gov.cn">-河源</span>
+                                                               <span data-from="http://www.meizhou.gov.cn">-梅州</span> 
+                                                               <span data-from="http://www.huizhou.gov.cn">-惠州</span> 
+                                                               <span data-from="http://www.shanwei.gov.cn">-汕尾</span> 
+                                                               <span data-from="http://www.dg.gov.cn">-东莞</span> 
+                                                               <span data-from="http://www.zs.gov.cn">-中山</span> 
+                                                               <span data-from="http://www.jiangmen.gov.cn">-江门</span> 
+                                                               <span data-from="http://www.yangjiang.gov.cn">-阳江</span> 
+                                                               <span data-from="http://www.zhanjiang.gov.cn">-湛江</span>
+                                                                <span data-from="http://www.maoming.gov.cn">-茂名</span> 
+                                                                <span data-from="http://www.zhaoqing.gov.cn">-肇庆</span> 
+                                                                <span data-from="http://www.gdqy.gov.cn">-清远</span>
+                                                                 <span data-from="http://www.chaozhou.gov.cn">-潮州</span> 
+                                                                 <span data-from="http://www.jieyang.gov.cn">-揭阳</span> 
+                                                                 <span data-from="http://www.yunfu.gov.cn">-云浮</span>
+                                                                  <span data-from="http://www.timedg.com/">-东莞时间网</span> 
+                                                                  <span data-from="http://www.sun0769.com/">-东莞阳光网</span>
+                                                       
+                                                                 
+                                                                    <span data-from="http://www.chinamartyrs.gov.cn/">-中华英烈网</span>
+                                                                   <span data-from="http://credit.dg.gov.cn/zygx_dgxy/">-信用东莞</span>
+                                                                    <span data-from="http://dg.91160.com/" target="_blank">-网上预约挂号</span> 
+                                    <span data-from="http://www.dg121.com" target="_blank">-气象预报查询</span>  
+                                    <span data-from="http://www.gdzwfw.gov.cn/portal/personal/mattersLv2/hot?region=441900&lv2code=7700000013" target="_blank">-公积金查询</span> 
+                                 
+                                    <span data-from="http://gaj.dg.gov.cn/" target="_blank">-东莞警察网</span>
+                                     <span data-from="https://guangdong.tianditu.gov.cn/dongguan/" target="_blank">-数字东莞地理信息</span> 
+                                 
+                                       
+                                        <span data-from="http://dgsafety.dg.gov.cn/" target="_blank">-东莞市安监局</span> 
+                                
+                                        <span data-from="http://www.xinhua.org" target="_blank">-新华网</span> 
+                                        <span data-from="http://www.peopledaily.com.cn" target="_blank">-人民网</span> 
+                                        <span data-from="http://www.youth.cn/" target="_blank">-中国网</span> 
+                                        <span data-from="http://www.china.com.cn/" target="_blank">-中国青年网</span> 
+                                        <span data-from="http://www.hellotw.com/" target="_blank">-你好台湾网</span> 
+                                        <span data-from="http://www.cctv.com" target="_blank">-央视网</span> 
+                                        <span data-from="http://gb.cri.cn" target="_blank">-国际在线</span> 
+                                        <span data-from="http://www.cyol.net" target="_blank">-中青网</span> 
+                                        <span data-from="http://www.chinanews.com.cn" target="_blank">-中国新闻网</span> 
+                                        <span data-from="http://www.gov.cn" target="_blank">-中国政府网</span> 
+                                        <span data-from="http://www.southcn.com" target="_blank">-南方网</span> 
+                                        <span data-from="http://www.ifeng.com" target="_blank">-凤凰网</span> 
+                                        <span data-from="http://www.gddpf.org.cn/" target="_blank">-广东省残疾人联合会</span> 
+                                        <span data-from="http://www.gdmx.org.cn" target="_blank">-广东省盲人协会</span>
+                                          
+                                          <span data-from="http://www.cjr.org.cn" target="_blank">-深圳市残疾人联合会</span> 
+                                          
+                                          
+                                          <span data-from="http://www.jmdpf.org.cn" target="_blank">-江门市残疾人联合会</span> 
+                       
+                                           <span data-from="http://www.fscanlian.gov.cn/" target="_blank">-佛山市残疾人联合会</span>
+                                           
+                                           
+                                           
+                                           <span data-from="http://www.2000888.com" target="_blank">-中华残疾人服务网</span> 
+                                           
+                                           
+                            
+                                           
+                                                         <span data-from="http://www.oeeee.com/" target="_blank">-奥一网</span>
+                                                          <span data-from="http://www.dgcourt.gov.cn/" target="_blank">-东莞市中级人民法院</span>
+                                         <span data-from="http://dyfy.dg.gov.cn/" target="_blank">-东莞市第一人民法院</span> 
+                                                          <span data-from="http://defy.dg.gov.cn/" target="_blank">-东莞市第二人民法院</span> <span data-from="https://www.dsfy.dg.gov.cn/" target="_blank">-东莞市第三人民法院</span> 
+  <span data-from="http://sqjcy.dg.gov.cn/" target="_blank">-东莞市第一市区人民检察院</span> 
+                                                        
+                                                        <span data-from="http://dssqjcy.dg.gov.cn/" target="_blank">-东莞市第三市区人民检察院</span> 
+                                                        <span data-from="http://www.dg.gov.cn/" target="_blank">-东莞市政府网</span> 
+                                                  
+                                                        <span data-from="http://www.legaldaily.com.cn/" target="_blank">-法制网</span> <span data-from="http://www.court.gov.cn/" target="_blank">-最高人民法院</span> 
+                <span data-from="http://www.spp.gov.cn/" target="_blank">-最高人民检察院</span>
+                                                         <span data-from="http://www.chinalaw.org.cn/" target="_blank">-中国法学会</span> 
+                                                        <span data-from="http://www.gdzf.org.cn/" target="_blank">-广东政法网</span>  
+                                                        <span data-from="http://gaj.dg.gov.cn/" target="_blank">-东莞市公安局</span>
+                                             
+                                                        
+                                                        <span data-from="http://www.mohurd.gov.cn/">-住房城乡建设部</span>
+                                                        
+
+<span data-from="http://lyj.dg.gov.cn/">-东莞市林业局	</span>
+<span data-from="http://dgwater.dg.gov.cn/">-东莞市水务局</span>
+<span data-from="http://gd.cma.gov.cn/dgsqxj/">-东莞市气象局</span>
+
+  
+
+<span data-from="http://epaper.timedg.com/">-东莞日报</span>
+
+<span data-from="http://gzdaily.dayoo.com">-广州日报</span>
+<span data-from="http://www.chinanews.com/">-中新网</span>
+<span data-from="http://www.ce.cn/">-中国经济网</span>
+<span data-from="http://www.chinadaily.com.cn/">-中国日报</span>
+<span data-from="http://www.gmw.cn/">-光明网</span>
+<span data-from="http://www.qq.com/">-腾讯网</span>
+<span data-from="http://www.sohu.com/">-搜狐网</span>
+<span data-from="http://www.163.com/">-网易</span>
+<span data-from="http://www.legaldaily.com.cn/">-法制日报</span>
+<span data-from="http://www.eastday.com/">-东方网</span>
+
+<span data-from="http://www.dayoo.com/">-大洋网</span>
+
+<span data-from="http://www.cet.com.cn/">-中国经济时报</span>
+<span data-from="http://epaper.cs.com.cn/dnis/">-中国证券报</span>
+<span data-from="http://www.jjckb.cn/jjckb_index1.htm">-经济参考报</span>
+<span data-from="http://www.ccn.com.cn/">-中国消费者报</span>
+<span data-from="http://www.dg.gov.cn/">-中国东莞</span>
+
+<span data-from="http://www.gov.cn/">-中国人民政府网</span>
+<span data-from="http://www.gd.gov.cn/">-广东省人民政府</span>
+<span data-from="http://www.wenming.cn/">-中国文明网</span>
+
+<span data-from="http://www.gdzwfw.gov.cn/portal/index?region=441900">-广东省网上办事大厅东莞分厅</span>
+
+<span data-from="http://credit.dg.gov.cn/zygx_dgxy/sgs/xzxkIndex.do?ptjgid=4028818e41fb0cad0141fb0e9d300049">-体育局信用信息双公示</span>
+
+
+
+<span data-from="https://guangdong.tianditu.gov.cn/dongguan/">-数字东莞地理信息公众服务</span>
+
+
+
+<span data-from="http://nr.dg.gov.cn/scjdag/index.html">-市城建档案馆</span>
+
+<span data-from="http://jtj.dg.gov.cn/" target="_blank">-东莞市交通运输局</span>
+<span data-from="http://dgdp.dg.gov.cn/" target="_blank">-东莞市发展和改革局</span>
+<span data-from="http://mzj.dg.gov.cn" target="_blank">-东莞市民政局</span>
+<span data-from="http://jtj.dg.gov.cn/" target="_blank">-东莞市交通运输局</span>
+<span data-from="http://nr.gd.gov.cn/">-广东省自然资源厅</span>
+
+
+       <span data-from="http://www.taiwan.cn/" target="_blank">-中国台湾网</span>
+
+<!----机关党建---->
+<span data-from="http://www.dangjian.cn/">--党建网</span>
+<span data-from="http://dangjian.people.com.cn/">--党建人民网</span>
+<span data-from="http://www.gongwei.org.cn/">-旗帜网</span>
+<span data-from="http://www.kydj.gov.cn/">-开远党建</span>
+
+<span data-from="http://www.jsdj.gov.cn/">-江苏机关党建</span>
+<span data-from="http://www.scjgdj.gov.cn/">-四川机关党建</span>
+
+<span data-from="http://www.hebdj.gov.cn/">-河北机关党建</span>
+<span data-from="http://www.sxjgdj.gov.cn/">-山西机关党建</span>
+<span data-from="http://www.nmgjgdj.gov.cn/">-内蒙古机关党建</span>
+<span data-from="http://www.shjgdj.gov.cn/">-上海机关党建</span>
+
+<span data-from="http://www.ahszgw.gov.cn/">-安徽机关党建</span>
+
+<span data-from="http://www.jxjgdj.gov.cn/">-江西机关党建</span>
+<span data-from="http://www.hnjgdj.gov.cn/">-河南机关党建</span>
+<span data-from="http://www.hndj.gov.cn/">-湖南机关党建</span>
+<span data-from="http://www.gxjgdj.com/">-广西机关党建</span>
+<span data-from="http://www.cqjgdj.gov.cn/">-重庆机关党建</span>
+<span data-from="http://www.snjgdj.gov.cn/">-陕西机关党建</span>
+
+<span data-from="http://www.qhjgdj.gov.cn/">-青海机关党建</span>
+<span data-from="http://www.nxjgdj.gov.cn/">-宁夏机关党建</span>
+<span data-from="http://www.gzszjgdj.gov.cn/index.shtml">-贵州机关党建</span>
+
+
+<span data-from="https://www.gzsjgdj.gov.cn/">-广州机关党建</span>
+<span data-from="http://szjgdj.sz.gov.cn/">-深圳机关党建</span>
+<span data-from="http://stszgw.shantou.gov.cn/">-汕头机关党建</span>
+<span data-from="http://www.sgjgdj.org.cn/">-韶关机关党建</span>
+
+<span data-from="http://szgw.zhaoqing.gov.cn/jgdj/">-肇庆机关党建</span>
+<span data-from="http://szgw.huizhou.gov.cn/pages/cms/hzjgdj/html/index.html">-惠州机关党建</span>
+
+<span data-from="http://www.zsjgdj.gov.cn/main/index.action">-中山机关党建</span>
+
+<span data-from="http://zgw.yunfu.gov.cn/">-云浮机关党建</span>
+
+  
+  <!----end机关党建-------->
+  
+  
+<span data-from="http://www.gov.cn/">-中国政府网</span>
+<span data-from="http://cpc.people.com.cn/">-中国共产党新闻网</span>
+<span data-from="http://www.chinanews.com.cn/">-中国新闻网</span>
+<span data-from="http://www.npc.gov.cn/">-中国人大网</span>
+<span data-from="http://www.xinhuanet.com">-新华网</span>
+<span data-from="http://www.people.com.cn/">-人民网</span>
+<span data-from="http://www.southcn.com">-南方网</span>
+<span data-from="http://www.gd.gov.cn/">-广东省人民政府</span>
+<span data-from="http://www.most.gov.cn/">-国家科技部</span>
+
+<span data-from="http://www.nsfc.gov.cn/">-国家自然科学基金会</span>
+<span data-from="http://www.cast.org.cn/">-中国科学技术协会</span>
+<span data-from="http://www.cas.cn/">-中国科学院</span>
+<span data-from="http://gdstc.gd.gov.cn/">-广东省科技厅</span>
+<span data-from="http://gdii.gd.gov.cn/">-广东省经济和信息化委员会</span>
+<span data-from="http://www.dgkx.gov.cn/">-市科协</span>
+<span data-from="http://www.dgut.edu.cn/">-东莞理工学院</span>
+<span data-from="http://www.dgpt.edu.cn/">-东莞职业技术学院</span>
+
+
+<span data-from="http://www.dggxxh.com/">-东莞市高新技术产业协会</span>
+
+<span data-from="http://www.dgkx.gov.cn/">-东莞市科学技术协会</span>
+
+
+<span data-from="http://rsks.gd.gov.cn//">-专业资格考试信息网</span>
+<span data-from="http://www.dgjx.net/">-东莞技狮学院</span>
+<span data-from="http://zscx.osta.org.cn/">-国家职业资格证书全国联网查询</span>
+<span data-from="http://www.gdszjgdj.org/">-广东省直机关党建</span>
+  
+  <span data-from="http://www.dg.gov.cn/">-中国东莞</span>
+  <span data-from="http://www.gddqt.com/">-东莞质检</span>
+  <span data-from="http://www.dgsei.org.cn/">-省特检院东莞检测院</span>
+  <span data-from="http://www.scmdg.com.cn/">-省计量院东莞计量院</span>
+  <span data-from="http://www.dgqtsc.com/">-东莞市质量技术服务中心</span>
+  
+  <span data-from="http://www.dg.gov.cn/wsxf/">-东莞市网上信访大厅</span>
+  <span data-from="http://www.dg.gov.cn/12345/">-东莞政府服务热线12345</span>
+  
+  
+  <span data-from="http://www.mfa.gov.cn" target="_blank">-外交部</span>
+  <span data-from="http://www.ndrc.gov.cn" target="_blank">-发展改革委</span>
+  <span data-from="http://www.moe.gov.cn" target="_blank">-教育部</span>
+  <span data-from="http://www.most.gov.cn" target="_blank">-科技部</span>	
+  <span data-from="http://www.miit.gov.cn" target="_blank">-工业和信息化部</span>
+  <span data-from="http://www.mps.gov.cn" target="_blank">-公安部</span>
+  <span data-from="http://www.mca.gov.cn" target="_blank">-民政部</span>
+  <span data-from="http://www.moj.gov.cn" target="_blank">-司法部</span>
+  <span data-from="http://www.mof.gov.cn" target="_blank">-财政部</span>
+  <span data-from="http://www.mohrss.gov.cn" target="_blank">-人力资源社会保障部</span>
+  <span data-from="http://www.mnr.gov.cn/" target="_blank">-自然资源部</span>
+  <span data-from="http://www.mohurd.gov.cn" target="_blank">-住房和城乡建设部</span>
+  <span data-from="http://www.12306.cn/mormhweb/" target="_blank">-铁道部</span>
+  <span data-from="http://www.mwr.gov.cn" target="_blank">-水利部</span>
+
+  <span data-from="http://www.mofcom.gov.cn" target="_blank">-商务部</span>
+ 
+  <span data-from="http://www.pbc.gov.cn" target="_blank">-人民银行</span>
+  <span data-from="http://www.sasac.gov.cn" target="_blank">-国资委</span>
+  <span data-from="http://www.customs.gov.cn" target="_blank">-海关总署</span>
+  <span data-from="http://www.chinatax.gov.cn" target="_blank">-税务总局</span>
+  <span data-from="http://www.gapp.gov.cn" target="_blank">-新闻出版总署(版权局)</span>
+  <span data-from="http://www.sport.gov.cn" target="_blank">-体育总局</span>
+  <span data-from="http://www.stats.gov.cn" target="_blank">-统计局</span>
+  <span data-from="http://www.forestry.gov.cn" target="_blank">-林业局</span>
+
+  <span data-from="http://www.counsellor.gov.cn" target="_blank">-参事室</span>
+  <span data-from="http://www.ggj.gov.cn" target="_blank">-国管局</span>
+  <span data-from="http://www.jcrb.com/" target="_blank">-正义网</span>
+  <span data-from="http://www.gqb.gov.cn" target="_blank">-侨办</span>
+  <span data-from="http://www.hmo.gov.cn" target="_blank">-港澳办</span>
+
+  <span data-from="http://www.xinhuanet.com" target="_blank">-新华社</span>
+  <span data-from="http://www.cas.cn" target="_blank">-中科院</span>
+  <span data-from="http://www.cssn.cn/" target="_blank">-社科院</span>
+  <span data-from="http://www.cae.cn" target="_blank">-工程院</span>
+
+
+  <span data-from="http://www.drc.gov.cn" target="_blank">-发展研究中心</span>
+  <span data-from="http://www.cea.gov.cn" target="_blank">-地震局</span>
+  <span data-from="http://www.cma.gov.cn" target="_blank">-气象局</span>
+  <span data-from="http://www.csrc.gov.cn" target="_blank">-证监会</span>
+  <span data-from="http://www.ssf.gov.cn" target="_blank">-社保基金会</span>
+  <span data-from="http://www.nsfc.gov.cn" target="_blank">-自然科学基金会</span>
+  <span data-from="http://www.gwytb.gov.cn" target="_blank">-台办</span>
+  <span data-from="http://www.scio.gov.cn" target="_blank">-新闻办</span>
+  <span data-from="http://www.saac.gov.cn" target="_blank">-档案局</span>
+  <span data-from="http://www.gjxfj.gov.cn" target="_blank">-信访局</span>
+  <span data-from="http://www.lswz.gov.cn/" target="_blank">-粮食局</span>
+  <span data-from="http://www.sastind.gov.cn/" target="_blank">-国防科工局</span>
+  <span data-from="http://www.tobacco.gov.cn" target="_blank">-烟草局</span>
+  <span data-from="http://www.safea.gov.cn" target="_blank">-外专局</span>
+  <span data-from="http://www.caac.gov.cn" target="_blank">-民航局</span>
+
+  <span data-from="http://www.safe.gov.cn" target="_blank">-外汇局</span>
+  <span data-from="http://www.oscca.gov.cn" target="_blank">-密码局</span>
+  <span data-from="http://www.cnsa.gov.cn" target="_blank">-航天局</span>
+  <span data-from="http://www.caea.gov.cn" target="_blank">-原子能机构</span>
+
+  <span data-from="http://www.gwytb.gov.cn" target="_blank">-国务院台办</span>
+  
+  <span data-from="http://www.dg.gov.cn" target="_blank">-市人民政府办公室</span>
+  <span data-from="http://edu.dg.gov.cn" target="_blank">-市教育局</span>
+  <span data-from="http://dgstb.dg.gov.cn" target="_blank">-市科学技术局</span>
+  <span data-from="http://gaj.dg.gov.cn/" target="_blank">-市公安局</span>
+  <span data-from="http://dgsfj.dg.gov.cn" target="_blank">-市司法局</span>
+  <span data-from="http://czj.dg.gov.cn" target="_blank">-市财政局</span>
+  <span data-from="http://nr.dg.gov.cn" target="_blank">-市自然资源局</span>
+  <span data-from="http://dgepb.dg.gov.cn" target="_blank">-市环境保护局</span>
+  <span data-from="http://zjj.dg.gov.cn/" target="_blank">-市住房和城乡建设局</span>
+  <span data-from="http://jtj.dg.gov.cn/" target="_blank">-市交通运输局</span>
+  <span data-from="http://dgwater.dg.gov.cn" target="_blank">-市水务局</span>
+  <span data-from="http://nyncj.dg.gov.cn/" target="_blank">-市农业农村局</span>
+  <span data-from="http://lyj.dg.gov.cn/" target="_blank">-市林业局</span>
+  <span data-from="http://dgboc.dg.gov.cn" target="_blank">-市商务局</span>
+  <span data-from="http://wglt.dg.gov.cn/" target="_blank">-市文化广电新闻出版局</span>
+  <span data-from="http://audit.dg.gov.cn" target="_blank">-市审计局</span>
+  <span data-from="http://dgfao.dg.gov.cn/" target="_blank">-市外事局（市侨务局、市港澳事务局）</span>
+  <span data-from="http://dgsafety.dg.gov.cn" target="_blank">-市应急管理局</span>
+  <span data-from="http://dgcg.dg.gov.cn/" target="_blank">-市城市管理和综合执法局</span>
+  <span data-from="http://jrj.dg.gov.cn/" target="_blank">-市金融工作局</span>
+  <span data-from="http://dag.dg.cn/" target="_blank">-市档案馆</span>
+  <span data-from="http://www.dg.gov.cn/dfz/" target="_blank">-市人民政府地方志办公室</span>
+  <span data-from="http://www.dgstm.org.cn/index.html" target="_blank">-市科学技术博物馆</span>
+  <span data-from="http://www.dg.gov.cn/gzw/" target="_blank">-市人民政府国有资产监督管理委员会</span>
+  <span data-from="http://rsks.gd.gov.cn/" target="_blank">-市人事考试管理办公室</span>
+  <span data-from="http://dzj.dg.gov.cn/" target="_blank">-市地震局</span>
+  <span data-from="http://dgnzb.dg.gov.cn" target="_blank">-市农村集体资产管理办公室</span>
+  <span data-from="http://www.dgswhg.com/" target="_blank">-市文化馆</span>
+  <span data-from="http://www.dglib.cn/" target="_blank">-市图书馆</span>
+  <span data-from="http://dgbdc.dg.gov.cn" target="_blank">-市不动产登记中心</span>
+  <span data-from="http://www.dg.gov.cn/dgcoop/" target="_blank">-市供销合作联社</span>
+  <span data-from="http://dggjj.dg.gov.cn" target="_blank">-市住房公积金管理中心</span>
+  <span data-from="http://www.dg.gov.cn/dgswjmrhb/gkmlpt/index" target="_blank">-市人民防空办公室</span>
+  
+  
+  
+<span data-from="http://www.gov.cn" target=_blank>-中国政府网</span> 
+<span data-from="http://www.ciia.org.cn" target=_blank>-中国信息协会</span> 
+<span data-from="http://www.ca-sme.org/" target=_blank>-中国中小企业协会</span> 
+<span data-from="http://www.capid.org.cn" target=_blank>-中国产业发展促进会</span> 
+<span data-from="http://www.ctba.org.cn/" target=_blank>-中国招标投标协会</span> 
+
+<span data-from="http://zwgk.dg.gov.cn/sofpro/otherproject/ysq/gecs_ysq_web_add_1.jsp?SLBM=0502" target=_blank>-石龙依申请信息公开</span>  
+  
+<span data-from="http://dgjj.dg.gov.cn/dgjj/jgdw/dwgk.shtml" target=_blank>-市纪委监察局机关党委</span> 
+<span data-from="http://dgdp.dg.gov.cn/" target=_blank>-市发展和改革局机关党委</span> 
+<span data-from="http://www.dg.gov.cn/ccpit/" target=_blank>-市贸促会党支部</span>
+  
+  
+  
+
+
+<!-- 游泳中心 -->
+<span data-from="http://www.dg.gov.cn/" target="_blank">-中国东莞</span>
+
+
+
+
+
+  <span data-from="http://bhwxq.dg.gov.cn/">-滨海湾新区</span> 
+  
+  <!-- 南城子站 -->
+  <span target="_blank" data-from="http://www.dg.gov.cn/">-东莞市政府</span>
+  <span target="_blank" data-from="http://www.dg.gov.cn/nancheng/">-南城街道</span>
+  <span target="_blank" data-from="http://dgstb.dg.gov.cn">-科技局</span>
+
+    
+    <!-- 南城子站 -->
+    <span target="_blank" data-from="http://zgw.dg.gov.cn/">-东莞机关党建</span>
+  
+    <span target="_blank" data-from="http://www.dg.gov.cn/">-中国东莞</span>
+    <span target="_blank" data-from="http://cpc.people.com.cn/">-中国共产党新闻网</span>
+  
+  <!-- 医馆中心 -->
+  <span target="_blank" data-from="http://www.dgphospital.com/">-东莞市人民医院</span>
+  <span target="_blank" data-from="http://www.dgbjy.com/">-东莞市妇幼保健院</span>
+  <span target="_blank" data-from="http://www.dg3yy.com/">-东莞市第三人民医院</span>
+
+
+
+  
+  <span target="_blank" data-from="http://www.mcrmyy.com/">-东莞市麻涌医院</span>
+
+  
+  <!-- 法制局 -->
+   <span target="_blank" data-from="http://www.chinalaw.gov.cn/">国务院法制办</span>
+                                  
+   <span target="_blank" data-from="http://www.dgcourt.gov.cn/">东莞市中级法院</span>
+   <span target="_blank" data-from="http://dgrd.dg.gov.cn/">东莞市人大</span>
+  <span target="_blank" data-from="http://dgjj.dg.gov.cn/">东莞市纪委</span>
+  
+  <!-- 滨海湾 -->
+  <span target="_blank" data-from="http://www.gd.gov.cn/">-广东省政府网</span>
+  <span target="_blank" data-from="http://bhwxq.dg.gov.cn/">-东莞港</span>
+  <span target="_blank" data-from="http://www.hengqin.gov.cn/">-珠海横琴新区</span>
+  <span target="_blank" data-from="http://www.dgbhwkg.com/">-滨海湾控股有限公司</span>
+    <span target="_blank" data-from="http://www.dg.gov.cn/changan/">-长安镇</span>
+   <span target="_blank" data-from="http://www.dg.gov.cn/humen/">-虎门镇</span>
+	<span target="_blank" data-from="http://www.dg.gov.cn/shatian/">-沙田镇</span>
+  <span target="_blank" data-from="http://www.dg.gov.cn/houjie/">-厚街镇</span>
+
+
+    <!-- 司法局 -->
+  <span target="_blank" data-from="http://www.moj.gov.cn/">-中华人民共和国司法部</span>
+  <span target="_blank" data-from="http://www.dg.gov.cn/">-中国东莞</span>
+  <span target="_blank" data-from="http://www.dgla.org.cn/">-东莞律师</span>
+  <span target="_blank" data-from="http://www.dgsfjd.cn/">-东莞司法鉴定</span>
+  <span target="_blank" data-from="http://dggzxh.dg.gov.cn/Modulars/index.aspx">-东莞市公证协会</span>
+  
+<span target="_blank" data-from="https://gd.12348.gov.cn/">-广东法律服务网</span>
+  <span target="_blank" data-from="http://law.sun0769.com/">-阳光普法</span>
+
+
+   <!-- 东莞市构建科学市场监管体系工作发布平台 -->
+
+          <span target="_blank" data-from="http://www.gsxt.gov.cn/index.html">-国家企业信用信息公示系统</span>
+           <span target="_blank" data-from="http://credit.dg.gov.cn/zygx_dgxy/">-信用东莞网</span>
+    
+
+    <!-- 东莞市人大 -->
+    <span target="_blank" data-from=" http://www.rd.gz.cn/">-广州市人大</span>
+    <span target="_blank" data-from=" http://www.szrd.gov.cn">-深圳市人大</span>
+    <span target="_blank" data-from=" http://www.zhrd.gov.cn/">-珠海市人大</span>
+    <span target="_blank" data-from=" http://rd.shantou.gov.cn/">-汕头市人大</span>
+    <span target="_blank" data-from=" http://www.fsrd.gov.cn/">-佛山市人大</span>
+    <span target="_blank" data-from=" http://www.sgrd.gov.cn/">-韶关市人大</span>
+    <span target="_blank" data-from=" http://rd.heyuan.gov.cn/">-河源市人大</span>
+    <span target="_blank" data-from=" http://www.mzrd.gov.cn/">-梅州市人大</span>
+    <span target="_blank" data-from=" http://rd.huizhou.gov.cn/">-惠州市人大</span>
+    <span target="_blank" data-from=" http://www.swrd.gov.cn/">-汕尾市人大</span>
+    <span target="_blank" data-from=" http://dgrd.dg.gov.cn">-东莞市人大</span>
+    <span target="_blank" data-from=" http://www.zsrd.gov.cn/">-中山市人大</span>
+    <span target="_blank" data-from=" http://www.gdzjrd.gov.cn/">-湛江市人大</span>
+
+   
+    <span target="_blank" data-from=" http://www.jyrdw.gov.cn/">-揭阳市人大</span>
+    <span target="_blank" data-from=" http://www.czrd.gd.cn/">-潮州市人大</span>
+
+    <span target="_blank" data-from="http://www.gd.gov.cn/">-广东省人民政府</span>
+    <span target="_blank" data-from="http://www.gd.jcy.gov.cn/">-广东省人民检察院</span>
+    <span target="_blank" data-from="http://www.dg.gov.cn/">-中国东莞</span>
+    <span target="_blank" data-from="http://www.dgcourt.gov.cn/">-东莞市中级人民法院</span>
+    <span target="_blank" data-from="http://dyfy.dg.gov.cn/">-东莞市第一人民法院</span>
+    <span target="_blank" data-from="http://www.dgdefy.cn/">-东莞市第二人民法院</span>
+    <span target="_blank" data-from="http://sqjcy.dg.gov.cn/">-东莞市第一市区人民检察院</span>
+ 
+    <span target="_blank" data-from="http://dssqjcy.dg.gov.cn/">-东莞市第三市区人民检察院</span>
+
+    <span  target="_blank" data-from="http://www.sun0769.com/">-东莞阳光网</span>
+    <span  target="_blank" data-from="http://news.timedg.com/">-东莞时间网</span>
+
+  <span  target="_blank" data-from="http://www.southcn.com/">-南方网</span>
+    <span  target="_blank" data-from="http://gzdaily.dayoo.com">-广州日报</span>
+  
+  
+  
+  <span  target="_blank" data-from="http://www.gdzwfw.gov.cn/portal/index?region=441900">-广东政务服务网</span>
+  
+  <span  target="_blank" data-from="http://www.nhc.gov.cn/">-中华人民共和国国家卫生和计划生育委员会</span>
+ <span  target="_blank" data-from="http://wsjkw.gd.gov.cn/">-广东省卫生和计划生育委员会</span>  
+  
+  
+  <span target="_blank" data-from="http://dgfao.dg.gov.cn/" >-中共东莞市委外事工作委员会办公室</span>
+  
+  
+  
+<span target="_blank" data-from="https://www.fhac.com.cn/index.html" >-中国第一历史档案馆</span>
+  
+  <span target="_blank" data-from="http://www.shac.net.cn/" >-中国第二历史档案馆</span>
+  <span target="_blank" data-from="http://jjzd.dg.gov.cn/" >-市公安局交警支队</span>
+  
+  <span target="_blank" data-from="http://dg.wenming.cn/" >-东莞文明网</span>
+  <span target="_blank" data-from="http://gddata.gd.gov.cn/data/dataSet/toDataSet/dept/513" >-数据开放</span>
+  <span target="_blank" data-from="http://dggzxh.dg.gov.cn/Modulars/index.aspx" >-东莞公证协会</span>
+  
+ <!--农业局--->                                        
+<span data-from="http://www.moa.gov.cn/">-中华人民共和国农业农村部</span>                                                       
+<span data-from="http://www.agri.cn/">-中国农业农村信息网</span>   
+<span data-from="http://www.farmer.com.cn/">-中国农网</span>
+<span data-from="https://www.nrra.gov.cn/">-国家乡村振兴局</span>
+  
+   
+
+<span data-from="http://www.chinafarmernet.com/">-中国农民网</span>
+
+<span data-from="http://dara.gd.gov.cn/">-广东省农业农村厅</span>  
+<span data-from="https://www.gdxcw.cn/">-广东乡村网</span>
+<span data-from="http://rural.gd.gov.cn/">-广东省乡村振兴局</span>
+  <span data-from="https://gdxczx.gd.gov.cn/">-广东乡村振兴</span>
+   
+
+<span data-from="http://nyncj.huizhou.gov.cn/">-惠州市农业农村局</span>
+
+<span data-from="https://www.meizhou.gov.cn/zwgk/zfjg/snyncj/">-梅州市农业农村局</span>
+<span data-from="http://www.shantou.gov.cn/nyj/">-汕头市农业农村局</span>
+<span data-from="http://www.shanwei.gov.cn/swny/">-汕尾市农业农村局</span>  
+<span data-from="http://fsny.foshan.gov.cn/">-佛山市农业农村局</span>
+<span data-from="http://www.jieyang.gov.cn/nyj">-揭阳市农业农村局</span>
+<span data-from="http://www.yunfu.gov.cn/nyncj/">-云浮市农业农村局</span>
+<span data-from="http://nync.zs.gov.cn/">-中山市农业农村局</span>
+<span data-from="http://tongzhanbu.dg.gov.cn/">-中共东莞市委统战部</span>
+
+
+
+<span data-from="http://gjj.gz.gov.cn/">-广州住房公积金管理中心</span>
+<span data-from="http://zjj.sz.gov.cn/ztfw/zfgjj/">-深圳市住房公积金管理中心</span>
+<span data-from="http://fsgjj.foshan.gov.cn/">-佛山市住房公积金管理中心</span>
+<span data-from="http://hzgjj.huizhou.gov.cn/">-惠州市住房公积金管理中心</span>
+<span data-from="http://zszfgjj.zs.gov.cn/">-中山市住房公积金管理中心</span>
+<span data-from="http://www.zhaoqing.gov.cn/zqgjj/gkmlpt/index">-肇庆市住房公积金管理中心</span>
+<span data-from="http://gjj.zhuhai.gov.cn/">-珠海市住房公积金管理中心</span>
+<span data-from="http://gjj.sg.gov.cn/">-韶关市住房公积金管理中心</span>
+<span data-from="http://www.jiangmen.gov.cn/bmpd/jmszfhcxjsj/">-江门市住房公积金管理中心</span>
+<span data-from="https://www.zhanjiang.gov.cn/zfgjj/index.html">-湛江市住房公积金管理中心</span>
+<span data-from="http://www.maoming.gov.cn/mmzfgjj/gkmlpt/index">-茂名市住房公积金管理中心</span>
+<span data-from="https://www.meizhou.gov.cn/zwgk/zfjg/sgjjzx/index.html">-梅州市住房公积金管理中心</span>
+<span data-from="http://www.heyuan.gov.cn/bmjy/hyszfgjjglzx/index.html">-河源市住房公积金管理中心</span>
+<span data-from="http://www.yjgjj.cn/">-阳江市住房公积金管理中心</span>
+<span data-from="http://www.jygjj.cn/jyweb/website/index.html">-揭阳市住房公积金管理中心</span>
+<span data-from="http://www.shanwei.gov.cn/swgjj/index.html">-汕尾市住房公积金管理中心</span>
+<span data-from="http://gjjzx.gdqy.gov.cn/">-清远市住房公积金管理中心</span>
+<span data-from="http://www.chaozhou.gov.cn/zwgk/szsydw/szfgjj/index.html">-潮州市住房公积金管理中心</span>
+<span data-from="https://www.yunfu.gov.cn/gjj/">-云浮市住房公积金管理中心</span>
+<span data-from="http://www.qdgjj.com/n28356077/index.html">-青岛市住房公积金管理中心</span>
+<span data-from="http://hzgjj.huzhou.gov.cn/">-湖州市住房公积金管理中心</span>
+<span data-from="http://gjj.suzhou.gov.cn/">-苏州市住房公积金管理中心</span>
+<span data-from="http://gjj.changzhou.gov.cn/">-常州市住房公积金管理中心</span>
+<span data-from="http://www.ntgjj.com/">-南通市住房公积金管理中心</span>
+<span data-from="http://gjj.yibin.gov.cn/">-宜宾市住房公积金管理中心</span>
+<span data-from="http://gjj.beijing.gov.cn/">-北京住房公积金管理中心</span>
+<span data-from="http://www.shgjj.com/">-上海市公积金管理中心</span>
+<span data-from="http://www.zfgjj.cn/">-天津市住房公积金管理中心</span>
+<span data-from="https://www.cqgjj.cn/">-重庆市住房公积金管理中心</span>
+<span data-from="http://guangdong.chinatax.gov.cn/gdsw/dgsw/dgsw_index.shtml">-市国家税务局</span>
+<span data-from="https://www.bidchance.com/company-228125.html">-市地方税务局</span>
+<span data-from="https://dgbb.dg.gov.cn/">-市机构编制委员会办公室</span>
+</div>
+</body>
+</html>
