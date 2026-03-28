@@ -46,12 +46,12 @@ USER_AGENTS = [
     'Mozilla/5.0 (Macintosh; Intel Mac OS X 14_5) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.5 Safari/605.1.15',
     'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36',
 ]
-TIMEOUT = 25
+TIMEOUT = 35
 RETRY = 3
 MAX_LIST_PAGES = 50       # 最多翻50页列表页
 MAX_DETAIL_PER_DEPT = 3   # 每个部门最多进3个详情页找PDF
-DELAY_PAGE = 0.3
-DELAY_CITY = 2
+DELAY_PAGE = 0.2
+DELAY_CITY = 1.5
 MIN_DEPT_COVERAGE = 15    # 至少找到15个部门才算合格
 
 # ========== 32+目标委办局 ==========
@@ -677,6 +677,19 @@ def extract_pdf_from_detail(session, detail_url, dept_name, city):
             full = urljoin(detail_url, purl)
             pdf_candidates.append(("js_pdf", full, 4))
 
+    # 方法8: 附件下载链接 (data-href, download属性, 或含"附件"/"下载"文字的链接)
+    if not pdf_candidates:
+        for a in soup.find_all('a', href=True):
+            href = a['href'].strip()
+            text = a.get_text(strip=True)
+            data_href = a.get('data-href', '')
+            download_attr = a.get('download', '')
+            target_url = data_href or href
+            if any(kw in (text + download_attr).lower() for kw in ['附件', '下载', 'download', '.pdf']):
+                full = urljoin(detail_url, target_url)
+                if '.pdf' in full.lower() or 'download' in full.lower() or 'attach' in full.lower():
+                    pdf_candidates.append((text or "attachment", full, 3))
+
     if not pdf_candidates:
         return None
 
@@ -768,9 +781,9 @@ def detect_search_endpoint(session, website, city):
         except:
             pass
 
-    # 尝试常见模式 (只试前15个最常见的, 减少探测时间)
+    # 尝试常见模式 (试前25个最常见的)
     test_query = quote("2026年预算")
-    for pattern in SEARCH_URL_PATTERNS[:15]:
+    for pattern in SEARCH_URL_PATTERNS[:25]:
         url = urljoin(website, pattern.format(query=test_query))
         try:
             r = fetch(session, url, timeout=5)
@@ -967,14 +980,40 @@ COMMON_BUDGET_PATHS = [
     "/xxgk/fdzdgk/czyjs/2026/",
     "/zwgk/fdzdgknr/ysjs/bmys/",
     "/zwgk/fdzdgknr/ysjs/bmys/2026/",
+    # 新增路径 - 基于失败城市分析
+    "/zfxxgk/czxx/bmczyjs/",
+    "/zfxxgk/czxx/bmczyjs/2026/",
+    "/zwgk/czxx/czyjs/",
+    "/zwgk/czxx/czyjs/2026/",
+    "/czj/czyjs/",
+    "/czj/czyjs/2026/",
+    "/czj/zwgk/bmys/",
+    "/czj/zwgk/bmys/2026/",
+    "/czj/bmczyjs/",
+    "/czj/bmczyjs/2026/",
+    "/zwgk/ysjs/",
+    "/zwgk/ysjs/2026/",
+    "/zwgk/zdly/czxx/czyjs/bmys/",
+    "/zwgk/zdly/czxx/czyjs/bmys/2026/",
+    "/zfxxgk/zdlyxxgk/czyjshsg/bmczyjs/",
+    "/zfxxgk/zdlyxxgk/czyjshsg/bmczyjs/2026/",
+    "/zwgk/zdly/czzj/bmys/2026/",
+    "/zwgk/zdly/czxx/bmys/",
+    "/zwgk/czgk/bmys/",
+    "/zwgk/czgk/bmys/2026/",
+    "/zwgk/czgk/czyjs/",
+    "/zwgk/xxgk/czxx/",
+    "/zwgk/xxgk/czxx/bmczyjs/",
+    "/zfxxgk/czxx/yjshsg/bmys/",
+    "/zfxxgk/czxx/yjshsg/bmys/2026/",
 ]
 
 def probe_budget_page(session, website, city):
-    # Try standard paths on the main website (limit to first 50 for speed)
-    for path in COMMON_BUDGET_PATHS[:50]:
+    # Try standard paths on the main website (limit to first 70 for speed)
+    for path in COMMON_BUDGET_PATHS[:70]:
         url = urljoin(website, path)
         try:
-            r = fetch(session, url, timeout=6)
+            r = fetch(session, url, timeout=10)
             if r and len(r.text) > 500 and '预算' in r.text:
                 logger.info(f"  [{city}] 探测到预算页: {url}")
                 return url
@@ -985,7 +1024,7 @@ def probe_budget_page(session, website, city):
     # Try financial bureau subdomain (czj.xxx.gov.cn or cz.xxx.gov.cn)
     parsed = urlparse(website)
     domain = parsed.netloc.replace('www.', '')
-    cz_domains = [f"czj.{domain}", f"cz.{domain}", f"caizj.{domain}"]
+    cz_domains = [f"czj.{domain}", f"cz.{domain}", f"caizj.{domain}", f"caizheng.{domain}"]
     cz_paths = ["/", "/zwgk/", "/xxgk/bmys/", "/ysjs/", "/ysgk/",
                 "/zwgk/czyjsgk/", "/xxgk/czsj/list.html",
                 "/zwgk_53713/yjsgktypt/ysgk/2026bmys/",
@@ -1003,7 +1042,7 @@ def probe_budget_page(session, website, city):
         for cz_path in cz_paths:
             cz_url = f"http://{cz_domain}{cz_path}"
             try:
-                r = fetch(session, cz_url, timeout=8)
+                r = fetch(session, cz_url, timeout=12)
                 if r and len(r.text) > 500 and '预算' in r.text:
                     logger.info(f"  [{city}] 探测到财政局预算页: {cz_url}")
                     return cz_url
