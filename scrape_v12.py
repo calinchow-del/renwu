@@ -1188,15 +1188,22 @@ def process_city(city_info, progress, force=False):
                             break
 
             if not pdf_downloaded:
-                # 保存为HTML兜底
+                # 保存为HTML兜底 - 但要验证内容确实是预算文档
                 if links_sorted:
                     r = fetch(session, links_sorted[0][1])
-                    if r:
-                        hpath = os.path.join(city_folder, f"{clean_dept}_2026年部门预算.html")
-                        with open(hpath, 'w', encoding='utf-8') as f:
-                            f.write(r.text)
-                        found_depts.append(dept_name)
-                        downloaded += 1
+                    if r and r.text:
+                        # Only save HTML if it contains budget-related content
+                        has_budget = ("部门预算" in r.text or "预算公开" in r.text
+                                      or ("预算" in r.text and "2026" in r.text))
+                        if has_budget:
+                            hpath = os.path.join(city_folder, f"{clean_dept}_2026年部门预算.html")
+                            with open(hpath, 'w', encoding='utf-8') as f:
+                                f.write(r.text)
+                            found_depts.append(dept_name)
+                            downloaded += 1
+                            logger.info(f"  [{city}] ✓ {dept_name} (HTML兜底)")
+                        else:
+                            logger.info(f"  [{city}] ✗ {dept_name} HTML无预算内容, 跳过")
 
             time.sleep(DELAY_PAGE)
         except Exception as e:

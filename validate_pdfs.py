@@ -451,8 +451,17 @@ def process_file(filepath: Path, city_dir: Path) -> dict:
     result = {"old_name": filename, "new_name": None, "action": "error", "reason": ""}
 
     # ---- Extract title ----
+    pdf_full_text = ""
     if suffix == ".pdf":
         title = extract_pdf_title(str(filepath))
+        # Also extract full first-page text for budget content validation
+        try:
+            doc = fitz.open(str(filepath))
+            if len(doc) > 0:
+                pdf_full_text = doc[0].get_text() or ""
+            doc.close()
+        except Exception:
+            pass
     elif suffix in (".html", ".htm"):
         title = extract_html_title(str(filepath))
     else:
@@ -466,6 +475,53 @@ def process_file(filepath: Path, city_dir: Path) -> dict:
 
     logger.info("  File: %s", filename)
     logger.info("    Title: %s", (title or "(empty)")[:100])
+
+    # ---- HTML content quality check ----
+    # Many HTML files are just department homepages or error pages, not budget docs.
+    # For HTML files, also check body text for budget-related content.
+    if suffix in (".html", ".htm"):
+        has_budget_in_title = title and "预算" in title
+        has_budget_in_body = False
+        try:
+            content = None
+            for enc in ("utf-8", "gbk", "gb2312", "gb18030", "latin-1"):
+                try:
+                    with open(filepath, "r", encoding=enc, errors="strict") as f:
+                        content = f.read()
+                    break
+                except (UnicodeDecodeError, UnicodeError):
+                    continue
+            if content:
+                # Check if body text contains budget-related keywords
+                has_budget_in_body = ("部门预算" in content or "预算公开" in content
+                                     or ("预算" in content and "2026" in content))
+        except Exception:
+            pass
+
+        if not has_budget_in_title and not has_budget_in_body:
+            result["action"] = "deleted"
+            result["reason"] = f"HTML has no budget content: {(title or '(empty)')[:60]}"
+            try:
+                os.remove(filepath)
+                logger.info("    DELETE (HTML no budget content): %s", (title or "(empty)")[:60])
+            except OSError as e:
+                logger.error("    Failed to delete: %s", e)
+                result["reason"] = f"Delete failed: {e}"
+            return result
+
+    # ---- PDF content quality check ----
+    if suffix == ".pdf" and title and pdf_full_text:
+        has_budget_in_pdf = ("预算" in (title + pdf_full_text) or "budget" in (title + pdf_full_text).lower())
+        if not has_budget_in_pdf:
+            result["action"] = "deleted"
+            result["reason"] = f"PDF has no budget content: {title[:60]}"
+            try:
+                os.remove(filepath)
+                logger.info("    DELETE (PDF no budget content): %s", title[:60])
+            except OSError as e:
+                logger.error("    Failed to delete: %s", e)
+                result["reason"] = f"Delete failed: {e}"
+            return result
 
     # ---- Handle empty title ----
     if not title:
