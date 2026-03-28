@@ -214,21 +214,21 @@
       "found": 0,
       "depts": [],
       "downloaded": 0,
-      "strategy": "validated",
-      "time": "2026-03-28 12:45:00"
+      "strategy": "paginated_list+search",
+      "time": "2026-03-28 13:07:02"
     },
     "008_杭州": {
       "found": 5,
       "depts": [
-        "交通运输局",
-        "公安局",
-        "司法局",
+        "气象局",
         "政府办公厅",
-        "气象局"
+        "司法局",
+        "公安局",
+        "交通运输局"
       ],
-      "downloaded": 6,
-      "strategy": "validated",
-      "time": "2026-03-28 12:45:00"
+      "downloaded": 0,
+      "strategy": "paginated_list+search",
+      "time": "2026-03-28 13:07:09"
     },
     "009_武汉": {
       "found": 26,
@@ -268,8 +268,8 @@
       "found": 0,
       "depts": [],
       "downloaded": 0,
-      "strategy": "validated",
-      "time": "2026-03-28 12:45:00"
+      "strategy": "paginated_list+search",
+      "time": "2026-03-28 13:07:15"
     },
     "011_宁波": {
       "found": 25,
@@ -305,27 +305,31 @@
       "time": "2026-03-28 12:45:00"
     },
     "012_天津": {
-      "found": 5,
+      "found": 9,
       "depts": [
-        "人力资源和社会保障局",
-        "住房和建设局",
         "商务局",
+        "财政局",
+        "住房和建设局",
+        "生态环境局",
         "工业和信息化局",
-        "财政局"
+        "教育局",
+        "气象局",
+        "人力资源和社会保障局",
+        "交通运输局"
       ],
-      "downloaded": 5,
-      "strategy": "validated",
-      "time": "2026-03-28 12:45:00"
+      "downloaded": 0,
+      "strategy": "paginated_list+search",
+      "time": "2026-03-28 13:07:22"
     },
     "013_青岛": {
       "found": 2,
       "depts": [
-        "应急管理局",
-        "政府办公厅"
+        "政府办公厅",
+        "应急管理局"
       ],
-      "downloaded": 2,
-      "strategy": "validated",
-      "time": "2026-03-28 12:45:00"
+      "downloaded": 0,
+      "strategy": "paginated_list+search",
+      "time": "2026-03-28 13:07:29"
     },
     "014_无锡": {
       "found": 28,
@@ -505,23 +509,23 @@
       "found": 0,
       "depts": [],
       "downloaded": 0,
-      "strategy": "validated",
-      "time": "2026-03-28 12:45:00"
+      "strategy": "paginated_list+search",
+      "time": "2026-03-28 13:07:35"
     },
     "020_西安": {
       "found": 7,
       "depts": [
+        "财政局",
+        "统计局",
+        "政府办公厅",
         "信访局",
-        "公安局",
         "司法局",
         "审计局",
-        "政府办公厅",
-        "统计局",
-        "财政局"
+        "公安局"
       ],
-      "downloaded": 8,
-      "strategy": "validated",
-      "time": "2026-03-28 12:45:00"
+      "downloaded": 0,
+      "strategy": "paginated_list+search",
+      "time": "2026-03-28 13:07:42"
     },
     "021_泉州": {
       "found": 24,
@@ -593,14 +597,14 @@
     "023_南通": {
       "found": 4,
       "depts": [
-        "司法局",
         "政府办公厅",
         "水务局",
-        "生态环境局"
+        "生态环境局",
+        "司法局"
       ],
-      "downloaded": 4,
-      "strategy": "validated",
-      "time": "2026-03-28 12:45:00"
+      "downloaded": 0,
+      "strategy": "paginated_list+search",
+      "time": "2026-03-28 13:07:48"
     },
     "024_东莞": {
       "found": 23,
@@ -708,68 +712,68 @@
       "found": 0,
       "depts": [],
       "downloaded": 0,
-      "strategy": "validated",
-      "time": "2026-03-28 12:45:00"
+      "strategy": "paginated_list+search",
+      "time": "2026-03-28 13:07:55"
     },
     "028_温州": {
       "found": 12,
       "depts": [
-        "公安局",
+        "文化广电旅游体育局",
+        "规划和自然资源局",
+        "统计局",
+        "工业和信息化局",
+        "政务服务和数据管理局",
+        "科技创新局",
+        "教育局",
         "卫生健康委员会",
         "审计局",
-        "宣传部",
-        "工业和信息化局",
+        "公安局",
         "应急管理局",
-        "政务服务和数据管理局",
-        "教育局",
-        "文化广电旅游体育局",
-        "科技创新局",
-        "统计局",
-        "规划和自然资源局"
+        "宣传部"
       ],
-      "downloaded": 12,
-      "strategy": "validated",
-      "time": "2026-03-28 12:45:00"
+      "downloaded": 0,
+      "strategy": "paginated_list+search",
+      "time": "2026-03-28 13:08:02"
     },
     "029_大连": {
       "found": 0,
       "depts": [],
       "downloaded": 0,
-      "strategy": "validated",
-      "time": "2026-03-28 12:45:00"
+      "strategy": "paginated_list+search",
+      "time": "2026-03-28 13:08:08"
     },
     "030_徐州": {
       "found": 0,
       "depts": [],
       "downloaded": 0,
-      "strategy": "validated",
-      "time": "2026-03-28 12:45:00"
+      "strategy": "paginated_list+search",
+      "time": "2026-03-28 13:08:15"
     },
     "031_沈阳": {
       "found": 2,
       "depts": [
-        "市场监督管理局",
-        "政府办公厅"
+        "政府办公厅",
+        "市场监督管理局"
       ],
-      "downloaded": 2,
-      "strategy": "validated",
-      "time": "2026-03-28 12:45:00"
+      "downloaded": 0,
+      "strategy": "paginated_list+search",
+      "time": "2026-03-28 13:08:21"
     },
     "032_厦门": {
       "found": 1,
       "depts": [
         "规划和自然资源局"
       ],
-      "downloaded": 1,
-      "strategy": "validated",
-      "time": "2026-03-28 12:45:00"
+      "downloaded": 0,
+      "strategy": "paginated_list+search",
+      "time": "2026-03-28 13:08:28"
     },
     "033_绍兴": {
       "found": 0,
       "depts": [],
       "downloaded": 0,
-      "strategy": "validated",
-      "time": "2026-03-28 12:45:00"
+      "strategy": "paginated_list+search",
+      "time": "2026-03-28 13:08:34"
     },
     "034_石家庄": {
       "found": 29,
@@ -843,22 +847,22 @@
     "036_潍坊": {
       "found": 12,
       "depts": [
-        "人力资源和社会保障局",
-        "住房和建设局",
-        "信访局",
         "医疗保障局",
+        "文化广电旅游体育局",
+        "住房和建设局",
+        "统计局",
+        "工业和信息化局",
+        "政务服务和数据管理局",
+        "信访局",
+        "退役军人事务局",
+        "市场监督管理局",
         "卫生健康委员会",
         "国有资产监督管理委员会",
-        "工业和信息化局",
-        "市场监督管理局",
-        "政务服务和数据管理局",
-        "文化广电旅游体育局",
-        "统计局",
-        "退役军人事务局"
+        "人力资源和社会保障局"
       ],
-      "downloaded": 12,
-      "strategy": "validated",
-      "time": "2026-03-28 12:45:00"
+      "downloaded": 0,
+      "strategy": "paginated_list+search",
+      "time": "2026-03-28 13:08:41"
     },
     "037_南昌": {
       "found": 24,
@@ -895,22 +899,22 @@
     "038_扬州": {
       "found": 3,
       "depts": [
+        "政府办公厅",
         "卫生健康委员会",
-        "城市管理和综合执法局",
-        "政府办公厅"
+        "城市管理和综合执法局"
       ],
-      "downloaded": 3,
-      "strategy": "validated",
-      "time": "2026-03-28 12:45:00"
+      "downloaded": 0,
+      "strategy": "paginated_list+search",
+      "time": "2026-03-28 13:08:48"
     },
     "039_盐城": {
       "found": 1,
       "depts": [
         "政府办公厅"
       ],
-      "downloaded": 1,
-      "strategy": "validated",
-      "time": "2026-03-28 12:45:00"
+      "downloaded": 0,
+      "strategy": "paginated_list+search",
+      "time": "2026-03-28 13:08:54"
     },
     "040_长春": {
       "found": 16,
@@ -939,15 +943,15 @@
     "041_嘉兴": {
       "found": 5,
       "depts": [
-        "交通运输局",
         "住房和建设局",
+        "政府办公厅",
         "卫生健康委员会",
         "发展和改革局",
-        "政府办公厅"
+        "交通运输局"
       ],
-      "downloaded": 5,
-      "strategy": "validated",
-      "time": "2026-03-28 12:45:00"
+      "downloaded": 0,
+      "strategy": "paginated_list+search",
+      "time": "2026-03-28 13:09:01"
     },
     "042_榆林": {
       "found": 27,
@@ -1016,8 +1020,8 @@
       "found": 0,
       "depts": [],
       "downloaded": 0,
-      "strategy": "validated",
-      "time": "2026-03-28 12:45:00"
+      "strategy": "paginated_list+search",
+      "time": "2026-03-28 13:09:07"
     },
     "045_台州": {
       "found": 25,
@@ -1125,9 +1129,9 @@
         "水务局",
         "退役军人事务局"
       ],
-      "downloaded": 4,
-      "strategy": "validated",
-      "time": "2026-03-28 12:45:00"
+      "downloaded": 0,
+      "strategy": "paginated_list+search",
+      "time": "2026-03-28 13:09:14"
     },
     "049_南宁": {
       "found": 19,
@@ -1252,17 +1256,17 @@
     "053_济宁": {
       "found": 7,
       "depts": [
-        "司法局",
         "商务局",
-        "城市管理和综合执法局",
-        "应急管理局",
-        "教育局",
         "民政局",
-        "水务局"
+        "水务局",
+        "教育局",
+        "司法局",
+        "应急管理局",
+        "城市管理和综合执法局"
       ],
-      "downloaded": 7,
-      "strategy": "validated",
-      "time": "2026-03-28 12:45:00"
+      "downloaded": 0,
+      "strategy": "paginated_list+search",
+      "time": "2026-03-28 13:09:21"
     },
     "054_鄂尔多斯": {
       "found": 25,
@@ -1301,8 +1305,8 @@
       "found": 0,
       "depts": [],
       "downloaded": 0,
-      "strategy": "validated",
-      "time": "2026-03-28 12:45:00"
+      "strategy": "paginated_list+search",
+      "time": "2026-03-28 13:09:27"
     },
     "056_贵阳": {
       "found": 28,
@@ -1378,9 +1382,9 @@
       "depts": [
         "审计局"
       ],
-      "downloaded": 1,
-      "strategy": "validated",
-      "time": "2026-03-28 12:45:00"
+      "downloaded": 0,
+      "strategy": "paginated_list+search",
+      "time": "2026-03-28 13:09:34"
     },
     "059_芜湖": {
       "found": 2,
@@ -1388,9 +1392,9 @@
         "政府办公厅",
         "教育局"
       ],
-      "downloaded": 2,
-      "strategy": "validated",
-      "time": "2026-03-28 12:45:00"
+      "downloaded": 0,
+      "strategy": "paginated_list+search",
+      "time": "2026-03-28 13:09:40"
     },
     "060_岳阳": {
       "found": 26,
@@ -1525,21 +1529,21 @@
     "064_南阳": {
       "found": 11,
       "depts": [
-        "交通运输局",
-        "人力资源和社会保障局",
         "住房和建设局",
-        "信访局",
-        "公安局",
-        "发展和改革局",
-        "城市管理和综合执法局",
-        "审计局",
-        "政府办公厅",
+        "科技创新局",
         "民政局",
-        "科技创新局"
+        "信访局",
+        "政府办公厅",
+        "人力资源和社会保障局",
+        "审计局",
+        "发展和改革局",
+        "公安局",
+        "交通运输局",
+        "城市管理和综合执法局"
       ],
-      "downloaded": 11,
-      "strategy": "validated",
-      "time": "2026-03-28 12:45:00"
+      "downloaded": 0,
+      "strategy": "paginated_list+search",
+      "time": "2026-03-28 13:09:47"
     },
     "065_淄博": {
       "found": 25,
@@ -1642,21 +1646,21 @@
     "068_菏泽": {
       "found": 11,
       "depts": [
-        "交通运输局",
-        "住房和建设局",
-        "信访局",
-        "司法局",
         "商务局",
-        "应急管理局",
-        "政府办公厅",
+        "规划和自然资源局",
+        "住房和建设局",
+        "科技创新局",
         "民政局",
         "水务局",
-        "科技创新局",
-        "规划和自然资源局"
+        "信访局",
+        "政府办公厅",
+        "交通运输局",
+        "司法局",
+        "应急管理局"
       ],
-      "downloaded": 11,
-      "strategy": "validated",
-      "time": "2026-03-28 12:45:00"
+      "downloaded": 0,
+      "strategy": "paginated_list+search",
+      "time": "2026-03-28 13:09:53"
     },
     "069_沧州": {
       "found": 22,
@@ -1692,27 +1696,27 @@
       "found": 0,
       "depts": [],
       "downloaded": 0,
-      "strategy": "validated",
-      "time": "2026-03-28 12:45:00"
+      "strategy": "paginated_list+search",
+      "time": "2026-03-28 13:10:00"
     },
     "071_连云港": {
       "found": 11,
       "depts": [
+        "工业和信息化局",
+        "水务局",
+        "教育局",
+        "政府办公厅",
         "交通运输局",
-        "公安局",
         "卫生健康委员会",
-        "发展和改革局",
         "司法局",
         "审计局",
-        "工业和信息化局",
-        "应急管理局",
-        "政府办公厅",
-        "教育局",
-        "水务局"
+        "发展和改革局",
+        "公安局",
+        "应急管理局"
       ],
-      "downloaded": 11,
-      "strategy": "validated",
-      "time": "2026-03-28 12:45:00"
+      "downloaded": 0,
+      "strategy": "paginated_list+search",
+      "time": "2026-03-28 13:10:07"
     },
     "072_常德": {
       "found": 19,
@@ -1780,9 +1784,9 @@
       "depts": [
         "政府办公厅"
       ],
-      "downloaded": 1,
-      "strategy": "validated",
-      "time": "2026-03-28 12:45:00"
+      "downloaded": 0,
+      "strategy": "paginated_list+search",
+      "time": "2026-03-28 13:10:13"
     },
     "075_乌鲁木齐": {
       "found": 25,
@@ -1951,35 +1955,36 @@
     "080_江门": {
       "found": 6,
       "depts": [
-        "应急管理局",
-        "政府办公厅",
         "文化广电旅游体育局",
-        "民政局",
         "科技创新局",
-        "退役军人事务局"
+        "民政局",
+        "政府办公厅",
+        "退役军人事务局",
+        "应急管理局"
       ],
-      "downloaded": 6,
-      "strategy": "validated",
-      "time": "2026-03-28 12:45:00"
+      "downloaded": 0,
+      "strategy": "paginated_list+search",
+      "time": "2026-03-28 13:10:20"
     },
     "081_呼和浩特": {
       "found": 0,
       "depts": [],
       "downloaded": 0,
-      "strategy": "validated",
-      "time": "2026-03-28 12:45:00"
+      "strategy": "paginated_list+search",
+      "time": "2026-03-28 13:10:26"
     },
     "082_中山": {
-      "found": 4,
+      "found": 5,
       "depts": [
-        "公安局",
-        "发展和改革局",
+        "财政局",
         "统计局",
-        "财政局"
+        "公安局交通警察局",
+        "发展和改革局",
+        "公安局"
       ],
-      "downloaded": 4,
-      "strategy": "validated",
-      "time": "2026-03-28 12:45:00"
+      "downloaded": 0,
+      "strategy": "paginated_list+search",
+      "time": "2026-03-28 13:10:33"
     },
     "083_宁德": {
       "found": 25,
@@ -2083,23 +2088,22 @@
       "time": "2026-03-28 12:45:00"
     },
     "086_德州": {
-      "found": 11,
+      "found": 10,
       "depts": [
-        "人力资源和社会保障局",
-        "住房和建设局",
-        "信访局",
-        "公安局",
         "医疗保障局",
-        "国有资产监督管理委员会",
-        "市场监督管理局",
-        "政务服务和数据管理局",
-        "政府办公厅",
         "文化广电旅游体育局",
-        "退役军人事务局"
+        "住房和建设局",
+        "政务服务和数据管理局",
+        "退役军人事务局",
+        "市场监督管理局",
+        "政府办公厅",
+        "信访局",
+        "国有资产监督管理委员会",
+        "公安局"
       ],
-      "downloaded": 11,
-      "strategy": "validated",
-      "time": "2026-03-28 12:45:00"
+      "downloaded": 0,
+      "strategy": "paginated_list+search",
+      "time": "2026-03-28 13:10:40"
     },
     "087_宜宾": {
       "found": 22,
@@ -2136,68 +2140,68 @@
       "depts": [
         "政府办公厅"
       ],
-      "downloaded": 1,
-      "strategy": "validated",
-      "time": "2026-03-28 12:45:00"
+      "downloaded": 0,
+      "strategy": "paginated_list+search",
+      "time": "2026-03-28 13:10:46"
     },
     "089_株洲": {
       "found": 1,
       "depts": [
         "政府办公厅"
       ],
-      "downloaded": 1,
-      "strategy": "validated",
-      "time": "2026-03-28 12:45:00"
+      "downloaded": 0,
+      "strategy": "paginated_list+search",
+      "time": "2026-03-28 13:10:53"
     },
     "090_廊坊": {
       "found": 0,
       "depts": [],
       "downloaded": 0,
-      "strategy": "validated",
-      "time": "2026-03-28 12:45:00"
+      "strategy": "paginated_list+search",
+      "time": "2026-03-28 13:10:59"
     },
     "091_湛江": {
       "found": 7,
       "depts": [
-        "公安局",
-        "发展和改革局",
-        "城市管理和综合执法局",
+        "财政局",
         "政务服务和数据管理局",
-        "政府办公厅",
         "科技创新局",
-        "财政局"
+        "政府办公厅",
+        "发展和改革局",
+        "公安局",
+        "城市管理和综合执法局"
       ],
-      "downloaded": 7,
-      "strategy": "validated",
-      "time": "2026-03-28 12:45:00"
+      "downloaded": 0,
+      "strategy": "paginated_list+search",
+      "time": "2026-03-28 13:11:06"
     },
     "092_上饶": {
       "found": 0,
       "depts": [],
       "downloaded": 0,
-      "strategy": "validated",
-      "time": "2026-03-28 12:45:00"
+      "strategy": "paginated_list+search",
+      "time": "2026-03-28 13:11:12"
     },
     "093_宜春": {
       "found": 13,
       "depts": [
-        "人力资源和社会保障局",
-        "公安局",
-        "卫生健康委员会",
-        "发展和改革局",
-        "司法局",
-        "工业和信息化局",
-        "应急管理局",
-        "民政局",
-        "生态环境局",
-        "科技创新局",
-        "统计局",
+        "财政局",
         "规划和自然资源局",
-        "财政局"
+        "生态环境局",
+        "统计局",
+        "工业和信息化局",
+        "科技创新局",
+        "民政局",
+        "卫生健康委员会",
+        "人力资源和社会保障局",
+        "司法局",
+        "发展和改革局",
+        "公安局",
+        "应急管理局"
       ],
-      "downloaded": 13,
-      "strategy": "validated",
-      "time": "2026-03-28 12:45:00"
+      "downloaded": 0,
+      "strategy": "paginated_list+search",
+      "time": "2026-03-28 13:11:19"
     },
     "094_兰州": {
       "found": 27,
@@ -2393,13 +2397,13 @@
     "100_荆州": {
       "found": 3,
       "depts": [
-        "人力资源和社会保障局",
+        "市场监督管理局",
         "发展和改革局",
-        "市场监督管理局"
+        "人力资源和社会保障局"
       ],
-      "downloaded": 3,
-      "strategy": "validated",
-      "time": "2026-03-28 12:45:00"
+      "downloaded": 0,
+      "strategy": "paginated_list+search",
+      "time": "2026-03-28 13:11:26"
     }
   },
   "failed": [],

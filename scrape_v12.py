@@ -61,9 +61,9 @@ TARGET_DEPTS = [
 ]
 
 MATCH_RULES = [
-    (["公安局交通警察", "公安交通管理", "交警局", "交通警察局", "交警支队", "公安局交通管理"], "公安局交通警察局"),
+    (["公安局交通警察", "公安交通管理", "交警局", "交通警察局", "交警支队", "公安局交通管理", "公安交警", "交警大队", "交通警察支队", "公安局交警"], "公安局交通警察局"),
     (["卫生健康委", "卫健委", "卫生健康局", "卫生局"], "卫生健康委员会"),
-    (["教育局", "教育委员会", "教育委"], "教育局"),
+    (["教育局", "教育委员会", "教育委", "教委", "教育体育局", "教体局"], "教育局"),
     (["发展和改革", "发展改革", "发改委", "发改局"], "发展和改革局"),
     (["规划和自然资源", "自然资源和规划", "自然资源局", "规划局", "国土资源"], "规划和自然资源局"),
     (["交通运输局", "交通运输委", "交通局", "交通委"], "交通运输局"),
@@ -73,27 +73,27 @@ MATCH_RULES = [
     (["工业和信息化", "工信局", "经济和信息化", "经信局", "经信委"], "工业和信息化局"),
     (["市场监督管理", "市场监管"], "市场监督管理局"),
     (["国有资产监督管理", "国资委"], "国有资产监督管理委员会"),
-    (["口岸办公室", "口岸办", "口岸事务", "口岸管理"], "口岸办公室"),
+    (["口岸办公室", "口岸办", "口岸事务", "口岸管理", "口岸局", "口岸管理局"], "口岸办公室"),
     (["公安局", "市公安局"], "公安局"),
     (["医疗保障局", "医保局"], "医疗保障局"),
     (["商务局", "商务委"], "商务局"),
-    (["文化广电旅游体育", "文化广电旅游", "文化和旅游", "文旅局", "文广旅体", "文化体育旅游"], "文化广电旅游体育局"),
+    (["文化广电旅游体育", "文化广电旅游", "文化和旅游", "文旅局", "文广旅体", "文化体育旅游", "文广旅局", "文体旅游", "文广新旅", "文化旅游", "文体广旅", "文体广电旅游"], "文化广电旅游体育局"),
     (["生态环境局", "环境保护局", "环保局"], "生态环境局"),
-    (["政务服务和数据管理", "政务服务数据管理", "政务服务局", "大数据管理局", "数据局", "行政审批局"], "政务服务和数据管理局"),
-    (["城市管理和综合执法", "城市管理综合执法", "城市管理局", "城管局", "城管执法", "综合行政执法"], "城市管理和综合执法局"),
+    (["政务服务和数据管理", "政务服务数据管理", "政务服务局", "大数据管理局", "数据局", "行政审批局", "政数局", "大数据发展局", "政务和大数据", "行政审批服务", "数据管理局", "政务服务管理"], "政务服务和数据管理局"),
+    (["城市管理和综合执法", "城市管理综合执法", "城市管理局", "城管局", "城管执法", "综合行政执法", "城管和综合执法", "城市管理行政执法", "城市管理委员会", "综合执法局"], "城市管理和综合执法局"),
     (["退役军人事务", "退役军人局"], "退役军人事务局"),
-    (["宣传部", "市委宣传", "宣传部门"], "宣传部"),
+    (["宣传部", "市委宣传", "宣传部门", "中共.*宣传", "党委宣传"], "宣传部"),
     (["司法局"], "司法局"),
-    (["住房和建设", "住房和城乡建设", "住建局", "住房建设", "住房城乡建设"], "住房和建设局"),
-    (["建筑工务署", "建筑工务中心", "建设工程事务", "工务署", "建筑工务"], "建筑工务署"),
+    (["住房和建设", "住房和城乡建设", "住建局", "住房建设", "住房城乡建设", "住建委", "住房保障和房屋管理", "住房保障和房管"], "住房和建设局"),
+    (["建筑工务署", "建筑工务中心", "建设工程事务", "工务署", "建筑工务", "建设工务署", "建设工务局", "建设工务中心"], "建筑工务署"),
     (["民政局"], "民政局"),
     (["财政局"], "财政局"),
-    (["气象局", "气象台", "气象部门"], "气象局"),
+    (["气象局", "气象台", "气象部门", "气象服务"], "气象局"),
     (["应急管理局", "应急局", "安全生产监督"], "应急管理局"),
     (["审计局"], "审计局"),
     (["政府办公厅", "政府办公室", "人民政府办公"], "政府办公厅"),
     (["统计局"], "统计局"),
-    (["信访局", "信访办"], "信访局"),
+    (["信访局", "信访办", "信访办公室", "信访事务中心", "群众来访接待"], "信访局"),
 ]
 
 # 子单位关键词 - 用于过滤掉下属单位
@@ -194,7 +194,10 @@ def match_dept(text, city=""):
             t = t[len(p):]
     for keywords, dept in MATCH_RULES:
         for kw in keywords:
-            if kw in t:
+            if '.*' in kw:
+                if re.search(kw, t):
+                    return dept
+            elif kw in t:
                 if dept == "公安局" and ("交通" in t or "交警" in t):
                     return "公安局交通警察局"
                 return dept
@@ -218,7 +221,11 @@ def is_main_dept_budget(text, dept_name, city=""):
     for keywords, dept in MATCH_RULES:
         if dept == dept_name:
             for kw in keywords:
-                if kw in t:
+                if '.*' in kw:
+                    if re.search(kw, t):
+                        score += 50
+                        break
+                elif kw in t:
                     score += 50
                     break
             break
@@ -293,6 +300,16 @@ def detect_pagination(soup, base_url):
             col_idx_nums.append(int(m.group(1)))
     if col_idx_nums:
         return max(col_idx_nums), 'column_index_N'
+
+    # 模式1c: t_N.html / t/N.html (一些政府网站)
+    for a in soup.find_all('a', href=True):
+        href = a['href']
+        text = a.get_text(strip=True)
+        if text in ['尾页', '末页', '最后一页', '下一页', '>>']:
+            m = re.search(r't[/_](\d+)\.html', href)
+            if m:
+                total = int(m.group(1))
+                return total, 'page_param'
 
     # 模式2: ?page=N 或 &page=N
     for a in soup.find_all('a', href=True):
@@ -573,6 +590,12 @@ SEARCH_URL_PATTERNS = [
     "/opensearch?searchWord={query}",
     "/fullsearch?q={query}",
     "/site/zgnj/search.html?searchWord={query}&siteId=10",
+    "/igs/front/search.html?searchWord={query}",
+    "/search/index.html?searchWord={query}",
+    "/search/index.do?searchWord={query}",
+    "/search_result.jsp?q={query}",
+    "/search?key={query}",
+    "/search?words={query}",
 ]
 
 def detect_search_endpoint(session, website, city):
@@ -720,6 +743,20 @@ COMMON_BUDGET_PATHS = [
     "/zwgk/fdzdgknr/ysjs/bmczyjsbgjsgjf/bmysnew/2026nbmys/",
     "/zdlyxxgk/czyjshsgjf/czyjs/",
     "/zdlyxxgk/czyjshsg/bmyjs/",
+    "/zwgk/zdly/czxx/bmczyjs/index.html",
+    "/zwgk/zdly/czxx/bmczyjs/index.shtml",
+    "/zfxxgk/fdzdgknr/czxx/bmczyjs/index.html",
+    "/zwgk/zfxxgkzl/fdzdgknr/czxx/bmczyjs/",
+    "/zwgk/zfxxgkzl/fdzdgknr/ysjs/bmczyjsbgjsgjf/",
+    "/xxgk/fdzdgk/czxx/bmczyjs/2026/",
+    "/zwgk/zdly/czsj/bmys/",
+    "/zwgk/zdly/czsj/czyjs/",
+    "/zwgk/zdly/czxx/czyjs/2026/",
+    "/zwgk/zdly/czxx/bmysjsgk/",
+    "/zwgk/zdzl/czyjs/",
+    "/zwgk/zdly/czzj/bmys/",
+    "/zfxxgk/zdgk/czxx/bmys/",
+    "/zfxxgk/zdgk/czxx/bmczyjs/",
 ]
 
 def probe_budget_page(session, website, city):

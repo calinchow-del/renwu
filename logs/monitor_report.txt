@@ -1,5 +1,5 @@
 ======================================================================
-预算爬取监控报告 - 2026-03-28 12:44:44
+预算爬取监控报告 - 2026-03-28 13:12:19
 ======================================================================
 
 总计: 100 城市
@@ -9,52 +9,52 @@
   空白(0):        0
   未尝试:         13
   磁盘PDF总数:    247
-  磁盘HTML总数:   1423
+  磁盘HTML总数:   1426
 
 ======================================================================
 需要行动的城市 (41个):
 ======================================================================
   [  7] 成都     - 未尝试 (PDF:0 HTML:0) 策略:unknown
-  [  8] 杭州     - 找到6个 (PDF:5 HTML:1) 策略:validated
+  [  8] 杭州     - 找到6个 (PDF:5 HTML:1) 策略:paginated_list+search
   [ 10] 南京     - 未尝试 (PDF:0 HTML:0) 策略:unknown
-  [ 12] 天津     - 找到5个 (PDF:0 HTML:5) 策略:validated
-  [ 13] 青岛     - 找到2个 (PDF:0 HTML:2) 策略:validated
+  [ 12] 天津     - 找到9个 (PDF:0 HTML:8) 策略:paginated_list+search
+  [ 13] 青岛     - 找到2个 (PDF:0 HTML:2) 策略:paginated_list+search
   [ 19] 合肥     - 未尝试 (PDF:0 HTML:0) 策略:unknown
-  [ 20] 西安     - 找到8个 (PDF:7 HTML:1) 策略:validated
-  [ 23] 南通     - 找到4个 (PDF:0 HTML:4) 策略:validated
+  [ 20] 西安     - 找到8个 (PDF:7 HTML:1) 策略:paginated_list+search
+  [ 23] 南通     - 找到4个 (PDF:0 HTML:4) 策略:paginated_list+search
   [ 27] 唐山     - 未尝试 (PDF:0 HTML:0) 策略:unknown
-  [ 28] 温州     - 找到12个 (PDF:0 HTML:12) 策略:validated
+  [ 28] 温州     - 找到12个 (PDF:0 HTML:12) 策略:paginated_list+search
   [ 29] 大连     - 未尝试 (PDF:0 HTML:0) 策略:unknown
   [ 30] 徐州     - 未尝试 (PDF:0 HTML:0) 策略:unknown
-  [ 31] 沈阳     - 找到2个 (PDF:0 HTML:2) 策略:validated
-  [ 32] 厦门     - 找到1个 (PDF:1 HTML:0) 策略:validated
+  [ 31] 沈阳     - 找到2个 (PDF:0 HTML:2) 策略:paginated_list+search
+  [ 32] 厦门     - 找到1个 (PDF:1 HTML:0) 策略:paginated_list+search
   [ 33] 绍兴     - 未尝试 (PDF:0 HTML:0) 策略:unknown
-  [ 36] 潍坊     - 找到12个 (PDF:1 HTML:11) 策略:validated
-  [ 38] 扬州     - 找到3个 (PDF:0 HTML:3) 策略:validated
-  [ 39] 盐城     - 找到1个 (PDF:0 HTML:1) 策略:validated
-  [ 41] 嘉兴     - 找到5个 (PDF:3 HTML:2) 策略:validated
+  [ 36] 潍坊     - 找到12个 (PDF:1 HTML:11) 策略:paginated_list+search
+  [ 38] 扬州     - 找到3个 (PDF:0 HTML:3) 策略:paginated_list+search
+  [ 39] 盐城     - 找到1个 (PDF:0 HTML:1) 策略:paginated_list+search
+  [ 41] 嘉兴     - 找到5个 (PDF:3 HTML:2) 策略:paginated_list+search
   [ 44] 泰州     - 未尝试 (PDF:0 HTML:0) 策略:unknown
-  [ 48] 惠州     - 找到4个 (PDF:3 HTML:1) 策略:validated
-  [ 53] 济宁     - 找到7个 (PDF:0 HTML:7) 策略:validated
+  [ 48] 惠州     - 找到4个 (PDF:3 HTML:1) 策略:paginated_list+search
+  [ 53] 济宁     - 找到7个 (PDF:0 HTML:7) 策略:paginated_list+search
   [ 55] 襄阳     - 未尝试 (PDF:0 HTML:0) 策略:unknown
-  [ 58] 淮安     - 找到1个 (PDF:0 HTML:1) 策略:validated
-  [ 59] 芜湖     - 找到2个 (PDF:0 HTML:2) 策略:validated
-  [ 64] 南阳     - 找到11个 (PDF:0 HTML:11) 策略:validated
-  [ 68] 菏泽     - 找到11个 (PDF:3 HTML:8) 策略:validated
+  [ 58] 淮安     - 找到1个 (PDF:0 HTML:1) 策略:paginated_list+search
+  [ 59] 芜湖     - 找到2个 (PDF:0 HTML:2) 策略:paginated_list+search
+  [ 64] 南阳     - 找到11个 (PDF:0 HTML:11) 策略:paginated_list+search
+  [ 68] 菏泽     - 找到11个 (PDF:3 HTML:8) 策略:paginated_list+search
   [ 70] 邯郸     - 未尝试 (PDF:0 HTML:0) 策略:unknown
-  [ 71] 连云港    - 找到11个 (PDF:0 HTML:11) 策略:validated
-  [ 74] 衡阳     - 找到1个 (PDF:0 HTML:1) 策略:validated
-  [ 80] 江门     - 找到6个 (PDF:2 HTML:4) 策略:validated
+  [ 71] 连云港    - 找到11个 (PDF:0 HTML:11) 策略:paginated_list+search
+  [ 74] 衡阳     - 找到1个 (PDF:0 HTML:1) 策略:paginated_list+search
+  [ 80] 江门     - 找到6个 (PDF:2 HTML:4) 策略:paginated_list+search
   [ 81] 呼和浩特   - 未尝试 (PDF:0 HTML:0) 策略:unknown
-  [ 82] 中山     - 找到4个 (PDF:1 HTML:3) 策略:validated
-  [ 86] 德州     - 找到11个 (PDF:1 HTML:10) 策略:validated
-  [ 88] 茂名     - 找到1个 (PDF:1 HTML:0) 策略:validated
-  [ 89] 株洲     - 找到1个 (PDF:1 HTML:0) 策略:validated
+  [ 82] 中山     - 找到5个 (PDF:1 HTML:3) 策略:paginated_list+search
+  [ 86] 德州     - 找到11个 (PDF:1 HTML:10) 策略:paginated_list+search
+  [ 88] 茂名     - 找到1个 (PDF:1 HTML:0) 策略:paginated_list+search
+  [ 89] 株洲     - 找到1个 (PDF:1 HTML:0) 策略:paginated_list+search
   [ 90] 廊坊     - 未尝试 (PDF:0 HTML:0) 策略:unknown
-  [ 91] 湛江     - 找到7个 (PDF:1 HTML:6) 策略:validated
+  [ 91] 湛江     - 找到7个 (PDF:1 HTML:6) 策略:paginated_list+search
   [ 92] 上饶     - 未尝试 (PDF:0 HTML:0) 策略:unknown
-  [ 93] 宜春     - 找到13个 (PDF:0 HTML:13) 策略:validated
-  [100] 荆州     - 找到3个 (PDF:0 HTML:3) 策略:validated
+  [ 93] 宜春     - 找到13个 (PDF:0 HTML:13) 策略:paginated_list+search
+  [100] 荆州     - 找到3个 (PDF:0 HTML:3) 策略:paginated_list+search
 
 优秀城市 (39个):
   [  4] 重庆     - 54个部门 (PDF:25)
@@ -71,31 +71,31 @@
 ======================================================================
 部门覆盖率 (已尝试的城市中):
 ======================================================================
-  公安局交通警察局               0/ 87 (  0.0%) 
+  公安局交通警察局               1/ 87 (  1.1%) 
   建筑工务署                  1/ 87 (  1.1%) 
   口岸办公室                  1/ 87 (  1.1%) 
   宣传部                   16/ 87 ( 18.4%) ███
-  气象局                   28/ 87 ( 32.2%) ██████
+  气象局                   29/ 87 ( 33.3%) ██████
   文化广电旅游体育局             40/ 87 ( 46.0%) █████████
   政务服务和数据管理局            40/ 87 ( 46.0%) █████████
   城市管理和综合执法局            45/ 87 ( 51.7%) ██████████
   信访局                   47/ 87 ( 54.0%) ██████████
   国有资产监督管理委员会           48/ 87 ( 55.2%) ███████████
-  教育局                   51/ 87 ( 58.6%) ███████████
+  教育局                   52/ 87 ( 59.8%) ███████████
   卫生健康委员会               54/ 87 ( 62.1%) ████████████
   市场监督管理局               54/ 87 ( 62.1%) ████████████
   审计局                   54/ 87 ( 62.1%) ████████████
   医疗保障局                 55/ 87 ( 63.2%) ████████████
+  人力资源和社会保障局            56/ 87 ( 64.4%) ████████████
   退役军人事务局               56/ 87 ( 64.4%) ████████████
-  人力资源和社会保障局            57/ 87 ( 65.5%) █████████████
   住房和建设局                57/ 87 ( 65.5%) █████████████
   财政局                   57/ 87 ( 65.5%) █████████████
   规划和自然资源局              58/ 87 ( 66.7%) █████████████
-  生态环境局                 58/ 87 ( 66.7%) █████████████
+  生态环境局                 59/ 87 ( 67.8%) █████████████
   统计局                   59/ 87 ( 67.8%) █████████████
-  交通运输局                 60/ 87 ( 69.0%) █████████████
   科技创新局                 60/ 87 ( 69.0%) █████████████
   水务局                   60/ 87 ( 69.0%) █████████████
+  交通运输局                 61/ 87 ( 70.1%) ██████████████
   公安局                   61/ 87 ( 70.1%) ██████████████
   商务局                   61/ 87 ( 70.1%) ██████████████
   民政局                   61/ 87 ( 70.1%) ██████████████
