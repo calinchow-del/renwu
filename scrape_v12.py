@@ -334,9 +334,19 @@ def detect_pagination(soup, base_url):
         href = a['href']
         text = a.get_text(strip=True)
         if text in ['尾页', '末页', '最后一页']:
-            m = re.search(r'[?&](?:page|PageIndex|pageNo|pageNum|currPage)=(\d+)', href, re.I)
+            m = re.search(r'[?&](?:page|PageIndex|pageNo|pageNum|currPage|pn|p)=(\d+)', href, re.I)
             if m:
                 return int(m.group(1)), 'page_param'
+    # 模式2 fallback: 从"下一页"/">"链接推断, 至少有2页
+    for a in soup.find_all('a', href=True):
+        href = a['href']
+        text = a.get_text(strip=True)
+        if text in ['下一页', '>', '>>', '›', '»']:
+            m = re.search(r'[?&](?:page|PageIndex|pageNo|pageNum|currPage|pn|p)=(\d+)', href, re.I)
+            if m:
+                # 下一页链接指向的页码作为下限, 估算至少有10页
+                next_page = int(m.group(1))
+                return max(next_page * 5, 10), 'page_param'
 
     # 模式2b: /N.html 数字路径分页 (如 /1.html, /2.html)
     for a in soup.find_all('a', href=True):
@@ -434,6 +444,13 @@ def extract_links_from_page(soup, base_url, city):
             continue
         seen.add(full)
         dept = match_dept(text, city)
+        # Also check title attribute if text didn't match
+        if not dept:
+            title_attr = a.get('title', '')
+            if title_attr:
+                dept = match_dept(title_attr, city)
+                if dept:
+                    text = title_attr  # use title for scoring
         is_pdf = full.lower().endswith('.pdf')
         results.append({
             'text': text,
@@ -664,6 +681,15 @@ SEARCH_URL_PATTERNS = [
     "/search?channelId=0&searchWord={query}",
     "/jrobotfront/search.action?searchWord={query}",
     "/search?appid=1&searchWord={query}",
+    "/search/s?searchWord={query}",
+    "/search/index.html?keyword={query}",
+    "/search/index.html?q={query}",
+    "/search?tab=all&searchWord={query}",
+    "/search.html?word={query}",
+    "/search?kw={query}",
+    "/search/list?keyword={query}",
+    "/was5/web/search?searchword={query}&channelid=0",
+    "/jrobotfront/search.action?webid=1&pg=1&searchWord={query}",
 ]
 
 def detect_search_endpoint(session, website, city):
@@ -685,18 +711,33 @@ def detect_search_endpoint(session, website, city):
         except:
             pass
 
-    # 尝试常见模式
+    # 也检查页面中的搜索链接 (如 /search 开头的链接)
+    if r:
+        try:
+            for a in soup.find_all('a', href=True):
+                href = a.get('href', '')
+                if '/search' in href.lower() and 'searchword' not in href.lower():
+                    search_base = urljoin(website, href.split('?')[0])
+                    test_url = f"{search_base}?searchWord={quote('2026年预算')}"
+                    tr = fetch(session, test_url, timeout=8)
+                    if tr and len(tr.text) > 1000 and ('搜索' in tr.text or '结果' in tr.text or '预算' in tr.text):
+                        logger.info(f"  [{city}] 探测到搜索接口(链接): {search_base}?searchWord={{query}}")
+                        return f"{search_base}?searchWord={{query}}"
+        except:
+            pass
+
+    # 尝试常见模式 (只试前15个最常见的, 减少探测时间)
     test_query = quote("2026年预算")
-    for pattern in SEARCH_URL_PATTERNS:
+    for pattern in SEARCH_URL_PATTERNS[:15]:
         url = urljoin(website, pattern.format(query=test_query))
         try:
-            r = fetch(session, url, timeout=8)
+            r = fetch(session, url, timeout=5)
             if r and len(r.text) > 1000 and ('搜索' in r.text or '结果' in r.text or '预算' in r.text):
                 logger.info(f"  [{city}] 探测到搜索接口: {pattern}")
                 return urljoin(website, pattern)
         except:
             pass
-        time.sleep(0.2)
+        time.sleep(0.1)
 
     return None
 
@@ -881,17 +922,17 @@ COMMON_BUDGET_PATHS = [
 ]
 
 def probe_budget_page(session, website, city):
-    # Try standard paths on the main website
-    for path in COMMON_BUDGET_PATHS[:70]:
+    # Try standard paths on the main website (limit to first 50 for speed)
+    for path in COMMON_BUDGET_PATHS[:50]:
         url = urljoin(website, path)
         try:
-            r = fetch(session, url, timeout=8)
+            r = fetch(session, url, timeout=6)
             if r and len(r.text) > 500 and '预算' in r.text:
                 logger.info(f"  [{city}] 探测到预算页: {url}")
                 return url
         except:
             pass
-        time.sleep(0.2)
+        time.sleep(0.1)
 
     # Try financial bureau subdomain (czj.xxx.gov.cn or cz.xxx.gov.cn)
     parsed = urlparse(website)
@@ -902,7 +943,14 @@ def probe_budget_page(session, website, city):
                 "/zwgk_53713/yjsgktypt/ysgk/2026bmys/",
                 "/xxgk/bmys/2026/", "/zwgk/bmys/", "/zwgk/bmys/2026/",
                 "/zfxxgk/fdzdgknr/czxx/bmczyjs/",
-                "/xxgk/gkml/czyjs/", "/ysgkpt/"]
+                "/xxgk/gkml/czyjs/", "/ysgkpt/",
+                "/gkml/czyjs/", "/bmys/", "/czyjs/",
+                "/zwgk/zdly/czxx/bmczyjs/",
+                "/zwgk/zdly/czzj/bmczyjs/",
+                "/zfxxgk/fdzdgknr/ysjs/bmczyjsbgjsgjf/bmysnew/2026nbmys/",
+                "/zwgk/fdzdgknr/czxx/bmczyjs/",
+                "/zfxxgk/zdlyxxgk/czxx/bmczyjs/",
+                "/zfxxgk/zdlyxxgk/czyjshsg/bmyjs/"]
     for cz_domain in cz_domains:
         for cz_path in cz_paths:
             cz_url = f"http://{cz_domain}{cz_path}"
