@@ -1,20 +1,18 @@
 #!/usr/bin/env python3
 """
-中国百强城市2026年部门预算爬取脚本 v9
-修复: 磁盘检测跳过、进度丢失、进程崩溃
+中国百强城市2026年部门预算爬取脚本 v10
+修复: 去除多线程(消除竞态条件)、改善错误恢复、增强路径探测
 """
 
 import json
 import os
 import re
 import time
-import copy
 import logging
 import urllib3
-import threading
+import traceback
 from urllib.parse import urljoin, urlparse, unquote, quote
 from pathlib import Path
-from concurrent.futures import ThreadPoolExecutor, as_completed
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
@@ -35,11 +33,11 @@ HEADERS = {
     'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8',
     'Accept-Encoding': 'gzip, deflate',
 }
-TIMEOUT = 20
-RETRY = 2
-MAX_WORKERS = 2
-DELAY_PAGE = 0.3
-DELAY_CITY = 1
+TIMEOUT = 25
+RETRY = 3
+MAX_WORKERS = 1  # v10: 顺序处理,不用多线程
+DELAY_PAGE = 0.5
+DELAY_CITY = 2
 
 # ========== 32个目标委办局 ==========
 TARGET_DEPTS = [
@@ -99,8 +97,7 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-# ========== 进度管理(线程安全) ==========
-progress_lock = threading.Lock()
+# ========== 进度管理(v10: 无锁,顺序处理) ==========
 
 def load_progress():
     if PROGRESS_FILE.exists():
@@ -111,35 +108,35 @@ def load_progress():
             return {"completed": {}, "failed": []}
         if not isinstance(data, dict):
             return {"completed": {}, "failed": []}
-        if 'completed' not in data or not isinstance(data.get('completed'), dict):
+        if not isinstance(data.get('completed'), dict):
             data['completed'] = {}
-        if 'failed' not in data or not isinstance(data.get('failed'), list):
+        if not isinstance(data.get('failed'), list):
             data['failed'] = []
         return data
     return {"completed": {}, "failed": []}
 
-def save_progress_safe(progress_data):
+def save_progress(progress_data):
     try:
-        with progress_lock:
-            safe_data = {
-                "completed": dict(progress_data.get("completed", {})),
-                "failed": list(progress_data.get("failed", []))
-            }
-            tmp = str(PROGRESS_FILE) + ".tmp"
-            with open(tmp, 'w', encoding='utf-8') as f:
-                json.dump(safe_data, f, ensure_ascii=False, indent=2)
-            os.replace(tmp, str(PROGRESS_FILE))
+        safe_data = {
+            "completed": dict(progress_data.get("completed", {})),
+            "failed": list(progress_data.get("failed", []))
+        }
+        tmp = str(PROGRESS_FILE) + ".tmp"
+        with open(tmp, 'w', encoding='utf-8') as f:
+            json.dump(safe_data, f, ensure_ascii=False, indent=2)
+        os.replace(tmp, str(PROGRESS_FILE))
     except Exception as e:
         logger.error(f"保存进度失败: {e}")
 
 def update_city_progress(progress_data, city_key, found, downloaded):
-    with progress_lock:
-        progress_data.setdefault('completed', {})[city_key] = {
-            "found": found,
-            "downloaded": downloaded,
-            "time": time.strftime('%Y-%m-%d %H:%M:%S')
-        }
-    save_progress_safe(progress_data)
+    if 'completed' not in progress_data:
+        progress_data['completed'] = {}
+    progress_data['completed'][city_key] = {
+        "found": found,
+        "downloaded": downloaded,
+        "time": time.strftime('%Y-%m-%d %H:%M:%S')
+    }
+    save_progress(progress_data)
 
 
 def count_city_files(city_key):
@@ -306,23 +303,40 @@ def find_dept_budgets(session, budget_url, city):
 # ========== 预算路径探测 ==========
 
 COMMON_BUDGET_PATHS = [
-    "/zwgk/zdly/czxx/bmczyjs/", "/zwgk/zdly/czzj/bmyjshsgjf/ys/",
-    "/zwgk/czzj/", "/zwgk/bmys/", "/zwgk/czgk/",
-    "/zfxxgk/fdzdgknr/czxx/", "/zfxxgk/fdzdgknr/ysjs/",
-    "/zfxxgk/czxx/", "/zfxxgk/bmczyjs/",
-    "/xxgk/czxx/", "/xxgk/fdzdgk/czxx/",
-    "/szf/ztzl/ysgk/", "/yjsgk/",
+    # 最常见的路径优先
+    "/zwgk/zdly/czxx/bmczyjs/",
+    "/zwgk/zdly/czzj/bmyjshsgjf/ys/",
     "/zwgk/zdly/czzj/bmczyjs/2026/",
-    "/zwgk/fdzdgknr/ysjs/bmczyjsbgjsgjf/",
-    "/col/col_budget/index.html",
-    "/site/tpl/szfbmczyjs/", "/gkml/czyjs/",
+    "/zwgk/zdly/czzj/bmczyjs/",
     "/zwgk/zdly/czxx/",
     "/zwgk/zdly/czzj/",
+    "/zwgk/czzj/", "/zwgk/bmys/", "/zwgk/czgk/",
+    "/zfxxgk/fdzdgknr/czxx/",
     "/zfxxgk/fdzdgknr/czxx/bmczyjs/",
     "/zfxxgk/fdzdgknr/czxx/bmczyjs/2026/",
+    "/zfxxgk/fdzdgknr/ysjs/",
+    "/zfxxgk/fdzdgknr/ysjs/bmczyjsbgjsgjf/",
+    "/zfxxgk/czxx/", "/zfxxgk/bmczyjs/",
+    "/xxgk/czxx/", "/xxgk/fdzdgk/czxx/",
+    "/xxgk/fdzdgk/czxx/bmczyjs/",
+    "/szf/ztzl/ysgk/", "/yjsgk/",
+    "/zwgk/fdzdgknr/ysjs/bmczyjsbgjsgjf/",
+    "/site/tpl/szfbmczyjs/", "/gkml/czyjs/",
     "/zwgk/zfxxgkzl/fdzdgknr/ysjs/",
     "/zwgk/zfxxgkzl/fdzdgknr/czxx/",
-    "/xxgk/fdzdgk/czxx/bmczyjs/",
+    # 额外路径
+    "/zwgk/zdly/czxx/czyjs/",
+    "/zfxxgk/fdzdgknr/bmczyjs/",
+    "/zfxxgk/fdzdgknr/bmczyjs/2026/",
+    "/zwgk/czxx/bmczyjs/",
+    "/zwgk/czxx/bmczyjs/2026/",
+    "/czyjs/", "/bmys/", "/czys/",
+    "/zfxxgk/zdlyxxgk/czyjshsg/bmyjs/",
+    "/ncszf/2026bmys/",
+    "/zwgk/zfxxgk/czxx/",
+    "/ztzl/yjsgk/", "/ztzl/ysgk/",
+    "/zfb/xxgk/ztxxgk/czzj/bmczyjs/",
+    "/col/col_budget/index.html",
 ]
 
 def probe_budget_page(session, website, city):
@@ -358,13 +372,12 @@ def process_city(city_info, progress):
 
     # 也检查progress文件(作为备用)
     try:
-        with progress_lock:
-            completed = progress.get('completed', {})
-            if city_key in completed:
-                prev = completed[city_key]
-                if isinstance(prev, dict) and prev.get('found', 0) >= 5:
-                    logger.info(f"[{city}] 进度记录已完成({prev['found']}个部门)，跳过")
-                    return {"found": prev['found'], "downloaded": prev.get('downloaded', 0)}
+        completed = progress.get('completed', {})
+        if city_key in completed:
+            prev = completed[city_key]
+            if isinstance(prev, dict) and prev.get('found', 0) >= 5:
+                logger.info(f"[{city}] 进度记录已完成({prev['found']}个部门)，跳过")
+                return {"found": prev['found'], "downloaded": prev.get('downloaded', 0)}
     except Exception as e:
         logger.warning(f"[{city}] 读取进度异常: {e}")
 
@@ -477,7 +490,6 @@ def process_city(city_info, progress):
 
     except Exception as e:
         logger.error(f"[{city}] 爬取过程异常: {e}")
-        import traceback
         logger.error(traceback.format_exc())
 
     try:
@@ -496,6 +508,8 @@ def run(start=1, end=100):
     cities = [c for c in cities if start <= c['rank'] <= end]
 
     progress = load_progress()
+    if 'completed' not in progress:
+        progress['completed'] = {}
 
     # 启动时扫描磁盘，同步进度
     logger.info("扫描磁盘已有文件...")
@@ -505,65 +519,52 @@ def run(start=1, end=100):
         n = count_city_files(ck)
         if n >= 5:
             disk_done += 1
-            with progress_lock:
-                progress.setdefault('completed', {})[ck] = {
-                    "found": n, "downloaded": n,
-                    "time": time.strftime('%Y-%m-%d %H:%M:%S')
-                }
-    save_progress_safe(progress)
+            progress['completed'][ck] = {
+                "found": n, "downloaded": n,
+                "time": time.strftime('%Y-%m-%d %H:%M:%S')
+            }
+    save_progress(progress)
     logger.info(f"磁盘已完成: {disk_done}个城市")
 
-    already_done = len(progress.get('completed', {}))
-    logger.info(f"开始爬取 {len(cities)} 个城市, 32个目标部门")
-    logger.info(f"已有进度: {already_done}个城市完成")
-    logger.info(f"并发数: {MAX_WORKERS}")
-
+    # 有budget_url的优先处理
     with_url = [c for c in cities if c.get('budget_url')]
     without_url = [c for c in cities if not c.get('budget_url')]
     ordered = with_url + without_url
 
+    logger.info(f"开始爬取 {len(cities)} 个城市, 32个目标部门")
+    logger.info(f"已完成: {disk_done}个城市, 有URL: {len(with_url)}, 无URL需探测: {len(without_url)}")
+    logger.info(f"v10: 顺序处理模式(更稳定)")
+
     total_found = 0
     total_downloaded = 0
 
-    CITY_TIMEOUT = 300
-
-    with ThreadPoolExecutor(max_workers=MAX_WORKERS) as pool:
-        futures = {}
-        for city_info in ordered:
-            f = pool.submit(process_city, city_info, progress)
-            futures[f] = city_info
-            time.sleep(0.5)
-
-        for f in as_completed(futures):
-            city_info = futures[f]
+    for i, city_info in enumerate(ordered):
+        city_name = city_info['city']
+        try:
+            logger.info(f"--- 进度: {i+1}/{len(ordered)} ---")
+            result = process_city(city_info, progress)
+            if result and isinstance(result, dict):
+                total_found += result.get('found', 0)
+                total_downloaded += result.get('downloaded', 0)
+        except Exception as e:
+            logger.error(f"[{city_name}] 处理异常: {e}")
+            logger.error(traceback.format_exc())
             try:
-                result = f.result(timeout=CITY_TIMEOUT)
-                if result and isinstance(result, dict):
-                    total_found += result.get('found', 0)
-                    total_downloaded += result.get('downloaded', 0)
-            except TimeoutError:
-                logger.error(f"[{city_info['city']}] 超时({CITY_TIMEOUT}秒)，跳过")
-                try:
-                    city_key = f"{city_info['rank']:03d}_{city_info['city']}"
-                    update_city_progress(progress, city_key, 0, 0)
-                except:
-                    pass
-            except Exception as e:
-                logger.error(f"[{city_info['city']}] 线程异常: {e}")
-                import traceback
-                logger.error(traceback.format_exc())
-                try:
-                    city_key = f"{city_info['rank']:03d}_{city_info['city']}"
-                    update_city_progress(progress, city_key, 0, 0)
-                except:
-                    pass
+                city_key = f"{city_info['rank']:03d}_{city_name}"
+                update_city_progress(progress, city_key, 0, 0)
+            except:
+                pass
 
-    save_progress_safe(progress)
+        # 每个城市之间休息
+        time.sleep(DELAY_CITY)
 
+    save_progress(progress)
+
+    completed_count = len([k for k, v in progress.get('completed', {}).items()
+                          if isinstance(v, dict) and v.get('found', 0) > 0])
     logger.info("=" * 60)
     logger.info(f"全部完成! 总计找到 {total_found} 个部门匹配, 下载 {total_downloaded} 个文件")
-    completed_count = len(progress.get('completed', {}))
-    logger.info(f"已完成城市: {completed_count}/100")
+    logger.info(f"有效完成城市: {completed_count}/100")
     logger.info("=" * 60)
 
 
