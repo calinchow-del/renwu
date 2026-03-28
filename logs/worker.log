@@ -2094,3 +2094,9 @@ Already up to date.
 2026-03-28 18:35:06 任务标记running但进程已死，自动重启
 2026-03-28 18:35:06 自动重启爬取 PID: 1288741
 2026-03-28 18:35:06 统计: 4城市, 559个PDF, 爬取运行中 (PID: 1288741)
+From https://github.com/calinchow-del/renwu
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+2026-03-28 18:40:06 任务标记running但进程已死，自动重启
+2026-03-28 18:40:06 自动重启爬取 PID: 1291297
+2026-03-28 18:40:06 统计: 4城市, 559个PDF, 爬取运行中 (PID: 1291297)
