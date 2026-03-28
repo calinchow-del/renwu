@@ -1,994 +1,2352 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta name="renderer" content="webkit" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta charset="UTF-8" />
-    
-  <script src="/cms_files/default/script/jslib/jquery.js"></script>
- <script src="/cms_files/default/script/jslib/jquery.cookie.js"></script>
- <script src="/cms_files/default/script/layui/layui.all.js"></script>
- <script src="/cms_files/default/script/layui/layer/layer.js"></script>
- <script src="/script/webglobal.js"></script>
- <script src="/plugins/libs/require.js"></script>
- <script src="/plugins/libs/load.js"></script>
- <script src="/script/webgray.js"></script>
- <link rel="stylesheet" href="/cms_files/default/css/iconfont.css" />
-<link rel="stylesheet" href="/cms_files/default/script/layui/css/layui.css" />
-<title>中华人民共和国工业和信息化部</title>
-<meta name="Keywords" content="工信部,工业和信息化部,工业和信息化,工业,信息化,中华人民共和国工业和信息化部">
-<meta name="Titles" content="中华人民共和国工业和信息化部门户网站首页">
-<meta name="Descriptions" content="中华人民共和国工业和信息化部门户网站首页">
-<meta name="SiteName" content="中华人民共和国工业和信息化部">
-<meta name="SiteDomain" content="www.miit.gov.cn">
-<meta name="SiteIDCode" content="bm07000001"><meta name="MakeTime" content="2026-03-27 16:22:21">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- 必须，不要动 -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="renderer" content="webkit">
+<!-- 移动端必须、PC端非响应式可以去掉 -->
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+<!-- SEO用 -->
+<!-- ---- --【meta】 -- 标签开始 ---- -->
+<meta name="SiteName" content='武汉市经济和信息化局'>
+<meta name="SiteDomain" content='http://jxj.wuhan.gov.cn'>
+<meta name="SiteIDCode" content="4201000022">
+<meta name="description" content="jxj,武汉,武汉市,武汉市经信局,经信局,政务动态,政务公开,公众互动,专题专栏,门户网站,jxj.wuhan.gov.cn">
+<meta name="keywords" content="jxj,武汉,武汉市,武汉市经信局,经信局,政务动态,政务公开,公众互动,专题专栏,门户网站,jxj.wuhan.gov.cn">
+<meta name="ColumnName" content='' />
+<meta name="ColumnDescription" content='' />
+<meta name="ColumnKeywords" content='' />
+<meta name="ColumnType" content='' />
+<meta name="Url" content='http://jxj.wuhan.gov.cn/' />
+<!-- ---- --【meta】 -- 标签结束 ---- -->
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+    <TITLE>武汉市经济和信息化局</TITLE>
+<!-- 引入 Bootstrap -->
+<link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+<link href="./material/Themes/style.css?t=20250731" rel="stylesheet" />
+<link href="" id="userStyle" rel="stylesheet" />
 
-<meta id="pagetype" content="0">
-</meta></meta></meta></meta></meta></meta></meta></meta></head>
-  <body>
-    <link href="/cms_files/webmiit/tplobject/gxbsy/cd4c71a286d9423d8897ceb8d4bab1f2/images/hanweb.min.css" rel="stylesheet" />
-    <link href="/cms_files/webmiit/tplobject/gxbsy/cd4c71a286d9423d8897ceb8d4bab1f2/images/base.css" rel="stylesheet" />
-    <link href="/cms_files/webmiit/tplobject/gxbsy/cd4c71a286d9423d8897ceb8d4bab1f2/images/public_base.css" rel="stylesheet" />
-    <script src="/cms_files/webmiit/tplobject/gxbsy/cd4c71a286d9423d8897ceb8d4bab1f2/images/7035840.js"></script>
-    <script src="/cms_files/webmiit/tplobject/gxbsy/cd4c71a286d9423d8897ceb8d4bab1f2/images/7035841.js"></script>
-  <style>
-      .floornew {
-        margin-top: 42px;
-        float: left;
-        width: 100%;
-      }
-      .new-cbox-l {
-        width: 815px;
-        margin-right: 45px;
-        float: left;
-      }
-      .floor2 {
-        height: 90px;
-      }
-.floor4{
-height:404px;
-}
-      .new-cbox-r {
-        width: 32.8125%;
-        float: left;
-      }
-      ul.wzbd_list li {
-        width: 100%;
-        height: 70px;
-        line-height: normal;
-        background-color: #f6f6f6;
-        background-position: none;
-        margin-bottom: 12px;
-      }
-
-      ul.wzbd_list li:hover {
-        background-color: #f0f7ff;
-      }
-
-      ul.wzbd_list li span {
-        font-size: 1rem;
-        color: #054696;
-        font-weight: bold;
-        padding: 25px 5px 0 14px;
-        margin-right: 10px;
-        display: inline-block;
-        float: left;
-        position: relative;
-        width: 24%;
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 2;
-        overflow: hidden;
-        text-overflow: ellipsis;
-      }
-.tabbox-bds4 .tabbox-bd-con{
-  padding-top: 10px;
-}
-.floor3{
-margin-top: 26px;
-}
-.floor4 {
-    margin-top: 30px;
-}
-.wzbd_list, .new-tw {
-    margin-top: 20px;
-}
-      ul.wzbd_list li span::after {
-        content: url(https://www.miit.gov.cn/cms_files/webmiit/tplobject/gxbsy/7cdb63ce84fc43b8a14ef96215171444/images/wzbd_line.png);
-        width: 2px;
-        height: 18px;
-        position: absolute;
-        top: 28px;
-        right: 0;
-      }
-  li a:hover {
-    color: #054696;
-}
-      ul.wzbd_list li a {
-        height: auto;
-        max-height: 66px;
-        width: auto;
-        max-width: 73%;
-        display: inline-block;
-        padding-right: 10px;
-        padding-top: 25px;
-        float: left;
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 2;
-        overflow: hidden;
-        text-overflow: ellipsis;
-      }
-      .wzbd_list,
-      .new-tw {
-        margin-top: 28px;
-      }
-      .boxR_1_Cont {
-        height: 110px;
-        margin-bottom: 13px;
-      }
-
-      .boxR_1_Cont-img {
-        width: 180px;
-        display: inline-block;
-        float: left;
-      }
-
-      .boxR_1_Cont-title {
-        width: 240px;
-        height: 110px;
-        line-height: 25px;
-        float: right;
-        padding: 7px 0 0 10px;
-        text-align: justify;
-        position: relative;
-      }
-
-      .boxR_1_Cont-title a {
-        height: 75px;
-        display: inline-block;
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 3;
-        overflow: hidden;
-        text-overflow: ellipsis;
-      }
-
-      .Cont-title-time {
-        color: #aaa;
-        display: block;
-        text-align: right;
-        position: absolute;
-        right: 0;
-        bottom: 0;
-      }
-  @media screen and (max-width: 768px){
-        .tabbox-hds1 a{
-            padding: 0 7px;
-        }
-        .tabbox-hds1 a + a{
-            margin-left: -1px;
-        }
-ul.wzbd_list li span{
-font-size:14px;
-}
-        .new-cbox-l,.new-cbox-r{
-            margin-top: 1rem;
-            padding-left: 1rem;
-            padding-right: 1rem;
-            width: 100% !important;
-        }
-        .tabbox-hds2 a {
-            padding: 0 1px;
-        }
-        .tabbox-hds2 a + a {
-            margin-left: 4px;
-        }
-        .boxR_1_Cont-title{
-            width: 48%!important;
-        }
-        .floor4{
-            height: auto!important;
-        }
-        .floor4 .cbox-m,.floor4 .cbox-r{
-            margin-top: 40px!important;
-        }
+<link href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" />
+<script src="./material/Scripts/jquery.min.js"></script>
+<script src="./images/common.js"></script>
+<script src="./material/Scripts/cookies.js"></script>
+<script src="./material/Scripts/BaiduStat.js"></script>
+<script src="./material/Scripts/jAlert.js"></script>
+<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="./material/Scripts/jyhcommon.js"></script>
+<script src="./material/Scripts/get_user.js"></script>
+<script src="./material/Scripts/qrcode.min.js"></script>
+<link href="./material/Themes/jyhstyle.css" rel="stylesheet" />
+<!-- HTML5 Shiv 和 Respond.js 用于让 IE8 支持 HTML5元素和媒体查询 -->
+<!-- 注意： 如果通过 file://  引入 Respond.js 文件，则该文件无法起效果 -->
+<!--[if lt IE 9]>
+   <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+   <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+<![endif]-->
+    <script>
+    ////改到jalert去了
+    //$(function () {
+    //    $("body").delegate("a", "click", (function () {
+    //        var url = $(this).attr("href");
+    //        if (url == undefined) return;
+    //        url = url.toLowerCase();
+    //        if (url.indexOf("http://") < 0 && url.indexOf("https://") < 0) return;
+    //        $(this).attr("target", "_blank");
+    //        if (url.indexOf("jxj.wuhan.gov.cn") >= 0 || url.indexOf("jxw.wuhan.gov.cn") >= 0 || url.indexOf("jyh.wuhan.gov.cn") >= 0) return;
+    //        if (!confirm("您正在打开外部链接")) {
+    //            event.preventDefault();
+    //        }
+    //    }))
+    //})
+    var skin = Cookies.get("skin");
+    if (skin == "red") {
+        $("#userStyle").attr("href", "Themes/Skin/red.css")
     }
+    else if (skin == "deepblue") {
+        $("#userStyle").attr("href", "Themes/Skin/deepblue.css")
+    }
+</script>
+    <script src="./material/Scripts/photoCarousel.js"></script>
+
+    <style>
+        .art_list .my_modularCon {
+            padding: 10px 0 0;
+        }
+
+        .my_modular {
+            padding-left: 4px;
+            font-size: 0;
+        }
+
+            .my_modular li {
+                margin: 4px 3px 0;
+                display: inline-block;
+                vertical-align: top;
+                border: 1px solid #e6e6e6;
+                background: #f4f4f4;
+                width: 90px;
+                height: 95px;
+            }
+
+                .my_modular li a {
+                    display: block;
+                    width: 100%;
+                    height: 102px;
+                    cursor: pointer;
+                }
+
+                    .my_modular li a img {
+                        display: block;
+                        width: 72px;
+                        height: 72px;
+                        margin: 0 auto;
+                    }
+
+                    .my_modular li a p {
+                        margin-top: -5px;
+                        display: block;
+                        text-align: center;
+                        font-size: 16px;
+                        color: #666666;
+            
+                        }
+                    .rt_ad_list a span{
+                        height:45px;
+                        margin-top:20px
+
+                    }
+
+        .project-service-container {
+            width:400px;
+        }
+        /*.image-container {
+            display: flex;*/ /* 使用 flex 布局 */
+        /*justify-content: space-around;*/ /* 使图片在容器中均匀分布 */
+        /*align-items: center;*/ /* 使图片在垂直方向上居中 */
+        /*}
+
+            .image-container a {
+                text-decoration: none;*/ /* 去掉链接的下划线 */
+        /*padding:5px;
+                width:100%;*/ /*兼顾IE兼容模式下图片放大的问题*/
+        /*}
+
+            .image-container img {
+                max-width: 100%;*/ /* 确保图片不会超出容器宽度 */
+        /*height: auto;*/ /* 保持图片的宽高比 */
+        /*}*/
+
+        /* 图片轮播容器样式修改 */
+        .image-carousel-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            margin: 10px 0; /* 添加上下间距，避免与其他元素重叠 */
+        }
+
+        .image-container {
+            display: flex;
+            transition: transform 0.5s ease;
+            width: auto;
+            margin-left: 0;
+            /* 每个项目之间保持间距 */
+            gap: 10px;
+        }
+
+            .image-container a {
+                flex: 0 0 calc(16.6666% - 8.33px); /* 每个图片占1/6宽度减去间距 */
+                text-decoration: none;
+                padding: 0;
+                box-sizing: border-box;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-width: 0; /* 防止图片溢出 */
+            }
+
+            .image-container img {
+                max-width: 100%;
+                max-height: 100%;
+                height: auto;
+                object-fit: contain;
+                width: 100%; /* 确保图片填满容器 */
+            }
+
+        /* 轮播控制按钮 - 增加透明度 */
+        .carousel-control-prev,
+        .carousel-control-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            background-color: rgba(0, 0, 0, 0.7); /* 增加透明度到0.7 */
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+            opacity: 0.9; /* 默认透明度增加到0.9 */
+            transition: all 0.3s;
+            font-size: 24px;
+            font-weight: bold;
+            line-height: 1;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* 添加阴影增强可见性 */
+        }
+
+            .carousel-control-prev:hover,
+            .carousel-control-next:hover {
+                opacity: 1;
+                background-color: rgba(0, 0, 0, 0.9); /* 悬停时更深 */
+            }
+
+        .carousel-control-prev {
+            left: 5px;
+        }
+
+        .carousel-control-next {
+            right: 5px;
+        }
+
+        .carousel-control-prev::after {
+            content: '‹';
+        }
+
+        .carousel-control-next::after {
+            content: '›';
+        }
+
+        /* 隐藏不需要的图片 */
+        .image-container a.hidden {
+            display: none;
+        }
+
+        /* 响应式调整 - 针对手机端 */
+        @media (max-width: 768px) {
+/*            .project-service-container {
+                width: 150px;
+            }*/
+
+            .image-carousel-container {
+                margin: 15px 0; /* 在手机上增加更多间距 */
+                padding: 0 10px; /* 添加左右内边距，避免内容贴边 */
+                box-sizing: border-box;
+            }
+
+            .image-container a {
+                flex: 0 0 calc(50% - 5px); /* 手机上每行显示2个 */
+                margin-bottom: 10px; /* 添加底部间距 */
+            }
+
+            .image-container {
+                gap: 10px;
+                flex-wrap: wrap; /* 允许换行 */
+                justify-content: flex-start; /* 左对齐 */
+                transform: none !important; /* 在手机上禁用transform */
+                width: 100% !important; /* 在手机上宽度设为100% */
+                margin-left: 0 !important; /* 重置左边距 */
+            }
+
+            .carousel-control-prev,
+            .carousel-control-next {
+                display: none; /* 在手机上隐藏箭头按钮 */
+            }
+
+            /* 手机端显示所有图片，不需要轮播 */
+            .image-container a {
+                display: flex !important; /* 确保所有图片都显示 */
+            }
+
+            .rt_ad_list a {
+                margin-bottom: 10px; /* 为下面的链接添加间距 */
+            }
+
+            /* 修复项目服务容器 */
+            /*.col-xs-12[style*="width:25%"] {
+                width: 100% !important;
+                margin-bottom: 20px;
+            }
+
+            .project-service-container {
+                width: 100% !important;
+                max-width: 100%;
+                margin: 0 auto;
+            }*/
+
+            /* 修复项目服务内部布局 */
+            /*.art_list.project.fund {
+                padding-left: 0 !important;
+                padding-right: 0 !important;
+            }*/
+
+            /* 修复my_modular布局 */
+            /*.my_modular {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                gap: 10px;
+                padding-left: 0;
+                font-size: 14px;
+            }
+
+                .my_modular li {
+                    width: calc(50% - 5px) !important;*/ /* 每行显示2个 */
+                    /*height: auto !important;
+                    margin: 0 0 10px 0 !important;
+                    display: block;
+                    border: 1px solid #e6e6e6;
+                    background: #f4f4f4;
+                    box-sizing: border-box;
+                    text-align: center;
+                }
+
+                    .my_modular li a {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        width: 100%;
+                        height: 120px !important;*/ /* 固定高度确保一致 */
+                        /*padding: 10px 5px;
+                        cursor: pointer;
+                        text-decoration: none;
+                        box-sizing: border-box;
+                    }
+
+                        .my_modular li a img {
+                            display: block;
+                            width: 50px !important;*/ /* 手机端缩小图标 */
+                            /*height: 50px !important;
+                            margin: 0 auto;
+                        }
+
+                        .my_modular li a p {
+                            margin-top: 8px !important;
+                            display: block;
+                            text-align: center;
+                            font-size: 14px;
+                            color: #666666;
+                            line-height: 1.2;
+                            word-break: break-all;
+                        }*/
+
+                    /* 修复用户登录特殊样式 */
+                    /*.my_modular li.user_login {
+                        border-color: #ccc;
+                        background: #f9f9f9;
+                    }*/
+
+                    /* 确保在手机端显示所有项目 */
+                    /*.my_modular li:nth-child(n) {
+                        display: block !important;
+                        visibility: visible !important;
+                        opacity: 1 !important;
+                    }*/
+        }
+
+        /* 平板设备 */
+        @media (min-width: 769px) and (max-width: 992px) {
+            .image-container a {
+                flex: 0 0 calc(33.333% - 6.67px); /* 平板上每行显示3个 */
+            }
+
+            .carousel-control-prev,
+            .carousel-control-next {
+                width: 35px;
+                height: 35px;
+                font-size: 20px;
+            }
+        }
+
+        /* 桌面设备 */
+        @media (min-width: 993px) {
+            .image-container a {
+                flex: 0 0 calc(16.6666% - 8.33px); /* 桌面上每行显示6个 */
+            }
+        }
+        
     </style>
-    <div class="wrapper sy-wrapper newpage-wrapper">
-<div class="w1100 head clearfix"><script src="/cms_files/filemanager/script/201911/6b79016112cc4d66aeb22aa6d9d999dc.js" type="text/javascript" charset="utf-8"></script></div>
-<script src="/cms_files/filemanager/script/20201/f77a47db235946388a3ee648b566c5ac.js" type="text/javascript" charset="utf-8"></script>
-
-      <div class="content">
-        <div class="page-con clear">
-          <div class="top-news">
-<a class="" href="https://www.miit.gov.cn/xwfb/szyw/art/2026/art_0faa59e643394d2f848e90bd8e6023cb.html" target="_blank" title="总书记两会后首次考察指引“十五五”开局起步">总书记两会后首次考察指引“十五五”开局起步</a>
-            <p><a class="" href="https://www.miit.gov.cn/xwfb/szyw/art/2026/art_0faa59e643394d2f848e90bd8e6023cb.html" target="_blank">定了就要落实，一步一步朝前走 | 锚定发展主题，打造高质量发展样板 | 始终聚焦于人，发展与民生相统一</a>
-
-<style>
-    .top-news p>a {
-        display: inline-block !important;
-    }
-
-    .color_1,
-    .top-news p .color_1~span a {
-        color: #000 !important;
-    }
-
-    /* .top-news p .color_1+span::after {
-        background-color: #000;
-    } */
-
-    .color_2,
-    .top-news p .color_2~span a {
-        color: #d9000d !important;
-    }
-
-    /* .top-news p .color_2+span::after {
-        background-color: red;
-    } */
-
-    .top-news p span,
-    .top-news p span a{
-        margin-left: 0;
-    }
-
-</style></p>          </div>
-
-          <div class="floor floor1 cbox-lr">
-            <div class="cbox-l">
-              <div class="swiperPic">
-                <div class="swiper" id="touchSlideNewSy1">
- <div class="bd">
-     <ul>
-
-         <li>
-             <a href="http://www.miit.gov.cn/xwfb/szyw/art/2026/art_f13e4fe7803d44a6898f5d3682074789.html" target="_blank">
-                 <div class="picBox">
-                     <img src="/cms_files/filemanager/1226211233/picture/20263/9bfc9796514341ff9d1041597b66f7fb.jpg">
-                 </img></div>
-             </a>
-             <p><a href="http://www.miit.gov.cn/xwfb/szyw/art/2026/art_f13e4fe7803d44a6898f5d3682074789.html" target="_blank" title="习近平：牢牢把握雄安新区功能定位 努力建设新时代创新高地和推动高质量发展样板">
-                     习近平在河北雄安新区考察</a></p>
-         </li>
-
-         <li>
-             <a href="https://www.miit.gov.cn/ztzl/rdzt/xxgcddesjszqhjs0802/index.html" target="_blank">
-                 <div class="picBox">
-                     <img src="/cms_files/filemanager/1226211233/picture/20259/1ca376a0e1f447698838ee68bbafddd0.jpg">
-                 </img></div>
-             </a>
-             <p><a href="https://www.miit.gov.cn/ztzl/rdzt/xxgcddesjszqhjs0802/index.html" target="_blank" title="学习贯彻党的二十届四中全会精神">学习贯彻党的二十届四中全会精神</a></p>
-         </li>
-
-         <li>
-             <a href="http://www.miit.gov.cn/xwfb/bldhd/art/2026/art_28097025b4fe4da695b95ed90944a189.html" target="_blank">
-                 <div class="picBox">
-                     <img src="/cms_files/filemanager/1226211233/picture/20263/48c0895960524c4483a463a113ac8b94.jpg">
-                 </img></div>
-             </a>
-             <p><a href="http://www.miit.gov.cn/xwfb/bldhd/art/2026/art_28097025b4fe4da695b95ed90944a189.html" target="_blank" title="工业和信息化部党组举办树立和践行正确政绩观学习教育辅导报告会暨读书班开班式">工业和信息化部党组举办树立和践行正确政绩观学习教育辅导报告会暨读书班开班式</a></p>
-         </li>
-
-         <li>
-             <a href="http://www.miit.gov.cn/xwfb/bldhd/art/2026/art_af1a5077c5eb419c9306f48a4ce05075.html" target="_blank">
-                 <div class="picBox">
-                     <img src="/cms_files/filemanager/1226211233/picture/20263/fb25c578040c4af296bd061f8d92e260.jpg">
-                 </img></div>
-             </a>
-             <p><a href="http://www.miit.gov.cn/xwfb/bldhd/art/2026/art_af1a5077c5eb419c9306f48a4ce05075.html" target="_blank" title="工业和信息化部负责人会见苹果、高通、SK海力士、大众汽车、梅赛德斯-奔驰、西门子等跨国企业和商协会负责人">工业和信息化部负责人会见苹果、高通、SK海力士、大众汽车、梅赛德斯-奔驰、西门子等跨国企业和商协会负责人</a></p>
-         </li>
-
-         <li>
-             <a href="http://www.miit.gov.cn/xwfb/bldhd/art/2026/art_bf522d5d37f740a09685c521f9ec3d0d.html" target="_blank">
-                 <div class="picBox">
-                     <img src="/cms_files/filemanager/1226211233/picture/20263/111de09e976d4c1793d270161cfa1971.jpg">
-                 </img></div>
-             </a>
-             <p><a href="http://www.miit.gov.cn/xwfb/bldhd/art/2026/art_bf522d5d37f740a09685c521f9ec3d0d.html" target="_blank" title="李乐成出席中国发展高层论坛2026年年会">李乐成出席中国发展高层论坛2026年年会</a></p>
-         </li>
-
-         <li>
-             <a href="http://www.miit.gov.cn/xwfb/bldhd/art/2026/art_608586e84247458286513f699019c510.html" target="_blank">
-                 <div class="picBox">
-                     <img src="/cms_files/filemanager/1226211233/picture/20263/df08477399014ea18fc40d397581be3d.jpg">
-                 </img></div>
-             </a>
-             <p><a href="http://www.miit.gov.cn/xwfb/bldhd/art/2026/art_608586e84247458286513f699019c510.html" target="_blank" title="李乐成调研信息技术创新应用和未来产业发展研究工作">李乐成调研信息技术创新应用和未来产业发展研究工作</a></p>
-         </li>
-
-     </ul>
- </div>
-
- <div class="hd">
-     <ul>
-         <li></li>
-         <li></li>
-         <li></li>
-         <li></li>
-         <li></li>
-         <li></li>
-     </ul>
- </div>
-<style>
-.swiperPic .bd li{
-height:370px;
-}
-@media screen and (max-width: 768px) {
-.swiperPic .bd li{
-height:auto!important;
-}
-}
-</style>
-                  <div class="swiper-button-prev"></div>
-                  <div class="swiper-button-next"></div>
-                </div>
-              </div>
+</head>
+<body class="esd">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="head">
+    <div class="safe_width">
+        <div class="welcome col-xs-8">
+            <div class="row">
+                <span class="hidden-xs">您好，欢迎访问武汉市经济和信息化局网站！今天是：</span>
+                <script>document.write(getCurrentDate())</script>
             </div>
-            <div class="cbox-r">
-              <div class="tabbox-hd tabbox-hds1">
-<a href="/xwfb/szyw/index.html" class="mob-a-remove on">时政要闻</a>
-<a href="/xwfb/gxdt/index.html" class="mob-a-remove">工信动态</a>
-<a href="/xwfb/zxzc/index.html" class="mob-a-remove">最新政策</a>
-<a href="/xwfb/xwfbh/index.html" class="mob-a-remove">新闻发布</a>
-              </div>
-              <div class="tabbox-bd tabbox-bds1">
-                <div class="tabbox-bd-con" style="display: block">
-<ul>
-	<li><span>2026-03-27</span><p><a href="/xwfb/szyw/art/2026/art_5e406fd590a648649b51b40f931474ab.html" target="_blank" title="中共中央政治局召开会议 审议《中国共产党地方委员会工作条例》 中共中央总书记习近平主持会议">中共中央政治局召开会议 审议《中国共产党地方委员会工作条例》 中共中央总书记习近平主持会议</a></p></li>
-	<li><span>2026-03-26</span><p><a href="/xwfb/szyw/art/2026/art_0faa59e643394d2f848e90bd8e6023cb.html" target="_blank" title="总书记两会后首次考察指引“十五五”开局起步">总书记两会后首次考察指引“十五五”开局起步</a></p></li>
-	<li><span>2026-03-25</span><p><a href="/xwfb/szyw/art/2026/art_3526f31932c44791b0fdf2bc985b1679.html" target="_blank" title="">"对雄安的发展前景，我们充满信心"——习近平总书记赴雄安新区考察并主持召开深入推进雄安新区高质量建设和发展座谈会纪实</a></p></li>
-	<li><span>2026-03-24</span><p><a href="/xwfb/szyw/art/2026/art_eefcae9c66bf46e5bff15dbeffd03f20.html" target="_blank" title="“十五五”开局之年，总书记指引雄安新区高质量建设和发展">“十五五”开局之年，总书记指引雄安新区高质量建设和发展</a></p></li>
-	<li><span>2026-03-23</span><p><a href="/xwfb/szyw/art/2026/art_f13e4fe7803d44a6898f5d3682074789.html" target="_blank" title="习近平：牢牢把握雄安新区功能定位 努力建设新时代创新高地和推动高质量发展样板">习近平：牢牢把握雄安新区功能定位 努力建设新时代创新高地和推动高质量发展样板</a></p></li>
-	<li><span>2026-03-23</span><p><a href="/xwfb/szyw/art/2026/art_ddee468cf8174dfb81e77f73e9efa1ea.html" target="_blank" title="习近平致电祝贺通伦当选连任老挝国家主席">习近平致电祝贺通伦当选连任老挝国家主席</a></p></li>
-	<li><span>2026-03-23</span><p><a href="/xwfb/szyw/art/2026/art_d47a6b9b2a324db09bed27390509596e.html" target="_blank" title="习近平在河北雄安新区考察">习近平在河北雄安新区考察</a></p></li>
-</ul>
-<p class="mob-more-btn"></p>                </div>
-                <div class="tabbox-bd-con" style="display: none">
-<ul>
-	<li><span>2026-03-27</span><p><a href="http://www.miit.gov.cn/xwfb/bldhd/art/2026/art_28097025b4fe4da695b95ed90944a189.html" target="_blank" title="工业和信息化部党组举办树立和践行正确政绩观学习教育辅导报告会暨读书班开班式">工业和信息化部党组举办树立和践行正确政绩观学习教育辅导报告会暨读书班开班式</a></p></li>
-	<li><span>2026-03-23</span><p><a href="http://www.miit.gov.cn/xwfb/bldhd/art/2026/art_af1a5077c5eb419c9306f48a4ce05075.html" target="_blank" title="工业和信息化部负责人会见苹果、高通、SK海力士、大众汽车、梅赛德斯-奔驰、西门子等跨国企业和商协会负责人">工业和信息化部负责人会见苹果、高通、SK海力士、大众汽车、梅赛德斯-奔驰、西门子等跨国企业和商协会负责人</a></p></li>
-	<li><span>2026-03-22</span><p><a href="http://www.miit.gov.cn/xwfb/bldhd/art/2026/art_bf522d5d37f740a09685c521f9ec3d0d.html" target="_blank" title="李乐成出席中国发展高层论坛2026年年会">李乐成出席中国发展高层论坛2026年年会</a></p></li>
-	<li><span>2026-03-20</span><p><a href="http://www.miit.gov.cn/xwfb/xwfbh/bxwfbh/art/2026/art_4e9257192fe743ca84c33ffc78e94e0c.html" target="_blank" title="工业和信息化部举行《节能装备高质量发展实施方案（2026—2028年）》新闻发布会">工业和信息化部举行《节能装备高质量发展实施方案（2026—2028年）》新闻发布会</a></p></li>
-	<li><span>2026-03-20</span><p><a href="http://www.miit.gov.cn/xwfb/bldhd/art/2026/art_240c44884ff744baab73ee433b8a0055.html" target="_blank" title="部分省份一季度工业经济运行及“十五五”规划编制工作座谈会在青岛召开">部分省份一季度工业经济运行及“十五五”规划编制工作座谈会在青岛召开</a></p></li>
-	<li><span>2026-03-20</span><p><a href="http://www.miit.gov.cn/xwfb/bldhd/art/2026/art_608586e84247458286513f699019c510.html" target="_blank" title="李乐成调研信息技术创新应用和未来产业发展研究工作">李乐成调研信息技术创新应用和未来产业发展研究工作</a></p></li>
-	<li><span>2026-03-19</span><p><a href="http://www.miit.gov.cn/xwfb/bldhd/art/2026/art_178d1ebc52034024b86e7dfbea345b6a.html" target="_blank" title="工业和信息化部安全生产委员会召开全体会议">工业和信息化部安全生产委员会召开全体会议</a></p></li>
-</ul>
-<p class="mob-more-btn"></p>                </div>
-                <div class="tabbox-bd-con" style="display: none">
-<ul>
-	<li><span>2026-03-20</span><p><a href="http://www.miit.gov.cn/zwgk/zcwj/wjfb/tz/art/2026/art_a3250eaa656845149b12615070009204.html" target="_blank" title="《节能装备高质量发展实施方案（2026—2028年）》">《节能装备高质量发展实施方案（2026—2028年）》</a></p></li>
-	<li><span>2026-03-18</span><p><a href="http://www.miit.gov.cn/zwgk/zcwj/wjfb/gg/art/2026/art_f11332e9ca5448ffabe9386255ee2657.html" target="_blank" title="《道路机动车辆生产企业及产品》（第404批）、《享受车船税减免优惠的节约能源 使用新能源汽车车型目录》（第八十三批）、《减免车辆购置税的新能源汽车车型目录》（第二十八批）">《道路机动车辆生产企业及产品》（第404批）、《享受车船税减免优惠的节约能源 使用新能源汽车车型目录》（第八十三批）、《减免车辆购置税的新能源汽车车型目录》（第二十八批）</a></p></li>
-	<li><span>2026-03-16</span><p><a href="http://www.miit.gov.cn/zwgk/zcwj/wjfb/tz/art/2026/art_d2957277c4684eb59c0c0de01af59434.html" target="_blank" title="三部门关于开展氢能综合应用试点工作的通知">三部门关于开展氢能综合应用试点工作的通知</a></p></li>
-	<li><span>2026-03-03</span><p><a href="http://www.miit.gov.cn/zwgk/zcwj/wjfb/yj/art/2026/art_95cd611e3c664dfc96cd76ace1aa24d7.html" target="_blank" title="​工业和信息化部等六部门关于促进光伏组件综合利用的指导意见">​工业和信息化部等六部门关于促进光伏组件综合利用的指导意见</a></p></li>
-	<li><span>2026-02-14</span><p><a href="http://www.miit.gov.cn/zwgk/zcwj/wjfb/tz/art/2026/art_c0d97b91be1b471686d669d0300cd25a.html" target="_blank" title="工业和信息化部等五部门关于印发《茶产业提质升级指导意见（2026—2030年）》的通知">工业和信息化部等五部门关于印发《茶产业提质升级指导意见（2026—2030年）》的通知</a></p></li>
-	<li><span>2026-02-14</span><p><a href="http://www.miit.gov.cn/zwgk/zcwj/wjfb/tz/art/2026/art_3f254e4ebd9c42b2949524be46c999bd.html" target="_blank" title="三部门关于印发《酿酒产业提质升级指导意见（2026—2030年）》的通知">三部门关于印发《酿酒产业提质升级指导意见（2026—2030年）》的通知</a></p></li>
-	<li><span>2026-02-10</span><p><a href="http://www.miit.gov.cn/zwgk/zcwj/wjfb/yj/art/2026/art_d1cb1667897e4c999a303d110b6691dc.html" target="_blank" title="工业和信息化部等五部门办公厅（秘书局、综合局、综合司）关于加强信息通信业能力建设 支撑低空基础设施发展的实施意见">工业和信息化部等五部门办公厅（秘书局、综合局、综合司）关于加强信息通信业能力建设 支撑低空基础设施发展的实施意见</a></p></li>
-</ul>
-<p class="mob-more-btn"></p>                </div>
-                <div class="tabbox-bd-con" style="display: none">
-<ul>
-	<li><span>2026-03-25</span><p><a href="/xwfb/xwfbh/gxbxwfbh/art/2026/art_e79644b71a3e4f1a9f716babb6d2359b.html" target="_blank" title="工业和信息化部就推进工业数据筑基行动、加速工业园区数字化转型等答记者问">工业和信息化部就推进工业数据筑基行动、加速工业园区数字化转型等答记者问</a></p></li>
-	<li><span>2026-03-24</span><p><a href="/xwfb/xwfbh/gxbxwfbh/art/2026/art_609a668f10594ec9a9b1d5abbf515464.html" target="_blank" title="如何推进重点产业知识产权强链增效？如何建立常态化专利转化运用长效机制？工业和信息化部这样部署">如何推进重点产业知识产权强链增效？如何建立常态化专利转化运用长效机制？工业和信息化部这样部署</a></p></li>
-	<li><span>2026-03-20</span><p><a href="/xwfb/xwfbh/bxwfbh/art/2026/art_4e9257192fe743ca84c33ffc78e94e0c.html" target="_blank" title="工业和信息化部举行《节能装备高质量发展实施方案（2026—2028年）》新闻发布会">工业和信息化部举行《节能装备高质量发展实施方案（2026—2028年）》新闻发布会</a></p></li>
-	<li><span>2026-01-21</span><p><a href="http://www.miit.gov.cn/xwfb/bldhd/art/2026/art_4ba01aa6d2f54ced8ba3490ea4fb52c4.html" target="_blank" title="工业和信息化部：2025年工业和信息化发展主要目标任务顺利完成">工业和信息化部：2025年工业和信息化发展主要目标任务顺利完成</a></p></li>
-	<li><span>2026-01-16</span><p><a href="/xwfb/xwfbh/bxwfbh/art/2026/art_c5c9031e409e468eb4004d82fd394241.html" target="_blank" title="工业和信息化部举行《新能源汽车废旧动力电池回收和综合利用管理暂行办法》新闻发布会">工业和信息化部举行《新能源汽车废旧动力电池回收和综合利用管理暂行办法》新闻发布会</a></p></li>
-	<li><span>2025-12-12</span><p><a href="/xwfb/xwfbh/bxwfbh/art/2025/art_1838bfb345174ea09ca359bfefce4fc3.html" target="_blank" title="工业和信息化部举行“用好绿色金融政策支持绿色工厂建设”新闻发布会">工业和信息化部举行“用好绿色金融政策支持绿色工厂建设”新闻发布会</a></p></li>
-	<li><span>2025-11-27</span><p><a href="http://www.miit.gov.cn/xwfb/bldhd/art/2025/art_31a666aa2d974b859c61b05f070ce2fe.html" target="_blank" title="国新办举行国务院政策例行吹风会 介绍增强消费品供需适配性进一步促进消费政策措施有关情况">国新办举行国务院政策例行吹风会 介绍增强消费品供需适配性进一步促进消费政策措施有关情况</a></p></li>
-</ul>
-<p class="mob-more-btn"></p>                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="floor floor2">
-            <div class="swiper swiperPic2" id="touchSlideNewSy2">
-<div class="bd">
-    <ul>
-        <li>
-            <a href="https://www.miit.gov.cn/ztzl/rdzt/xxgcddesjszqhjs0802/index.html" target="_blank"><img src="/cms_files/filemanager/1226211233/picture/20259/d0b84641259945db8d0c97b02ea051d7.jpg" /></a>
-        </li>
-        <li>
-            <a href="https://www.miit.gov.cn/srxxgcxjpzsjzyzsjsqmlsqgxxgyhtjdhbs/index.html" target="_blank"><img src="/cms_files/filemanager/1226211233/picture/20246/9b03116a551e420e979e1d0f154dbacd.jpg" /></a>
-        </li>
-        <li>
-            <a href="https://www.miit.gov.cn/ztzl/rdzt/wmd2025/index.html" target="_blank"><img src="/cms_files/filemanager/1226211233/picture/20261/5f478128099645ddba7a2417e4f95f30.jpg" /></a>
-        </li>
-        <li>
-            <a href="https://www.miit.gov.cn/zwgk/zfxxgkzl/zfwzndbg/2025ndbg/index.html" target="_blank"><img src="/cms_files/filemanager/1226211233/picture/20261/52e1d625aec14c35a436d0aeec5bee75.jpg" /></a>
-        </li>
-        <li>
-            <a href="https://www.miit.gov.cn/ztzl/rdzt/xxgyhqk/index.html" target="_blank"><img src="/cms_files/filemanager/1226211233/picture/20249/e730280a5ac24891a2edcbe2db52d2eb.jpg" /></a>
-        </li>
-        <li>
-            <a href="https://www.miit.gov.cn/ztzl/rdzt/dsjqggyhxxhjsjnds/index.html" target="_blank"><img src="/cms_files/filemanager/1226211233/picture/202510/48db46f77d8b41e0acc6afa2241e05ad.jpg" /></a>
-        </li>
-        <li>
-            <a href="https://www.miit.gov.cn/ztzl/rdzt/yhyshjwlzt/wlaqsjaqhgrxxbh/index.html" target="_blank"><img src="/cms_files/filemanager/1226211233/picture/20246/cfaa91088e7843c582d390c5b83f38d8.jpg" /></a>
-        </li>
-        <li>
-            <a href="https://www.miit.gov.cn/ssqqhxptyflhbqzdgz/gzdt/index.html" target="_blank"><img src="/cms_files/filemanager/1226211233/picture/20246/48fe4d3a644645108249b6ccd048f15d.jpg" /></a>
-        </li>
-        <li>
-            <a href="/ztzl/rdzt/srkzxxgcxjpxsdzgtsshzysxztjy/index.html" target="_blank"><img src="/cms_files/filemanager/1226211233/picture/20246/cd3aca1689584dda8da009ed968ab49a.jpg" /></a>
-        </li>
-        <li>
-            <a href="https://www.miit.gov.cn/ztzl/rdzt/xnyqclybdgyscxwxsjb/index.html" target="_blank"><img src="/cms_files/filemanager/1226211233/picture/20246/1febde1907494f94b6be6494fdfaef03.jpg" /></a>
-        </li>
-        <li>
-            <a href="https://www.gov.cn/zhengce/zczhjd/" target="_blank"><img src="/cms_files/filemanager/1226211233/picture/20246/bf4ca200da994f1390332a7fede392ff.jpg" /></a>
-        </li>
-        <li>
-            <a href="/ztzl/rdzt/xxgcddesdjs/index.html" target="_blank"><img src="/cms_files/filemanager/1226211233/picture/20247/dd5972dc402e479ea0a4b7fb8b48c50a.jpg" /></a>
-        </li>
-        <li>
-            <a href="https://www.miit.gov.cn/jgsj/xgj/APPqhyhqyzxzzxd/gzdt/index.html" target="_blank"><img src="/cms_files/filemanager/1226211233/picture/20248/100cbb6db7144f90a42a53c8ce30f2c0.jpg" /></a>
-        </li>
-        <li>
-            <a href="https://www.miit.gov.cn/ztzl/rdzt/lxjzhxwqgygz/index.html" target="_blank"><img src="/cms_files/filemanager/1226211233/picture/20248/4a8b7c6888f04d78b3877a25cbf3ac70.jpg" /></a>
-        </li>
-        <li>
-            <a href="https://www.miit.gov.cn/ztzl/rdzt/fpgzztbd/index.html" target="_blank"><img src="/cms_files/filemanager/1226211233/picture/20248/b39824221e2f43e5845f12dde8adaabc.jpg" /></a>
-        </li>
-        <li>
-            <a href="https://www.miit.gov.cn/ztzl/rdzt/gyhlw/index.html" target="_blank"><img src="/cms_files/filemanager/1226211233/picture/20248/7de660fd13034a278b2a327775d3d67f.jpg" /></a>
-        </li>
-        <li>
-            <a href="https://www.miit.gov.cn/ztzl/rdzt/xclcyfz/index.html" target="_blank"><img src="/cms_files/filemanager/1226211233/picture/20248/738ff99444bb4c8fb97b0fc20f0ff861.jpg" /></a>
-        </li>
-        <li>
-            <a href="https://www.miit.gov.cn/ztzl/rdzt/znzzxggz/index.html" target="_blank"><img src="/cms_files/filemanager/1226211233/picture/20248/57ec73a88bbc439bbae18b3e8acbad7b.jpg" /></a>
-        </li>
-    </ul>
-</div>
-
-<div class="hd">
-    <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-    </ul>
-</div>
-              <div class="swiper-button-prev2"></div>
-              <div class="swiper-button-next2"></div>
-            </div>
-          </div>
-          <div class="floor floornew">
-            <div class="new-cbox-l">
-              <div class="tabbox-hd tabbox-hds2">
-<a href="/xwfb/bldhd/index.html" class="on  mob-a-remove">部领导活动</a>
-<a href="/xwfb/gxdt/sjdt/index.html" class="mob-a-remove">司局动态</a>
-<a href="/xwfb/gxdt/dfdt/index.html" class="mob-a-remove">地方动态</a>
-<a href="/xwfb/gxdt/bsdt/index.html" class="mob-a-remove">部属动态</a>
-              </div>
-              <div class="tabbox-bd tabbox-bds4 clear">
-                <div class="tabbox-bd-con">
-<ul>
-	<li><span>2026-03-27</span><p><a href="/xwfb/bldhd/art/2026/art_28097025b4fe4da695b95ed90944a189.html" target="_blank" title="工业和信息化部党组举办树立和践行正确政绩观学习教育辅导报告会暨读书班开班式">工业和信息化部党组举办树立和践行正确政绩观学习教育辅导报告会暨读书班开班式</a></p></li>
-	<li><span>2026-03-23</span><p><a href="/xwfb/bldhd/art/2026/art_af1a5077c5eb419c9306f48a4ce05075.html" target="_blank" title="工业和信息化部负责人会见苹果、高通、SK海力士、大众汽车、梅赛德斯-奔驰、西门子等跨国企业和商协会负责人">工业和信息化部负责人会见苹果、高通、SK海力士、大众汽车、梅赛德斯-奔驰、西门子等跨国企业和商协会负责人</a></p></li>
-	<li><span>2026-03-22</span><p><a href="/xwfb/bldhd/art/2026/art_bf522d5d37f740a09685c521f9ec3d0d.html" target="_blank" title="李乐成出席中国发展高层论坛2026年年会">李乐成出席中国发展高层论坛2026年年会</a></p></li>
-	<li><span>2026-03-20</span><p><a href="/xwfb/bldhd/art/2026/art_240c44884ff744baab73ee433b8a0055.html" target="_blank" title="部分省份一季度工业经济运行及“十五五”规划编制工作座谈会在青岛召开">部分省份一季度工业经济运行及“十五五”规划编制工作座谈会在青岛召开</a></p></li>
-	<li><span>2026-03-20</span><p><a href="/xwfb/bldhd/art/2026/art_608586e84247458286513f699019c510.html" target="_blank" title="李乐成调研信息技术创新应用和未来产业发展研究工作">李乐成调研信息技术创新应用和未来产业发展研究工作</a></p></li>
-	<li><span>2026-03-19</span><p><a href="/xwfb/bldhd/art/2026/art_178d1ebc52034024b86e7dfbea345b6a.html" target="_blank" title="工业和信息化部安全生产委员会召开全体会议">工业和信息化部安全生产委员会召开全体会议</a></p></li>
-</ul>
-<p class="mob-more-btn"></p>                </div>
-                <div class="tabbox-bd-con">
-<ul>
-	<li><span>2026-03-26</span><p><a href="/xwfb/gxdt/sjdt/art/2026/art_3fde4f2aadb140b5bbb183f9a331bfdd.html" target="_blank" title="四维高景二号05、06星成功发射">四维高景二号05、06星成功发射</a></p></li>
-	<li><span>2026-03-25</span><p><a href="/xwfb/gxdt/sjdt/art/2026/art_7dc6328865aa4083854410e0e0554e8a.html" target="_blank" title="第一批民爆行业安全生产典型执法案例">第一批民爆行业安全生产典型执法案例</a></p></li>
-	<li><span>2026-03-24</span><p><a href="/xwfb/gxdt/sjdt/art/2026/art_a09b9fcd6ec94c30beb18e40f21eb1f5.html" target="_blank" title="监控化学品进出口管理座谈会在宜昌召开">监控化学品进出口管理座谈会在宜昌召开</a></p></li>
-	<li><span>2026-03-23</span><p><a href="/xwfb/gxdt/sjdt/art/2026/art_8bfbcd43db3748a8829c231aeaa7d69e.html" target="_blank" title="微厘空间02组卫星10颗卫星成功发射">微厘空间02组卫星10颗卫星成功发射</a></p></li>
-	<li><span>2026-03-20</span><p><a href="/xwfb/gxdt/sjdt/art/2026/art_80b48617a9f84d9bbc4889bf8150df74.html" target="_blank" title="四部门联合印发《节能装备高质量发展实施方案（2026—2028年）》">四部门联合印发《节能装备高质量发展实施方案（2026—2028年）》</a></p></li>
-	<li><span>2026-03-18</span><p><a href="/xwfb/gxdt/sjdt/art/2026/art_aa4e767c8e674e48ba317ca81b9d9081.html" target="_blank" title="工业和信息化部2025年度法治政府建设工作情况">工业和信息化部2025年度法治政府建设工作情况</a></p></li>
-</ul>
-<p class="mob-more-btn"></p>                </div>
-                <div class="tabbox-bd-con">
-<ul>
-	<li><span>2026-03-27</span><p><a href="/xwfb/gxdt/dfdt/art/2026/art_dd3bf7ab4a4e431cb788d4e85c30e43a.html" target="_blank" title="贵州通信管理局召开2026年信息通信业行风建设暨纠风工作电视电话会议">贵州通信管理局召开2026年信息通信业行风建设暨纠风工作电视电话会议</a></p></li>
-	<li><span>2026-03-27</span><p><a href="/xwfb/gxdt/dfdt/art/2026/art_724a14953c4e4f789db22562326921d4.html" target="_blank" title="重庆通信管理局组织召开2026年全市信息通信行业网络和数据安全工作会议">重庆通信管理局组织召开2026年全市信息通信行业网络和数据安全工作会议</a></p></li>
-	<li><span>2026-03-27</span><p><a href="/xwfb/gxdt/dfdt/art/2026/art_6fcfa09e2be34aecb5e6ad2a808133cd.html" target="_blank" title="河北通信管理局召开全省信息通信业总经理座谈会议">河北通信管理局召开全省信息通信业总经理座谈会议</a></p></li>
-	<li><span>2026-03-26</span><p><a href="/xwfb/gxdt/dfdt/art/2026/art_515c8f5eff7e4502ac27e7ff59f0091d.html" target="_blank" title="贵阳成功入选全国首批城域“毫秒用算”专项行动实施范围">贵阳成功入选全国首批城域“毫秒用算”专项行动实施范围</a></p></li>
-	<li><span>2026-03-26</span><p><a href="/xwfb/gxdt/dfdt/art/2026/art_2cb943ab47154bcaa6166d370112bc54.html" target="_blank" title="江苏三市成功入选全国首批城域“毫秒用算”专项行动实施范围">江苏三市成功入选全国首批城域“毫秒用算”专项行动实施范围</a></p></li>
-	<li><span>2026-03-26</span><p><a href="/xwfb/gxdt/dfdt/art/2026/art_fd20fe750b9b4b13b59b626565d1e205.html" target="_blank" title="青海通信管理局召开全省信息通信业“十五五”规划编制座谈会">青海通信管理局召开全省信息通信业“十五五”规划编制座谈会</a></p></li>
-</ul>
-<p class="mob-more-btn"></p>                </div>
-                <div class="tabbox-bd-con">
-<ul>
-	<li><span>2026-03-20</span><p><a href="/xwfb/gxdt/bsdt/art/2026/art_b8b1ea03e8604752bb623857c3c61029.html" target="_blank" title="中国电子学会召开传达工业和信息化部传达学习贯彻全国两会精神干部大会精神会议">中国电子学会召开传达工业和信息化部传达学习贯彻全国两会精神干部大会精神会议</a></p></li>
-	<li><span>2026-03-11</span><p><a href="/xwfb/gxdt/bsdt/art/2026/art_06b5b2fcc7fa4934a0f8f70d2f0abd70.html" target="_blank" title="哈工大部署启动树立和践行正确政绩观学习教育">哈工大部署启动树立和践行正确政绩观学习教育</a></p></li>
-	<li><span>2026-03-05</span><p><a href="/xwfb/gxdt/bsdt/art/2026/art_8a8660dbecfe4b11ad9edc099007ba55.html" target="_blank" title="哈工程召开一流学科建设规划专题会">哈工程召开一流学科建设规划专题会</a></p></li>
-	<li><span>2026-02-12</span><p><a href="/xwfb/gxdt/bsdt/art/2026/art_b2756296b85841588765072785be06ff.html" target="_blank" title="西工大首批入选工业和信息化部国家重点研发计划高新技术成果产业化试点">西工大首批入选工业和信息化部国家重点研发计划高新技术成果产业化试点</a></p></li>
-	<li><span>2026-02-03</span><p><a href="/xwfb/gxdt/bsdt/art/2026/art_ea755d0a51174c47aa7e60735ed69dd6.html" target="_blank" title="哈工大33门课程入选第三批国家级一流本科课程">哈工大33门课程入选第三批国家级一流本科课程</a></p></li>
-	<li><span>2026-01-30</span><p><a href="/xwfb/gxdt/bsdt/art/2026/art_359b786a551f4ac4ad6a28658fa1e9df.html" target="_blank" title="哈工程与中国原子能科学研究院共建联合实验室">哈工程与中国原子能科学研究院共建联合实验室</a></p></li>
-</ul>
-<p class="mob-more-btn"></p>                </div>
-              </div>
-            </div>
-            <div class="new-cbox-r">
-              <div class="tabbox-hd tabbox-hds2">
-<a href="/xwfb/mtbd/index.html" class="on  mob-a-remove">媒体报道</a>
-<a href="/xwfb/spgx/index.html" class=" mob-a-remove">视频工信</a>
-              </div>
-              <div class="tabbox-bd">
-                <div class="tabbox-bd-con" style="display: block">
- <ul class="wzbd_list">
-    
- <li>
-            <span>人民日报</span>
-            <a href="/xwfb/mtbd/wzbd/art/2026/art_89437fe3b4fb48b3b05b7451bd622523.html" title="总书记的人民情怀 | “为民造福是最大政绩”" target="_blank" class="bt-size-16">
-              总书记的人民情怀 | “为民造福是最大政绩”
-            </a>
-          </li>
-    
- <li>
-            <span>新华社、工信微报</span>
-            <a href="/xwfb/mtbd/wzbd/art/2026/art_41d024041e01429d9aee338b5906be48.html" title="夯基础、育动能 现代化产业体系加快构建" target="_blank" class="bt-size-16">
-              夯基础、育动能 现代化产业体系加快构建
-            </a>
-          </li>
-    
- <li>
-            <span>人民日报</span>
-            <a href="/xwfb/mtbd/wzbd/art/2026/art_e1ec4981615a4a0dbf0f4e45f159f330.html" title="总书记的人民情怀 | “干事创业一定要树立正确政绩观”" target="_blank" class="bt-size-16">
-              总书记的人民情怀 | “干事创业一定要树立正确政绩观”
-            </a>
-          </li>
-</ul>
-                  <p class="mob-more-btn"></p>
-
-<script src="/cms_files/filemanager/1226211233/script/20257//b7af927fb072414db59b4df7a2820810.js" type="text/javascript" charset="utf-8"></script>                </div>
-                <div class="tabbox-bd-con" style="display: none">
-            <ul class="new-tw">
-
-				<li>
-        <div class="boxR_1_Cont">
-          <a href="/xwfb/spgx/art/2026/art_243d6af202184cd0a4bcdcba4c043b5d.html" target="_blank" class="boxR_1_Cont-img" title="专家建议：审慎使用“龙虾”等智能体">
-            <img src="/cms_files/filemanager/1226211233/picture/20263/d3b095b8037a49f285c61aa0b85091d8.png" class="boxR_1_Cont-img" alt="">
-          </img></a>
-          <div class="boxR_1_Cont-title bt-size-16">
-            <a href="/xwfb/spgx/art/2026/art_243d6af202184cd0a4bcdcba4c043b5d.html" target="_blank" title="专家建议：审慎使用“龙虾”等智能体">
-             专家建议：审慎使用“龙虾”等智能体
-            </a>
-            <span class="Cont-title-time bt-size-16">2026-03-11</span>
-          </div>
-        </div></li>
-				<li>
-        <div class="boxR_1_Cont">
-          <a href="http://www.miit.gov.cn/xwfb/bldhd/art/2026/art_e4b64e4dd78544708df400dd1042bdee.html" target="_blank" class="boxR_1_Cont-img" title="实录丨李乐成在“部长通道”谈现代化产业体系、人工智能产业">
-            <img src="/cms_files/filemanager/1226211233/picture/20263/9134abab896d47c3b4d544546bd03f0e.jpg" class="boxR_1_Cont-img" alt="">
-          </img></a>
-          <div class="boxR_1_Cont-title bt-size-16">
-            <a href="http://www.miit.gov.cn/xwfb/bldhd/art/2026/art_e4b64e4dd78544708df400dd1042bdee.html" target="_blank" title="实录丨李乐成在“部长通道”谈现代化产业体系、人工智能产业">
-             实录丨李乐成在“部长通道”谈现代化产业体...
-            </a>
-            <span class="Cont-title-time bt-size-16">2026-03-05</span>
-          </div>
-        </div></li>
-      </ul>
-      <p class="mob-more-btn"></p>                </div>
-              </div>
-            </div>
-          </div>
-          <div class="floor floor3">
-            <div class="zwfwpt">
-              <span class="zwfwpt-name"><a href="https://ythzxfw.miit.gov.cn/index" target="_blank">政务服务平台</a></span>              <p class="zwfwpt-hd">
-<span class="on"><a class="mob-a-remove-syzw mob-a-remove-syzw1" href="https://ythzxfw.miit.gov.cn/bssx/alx/index.html" target="_blank">行政许可事项</a></span><span><a class="mob-a-remove-syzw mob-a-remove-syzw2" href="https://www.miit.gov.cn/zwfw/ggfwpt/index.html" target="_blank">公共服务平台</a></span>              </p>
-            </div>
-            <div class="zwfwpt-bd clear">
-              <div class="zwfwpt-bd-con zwfwpt-xzxksx-list">
-<a href="https://ythzxfw.miit.gov.cn/bssx/axy/index.html#zswf-bsfw-main-right-box4" target="_blank" title="车辆生产准入" onclick="gotoLink()">
-	<p><img src="/cms_files/filemanager/1226211233/picture/20243/24be00698ea649cb9b2ab8e575b3e9ac.png" /></p>
-	<span>车辆生产准入</span>
-</a>
-<a href="https://ythzxfw.miit.gov.cn/bssx/axy/index.html#zswf-bsfw-main-right-box12" target="_blank" title="监控化学品" onclick="gotoLink()">
-	<p><img src="/cms_files/filemanager/1226211233/picture/20246/fba46ae6da5a4977913f21c05af78cba.png" /></p>
-	<span>监控化学品</span>
-</a>
-<a href="https://ythzxfw.miit.gov.cn/bssx/axy/index.html#zswf-bsfw-main-right-box13" target="_blank" title="民爆物品生产" onclick="gotoLink()">
-	<p><img src="/cms_files/filemanager/1226211233/picture/20244/24eba2f6da1a43e9a674f3549578c68c.png" /></p>
-	<span>民爆物品生产</span>
-</a>
-<a href="https://ythzxfw.miit.gov.cn/bssx/axy/index.html#zswf-bsfw-main-right-box1" target="_blank" title="电信和互联网业务" onclick="gotoLink()">
-	<p><img src="/cms_files/filemanager/1226211233/picture/20246/559ba7102ccd4dafb4165a6f75c7ceca.png" /></p>
-	<span>电信和互联网业务</span>
-</a>
-<a href="https://ythzxfw.miit.gov.cn/bssx/axy/index.html#zswf-bsfw-main-right-box6" target="_blank" title="无线电和卫星通信" onclick="gotoLink()">
-	<p><img src="/cms_files/filemanager/1226211233/picture/20244/66e2e2d07e4b47efabfb14bcd8f65d4d.png" /></p>
-	<span>无线电和卫星通信</span>
-</a>
-<a href="https://ythzxfw.miit.gov.cn/bssx/axy/index.html#zswf-bsfw-main-right-box11" target="_blank" title="电子认证服务" onclick="gotoLink()">
-	<p><img src="/cms_files/filemanager/1226211233/picture/20244/b8592d98bede4eeaa5fa0bc4fc970107.png" /></p>
-	<span>电子认证服务</span>
-</a>
-<a href="https://ythzxfw.miit.gov.cn/bssx/axy/index.html#zswf-bsfw-main-right-box2" target="_blank" title="通信业务和信息化固定资产" onclick="gotoLink()">
-	<p><img src="/cms_files/filemanager/1226211233/picture/20245/1981672d085d4bdcaccd38eae672c0fa.png" /></p>
-	<span>通信业务和信息化固定资产</span>
-</a>
-
-                <p class="mob-more-btn-syzw mob-more-btn-syzw1"></p>
-              </div>
-              <div class="zwfwpt-bd-con zwfwpt-ggfwpt-list">
-                <div class="swiper swiperPic3" id="touchSlideNewSy3">
-<div class="bd">
-    <ul>
-        <li>
-            <a class="ggffwptAdd" href="https://zjtx.miit.gov.cn/zxqySy/main" target="_blank" title="优质中小企业梯度培育平台">
-                <p><img src="/cms_files/filemanager/1226211233/picture/20263/9d3fe8c37e9f4e77b6908b72768729b2.png" /></p>
-                <span>优质中小企业梯度培育平台</span>
-            </a>
-        </li>
-        <li>
-            <a class="ggffwptAdd" href="https://safetybigdata.miit.gov.cn/sibdp-web/" target="_blank" title="安全应急装备产业申报系统">
-                <p><img src="/cms_files/filemanager/1226211233/picture/20253/d45bc0e327684c158edcd7c1943f19ef.png" /></p>
-                <span>安全应急装备产业申报系统</span>
-            </a>
-        </li>
-        <li>
-            <a class="ggffwptAdd" href="https://szgx.miit.gov.cn/zzyszh/" target="_blank" title="制造业数字化转型综合信息服务平台">
-                <p><img src="/cms_files/filemanager/1226211233/picture/202410/14c86859469c4953a02675264236819a.png" /></p>
-                <span>制造业数字化转型综合信息服务平台</span>
-            </a>
-        </li>
-        <li>
-            <a class="ggffwptAdd" href="https://std.miit.gov.cn/" target="_blank" title="工业和信息化标准信息服务平台">
-                <p><img src="/cms_files/filemanager/1226211233/picture/20244/54fc4071f7164c29a578ac83916bb95b.png" /></p>
-                <span>工业和信息化标准信息服务平台</span>
-            </a>
-        </li>
-        <li>
-            <a class="ggffwptAdd" href="/ztzl/rdzt/yqfkgjzdylwzbzddpt/index.html" target="_blank" title="国家重点医疗物资保障调度平台">
-                <p><img src="/cms_files/filemanager/1226211233/picture/20245/d1d1656652674547bc519ed646d32f6f.png" /></p>
-                <span>国家重点医疗物资保障调度平台</span>
-            </a>
-        </li>
-        <li>
-            <a class="ggffwptAdd" href="https://baosong.miit.gov.cn/ScaleTest" target="_blank" title="中小企业规模类型自测小程序">
-                <p><img src="/cms_files/filemanager/1226211233/picture/20245/7b17e706bed4449eacb4a258e637f999.png" /></p>
-                <span>中小企业规模类型自测小程序</span>
-            </a>
-        </li>
-        <li>
-            <a class="ggffwptAdd" href="http://xxcyqiye.miit.gov.cn/" target="_blank" title="工业和信息化部运行监测平台">
-                <p><img src="/cms_files/filemanager/1226211233/picture/20246/81bb00dca4514f81b229b33776274f8c.png" /></p>
-                <span>工业和信息化部运行监测平台</span>
-            </a>
-        </li>
-        <li>
-            <a class="ggffwptAdd" href="/datainfo/zysjk/xnyqcdlxdchsfwwdxx/index.html" target="_blank" title="新能源汽车动力蓄电池回收服务网点信息">
-                <p><img src="/cms_files/filemanager/1226211233/picture/20243/cc8d06145ab24fe59ef8c63feb2c1ca6.png" /></p>
-                <span>新能源汽车动力蓄电池回收服务网点信息</span>
-            </a>
-        </li>
-        <li>
-            <a class="ggffwptAdd" href="http://www.cnmaker.org.cn/" target="_blank" title="“创客中国”国家创新创业公共服务平台">
-                <p><img src="/cms_files/filemanager/1226211233/picture/20243/ae8b85b7a37240a7bbc9ea33e273e37c.png" /></p>
-                <span>“创客中国”国家创新创业公共服务平台</span>
-            </a>
-        </li>
-        <li>
-            <a class="ggffwptAdd" href="https://wxdxsba.miit.gov.cn" target="_blank" title="无线电发射设备销售备案信息平台">
-                <p><img src="/cms_files/filemanager/1226211233/picture/20246/32ab8bdbaf3a4e15875111b1329f1d96.png" /></p>
-                <span>无线电发射设备销售备案信息平台</span>
-            </a>
-        </li>
-        <li>
-            <a class="ggffwptAdd" href="https://yhgscx.miit.gov.cn/" target="_blank" title="中国汽车能源消耗量查询">
-                <p><img src="/cms_files/filemanager/1226211233/picture/20246/7489ea11d49246e2b515c17f3ac08598.png" /></p>
-                <span>中国汽车能源消耗量查询</span>
-            </a>
-        </li>
-        <li>
-            <a class="ggffwptAdd" href="http://chinarohs.miit.gov.cn" target="_blank" title="电器电子产品有害物质限制使用公共服务平台">
-                <p><img src="/cms_files/filemanager/1226211233/picture/20243/f3ad0790504a4e398e026ed0e3c8b716.png" /></p>
-                <span>电器电子产品有害物质限制使用公共服务平台</span>
-            </a>
-        </li>
-    </ul>
-</div>
-
-<div class="hd">
-    <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-    </ul>
-</div>
-<script>
-if($(".ggffwptAdd").eq(8).attr("title")=="“创客中国”国家创新创业公共服务平台"){
-$(".ggffwptAdd").eq(8).attr("onclick","gotoLink()")
-}
-</script>                  <div class="swiper-button-prev3"></div>
-                  <div class="swiper-button-next3"></div>
-
-                  <p class="mob-more-btn-syzw mob-more-btn-syzw2"></p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="floor floor4 cbox-lmr">
-            <div class="cbox-l">
-              <div class="tabbox-hd tabbox-hds2">
-<a href="/zwgk/zcwj/index.html" target="_blank" class="mob-a-remove on">政策文件</a>
-<a href="/zwgk/zcjd/index.html" class="mob-a-remove">政策解读</a>
-              </div>
-              <div class="tabbox-bd tabbox-bds2 clear">
-                <div class="tabbox-bd-con">
-<ul>
-  <li>
-    <p>
-      <a href="/zwgk/zcwj/wjfb/tz/art/2026/art_76ee858469814146a1ce17becc6bb325.html" target="_blank" title="工业和信息化部办公厅关于开展2026年度专精特新“小巨人”企业认定和复核工作的通知">工业和信息化部办公厅关于开展2026年度专精特新“小巨人”企业认定和复核工作的通知</a><span>2026-03-23</span>
-    </p>
-    
-
-  </li>
-  <li>
-    <p>
-      <a href="/zwgk/zcwj/wjfb/tz/art/2026/art_233c8cfc8602493eb1a9e54664a459bc.html" target="_blank" title="工业和信息化部办公厅关于做好2026年信息通信业安全生产和网络运行安全工作的通知">工业和信息化部办公厅关于做好2026年信息通信业安全生产和网络运行安全工作的通知</a><span>2026-03-23</span>
-    </p>
-    
-
-  </li>
-  <li>
-    <p>
-      <a href="/zwgk/zcwj/wjfb/tz/art/2026/art_a3250eaa656845149b12615070009204.html" target="_blank" title="《节能装备高质量发展实施方案（2026—2028年）》">《节能装备高质量发展实施方案（2026—2028年）》</a><span>2026-03-20<font class="jd" id="jda3250eaa656845149b12615070009204">解读</font><font class="xw" id="xwa3250eaa656845149b12615070009204">新闻</font></span>
-    </p>
-    
-    <dl class="tslb-list">
-      <dt>相关解读</dt>
-      <dd><a href="/zwgk/zcjd/art/2026/art_271dd379de6a4f78a4dca638958ea86d.html" target="_blank" title="《节能装备高质量发展实施方案（2026—2028年）》解读">《节能装备高质量发展实施方案（2026—2028年）》解读</a></dd>
-      <dd><a href="/zwgk/zcjd/art/2026/art_5ae519ee3727402b9be56e715f082e8f.html" target="_blank" title="一图读懂《节能装备高质量发展实施方案（2026—2028年）》">一图读懂《节能装备高质量发展实施方案（2026—2028年）》</a></dd>
-    </dl>
-    <dl class="tslb-list">
-      <dt>相关新闻</dt>
-      <dd><a href="/xwfb/gxdt/sjdt/art/2026/art_80b48617a9f84d9bbc4889bf8150df74.html" target="_blank" title="四部门联合印发《节能装备高质量发展实施方案（2026—2028年）》">四部门联合印发《节能装备高质量发展实施方案（2026—2028年）》</a></dd>
-      <dd><a href="/xwfb/xwfbh/bxwfbh/art/2026/art_4e9257192fe743ca84c33ffc78e94e0c.html" target="_blank" title="工业和信息化部举行《节能装备高质量发展实施方案（2026—2028年）》新闻发布会">工业和信息化部举行《节能装备高质量发展实施方案（2026—2028年）》新闻发布会</a></dd>
-    </dl>
-
-  </li>
-  <li>
-    <p>
-      <a href="/zwgk/zcwj/wjfb/gg/art/2026/art_f11332e9ca5448ffabe9386255ee2657.html" target="_blank" title="《道路机动车辆生产企业及产品》（第404批）、《享受车船税减免优惠的节约能源 使用新能源汽车车型目录》（第八十三批）、《减免车辆购置税的新能源汽车车型目录》（第二十八批）">《道路机动车辆生产企业及产品》（第404批）、《享受车船税减免优惠的节约能源 使用新能源汽车车型目录》（第八十三批）、《减免车辆购置税的新能源汽车车型目录》（第二十八批）</a><span>2026-03-18</span>
-    </p>
-    
-
-  </li>
-</ul>
-<p class="mob-more-btn"></p>                </div>
-                <div class="tabbox-bd-con">
-<ul>
-  <li>
-    <p>
-      <a href="/zwgk/zcjd/art/2026/art_271dd379de6a4f78a4dca638958ea86d.html" target="_blank" title="《节能装备高质量发展实施方案（2026—2028年）》解读">《节能装备高质量发展实施方案（2026—2028年）》解读</a><span>2026-03-20<font class="zc">政策</font><font class="jd" id="jd271dd379de6a4f78a4dca638958ea86d">解读</font><font class="xw" id="xw271dd379de6a4f78a4dca638958ea86d">新闻</font></span>
-    </p>
-    
-    <dl class="tslb-list" style="display:none;">
-      <dt>相关政策</dt>
-      <dd><a href="/zwgk/zcwj/wjfb/tz/art/2026/art_a3250eaa656845149b12615070009204.html" target="_blank" title="《节能装备高质量发展实施方案（2026—2028年）》">《节能装备高质量发展实施方案（2026—2028年）》</a></dd>
-    </dl>
-    <dl class="tslb-list">
-      <dt>相关解读</dt>
-      <dd><a href="/zwgk/zcjd/art/2026/art_5ae519ee3727402b9be56e715f082e8f.html" target="_blank" title="一图读懂《节能装备高质量发展实施方案（2026—2028年）》">一图读懂《节能装备高质量发展实施方案（2026—2028年）》</a></dd>
-    </dl>
-    <dl class="tslb-list">
-      <dt>相关新闻</dt>
-      <dd><a href="/xwfb/gxdt/sjdt/art/2026/art_80b48617a9f84d9bbc4889bf8150df74.html" target="_blank" title="四部门联合印发《节能装备高质量发展实施方案（2026—2028年）》">四部门联合印发《节能装备高质量发展实施方案（2026—2028年）》</a></dd>
-      <dd><a href="/xwfb/xwfbh/bxwfbh/art/2026/art_4e9257192fe743ca84c33ffc78e94e0c.html" target="_blank" title="工业和信息化部举行《节能装备高质量发展实施方案（2026—2028年）》新闻发布会">工业和信息化部举行《节能装备高质量发展实施方案（2026—2028年）》新闻发布会</a></dd>
-    </dl>
-
-  </li>
-  <li>
-    <p>
-      <a href="/zwgk/zcjd/art/2026/art_5ae519ee3727402b9be56e715f082e8f.html" target="_blank" title="一图读懂《节能装备高质量发展实施方案（2026—2028年）》">一图读懂《节能装备高质量发展实施方案（2026—2028年）》</a><span>2026-03-20<font class="zc">政策</font><font class="jd" id="jd5ae519ee3727402b9be56e715f082e8f">解读</font><font class="xw" id="xw5ae519ee3727402b9be56e715f082e8f">新闻</font></span>
-    </p>
-    
-    <dl class="tslb-list" style="display:none;">
-      <dt>相关政策</dt>
-      <dd><a href="/zwgk/zcwj/wjfb/tz/art/2026/art_a3250eaa656845149b12615070009204.html" target="_blank" title="《节能装备高质量发展实施方案（2026—2028年）》">《节能装备高质量发展实施方案（2026—2028年）》</a></dd>
-    </dl>
-    <dl class="tslb-list">
-      <dt>相关解读</dt>
-      <dd><a href="/zwgk/zcjd/art/2026/art_271dd379de6a4f78a4dca638958ea86d.html" target="_blank" title="《节能装备高质量发展实施方案（2026—2028年）》解读">《节能装备高质量发展实施方案（2026—2028年）》解读</a></dd>
-    </dl>
-    <dl class="tslb-list">
-      <dt>相关新闻</dt>
-      <dd><a href="/xwfb/gxdt/sjdt/art/2026/art_80b48617a9f84d9bbc4889bf8150df74.html" target="_blank" title="四部门联合印发《节能装备高质量发展实施方案（2026—2028年）》">四部门联合印发《节能装备高质量发展实施方案（2026—2028年）》</a></dd>
-      <dd><a href="/xwfb/xwfbh/bxwfbh/art/2026/art_4e9257192fe743ca84c33ffc78e94e0c.html" target="_blank" title="工业和信息化部举行《节能装备高质量发展实施方案（2026—2028年）》新闻发布会">工业和信息化部举行《节能装备高质量发展实施方案（2026—2028年）》新闻发布会</a></dd>
-    </dl>
-
-  </li>
-  <li>
-    <p>
-      <a href="/zwgk/zcjd/art/2026/art_1fe470e4829a4697afd183212a7b14af.html" target="_blank" title="工业和信息化部节能与综合利用司负责同志解读《关于开展氢能综合应用试点工作的通知》">工业和信息化部节能与综合利用司负责同志解读《关于开展氢能综合应用试点工作的通知》</a><span>2026-03-16<font class="zc">政策</font></span>
-    </p>
-    
-    <dl class="tslb-list" style="display:none;">
-      <dt>相关政策</dt>
-      <dd><a href="/zwgk/zcwj/wjfb/tz/art/2026/art_d2957277c4684eb59c0c0de01af59434.html" target="_blank" title="三部门关于开展氢能综合应用试点工作的通知">三部门关于开展氢能综合应用试点工作的通知</a></dd>
-    </dl>
-
-  </li>
-  <li>
-    <p>
-      <a href="/zwgk/zcjd/art/2026/art_45ea9636118f475b91d00ab389be3505.html" target="_blank" title="一图读懂《关于促进光伏组件综合利用的指导意见》">一图读懂《关于促进光伏组件综合利用的指导意见》</a><span>2026-03-03<font class="zc">政策</font></span>
-    </p>
-    
-    <dl class="tslb-list" style="display:none;">
-      <dt>相关政策</dt>
-      <dd><a href="/zwgk/zcwj/wjfb/yj/art/2026/art_95cd611e3c664dfc96cd76ace1aa24d7.html" target="_blank" title="​工业和信息化部等六部门关于促进光伏组件综合利用的指导意见">​工业和信息化部等六部门关于促进光伏组件综合利用的指导意见</a></dd>
-    </dl>
-
-  </li>
-</ul>
-<p class="mob-more-btn"></p>                </div>
-              </div>
-            </div>
-            <div class="cbox-m">
-              <div class="tabbox-hd tabbox-hds2">
-<a href="/zwgk/wjgs/index.html" class="mob-a-remove on">文件公示</a>
-<a href="/gzcy/yjzj/index.html" class="mob-a-remove">意见征集</a>
-              </div>
-              <div class="tabbox-bd tabbox-bds3">
-                <div class="tabbox-bd-con">
-<ul>
-	<li>
-		<p>
-			<a href="/zwgk/wjgs/art/2026/art_b908596f5ed5434b90fb0258494af941.html" target="_blank" title="关于公开征求《电弧焊机的安全要求》强制性国家标准制修订计划项目意见的公示">关于公开征求《电弧焊机的安全要求》强制性国家标准制修订计划项目意见的公示</a><span>2026-03-27</span>
-		</p>
-	</li>
-	<li>
-		<p>
-			<a href="/zwgk/wjgs/art/2026/art_696da80f95f8452ea53078493a85d864.html" target="_blank" title="关于公开征求《人工智能 安全治理 模型上下文协议应用安全要求》等121项行业标准计划项目意见的公示">关于公开征求《人工智能 安全治理 模型上下文协议应用安全要求》等121项行业标准计划项目意见的公示</a><span>2026-03-26</span>
-		</p>
-	</li>
-	<li>
-		<p>
-			<a href="/zwgk/wjgs/art/2026/art_532e7dea3c8f4f81abd3cb88f2e8e4aa.html" target="_blank" title="关于公开征求《电动轮椅车用电池安全技术规范》强制性国家标准（报批稿）意见的公示">关于公开征求《电动轮椅车用电池安全技术规范》强制性国家标准（报批稿）意见的公示</a><span>2026-03-25</span>
-		</p>
-	</li>
-	<li>
-		<p>
-			<a href="/zwgk/wjgs/art/2026/art_2b4385a2ffca46deb565272510940d3b.html" target="_blank" title="关于公开征求《汽车数据安全保障要求》等2项汽车行业推荐性国家标准报批意见的公示">关于公开征求《汽车数据安全保障要求》等2项汽车行业推荐性国家标准报批意见的公示</a><span>2026-03-24</span>
-		</p>
-	</li>
-</ul>
-<p class="mob-more-btn"></p>                </div>
-<div class="tabbox-bd-con">
-	<p><a href="/gzcy/yjzj/art/2026/art_6a0b136cf5be4a4c8aa50511870508dc.html" target="_blank" title="公开征求《智能网联汽车 自动驾驶系统安全要求》等五项强制性国家标准的意见">公开征求《智能网联汽车 自动驾驶系统安全要求》等五项强制性国家标准的意见</a><span>2026-02-12<font class="zjdcDate" date-end="1776096000000"></font></span></p>
-	<p><a href="/gzcy/yjzj/art/2026/art_be9cf08c463343abbf20005d68f399e7.html" target="_blank" title="《关于开展卫星网络国内协调第三方机构评估工作（2026—2027年）的通知（征求意见稿）》公开征求意见">《关于开展卫星网络国内协调第三方机构评估工作（2026—2027年）的通知（征求意见稿）》公开征求意见</a><span>2026-02-09<font class="zjdcDate" date-end="1773158400000"></font></span></p>
-	<p><a href="/gzcy/yjzj/art/2026/art_23f54ee3ab304e02bef00bae84caa842.html" target="_blank" title="关于公开征求《汽车、摩托车用车速表》等4项强制性国家标准（报批稿）意见的公示">关于公开征求《汽车、摩托车用车速表》等4项强制性国家标准（报批稿）意见的公示</a><span>2026-02-05<font class="zjdcDate" date-end="1770825600000"></font></span></p>
-	<p><a href="/gzcy/yjzj/art/2026/art_de6e0965aca94dbcbfaab7fd3622733a.html" target="_blank" title="关于公开征求《电子电器用锂离子电池和电池组安全 第1部分：通用要求》等3项强制性国家标准（征求意见稿）意见的公示">关于公开征求《电子电器用锂离子电池和电池组安全 第1部分：通用要求》等3项强制性国家标准（征求意见稿）意见的公示</a><span>2026-01-28<font class="zjdcDate" date-end="1774713600000"></font></span></p>
-	<p class="mob-more-btn"></p>
-</div>
-
-<script src="/cms_files/filemanager/1226211233/script/20256/ac1e4a0f27b748eb9322866eea0d28d8.js" type="text/javascript" charset="utf-8"></script>              </div>
-            </div>
-            <div class="cbox-r">
-              <div class="tabbox-hd tabbox-hds2">
-<a href="/gxsj/index.html" class="mob-a-remove on">最新数据</a>
-<a href="/gxsj/tjfx/ndsj/index.html" class="mob-a-remove">年度数据</a>
-              </div>
-              <div class="tabbox-bd tabbox-bds4">
-                <div class="tabbox-bd-con">
-<ul>
-	<li><span>2026-03-25</span><p><a href="/gxsj/tjfx/txy/art/2026/art_3979247945dc44728893b4f857cc8f8f.html" target="_blank" title="2026年前2个月通信业经济运行情况">2026年前2个月通信业经济运行情况</a></p></li>
-	<li><span>2026-03-13</span><p><a href="/gxsj/tjfx/zbgy/qc/art/2026/art_8e3fd19a02174c59a0800977a75e7da9.html" target="_blank" title="2026年2月汽车工业经济运行情况">2026年2月汽车工业经济运行情况</a></p></li>
-	<li><span>2026-02-11</span><p><a href="/gxsj/tjfx/zbgy/qc/art/2026/art_45550f42e3d1468c8183953e2bfe829c.html" target="_blank" title="2026年1月汽车工业经济运行情况">2026年1月汽车工业经济运行情况</a></p></li>
-	<li><span>2026-02-01</span><p><a href="/gxsj/tjfx/zbgy/mycb/art/2026/art_fc5e4ed1d3f5421885e6c3afff91cbbc.html" target="_blank" title="2025年我国造船国际市场份额继续保持全球领先">2025年我国造船国际市场份额继续保持全球领先</a></p></li>
-	<li><span>2026-01-30</span><p><a href="/gxsj/tjfx/rjy/art/2026/art_65a12a560865432bb1548fdddc74f19c.html" target="_blank" title="2025年软件业运行情况">2025年软件业运行情况</a></p></li>
-	<li><span>2026-01-30</span><p><a href="/gxsj/tjfx/hlw/art/2026/art_1a9ca91661e545c1b309f7ca42d907a7.html" target="_blank" title="2025年互联网和相关服务业运行情况">2025年互联网和相关服务业运行情况</a></p></li>
-	<li><span>2026-01-30</span><p><a href="/gxsj/tjfx/dzxx/art/2026/art_92806ace120f403b8c87cb703721520f.html" target="_blank" title="2025年电子信息制造业运行情况">2025年电子信息制造业运行情况</a></p></li>
-	<li><span>2026-01-28</span><p><a href="/gxsj/tjfx/txy/art/2026/art_da754fe24a9347dc89bef9bf9c28528e.html" target="_blank" title="2025年通信业统计公报解读：通信业运行平稳 新动能加快培育">2025年通信业统计公报解读：通信业运行平稳 新动能加快培育</a></p></li>
-</ul>
-<p class="mob-more-btn"></p>                </div>
-                <div class="tabbox-bd-con">
-<ul>
-	<li><span>2026-02-01</span><p><a href="http://www.miit.gov.cn/gxsj/tjfx/zbgy/mycb/art/2026/art_fc5e4ed1d3f5421885e6c3afff91cbbc.html" target="_blank" title="2025年我国造船国际市场份额继续保持全球领先">2025年我国造船国际市场份额继续保持全球领先</a></p></li>
-	<li><span>2026-01-30</span><p><a href="http://www.miit.gov.cn/gxsj/tjfx/rjy/art/2026/art_65a12a560865432bb1548fdddc74f19c.html" target="_blank" title="2025年软件业运行情况">2025年软件业运行情况</a></p></li>
-	<li><span>2026-01-30</span><p><a href="http://www.miit.gov.cn/gxsj/tjfx/hlw/art/2026/art_1a9ca91661e545c1b309f7ca42d907a7.html" target="_blank" title="2025年互联网和相关服务业运行情况">2025年互联网和相关服务业运行情况</a></p></li>
-	<li><span>2026-01-30</span><p><a href="http://www.miit.gov.cn/gxsj/tjfx/dzxx/art/2026/art_92806ace120f403b8c87cb703721520f.html" target="_blank" title="2025年电子信息制造业运行情况">2025年电子信息制造业运行情况</a></p></li>
-	<li><span>2026-01-28</span><p><a href="http://www.miit.gov.cn/gxsj/tjfx/txy/art/2026/art_da754fe24a9347dc89bef9bf9c28528e.html" target="_blank" title="2025年通信业统计公报解读：通信业运行平稳 新动能加快培育">2025年通信业统计公报解读：通信业运行平稳 新动能加快培育</a></p></li>
-	<li><span>2026-01-28</span><p><a href="/gxsj/tjfx/txy/art/2026/art_5c99d65350f7452f999e8efcb1ee2d6a.html" target="_blank" title="2025年通信业统计公报">2025年通信业统计公报</a></p></li>
-</ul>
-<p class="mob-more-btn"></p>                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="floor floor5 cbox-lmr">
-            <div class="cbox-l">
-              <div class="floor5-lbox">
-<p class="floor5-lbox-t">政策查询</p><div class="floor5-lbox-m">
-    <input class="floor5-lbox-m-txt" type="value" placeholder="请输入关键字" />
-    <input class="floor5-lbox-m-btn" type="button" />
-</div>
-<script>
-$(".floor5-lbox-m-btn").click(function(){
-    if($(".floor5-lbox-m-txt").val().trim() == ""){
-        //alert("请输入关键词！")
-        window.location.href ="https://www.miit.gov.cn/gyhxxhbwjcx/index.html"
-    }else{
-        //window.open('https://www.miit.gov.cn/search/wjfb.html?websiteid=110000000000000&pg=&p=&tpl=14&category=51&q='+$(".floor5-lbox-m-txt").val(),"_blank")
-        window.open('https://www.miit.gov.cn/search/index.html?websiteid=110000000000000&pg=&p=&tpl=&cateid=46&q='+$(".floor5-lbox-m-txt").val(),"_blank")
-    }
-   
-})
-</script>                <div class="floor5-lbox-b">
-<p><a href="https://www.miit.gov.cn/search/zcwjk.html?websiteid=110000000000000&pg=&p=&tpl=14&category=183&q=" target="_blank">政策文件库</a></p>							<p><a href="https://www.miit.gov.cn/search/gzk.html?websiteid=110000000000000&pg=&p=&tpl=14&category=181&q=" target="_blank">部门规章库</a></p>
-							<p><a href="/zc/wjxzfl/xzgfxwj/index.html" target="_blank">行政规范性文件库</a></p>                </div>
-              </div>
-            </div>
-            <div class="cbox-m">
-              <div class="floor5-mbox">
-                <div class="floor5-mbox-t">
-<div class="floor5-mbox-tl">								<p>12381</p>
-								<span>部公共服务电话</span>
-							</div>
-							<div class="floor5-mbox-tr">
-								<a href="https://bzxx.miit.gov.cn/qa/znzx/main" target="_blank">
-									<img src="/cms_files/webmiit/tplobject/gxbsy/7c75257d15f44bcb9bf47d524cd9cb65/images/sy_icon11.jpg" /><span>阳光小信</span>
-								</a>
-							</div>                </div>
-                <div class="floor5-mbox-b">
-<a href="http://bzxx.miit.gov.cn/bzxx/appellate/main" target="_blank" title="部长信箱"><p><img src="/cms_files/filemanager/1226211233/picture/20246/7acbd92ff7b945e99a1b5f02d25870b4.png" /></p><span>部长信箱</span></a>
-<a href="https://yhssglxt.miit.gov.cn/web/" target="_blank" title="电信申诉"><p><img src="/cms_files/filemanager/1226211233/picture/20247/0b35e4c946914eea9e7128e3b86d3df5.png" /></p><span>电信申诉</span></a>
-<a href="https://wsxf.miit.gov.cn/" target="_blank" title="网上信访"><p><img src="/cms_files/filemanager/1226211233/picture/20246/e09574af8b724d42880315080b48f64e.png" /></p><span>网上信访</span></a>
-<a href="/gzcy/cydh/index.html" target="_blank" title="常用电话"><p><img src="/cms_files/filemanager/1226211233/picture/20247/f89be3111b874d218c61026dc148488e.png" /></p><span>常用电话</span></a>
-                </div>
-              </div>
-            </div>
-            <div class="cbox-r">
-              <div class="floor5-rbox">
-<a href="https://www.miit.gov.cn/rddbzxwywszq/index.html" target="_blank"><img src="/cms_files/filemanager/1226211233/picture/20243/bcfb5079ec8e41f29b0a67076ae5f11b.png" /></a>
-<a href="https://tousu.www.gov.cn/dc/2024zhdc/index.htm" target="_blank"><img src="/cms_files/filemanager/1226211233/picture/20261/428e8ddd2f8240a998b5ea3273add765.jpg" /></a>
-<a href="https://liuyan.www.gov.cn/2025wwzfgzbgtjy/bmdf.html?q=gyhxxhb" target="_blank"><img src="/cms_files/filemanager/1226211233/picture/20252/f7c232435720409288c27d655dc860b8.jpg" /></a>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
+        <style>
+            .login a, .signIn a {
+                line-height: 35px;
+                color: #4695CD;
+                font-size: 16px;
+            }
 
-<script src="/cms_files/filemanager/script/20201/840397482ca5455aa2209d4942e43e72.js" type="text/javascript" charset="utf-8"></script><script src="/cms_files/filemanager/1226211233/script/20249/a91cb3cb062d4d2b8153858f1e77fedf.js" type="text/javascript" charset="utf-8"></script>
-<script src="/cms_files/filemanager/script/getpv/2/getPv.js" type="text/javascript" charset="utf-8"></script>
+                .login a i, .signIn a i {
+                    color: #4695CD;
+                    margin-right: 8px;
+                }
+
+            .signIn span {
+                display: inline-block;
+                vertical-align: top;
+                margin-right: 8px;
+            }
+        </style>
+
+        <script>
+            async function setHead() {
+
+                await getUserInfo();
+
+                var user = localStorage.getItem("user");
+
+                if (user) {
+                    let u = JSON.parse(user);
+
+                    $(".signIn span").html(u.UserName);
+                    $(".login").hide();
+                    $(".signIn").show();
+                    $(".logout").show();
+                } else {
+                    $(".login").show();
+                    $(".signIn").hide();
+                    $(".logout").hide();
+                }
+            }
+
+            $(function () {
+
+                setHead();
+
+                $(".login a").click(function () {
+                    location.href = "https://zxzj.weip.org.cn/Login.aspx?gotoUrl=" + window.location.href;
+                })
+
+                $(".signIn a").click(function () {
+                    localStorage.removeItem("user");
+                    localStorage.removeItem("token");
+                    location.href = "https://zxzj.weip.org.cn/Login.aspx";
+                })
+            })
+        </script>
+        <div class="skin col-xs-4 text-right">
+            <div class="login" style="display:none;"><a href="javascript:void(0);" class="login_a"><i class="fa fa-user-circle-o"></i>登录</a>
+            <a href="https://jxj.wuhan.gov.cn/jgdj/ddjs/zzb.html" class="login_a"><i class="fa fa-user-circle-o"></i>长者版</a>
+        </div>
+            <div class="signIn" style="display:none;">您好！<span></span><a href="javascript:void(0);" class="logout"><i class="fa fa-sign-in"></i>退出</a></div>
+        </div>
+        <div class="skin col-xs-3 text-right hide">
+            <a id="changeSkin">
+                <img src=".//material/Themes/Images/skin.png" />
+                <span>换肤</span>
+                <!--<div class="middle_div"></div>-->
+            </a>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<div class="maxwidth">
+    <div class="banner">
+    </div>
+    <div class="navbar_custom">
+        <nav class="navbar navbar-default navbar_custom safe_width" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse"
+                        data-target="#navbar-collapse">
+                    <span class="sr-only">折叠导航</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!--<a class="navbar-brand" href="#">武汉市经信局</a>-->
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-collapse">
+                <ul class="nav navbar-nav" style="margin-left:32px">
+                    <li>
+                        <a target="_blank" href='./'>首页</a>
+                    </li>
+                    <li>
+                        <a href="./xwzx_9/" target="_BLANK">新闻中心</a>
+                        <!--<a href="#">新闻中心</a>-->
+                    </li>
+                    <li>
+                        <a href="./xxgk_9/" target="_BLANK">政府信息公开</a>
+                    </li>
+                    <li>
+                        <a href="./wshd/" target="_BLANK">网上互动</a>
+                    </li>
+                    <!--<li>
+                        <a href="http://zwfw.hubei.gov.cn/webview/bszn/bmsy.html?department=11420100010893551T" target="_BLANK">办事服务</a>
+                    </li>-->
+                    <!--<li>
+                        <a href="./jgdj/" target="_BLANK">机关党建</a>
+                    </li>-->
+                </ul>
+                <div class="navbar-form navbar-left" role="search" id="i_search" style="margin-left:110px">
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="txtSearch" placeholder="请输入关键词搜索" style="width:254px;" />
+                        <span class="input-group-btn">
+                            <button class="btn btn-primary" type="button" id="btnSearch" style="height:34px"><i class="fa fa-search"></i></button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
+            <div class="container" id="master_content" style="margin-bottom:10px;">
+                <script>
+                    $(function () {
+                        $(".index_content").parent().removeClass()
+                    })
+                </script>
+                <div class="index_content">
+                    <div class="over_color">
+                        <div class="safe_width">
+                            <!--通知滚动-->
+                            <script>
+                                $(function () {
+                                    var len1 = $(".notice_item").size();
+                                    $(".notice_items").width($(".notice").width() - $(".notice_link").width() - 20);
+                                    $(window).resize(function () {
+                                        $(".notice_items").width($(".notice").width() - $(".notice_link").width() - 20);
+                                    })
+                                    var h = $(".notice_item").height();
+                                    var totalHeight = h * len1;
+                                    $(".notice_items").css("height", totalHeight)
+                                    var moveTopTimer = 0;
+                                    function movetop() {
+                                        $(".notice_items").stop().animate({ top: -h }, 500, function () {
+                                            $(this).css("top", 0)
+                                            $(".notice_item").first().appendTo(".notice_items")
+                                            moveTopTimer = setTimeout(movetop, 3000)
+                                        })
+                                    }
+                                    $(".notice_item").hover(function () {
+                                        $(".notice_items").stop();
+                                        clearTimeout(moveTopTimer);
+                                    }, function () {
+                                        moveTopTimer = setTimeout(movetop, 3000)
+                                    })
+                                    moveTopTimer = setTimeout(movetop, 3000)
+
+                                    //图片轮播
+                                    $('#myCarousel').carousel({
+                                        interval: 3000
+                                    })
+                                    $('#myCarousel_1').carousel({
+                                        interval: 5000
+                                    })
+
+                                    $('.carousel').hover(function () {
+                                        $(".carousel-control", this).fadeIn();
+                                    }, function () {
+                                        $(".carousel-control", this).fadeOut();
+                                    });
+
+                                    function imgCarouselResize() {
+                                        if (window.innerWidth <= 991)
+                                            $("#myCarousel").height($("#myCarousel").width() * 9 / 16)
+                                        else
+                                            $("#myCarousel").height(380)
+                                    }
+                                    imgCarouselResize();
+                                    $(window).resize(function () {
+                                        imgCarouselResize();
+                                    })
+
+                                    function SetImgCarouselIcon(id) {
+                                        var imgsCount = $(id + " .item").length
+                                        var cihtml = '';
+                                        for (var i = 0; i < imgsCount; i++) {
+                                            if (i == 0) cihtml = '<li data-target="' + id + '" data-slide-to="0" class="active"></li>';
+                                            else cihtml += ' <li data-target="' + id + '" data-slide-to="' + i + '"></li>';
+                                        }
+                                        $(id + " ol").html(cihtml);
+                                        $(id + " .item").eq(0).addClass("active");
+                                    }
+                                    SetImgCarouselIcon("#myCarousel");
+                                    SetImgCarouselIcon("#myCarousel_1");
+                                    SetImgCarouselIcon("#myCarousel_2");
+                                })
+                            </script>
+                            <div class="notice">
+                                <div class="notice_items">
+                                    
+                                        <div class="notice_item">
+                                            <div class="middle_div"></div>
+                                            <span class="publish_day hide_xs">
+                                                27
+                                            </span>
+                                            <span class="publish_date hide_xs">
+                                                03-27 2026
+                                            </span>
+                                            <span class="notice_name hide_xs"><a href='#more'></a></span>
+                                            <span class='notice_ttl'><a href="./xwzx_9/tztg/202603/t20260327_2745722.html" target="_blank">武汉市经济和信息化局对2023年度小微企业服务补贴券事项专项审计竞争性磋商公告</a></span>
+                                        </div>
+                                    
+                                        <div class="notice_item">
+                                            <div class="middle_div"></div>
+                                            <span class="publish_day hide_xs">
+                                                26
+                                            </span>
+                                            <span class="publish_date hide_xs">
+                                                03-26 2026
+                                            </span>
+                                            <span class="notice_name hide_xs"><a href='#more'></a></span>
+                                            <span class='notice_ttl'><a href="./xwzx_9/tztg/202603/t20260326_2745455.html" target="_blank">关于开展2026年度专精特新“小巨人”企业预申报工作的通知</a></span>
+                                        </div>
+                                    
+                                        <div class="notice_item">
+                                            <div class="middle_div"></div>
+                                            <span class="publish_day hide_xs">
+                                                25
+                                            </span>
+                                            <span class="publish_date hide_xs">
+                                                03-25 2026
+                                            </span>
+                                            <span class="notice_name hide_xs"><a href='#more'></a></span>
+                                            <span class='notice_ttl'><a href="./xwzx_9/tztg/202603/t20260325_2744862.html" target="_blank">关于武汉市第九批国家制造业单项冠军奖励资金预安排情况的公示</a></span>
+                                        </div>
+                                    
+                                        <div class="notice_item">
+                                            <div class="middle_div"></div>
+                                            <span class="publish_day hide_xs">
+                                                23
+                                            </span>
+                                            <span class="publish_date hide_xs">
+                                                03-23 2026
+                                            </span>
+                                            <span class="notice_name hide_xs"><a href='#more'></a></span>
+                                            <span class='notice_ttl'><a href="./xwzx_9/tztg/202603/t20260324_2743945.html" target="_blank">关于2026年首次进入规模以上工业企业奖励资金预安排情况的公示</a></span>
+                                        </div>
+                                    
+                                        <div class="notice_item">
+                                            <div class="middle_div"></div>
+                                            <span class="publish_day hide_xs">
+                                                19
+                                            </span>
+                                            <span class="publish_date hide_xs">
+                                                03-19 2026
+                                            </span>
+                                            <span class="notice_name hide_xs"><a href='#more'></a></span>
+                                            <span class='notice_ttl'><a href="./xwzx_9/tztg/202603/t20260323_2743547.html" target="_blank">关于2026年基础级智能工厂拟认定名单的公示</a></span>
+                                        </div>
+                                    
+                                </div>
+                                <div class="notice_link text-left">
+                                    <a href="./xwzx_9/tztg/">查看更多>></a>
+                                    <div class="middle_div"></div>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                            <div class="index_row_1">
+                                <div class="col-md-7 col-xs-12">
+                                    <div class="row">
+                                        <!--图片轮播-->
+                                        <div id="myCarousel" class="carousel slide">
+                                            <!-- 轮播（Carousel）指标 -->
+                                            <ol class="carousel-indicators">
+                                                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                                <li data-target="#myCarousel" data-slide-to="1"></li>
+                                            </ol>
+                                            <!-- 轮播（Carousel）项目 -->
+                                            <div class="carousel-inner">
+                                                
+                                                    
+                                                        <div class="item">
+                                                            <a target="_blank" href='./xwzx_9/tpxw/202603/t20260327_2745759.html' id="OWNER" field="_recurl">
+                                                                <IMG src="./xwzx_9/tpxw/202603/W020260327448263797546.jpg" />
+                                                            </a>
+                                                            <span class='carousel-caption'>盛阅春调研“中国药谷”建设工作并召开座谈会</span>
+                                                        </div>
+                                                    
+                                                
+                                                    
+                                                        <div class="item">
+                                                            <a target="_blank" href='https://mp.weixin.qq.com/s/286OWaH7fE3F-6N_XMcv1Q?scene=1&click_id=1' id="OWNER" field="_recurl">
+                                                                <IMG src="./xwzx_9/tpxw/202603/W020260320307745585820.png" />
+                                                            </a>
+                                                            <span class='carousel-caption'>国内领先的超级数据工厂，在汉投入运营</span>
+                                                        </div>
+                                                    
+                                                
+                                                    
+                                                        <div class="item">
+                                                            <a target="_blank" href='./xwzx_9/tpxw/202603/t20260313_2739856.html' id="OWNER" field="_recurl">
+                                                                <IMG src="./xwzx_9/tpxw/202603/W020260313634022639049.jpg" />
+                                                            </a>
+                                                            <span class='carousel-caption'>签约25亿！绿色智能船舶产业助力武汉长江中游中心建设</span>
+                                                        </div>
+                                                    
+                                                
+                                                    
+                                                        <div class="item">
+                                                            <a target="_blank" href='./xwzx_9/tpxw/202603/t20260313_2739842.html' id="OWNER" field="_recurl">
+                                                                <IMG src="./xwzx_9/tpxw/202603/W020260313627926960608.png" />
+                                                            </a>
+                                                            <span class='carousel-caption'>航天与光电子、网络安全产业融合发展对接会在汉举行</span>
+                                                        </div>
+                                                    
+                                                
+                                                    
+                                                        <div class="item">
+                                                            <a target="_blank" href='./xwzx_9/tpxw/202603/t20260306_2736179.html' id="OWNER" field="_recurl">
+                                                                <IMG src="./xwzx_9/tpxw/202603/W020260306383847344974.png" />
+                                                            </a>
+                                                            <span class='carousel-caption'>全球首款，光谷问世</span>
+                                                        </div>
+                                                    
+                                                
+                                            </div>
+                                        </div>
+                                        <!-- 轮播（Carousel）导航 -->
+                                        <a class="left carousel-control hide_md_lg" href="#myCarousel" role="button" data-slide="prev">
+                                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                            <span class="sr-only">Previous</span>
+                                        </a>
+                                        <a class="right carousel-control hide_md_lg" href="#myCarousel" role="button" data-slide="next">
+                                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                            <span class="sr-only">Next</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--时政要闻，国务院、湖北省、武汉市-->
+                            <div class="col-md-5 col-xs-12">
+                                <div class="row tab_news_1 padl_md_12">
+                                    <div class="art_tab" style="height: 115px;margin-bottom: 10px;">
+                                        <!--重点关注不轮播-->
+                                        <div id="myCarousel_2" class="carousel slide">
+                                            <ol class="carousel-indicators" style="left:85%;top:85%">
+                                                <li data-target="#myCarousel_2" data-slide-to="0" class="active"></li>
+                                                <li data-target="#myCarousel_2" data-slide-to="1"></li>
+                                            </ol>
+
+                                            <!-- 轮播（Carousel）项目 -->
+                                            <div class="carousel-inner">
+                                                
+                                                    <div class="item">
+                                                        <div style="margin-top: 10px;margin-bottom: 5px;margin-left: 23px;padding-right:32px;white-space: nowrap; width: 100%; overflow: hidden; text-overflow: ellipsis;font-size: 1.15em;text-align:center;">
+                                                            <a href='https://h.xinhuaxmt.com/vh512/share/13005098?docid=13005098&newstype=1001&d=13525d9' title='李强主持召开国务院常务会议' target="_blank">
+                                                                李强主持召开国务院常务会议
+                                                            </a>
+                                                        </div>
+                                                        <div style="margin-left:15px;margin-right:10px;margin-top:10px">
+                                                            <span style="line-height: 1.8em;font-size: 0.9em;margin-left:2em;color:#333">
+                                                                新华社北京3月13日电 国务院总理李强3月13日主持召开国务院常务会议，学习贯彻习近平总书记在全国两会...
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                
+                                                    <div class="item">
+                                                        <div style="margin-top: 10px;margin-bottom: 5px;margin-left: 23px;padding-right:32px;white-space: nowrap; width: 100%; overflow: hidden; text-overflow: ellipsis;font-size: 1.15em;text-align:center;">
+                                                            <a href='https://www.peopleapp.com/column/30051596913-500007385075' title='第二场部长通道 回应关切真抓实干（现场·部长通道）' target="_blank">
+                                                                第二场部长通道 回应关切真抓实干（现场·部长通道）
+                                                            </a>
+                                                        </div>
+                                                        <div style="margin-left:15px;margin-right:10px;margin-top:10px">
+                                                            <span style="line-height: 1.8em;font-size: 0.9em;margin-left:2em;color:#333">
+                                                                3月9日上午，十四届全国人大四次会议第二场“部长通道”集中采访活动在人民大会堂举行，3位部长接受了记...
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                
+                                                    <div class="item">
+                                                        <div style="margin-top: 10px;margin-bottom: 5px;margin-left: 23px;padding-right:32px;white-space: nowrap; width: 100%; overflow: hidden; text-overflow: ellipsis;font-size: 1.15em;text-align:center;">
+                                                            <a href='https://content-static.cctvnews.cctv.com/snow-book/index.html?item_id=3791285225425095504&toc_style_id=feeds_default&share_to=wechat&track_id=c61b6a85-20bc-4ecf-a644-502987326643' title='世界看两会丨国际人士：中国高质量发展为全球经济注入稳定性' target="_blank">
+                                                                世界看两会丨国际人士：中国高质量发展为全球经济注入稳定性
+                                                            </a>
+                                                        </div>
+                                                        <div style="margin-left:15px;margin-right:10px;margin-top:10px">
+                                                            <span style="line-height: 1.8em;font-size: 0.9em;margin-left:2em;color:#333">
+                                                                作为世界“读懂中国”的重要窗口，正在进行的中国两会受到各国媒体的持续关注。国际人士表示，在变乱交...
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                
+                                            </div>
+                                        </div>
+                                        <!-- 轮播（Carousel）导航 -->
+                                        <a class="left carousel-control hide_md_lg" href="#myCarousel_2" role="button" data-slide="prev">
+                                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                            <span class="sr-only">Previous</span>
+                                        </a>
+                                        <a class="right carousel-control hide_md_lg" href="#myCarousel_2" role="button" data-slide="next">
+                                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                            <span class="sr-only">Next</span>
+                                        </a>
+                                    </div>
+                                    <!--<div class="art_tab" style="height: 115px;margin-bottom: 10px;">
+                                        
+                                            <div style="margin-top: 10px;margin-bottom: 5px;margin-left: 25px;white-space: nowrap; width: 24em; overflow: hidden; text-overflow: ellipsis;font-size: 17px;">
+                                                <a href='https://h.xinhuaxmt.com/vh512/share/13005098?docid=13005098&newstype=1001&d=13525d9' title='李强主持召开国务院常务会议' target="_blank">
+                                                    李强主持召开国务院常务会议
+                                                </a>
+                                            </div>
+                                            <span class="art_list_content">
+                                                
+                                            </span>
+                                        
+                                    </div>-->
+                                </div>
+
+                                <div class="row tab_news_1 padl_md_12">
+                                    <div class="art_tab" style="height:255px;">
+                                        <ul class="art_class_tab nav_tab">
+                                            <!--<li class="active" style="margin-left:20px;padding-left:20px;padding-right:20px">-->
+                                            <li>
+                                                <a data-id="#gwyNews" target="_blank" href="https://www.hubei.gov.cn/szyw/">时政要闻</a>
+                                            </li>
+                                            <!--<li style="margin-left:10px;padding-left:20px;padding-right:20px">-->
+                                            <li>
+                                                <a data-id="#gjNews" target="_blank" href="https://www.gov.cn/guowuyuan/index.htm">国务院</a>
+                                            </li>
+                                            <!--<li style="margin-left:10px;padding-left:20px;padding-right:20px">-->
+                                            <li>
+                                                <a data-id="#hbNews" target="_blank" href="https://www.hubei.gov.cn/zwgk/hbyw/hbywqb/">湖北省</a>
+                                            </li>
+                                            <!--<li style="margin-left:10px;padding-left:20px;padding-right:20px">-->
+                                            <li>
+                                                <a data-id="#whNews" target="_blank" href="https://www.wuhan.gov.cn/">武汉市</a>
+                                            </li>
+                                            <li class="active">
+                                                <a target="_blank" data-id="#ecoNews" href='./xwzx_9/whjx/'>武汉经信</a>
+                                            </li>
+                                        </ul>
+                                        <div class="clear"></div>
+                                        <div class="tab_content" id="tabNewsContent">
+                                            <div class="tab_pane hide" id="gwyNews">
+                                                <ul></ul>
+                                            </div>
+                                            <div class="tab_pane hide" id="gjNews">
+                                                <ul></ul>
+                                            </div>
+                                            <div class="tab_pane hide" id="hbNews">
+                                                <ul></ul>
+                                            </div>
+                                            <div class="tab_pane hide" id="whNews">
+                                                <ul></ul>
+                                            </div>
+                                            <div class="tab_pane" id="ecoNews">
+                                                <ul>
+                                                    
+                                                        <li>
+                                                            <a href='./xwzx_9/whjx/202603/t20260319_2742487.html' title='武汉“星、光、网”首度牵手' target="_blank">
+                                                                武汉“星、光、网”首度牵手
+                                                            </a>
+                                                            <span>2026-03-19</span>
+
+                                                        </li>
+                                                    
+                                                        <li>
+                                                            <a href='./xwzx_9/whjx/202603/t20260319_2742486.html' title='武汉入选创建国家新型工业化示范区' target="_blank">
+                                                                武汉入选创建国家新型工业化示范区
+                                                            </a>
+                                                            <span>2026-03-19</span>
+
+                                                        </li>
+                                                    
+                                                        <li>
+                                                            <a href='./xwzx_9/whjx/202603/t20260319_2742485.html' title='国内领先的超级数据工厂在汉开工，机器人将在这里获得“触觉”' target="_blank">
+                                                                国内领先的超级数据工厂在汉开工，机器人将在这里获得“触觉”
+                                                            </a>
+                                                            <span>2026-03-19</span>
+
+                                                        </li>
+                                                    
+                                                        <li>
+                                                            <a href='./xwzx_9/whjx/202603/t20260312_2738996.html' title='国家立项项目数仅次于北京 武汉低空经济跻身全国第一梯队' target="_blank">
+                                                                国家立项项目数仅次于北京 武汉低空经济跻身全国第一梯队
+                                                            </a>
+                                                            <span>2026-03-12</span>
+
+                                                        </li>
+                                                    
+                                                        <li>
+                                                            <a href='./xwzx_9/whjx/202603/t20260310_2737809.html' title='从“追光”到“创芯”，武汉勇闯科技无人区' target="_blank">
+                                                                从“追光”到“创芯”，武汉勇闯科技无人区
+                                                            </a>
+                                                            <span>2026-03-10</span>
+
+                                                        </li>
+                                                    
+                                                        <li>
+                                                            <a href='./xwzx_9/whjx/202603/t20260304_2735073.html' title='为未来6G通信提供关键支撑，又一全球首款在汉问世' target="_blank">
+                                                                为未来6G通信提供关键支撑，又一全球首款在汉问世
+                                                            </a>
+                                                            <span>2026-03-04</span>
+
+                                                        </li>
+                                                    
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="safe_width">
+                    <!--广告条轮播-->
+                    <!--<div id="myCarousel_1" class="carousel slide">
+                    <!-- 轮播（Carousel）指标 -->
+                    <!--<ol class="carousel-indicators">
+                        <li data-target="#myCarousel_1" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel_1" data-slide-to="1"></li>
+                        <li data-target="#myCarousel_1" data-slide-to="2"></li>
+                        <li data-target="#myCarousel_1" data-slide-to="3"></li>
+                    </ol>-->
+                    <!-- 轮播（Carousel）项目 -->
+                    <!--<div class="carousel-inner">
+                    <div class="item active">
+                        <a target="_blank" href="https://jxj.wuhan.gov.cn/ztzl/fzxxzl/fzdt/index.html">
+                            <img src="./material/Themes/Images/Links/ct_banner_fzxc.png" alt="《反电信网络诈骗法》学习宣传专栏" />
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a target="_blank" href="https://www.12371.cn/xxsx/">
+                            <img src="./material/Themes/Images/Links/ct_banner_20230524.png" alt="学习贯彻习近平新时代中国特色社会主义思想主题教育1" />
+                        </a>
+                    </div>-->
+                    <!--<div class="item">
+                        <a target="_blank" href="https://zccs.whsme.net.cn/book/list">
+                            <img src="./material/Themes/Images/Links/ct_banner_zcjb.png" alt="国家、湖北省和武汉市支持民营及中小微企业政策简编" />
+                        </a>
+                    </div>-->
+                    <!--<div class="item">
+                            <a target="_blank" href="https://jxj.wuhan.gov.cn/xwzx_9/tztg/202401/t20240115_2342621.html">
+                                <img src="./material/Themes/Images/Links/ct_banner_20240131.jpg" alt="减轻企业负担政策汇编（2023）" />
+                            </a>
+                        </div>
+                    </div>-->
+                    <!-- 轮播（Carousel）导航 -->
+                    <!--<a class="left carousel-control" href="#myCarousel_1" role="button" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#myCarousel_1" role="button" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>-->
+                    <div class="clear"></div>
+                    <div class="index_row_2">
+                        <!--工作动态-->
+                        <div class="col-md-5 col-xs-12">
+                            <div class="row">
+                                <div class="art_list padr_md_12">
+                                    <!--<a href='#more' class="more">更多>></a>-->
+                                    <ul class="art_class_tab nav_tab">
+                                        <li class="active">
+                                            <a target="_blank" href='./xwzx_9/gzdt/'>工作动态</a>
+                                        </li>
+                                    </ul>
+                                    <div class="clear"></div>
+                                    <div class="tab_content">
+                                        <div class="tab_pane">
+                                            <ul>
+                                                
+                                                    <li>
+                                                        <a href='./xwzx_9/gzdt/202603/t20260327_2745757.html' title='王忠林主持召开一季度数智经济发展推进会 深入实施“人工智能+”行动 更好赋能千行百业' target="_blank">
+                                                            王忠林主持召开一季度数智经济发展推进会 深入实施“人工智能+”行动 更好赋能千行百业
+                                                        </a>
+                                                        <span>2026-03-26</span>
+                                                    </li>
+                                                
+                                                    <li>
+                                                        <a href='./xwzx_9/gzdt/202603/t20260320_2742604.html' title='全国首批！武汉入选' target="_blank">
+                                                            全国首批！武汉入选
+                                                        </a>
+                                                        <span>2026-03-17</span>
+                                                    </li>
+                                                
+                                                    <li>
+                                                        <a href='./xwzx_9/gzdt/202603/t20260312_2738915.html' title='共筑汽车芯生态 赋能产业新升级，武汉市举办汽车半导体企业供需对接座谈会' target="_blank">
+                                                            共筑汽车芯生态 赋能产业新升级，武汉市举办汽车半导体企业供需对接座谈会
+                                                        </a>
+                                                        <span>2026-03-11</span>
+                                                    </li>
+                                                
+                                                    <li>
+                                                        <a href='./xwzx_9/gzdt/202603/t20260310_2737559.html' title='聚焦汽车产业智能化 市经信局第四场“AI+制造”培训会顺利召开' target="_blank">
+                                                            聚焦汽车产业智能化 市经信局第四场“AI+制造”培训会顺利召开
+                                                        </a>
+                                                        <span>2026-03-09</span>
+                                                    </li>
+                                                
+                                                    <li>
+                                                        <a href='./xwzx_9/gzdt/202603/t20260309_2736911.html' title='政府工作报告连续三年部署未来产业，“中国制造”新名片是什么？' target="_blank">
+                                                            政府工作报告连续三年部署未来产业，“中国制造”新名片是什么？
+                                                        </a>
+                                                        <span>2026-03-09</span>
+                                                    </li>
+                                                
+                                                    <li>
+                                                        <a href='./xwzx_9/gzdt/202602/t20260224_2731461.html' title='敢为人先起跑 聚势而跃争先，武汉工业战线奋力冲刺一季度“开门红”' target="_blank">
+                                                            敢为人先起跑 聚势而跃争先，武汉工业战线奋力冲刺一季度“开门红”
+                                                        </a>
+                                                        <span>2026-02-24</span>
+                                                    </li>
+                                                
+                                                    <li>
+                                                        <a href='./xwzx_9/gzdt/202602/t20260214_2730227.html' title='致全市中小企业的一封信' target="_blank">
+                                                            致全市中小企业的一封信
+                                                        </a>
+                                                        <span>2026-02-13</span>
+                                                    </li>
+                                                
+                                                    <li>
+                                                        <a href='./xwzx_9/gzdt/202602/t20260211_2728263.html' title='国家级荣誉！我市2个园区入选国家级绿色工业园区' target="_blank">
+                                                            国家级荣誉！我市2个园区入选国家级绿色工业园区
+                                                        </a>
+                                                        <span>2026-02-11</span>
+                                                    </li>
+                                                
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--信息公开-->
+                        <div class="col-md-4 col-xs-12 col-sm-7">
+                            <div class="row">
+                                <div class="art_list public_news">
+                                    <ul class="nav_tab">
+                                        <li class="active">
+                                            <a target="_blank" href='./xxgk_9/'>信息公开</a>
+                                        </li>
+                                    </ul>
+                                    <a class="file_search" href='./xxgk_9/wjcx/'>查询</a>
+                                    <div class="clear"></div>
+                                    <div class="tab_content">
+                                        <ul>
+                                            <li>
+                                                <a target="_blank" href='./xxgk_9/fdzdgknr/jxjjs/' id="jwjs">政府工作机构</a>
+                                            </li>
+                                            <li>
+                                                <a target="_blank" href='./xxgk_9/fdzdgknr/czzj/bmyjs/' id="bmyjs">部门预决算</a>
+                                            </li>
+                                            <li>
+                                                <a target="_blank" href='./xxgk_9/wjcx/zcjd/' id="zcjd">政策解读</a>
+                                            </li>
+                                            <li>
+                                                <a target="_blank" href='http://zwfw.hubei.gov.cn/s/web/bszn/bmsy.html?department=11420100010893551T' id="qzqd">权责清单</a>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                <a target="_blank" href='./xxgk_9/xxgknb/' id="gknb">信息公开年报</a>
+                                            </li>
+                                            <li>
+                                                <a target="_blank" href='./xxgk_9/fdzdgknr/ygzdgk/xxgkml/' id="gkml">信息公开目录</a>
+                                            </li>
+                                            <li>
+                                                <a target="_blank" href='./xxgk_9/xxgkzn/' id="gkzn">信息公开指南</a>
+                                            </li>
+                                            <li>
+                                                <a target="_blank" href='./xxgk_9/ysqgk/' id="ysqgk">依申请公开</a>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                <a target="_blank" href='./xxgk_9/wjcx/gfxwjsjk/' id="gfxwj">规范性文件</a>
+                                            </li>
+                                            <li>
+                                                <a target="_blank" href='./xxgk_9/fdzdgknr/rsxx/' id="rsxx">招考录用</a>
+                                            </li>
+                                            <li>
+                                                <a target="_blank" href='./xxgk_9/fdzdgknr/cgxx/' id="cgxx">政府采购</a>
+                                            </li>
+                                            <li>
+                                                <a target="_blank" href='./xxgk_9/wzgznb/'>网站工作年报</a>
+                                            </li>
+                                        </ul>
+                                        <div class="clear"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--3个广告位-->
+                        <div class="col-md-3 col-xs-12 col-sm-5">
+                            <ul class="art_class_tab nav_tab" style="height:46px">
+                                <li class="active" style="height:46px;line-height:46px">
+                                    <a target="_blank" href="https://jxj.wuhan.gov.cn/ztzl/Topics.html">宣传专栏</a>
+                                </li>
+                            </ul>
+                            <div class="row">
+                                <!--<div class="rt_ad_topics">
+                                    <a target="_blank" href="https://jxj.wuhan.gov.cn/ztzl/Topics.html">
+                                        <span></span>
+                                        <label>宣传专栏</label>
+                                    </a>
+                                    <div class="clear"></div>
+                                </div>-->
+                                <div class="rt_ad_list padl_sm_12" style="height: 240px; padding-top: 5px;">
+                                    <a href="https://yzzt.wuhan.gov.cn/QYFWPT/app/pc.app/ejsy/index_ej_qhwy.tpg?id=%E6%83%A0%E4%BC%81%E6%94%BF%E7%AD%96" id="rtLink5" style="height: 110px;">
+                                        <span></span>
+                                        <label>惠企政策</label>
+                                    </a>
+                                    <a href="https://jxj.wuhan.gov.cn/ztzl/fzxxzl/fzdt/index.html" id="rtLink4" style="height: 110px;">
+                                        <span></span>
+                                        <label>网络反诈中心</label>
+                                    </a>
+                                    <!-- <a href='./zxzj/zxzj_hybz/' target="_blank" id="rtLink4" style="height: 76px;">
+         <span></span>
+         <label style="font-size:0.8em; line-height:1.5em; margin-top:3px;">数字化转型行业标准</label>
+     </a>
+     <a href='./zxzj/zxzj_zsk/' target="_blank" id="rtLink1" style="height: 76px;">
+         <span></span>
+         <label style="font-size: 0.8em; line-height: 1.5em; margin-top: 3px;">数字化转型知识库</label>
+     </a>-->
+                                    <!--<a href="http://zwfw.hubei.gov.cn/webview/bszn/bmsy.html?department=11420100010893551T" id="rtLink3" style="height: 110px;">
+        <span></span>
+        <label>行政事项</label>
+    </a>-->
+                                    <a href="https://www.whsme.net.cn/HQT/HQT/app/HQT.app/FWCS/fwcs.tpg" id="rtLink2" style="height:110px;width:99%;display:inline-flex;align-items:center;justify-content:center;text-align:center;">
+                                        <span style="display:inline-block;width:43px;margin-left:16px;margin-bottom:10px"></span>
+                                        <label style="vertical-align:middle;display:inline-block;width:180px;font-size:17px">中小企业服务机构查询</label>
+                                    </a>
+                                    <div class="clear"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                    <!-- 修改图片轮播部分 -->
+                    <div class="image-carousel-container">
+                        <button class="carousel-control-prev" aria-label="Previous"></button>
+                        <div class="image-container">
+                            <a href="http://12345.wuhan.gov.cn:9022/" target="_blank">
+                                <img src="./material/Themes/Images/images/whsmrx.png" alt="武汉市民热线" />
+                            </a>
+                            <a href="https://www.whsme.net.cn/HQT/" target="_blank">
+                                <img src="./material/Themes/Images/images/hqt.png" alt="汉企通" />
+                            </a>
+                            <a href="https://www.whsme.net.cn/HQT/HQT/app/HQT.app/GXDJ/AICJMH/gxdj.tpg?xqgj=%E7%9C%8B%E4%BE%9B%E7%BB%99" target="_blank">
+                                <img src="./material/Themes/Images/images/aicjdj.png" alt="AI场景对接" />
+                            </a>
+                            <a href='./xxgk_9/fdzdgknr/ygzdgk/jytabl_01/' target="_blank">
+                                <img src="./material/Themes/Images/images/jytabl.png" alt="建议提案办理" />
+                            </a>
+                            <a href='./zxzj/zxzj_hybz/' target="_blank">
+                                <img src="./material/Themes/Images/images/szhzxhybz.png" alt="数字化转型行业标准" />
+                            </a>
+                            <a href='./zxzj/zxzj_zsk/' target="_blank">
+                                <img src="./material/Themes/Images/images/szhzxzsk.png" alt="数字化转型知识库" />
+                            </a>
+                            <a href="https://jxj.wuhan.gov.cn/ztzl/Sbox.html" target="_blank">
+                                <img src="./material/Themes/Images/images/jbx.png" alt="举报箱" />
+                            </a>
+                        </div>
+                        <button class="carousel-control-next" aria-label="Next"></button>
+                    </div>
+                        <!--<div class="image-container">
+                            <a href="http://12345.wuhan.gov.cn:9022/" target="_blank">
+                                <img src="./material/Themes/Images/images/whsmrx.png" alt="武汉市民热线" />
+                            </a>
+                            <a href="https://www.whsme.net.cn/HQT/" target="_blank">
+                                <img src="./material/Themes/Images/images/hqt.png" alt="汉企通" />
+                            </a>
+                            <a href="https://www.whsme.net.cn/HQT/HQT/app/HQT.app/GXDJ/AICJMH/gxdj.tpg?xqgj=%E7%9C%8B%E4%BE%9B%E7%BB%99" target="_blank">
+                                <img src="./material/Themes/Images/images/aicjdj.png" alt="AI场景对接" />
+                            </a>
+                            <a href='./xxgk_9/fdzdgknr/ygzdgk/jytabl_01/' target="_blank">
+                                <img src="./material/Themes/Images/images/jytabl.png" alt="建议提案办理" />
+                            </a>
+                            <a href='./zxzj/zxzj_hybz/' target="_blank">
+                                <img src="./material/Themes/Images/images/szhzxhybz.png" alt="数字化转型行业标准" />
+                            </a>
+                            <a href='./zxzj/zxzj_zsk/' target="_blank">
+                                <img src="./material/Themes/Images/images/szhzxzsk.png" alt="数字化转型知识库" />
+                            </a>
+                            <a href="https://jxj.wuhan.gov.cn/ztzl/Sbox.html" target="_blank">
+                                <img src="./material/Themes/Images/images/jbx.png" alt="举报箱" />
+                            </a>
+                        </div>-->
+                    <!--意见箱、举报箱、信访平台-->
+                    <!--<div class="mail_list">
+                        <span class="move_left" style="background-size: contain; background-position-x: 7px;"></span>
+                        <span class="move_right"></span>-->
+                        
+                        <!--<div>
+        <div class="mail_items" id="mailList1">
+            <a target="_blank" href="http://12345.wuhan.gov.cn:9022/" class="mail20210928" title="武汉市民热线">武汉市民热线</a>-->
+                        <!--<a target="_blank" href="http://jxt.hubei.gov.cn/fbjd/zc/qtzdgkwj/gwfb/202107/t20210701_3624789.shtml" class="mail20210617" title="湖北省涉企保证金目录清单"></a>
+
+    <a target="_blank" href='https://jxj.wuhan.gov.cn/xxgk_9/fdzdgknr/jxjjs/zssydw/202206/t20220629_1996485.html' class="mail20220907" title="公共企事业单位信息"></a>
+    <a target="_blank" href='' class="mail20220104" title="惠企政策"></a>-->
+                        <!--<a target="_blank" href='./jgdj/' class="mail20220307" title="机关党建">机关党建</a>
+    <a target="_blank" href='https://fwcs.whsme.net.cn/' class="mail20240109" title="汉企通">汉企通</a>
+    <a target="_blank" href='./wshd/yjx_6xzl/' class="mail20210208" title="庸懒散慢乱浮“六项治理”投诉举报箱">“六项治理”投诉举报箱</a>
+    <a target="_blank" href='./wshd/yjx_lzjb/' class="mail2" title="廉政举报箱">廉政举报箱</a>
+    <a target="_blank" href='./wshd/yjx_lplj/' class="mail20240112" title="违规收送礼品礼金问题监督举报">违规收送问题监督举报</a>
+
+    <a target="_blank" href='./wshd/yjx_aqyh/' class="mail20220908" title="安全生产举报投诉电话">安全生产举报投诉电话</a>
+    <a target="_blank" href='./wshd/yjx_qywq/' class="mail20200703" title="企业维权减负举报箱">企业维权减负举报箱</a>-->
+                        <!--<a target="_blank" href='./xxgk_9/fdzdgknr/ygzdgk/zfxxgs/' class="mail20200716" title="执法信息公示">执法信息公示</a>-->
+                        <!--<a target="_blank" href='./xxgk_9/fdzdgknr/ygzdgk/jytabl_01/' class="mail20190828" title="建议提案办理">建议提案办理</a>
+        </div>
+    </div>-->
+                    <!--</div>-->
+                    <div class="clear"></div>
+                    <div class="index_row_3">
+                        <div class="col-xs-12">
+                            <div class="row">
+                                <div class="platform">
+                                    <a target="_blank" href='./zxzj/'>专项资金项目管理与服务平台</a>
+                                </div>
+                                <!--专项资金项目管理与服务平台-->
+                                <div class="col-xs-12">
+                                    <div class="col-sm-4">
+                                        <div class="art_list fund" style="padding-right:12px">
+                                            <ul class="art_class_tab nav_tab">
+                                                <li class="active">
+                                                    <a href="./zxzj/zxzj_tzzn/" target="_BLANK" data-id='#tzzn'>通知指南</a>
+                                                </li>
+                                                <!--<li>
+                    
+                </li>-->
+                                                <!--<li>
+                    <a href="./zxzj/zxzj_xmgs/" target="_BLANK" data-id='#xmgs'>公示公告</a>
+                </li>-->
+                                                <!--<li>
+                    
+                </li>-->
+                                            </ul>
+                                            <div class="clear"></div>
+                                            <div class="tab_content" id="zxzjContent">
+                                                <div class="tab_pane" id="tzzn">
+                                                    <ul>
+                                                        
+                                                            <li>
+                                                                <a href='./zxzj/zxzj_tzzn/202603/t20260313_2739846.html' title='市经信局 市教育局关于开展“人工智能+教育”创新应用征集的通知' target="_blank">
+                                                                    市经信局 市教育局关于开展“人工智能+教育”创新应用征集的通知
+                                                                </a>
+                                                                <span>2026-03-02</span>
+                                                            </li>
+                                                        
+                                                            <li>
+                                                                <a href='./zxzj/zxzj_tzzn/202601/t20260121_2715155.html' title='市经信局关于开展第二批省级制造业中试平台申报工作的通知' target="_blank">
+                                                                    市经信局关于开展第二批省级制造业中试平台申报工作的通知
+                                                                </a>
+                                                                <span>2026-01-12</span>
+                                                            </li>
+                                                        
+                                                            <li>
+                                                                <a href='./zxzj/zxzj_tzzn/202512/t20251209_2692202.html' title='市经信局关于征集武汉市工业节能新技术新产品新装备的通知' target="_blank">
+                                                                    市经信局关于征集武汉市工业节能新技术新产品新装备的通知
+                                                                </a>
+                                                                <span>2025-12-09</span>
+                                                            </li>
+                                                        
+                                                            <li>
+                                                                <a href='./zxzj/zxzj_tzzn/202512/t20251203_2687118.html' title='市经信局关于开展2025年工业和信息化部质量提升与品牌建设典型案例征集工作的通知' target="_blank">
+                                                                    市经信局关于开展2025年工业和信息化部质量提升与品牌建设典型案例征集工作的通知
+                                                                </a>
+                                                                <span>2025-12-01</span>
+                                                            </li>
+                                                        
+                                                    </ul>
+                                                </div>
+                                                <!--<div class="tab_pane hide" id="glbf">
+                    <ul>
+                        
+                    </ul>
+                </div>-->
+                                                <!--<div class="tab_pane hide" id="xmgs">
+                    <ul>
+                        
+                            <li>
+                                <a href='./zxzj/zxzj_xmgs/202603/t20260323_2743903.html' title='关于2026年首次进入规模以上工业企业奖励资金预安排情况的公示' target="_blank">
+                                    关于2026年首次进入规模以上工业企业奖励资金预安排情况的公示
+                                </a>
+                                <span>2026-03-23</span>
+                            </li>
+                        
+                            <li>
+                                <a href='./zxzj/zxzj_xmgs/202603/t20260311_2737942.html' title='关于第八批创新型中小企业培育和第二批创新型中小企业复核拟推荐名单的公示' target="_blank">
+                                    关于第八批创新型中小企业培育和第二批创新型中小企业复核拟推荐名单的公示
+                                </a>
+                                <span>2026-03-10</span>
+                            </li>
+                        
+                            <li>
+                                <a href='./zxzj/zxzj_xmgs/202603/t20260302_2734320.html' title='关于2025年度卓越级和领航级智能工厂 拟奖励清单的公示' target="_blank">
+                                    关于2025年度卓越级和领航级智能工厂 拟奖励清单的公示
+                                </a>
+                                <span>2026-03-02</span>
+                            </li>
+                        
+                            <li>
+                                <a href='./zxzj/zxzj_xmgs/202602/t20260227_2732969.html' title='武汉市经信局关于武汉市人工智能应用服务商、领军企业、根企业（第一批）认定结果的公示' target="_blank">
+                                    武汉市经信局关于武汉市人工智能应用服务商、领军企业、根企业（第一批）认定结果的公示
+                                </a>
+                                <span>2026-02-26</span>
+                            </li>
+                        
+                    </ul>
+                </div>-->
+                                                <!--<div class="tab_pane hide" id="xmgg">
+                    <ul>
+                        
+                    </ul>
+                </div>-->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="art_list fund" style="padding-right:5px">
+                                            <ul class="art_class_tab nav_tab">
+                                                <li class="active">
+                                                    <a href="./zxzj/zxzj_xmgs/" target="_BLANK" data-id='#xmgs'>公示公告</a>
+                                                </li>
+
+                                            </ul>
+                                            <div class="clear"></div>
+                                            <div class="tab_content" id="zxzjContent">
+                                                <!--<div class="tab_pane" id="tzzn">
+                    <ul>
+                        
+                            <li>
+                                <a href='./zxzj/zxzj_tzzn/202603/t20260313_2739846.html' title='市经信局 市教育局关于开展“人工智能+教育”创新应用征集的通知' target="_blank">
+                                    市经信局 市教育局关于开展“人工智能+教育”创新应用征集的通知
+                                </a>
+                                <span>2026-03-02</span>
+                            </li>
+                        
+                            <li>
+                                <a href='./zxzj/zxzj_tzzn/202601/t20260121_2715155.html' title='市经信局关于开展第二批省级制造业中试平台申报工作的通知' target="_blank">
+                                    市经信局关于开展第二批省级制造业中试平台申报工作的通知
+                                </a>
+                                <span>2026-01-12</span>
+                            </li>
+                        
+                            <li>
+                                <a href='./zxzj/zxzj_tzzn/202512/t20251209_2692202.html' title='市经信局关于征集武汉市工业节能新技术新产品新装备的通知' target="_blank">
+                                    市经信局关于征集武汉市工业节能新技术新产品新装备的通知
+                                </a>
+                                <span>2025-12-09</span>
+                            </li>
+                        
+                            <li>
+                                <a href='./zxzj/zxzj_tzzn/202512/t20251203_2687118.html' title='市经信局关于开展2025年工业和信息化部质量提升与品牌建设典型案例征集工作的通知' target="_blank">
+                                    市经信局关于开展2025年工业和信息化部质量提升与品牌建设典型案例征集工作的通知
+                                </a>
+                                <span>2025-12-01</span>
+                            </li>
+                        
+                    </ul>
+                </div>-->
+                                                <!--<div class="tab_pane hide" id="glbf">
+                    <ul>
+                        
+                    </ul>
+                </div>-->
+                                                <div class="tab_pane" id="xmgs">
+                                                    <ul>
+                                                        
+                                                            <li>
+                                                                <a href='./zxzj/zxzj_xmgs/202603/t20260323_2743903.html' title='关于2026年首次进入规模以上工业企业奖励资金预安排情况的公示' target="_blank">
+                                                                    关于2026年首次进入规模以上工业企业奖励资金预安排情况的公示
+                                                                </a>
+                                                                <span>2026-03-23</span>
+                                                            </li>
+                                                        
+                                                            <li>
+                                                                <a href='./zxzj/zxzj_xmgs/202603/t20260311_2737942.html' title='关于第八批创新型中小企业培育和第二批创新型中小企业复核拟推荐名单的公示' target="_blank">
+                                                                    关于第八批创新型中小企业培育和第二批创新型中小企业复核拟推荐名单的公示
+                                                                </a>
+                                                                <span>2026-03-10</span>
+                                                            </li>
+                                                        
+                                                            <li>
+                                                                <a href='./zxzj/zxzj_xmgs/202603/t20260302_2734320.html' title='关于2025年度卓越级和领航级智能工厂 拟奖励清单的公示' target="_blank">
+                                                                    关于2025年度卓越级和领航级智能工厂 拟奖励清单的公示
+                                                                </a>
+                                                                <span>2026-03-02</span>
+                                                            </li>
+                                                        
+                                                            <li>
+                                                                <a href='./zxzj/zxzj_xmgs/202602/t20260227_2732969.html' title='武汉市经信局关于武汉市人工智能应用服务商、领军企业、根企业（第一批）认定结果的公示' target="_blank">
+                                                                    武汉市经信局关于武汉市人工智能应用服务商、领军企业、根企业（第一批）认定结果的公示
+                                                                </a>
+                                                                <span>2026-02-26</span>
+                                                            </li>
+                                                        
+                                                    </ul>
+                                                </div>
+                                                <!--<div class="tab_pane hide" id="xmgg">
+                    <ul>
+                        
+                    </ul>
+                </div>-->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--企业项目网上申报评审平台入口-->
+                                    <div class="col-sm-4">
+                                        <div class="row project-service-container">
+                                            <div class="art_list project fund padl_sm_12">
+                                                <ul class="art_class_tab nav_tab">
+                                                    <li class="active">
+                                                        <a href="javascript:void(0);"><img src="./material/Themes/Images/my_icon_title.png" />项目服务</a>
+                                                    </li>
+                                                </ul>
+                                                <div class="clear"></div>
+                                                <div class="tab_content my_modularCon">
+                                                    <ul class="my_modular">
+                                                        <li><a target="_blank" href='./wshd/wszx/'><img src="./material/Themes/Images/my_icon_01.png" /><p>我要问</p></a></li>
+                                                        <li><a target="_blank" href='./wshd/wszx/'><img src="./material/Themes/Images/my_icon_02.png" /><p>我要查</p></a></li>
+                                                        <li><a href="https://zxzj.weip.org.cn/Service/ServiceList.aspx"><img src="./material/Themes/Images/my_icon_03.png" /><p>我要办</p></a></li>
+                                                        <li class="user_login"><a href="javascript:void(0);" class="login_a"><img src="./material/Themes/Images/my_icon_04.png" /><p>用户登录</p></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <!--重要数据图-->
+                        <!--<div class="col-xs-6 col-sm-5 col-md-3">
+        <div class="row">
+            <div class="art_list chart padl_md_12 padr12_md_0">
+                <a href='./xxgk_9/fdzdgknr/zysjt/' class="more" target="_blank">更多>></a>
+                <ul class="art_class_tab nav_tab">
+                    <li class="active">
+                        <a href='./xxgk_9/fdzdgknr/zysjt/' target="_blank">重要数据图</a>
+                    </li>
+                </ul>
+                <div class="clear"></div>
+                <div class="tab_content" style="overflow:hidden">
+                    <div class="photos chart_list">
+                        <ul class="imgs">
+                            <li>
+                                <img src="./material/Themes/Images/images/zysjt1.png" />
+                                <span>2024年全市1-9月规模以上工业企业生产情况</span>
+                            </li>-->
+                        <!--<li>
+        <img src="./material/Themes/Images/images/zysjt2.png" />
+        <span>2023年全市1-11月全社会用电量增长情况</span>
+    </li>
+    <li>
+        <img src="./material/Themes/Images/images/zysjt3.png" />
+        <span>2023年全市1-11月工业用电量增长情况</span>
+    </li>-->
+                        <!--</ul>
+                        <ul class="pointer"></ul>
+                    </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>-->
+                        <div class="clear"></div>
+                    </div>
+                    <!--友情链接-->
+                    <div class=" col-xs-6 col-sm-7 col-md-12">
+    <div class="row" style="position:relative">
+        <div class="frend_link">
+            <div>
+                <span><a target="_blank" href='./wshd/jzxx/'>局长信箱</a></span>
+            </div>
+            <div>
+                <span><a target="_blank" href='./wshd/wszx/'>网上咨询</a></span>
+
+            </div>
+            <div>
+                <span><a target="_blank" href='./wshd/wsdc/'>意见征集</a></span>
+            </div>
+            <!--<div>
+        <span><a target="_blank" href="http://zwfw.hubei.gov.cn/s/web/bszn/bmsy.html?department=11420100010893551T">政务服务</a></span>
+    </div>-->
+            <div>
+                <span><a target="_blank" href='./wshd/zxft/' id="zxft">在线访谈</a></span>
+            </div>
+            <div>
+                <span><a target="_blank" href="http://liuyan.cjn.cn/fivelistxq?fup=4&fid=89">回应关切</a></span>
+            </div>
+            <div>
+                <span><a target="_blank" href="https://www.wuhan.gov.cn/ai/index.shtml">智能问答</a></span><!--https://jxj.wuhan.gov.cn/wshd/Chat.html-->
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</div>
+<script>
+    $(function () {
+        $(".znkf").click(function () {
+            preventDefault(event);
+            var style = 'height=915, width=1200, top=300, left=' + ($(window).width() - 1200) + ', toolbar=no, menubar=no, scrollbars=no, resizable=no,location=no, status=no';
+            window.open('http://zxzj.weip.org.cn/jk/RobotReplySys/RobotWeb.aspx', 'newwindow', style);
+        });
+
+    });
+</script>
+                </div>
+
+                <div class="clear"></div>
+
+                <script>
+                    async function setForm() {
+
+                        await getUserInfo();
+
+                        var userinfo = localStorage.getItem("user");
+
+                        if (userinfo) {
+                            $(".user_login").remove();
+                        }
+                    }
+
+                    $(function () {
+                        setForm();
+
+                        $(".user_login").click(function () {
+                            window.location.href = `https://zxzj.weip.org.cn/CheckAuth.aspx?gotoUrl=${window.location.href}`;
+                        })
+                    })
+
+                </script>
+
+                <script>
+                    $(function () {
+                        GetNews();//绑定国务院新闻
+
+                        //显示武汉市轮播信息
+
+                        //文章列表Tab选项卡
+                        $(".nav_tab li a").not(".project li a").hover(function () {
+                            $(this).parent("li").addClass("active").siblings().removeClass("active")
+                            //.parent(".nav_tab").prev(".more").attr("href", $(this).parent("li").attr("url-more"));
+                            $(".tab_content " + $(this).attr("data-id")).removeClass("hide").siblings().addClass("hide");
+                            event.preventDefault();
+                        })
 
 
-<style>
-@media (max-width: 767px){
-ul.wzbd_list li a{
-max-width: 69%;
-}
-.tabbox-hds1 a {
-        padding: 0 5px;
+                        //重要数据图轮播
+                        //$(".chart_list img").width($(".chart").width())
+                        //var pc2 = new photoCarousel();
+                        //pc2.func.lagout($('.chart_list'), 3000, 0);
+                        //$(window).resize(function () {
+                        //    $(".chart_list img").width($(".chart").width())
+                        //    //clearInterval(pc2.func.moveTimer);
+                        //    pc2.func.lagout($('.chart_list'), 3000, 0);
+                        //})
+
+                        //举报箱手动轮播
+
+                        var len = $(".mail_items a").size();
+                        var w = $(".mail_items a").width() + 4;
+                        var totalWidth = w * len;
+                        $(".mail_items").css("width", totalWidth)
+                        $(".move_right").click(function () {
+                            $(".mail_items").animate({ left: -w * 6 }, 500, function () {
+                                $(this).css("left", 0)
+                                for (var i = 0; i <= 6 - 1; i++) {
+                                    $(".mail_items a").first().appendTo(".mail_items")
+                                }
+                            })
+                        })
+                        $(".move_left").click(function () {
+                            $(".mail_items").css("left", -w * 6)
+                            for (var i = 0; i <= 6 - 1; i++) {
+                                $(".mail_items a").last().insertBefore(".mail_items a:eq(0)")
+                            }
+                            $(".mail_items").animate({ left: 0 }, 500)
+                        })
+
+                        // 检测是否为移动设备
+                        function isMobileDevice() {
+                            return window.innerWidth <= 768;
+                        }
+
+                        // 如果是移动设备，不初始化轮播
+                        if (!isMobileDevice()) {
+                            initCarousel();
+                        }
+
+                        // 窗口大小改变时重新检测
+                        $(window).on('resize', function () {
+                            if (!isMobileDevice() && !window.carouselInitialized) {
+                                initCarousel();
+                            }
+                        });
+
+                        function initCarousel() {
+                            window.carouselInitialized = true;
+
+                            // 图片轮播功能
+                            var $carousel = $('.image-container');
+                            var $items = $carousel.find('a');
+                            var totalItems = $items.length;
+                            var visibleItems = 6; // 每次显示6个
+                            var currentIndex = 0;
+
+                            // 计算每个项目的宽度（占容器的1/6）
+                            var itemWidthPercent = 100 / visibleItems; // 16.6666%
+
+                            // 设置每个项目的宽度
+                            $items.css('flex', '0 0 calc(' + itemWidthPercent + '% - 8.33px)');
+
+                            // 左箭头点击事件
+                            $('.carousel-control-prev').on('click', function () {
+                                if (currentIndex > 0) {
+                                    currentIndex--;
+                                    updateCarousel();
+                                }
+                            });
+
+                            // 右箭头点击事件
+                            $('.carousel-control-next').on('click', function () {
+                                // 确保不会滑动超过总项目数减去可见项目数
+                                if (currentIndex < totalItems - visibleItems) {
+                                    currentIndex++;
+                                    updateCarousel();
+                                }
+                            });
+
+                            // 更新轮播位置
+                            function updateCarousel() {
+                                // 计算移动的距离：当前索引 * 一个项目的宽度
+                                // 一个项目的宽度是16.6666%，但我们需要考虑间距
+                                // 每次移动一个完整的项目宽度（包括间距）
+                                var translateX = -(currentIndex * (itemWidthPercent + 1.66)); // 1.66是近似间距百分比
+                                $carousel.css('transform', 'translateX(' + translateX + '%)');
+
+                                // 更新按钮状态
+                                updateControls();
+                            }
+
+                            // 更新控制按钮状态
+                            function updateControls() {
+                                var $prevBtn = $('.carousel-control-prev');
+                                var $nextBtn = $('.carousel-control-next');
+
+                                if (currentIndex > 0) {
+                                    $prevBtn.css('opacity', '0.9');
+                                    $prevBtn.prop('disabled', false);
+                                } else {
+                                    $prevBtn.css('opacity', '0.5');
+                                    $prevBtn.prop('disabled', true);
+                                }
+
+                                if (currentIndex < totalItems - visibleItems) {
+                                    $nextBtn.css('opacity', '0.9');
+                                    $nextBtn.prop('disabled', false);
+                                } else {
+                                    $nextBtn.css('opacity', '0.5');
+                                    $nextBtn.prop('disabled', true);
+                                }
+                            }
+
+                            // 初始更新
+                            updateControls();
+
+                            // 响应窗口大小变化
+                            $(window).on('resize', function () {
+                                if (!isMobileDevice()) {
+                                    // 重新计算项目宽度
+                                    $items.css('flex', '0 0 calc(' + itemWidthPercent + '% - 8.33px)');
+                                }
+                            });
+                        }
+
+                    })
+                </script>
+                <script>
+                    //AJAX取到数据后绑定文章列表的方法
+                    function BindArticleList(entList, bindCount, urlProp, txtProp, dateProp) {
+                        var ele = "";
+                        for (var i = 0; i < bindCount; i++) {
+                            var ent = entList[i];
+                            ele += "<li><a target='_blank' title='" + ent[txtProp] + "' href='" + ent[urlProp] + "'>" + ent[txtProp] + "</a><span>"
+                                + ent[dateProp] + "</span></li>"
+                        }
+                        return ele;
+                    }
+                    //获取时政要闻，国务院、湖北省、武汉市新闻
+                    function GetNews() {
+                        var _self = {};
+                        $.ajax({
+                            url: 'https://www.hubei.gov.cn/szyw/pushinfonodes.jsonp',
+                            dataType: "jsonp",
+                            jsonp: "pushInfoJsonpCallBack",
+                            jsonpCallback: "pushInfoJsonpCallBack",
+                            success: function (data) {
+                                _self.arts = data;
+                                Push0(_self);
+                            },
+                            error: function () {
+                                Push0(_self);
+                            }
+                        });
+                    }
+                    function Push0(obj) {
+                        var _self = obj;
+                        $.ajax({
+                            url: 'https://www.gov.cn/pushinfo/v150203/pushinfo.jsonp',
+                            dataType: "jsonp",
+                            jsonp: "pushInfoJsonpCallBack",
+                            jsonpCallback: "pushInfoJsonpCallBack",
+                            success: function (data) {
+                                _self.arts0 = data;
+                                Push1(_self);
+                            },
+                            error: function () {
+                                Push1(_self);
+                            }
+                        });
+                    }
+                    function Push1(obj) {
+                        var _self = obj;
+                        $.ajax({
+                            url: 'https://www.hubei.gov.cn/zwgk/hbyw/hbywqb/pushinfo.jsonp',
+                            dataType: "jsonp",
+                            jsonp: "pushInfoJsonpCallBack",
+                            jsonpCallback: "pushInfoJsonpCallBack",
+                            success: function (data) {
+                                _self.arts1 = data;
+                                Push2(_self);
+                            },
+                            error: function () {
+                                Push2(_self);
+                            }
+                        });
+                    }
+                    function Push2(obj) {
+                        var _self = obj;
+                        $.ajax({
+                            url: 'https://www.wuhan.gov.cn/whszfwz/xwxx/xwts/tsjsonp/pushinfo.jsonp',
+                            dataType: "jsonp",
+                            jsonp: "pushInfoJsonpCallBack",
+                            jsonpCallback: "pushInfoJsonpCallBack",
+                            success: function (data) {
+                                _self.arts2 = data;
+                                $("#gwyNews ul").append(BindArticleList(_self.arts, 10, "link", "title", "pubDate"));
+                                $("#gjNews ul").append(BindArticleList(_self.arts0, 10, "link", "title", "pubDate"));
+                                $("#hbNews ul").append(BindArticleList(_self.arts1, 10, "link", "title", "pubDate"));
+                                $("#whNews ul").append(BindArticleList(_self.arts2, 10, "link", "title", "pubDate"));
+                            },
+                            error: function () {
+
+                            }
+                        });
+                    }
+                </script>
+                <div class="clear"></div>
+            </div>
+            <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type="text/css">
+        .mobile-table {
+            display: none;
+            color: #e5e5e5;
+            width: 78%;
+        }
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+                document.querySelector('#pc-foottable').style.display = "none";
+                document.querySelector('.mobile-table').style.display = "block";
+            }
+        }
+    </script>
+</head>
+<script src="./material/Scripts/util.js"></script>
+<div class="foot_content footer-wrap">
+    <div class="safe_width">
+        <div class="footer-box w">
+            <div class="webs-box clear1">
+                <div class="web-item-box fl">
+                    <!--<div class="web-item fl active" tab="1">
+        <div class="content">
+            国家部委
+        </div>
+    </div>
+    <div class="web-item fl" tab="2">
+        <div class="content">
+            市政府部门
+        </div>
+    </div>
+    <div class="web-item fl" tab="3">
+        <div class="content">
+            各地经信部门
+        </div>
+    </div>-->
+                    <div class="web-item2 fl" tab="1">
+                        <a target="_blank" href="https://www.miit.gov.cn/">
+                            <div class="content">
+                                工业和信息化部
+                            </div>
+                        </a>
+                    </div>
+                    <div class="web-item2 fl" tab="2">
+                        <a target="_blank" href="https://jxt.hubei.gov.cn/">
+                            <div class="content" style="white-space: nowrap;overflow: hidden;text-overflow:ellipsis">
+                                湖北省经济和信息化厅
+                            </div>
+                        </a>
+                    </div>
+                    <div class="web-item2 fl" tab="3">
+                        <a target="_blank" href="https://www.wuhan.gov.cn/">
+                            <div class="content">
+                                武汉市人民政府
+                            </div>
+                        </a>
+                    </div>
+                    <!--<div class="about-webs-wrap">
+        <div class="about-webs-inner">
+            <div class="web-item-tit-box">
+                <div class="close-ico"></div>
+                <ul class="clear1">
+                    <li class="active" tab="1">
+                        国家部委
+                    </li>
+                    <li tab="2" class="">
+                        市政府部门
+                    </li>
+                    <li tab="3" class="">
+                        各地经信部门
+                    </li>
+
+                </ul>
+            </div>
+            <ul class="about-webs clear1 open" tab="1">
+                <li>
+                    <a target="_blank" href="https://www.ndrc.gov.cn">发展改革委</a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://www.moe.gov.cn">教育部</a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://www.miit.gov.cn/">工业和信息化部</a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://www.moj.gov.cn/">司法部</a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://www.mof.gov.cn">财政部</a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://www.mohrss.gov.cn/">人力资源和社会保障部</a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://www.mnr.gov.cn/">自然资源部</a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://www.mee.gov.cn/">生态环境部</a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://www.mohurd.gov.cn/">住房和城乡建设部</a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://www.mofcom.gov.cn/">商务部</a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://www.mem.gov.cn/">应急管理部</a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://www.audit.gov.cn/">审计署</a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://www.samr.gov.cn/">国家市场监督管理总局</a>
+                </li>
+                <li>
+                    <a target="_blank" href="http://www.sasac.gov.cn/">国资委</a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://www.stats.gov.cn/">统计局</a>
+                </li>
+            </ul>
+            <ul class="about-webs clear1" tab="2">
+                <li>
+                    <a href="https://fgw.wuhan.gov.cn" target="_blank" title="市发改委">市发改委</a>
+                </li>
+                <li>
+                    <a href="https://jyj.wuhan.gov.cn" target="_blank" title="市教育局">市教育局</a>
+                </li>
+                <li>
+                    <a href="https://kjj.wuhan.gov.cn" target="_blank" title="市科技局">市科技局</a>
+                </li>
+                <li>
+                    <a href="https://czj.wuhan.gov.cn" target="_blank" title="市财政局">市财政局</a>
+                </li>
+                <li>
+                    <a href="https://rsj.wuhan.gov.cn" target="_blank" title="市人社局">市人社局</a>
+                </li>
+                <li>
+                    <a href="https://zrzyhgh.wuhan.gov.cn/" target="_blank" title="市自然资源和规划局">市自然资源和规划局</a>
+                </li>
+                <li>
+                    <a href="https://cjw.wuhan.gov.cn" target="_blank" title="市城建局">市城建局</a>
+                </li>
+                <li>
+                    <a href="https://sw.wuhan.gov.cn" target="_blank" title="市商务局">市商务局</a>
+                </li>
+                <li>
+                    <a href="https://yjj.wuhan.gov.cn/" target="" title="市应急管理局">市应急管理局</a>
+                </li>
+                <li>
+                    <a href="https://gzw.wuhan.gov.cn" target="_blank" title="市国资委">市国资委</a>
+                </li>
+                <li>
+                    <a href="https://tjj.wuhan.gov.cn/" target="_blank" title="市统计局">市统计局</a>
+                </li>
+                <li>
+                    <a href="https://jrj.wuhan.gov.cn" target="_blank" title="市金融局">市金融局</a>
+                </li>
+                <li>
+                    <a href="http://www.whiiid.com.cn/" target="_blank" title="武汉产业创新发展研究院">武汉产业创新发展研究院</a>
+                </li>
+
+
+            </ul>
+            <ul class="about-webs clear1" tab="3">
+
+                <li>
+                    <a target="_blank" href="https://jxt.hubei.gov.cn/" title="湖北省经济和信息化厅">湖北省</a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://jxj.beijing.gov.cn/" title="北京市经济和信息化局">北京市</a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://www.sheitc.sh.gov.cn/" title="上海市经济和信息化委员会">上海市</a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://gyxxh.tj.gov.cn/" title="天津市工业和信息化局">天津市</a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://jjxxw.cq.gov.cn/" title="重庆市经济和信息化委员会">重庆市</a>
+                </li>
+                <li>
+                    <a target="_blank" href="http://gxj.gz.gov.cn/" title="广州市工业和信息化局">广州市</a>
+                </li>
+                <li>
+                    <a target="_blank" href="http://jxj.hangzhou.gov.cn/" title="杭州市经济和信息化局">杭州市</a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://gxj.nanjing.gov.cn/" title="南京市工业和信息化局">南京市</a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://cdjx.chengdu.gov.cn/ " title="成都市经济和信息化局">成都市</a>
+                </li>
+                <li>
+                    <a target="_blank" href="http://gxj.sz.gov.cn/" title="深圳市工业和信息化局">深圳市</a>
+                </li>
+                <li>
+                    <a target="_blank" href="http://jxj.ningbo.gov.cn/" title="宁波市经济和信息化局">宁波市</a>
+                </li>
+                <li>
+                    <a target="_blank" href="http://csgy.changsha.gov.cn/" title="长沙市工业和信息化局">长沙市</a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://jxj.hefei.gov.cn/" title="合肥市经济和信息化局">合肥市</a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://gxj.zhengzhou.gov.cn/" title="郑州市工业和信息化局">郑州市</a>
+                </li>
+                <li>
+                    <a target="_blank" href="http://gxj.xa.gov.cn/" title="西安市工业和信息化局">西安市</a>
+                </li>
+                <li>
+                    <a target="_blank" href="http://gxj.qingdao.gov.cn/" title="青岛市工业和信息化局">青岛市</a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://jnjxw.jinan.gov.cn/" title="济南市经济和信息化委员会">济南市</a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://gxj.dl.gov.cn/" title="大连市工业和信息化局">大连市</a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://jxw.shenyang.gov.cn/" title="沈阳市工业和信息化局">沈阳市</a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://gxw.nc.gov.cn/" title="南昌市工业和信息化局">南昌市</a>
+                </li>
+                <li>
+                    <a target="_blank" href="http://gxj.changchun.gov.cn/" title="长春市工业和信息化局">长春市</a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://jxw.taiyuan.gov.cn/" title="太原市工业和信息化局">太原市</a>
+                </li>
+                <li>
+                    <a target="_blank" href="http://gxj.baotou.gov.cn/" title="包头市工业和信息化局">包头市</a>
+                </li>
+                <li>
+                    <a target="_blank" href="http://gxj.huhhot.gov.cn/" title="呼和浩特市工业和信息化局">呼和浩特市</a>
+                </li>
+
+            </ul>
+
+        </div>
+    </div>-->
+                    <div class="web-item2 fl">
+                        <a target="_blank" href="https://www.creditchina.gov.cn/">
+                            <div class="content">
+                                信用中国
+                            </div>
+                        </a>
+                    </div>
+                    <div class="web-item2 fl">
+                        <a target="_blank" href="https://credit.hubei.gov.cn/">
+                            <div class="content">
+                                信用湖北
+                            </div>
+                        </a>
+                    </div>
+                    <div class="web-item2 fl">
+                        <a target="_blank" href="https://credit.wuhan.gov.cn/">
+                            <div class="content">
+                                信用武汉
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="safe_width" style="clear:both;">
+        <p style="height:10px"></p>
+
+        <table id="pc-foottable" align="center">
+            <tr>
+                <td>
+                    <p>
+                        <a href="https://zfwzgl.www.gov.cn/exposure/jiucuo.html?site_code=4201000022" target="_blank"><img src=".//material/Themes/Images/jiucuo.png" /></a>
+                        <script id='_jiucuo_' sitecode='4201000022' src='./images/jiucuo.js' type='text/javascript'></script>
+                        <a href="https://bszs.conac.cn/sitename?method=show&amp;id=A753E2FC6405F9FAE05310291AAC7E71" target="_blank"><img src="https://dcs.conac.cn/image/red.png" /></a>
+                        <script id="rrbayJs" src="//wza.rrbay.com/js/wza.min.js?6008ee2cb6508a3718667f25" type="text/javascript"></script>
+                        <span>&nbsp;&nbsp;</span>
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        版权所有：武汉市经济和信息化局 &nbsp;&nbsp;&nbsp;
+                    </p>
+                    <p>
+                        地址：武汉市江汉区青年路560号
+                    </p>
+                    <p>
+                        <a target="_blank" href="https://beian.miit.gov.cn/">
+                            备案号：鄂ICP备20001623号
+                        </a>
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        <a target="_blank" href='./wzdt/'><b>网站地图</b></a>
+                    </p>
+                    <p>
+                        邮编：430023&nbsp;&nbsp;&nbsp;
+                        电话 / 传真：027-85317001
+                    </p>
+                    <p>
+                        政府网站标识码：&nbsp;4201000022&nbsp;&nbsp;&nbsp;
+                        <a class="beian" target="_blank" href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=42010302002180">
+                            鄂公网安备 42010302002180号
+                        </a>
+                    </p>
+                </td>
+            </tr>
+        </table>
+
+        <table class="mobile-table" align="center">
+            <tr>
+                <td>版权所有：武汉市经济和信息化局 &nbsp;&nbsp;&nbsp;</td>
+                <td>
+                    <a target="_blank" href='./wzdt/'><b>网站地图</b></a>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">地址：武汉市江汉区青年路560号</td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    邮编：430023&nbsp;&nbsp;&nbsp;
+                    电话 / 传真：027-85317001
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <a target="_blank" href="https://beian.miit.gov.cn/">
+                        备案号：鄂ICP备20001623号
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">政府网站标识码：&nbsp;4201000022&nbsp;&nbsp;&nbsp;</td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <a class="beian" target="_blank" href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=42010302002180">
+                        鄂公网安备 42010302002180号
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td rowspan="3" colspan="2">
+                    <a href="https://zfwzgl.www.gov.cn/exposure/jiucuo.html?site_code=4201000022" target="_blank"><img src=".//material/Themes/Images/jiucuo.png" /></a>
+                    <script id='_jiucuo_' sitecode='4201000022' src='./images/jiucuo.js' type='text/javascript'></script>
+                    <span id="mobile_Conac">
+                        <a href="https://bszs.conac.cn/sitename?method=show&amp;id=A753E2FC6405F9FAE05310291AAC7E71" target="_blank">
+                            <img id="mobile_imgConac" vspace="0" hspace="0" border="0" src="https://dcs.conac.cn/image/red.png" data-bd-imgshare-binded="1" />
+                        </a>
+                    </span>
+                </td>
+            </tr>
+        </table>
+
+        <p style="height:10px"></p>
+    </div>
+    </div>
+   
+    <div class="fix_foot">
+
+        <div class="foot_tool row">
+            <div class="safe_width">
+                <div class="fl4">
+                    <a>
+                        <i class="fa fa-wechat"></i>
+                        <span>官方微信</span>
+                        <img src=".//material/Themes/Images/Links/code_wechat.jpg" />
+                    </a>
+                    <a href="https://weibo.com/u/2646634987">
+                        <i class="fa fa-weibo"></i>
+                        <span>官方微博</span>
+                        <img src=".//material/Themes/Images/Links/weibo.png" />
+                    </a>
+                    <a id="toolbarCtrl" title="无障碍辅助工具栏" class="wzayd" onclick="openToolbar();">
+                        <i class="fa fa-wheelchair"></i>
+                        <span>无障碍阅读</span>
+                    </a>
+                    <a href="#" class="item goTop">
+                        <i class="glyphicon glyphicon-open"></i>
+                        <span>回到顶部</span>
+                    </a>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <style type="text/css">
+        .foot_tool a {
+            background-color: #337ab7;
+        }
+    </style>
+    <div class="float-nav-box">
+        <!-- 微信 -->
+        <div class="item">
+
+            <span><i class="fa fa-wechat"></i></span>
+            <div class="show-item">
+                <img src=".//material/Themes/Images/Links/code_wechat.jpg" alt="" />
+            </div>
+        </div>
+        <!-- 政务微博 -->
+        <div class="item">
+            <span><i class="fa fa-weibo"></i></span>
+            <div class="show-item">
+                <img src=".//material/Themes/Images/Links/weibo.png" />
+            </div>
+        </div>
+        <!-- 残障通道 -->
+        <div class="item handicapped">
+            <span><i class="fa fa-wheelchair"></i></span>
+            <a id="toolbarCtrl" title="无障碍辅助工具栏" class="wzayd" onclick="openToolbar();"></a>
+        </div>
+        <!-- 返回顶部 -->
+        <div class="item goTop">
+            <span><i class="glyphicon glyphicon-open"></i></span>
+        </div>
+    </div>
+    <script>
+        util.tabToggle($('.web-item'), '.about-webs-wrap .about-webs', 'click');
+        $(document).on('click', function (e) {
+            var that = $(e.target).parents();
+            var status = 0;
+            for (var key in that) {
+                if (that.hasOwnProperty(key)) {
+                    var element = that[key];
+                    if ($(element).hasClass('web-item-box')) {
+                        status = 1;
+                    }
+                }
+            }
+            if (status === 0) {
+                $('.about-webs-wrap').hide();
+            }
+        });
+
+        $('.close-ico').on('click', function (e) {
+            $('.about-webs-wrap').hide();
+        });
+
+        util.tabToggle($('.web-item-tit-box li'), '.about-webs-wrap .about-webs');
+        $('.goTop').on('click', function () {
+            (function smoothscroll() {
+                var currentScroll =
+                    document.documentElement.scrollTop || document.body.scrollTop;
+                if (currentScroll > 0) {
+                    window.requestAnimationFrame(smoothscroll);
+                    window.scrollTo(0, currentScroll - currentScroll / 5);
+                    $(this).removeClass('opa');
+                } else {
+                    $(this).addClass('opa');
+                }
+            })();
+        });
+        if ($(window).scrollTop() < 50) {
+            $('.goTop').removeClass('opa');
+        }
+        $(window).on('scroll', function () {
+            var scrollTop = $(this).scrollTop();
+            if (scrollTop > 50) {
+                $('.goTop').addClass('opa');
+            } else {
+                $('.goTop').removeClass('opa');
+            }
+        });
+
+        //$(function () {
+        //    $.ajax({
+        //        url: 'http://119.97.200.100:9090/search/Links.json',//跨域问题 集约化平台设置不了
+        //        type: "post",
+        //        dataType: "json",
+        //        success: function (result) {
+        //            if (result != null) {
+        //                var html = "";
+        //                var res = result.LINKS.LINK;
+        //                for (var i = 0; i < res.length; i++) {
+        //                    if (i == 0) {
+        //                        html += "<ul class=\"about-webs clear1 open\" tab=\"1\">";
+        //                    }
+        //                    else {
+        //                        html += "<ul class=\"about-webs clear1\" tab=\"" + (i + 1) + "\">";
+        //                    }
+        //                    for (var j = 0; j < res[i].Child.length; j++) {
+        //                        html += "  <li><a href=\"" + res[i].Child[j].Url + "\" target=\"_blank\" >" + res[i].Child[j].Ttile + "</a></li>"
+        //                    }
+        //                    html += "</ul>";
+        //                }
+        //                $(".about-webs-inner").append(html);
+        //            }
+        //        }
+        //    })
+        //});
+
+    </script>
+    <script id="_trs_ta_js" src="//ta.trs.cn/c/js/ta.js?mpid=3379" async="async" defer="defer"></script>
+        </div>
+    </div>
+    <script>
+    $(function () {
+        // 设置 qrcode 参数
+        var qrcode = $("#qrcode").length&&new QRCode('qrcode', {
+            text: this.location.href,
+           width: 128,
+            height: 128,
+            colorDark: '#000000',
+            colorLight: '#ffffff',
+            correctLevel: QRCode.CorrectLevel.H
+        });
+        //$("#footMore").click(function () {
+        //    $(this).toggleClass("active")
+        //    $("i", this).toggleClass("fa-minus")
+        //    $(".foot_content").slideToggle("2000");
+        //    $(".foot_tool .fr").addClass("show");
+        //});
+        //$(".fix_foot").mouseleave(function () {
+        //   /* $("#footMore").removeClass("active")*/
+        //    $("i", this).removeClass("fa-minus")
+        //    $(".foot_content").slideUp("2000");
+        //    $(".foot_tool .fr").removeClass("show");
+        //})
+        $("#changeSkin").click(function () {
+            var skin = Cookies.get("skin");
+            if (skin == null || skin == "red") {
+                $("#userStyle").attr("href", "")
+                skin = "blue"
+            }
+            else if (skin == "blue") {
+                $("#userStyle").attr("href", "Themes/Skin/deepblue.css")
+                skin = "deepblue"
+            }
+            else if (skin == "deepblue") {
+                $("#userStyle").attr("href", "Themes/Skin/red.css"),
+                    skin = "red"
+            }
+            Cookies.set("skin", skin, 365);
+        })
+        var myDate = new Date();
+        $("#day").text(myDate.getDate());
+        setInterval(function () {
+            var now = new Date();
+            var hh = now.getHours().toString();
+            var mm = now.getMinutes().toString();
+            var ss = now.getSeconds().toString();
+            if (hh.length == 1)
+                hh = "0" + hh;
+            if (mm.length == 1)
+                mm = "0" + mm;
+            if (ss.length == 1)
+                ss = "0" + ss;
+            $("#time").text(hh + ":" + mm + ":" + ss + "北京时间");
+
+        }, 1000);
+
+        $("#btnSearch").click(function () {
+            if ($('#txtSearch').val() == '' || $('#txtSearch').val().length == 0) {
+                alert('请输入关键字');
+                return false;
+            }
+            var keywords = encodeURI($('#txtSearch').val());
+            $url = "http://www.wuhan.gov.cn/SITE/whjxw/search.html?searchWord=" + keywords + "&siteId=40&pageSize=10"
+            window.open($url, '_blank');
+        })
+        $('#txtSearch').on('keypress', function (event) {
+            if (event.keyCode === 13) {
+                $("#btnSearch").click();
+            }
+        });
+    })
+    function openToolbar() { /*打开无障碍辅助工具*/
+        if (window.location == top.location) {
+            var str_location = window.location.href;
+            window.location.href = "/material/wca.html?wcaUrl=" + str_location;
+        }
     }
-}
-</style>    </div>
-
-    <script src="/cms_files/webmiit/tplobject/gxbsy/cd4c71a286d9423d8897ceb8d4bab1f2/images/base.js"></script>
-  
-  </body>
+</script>
+<script type="text/javascript">
+var videoList = document.getElementsByTagName('iframe'),
+        removeIndex = [];
+    for (var i = 0, length = videoList.length; i < length; i++) {
+        var video = videoList[i],
+        src = video.getAttribute('src');
+        if (src.indexOf('jyh.wuhan.gov.cn') > -1) {
+          
+            videoList[i].setAttribute('src', src.replace('http://jyh.wuhan.gov.cn', ''));
+           
+        }
+    }
+</script>
+</body>
 </html>

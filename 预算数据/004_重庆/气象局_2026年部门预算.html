@@ -1,0 +1,1941 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+<meta name="SiteName"  content="重庆市气象局">
+<meta name="SiteDomain" content="cq.cma.gov.cn">
+<meta name="SiteIDCode"  content="bm54230001">
+
+		<meta name="ColumnName" content="">
+        <meta name="ColumnDescription" content="">
+        <meta name="ColumnKeywords" content="">
+        <meta name="ColumnType" content="">
+		<meta name="keywords" content="重庆气象局、天气、天气预报、气候、气象、气候、气候变化、预警">
+		<meta name="description" content="">
+    <title>重庆市气象局</title>
+
+
+    <meta http-equiv="x-ua-compatible" content="IE=9" >
+<link rel="stylesheet" type="text/css" href="http://cq.cma.gov.cn/sqxj/material/css/animate.min.css">
+<link rel="stylesheet" type="text/css" href="http://cq.cma.gov.cn/sqxj/material/css/Font_style.css">
+<link rel="stylesheet" type="text/css" href="http://cq.cma.gov.cn/sqxj/material/css/frame_style.css">
+<link rel="stylesheet" type="text/css" href="http://cq.cma.gov.cn/sqxj/material/css/index_style.css">
+<link rel="stylesheet" type="text/css" href="http://cq.cma.gov.cn/sqxj/material/css/page_style.css">
+    <link rel="stylesheet" type="text/css" href="http://cq.cma.gov.cn/sqxj/material/css/conf_style.css">
+    <link rel="stylesheet" type="text/css" href="./images/syxg.css">
+    <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.ico" media="screen" />
+
+    <script type="text/javascript" src="./images/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="./images/jquery.cookie.js"></script>
+
+    <script type="text/javascript" src="./images/jquerySuperSlide211source.js"></script>
+<!--
+    <script type="text/javascript" src="./images/Weather.js"></script>
+    <script type="text/javascript" src="./images/tianqiyuj.js"></script>
+-->
+    <!--[if IE 6]>
+    <script src="./images/iepngfx.js"></script>
+    <![endif]-->
+
+    <style type="text/css">
+        /*
+        body,td,th {
+            font-size: 12px; padding:0; margin:0;
+        }
+        .tanchuang_wrap{ width:100%; height:100%;position:absolute;left: 0px;top: 0px;z-index:100; display:none;}
+        .lightbox{width:100%;z-index:101; height:100%;background-color:#2f77b0;filter:alpha(Opacity=100);-moz-opacity:1;opacity: 1; position:absolute; top:0px; left:0px;}
+        .tanchuang_neirong{width:100%;height:100%;border:solid 0px #f7dd8c;background-color:#FFF;position:absolute;z-index:105;left: 0px;top: 0px; font-size:16px;line-height:30px;
+            background:url(skyblue.jpg)no-repeat;
+            background-size:100% 100%;
+            filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='skyblue.jpg',sizingMethod='scale');}
+        */
+          <!-- 灰度 -->
+        <!-- body{-webkit-filter:grayscale(100%);} -->
+
+        .wv-n-v-now-base{
+            overflow: hidden;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<script type="text/javascript">
+    //单纯分钟和秒倒计时
+   /*
+    function resetTime(time){
+        var timer=null;
+        var t=time;
+        var m=0;
+        var s=0;
+        m=Math.floor(t/60%60);
+        m<10&&(m='0'+m);
+        s=Math.floor(t%60);
+        function countDown(){
+            s--;
+            s<10&&(s='0'+s);
+            if(s.length>=3){
+                s=59;
+                m="0"+(Number(m)-1);
+            }
+            if(m.length>=3){
+                m='00';
+                s='00';
+                clearInterval(timer);
+            }
+            console.log(m+"分钟"+s+"秒");
+            $(".progress-time").text(s);
+            if(s<=0){
+                closeDiv('aaaa');
+            }
+        }
+        timer=setInterval(countDown,1000);
+    }
+   
+    resetTime(1);
+    closeDiv('aaaa');
+  */
+</script>
+
+<script language="javascript">
+    function closeDiv(divId){
+        document.getElementById(divId).style.display = 'none';
+    }
+    function displayDiv(divId){
+        document.getElementById(divId).style.display = 'block';
+    }
+    //displayDiv('aaaa');
+
+//上下滚动开始
+function AutoScroll(obj) {
+    $(obj).find("ul:first").animate({
+        marginTop: "-85px"
+    },
+    1500,
+    function() {
+        $(this).css({
+            marginTop: "0px"
+        }).find("li:first").appendTo(this);
+    });
+}
+$(document).ready(function() {
+    setInterval('AutoScroll("#cqweather2018")', 3000)
+});
+//上下滚动结束
+
+
+</script>
+
+
+
+
+
+<!--<div id="top" style="width:100%; height: 313px; overflow: hidden; background: url(./images/19d_01.png) no-repeat center top;"></div>-->
+<script type="text/javascript">
+    $(function(){
+
+        $("#top").slideDown("slow");
+
+        if($("#top").hover(function(){
+                    $(".close").click(function(){
+                        $(this).parents("#top").slideUp("slow");
+                    })
+                },function(){
+                    $(this).parents("#header").siblings(".blankH22").mouseover(function(){
+                        $(this).siblings("#header").find("#top").delay(1000).slideUp("slow");
+                    })
+                }))
+            if($(window).scroll(function(){
+                        $("#top").delay(1000).slideUp("slow");
+                    }));
+    });
+</script>
+<!--全局嵌套-->
+<!--
+<script type="text/javascript" src="./images/grayscale.js"></script>
+<script type="text/javascript">
+  $(function(){
+    grayscale($("#wrap"));
+  });
+</script>
+<style>
+html{ 
+filter: grayscale(100%);
+-webkit-filter: grayscale(100%);
+-moz-filter: grayscale(100%);
+-ms-filter: grayscale(100%);
+-o-filter: grayscale(100%);
+filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);
+-webkit-filter: grayscale(1);
+filter: gray
+}
+img,*{ filter:gray \9; /* just for IE6-9 */ }  
+</style>
+-->
+
+<link rel="stylesheet" type="text/css" href="http://cq.cma.gov.cn/sqxj/material/css/animate.min.css">
+<link rel="stylesheet" type="text/css" href="http://cq.cma.gov.cn/sqxj/material/css/Font_style.css">
+<link rel="stylesheet" type="text/css" href="http://cq.cma.gov.cn/sqxj/material/css/frame_style.css">
+<link rel="stylesheet" type="text/css" href="http://cq.cma.gov.cn/sqxj/material/css/index_style.css">
+<link rel="stylesheet" type="text/css" href="http://cq.cma.gov.cn/sqxj/material/css/page_style.css">
+<!--全局嵌套-->
+
+<div id="header">
+
+	  
+	    <div class="cont1">
+    <div class="logo fl"><img src="./images/logo20220516_1.png" width="630" height="141" /></div>
+    <div class="contR fr">
+      <div class="topSer" style="margin-top: 58px">
+        <ul>
+           <li class="t1">
+            <input type="text" name="dockeywords" id="dockeywords" placeholder="请输入关键词" value="请输入关键字" />
+          </li>
+          <li class="t2">
+            <input type="button" value="查询" onclick="searchBy();" />
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script>
+   $("#dockeywords").mousedown(function(){
+
+    $("#dockeywords").val("");
+})
+ 
+function searchBy(){
+
+	   searchPage = 1;//默认第一页
+	    var queryString = "";
+ 		var pageSize = 8;
+
+		var dockeywords    = $("#dockeywords").val(); 
+		if(dockeywords==null||dockeywords==""||dockeywords=="请输入关键字"){
+			//window.open("/site/cqqxj/");
+alert("请输入要搜索的内容！")
+		}else{		
+		queryString += "&dockeywords="+dockeywords;	
+	 	var searchData = queryString;//保存搜索条件
+	 	var formData=searchData.replace(/&/g,"}");//替换特殊字符，在地址栏传输
+		 formData = decodeURIComponent(searchData, true);
+	 	window.open("/site/cqqxj/search.html?searchWord="+dockeywords+"&siteId=28&pageSize=10",'_blank');
+              
+	}
+}
+
+</script>  
+   
+    <P class="clear"></P>
+  </div>
+  <div class="nav white">
+    <ul>
+      <li class="nLi" style="width:60px;">
+        <h2 class="f18 fontNb"><a href="http://cq.cma.gov.cn">首页</a></h2>
+      </li>
+      <li class="nLi">
+        <h2 class="f18 fontNb"><a href="./sqxj/ldjj/">领导简介</a></h2>
+        <ul class="sub fontWr">
+           <dl>
+<dl>
+                 
+<dd>
+<a href="http://cq.cma.gov.cn/sqxj/ldjj/202602/t20260206_7590058.html" target="_blank">谭畅</a>   
+</dd>
+    
+<dd>
+<a href="http://cq.cma.gov.cn/sqxj/ldjj/201711/t20171120_450002.html" target="_blank">杨智</a>   
+</dd>
+
+<dd>
+<a href="http://cq.cma.gov.cn/sqxj/ldjj/201711/t20171120_450001.html" target="_blank">彭云峰</a>   
+</dd>
+
+<dd>
+<a href="http://cq.cma.gov.cn/sqxj/ldjj/202208/t20220805_5019479.html" target="_blank">周国兵</a>   
+</dd>
+
+<dd>
+<a href="http://cq.cma.gov.cn/sqxj/ldjj/202505/t20250519_7078037.html" target="_blank">童曦</a>   
+</dd>
+
+<dd>
+<a href="http://cq.cma.gov.cn/sqxj/ldjj/202508/t20250819_7283152.html" target="_blank">李锡福</a>   
+</dd>
+
+<dd>
+<a href="http://cq.cma.gov.cn/sqxj/ldjj/202508/t20250819_7283166.html" target="_blank">唐劲风</a>   
+</dd>
+
+           </dl>
+<!--
+                 
+<dd>
+<a href="./sqxj/ldjj/202602/t20260206_7590058.html"target=_blank>谭畅</a>   
+</dd>
+    
+<dd>
+<a href="./sqxj/ldjj/201711/t20171120_450002.html"target=_blank>杨智</a>   
+</dd>
+    
+<dd>
+<a href="./sqxj/ldjj/201711/t20171120_450001.html"target=_blank>彭云峰</a>   
+</dd>
+    
+<dd>
+<a href="./sqxj/ldjj/202208/t20220805_5019479.html"target=_blank>周国兵</a>   
+</dd>
+    
+<dd>
+<a href="./sqxj/ldjj/202505/t20250519_7078037.html"target=_blank>童曦</a>   
+</dd>
+    
+<dd>
+<a href="./sqxj/ldjj/202508/t20250819_7283152.html"target=_blank>李锡福</a>   
+</dd>
+    
+<dd>
+<a href="./sqxj/ldjj/202508/t20250819_7283166.html"target=_blank>唐劲风</a>   
+</dd>
+
+-->
+
+           </dl>
+
+<!--
+         <dl id="ldjj_o">
+    
+<dd>
+<a href="./sqxj/ldjj/202602/t20260206_7590058.html"target=_blank>谭畅</a>   
+</dd>
+    
+<dd>
+<a href="./sqxj/ldjj/201711/t20171120_450002.html"target=_blank>杨智</a>   
+</dd>
+    
+<dd>
+<a href="./sqxj/ldjj/201711/t20171120_450001.html"target=_blank>彭云峰</a>   
+</dd>
+    
+<dd>
+<a href="./sqxj/ldjj/202208/t20220805_5019479.html"target=_blank>周国兵</a>   
+</dd>
+    
+<dd>
+<a href="./sqxj/ldjj/202505/t20250519_7078037.html"target=_blank>童曦</a>   
+</dd>
+    
+<dd>
+<a href="./sqxj/ldjj/202508/t20250819_7283152.html"target=_blank>李锡福</a>   
+</dd>
+    
+<dd>
+<a href="./sqxj/ldjj/202508/t20250819_7283166.html"target=_blank>唐劲风</a>   
+</dd>
+
+</dl>
+-->
+        </ul>
+      </li>
+      <li class="nLi">
+                <h2 class="f18 fontNb"><a href="http://cq.cma.gov.cn/zfxxgk/zwgk/jgyzn/">部门概况</a></h2>
+<!--
+        <ul class="sub fontWr" >
+          <dl id="bmgk">
+          <dd><a href="./zfxxgk/zwgk/jgyzn/bmgk/">部门概况</a></dd><dd><a href="./zfxxgk/zwgk/jgyzn/fzrjbxx/">负责人基本信息</a></dd><dd><a href="./zfxxgk/zwgk/jgyzn/jgsz/">机构设置</a></dd>
+           </dl>
+        </ul>
+-->
+      </li>
+      <li class="nLi">
+        <h2 class="f18 fontNb"><a href="./sqxj/xwdt/">新闻动态</a></h2>
+        <ul class="sub fontWr" >
+          <dl id="xwdt">
+           <dd><a href="./sqxj/xwdt/sjdt/">市局动态</a></dd><dd><a href="./sqxj/xwdt/jcdt/">基层动态</a></dd><dd><a href="./sqxj/xwdt/tpxw/">图片新闻</a></dd><dd><a href="./sqxj/xwdt/zyzt/">重要专题</a></dd>
+           </dl>
+        </ul>
+      </li>
+      <li class="nLi">
+
+        <h2 class="f18 fontNb"><a href="http://www.weather.com.cn/chongqing/">气象服务</a></h2>
+
+        <ul class="sub fontWr" >
+          <dl>
+             <dd><a href="http://www.weather.com.cn/alarm/newalarmlist.shtml?areaId=10104">气象预警</a></dd><dd><a href="http://www.weather.com.cn/chongqing/index.shtml">天气预报</a></dd><dd><a href="./sqxj/qxfw/fzjz/">防灾减灾</a></dd><dd><a href="./sqxj/qxfw/qxkj/">气象科技</a></dd><dd><a href="./sqxj/qxfw/gwrs/">高温日数</a></dd><dd><a href="http://www.cma.gov.cn/kppd/">气象科普</a></dd><dd><a href="./sqxj/qxfw/zdkfsys/">气候资源转化实验室</a></dd>
+           </dl>
+        </ul>
+
+      </li>
+      <li class="nLi">
+        <h2 class="f18 fontNb"><a href="./zfxxgk/">信息公开</a></h2>
+        <ul class="sub fontWr">
+          <dl>
+
+		 <dd><a href="./zfxxgk/gkzd/" target="_blank" class="menu current">公开制度</a></dd>
+            <dd><a <a  href="./zfxxgk/gkzn/" target="_blank" class="menu current">公开指南</a></dd>
+            <dd><a href="./zfxxgk/gknb/" target="_blank" class="menu current">公开年报</a></dd>
+            <dd><a href="./zfxxgk/ysqgk/" target="_blank" class="menu current">依申请公开</a>
+			 <dd><a href="./zfxxgk/zwgk/jgyzn/" target="_blank" class="menu current">机构与职能</a>
+			  <dd><a href="./zfxxgk/zwgk/flfgbz/" target="_blank" class="menu current">法律法规标准</a>
+			   <dd><a href="./zfxxgk/zwgk/zcwj/" target="_blank" class="menu current">文件公开</a>
+			    <dd><a href="./zfxxgk/zwgk/ghjh/" target="_blank" class="menu current">规划计划</a>
+				 <dd><a href="./zfxxgk/zwgk/xzzf/" target="_blank" class="menu current">行政执法</a>
+				  <dd><a href="./zfxxgk/zwgk/czzj/" target="_blank" class="menu current">财政资金</a>
+				  <dd><a href="./zfxxgk/zwgk/rsxx/" target="_blank" class="menu current">人事信息</a>
+				  <dd><a href="./zfxxgk/zwgk/jytabl/" target="_blank" class="menu current">建议提案办理</a>
+				  <dd><a href="./zfxxgk/zwgk/tfsjyd/" target="_blank" class="menu current">突发事件应对</a>
+
+           </dl>
+        </ul>
+      </li>
+      <li class="nLi">
+        <h2 class="f18 fontNb"><a href="./sqxj/ddjs/">党的建设</a></h2>
+         <ul class="sub fontWr" >
+         <dl id="ddjs">
+          <dd><a href="./sqxj/ddjs/zzsh/">组织生活</a></dd><dd><a href="./sqxj/ddjs/dflz/">党风廉政</a></dd><dd><a href="./sqxj/ddjs/jswm/">精神文明</a></dd>
+           </dl>
+        </ul>
+      </li>
+      <li class="nLi">
+        <h2 class="f18 fontNb"><a href="https://zwykb.cq.gov.cn/v2/fwqd/xzqlsxqd/">服务办事</a></h2>
+        <ul class="sub fontWr">
+          <dl  id="fwbs">
+           <dd><a href="https://zwykb.cq.gov.cn/v2/fwqd/xzqlsxqd/">网上审批</a></dd><dd><a href="http://cq.cma.gov.cn/zfxxgk/zwgk/xzzf/xzxksxbljg/">办事统计</a></dd>	
+    		
+           </dl>
+        </ul>
+      </li>
+      <li class="nLi">
+        <h2 class="f18 fontNb"><a href="./sqxj/hdjl/">互动交流</a></h2>
+        <ul class="sub fontWr" >
+          <dl id="hdjl">
+            <dd><a href="./sqxj/hdjl/wsdc/">网上调查</a></dd><dd><a href="./sqxj/hdjl/yjzj/">意见征集</a></dd><dd><a href="http://cq.cma.gov.cn/personalCenter/?siteid=103#/login">局长信箱</a></dd><dd><a href="./sqxj/hdjl/lxtj/">来信统计</a></dd><dd><a href="./sqxj/hdjl/cqgzly/">公众留言</a></dd>
+           </dl>
+        </ul>
+      </li>
+      <li class="nLi">
+        <h2 class="f18 fontNb"><a href="./sqxj/qxqx/">区县气象局</a></h2>
+      </li>
+    </ul>
+  </div>
+  <script type="text/javascript">
+   $(document).ready(function(){
+              //$("#bmgk dd:first").children("a").attr("style","margin-left:92px;");
+              //$("#xwdt dd:first").children("a").attr("style","margin-left:185px;");
+             //$("#ddjs dd:first").children("a").attr("style","margin-left:490px;");         
+             //$("#fwbs dd:first").children("a").attr("style","margin-left:597px;");
+               //$("#hdjl dd:first").children("a").attr("style","margin-left:600px;");
+               $("#bmgk").attr("style","margin-left:92px;");
+               $("#xwdt").attr("style","margin-left:185px;");
+               $("#ddjs").attr("style","margin-left:490px;");
+               $("#fwbs").attr("style","margin-left:597px;");
+               $("#hdjl").attr("style","margin-left:600px;");
+   }) 
+  jQuery(".nav").slide({ type:"menu", titCell:".nLi", targetCell:".sub",effect:"slideDown",delayTime:300,triggerTime:0,defaultPlay:false,returnDefault:true})
+
+/*
+$.ajax({
+			url:"http://cq.cma.gov.cn/sqxj/ldjj/index2_9761.html",
+			type:"post",
+			async:false,
+			success:function(data){
+				var html = data;
+				path = "";
+				//取dd
+
+				html = html.substring(html.indexOf("<dd>"),html.lastIndexOf("</dd>"));
+console.log(html);
+                    var path = window.location.host;
+                    $("#ldjj_o").html(html);
+                   
+		}});
+*/
+$(function(){
+  $("#ldjj_o dd a ").each(function(){
+	var href = $(this).attr("href");
+	href = href.substring(href.indexOf("sqxj")+4);
+         var urlhref=window.location.pathname;
+         if(urlhref.indexOf("SuniT")>0){
+          href="/SuniT/www.cqmb.gov.cn"+href;
+         }
+	var path = window.location.host;
+	path += href;
+	$(this).attr("href","http://"+path);
+});
+
+
+$("#fwbs dd a").each(function(){
+		   		if( $(this).text() == "网上审批"){
+					$(this).attr("target","_blank");
+				}
+		   });
+});
+  </script> 
+</div>
+<style>
+#header{background-color: #204f8c;height: 225px;}
+
+#bmgk{margin-left:92px;}
+#xwdt{margin-left:185px;}
+#ddjs{margin-left:490px;}
+#fwbs{margin-left:597px;}
+#hdjl{margin-left:600px;}
+
+.nav{
+width: 1200px;
+    /* background-color: #194184; */
+    padding-top: 6px;
+    height: 56px;
+    max-height: 65px !important;
+    overflow: visible !important;
+    background-color: #194184;
+    height: 54px;
+    line-height: 54px;
+    padding-left: 30px;
+    /* padding-bottom: 10px; */
+    margin: auto;
+}
+.nav ul{background:none !important;}
+.nav .sub{display:none;position: absolute;z-index: 1;   width: 1200px;left: 0px;top:60px;}
+.nav .sub dd {
+    float: left;
+    width: 120px;
+    margin-left: 2px;
+    margin-top: 2px;
+    text-align: center;
+    background: #194184;
+}
+.nav{margin: auto;
+    position: relative;}
+.t1 input{
+box-sizing: border-box;
+    width: 200px;
+    height: 30px;
+    line-height: 30px;
+    padding: 10px 10px 10px 0;
+    background: #fff;
+    border: 1px solid #8fcef8;
+    text-indent: 12px;
+    vertical-align: top;
+}
+.t2 input{
+display: block;
+    width: 60px;
+    height: 30px;
+    /* background: #349edd; */
+    float: right;
+    position: relative;
+}
+</style>
+<div class="blankH22"></div>
+<!--
+<script id="_trs_ta_js" src="//ta.trs.cn/c/js/ta.js?mpid=3220" async="async" defer="defer"></script>
+-->
+
+<script type="text/javascript" src="./images/Nongli.js"></script>
+<style>
+    #i_cq_topNews{
+        width:980px;
+        height:41px;
+        overflow:hidden;
+        margin:0 auto;
+        background:#b8d4f0;
+    }
+    #i_cq_topNews h2{
+        width:145px;
+        height:41px;
+        display:block;
+        overflow:hidden;
+        line-height:41px;
+        text-align:center;
+        background:#558dc4;
+    }
+    #i_cq_topNews .content{
+        width:835px;
+        height:41px;
+        overflow:hidden;
+        line-height:41px;
+        text-align:center;
+        color:#405e7a;
+    }
+    #i_cq_topNews .content a{
+        color:#405e7a;
+    }
+    #i_cq_topNews .content ul li{
+        width:auto;
+        height:41px;
+        overflow:hidden;
+    }
+    .i_cq_ttxw_tit{
+        width:145px;
+        height:58px;
+        overflow:hidden;
+        background:#ededed;
+    }
+    .i_cq_ttxw_tit h2{
+        width:100%;
+        height:58px;
+        overflow:hidden;
+        display:block;
+        background:#fc8800;
+        text-align:center;
+        line-height:56px;
+    }
+    .i_cq_ttxw_tit p{
+        width:100%;
+        display:block;
+        padding-top:6px;
+        overflow:hidden;
+        color:#636363;
+        line-height:24px;
+        text-align:center;
+    }
+    .i_cq_ttxw_cont{
+        /*width:834px;*/
+        width:1050px;
+        height:58px;
+        overflow:hidden;
+        border:#e5edfa 1px solid;
+        border-left:0;
+    }
+    .i_cq_ttxw_cont ul li{
+        /*width:834px;*/
+        width:1050px;
+        height:103px;
+        overflow:hidden;
+    }
+    .i_cq_ttxw_cont ul li h2{
+        width:1050px;
+        height:58px;
+        overflow:hidden;
+        display:block;
+        margin:0 auto;
+        line-height:58px;
+        text-align:center;
+    }
+    .i_cq_ttxw_cont ul li .content{
+        width:1050px;
+        height:28px;
+        overflow:hidden;
+        margin:0 auto;
+        line-height:28px;
+        text-align:center;
+    }
+</style>
+<script type="text/javascript">
+    //$('#weather').leoweather({format: '<span id="colock"><strong>{年}年{月}月{日}日 星期{周}</strong></span> <b>天气</b> {天气} {夜间气温}℃ ~ {白天气温}℃'});
+    //var date = getCurrentDateTime();
+    //显示农历
+    $(function(){
+        var myDate = new Date();
+        var dateZ=new Array("日","一","二","三","四","五","六");
+        var m = myDate.getMonth()+1;
+        $("#pDate").empty();
+        $("#pDate").html("农历 "+cDateString1 +"<br>"+  myDate.getFullYear() +"."+m+"."+myDate.getDate()+"&emsp;周"+dateZ[myDate.getDay()]);
+    });
+
+    $(function(){
+        $('#ttxw').find('br').remove();
+        $.ajax({
+            type:'post',
+            url:"/CQWeather_GetData/weatherData/weatherInfo.action",
+            cache:false,
+            async:false,
+            dataType:'json',
+            success:function(data){
+                $("#qxzx").empty();
+                //var contents=data.data[data.data.length-1].contents;
+                //var contents=data.data[0].contents; //20180629修改
+                var contents=data.data[0].contents; //20190112修改
+
+                /*
+                 contents="2019年01月13日16时预报13日夜间到14日白天，偏南地区阴天有间断小雨或零星小雨，东北部偏北地区阴天转间断小雨，其余地区阴天。大部分地区气温4～10℃，城口及东南部2～5℃；  主城区：阴天，7～9℃。  13日20时-14日02时，阴天；14日02时-14日08时，阴天； 14日08时-14日14时，阴天；14日14时-14日20时，阴天。14日夜间到15日白天，各地间断小雨或零星小雨，高海拔地区有雨夹雪或小雪。大部分地区气温3～8℃，城口及东南部-1～4℃； 主城区：间断小雨，6～8℃。 15日夜间到16日白天，偏南地区阴天有间断小雨或零星小雨，其余地区间断小雨转多云，高海拔地区有雨夹雪或小雪。大部分地区气温2～11℃，城口及东南部-1～7℃；  主城区：间断小雨转多云，5～11℃。";
+                 */
+
+                $("#qxzx").html(contents);
+            }
+        });
+    })
+
+</script>
+
+<div class="cont1">
+    <div class="i_cq_ttxw_tit fl">
+        <h2 class="f16 fontWr white" style="font-size:22px;">头条新闻</h2>
+    </div>
+    <div class="i_cq_ttxw_cont fr">
+        <ul>
+            <li>
+                
+                    <h2 class="f24 fontWr">  <a href="./sqxj/xwdt/sjdt/202603/t20260326_7689067.html" target="_blank"  title="谭畅与万盛经济技术开发区党工委书记戴明座谈 共商气象赋能万盛高质量发展" style="color:#1b5782;font-size:26px;">谭畅与万盛经济技术开发区党工委书记戴明座谈 共商气象赋能万盛高质量发展</a></h2>
+                
+            </li>
+        </ul>
+    </div>
+    <P class="clear"></P>
+</div>
+<!--
+<div class="blankH10"></div>
+<div id="i_cq_topNews">
+    <h2 class="fl f16 fontWr white">气象资讯</h2>
+    <div class="content f16 white fontWr"  >
+        <ul  >
+            <marquee  behavior="scroll" direction="left"  onMouseOut="this.start()" onMouseOver="this.stop()" scrollamount="3">
+                <li  id="qxzx" > </li>
+            </marquee>
+        </ul>
+    </div>
+</div>
+-->
+<div class="blankH20"></div>
+<!--<div class="cont1">
+ <a href=" ./sqxj/xwdt/zyzt/sjdym/" target="_blank" > <img src="./images/cq_2018_pic_01.png" width="498" height="80" class="fl" /></a>
+ <a href="./sqxj/xwdt/zyzt/2018nqsqxjzhy/" target="_blank" ><img src="./images/cq_2018_pic_02.png" width="472" height="80" class="fr" /></a>
+  <p class="clear"></p>
+</div>-->
+<style>
+    .z_cont {
+        width:980px;
+        overflow: hidden;
+    }
+    .info .bd{
+        width: 980px;
+        float: left
+    }
+    .new-zt{
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+    }
+    .new-zt .p-prev,.new-zt .p-next{
+        position: absolute;
+        top: 24px;
+        z-index: 10;
+        font-size: 16px;
+        width: 20px;
+        cursor: pointer;
+        height: 31px;
+    }
+    .new-zt .p-prev{
+        left: 0px;
+    }
+    .new-zt .p-next{
+        right: 4px;
+
+    }
+</style>
+<style>
+
+    .govpushinfo150203 li{
+        text-overflow:ellipsis; white-space:nowrap; overflow:hidden;
+        width:258px;
+        height: 28px;
+        line-height: 28px;
+        overflow: hidden;
+        background: url(../images/ico_d.png) no-repeat left center;
+        text-indent: 14px;
+    }
+    .ty_cont ul li{
+        /* width:90%; */
+width:97%;
+    }
+</style>
+<div class="cont1">
+
+<!-- <div id="cqweather2018" style="overflow:hidden;height:80px;line-height:80px;margin-bottom:5px;"> -->
+
+<!--
+<div id="cqweather2018" style="overflow:hidden;height:97px;line-height:97px;margin-bottom:5px;">
+    <ul class="mingdan" id="holder" style="padding:0px;margin:0px;">
+
+<li><div style="margin-bottom:5px;"><a href='./sqxj/xwdt/zyzt/2024qxr/' target="_blank" > <img src="./images/2024qxrbanner.jpg" height="96.8" width="1200" /></a></div></li>
+
+<li><div style="margin-bottom:5px;"><a href='./sqxj/xwdt/zyzt/20240105/' target="_blank" > <img src="./images/20240125.jpg" height="96.8" width="1200" /></a></div></li>
+-->
+
+</ul>
+
+</div>
+
+
+
+    
+
+</div>
+<script>
+    //$(".new-zt").slide({mainCell:".bd ul",autoPage:true,effect:"left",autoPlay:false});
+</script>
+
+<div class="blankH20"></div>
+<!--头部结束-->
+<div class="cont1">
+    <!--slideBox-->
+    <div class="slideBox fl wow fadeInUp" style="width: 600px; height: 417px;">
+        <div class="bd" style="width: 600px; height: 417px;">
+            <ul>
+                
+                    <li style="width: 600px; height: 417px;">
+                        <div class="pic" style="width: 600px; height: 417px;"><a target="_blank" href='./sqxj/xwdt/sjdt/202603/t20260323_7675980.html'><img src='./sqxj/xwdt/sjdt/202603/W020260323475395050027.jpg' width="600" height="417" /></a></div>
+                        <div class="bg"></div>0
+                        <div class="title"><a href="./sqxj/xwdt/sjdt/202603/t20260323_7675980.html" target="_blank" title="【央视新闻直播间】重庆以科技之光送给世界气象日独特的浪漫">【央视新闻直播间】重庆以科技之光送给世界气象日...</a></div>
+                    </li>
+                
+                    <li style="width: 600px; height: 417px;">
+                        <div class="pic" style="width: 600px; height: 417px;"><a target="_blank" href='./sqxj/xwdt/sjdt/202603/t20260323_7675731.html'><img src='./sqxj/xwdt/sjdt/202603/W020260323574639105302.jpg' width="600" height="417" /></a></div>
+                        <div class="bg"></div>0
+                        <div class="title"><a href="./sqxj/xwdt/sjdt/202603/t20260323_7675731.html" target="_blank" title="重庆市气象学会组织开展系列线下科普活动">重庆市气象学会组织开展系列线下科普活动</a></div>
+                    </li>
+                
+                    <li style="width: 600px; height: 417px;">
+                        <div class="pic" style="width: 600px; height: 417px;"><a target="_blank" href='./sqxj/xwdt/sjdt/202603/t20260323_7674450.html'><img src='./sqxj/xwdt/sjdt/202603/W020260323346675889549.jpg' width="600" height="417" /></a></div>
+                        <div class="bg"></div>0
+                        <div class="title"><a href="./sqxj/xwdt/sjdt/202603/t20260323_7674450.html" target="_blank" title="世界气象日主题AI科普视频：天气就是楞个“测”">世界气象日主题AI科普视频：天气就是楞个“测”</a></div>
+                    </li>
+                
+                    <li style="width: 600px; height: 417px;">
+                        <div class="pic" style="width: 600px; height: 417px;"><a target="_blank" href='./sqxj/xwdt/sjdt/202603/t20260321_7673547.html'><img src='./sqxj/xwdt/sjdt/202603/W020260321825201267915.jpg' width="600" height="417" /></a></div>
+                        <div class="bg"></div>0
+                        <div class="title"><a href="./sqxj/xwdt/sjdt/202603/t20260321_7673547.html" target="_blank" title="精测风云  气象万千   重庆世界气象日纪念活动精彩纷呈">精测风云  气象万千   重庆世界气象日纪念活动精彩...</a></div>
+                    </li>
+                
+            </ul>
+        </div>
+        <div class="hd"  style="width: 90px; height: 20px;">
+            <ul>
+                <li style="width: 9px; height: 9px;"></li>
+                <li style="width: 9px; height: 9px;"></li>
+                <li style="width: 9px; height: 9px;"></li>
+                <li style="width: 9px; height: 9px;"></li>
+            </ul>
+        </div>
+    </div>
+    <script type="text/javascript">
+        jQuery(".slideBox").slide({ mainCell:".bd ul",effect:"fold",autoPlay:true,delayTime:200 });
+    </script>
+    <!--slideBox end-->
+    <!--市局动态-->
+    <div class="i_sjdt fl wow fadeInUp" style="width: 586px; height: 417px; display: inline; margin-left: 10px;" >
+        <div class="ty_title hd f16 fontWr white" style="width: 586px;height:72px;" >
+            <ul>
+<!--
+                <li  style="padding-left:15px;padding-right:15px;" ><a href="./sqxj/ywbb/" target="_blank">要闻播报</a></li>
+-->
+
+<li class="on"    style="padding-left:0px;padding-right:0px;width:50%;text-align:center;" ><a href="http://www.gov.cn/pushinfo/v150203/index.htm" target="_blank">国务院要闻</a></li>
+<li  style="padding-left:0px;padding-right:0px;width:50%;text-align:center;" ><a href="http://www.cma.gov.cn/2011xwzx/2011xqxxw/2011xqxyw/" target="_blank">CMA要闻</a></li>
+                <li  style="padding-left:0px;padding-right:0px;width:50%;text-align:center;" > <a href="./sqxj/xwdt/sjdt/" target="_blank">市局动态</a> </li>
+                <li   style="padding-left:0px;padding-right:0px;width:50%;text-align:center;" ><a href="./sqxj/xwdt/jcdt/" target="_blank">基层动态</a></li>
+            </ul>
+        </div>
+
+
+
+
+        <div class="ty_cont bd" style="width: 586px; height: 334px;">
+<!--
+            <ul style="width: 450px;">
+                
+            </ul>
+-->
+            
+            <!--国务院要闻-->
+            <ul style="width: 560px;">
+                <script language="javascript" type="text/javascript" src="http://www.gov.cn/pushinfo/v150203/pushinfo.js"></script>
+            </ul>
+            <!--国务院要闻-->
+            <!--CMA要闻-->
+            <ul style="width: 560px;">
+                <script language="javascript" type="text/javascript" src="http://www.cma.gov.cn/2011xzt/sjts/js/pushinfo.js"></script>
+            </ul>
+            <!--CMA要闻-->
+            <ul style="width: 560px;">
+                
+                    <li style="width: 97%;"><span>2026-03-27</span><a href="./sqxj/xwdt/sjdt/202603/t20260327_7692714.html" target="_blank" title="气象赋能   护航潼南柠檬产业高质量发展">气象赋能   护航潼南柠檬产业高质量发展</a></li>
+                
+                    <li style="width: 97%;"><span>2026-03-26</span><a href="./sqxj/xwdt/sjdt/202603/t20260326_7689067.html" target="_blank" title="谭畅与万盛经济技术开发区党工委书记戴明座谈 共商气象赋能万盛高质量发展">谭畅与万盛经济技术开发区党工委书记戴明座谈 共商气象赋能万盛高质...</a></li>
+                
+                    <li style="width: 97%;"><span>2026-03-23</span><a href="./sqxj/xwdt/sjdt/202603/t20260323_7679338.html" target="_blank" title="2026年第五期“巴山渝水”气象创新大讲堂开讲">2026年第五期“巴山渝水”气象创新大讲堂开讲</a></li>
+                
+                    <li style="width: 97%;"><span>2026-03-23</span><a href="./sqxj/xwdt/sjdt/202603/t20260323_7675980.html" target="_blank" title="【央视新闻直播间】重庆以科技之光送给世界气象日独特的浪漫">【央视新闻直播间】重庆以科技之光送给世界气象日独特的浪漫</a></li>
+                
+                    <li style="width: 97%;"><span>2026-03-23</span><a href="./sqxj/xwdt/sjdt/202603/t20260323_7675731.html" target="_blank" title="重庆市气象学会组织开展系列线下科普活动">重庆市气象学会组织开展系列线下科普活动</a></li>
+                
+                    <li style="width: 97%;"><span>2026-03-23</span><a href="./sqxj/xwdt/sjdt/202603/t20260323_7674450.html" target="_blank" title="世界气象日主题AI科普视频：天气就是楞个“测”">世界气象日主题AI科普视频：天气就是楞个“测”</a></li>
+                
+                    <li style="width: 97%;"><span>2026-03-23</span><a href="./sqxj/xwdt/sjdt/202603/t20260323_7674099.html" target="_blank" title="重庆日报：以精密观测察气象变化 以数智赋能促重庆发展">重庆日报：以精密观测察气象变化 以数智赋能促重庆发展</a></li>
+                
+                    <li style="width: 97%;"><span>2026-03-21</span><a href="./sqxj/xwdt/sjdt/202603/t20260321_7673547.html" target="_blank" title="精测风云  气象万千   重庆世界气象日纪念活动精彩纷呈">精测风云  气象万千   重庆世界气象日纪念活动精彩纷呈</a></li>
+                
+                    <li style="width: 97%;"><span>2026-03-20</span><a href="./sqxj/xwdt/jcdt/202603/t20260323_7675917.html" target="_blank" title="重庆市气象局机关联合基层气象部门开展义务植树活动">重庆市气象局机关联合基层气象部门开展义务植树活动</a></li>
+                
+                    <li style="width: 97%;"><span>2026-03-19</span><a href="./sqxj/xwdt/sjdt/202603/t20260319_7668384.html" target="_blank" title="重庆市气象局召开经济责任审计暨干部监督工作联席会">重庆市气象局召开经济责任审计暨干部监督工作联席会</a></li>
+                
+                    <li style="width: 97%;"><span>2026-03-17</span><a href="./sqxj/xwdt/sjdt/202603/t20260317_7661769.html" target="_blank" title="重庆市气象局召开超长期国债人影项目管理领导小组会议">重庆市气象局召开超长期国债人影项目管理领导小组会议</a></li>
+                
+                    <li style="width: 97%;"><span>2026-03-17</span><a href="./sqxj/xwdt/sjdt/202603/t20260317_7661764.html" target="_blank" title="重庆市局党组理论学习中心组（扩大）学习会召开">重庆市局党组理论学习中心组（扩大）学习会召开</a></li>
+                
+                    <li style="width: 97%;"><span>2026-03-17</span><a href="./sqxj/xwdt/sjdt/202603/t20260317_7661665.html" target="_blank" title="重庆市气象局与市大数据应用发展管理局共推综合预警应用建设">重庆市气象局与市大数据应用发展管理局共推综合预警应用建设</a></li>
+                
+            </ul>
+            <ul style="width: 560px;">
+                
+                    <li style="width:  97%;"><span>2026-03-24</span><a href="./sqxj/xwdt/jcdt/202603/t20260324_7679970.html" target="_blank" title="秀山：多形式开展“3·23”世界气象日宣传活动">秀山：多形式开展“3·23”世界气象日宣传活动</a></li>
+                
+                    <li style="width:  97%;"><span>2026-03-23</span><a href="./sqxj/xwdt/jcdt/202603/t20260323_7678796.html" target="_blank" title="开州：开展世界气象日科普进校园活动">开州：开展世界气象日科普进校园活动</a></li>
+                
+                    <li style="width:  97%;"><span>2026-03-23</span><a href="./sqxj/xwdt/jcdt/202603/t20260323_7678921.html" target="_blank" title="石柱：开展“魅力石柱·康养气象”世界气象日活动">石柱：开展“魅力石柱·康养气象”世界气象日活动</a></li>
+                
+                    <li style="width:  97%;"><span>2026-03-23</span><a href="./sqxj/xwdt/jcdt/202603/t20260324_7680207.html" target="_blank" title="巴南：多形式开展”3.23“世界气象日宣传活动">巴南：多形式开展”3.23“世界气象日宣传活动</a></li>
+                
+                    <li style="width:  97%;"><span>2026-03-23</span><a href="./sqxj/xwdt/jcdt/202603/t20260323_7678327.html" target="_blank" title="巫溪：开展世界气象日系列科普宣传活动">巫溪：开展世界气象日系列科普宣传活动</a></li>
+                
+                    <li style="width:  97%;"><span>2026-03-23</span><a href="./sqxj/xwdt/jcdt/202603/t20260323_7676741.html" target="_blank" title="北碚区气象局走进双凤桥小学开展世界气象日科普活动">北碚区气象局走进双凤桥小学开展世界气象日科普活动</a></li>
+                
+                    <li style="width:  97%;"><span>2026-03-23</span><a href="./sqxj/xwdt/jcdt/202603/t20260323_7676498.html" target="_blank" title="云阳：亲子家庭近距离感受气象科学魅力">云阳：亲子家庭近距离感受气象科学魅力</a></li>
+                
+                    <li style="width:  97%;"><span>2026-03-23</span><a href="./sqxj/xwdt/jcdt/202603/t20260323_7677837.html" target="_blank" title="丰都：多阵地开展世界气象日科普宣传">丰都：多阵地开展世界气象日科普宣传</a></li>
+                
+                    <li style="width:  97%;"><span>2026-03-21</span><a href="./sqxj/xwdt/jcdt/202603/t20260321_7673291.html" target="_blank" title="垫江多维科普传气象 守护家园践初心">垫江多维科普传气象 守护家园践初心</a></li>
+                
+                    <li style="width:  97%;"><span>2026-03-20</span><a href="./sqxj/xwdt/jcdt/202603/t20260320_7672811.html" target="_blank" title="綦江开展世界气象日气象科普系列宣传活动">綦江开展世界气象日气象科普系列宣传活动</a></li>
+                
+                    <li style="width:  97%;"><span>2026-03-20</span><a href="./sqxj/xwdt/jcdt/202603/t20260320_7672675.html" target="_blank" title="忠县中学校获评全国气象教育特色学校">忠县中学校获评全国气象教育特色学校</a></li>
+                
+                    <li style="width:  97%;"><span>2026-03-20</span><a href="./sqxj/xwdt/jcdt/202603/t20260320_7672678.html" target="_blank" title="忠县：气象科普宣传走进学校和社区">忠县：气象科普宣传走进学校和社区</a></li>
+                
+                    <li style="width:  97%;"><span>2026-03-20</span><a href="./sqxj/xwdt/jcdt/202603/t20260323_7675917.html" target="_blank" title="重庆市气象局机关联合基层气象部门开展义务植树活动">重庆市气象局机关联合基层气象部门开展义务植树活动</a></li>
+                
+            </ul>
+        </div>
+        <script type="text/javascript">jQuery(".i_sjdt").slide();</script>
+    </div>
+    <!--市局动态 end-->
+
+    <!--天气实况-->
+    <!--
+    <div id="tqsy" class="yjybtq fadeInUp" style="float:right;" >
+        <div id="weather-view-he" style="width:210px;"></div>
+        <script>
+            WIDGET = {ID: 'w3vzygxJ9Q'};
+        </script>
+        <script type="text/javascript" src="https://apip.weatherdt.com/view/static/js/r.js?v=1111"></script>
+        
+
+    </div>
+    <script type="text/javascript">jQuery(".yjybtq").slide();</script>
+    -->
+<!--
+<div style="height: 148px;width: 190px;overflow: hidden;">
+<iframe style="position:relative;float:left;top: -147px;left: -28px;height: 344px;-webkit-transform: scale(0.7);" src="http://www.weather.com.cn/pub/dingzhi_henan.shtml" marginheight="0" marginwidth="0" name="weatherframe" frameborder="0" scrolling="no" width="240" height="342">
+  </iframe>
+</div>
+-->
+    <!--天气实况end-->
+<!--
+<div style="height: 180px;width: 190px;overflow: hidden;">
+<iframe style="position:relative;float:left;top: -63px;left: -49px;height: 344px;-webkit-transform: scale(0.6);" src="http://www.weather.com.cn/chongqing/qxsj/chongqing_shikuangpaihang_more.htm" marginheight="0" marginwidth="0" name="weatherframe" frameborder="0" scrolling="no" width="290" height="342">
+  </iframe>
+</div>
+-->
+</div>
+
+<!--  扎实推动习近平总书记殷殷嘱托落实落地 见行见效 不断谱写中国式现代化重庆篇章  -->
+<div class="blankH24"></div>
+    <div align="center">
+        <img src="./images/xdhcq.jpg" width="1200" height="520" />
+    </div>
+
+<div class="blankH24"></div>
+<div class="cont1" >
+    <!--公告通知-->
+    <div class="i_notic fl wow fadeInUp" style="width: 600px;">
+        <div class="ty_title hd f16 fontWr white">
+            <ul>
+<li class="on"><a href="./sqxj/ggtz/"  target="_blank" class="menu current">公告通知</a></li>
+<!--
+                <li class="on"><a href="./zfxxgk/zwgk/ghjh/" target="_blank" class="menu current">规划计划</a></li>
+-->
+<li><a href="./zfxxgk/zwgk/czzj/" target="_blank" class="menu current">财政资金</a></li>
+<li><a href="./zfxxgk/zwgk/flfgbz/" target="_blank" class="menu current">法律法规</a></li>
+<li><a href="./zfxxgk/zwgk/rsxx/" target="_blank" class="menu current">人事信息</a></li>
+
+            </ul>
+        </div>
+        <div class="ty_cont bd" style="width: 600px;">
+            <ul style="width: 570px;">
+                
+                    <li style="width: 570px;"><span>2026-03-27</span><a href="./sqxj/ggtz/202603/t20260327_7690270.html" target="_blank" title="重庆市气象部门2026年度事业单位公开招聘应届毕业生递补人员、体检事宜公告（二）">重庆市气象部门2026年度事业单位公开招聘应届毕业生递补人员、体检...</a></li>
+                
+                    <li style="width: 570px;"><span>2026-03-20</span><a href="./sqxj/ggtz/202603/t20260320_7670364.html" target="_blank" title="2026年卫星遥感数字化应用创新重点实验室开放研究课题申请指南">2026年卫星遥感数字化应用创新重点实验室开放研究课题申请指南</a></li>
+                
+                    <li style="width: 570px;"><span>2026-03-19</span><a href="./sqxj/ggtz/202603/t20260319_7667863.html" target="_blank" title="在渝从业雷电防护装置检测单位信息公告">在渝从业雷电防护装置检测单位信息公告</a></li>
+                
+                    <li style="width: 570px;"><span>2026-02-28</span><a href="./sqxj/ggtz/202602/t20260228_7624310.html" target="_blank" title="重庆市气象部门2026年度事业单位公开招聘应届毕业生递补人员、体检事宜公告">重庆市气象部门2026年度事业单位公开招聘应届毕业生递补人员、体检...</a></li>
+                
+                    <li style="width: 570px;"><span>2026-02-27</span><a href="./sqxj/ggtz/202602/t20260227_7623064.html" target="_blank" title="重庆市气象局2026年度考试录用参照公务员法管理事业单位机关工作人员递补面试公告">重庆市气象局2026年度考试录用参照公务员法管理事业单位机关工作人...</a></li>
+                
+                    <li style="width: 570px;"><span>2026-02-06</span><a href="./sqxj/ggtz/202602/t20260206_7590619.html" target="_blank" title="重庆市气象局2026年度考试录用参照公务员法管理事业单位机关工作人员面试公告">重庆市气象局2026年度考试录用参照公务员法管理事业单位机关工作人...</a></li>
+                
+            </ul>
+<!--
+            <ul style="width: 570px;">
+                
+                    <li style="width: 474px;"><span>2022-05-23</span><a href="./zfxxgk/zwgk/ghjh/202205/t20220523_4848224.html" target="_blank" title="国务院关于印发气象高质量发展纲要（2022—2035年）的通知">国务院关于印发气象高质量发展纲要（2022—2035年）的通知</a></li>
+                
+                    <li style="width: 474px;"><span>2022-03-03</span><a href="./zfxxgk/zwgk/ghjh/202203/t20220303_4555674.html" target="_blank" title="中国气象局  科学技术部  中国科学院 关于印发《中国气象科技发展规划 （2021 - 2035年）》的通知">中国气象局  科学技术部  中国科学院 关于印发《中国气象科技发展规...</a></li>
+                
+                    <li style="width: 474px;"><span>2021-12-29</span><a href="./zfxxgk/zwgk/ghjh/202112/t20211229_4334794.html" target="_blank" title="气象发展规划（2011-2015）">气象发展规划（2011-2015）</a></li>
+                
+                    <li style="width: 474px;"><span>2021-12-08</span><a href="./zfxxgk/zwgk/ghjh/202112/t20211208_4295610.html" target="_blank" title="中国气象局  国家发展改革委关于印发全国气象发展“十四五”规划的通知">中国气象局  国家发展改革委关于印发全国气象发展“十四五”规划的通知</a></li>
+                
+                    <li style="width: 474px;"><span>2021-11-30</span><a href="./zfxxgk/zwgk/ghjh/202111/t20211130_4277258.html" target="_blank" title="中国气象局关于印发《“十四五”中国气象局野外科学试验基地发展规划》的通知">中国气象局关于印发《“十四五”中国气象局野外科学试验基地发展规...</a></li>
+                
+                    <li style="width: 474px;"><span>2021-11-22</span><a href="./zfxxgk/zwgk/ghjh/202111/t20211122_4260555.html" target="_blank" title="中国气象局  公安部 交通运输部  国家铁路局  国家邮政局 关于印发“十四五”交通气象保障规划的通知">中国气象局  公安部 交通运输部  国家铁路局  国家邮政局 关于印发...</a></li>
+                
+            </ul>
+-->
+            <ul style="width: 570px;">
+                
+                    <li style="width: 474px;"><span></span><a href="./zfxxgk/zwgk/czzj/bmyjsxx/202603/t20260302_7626497.html" target="_blank" title="重庆市防雷中心2026年单位预算情况">重庆市防雷中心2026年单位预算情况</a></li>
+                
+                    <li style="width: 474px;"><span></span><a href="./zfxxgk/zwgk/czzj/bmyjsxx/202603/t20260302_7626492.html" target="_blank" title="重庆市人工影响天气办公室2026年单位预算情况">重庆市人工影响天气办公室2026年单位预算情况</a></li>
+                
+                    <li style="width: 474px;"><span></span><a href="./zfxxgk/zwgk/czzj/bmyjsxx/202603/t20260302_7626487.html" target="_blank" title="重庆市气象局（本级）2026年单位预算情况">重庆市气象局（本级）2026年单位预算情况</a></li>
+                
+                    <li style="width: 474px;"><span></span><a href="./zfxxgk/zwgk/czzj/bmyjsxx/202603/t20260302_7626485.html" target="_blank" title="重庆市气象局2026年部门预算情况">重庆市气象局2026年部门预算情况</a></li>
+                
+                    <li style="width: 474px;"><span></span><a href="./zfxxgk/zwgk/czzj/bmyjsxx/202509/t20250901_7305921.html" target="_blank" title="重庆市气象局2024年度部门决算公开（含直属单位）">重庆市气象局2024年度部门决算公开（含直属单位）</a></li>
+                
+                    <li style="width: 474px;"><span></span><a href="./zfxxgk/zwgk/czzj/bmyjsxx/202509/t20250901_7305918.html" target="_blank" title="重庆市气象局（本级）2024年度部门决算公开">重庆市气象局（本级）2024年度部门决算公开</a></li>
+                
+            </ul>
+            <ul style="width: 570px;">
+                
+                    <li style="width: 474px;"><span>1999-10-31</span><a href="./zfxxgk/zwgk/flfgbz/qxfl/202005/t20200528_1694158.html" target="_blank" title="中华人民共和国气象法">中华人民共和国气象法</a></li>
+                
+            </ul>
+            <ul style="width: 570px;">
+                
+                    <li style="width: 474px;"><span>2025-11-19</span><a href="./zfxxgk/zwgk/rsxx/rsrm/202511/t20251119_7453277.html" target="_blank" title="中共重庆市气象局党组关于韩世刚同志职务任免的通知">中共重庆市气象局党组关于韩世刚同志职务任免的通知</a></li>
+                
+                    <li style="width: 474px;"><span>2025-11-19</span><a href="./zfxxgk/zwgk/rsxx/rsrm/202511/t20251119_7453270.html" target="_blank" title="重庆市气象局关于梁琪同志职务职级任免的通知">重庆市气象局关于梁琪同志职务职级任免的通知</a></li>
+                
+                    <li style="width: 474px;"><span>2025-11-19</span><a href="./zfxxgk/zwgk/rsxx/rsrm/202511/t20251119_7453262.html" target="_blank" title="中共重庆市气象局党组关于夏杰同志任职的通知">中共重庆市气象局党组关于夏杰同志任职的通知</a></li>
+                
+                    <li style="width: 474px;"><span>2025-11-19</span><a href="./zfxxgk/zwgk/rsxx/rsrm/202511/t20251119_7453251.html" target="_blank" title="重庆市气象局关于付芝闻同志任职的通知">重庆市气象局关于付芝闻同志任职的通知</a></li>
+                
+                    <li style="width: 474px;"><span>2025-11-19</span><a href="./zfxxgk/zwgk/rsxx/rsrm/202511/t20251119_7453243.html" target="_blank" title="中共重庆市气象局党组关于付芝闻同志免职的通知">中共重庆市气象局党组关于付芝闻同志免职的通知</a></li>
+                
+                    <li style="width: 474px;"><span>2025-11-19</span><a href="./zfxxgk/zwgk/rsxx/rsrm/202511/t20251119_7453234.html" target="_blank" title="重庆市气象局关于范莉同志任职的通知">重庆市气象局关于范莉同志任职的通知</a></li>
+                
+            </ul>
+
+        </div>
+        <script type="text/javascript">jQuery(".i_notic").slide();</script>
+    </div>
+    <!--公告通知 end-->
+    <!--公开文件-->
+    <div class="i_gkwj fr wow fadeInUp" style="width: 590px;" id="i_gswj22">
+        <div class="ty_title hd f16 fontWr white" style="width: 590px;">
+            <ul class="mid_lm1">
+                                <li class="on"><a href="./zfxxgk/zwgk/zcwj/" target="_blank" class="menu current">&nbsp;&nbsp;&nbsp;&nbsp;公开文件</a></li>
+<li><a href="./zfxxgk/zwgk/jytabl/" target="_blank" class="menu current">建议提案办理</a></li>
+<li><a href="./zfxxgk/zwgk/tfsjyd/" target="_blank" class="menu current">突发事件应对</a></li>
+
+            </ul>
+        </div>
+        <div class="ty_cont bd" style="width: 590px;">
+            <ul style="width: 555px;">
+                
+                    <li style="width: 555px;"><span>2026-01-09</span><a href="./zfxxgk/zwgk/zcwj/gfxwj/202601/t20260112_7537551.html" target="_blank" title="中国气象局 民政部 文化和旅游部 国家医疗保障局 国家林业和草原局 国家中医药管理局 国家疾病预防控制局关于加强协同联动 推进康养气象服务高质量发展的指导意见">中国气象局 民政部 文化和旅游部 国家医疗保障局 国家林业...</a></li>
+                
+                    <li style="width: 555px;"><span>2026-01-09</span><a href="./zfxxgk/zwgk/zcwj/gfxwj/202601/t20260109_7536713.html" target="_blank" title="中国气象局 国家能源局关于推进能源气象服务体系建设的指导意见">中国气象局 国家能源局关于推进能源气象服务体系建设的指导...</a></li>
+                
+                    <li style="width: 555px;"><span>2025-09-19</span><a href="./zfxxgk/zwgk/zcwj/gfxwj/202509/t20250919_7344463.html" target="_blank" title="中国气象局办公室 交通运输部办公厅关于印发集成式内河交通气象监测仪相关技术规范的通知">中国气象局办公室 交通运输部办公厅关于印发集成式内河交通...</a></li>
+                
+                    <li style="width: 555px;"><span>2025-07-17</span><a href="./zfxxgk/zwgk/zcwj/gfxwj/202507/t20250718_7217960.html" target="_blank" title="中国气象局关于印发《气象行政处罚裁量权基准》的通知">中国气象局关于印发《气象行政处罚裁量权基准》的通知</a></li>
+                
+                    <li style="width: 555px;"><span>2024-12-06</span><a href="./zfxxgk/zwgk/zcwj/gfxwj/202412/t20241206_6732195.html" target="_blank" title="中国气象局   财政部   中国人民银行  国家金融监督管理总局   中国证券监督管理委员会关于加强金融气象协同联动服务经济社会高质量发展的指导意见">中国气象局   财政部   中国人民银行  国家金融监督管理总...</a></li>
+                
+                    <li style="width: 555px;"><span>2024-07-29</span><a href="./zfxxgk/zwgk/zcwj/gfxwj/202407/t20240729_6456674.html" target="_blank" title="重庆市气象局关于印发重庆市雷电防护装置检测资质管理实施细则的通知">重庆市气象局关于印发重庆市雷电防护装置检测资质管理实施...</a></li>
+                
+            </ul>
+            <ul style="width: 555px;">
+                
+                    <li style="width: 555px;"><span>2025-05-28</span><a href="./zfxxgk/zwgk/jytabl/202505/t20250528_7100149.html" target="_blank" title="重庆市气象局关于政协六届三次会议第0297号提案的复函">重庆市气象局关于政协六届三次会议第0297号提案的复函</a></li>
+                
+                    <li style="width: 555px;"><span>2024-05-24</span><a href="./zfxxgk/zwgk/jytabl/202405/t20240524_6289887.html" target="_blank" title="重庆市气象局关于市六届人大二次会议第1071号建议协办意见的函">重庆市气象局关于市六届人大二次会议第1071号建议协办意见的函</a></li>
+                
+                    <li style="width: 555px;"><span>2024-05-24</span><a href="./zfxxgk/zwgk/jytabl/202405/t20240524_6289865.html" target="_blank" title="重庆市气象局关于市六届人大二次会议第0282号建议协办意见的函">重庆市气象局关于市六届人大二次会议第0282号建议协办意见的函</a></li>
+                
+                    <li style="width: 555px;"><span>2023-11-27</span><a href="./zfxxgk/zwgk/jytabl/202311/t20231127_5912573.html" target="_blank" title="重庆市气象局关于重庆市第六届人民代表大会第一次会议第0323号建议协办意见的函">重庆市气象局关于重庆市第六届人民代表大会第一次会议第032...</a></li>
+                
+                    <li style="width: 555px;"><span>2023-11-27</span><a href="./zfxxgk/zwgk/jytabl/202311/t20231127_5912490.html" target="_blank" title="重庆市气象局关于政协重庆市委员会第六届第一次会议第0790提案协办意见">重庆市气象局关于政协重庆市委员会第六届第一次会议第0790...</a></li>
+                
+                    <li style="width: 555px;"><span>2022-09-02</span><a href="./zfxxgk/zwgk/jytabl/202209/t20220902_5069294.html" target="_blank" title="重庆市气象局关于政协五届五次会议第0770号提案的复函">重庆市气象局关于政协五届五次会议第0770号提案的复函</a></li>
+                
+            </ul>
+			<ul style="width: 555px;">
+                
+                    <li style="width: 555px;"><span>2026-03-16</span><a href="./zfxxgk/zwgk/tfsjyd/202603/t20260316_7656066.html" target="_blank" title="2026年02月重庆市预警信息发布业务通报">2026年02月重庆市预警信息发布业务通报</a></li>
+                
+                    <li style="width: 555px;"><span>2026-02-05</span><a href="./zfxxgk/zwgk/tfsjyd/202602/t20260205_7585225.html" target="_blank" title="2026年01月重庆市预警信息发布业务月报">2026年01月重庆市预警信息发布业务月报</a></li>
+                
+                    <li style="width: 555px;"><span>2026-01-07</span><a href="./zfxxgk/zwgk/tfsjyd/202601/t20260107_7531878.html" target="_blank" title="2025年12月重庆市预警信息发布业务月报">2025年12月重庆市预警信息发布业务月报</a></li>
+                
+                    <li style="width: 555px;"><span>2025-12-03</span><a href="./zfxxgk/zwgk/tfsjyd/202512/t20251203_7477288.html" target="_blank" title="2025年11月重庆市预警信息发布业务月报">2025年11月重庆市预警信息发布业务月报</a></li>
+                
+                    <li style="width: 555px;"><span>2025-11-05</span><a href="./zfxxgk/zwgk/tfsjyd/202511/t20251105_7427972.html" target="_blank" title="2025年10月重庆市预警信息发布业务月报">2025年10月重庆市预警信息发布业务月报</a></li>
+                
+                    <li style="width: 555px;"><span>2025-10-11</span><a href="./zfxxgk/zwgk/tfsjyd/202510/t20251011_7385458.html" target="_blank" title="2025年09月重庆市预警信息发布业务月报">2025年09月重庆市预警信息发布业务月报</a></li>
+                
+            </ul>
+        </div>
+        <script type="text/javascript">jQuery("#i_gswj22").slide();</script>
+    </div>
+    <!--公开文件 end-->
+</div>
+<div class="blankH24"></div>
+<!--政府信息公开-->
+<div id="i_xxgk" class="wow fadeInUp">
+    <h2 class="fl f14 fontNb white">政府信息公开</h2>
+    <div class="contMain fr">
+        <ul>
+            <!--<li><a href="javascript:void(0)" onclick="window.open('http://cq.cma.gov.cn/sqxj/xxgk#http://cq.cma.gov.cn/sqxj/xxgk/gkbf/&公开办法')" target="_blank" class="menu current">公开办法</a></li>-->
+            <li><a  href="./zfxxgk/gkzd/"  target="_blank" class="menu current">公开制度</a></li>
+            <li><a  href="./zfxxgk/gkzn/"  target="_blank" class="menu current">公开指南</a></li>
+            <li><a  href="./zfxxgk/zwgk/" target="_blank" class="menu current">公开目录</a></li>
+            <li><a  href="./zfxxgk/gknb/" target="_blank" class="menu current">公开年报</a></li>
+            <li><a  href="./zfxxgk/ysqgk/"  target="_blank" class="menu current">依申请公开</a></li>
+
+        </ul>
+    </div>
+    <p class="clear"></p>
+</div>
+<!--政府信息公开-->
+<div class="blankH24"></div>
+<!--专题<div class="i_zt wow fadeInUp">
+  <ul>
+  
+     <li><a href="./sqxj/xwdt/zyzt/20260304/" target="_blank" ><img src="" width="315" height="75" /></a></li>
+  
+     <li><a href="./sqxj/xwdt/zyzt/20260120/" target="_blank" ><img src="" width="315" height="75" /></a></li>
+  
+     <li><a href="./sqxj/xwdt/zyzt/qxkpgyfw/" target="_blank" ><img src="" width="315" height="75" /></a></li>
+  
+     <li><a href="./sqxj/xwdt/zyzt/2024wlaqxcz/" target="_blank" ><img src="" width="315" height="75" /></a></li>
+  
+     <li><a href="./sqxj/xwdt/zyzt/20240419/" target="_blank" ><img src="" width="315" height="75" /></a></li>
+  
+     <li><a href="./sqxj/xwdt/zyzt/2024qxr/" target="_blank" ><img src="" width="315" height="75" /></a></li>
+  
+  </ul>
+  <div class="prev"></div>
+  <div class="next"></div>
+</div>
+<script type="text/javascript">
+ jQuery(".i_zt").slide({mainCell:"ul",autoPage:true,effect:"leftLoop",autoPlay:true,scroll:1,vis:3});
+</script> -->
+
+<!--专题end-->
+
+<!--专题 end-->
+<div class="blankH24"></div>
+<div class="i_fwbs wow fadeInUp">
+    <div class="title">
+        <ul class="fontWr white">
+            <li class="on" style="border-left:none;">
+                <div class="pic_2"></div>
+                <div class="text"><a href="./sqxj/qxfw/" target="_blank">气象服务</a></div>
+            </li>
+            <li>
+                <div class="pic_1"></div>
+                <div class="text"><a href="./sqxj/ddjs/" target="_blank">党的建设</a></div>
+            </li>
+            <li>
+                <div class="pic_3"></div>
+                <div class="text"><a href="./zfxxgk/zwgk/xzzf/" target="_blank">行政执法</a></div>
+            </li>
+            <li style="border-right:none; /*width:248px;*/">
+                <div class="pic_4"></div>
+                <div class="text"><a href="./sqxj/hdjl/" target="_blank">互动交流</a></div>
+            </li>
+        </ul>
+    </div>
+    <div class="contMain">
+        <div class="bdSub">
+            <div class="i_tq_contL fl" style="/*width:650px;*/width:650px;margin-left:10px;height: 490px;
+    overflow: hidden; margin-left: 120px;
+    margin-top: 20px;
+    transform: scale(1.25, 1.25);
+    -webkit-transform: scale(1.35, 1.15);
+    -moz-transform: scale(1.25, 1.25);
+    -o-transform: scale(1.25, 1.25);">
+                <!--未来七天天气预报-->
+                <!-- <iframe name="surf" id="surf" src="http://flash.weather.com.cn/sk2/shikuang.swf?id=101040100" scrolling="no" width="650" height="240" frameborder="0"></iframe> -->
+                <!--未来七天天气预报 end-->
+                
+<iframe name="surf" id="surf" src="http://www.weather.com.cn/forecast/index_map.shtml?province=chongqing&eventType=quanguo" scrolling="auto" width="650" height="490" frameborder="0"></iframe>
+
+                <!--天气实况-->
+                <!--
+                        <div class="i_tq_sk">
+                          <div class="title2">
+                            <h2 class="f20 fontNb"><a href="" target="_blank">天气实况</a></h2>
+                          </div>
+                          <div class="contMain2">
+                                       <div class="sk_2017_left fl">
+                              <div class="fb"  id="hour"></div>
+                              <div class="wendu" id="qiwen"></div>
+                            </div>
+                            <div class="qy_2017_right fr">
+                               <dl class="first">
+                                <dd class="pic"><img src="images/sk_2017_02.png" alt="" /></dd>
+                                <dd class="tit">风向</dd>
+                                <dd class="text" id="fx"></dd>
+                              </dl>
+                              <dl>
+                                <dd class="pic"><img src="images/sk_2017_03.png" alt="" /></dd>
+                                <dd class="tit">风速</dd>
+                                <dd class="text" id="fengsu"></dd>
+                              </dl>
+                              <dl>
+                                <dd class="pic"><img src="images/sk_2017_04.png" alt="" /></dd>
+                                <dd class="tit">相对湿度</dd>
+                                <dd class="text" id="shidu"></dd>
+                              </dl>
+                              <dl class="last">
+                                <dd class="pic"><img src="images/sk_2017_05.png" alt="" /></dd>
+                                <dd class="tit">降雨量</dd>
+                                <dd class="text" id="jiangshuiliang"></dd>
+                              </dl>
+                              <dl >
+                                <dd class="pic"><img src="images/sk_2017_01.png" alt="" /></dd>
+                                <dd class="tit">气压</dd>
+                                <dd class="text" id="qiya"></dd>
+                              </dl>
+                            </div>
+                            <P class="clear"></P>
+                          </div>
+                        </div>
+                -->
+                <!--天气实况 end-->
+            </div>
+            <div class="i_tq_contR fr">
+                <!--气象预警-->
+
+                <div class="i_tq_yj" style="height:490px;">
+                    <div class="title2">
+                        <h2 class="f20 fontNb"><a href="http://www.cma.gov.cn/kppd/" target="_blank">气象科普</a></h2>
+                    </div>
+                    <div class="contMain2" style="height:480px;">
+                        <ul>
+                            
+                                <li class="old" style="height:28px;background:none;"><span><a href="./sqxj/gxlm/qxkpsytj/201905/t20190521_512104.html" target="_blank" title="【图说体育与气象之二】运动项目与天气的关系">【图说体育与气象之二】运动项目与天气的关系</a></span></li>
+                            
+                                <li class="old" style="height:28px;background:none;"><span><a href="./sqxj/gxlm/qxkpsytj/201905/t20190521_512103.html" target="_blank" title="【图解】气象卫星与汛期应用">【图解】气象卫星与汛期应用</a></span></li>
+                            
+                                <li class="old" style="height:28px;background:none;"><span><a href="./sqxj/gxlm/qxkpsytj/201905/t20190521_512102.html" target="_blank" title="雪到底有多重？">雪到底有多重？</a></span></li>
+                            
+                                <li class="old" style="height:28px;background:none;"><span><a href="./sqxj/gxlm/qxkpsytj/201905/t20190521_512101.html" target="_blank" title="台风之最系列图解：哪些台风是“雨王”">台风之最系列图解：哪些台风是“雨王”</a></span></li>
+                            
+                                <li class="old" style="height:28px;background:none;"><span><a href="./sqxj/gxlm/qxkpsytj/201905/t20190521_512100.html" target="_blank" title="台风之最系列图解：哪些台风是“风王”">台风之最系列图解：哪些台风是“风王”</a></span></li>
+                            
+                                <li class="old" style="height:28px;background:none;"><span><a href="./sqxj/gxlm/qxkpsytj/201905/t20190521_512099.html" target="_blank" title="一张图了解降雪对农牧业的影响">一张图了解降雪对农牧业的影响</a></span></li>
+                            
+                                <li class="old" style="height:28px;background:none;"><span><a href="./sqxj/gxlm/qxkpsytj/201905/t20190521_512098.html" target="_blank" title="“高冷”寒潮来了 这些你应该知道！">“高冷”寒潮来了 这些你应该知道！</a></span></li>
+                            
+                                <li class="old" style="height:28px;background:none;"><span><a href="./sqxj/gxlm/qxkpsytj/201905/t20190521_512097.html" target="_blank" title="图解：炎炎夏日 去哪儿避暑？">图解：炎炎夏日 去哪儿避暑？</a></span></li>
+                            
+                                <li class="old" style="height:28px;background:none;"><span><a href="./sqxj/gxlm/qxkpsytj/201905/t20190521_512096.html" target="_blank" title="台风来临后 十个怎么办？">台风来临后 十个怎么办？</a></span></li>
+                            
+                                <li class="old" style="height:28px;background:none;"><span><a href="./sqxj/gxlm/qxkpsytj/201905/t20190521_512095.html" target="_blank" title="轻科普：冰雹生成记">轻科普：冰雹生成记</a></span></li>
+                            
+                        </ul>
+                    </div>
+                </div>
+                <script type="text/javascript">jQuery(".i_tq_yj").slide({mainCell:".contMain2 ul",autoPage:true,effect:"topLoop",autoPlay:true,scroll:1,vis:10});</script>
+                <!--气象预警 end-->
+
+            </div>
+            <p class="clear"></p>
+        </div>
+
+        <div class="bdSub">
+            <div class="i_tq_contL fl">
+                <!--组织生活-->
+                <div class="i_ty_title">
+                    <h2 class="f20 fontNb"><a href="./sqxj/ddjs/zzsh/" target="_blank">组织生活</a></h2>
+                </div>
+                <div class="i_zzsh">
+                    <ul>
+                        
+                            <li><span>2025-12-24</span><a href="./sqxj/ddjs/zzsh/202601/t20260113_7541624.html" target="_blank" title="重庆市气象局举行学习贯彻党的二十届四中全会精神“进机关”宣讲会">重庆市气象局举行学习贯彻党的二十届四中全会精神“进机关”宣讲会</a></li>
+                        
+                            <li><span>2025-07-01</span><a href="./sqxj/ddjs/zzsh/202507/t20250701_7181787.html" target="_blank" title="重庆市气象局党组书记、局长顾建峰讲授“七一”专题党课">重庆市气象局党组书记、局长顾建峰讲授“七一”专题党课</a></li>
+                        
+                            <li><span>2025-04-24</span><a href="./sqxj/ddjs/zzsh/202507/t20250702_7185128.html" target="_blank" title="2025年重庆市气象部门全面从严治党工作会议召开">2025年重庆市气象部门全面从严治党工作会议召开</a></li>
+                        
+                            <li><span>2025-03-25</span><a href="./sqxj/ddjs/zzsh/202504/t20250410_6990990.html" target="_blank" title="重庆市气象部门年轻干部政治能力提升班在长沙开班">重庆市气象部门年轻干部政治能力提升班在长沙开班</a></li>
+                        
+                            <li><span>2024-10-31</span><a href="./sqxj/ddjs/zzsh/202502/t20250213_6851627.html" target="_blank" title="重庆市气象局举办全市气象部门党务干部业务培训班">重庆市气象局举办全市气象部门党务干部业务培训班</a></li>
+                        
+
+                    </ul>
+                </div>
+                <!--组织生活 end-->
+                <!--党风廉政-->
+                <div class="i_ty_title">
+                    <h2 class="f20 fontNb"><a href="./sqxj/ddjs/dflz/" target="_blank">党风廉政</a></h2>
+                </div>
+                <div class="i_zzsh">
+                    <ul>
+                        
+                            <li><span>2026-02-26</span><a href="./sqxj/ddjs/dflz/202602/t20260226_7619909.html" target="_blank" title="纪检组召开组务会专题研究部署巡视整改工作">纪检组召开组务会专题研究部署巡视整改工作</a></li>
+                        
+                            <li><span>2025-12-31</span><a href="./sqxj/ddjs/dflz/202512/t20251231_7522000.html" target="_blank" title="川渝两地气象部门联合举办纪检干部专题培训班">川渝两地气象部门联合举办纪检干部专题培训班</a></li>
+                        
+                            <li><span>2025-12-31</span><a href="./sqxj/ddjs/dflz/202512/t20251231_7521963.html" target="_blank" title="彭云峰组长专题听取纪检组2025年党建工作情况汇报">彭云峰组长专题听取纪检组2025年党建工作情况汇报</a></li>
+                        
+                            <li><span>2025-06-20</span><a href="./sqxj/ddjs/dflz/202506/t20250620_7155871.html" target="_blank" title="重庆市气象局举办党风廉政教育专题讲座">重庆市气象局举办党风廉政教育专题讲座</a></li>
+                        
+                            <li><span>2025-03-12</span><a href="./sqxj/ddjs/dflz/202503/t20250312_6911488.html" target="_blank" title="纪检组传达学习2025年全市气象工作会议精神">纪检组传达学习2025年全市气象工作会议精神</a></li>
+                        
+                    </ul>
+                </div>
+                <!--党风廉政 end-->
+            </div>
+            <div class="i_tq_contR fr">
+                <div class="i_jswm">
+                    <div class="i_ty_title">
+                        <h2 class="f20 fontNb"><a href="./sqxj/ddjs/jswm/" target="_blank">精神文明</a></h2>
+                    </div>
+                    <div class="contMain2">
+                        <ul>
+                            
+                                <li><a href="./sqxj/ddjs/jswm/202601/t20260113_7541626.html" target="_blank" title="重庆市气象局举办元旦游园活动">重庆市气象局举办元旦游园活动</a></li>
+                            
+                                <li><a href="./sqxj/ddjs/jswm/202508/t20250820_7285851.html" target="_blank" title="“巴渝工匠”杯重庆市第十五届气象行业职业技能竞赛开幕">“巴渝工匠”杯重庆市第十五届气象行业职业...</a></li>
+                            
+                                <li><a href="./sqxj/ddjs/jswm/202507/t20250702_7185060.html" target="_blank" title="党建引领铸就红色堡垒 业务融合赋能气象发展">党建引领铸就红色堡垒 业务融合赋能气象发展</a></li>
+                            
+                                <li><a href="./sqxj/ddjs/jswm/202504/t20250410_6990995.html" target="_blank" title="2025年重庆市气象部门迎春联欢会圆满举行">2025年重庆市气象部门迎春联欢会圆满举行</a></li>
+                            
+                                <li><a href="./sqxj/ddjs/jswm/202502/t20250213_6851660.html" target="_blank" title="金佛山国家大气本底站：执观测“画笔”绘川渝“呼吸曲线”">金佛山国家大气本底站：执观测“画笔”绘川...</a></li>
+                            
+                                <li><a href="./sqxj/ddjs/jswm/202408/t20240829_6522983.html" target="_blank" title="百舸争流千帆竞 奋楫勇进展技能——“巴渝工匠杯”第十四届重庆市气象行业技能竞赛圆满落幕">百舸争流千帆竞 奋楫勇进展技能——“巴渝工...</a></li>
+                            
+                                <li><a href="./sqxj/ddjs/jswm/202403/t20240308_6114816.html" target="_blank" title="“芳华悦己 向美而生”——重庆市气象局开展庆祝“三八”国际妇女节活动">“芳华悦己 向美而生”——重庆市气象局开展...</a></li>
+                            
+                                <li><a href="./sqxj/ddjs/jswm/202403/t20240308_6114761.html" target="_blank" title="重庆市气象部门第二届“风云杯”篮球赛开幕">重庆市气象部门第二届“风云杯”篮球赛开幕</a></li>
+                            
+                                <li><a href="./sqxj/ddjs/jswm/202403/t20240308_6114802.html" target="_blank" title="重庆市气象局举办“学习新思想 奋进新征程 建设新重庆”微宣讲比赛决赛">重庆市气象局举办“学习新思想 奋进新征程 ...</a></li>
+                            
+                                <li><a href="./sqxj/ddjs/jswm/202302/t20230221_5319359.html" target="_blank" title="用好气候资源是我的信念 ——记“全国气象工作先进工作者”张芬">用好气候资源是我的信念 ——记“全国气象工...</a></li>
+                            
+                                <li><a href="./sqxj/ddjs/jswm/202211/t20221121_5190080.html" target="_blank" title="守望相助 汇聚抗击疫情气象力量">守望相助 汇聚抗击疫情气象力量</a></li>
+                            
+                                <li><a href="./sqxj/ddjs/jswm/202211/t20221121_5190091.html" target="_blank" title="重庆气象同心战“疫” 用 “志愿红”守护群众“健康绿”">重庆气象同心战“疫” 用 “志愿红”守护群...</a></li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <p class="clear"></p>
+        </div>
+
+
+        <div class="bdSub">
+            <!--办事指南-->
+            <div class="i_fw_bszn fl">
+                <div class="i_ty_title">
+                    <h2 class="f20 fontNb"><a href="./zfxxgk/zwgk/xzzf/qlhzrqd/" target="_blank">权力和责任清单</a></h2>
+                </div>
+                <div class="contMain2">
+                    <ul>
+                        
+                            <li><a href="./zfxxgk/zwgk/xzzf/qlhzrqd/202509/t20250919_7345786.html" target="_blank" title="气象行业领域涉企行政检查事项清单">气象行业领域涉企行政检查事项清单</a></li>
+                        
+                            <li><a href="./zfxxgk/zwgk/xzzf/qlhzrqd/202304/t20230404_5421559.html" target="_blank" title="重庆市气象局政务服务事项清单">重庆市气象局政务服务事项清单</a></li>
+                        
+                            <li><a href="./zfxxgk/zwgk/xzzf/qlhzrqd/202204/t20220422_4776670.html" target="_blank" title="与市场准入相关禁止性规定(2022年版·气象）">与市场准入相关禁止性规定(2022年版·气象）</a></li>
+                        
+                            <li><a href="./zfxxgk/zwgk/xzzf/qlhzrqd/202204/t20220422_4776659.html" target="_blank" title="市场准入负面清单(2022年版·气象）">市场准入负面清单(2022年版·气象）</a></li>
+                        
+                            <li><a href="./zfxxgk/zwgk/xzzf/qlhzrqd/202011/t20201117_2380074.html" target="_blank" title="重庆市气象局权力和责任清单">重庆市气象局权力和责任清单</a></li>
+                        
+                    </ul>
+                </div>
+            </div>
+            <!--办事指南 end-->
+            <!--文件下载-->
+            <div class="i_fw_wjxz fr">
+                <div class="i_ty_title">
+                    <h2 class="f20 fontNb"><a href="./zfxxgk/zwgk/xzzf/xzxksxbljg/" target="_blank">行政许可事项办理结果</a></h2>
+                </div>
+                <div class="contMain2">
+                    <ul>
+                        
+                            <li><a href="./zfxxgk/zwgk/xzzf/xzxksxbljg/202603/t20260313_7651670.html" target="_blank" title="重庆气象局2026年2月份行政审批系统统计表">重庆气象局2026年2月份行政审批系统统计表</a></li>
+                        
+                            <li><a href="./zfxxgk/zwgk/xzzf/xzxksxbljg/202603/t20260310_7643259.html" target="_blank" title="2026年2月行政审批办理情况（重庆市气象局本级）">2026年2月行政审批办理情况（重庆市气象局本级）</a></li>
+                        
+                            <li><a href="./zfxxgk/zwgk/xzzf/xzxksxbljg/202602/t20260213_7608405.html" target="_blank" title="重庆气象局2026年1月份行政审批系统统计表">重庆气象局2026年1月份行政审批系统统计表</a></li>
+                        
+                            <li><a href="./zfxxgk/zwgk/xzzf/xzxksxbljg/202602/t20260205_7585813.html" target="_blank" title="2026年1月行政审批办理情况（重庆市气象局本级）">2026年1月行政审批办理情况（重庆市气象局本级）</a></li>
+                        
+                            <li><a href="./zfxxgk/zwgk/xzzf/xzxksxbljg/202601/t20260113_7540071.html" target="_blank" title="重庆气象局2025年12月份行政审批系统统计表">重庆气象局2025年12月份行政审批系统统计表</a></li>
+                        
+                    </ul>
+                </div>
+            </div>
+            <!--文件下载 end-->
+            <div class="i_fw_wssp fl"><a href='https://zwykb.cq.gov.cn/v2/fwqd/xzqlsxqd/' target="_blank"><img src="./images/pic_04_2019.jpg" width="931" height="84" /></a></div>
+            <p class="clear"></p>
+        </div>
+
+        <div class="bdSub">
+            <!--网上调查-->
+            <div class="i_fw_bszn fl">
+                <div class="i_ty_title">
+                    <span class="fr f14 fontWr" style="line-height:42px;"></span>
+                    <h2 class="f20 fontNb"><a href="http://cq.cma.gov.cn/sqxj/hdjl/wsdc/" target="_blank">网上调查</a></h2>
+                </div>
+                <div class="contMain2" >
+<!--20200708新增-->
+                     <ul>
+                        
+                            <li><a href="./sqxj/hdjl/wsdc/202405/t20240521_6281660.html" target="_blank" title="您获得天气预报、预警的主要途径是什么？">您获得天气预报、预警的主要途径是什么？</a></li>
+                        
+                            <li><a href="./sqxj/hdjl/wsdc/201906/t20190603_643206.html" target="_blank" title="您最关注的是哪个时段的天气预报">您最关注的是哪个时段的天气预报</a></li>
+                        
+                            <li><a href="./sqxj/hdjl/wsdc/201906/t20190603_643203.html" target="_blank" title="重庆市气象局门户网站集群改版网上调查">重庆市气象局门户网站集群改版网上调查</a></li>
+                        
+                            <li><a href="./sqxj/hdjl/wsdc/201906/t20190603_643197.html" target="_blank" title="2018年世界气象日问卷调查——未来 气象可以有多“智慧”？">2018年世界气象日问卷调查——未来 气象可以有多“智慧”？</a></li>
+                        
+                    </ul>
+<!--20200708新增e-->
+                    <ul id="zxwsdc">
+                           
+                    </ul>
+                </div>
+            </div>
+
+
+          <script type="text/javascript">
+                $("#zxwsdc").empty();
+                var c="";
+                $.ajax({
+                    url:"/cptqt/poll/findAllPoll.action",
+                    type:"post",
+                    data:{"groupId":5,"groupIdOne":1,"pageSize":6,"pageNumber":1},
+                    dataType:"jsonp",
+                    cache:false,
+                    success:function(data){
+                       console.log("网上调查数据"+data)
+                        var json = eval(data);
+                        if(data.rows.length > 0){
+                            for(var j=0;j<data.rows.length;j++){
+                                mailId=data.rows[j].pollid;
+                                var title=data.rows[j].polltitle;
+                                var starttime=data.rows[j].pollstartdate;
+                                var endtime=data.rows[j].pollenddate;
+                                if(title.length>34){
+                                    title=title.substring(0,34)+"...";
+                                }
+                                var date=new Date();
+                                date.setDate(date.getDate()+1);
+                                var endtime1=new Date(endtime);
+                                if(endtime1<date){
+                                    c='<li><a title="'+data.rows[j].polltitle+'" target="_blank" href="/hdjl/wsdc/wsdcjg/index.html?'+data.rows[j].pollid+'">'+title+'</a></li>';
+                                }else{
+                                    c='<li><a title="'+data.rows[j].polltitle+'" target="_blank" href="/hdjl/wsdc/wsdcbd/index.html?'+data.rows[j].pollid+'">'+title+'</a></li>';
+                                }
+
+
+                                $("#zxwsdc").append(c);
+                            }
+                        }else{
+                            $("#zxwsdc").append("<tr><td>暂无数据显示！</td></tr>");
+                        }
+
+                    }
+
+                });
+            </script>
+            <!--网上调查 end-->
+            <!--意见征集-->
+            <div class="i_fw_wjxz fr">
+                <div class="i_ty_title">
+                    <span class="fr f14 fontWr" style="line-height:42px;"></span>
+                    <h2 class="f20 fontNb"><a href="http://cq.cma.gov.cn/sqxj/hdjl/yjzj/" target="_blank">意见征集</a></h2>
+                </div>
+                <div class="contMain2">
+<!--20200708修改-->
+       <ul class="tab-zj">
+            <li class="tab-th">
+                <ul class="tab-item clearfix">
+                    <li class="tab-td2 tab-indent">征集主题</li>
+                    <li class="tab-td3">征集时间</li>
+                </ul>
+            </li>
+        </ul>
+<!-- <script src="./images/pagingyjzj_csc2019515.js"></script> -->
+<script src="./images/time_csc2019515.js"></script>
+<!-- <script src="./images/yjzj_list_csc2019515.js"></script> -->
+<script>
+//    urlLink,siteId,pageIndex,pageSize
+<!--     cs('http://cq.cma.gov.cn','103','1','10','index_11369');   -->
+<!--      tabFun('http://cq.cma.gov.cn','103','1','10','index_11369');  -->
+</script>
+<!--20200708修改e-->
+                    <ul id="zxyjzj">
+                         
+                    </ul>
+                </div>
+            </div>
+
+       <script type="text/javascript">
+
+                $("#zxyjzj").empty();
+                var d="";
+
+                $.ajax({
+                    url:"/cptqt/idear/findAllIdear.action",
+                    type:"post",
+                    data:{"groupId":5,"groupIdOne":1,"pageSize":6,"pageNumber":1},
+                    dataType:"jsonp",
+                    cache:false,
+                    success:function(data){
+                       console.log("意见征集"+data)
+                       console.log("1"+jqXHR.status);
+                        var json = eval(data);
+                        if(data.rows.length > 0){
+                            for(var j=0;j<data.rows.length;j++){
+                                mailId=data.rows[j].idearid;
+                                var title=data.rows[j].ideartitle;
+                                var starttime=data.rows[j].idearstartdate;
+                                var endtime=data.rows[j].idearenddate;
+                                var content=data.rows[j].idearconent;
+
+                                if(content.length>300){
+                                    var contentall=content.substring(0,200)+"...";
+                                }
+                                if(title.length>35){
+                                    title=title.substring(0,35)+"...";
+                                }
+                                d=' <li><a title="'+data.rows[j].ideartitle+'" target="_blank" href="/hdjl/yjzj/yjzjyj/index.html?'+data.rows[j].idearid+'">'+title+'</a></li>';
+                                $("#zxyjzj").append(d);
+
+                            }
+                        }else{
+                            $("#zxyjzj").append("<tr><td>暂无数据显示！</td></tr>");
+
+                        }
+                    },
+                    error: function (xhr) {
+                         console.log("2"+xhr.status);
+                    }
+                })
+            </script>
+            <!--意见征集 end-->
+            <div class="i_fw_wssp fl"><a href='./sqxj/hdjl/cqgzly/' target="_blank"><img src="./images/cq_2017_02.jpg" width="931" height="84" /></a></div>
+            <p class="clear"></p>
+        </div>
+
+
+
+    </div>
+</div>
+<script type="text/javascript">jQuery(".i_fwbs").slide({ titCell:".title li",mainCell:".contMain" });</script>
+<div class="blankH24"></div>
+
+
+<!--主体结束-->
+<!--底部开始-->
+<script type="text/javascript" src="./images/WeatherHome.js"></script>
+
+<script type="text/javascript">
+    $(function(){
+        jQuery("#gwyjxxx").slide({mainCell:".bdxxx dl",autoPage:true,effect:"topLoop",autoPlay:true,scroll:1,vis:1});
+        jQuery("#gwyPic").slide({mainCell:".bdxxx",autoPage:true,effect:"topLoop",autoPlay:true,scroll:1,vis:1});
+    })
+</script>
+<script type="text/javascript">
+
+    $(document).ready(function() {
+
+        $("#i_cq_yj_2017_more").click(function(e) {
+            $(".i_cq_yj_2017_tq_list").toggle();
+            e.stopPropagation(); //阻止事件冒泡，否则事件会冒泡到下面的文档点击事件
+        });
+
+        $(document).click(function() {
+            $(".i_cq_yj_2017_tq_list").hide();
+        });
+
+        $("#noPopEvent").click(function(e) {
+            e.stopPropagation();
+        });
+    });
+    $('#ybtz').live('click', function() {
+        window.open('/qxfw/tqyb/zqtq/');
+    });
+    $('#sktz').live('click', function() {
+        window.open('/qxfw/tqyb/zqtq/');
+    });
+    //$(window.frames["surf"].document).scrollTop("230");
+</script>
+<style>
+    #huodong4{
+        position:fixed;
+        _position:absolute;
+        right:50%;
+        top:325px;
+        width:221px; /*width:128px; width:221px;*/
+        height:263px; /*height:212px; width:263px;*/
+        _top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||300)));
+        margin-right:530px;
+        overflow:visible;
+        z-index:40;
+    }
+    #huodong{
+        position:fixed;
+        _position:absolute;
+        right:50%;
+        top:325px;
+        width:128px;
+        height:212px;
+        _top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||300)));
+        margin-right:530px;
+        overflow:visible;
+        z-index:40;
+    }
+
+    #huodong1{
+        position:fixed;
+        _position:absolute;
+        right:50%;
+        top:542px;
+        width:128px;
+        height:212px;
+        _top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||300)));
+        margin-right:530px;
+        overflow:visible;
+        z-index:40;
+    }
+    #huodong2{
+        position:fixed;
+        _position:absolute;
+        left:53%;
+        top:547px;
+        /* width:54px; */
+        /* height:330px; */
+        width:128px;
+        height:212px;
+        _top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||300)));
+        margin-left:530px;
+        overflow:visible;
+        z-index:40;
+    }
+    #huodong3{
+        position:fixed;
+        _position:absolute;
+        left:53%;
+        top:325px;
+        /* width:54px; */
+        /* height:330px; */
+        width:128px;
+        height:212px;
+        _top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||300)));
+        margin-left:530px;
+        overflow:visible;
+        z-index:40;
+    }
+
+    .kuang2 {width:300px;height: 305px;padding:10px;/* background:#d8edec;border:2px solid #FFFFFF;opacity:0.9;filter:Alpha(Opacity=90);-moz-opacity: 0.9; */}
+
+</style>
+<!--<div id="huodong4" class="tourismimg_box2">
+	<div><a href="http://app.www.gov.cn/govdata/html/download.html" target="_blank"><img src="./images/huodong20180412.png" class="toumingimg" /></a>
+	</div>-->
+<div class="kuang2" style="position: absolute; display: none; width: 470px; left: 482.5px; top: 31px;z-index:90;">
+    <img src="./images/huodong20180412_6040.png" width="720" height="480" />
+</div>
+<!--</div>-->
+<!--第二个悬浮图片二维码-->
+<div>
+
+    <div>
+
+    </div>
+
+</div>
+<!--
+<div id="huodong"><a href="#" target="_blank"><img src="./images/yukuaiban.png" width="128" height="212" /></a></div>
+<div id="huodong1"><a href="https://u.eqxiu.com/s/2e1rdtne?bt=yxy&eqrcode=1" target="_blank"><img src="./images/kp323_2021.png" /></a></div>
+-->
+<!-- <div id="huodong"><a href="https://mp.weixin.qq.com/s/euGY0Uylg2H2KHYBoRhSwQ" target="_blank"><img src="./images/huodong2019_323.png" /></a></div> -->
+<!-- <div id="huodong"><a href="http://mcq.people.com.cn/h5/20190225/" target="_blank"><img src="./images/huodong2018qhsj.png" /></a></div> -->
+<!-- <div id="huodong1"><a href="https://mp.weixin.qq.com/s/euGY0Uylg2H2KHYBoRhSwQ/" target="_blank"><img src="./images/huodong2019_323.png" /></a></div> -->
+<!-- <div id="huodong2"><a href="#" target="_blank"><img src="./images/toupiao-gaige10.png" /></a></div> -->
+<!--  <div id="huodong3"><a href="http://www.cma.gov.cn/2011xzt/2019zt/20190923/index.html" target="_blank"><img src="./sqxj/material/huodong20190925.png" width="128" height="212" /></a></div>  -->
+
+
+<div id="footer" class="fadeIn">
+  <div class="link">
+    <ul>
+     <ul>
+      <li style=""><a target="_balnk" href="http://www.cma.gov.cn/"><img src="./images/link_01.png" width="195" height="37" /></a></li>
+      <li style=""><a target="_balnk" href="https://cq.gov.cn/"><img src="./images/cqsrmzf(1).png" width="195" height="37" /></a></li>
+      <li style=""><a target="_balnk" href="http://www.weather.com.cn/"><img src="./images/link_03.png" width="195" height="37" /></a></li>
+ <li style=""><a target="_balnk" href="http://www.qxkp.net/"><img src="./images/zgqxkpwlogo.jpg" width="195" height="37" /></a></li>
+    </ul>
+    </ul>
+  </div>
+  <div class="link">
+    <ul>
+      <li style="">
+        <select style="width:193px;"  onchange="if(this.options[this.selectedIndex].value!='区县气象局') javascript:window.open(this.options[this.selectedIndex].value)">
+          <option>区县气象局</option>
+							<option  value="http://cq.cma.gov.cn/ybqqxj/">两江新区气象局</option>
+							<option  value="http://cq.cma.gov.cn/wzqqxj/">万州区气象局</option>
+							<option  value="http://cq.cma.gov.cn/qjqqqxj/">黔江区气象局</option>
+							<option  value="http://cq.cma.gov.cn/flqqxj/">涪陵区气象局</option>
+							<option value="http://cq.cma.gov.cn/spbqqxj/">沙坪坝区气象局</option>
+							<option  value="http://cq.cma.gov.cn/bbqqxj/">北碚区气象局</option>
+							<option  value="http://cq.cma.gov.cn/bnqqxj/">巴南区气象局</option>
+							<option  value="http://cq.cma.gov.cn/csqqxj/">长寿区气象局</option>
+							<option  value="http://cq.cma.gov.cn/jjqqxj/">江津区气象局</option>
+							<option  value="http://cq.cma.gov.cn/hcqqxj/">合川区气象局</option>
+							<option  value="http://cq.cma.gov.cn/ycqqxj/">永川区气象局</option>
+							<option  value="http://cq.cma.gov.cn/ncqqxj/">南川区气象局</option>
+							<option  value="http://cq.cma.gov.cn/qjqqxj/">綦江区气象局</option>
+							<option  value="http://cq.cma.gov.cn/dzqqxj/">大足区气象局</option>
+							<option  value="http://cq.cma.gov.cn/bsqqxj/">璧山区气象局</option>
+							<option  value="http://cq.cma.gov.cn/tlqqxj/">铜梁区气象局</option>
+							<option  value="http://cq.cma.gov.cn/tnqqxj/">潼南区气象局</option>
+							<option  value="http://cq.cma.gov.cn/rcqqxj/">荣昌区气象局</option>
+							<option  value="http://cq.cma.gov.cn/kzqqxj/">开州区气象局</option>
+							<option  value="http://cq.cma.gov.cn/lpqqxj/">梁平区气象局</option>
+							<option  value="http://cq.cma.gov.cn/wlqqxj/">武隆区气象局</option>
+							<option  value="http://cq.cma.gov.cn/ckxqxj/">城口县气象局</option>
+							<option  value="http://cq.cma.gov.cn/fdxqxj/">丰都县气象局</option>
+							<option  value="http://cq.cma.gov.cn/djxqxj/">垫江县气象局</option>
+							<option  value="http://cq.cma.gov.cn/zxqxj/">忠县气象局</option>
+							<option  value="http://cq.cma.gov.cn/yyxqxj/">云阳县气象局</option>
+							<option  value="http://cq.cma.gov.cn/fjxqxj/">奉节县气象局</option>
+							<option  value="http://cq.cma.gov.cn/wsxqxj/">巫山县气象局</option>
+							<option  value="http://cq.cma.gov.cn/wxxqxj/">巫溪县气象局</option>
+							<option  value="http://cq.cma.gov.cn/sztjzzzxqxj/">石柱土家族自治县气象局</option>
+							<option  value="http://cq.cma.gov.cn/xstjzmzzzxqxj/">秀山土家族苗族自治县气象局</option>
+							<option  value="http://cq.cma.gov.cn/yytjzmzzzxqxj/">酉阳土家族苗族自治县气象局</option>
+							<option  value="http://cq.cma.gov.cn/psmztjzzzxqxj/">彭水苗族土家族自治县气象局</option>  
+							<option  value="http://cq.cma.gov.cn/wsqqxj/">万盛经开区气象局</option>       
+        </select>
+      </li>
+
+      <li style="">
+        <select style="width:193px;" onchange="if(this.options[this.selectedIndex].value!='其他省区市气象局网站') javascript:window.open(this.options[this.selectedIndex].value)">
+                    <option>其他省区市气象局网站</option>
+                    <option value="http://bj.cma.gov.cn/">北京市气象局</option>
+                  <option value="http://tj.cma.gov.cn/">天津市气象局</option>
+                    <option value="http://he.cma.gov.cn">河北省气象局</option>
+                    <option value="http://sx.cma.gov.cn/">山西省气象局</option>
+                    <option value="http://nm.cma.gov.cn/">内蒙古自治区气象局</option>
+                    <option value="http://ln.cma.gov.cn/">辽宁省气象局</option>
+                    <option value="http://jl.cma.gov.cn/">吉林省气象局</option>
+                    <option value="http://hl.cma.gov.cn/">黑龙江省气象局</option>
+                    <option value="http://sh.cma.gov.cn">上海市气象局</option>
+                    <option value="http://js.cma.gov.cn">江苏省气象局</option>
+                    <option value="http://zj.cma.gov.cn">浙江省气象局</option>
+                    <option value="http://ah.cma.gov.cn">安徽省气象局</option>
+                    <option value="http://fj.cma.gov.cn/">福建省气象局</option>
+                    <option value="http://jx.cma.gov.cn/">江西省气象局</option>
+                    <option value="http://sd.cma.gov.cn/">山东省气象局</option>
+                    <option value="http://ha.cma.gov.cn">河南省气象局</option>
+                    <option value="http://hb.cma.gov.cn/">湖北省气象局</option>
+                    <option value="http://hn.cma.gov.cn/">湖南省气象局</option>
+                    <option value="http://gd.cma.gov.cn/">广东省气象局</option>
+                    <option value="http://gx.cma.gov.cn/">广西壮族自治区气象局</option>
+                    <option value="http://hi.cma.gov.cn/">海南省气象局</option>
+                    <option value="http://sc.cma.gov.cn/">四川省气象局</option>
+                    <option value="http://gz.cma.gov.cn/">贵州省气象局</option>
+                    <option value="http://yn.cma.gov.cn/">云南省气象局</option>
+                    <option value="http://xz.cma.gov.cn/">西藏自治区气象局</option>
+                    <option value="http://sn.cma.gov.cn/">陕西省气象局</option>
+                    <option value="http://gs.cma.gov.cn">甘肃省气象局</option>
+                    <option value="http://qh.cma.gov.cn">青海省气象局</option>
+                    <option value="http://nx.cma.gov.cn/">宁夏回族自治区气象局</option>
+                    <option value="http://xj.cma.gov.cn/">新疆维吾尔自治区气象局</option>
+        </select>
+      </li>
+
+      <li style="">
+        <select style="width:193px;"  onchange="if(this.options[this.selectedIndex].value!='其他市政府部门网站') javascript:window.open(this.options[this.selectedIndex].value)">
+       
+       <option>其他市政府部门网站</option>
+        
+		<option value="http://fzggw.cq.gov.cn/">	市发展和改革委员会	</option>
+<option value="http://czj.cq.gov.cn/">	市财政局	</option>
+<option value="http://jw.cq.gov.cn/">	市教育委员会	</option>
+<option value="http://kjj.cq.gov.cn/">	市科学技术局	</option>
+<option value="http://zfcxjw.cq.gov.cn/">	市住房和城乡建设委员会	</option>
+<option value="http://jtj.cq.gov.cn/">	市交通局	</option>
+<option value="http://sww.cq.gov.cn/">	市商务委员会	</option>
+<option value="http://rlsbj.cq.gov.cn/">	市人力资源和社会保障局	</option>
+<option value="http://sthjj.cq.gov.cn/">	市生态环境局	</option>
+<option value="http://slj.cq.gov.cn/">	市水利局	</option>
+<option value="http://whlyw.cq.gov.cn/">	市文化和旅游委员会	</option>
+<option value="http://wsjkw.cq.gov.cn/">	市卫生健康委员会	</option>
+<option value="http://sjj.cq.gov.cn/">	市审计局	</option>
+<option value="http://mzzjw.cq.gov.cn/">	市民族宗教事务委员会	</option>
+<option value="http://zfwb.cq.gov.cn/">	市人民政府外事办公室	</option>
+<option value="http://gzw.cq.gov.cn/">	市国有资产监督管理委员会	</option>
+<option value="http://scjgj.cq.gov.cn/">	市市场监督管理局	</option>
+<option value="http://yjj.cq.gov.cn/">	市应急管理局	</option>
+
+
+        </select>
+      </li>
+      <li style="">
+        <select style="width:193px;"  onchange="if(this.options[this.selectedIndex].value!='天气网') javascript:window.open(this.options[this.selectedIndex].value)">
+          <!-- <option>兴农网</option> -->
+          <option value="http://www.weather.com.cn/">中国天气网</option>
+        </select>
+      </li>
+    </ul>
+  </div>
+  <div class="menu white2 f14 fontB white2"> <a href="./sqxj/qt/lxwm/" target="_blank">联系我们</a> | <a href="./sqxj/qt/wzdt/" target="_blank">网站地图</a>|<a href="./sqxj/qt/sybz/" target="_blank">使用帮助</a> | <a href="./sqxj/qt/wzsm/" target="_blank">网站说明</a> | <a href="./sqxj/qt/mzsm/" target="_blank">免责说明</a></div>
+  <div class="content">
+ 
+<span class="_span">
+<div  style="width:80px;height:60px;float:left;margin-top: -10px;"><a href="//bszs.conac.cn/sitename?method=show&id=079131DC3FDE6D31E053022819AC1298" target="_blank"><img id="imgConac" vspace="0" hspace="0" border="0" src="//dcs.conac.cn/image/blue.png" data-bd-imgshare-binded="1" /></a></div>
+  <div style="width:110px;height:55px;float:left;margin-right:10px;"><script id="_jiucuo_" sitecode='bm54230001' src='http://pucha.kaipuyun.cn/exposure/jiucuo.js'></script></div>
+ 主办单位：重庆市气象局<br>
+    地址：重庆市渝北区新牌坊一路68号 　邮编：401147     重庆市气象局行政值班电话：(023)89116178<br>
+网站标识码：bm54230001   <a target="_blank" href="https://beian.miit.gov.cn/">京ICP备05004897号 </a> <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=50011202501936" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="./images/gonganlogo.png" style="float:left;" /><p style="float:left;height:20px;line-height:20px;margin: 5px 5px 5px 5px; color:#939393;">渝公网安备 50011202501936号</p></a>
+
+	</span>
+	
+	</div>
+</div>
+
+<div id="weiboshare"><a href="https://weibo.com/cqsqxj" target="_blank"><img src="./images/wblogo.png" width="70" height="70" /></a></div>
+<div id="weixinshare"><a href="http://cq.weather.com.cn/fwmh/fwxm/08/948328.shtml" target="_blank"><img src="./images/wxlogo.png" width="70" height="70" /></a></div>
+<style>
+#weiboshare{
+        position:fixed;
+        opacity: 0.8;
+        _position:absolute;
+        left:48%;
+        top:350px;
+        /* width:54px; */
+        /* height:330px; */
+        width:30px;
+        height:30px;
+        _top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||300)));
+        margin-left:530px;
+        overflow:visible;
+        z-index:40;
+    }
+    
+    #weixinshare{
+        position:fixed;
+        _position:absolute;
+        opacity: 0.8;
+        left:48%;
+        top:430px;
+        /* width:54px; */
+        /* height:330px; */
+        width:30px;
+        height:30px;
+        _top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||300)));
+        margin-left:530px;
+        overflow:visible;
+        z-index:40;
+    }
+</style>
+
+<span style=" display:none;"><script src="https://s19.cnzz.com/z_stat.php?id=1272813734&web_id=1272813734" language="JavaScript"></script></span>
+<script type="text/javascript" src="./images/placeChange.js"></script>
+<!--[if gte IE 9]>
+<script type="text/javascript" src="./images/wow.min.js"></script>
+<![endif]-->
+<![if !IE]>
+<script type="text/javascript" src="./images/wow.min.js"></script>
+<![endif]>
+<!-- 这里的index.js是整个重庆首页的html页面代码 <script src="index.js"></script> -->
+<!--
+ <SCRIPT LANGUAGE='JavaScript' id='site' src=/webstat/js/stat.js?siteid=32></SCRIPT>
+<script type="text/javascript" src="./images/WeatherTB.js"></script>
+<script type="text/javascript" id="lj" src="./index_1232.js"></script>
+-->
+<script id="_trs_ta_js" src="//ta.trs.cn/c/js/ta.js?mpid=3220" async="async" defer="defer"></script>
+<style>
+#footer .link ul li {width:195px; margin-right:0; margin-left:40px;}
+</style>
+<style>
+.i_sjdt .ty_cont ul {
+    width: 556px !important; 
+}
+.govpushinfo150203 a{display: block;
+    width: 361px;
+    overflow: hidden;
+    float: left;
+}
+.slideBox .bd ul li .pic img {width:600px !important;  height: 417px !important;}
+
+.ty_title ul li{width:106px;}
+.ty_title ul li.on a{margin-left:20px;}
+.ty_title ul li a{margin-left:20px;}
+
+.mid_lm1 li{width:152px !important; }
+.mid_lm1 li.on a{margin-left:30px !important;}
+.mid_lm1 li a{margin-left:30px !important;}
+
+#i_xxgk {width: 1200px;}
+#i_xxgk h2 {width: 163px;}
+#i_xxgk .contMain { width: 1033px;}
+#i_xxgk .contMain ul li { width: 205px;}
+
+.i_fwbs { width: 1200px;}
+.i_fwbs .title { width: 1198px;}
+.i_fwbs .title ul li { width: 297px;}
+.i_fwbs .title ul li .pic_4 { margin: 3px auto auto 85px;}
+.i_fwbs .title ul li .pic_3 { margin: 3px auto auto 85px;}
+.i_fwbs .title ul li .pic_2 { margin: 3px auto auto 85px;}
+.i_fwbs .title ul li .pic_1 { margin: 3px auto auto 85px;}
+
+.i_fwbs .contMain { width: 1197px;}
+
+.i_fw_wssp {  width: 1151px !important;  height: 104px !important;}
+.i_fw_wssp img{  width: 1151px !important;  height: 104px !important;}
+</style>
+
+<style>
+.fadeInUp .title .white a{color:#333;}
+#p_waip {width: 1200px;}
+.p_qx_wiap{width: 1166px;}
+.p_qx_wiap .contMain{margin: auto;width: 1056px;}
+/* 头部开始 */
+.cont1{width: 1200px;}
+.nav{margin-top: 10px;width: 1200px;/*公众留言和来信回复是1200px 1178px*/}
+.nav .nLi{width: 123px;}
+/* 头部j结束 */
+/* 底部开始 */
+#footer{clear: both;}/*清除float影响*/
+#footer .menu {width: 1200px;}
+#footer .menu a {
+    margin-left: 76px;
+    padding-right: 76px;
+}
+#footer .link{width:100%;}
+#footer .link ul{width:1198px;}
+#footer .link ul li {width:195px; margin-right:0; margin-left:88px;} 
+#footer{width: 1200px;margin: auto;}
+/* 底部结束 */
+</style>
+
+</body>
+</html>

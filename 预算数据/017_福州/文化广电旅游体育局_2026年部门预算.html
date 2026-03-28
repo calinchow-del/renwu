@@ -1,1135 +1,2597 @@
-<!DOCTYPE html>
-<html ms-controller="windowRoot" ms-class-1="SLB:isSlb" ms-class-2="slb:isSlb">
-	<head>
-		<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-		<meta http-equiv="x-UA-Compatible" content="IE=Edge,Chrome=1"/>
-		<meta name="SiteName" content="福州市文化和旅游局"/>
-		<meta name="SiteDomain" content="wlj.fuzhou.gov.cn">
-		<meta name="SiteIDCode" content="3501000002"/>
-		<meta name="SiteId" content="41"/>
-		<meta name="Keywords" content="福州，中国福州，福建福州，福州市文化和旅游局，福州市文化和旅游局网站"/>
-		<meta name="Description" content="中国福州，福建福州，福州市文化和旅游局官方网站；福州市文化和旅游局网站，是福州市文化和旅游局在国际互联网上发布政务信息、提供在线服务和公众参与的综合服务平台。"/>
-		<title>福州市文化和旅游局</title>
-		<link rel="stylesheet" type="text/css" href="/public/images/trt_iconfont_v2.css" />
-<link rel="stylesheet" type="text/css" href="/public/images/trt_ui_v2.css" />
-<link rel="stylesheet" type="text/css" href="/public/images/trt_component_v2.css" />
-<link rel="stylesheet" type="text/css" href="/public/images/trt_media_v2.css" />
-<link rel="stylesheet" type="text/css" href="/public/images/230819fz_bmmb_header.css" />
-<link rel="stylesheet" type="text/css" href="/public/images/230819fz_bmmb_footer.css" />
-<link rel="stylesheet" type="text/css" href="/images/230819fz_bmmb_01_style.css" />
-<link rel="stylesheet" type="text/css" href="/images/23wlj.css" />
-<link rel="stylesheet" type="text/css" href="/public/css/all_public_css.css" />
-		<link rel="stylesheet" type="text/css" href="/public/css/sy_public_css.css" />	
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 
-	    <style>
-			/* 右侧二维码 */
-			.pf_con {
-			  border: 1px solid #cccccc;
-			  width: 151px;
-			  text-align: center;
-			  position: fixed;
-			  right: 20px;
-			  top: 85%;
-			  margin-top: -138px;
-			  z-index: 999;
-			  background-color: #ffffff;
-			}
-			.pf_con img {
-			  border-bottom: 1px solid #cccccc;
-			  width: 139px;
-			  padding: 6px;
-			}
-			.pf_con p {
-			  padding: 6px;
-			  line-height: 24px;
-			}
-	  
-			@media screen and (max-width: 900px) {
-			  .pf_con {
-				display: none;
-			  }
-			}
-		  </style>
-	</head>
-	<body>
-		<!-- 国家安全部公众号二维码 -->
-		<div class="pf_con" id='pf_con'>
-			<div class="close b-free-read-leaf" title="关闭" onclick="document.getElementById('pf_con').style.display='none'">
-				<img style="cursor: pointer;width: 30px;" src="./images/x-20211009.png" alt="关闭" /></div>
-			<img src="./images/swlj_231225.png" style="max-width: 100%;" />
-		</div>
-		<div id="top_banner">
-			
-			
-		</div>
-		<div class="wrap page_bg compact_layout_01">
-			<div class="header menu_hov">
-	<div class="row">
-		<div class="logo trt-col-8"><a href="/"><img src="/images/231108fzwlj_logo.png" alt="福州市文化和旅游局" /></a></div>
-		<div class="header_line clearflx" role="serve" des="头部信息">
-			<div class="header_link_01">
-				<a href="https://www.gov.cn/" title="国务院" target="_blank" class="btn_base btn_outline btn_outline_primary btn_small">国务院</a>
-				<a href="http://www.fujian.gov.cn/" title="省政府" target="_blank" class="btn_base btn_outline btn_outline_primary btn_small">省政府</a>
-				<a href="http://www.fuzhou.gov.cn/" title="市政府" target="_blank" class="btn_base btn_outline btn_outline_primary btn_small">市政府</a>
-			</div>
-			<div class="header_link_02 none_sm">
-				<a href="javascript:void(0);" class="none_sm">移动版</a>
-				<div class="mzt_ewm">
-					<div><img src="/public/images/20fzszf_mzt_ewm.png" alt="闽政通APP" /></div>
-					<p>闽政通APP</p>
-				</div>
-			</div>
-			<div class="header_link_02" ms-if="isLogin">
-				<a href="//www.fuzhou.gov.cn/suc/users/index" ms-attr-title="loginInfo.showname" target="_blank">你好，<font ms-text="loginInfo.showname | truncate(12)"></font></a>
-				<a ms-attr-href="logoutUrl">注销</a>
-			</div>
-			<div class="header_link_02" ms-if="!isLogin">
-				<a id="logined" href="javascript:void(0);" ms-click="$login" target="_blank">登录</a>
-				<a id="registered" href="javascript:void(0);" ms-click="$register">注册</a>
-			</div>
-			<span>网站支持IPV6</span>
-		</div>
-		<div class="menu_base menu_right menu_hd" role="navigation" des="站点主目录">
-			<ul class="clearflx">
-				<li ms-class="on:RootPath==''"><a href="/" >首页</a></li>
-				<li class="parentNode"   ms-class="on:paths[3]=='zwgk' && paths[4]!='ztzl' || paths[3]=='zfxxgkzl'"><a href="https://wlj.fuzhou.gov.cn/zwgk/">政务公开</a></li>		
-				<li  class="parentNode"  ms-class="on:paths[5]=='fzlyzn'"><a href="https://wlj.fuzhou.gov.cn/zwgk/ztzl/fzlyzn/">遇见福州</a></li>
-				<li  ms-class="on:paths[3]=='jdhy'"><a href="https://wlj.fuzhou.gov.cn/jdhy/">解读回应</a></li>
-				<li><a href="https://zwfw.fujian.gov.cn/person-todo/detail?userType=3&deptId=98E28E500B658C653172759D82F27C6D&bsfwCount=61&areaCode=350100&siteUnid=171D14F5EE9720E1956DEEC922F4E1F2">办事服务</a></li>
-				<li class="parentNode"  ms-class="on:paths[3]=='hdjl'"><a href="https://wlj.fuzhou.gov.cn/hdjl/">互动交流</a></li>
-				<li  ms-class="on:paths[4]=='ztzl'  && paths[5]!='fzlyzn' "><a href="https://wlj.fuzhou.gov.cn/zwgk/ztzl/">专题专栏</a></li>
-			
-				
-			</ul>
-		</div>
-		<div class="search_fixed">
-			<form method="get" action="/search/" target="_blank">
-				<input type="text" placeholder="请输入搜索内容" value="" name="key" required="required" autocomplete="off" class="form-control" />
-				<button class="btn_base" type="submit"><i class="trt-iconfont trt-icon-sousuo"></i></button>
-			</form>
-		</div>
-	</div>
-	<div class="submenu menu_bd">
-		<div class="row">
-			<div></div>
-		</div>
-		<div class="row">
-			<div>			
-				
-					<a href="https://wlj.fuzhou.gov.cn/zfxxgkzl/gkzn/" target="_blank" title="政府信息公开">政府信息公开</a>	
-                
-					<a href="https://wlj.fuzhou.gov.cn/zwgk/jgxx/" target="_blank" title="机构信息">机构信息</a>	
-                
-					<a href="https://wlj.fuzhou.gov.cn/zwgk/lyzx/" target="_blank" title="文旅动态">文旅动态</a>	
-                
-					<a href="https://wlj.fuzhou.gov.cn/zwgk/gsgg/" target="_blank" title="公示公告">公示公告</a>	
-                
-					<a href="https://wlj.fuzhou.gov.cn/zwgk/lygh/" target="_blank" title="规划计划">规划计划</a>	
-                
-					<a href="https://wlj.fuzhou.gov.cn/zwgk/lyfg/" target="_blank" title="政策法规">政策法规</a>	
-                
-					<a href="https://wlj.fuzhou.gov.cn/zwgk/rsxx/" target="_blank" title="人事信息">人事信息</a>	
-                
-					<a href="https://wlj.fuzhou.gov.cn/zwgk/zjxx/" target="_blank" title="资金信息">资金信息</a>	
-                
-					<a href="https://wlj.fuzhou.gov.cn/zwgk/zfcg/" target="_blank" title="政府采购">政府采购</a>	
-                
-					<a href="https://wlj.fuzhou.gov.cn/zwgk/lytj/" target="_blank" title="统计信息">统计信息</a>	
-                
-					<a href="https://wlj.fuzhou.gov.cn/zwgk/xygl/" target="_blank" title="行业管理">行业管理</a>	
-                
-					<a href="https://wlj.fuzhou.gov.cn/zwgk/yjgl/" target="_blank" title="应急管理">应急管理</a>	
-                
-					<a href="https://wlj.fuzhou.gov.cn/zwgk/xzzq/" target="_blank" title="行政职权">行政职权</a>	
-                 
-			</div>
-		</div>
-		<div class="row">
-			<div>
-				
-					<a href="https://wlj.fuzhou.gov.cn/zwgk/ztzl/fzlyzn/lysp/" target="_blank" title="文旅视频">文旅视频</a>	
-                
-					<a href="https://wlj.fuzhou.gov.cn/zwgk/ztzl/fzlyzn/wlml/" target="_blank" title="文旅名录">文旅名录</a>	
-                
-					<a href="https://wlj.fuzhou.gov.cn/zwgk/ztzl/fzlyzn/ggfw/" target="_blank" title="文旅活动">文旅活动</a>	
-                 
-			</div>
-		</div>
-		<div class="row">
-			<div>	
-				
-			</div>
-		</div>
-		<div class="row">
-			<div>
-			</div>
-		</div>
-		<div class="row">
-			<div>
-				
-					<a href="http://fz12345.fuzhou.gov.cn/" target="_blank" title="12345便民服务平台">12345便民服务平台</a>
-                
-					<a href="https://wlj.fuzhou.gov.cn/hdjl/myzj/" target="_blank" title="民意征集">民意征集</a>
-                
-					<a href="https://wlj.fuzhou.gov.cn/hdjl/wsdc/" target="_blank" title="网上调查">网上调查</a>
-                 
-			</div>
-		</div>		
-		<div class="row">
-			<div>
-			</div>
-		</div>
-		
-	</div>
-</div>
-<div class="banner_header">
-	<div class="row">
-		<div class="trt-row">
-			<div class="trt-col-6 trt-col-sm-0">
-				<div class="area_weather">
-					<p><font ms-text="now|date('yyyy年MM月dd日 EEEE')"></font></p>
-					<p><font ms-text="weather+''+temp"></font></p>
-				</div>
-			</div>
-			<div class="trt-col-11 trt-col-sm-18 slb-trt-col-sm-24" role="interaction" des="搜索">
-				<div class="search_area" id="header">
-					<form method="get" ms-attr-action="searchAction" ms-blur="$togLinkkey" ms-submit="$setHistoryList()" target="_blank">
-						<div class="input_select input_base input_group input_group_append input_group_prepend">
-							<div class="input_group_prepend_01"  ms-click="$searchChange()">
-								<div class="select_group">
-									<div class="input_base input_suffix">
-										<input type="hidden" ms-duplex="searchSiteId" name="siteId" />
-										<input type="hidden" ms-duplex="isMain" name="isMain" />
-								        <input type="text" readonly="readonly" ms-duplex="searchSite" class="input_inner search_input" />
-										<span class="input_icon upDown_2021" alt="当前搜索站点 本站 按方向键切换"><i class="trt-iconfont trt-icon-shangxiajiantou"></i></span>																
-									</div>
-								</div>
-							</div>
-							<input type="text" placeholder="请输入关键字" name="key" id="selecttags" required="required" ms-duplex="searchTips.serKey" ms-focus="$checkLock" autocomplete="off" class="input_inner" />                        
-							<div class="input_group_append_01">
-								<button  type="submit" alt="搜索" class="btn_base btn_default"><i class="trt-iconfont trt-icon-sousuo"></i>搜一下</button>
-							</div>
-						</div>
-					</form>
-					
-					<div class="search_content shadow_base" id="searchTag" style="display: none">
-						<div class="search_history" ms-visible="searchTips.historyKeys.length > 0" style="display: none">
-							<span>历史搜索：</span>
-							<a ms-if-loop="$index<4" ms-repeat="searchTips.historyKeys" href="javascript:;" ms-text="el" ms-click="$setPost(el)"> <i class="trt-iconfont trt-icon-dacha"></i></a>
-						
-						</div>
-						<div class="search_top">
-							<span>热门搜索：</span>
-							<a ms-repeat="hotWords" ms-attr-href="el.url" ms-text="el.title" target="_blank"></a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="trt-col-7 trt-col-sm-6 slb-trt-col-sm-24 text_align_right">
-				<div class="aged_link">
-					<a href="javascript:void(0);" ms-click="$inSlb()" ms-visible="!isSlb" class="aged_link_01">长者模式</a>
-					<a href="javascript:void(0);" ms-click="$outSlb()" ms-visible="isSlb" class="aged_link_01 none">退出长者模式</a>
-					<a href="javascript:void(0);" id="barrierFreeBtn" class="aged_link_02"><font id="WzaStatus">无障碍浏览</font></a>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>			
-			<div class="main">
-				<div class="content">
-					<div class="row mar_t_base">
-						
-							
-							<div class="sy_topone mar_b_large mar_b_base_sm" style="display: none;">
-								<div class="announcement announcement_03">
-									<em>要闻</em>
-									<h3><a href="https://www.fuzhou.gov.cn/zwgk/gzdt/szyw/202603/t20260327_5301223.htm" target="_blank" title="总书记两会后首次考察指引“十五五”开局起步">总书记两会后首次考察指引“十五五”开局起步</a></h3>
-									<p>定了就要落实，一步一步朝前走 | 锚定发展主题，打造高质量发展样板 | 始终聚焦于人，发展与民生相统一</p>
-								</div>
-							</div>
-						
-						<div class="pad_base content_bg_02 pad_base0_sm">
-							<div class="trt-row trt-row-large">
-								<div class="trt-col-12 trt-col-sm-24 slb-trt-col-24" role="viewlist" des="图片轮播">
-									<div id="slideBox_01" class="slideBox_01">
-										<span class="prev"><i class="trt-iconfont trt-icon-arrow-left"></i></span>
-										<span class="next"><i class="trt-iconfont trt-icon-arrow"></i></span>
-										<ul class="pic">
-											
-												
-													<li><a href="./zwgk/lyzx/202603/t20260323_5299028.htm"  title="有福之“粥”传孝意 文化志愿暖人心"  target="_blank">
-														<i class="picture_fixed" style="background-image: url(./zwgk/lyzx/202603/W020260323346402233190.jpg);"></i>
-														<div class="txt-bg"></div>
-														<p>有福之“粥”传孝意 文化志愿暖人心</p></a>
-													</li>
-												
-												
-													<li class="tempNone"><a href="./zwgk/lyzx/202603/t20260309_5293244.htm"  title="赏非遗·逛市集·闹元宵  潮有young的文化盛宴圆满落幕——2026年元宵节非遗主题活动精彩回顾"  target="_blank">
-														<i class="picture_fixed" style="background-image: url(./zwgk/lyzx/202603/W020260309566979199357.jpg);"></i>
-														<div class="txt-bg"></div>
-														<p>赏非遗·逛市集·闹元宵  潮有young的文化盛宴圆满落幕——2026年元宵节非遗主题活动精彩回顾</p></a>
-													</li>
-												
-													<li class="tempNone"><a href="./zwgk/lyzx/202602/t20260226_5288376.htm"  title="非遗贺新春 闽都年味浓——福州市非遗展示馆新春活动亮点纷呈"  target="_blank">
-														<i class="picture_fixed" style="background-image: url(./zwgk/lyzx/202602/W020260226372104237882.jpg);"></i>
-														<div class="txt-bg"></div>
-														<p>非遗贺新春 闽都年味浓——福州市非遗展示馆新春活动亮点纷呈</p></a>
-													</li>
-												
-													<li class="tempNone"><a href="./zwgk/lyzx/202602/t20260226_5288346.htm"  title="“文化馆里过大年”新春系列活动精彩纷呈"  target="_blank">
-														<i class="picture_fixed" style="background-image: url(./zwgk/lyzx/202602/W020260226357739487593.jpg);"></i>
-														<div class="txt-bg"></div>
-														<p>“文化馆里过大年”新春系列活动精彩纷呈</p></a>
-													</li>
-												
-													<li class="tempNone"><a href="./zwgk/lyzx/202602/t20260226_5288325.htm"  title="潮起闽都 艺承非遗——福州新春非遗国潮快闪点亮古厝年味"  target="_blank">
-														<i class="picture_fixed" style="background-image: url(./zwgk/lyzx/202602/W020260226350420861575.jpg);"></i>
-														<div class="txt-bg"></div>
-														<p>潮起闽都 艺承非遗——福州新春非遗国潮快闪点亮古厝年味</p></a>
-													</li>
-												
-											
-											
-	<li class="tempNone"><a href="https://liuyan.www.gov.cn/2025wwzfgzbgtjy/bmdf.html?q=fj"  title="@国务院 我来说"  target="_blank">
-		<i class="picture_fixed" style="background-image: url(https://www.fuzhou.gov.cn/gnllm/syhot/202312/W020250311410800080658.jpg);"></i>
-		<div class="txt-bg"></div>
-		<p>@国务院 我来说</p>
-	</a></li>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="baidu-site-verification" content="OLJg0QMvs2" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="renderer" content="webkit">
+    <meta name="SiteName" content="中华人民共和国文化和旅游部">
+    <meta name="SiteDomain" content="www.mct.gov.cn">
+    <meta name="SiteIDcode" content="bm23000001">
+    <meta name="Keywords" content="中华人民共和国文化和旅游部、文化和旅游部、文化、旅游、文化和旅游、文化部、国家旅游局、旅游局、文旅部、文旅">
+    <link type="text/css" href="./images/hanweb.css" rel="stylesheet">
+    <link type="text/css" href="./images/sy_culture-20180320.css" rel="stylesheet">
+    <script type="text/javascript" src="./images/bt-js-tab.js"></script>
+    <script src="./images/jquery.min.js"></script>
+    <script src="./images/device.min.js"></script>
+    <title>中华人民共和国文化和旅游部</title>
+    <script language="javascript">
+        //主导航高亮
+        $(document).ready(function() {
+            var nav_len = $(".nav_sub").length;
+            for (var i = 0; i < 10; i++) {
+                var tw_word = $(".local").eq(i).text();
+                for (var n = 0; n < nav_len; n++) {
+                    var nav_word = $(".nav_sub").eq(n).text();
+                    if (nav_word == tw_word) {
+                        $(".nav_sub").eq(n).css({
+                            'color': '#fff',
+                            'background-color': '#b92121'
+                        }).siblings().css({
+                            'color': '#fff'
+                        });
+                    }
+                }
+            }
+            $.ajax({
+                url: 'https://www.gov.cn/pushinfo/v150203/pushinfo.jsonp',
+                dataType: "jsonp",
+                jsonp: "pushInfoJsonpCallBack",
+                jsonpCallback: "pushInfoJsonpCallBack",
+                success: function(data) {
+
+                    for (var i = 0; i < 8; i++) {
+                        var pubdate = data[i].pubDate;
+
+                        //pubdate=pubdate.substr(5,10);
+                        var title = data[i].title;
+                        if (title.length > 20) {
+                            title = title.substring(0, 20) + "...";
+                        }
+                        $(".govpushinfo150203").append('<li><a href="' + data[i].link + '" target="_blank">' + title + '</a><span>' + pubdate + '</span></li>');
+
+
+                    }
+                },
+                error: function() {
+                    //alert('fail');
+                }
+
+            });
+        });
+
+        // function uaredirect(f) {
+        //     try {
+        //         if (document.getElementById("bdmark") != null) {
+        //             return
+        //         }
+        //         var b = false;
+        //         if (arguments[1]) {
+        //             var e = window.location.host;
+        //             var a = window.location.href;
+        //             if (isSubdomain(arguments[1], e) == 1) {
+        //                 f = f + "/#m/" + a;
+        //                 b = true
+        //             } else {
+        //                 if (isSubdomain(arguments[1], e) == 2) {
+        //                     f = f + "/#m/" + a;
+        //                     b = true
+        //                 } else {
+        //                     f = a;
+        //                     b = false
+        //                 }
+        //             }
+        //         } else {
+        //             b = true
+        //         }
+        //         if (b) {
+        //             var c = window.location.hash;
+        //             if (!c.match("fromapp")) {
+        //                 if ((navigator.userAgent.match(/(iPhone|iPod|Android|ios)/i))) {
+        //                     location.replace(f)
+        //                 }
+        //             }
+        //         }
+        //     } catch (d) {}
+        // }
+
+        // function isSubdomain(c, d) {
+        //     this.getdomain = function(f) {
+        //         var e = f.indexOf("://");
+        //         if (e > 0) {
+        //             var h = f.substr(e + 3)
+        //         } else {
+        //             var h = f
+        //         }
+        //         var g = /^www\./;
+        //         if (g.test(h)) {
+        //             h = h.substr(4)
+        //         }
+        //         return h
+        //     };
+        //     if (c == d) {
+        //         return 1
+        //     } else {
+        //         var c = this.getdomain(c);
+        //         var b = this.getdomain(d);
+        //         if (c == b) {
+        //             return 1
+        //         } else {
+        //             c = c.replace(".", "\\.");
+        //             var a = new RegExp("\\." + c + "$");
+        //             if (b.match(a)) {
+        //                 return 2
+        //             } else {
+        //                 return 0
+        //             }
+        //         }
+        //     }
+        // };
+
+        // function getRequest(id) {
+        //     var url = location.search,
+        //         Request = new Object();
+        //     if (url.indexOf("?") != -1) {
+        //         var str = url.substr(1);
+        //         strs = str.split("&");
+        //         for (var i = 0; i < strs.length; i++) {
+        //             Request[strs[i].split("=")[0]] = unescape(strs[i].split("=")[1])
+        //         }
+        //     }
+        //     return Request[id]
+        // };
+        // if (getRequest('from') != 'pc') {
+        //     uaredirect('/wlbphone/')
+        // }
+        // var aa = window.location.href;
+        // var bb = aa.split("=");
+        // var cc = bb[1];
+        // $(function() {
+        //     if (cc == "pc") {
+        //         $("#tophone").show();
+        //         $("#toolbarCtrl").hide();
+        //     }
+        // })
+        if (window.location.toString().indexOf('pref=padindex') != -1) {} else {
+            if (/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))) {
+                if (window.location.href.indexOf("?pc") < 0) {
+                    try {
+                        if (/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+                            window.location.href = "/wlbphone/";
+                        } else if (/iPad/i.test(navigator.userAgent)) {
+                            window.location.href = "/"
+                        } else {
+                            window.location.href = "/"
+                        }
+                    } catch (e) {}
+                }
+            }
+        }
+
+
+                       
+                   
+    </script>
+    <style>
+        /*20200403整个页面变灰
+        html{
+  -webkit-filter: grayscale(100%);  -moz-filter: grayscale(100%);  -ms-filter: grayscale(100%);  -o-filter: grayscale(100%);  filter: grayscale(100%);  filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);  filter: gray;}
+        */
+        #part3 li {
+            padding-top: 16px;
+            line-height: 0!important
+        }
+        
+        .bt-mod-wzpb-05 li {
+            position: relative
+        }
+        
+        #titqh_cont_1 li .bt-prefix img {
+            margin-top: 18px!important;
+            margin-right: 12px!important
+        }
+        
+        #titqh_cont_1 li {
+            height: auto!important
+        }
+        
+        #titqh_cont_1 li span {
+            bottom: 0;
+            line-height: 38px!important;
+            height: auto!important;
+            display: inline
+        }
+        
+        #titqh_cont_1 a {
+            line-height: 39px!important;
+            white-space: normal!important
+        }
+        
+        #titqh_cont_0 a {
+            padding-left: 15px;
+            background: url(/images/dian.gif) no-repeat left center
+        }
+        
+        #titqh_cont_0 span,
+        .list_time_h {
+            position: absolute;
+            right: 0;
+            display: block;
+            height: 40px;
+            color: #999;
+            line-height: 40px;
+            font-size: 12px
+        }
+        
+        .bt-mod-wzpb-05 li a {
+            width: 75%;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            -o-text-overflow: ellipsis;
+            overflow: hidden
+        }
+        
+        @media only screen and (max-width:768px) {
+            .bt-head {
+                width: 100%;
+                height: auto!important;
+                min-height: 0;
+                background: #fff!important
+            }
+            .bt-head-cen {
+                width: 1000px!important;
+                height: 117px!important;
+                position: relative;
+                overflow: hidden;
+                margin: 0 auto
+            }
+            .bt-footer,
+            .bt-nav-y,
+            .top_left,
+            .top_right {
+                display: block!important
+            }
+            .bt-head,
+            .bt-nav-y,
+            .footer_box {
+                min-width: 1000px!important
+            }
+        }
+        
+        .rmzt_list a {
+            margin-top: 18px!important
+        }
+        
+        .link_czgz,
+        .link_rsxx,
+        .link_xzxk {
+            width: 119px!important
+        }
+        
+        .link_xzxk {
+            background: url(images/wstsg.jpg) no-repeat!important
+        }
+        
+        .link_xzxk:hover {
+            background: url(images/wstsg_1.jpg) no-repeat!important
+        }
+        
+        .link_rsxx {
+            background: url(images/cxts.jpg) no-repeat!important
+        }
+        
+        .link_rsxx:hover {
+            background: url(images/cxts_1.jpg) no-repeat!important
+        }
+        
+        .link_czgz {
+            background: url(images/lyml.jpg) no-repeat!important
+        }
+        
+        .link_czgz:hover {
+            background: url(images/lyml_1.jpg) no-repeat!important
+        }
+        /*禁止头和尾响应式布局生效结束*/
+        /*20190807右侧导航*/
+        
+        .clearFix:after {
+            display: block;
+            content: "";
+            clear: both;
+            overflow: hidden
+        }
+        
+        .FloatL {
+            float: left
+        }
+        
+        .FloatR {
+            float: right
+        }
+        
+        .InFixUl {
+            position: fixed;
+            top: 200px;
+            /*margin-top:-164px;*/
+            right: 1px;
+            width: 38px;
+            z-index: 99999999
+        }
+        
+        .InFixUl>li {
+            position: relative;
+            float: left;
+            margin-top: 1px;
+            width: 37px;
+            height: 40px;
+            background: rgba(0, 0, 0, .7)
+        }
+        
+        .InFixUl>li.InFixUl_mor {
+            background: rgba(215, 4, 22, .7);
+            cursor: pointer
+        }
+        
+        .InFixUl>li a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: url("/whzx/bnsj/ltxgbj/201603/W020190807398617193483.png") no-repeat
+        }
+        
+        .InFixUl>li:first-child a {
+            background-position: 6px -78px
+        }
+        
+        .InFixUl>li:first-child+li a {
+            background-position: -74px -78px
+        }
+        
+        .InFixUl>li:first-child+li+li a {
+            background-position: -34px -78px
+        }
+        
+        .InFixUl>li:first-child+li+li+li a {
+            background-position: -113px -78px
+        }
+        
+        .InFixUl>li.InFixUl_mob a {
+            background-position: -154px -78px
+        }
+        
+        .InFixUl>li.InFixUl_weC a {
+            background-position: -34px -111px
+        }
+        
+        .InFixUl>li.InFixUl_aiP a {
+            background-position: 6px -110px
+        }
+        
+        .InFixUl>li.InFixUl_mor a {
+            background-position: -74px -111px
+        }
+        
+        .InFixUl>li p {
+            position: absolute;
+            top: -10px;
+            right: 38px;
+            width: 0;
+            height: 40px;
+            background: rgba(0, 0, 0, .6);
+            color: #fff;
+            line-height: 40px;
+            text-align: center;
+            font-size: 16px;
+            overflow: hidden
+        }
+        
+        .InFixUl>li:hover p {
+            width: 186px;
+            transition: all .2s ease-out 0s
+        }
+        
+        .InFixUlMax_wm,
+        .InFixUl_wm {
+            position: relative
+        }
+        
+        .InFixUl_wm div {
+            display: none;
+            position: absolute;
+            right: 37px;
+            top: -38px;
+            width: 124px;
+            height: 114px;
+            background: url("/whzx/bnsj/ltxgbj/201603/W020190807398617155888.png") no-repeat
+        }
+        
+        .InFixUlMax_wm div {
+            display: none;
+            position: absolute;
+            right: 84px;
+            top: -13px;
+            width: 124px;
+            height: 114px;
+            background: url("/whzx/bnsj/ltxgbj/201603/W020190807398617155888.png") no-repeat
+        }
+        
+        .InFixUlMax_wm div>img,
+        .InFixUl_wm div>img {
+            margin-left: 2px;
+            margin-top: 2px;
+            width: 111px;
+            height: 110px
+        }
+        
+        .InFixUlMax {
+            position: fixed;
+            /*top:50%;margin-top:-318px;*/
+            bottom: 0px;
+            right: 1px;
+            width: 88px;
+            z-index: 99999999
+        }
+        
+        .InFixUlMax>li {
+            float: left;
+            margin-top: 1px;
+            width: 88px;
+            background: rgba(0, 0, 0, .7)
+        }
+        
+        .InFixUlMax>li>a {
+            display: block;
+            margin: 15px auto 0;
+            width: 38px;
+            height: 38px;
+            overflow: hidden;
+            background: url("/whzx/bnsj/ltxgbj/201603/W020190807398617193483.png") no-repeat
+        }
+        
+        .InFixUlMax>li:first-child>a {
+            background-position: 2px -146px
+        }
+        
+        .InFixUlMax>li:first-child+li>a {
+            background-position: -89px -146px
+        }
+        
+        .InFixUlMax>li:first-child+li+li>a {
+            background-position: -45px -146px
+        }
+        
+        .InFixUlMax>li:first-child+li+li+li>a {
+            background-position: -133px -146px
+        }
+        
+        .InFixUlMax>li.InFixUlMax_mob a {
+            background-position: -1px -188px
+        }
+        
+        .InFixUlMax>li.InFixUlMax_weC a {
+            background-position: -43px -188px
+        }
+        
+        .InFixUlMax>li.InFixUlMax_aiP a {
+            background-position: -90px -190px
+        }
+        
+        .InFixUlMax>li.InFixUlMax_mor {
+            height: 35px;
+            background: rgba(215, 4, 22, .7);
+            cursor: pointer
+        }
+        
+        .InFixUlMax>li.InFixUlMax_mor a {
+            margin-top: 6px;
+            height: 30px;
+            width: 55px;
+            color: #fff;
+            background-position: -130px -195px
+        }
+        
+        .InFixUlMax>li p,
+        .InFixUlMax>li p>a {
+            display: block;
+            text-align: center;
+            line-height: 1.5em;
+            color: #fff;
+            width: 100%;
+            font-size: 14px;
+            margin: 0;
+            cursor: default;
+        }
+        
+        .InFixUlMax>li p>a:hover {
+            color: #fff;
+            cursor: pointer
+        }
+        
+        .InFixUlMax_wm div {
+            display: none
+        }
+        
+        @media screen and (max-width:1440px) {
+            .InFixUlMax {
+                margin-top: -260px
+            }
+            .InFixUlMax>li {
+                height: 68px
+            }
+            .InFixUlMax>li>a {
+                margin: 3px auto 0
+            }
+        }
+        
+        @media screen and (max-width: 1440px) {
+            .InFixUlMax>li {
+                height: auto !important;
+            }
+        }
+        /*20190807右侧导航end*/
+        
+        .news-left {
+            float: left;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .part2_left_shu1 {
+            width: 200px;
+            height: 100%;
+        }
+        
+        .part2_left_shu2 {
+            width: 360px;
+            height: auto;
+        }
+        
+        .part2_left_shu2 {
+            width: 360px;
+            height: auto;
+            margin-left: 20px;
+        }
+        
+        .part2_left_shu1 .gzly {
+            width: 200px;
+            height: 220px;
+        }
+        
+        .part2_left_shu1 .video_tit a,
+        .part2_left_shu1 .gzly_tit a {
+            font-size: 17px;
+            font-weight: bold;
+            color: #333333;
+        }
+        
+        .part2_left_shu1 .gzly_list .link1,
+        .part2_left_shu1 .gzly_list .link2 {
+            background-position: -42px 0 !important;
+            font-size: 13px;
+        }
+        
+        .part2_left_shu1 .gzly_list .link1 {
+            background: url(.//images/wyly.jpg) no-repeat;
+            padding-left: 25px;
+        }
+        
+        .part2_left_shu1 .gzly_list .link2 {
+            background: url(.//images/ckly.jpg) no-repeat;
+            padding-left: 25px;
+        }
+        
+        .part2_left_shu1 .gzly_list .link3 {
+            background-color: #cc4b4b;
+            color: #fff;
+            font-size: 13px;
+        }
+        
+        .part2_left_shu1 .gzly_list a {
+            width: 200px;
+            height: 80px;
+            line-height: 50px;
+            display: block;
+            margin-top: 17px;
+            font-size: 15px;
+            text-align: center;
+        }
+        
+        .part2_left_shu2 .gzly_tit a,
+        .part2_left_shu2 .video_tit a {
+            font-size: 17px;
+            font-weight: bold;
+            color: #333333;
+        }
+        
+        .part2_left_shu2 .zxbs_box .zxbs_link {
+            width: 100%;
+            height: 60px;
+            margin-bottom: 6px;
+        }
+        
+        .part2_left_shu2 .zxbs_link .zxbs_link1 {
+            width: 100px;
+            height: 60px;
+            padding-top: 38px;
+            text-align: center;
+            float: left;
+            background: url(.//images/bsdt.png) center top no-repeat;
+            margin: 0 10px;
+        }
+        
+        .part2_left_shu2 .zxbs_link .zxbs_link2 {
+            width: 100px;
+            height: 60px;
+            padding-top: 38px;
+            text-align: center;
+            float: left;
+            background: url(.//images/bszn.png) center top no-repeat;
+            margin: 0 10px;
+        }
+        
+        .part2_left_shu2 .zxbs_link .zxbs_link3 {
+            width: 100px;
+            height: 60px;
+            padding-top: 38px;
+            text-align: center;
+            float: left;
+            background: url(.//images/bgxz.png) center top no-repeat;
+            margin: 0 10px;
+        }
+        
+        .part2_left_shu2 .zxbs_link .zxbs_link1:hover {
+            background: url(.//images/bsdt1.png) center top no-repeat;
+        }
+        
+        .part2_left_shu2 .zxbs_link .zxbs_link2:hover {
+            background: url(.//images/bszn1.png) center top no-repeat;
+        }
+        
+        .part2_left_shu2 .zxbs_link .zxbs_link3:hover {
+            background: url(.//images/bgxz1.png) center top no-repeat;
+        }
+        
+        .part2_left_shu2 .gzfw_list a {
+           
+            height: 70px;
+            display: block;
+            margin-top: 12px;
+        }
+        
+
+        
+        .part2_left_shu2 .zxbs_box {
+            margin-top: 10px;
+        }
+     .gcdcl100zn{background-image: url(.//images/gcdcl100zn.jpg);background-position: center 0;background-repeat: no-repeat;padding-top:120px;}
+     @media only screen and (max-width:768px) { 
+     .gcdcl100zn{background-image: url(.//images/gcdcl100zn.jpg);background-position: center 0;background-repeat: no-repeat;padding-top:120px;min-width:1000px;}
+	 
+	 .xwfbh_list li {
+    margin-top: 20px;}
+	.link5{}
 	
-										</ul>
-										<ul class="num">
-											<li class="on"></li>
-											<li class=""></li>
-											<li class=""></li>
-											<li class=""></li>
-											<li class=""></li>
-										</ul>
-									</div>
-								</div>
-								<div class="trt-col-12 trt-col-sm-24 mar_t_base_sm slb-trt-col-24 slb_mar_t_large slb_mar_t_base_sm" role="viewlist" des="要闻信息">
-									<div class="tabs hasMoreTab tabs_01 zrzy_tabs tabs_public ywxxTab">
-										<div class="tabs_header tabs_hd">
-											<ul>
-												<li ><a href="http://www.gov.cn/" target="_blank"
-													title="国务院信息">国务院信息</a></li>
-												<li><a href="http://www.fujian.gov.cn/" target="_blank"
-														title="福建要闻">福建要闻</a></li>
-												<li><a href="http://www.fuzhou.gov.cn/gzdt/rcyw/" target="_blank"
-														title="榕城要闻">榕城要闻</a></li>
-												<li class="on"><a href="./zwgk/lyzx/" target="_blank" title="文旅动态">文旅动态</a></li>
-											</ul>
-										</div>
-										<div class="tabs_content tabs_bd">
-											<div class="list_base list_base_date_01">
-												<ul ms-controller="gwyxx">
-													<li ms-repeat="list" ms-if-loop="$index<6">
-														<a ms-attr-href="el.link" target="_blank" ms-attr-title="el.title"	ms-text="el.title|html"></a>
-														<span class="bf-pass" ms-text="el.pubDate|date('yyyy-MM-dd')"></span>
-													</li>
-												</ul>
-												<span class="more">
-													<a href="http://www.gov.cn/" target="_blank" title="更多">更多&gt;</a>
-												</span>
-											</div>
-											<div class="list_base list_base_date_01">
-												<ul ms-controller="szfxx">
-													<li ms-repeat="list" ms-if-loop="$index<6">
-														<a ms-attr-href="el.url" target="_blank" ms-attr-title="el.title"  ms-text=" el.title|html"></a>
-														<span class="bf-pass" ms-text="el.time|date('yyyy-MM-dd')"></span>
-													</li>
-												</ul>
-												<span class="more">
-													<a href="http://www.fujian.gov.cn/" title="更多" target="_blank">更多&gt;</a>
-												</span>
-											</div>
-											<div class="list_base list_base_date_01">
-												<ul ms-controller="rcyw">
-													<li  ms-repeat="list" ms-if-loop="$index<6">
-														<a ms-attr-href="el.url" target="_blank" ms-attr-title="el.title" ms-text=" el.title|html"></a>
-														<span ms-text="el.time|date('yyyy-MM-dd')"></span>
-													</li>
-												</ul>
-												<span class="more">
-													<a href="http://www.fuzhou.gov.cn/gzdt/rcyw/" target="_blank" title="更多">更多&gt;</a>
-												</span>
-											</div>
-											<div class="list_base list_base_date_01 gzdtbox">
-												<ul>
-													
-														<li><a href="./zwgk/lyzx/202603/t20260323_5299028.htm" target="_blank" title="有福之“粥”传孝意 文化志愿暖人心">有福之“粥”传孝意 文化志愿暖人心</a>
-															<span>2026-03-23</span></li>
-													
-														<li><a href="./zwgk/lyzx/202603/t20260320_5298319.htm" target="_blank" title="2026年全市文化和旅游工作会议召开">2026年全市文化和旅游工作会议召开</a>
-															<span>2026-03-20</span></li>
-													
-														<li><a href="./zwgk/lyzx/202603/t20260313_5295610.htm" target="_blank" title="市文旅局召开树立和践行正确政绩观学习教育工作部署会">市文旅局召开树立和践行正确政绩观学习教育工作部署会</a>
-															<span>2026-03-13</span></li>
-													
-														<li><a href="./zwgk/lyzx/202603/t20260309_5293244.htm" target="_blank" title="赏非遗·逛市集·闹元宵  潮有young的文化盛宴圆满落幕——2026年元宵节非遗主题活动精彩回顾">赏非遗·逛市集·闹元宵  潮有young的文化盛宴圆满落幕——2026年元宵节非遗主题活动精彩回顾</a>
-															<span>2026-03-09</span></li>
-													
-														<li><a href="./zwgk/lyzx/202603/t20260304_5291281.htm" target="_blank" title="市文旅局召开2025年度领导班子述责述廉、机关（行业）党委书记抓党建工作述职暨2026年全面从严治党、意识形态、党建、统战工作部署会">市文旅局召开2025年度领导班子述责述廉、机关（行业）党委书记抓党建工作述职暨2026年全面从严治党、意识形态、党建、统战工作部署会</a>
-															<span>2026-03-04</span></li>
-													
-														<li><a href="./zwgk/lyzx/202602/t20260226_5288376.htm" target="_blank" title="非遗贺新春 闽都年味浓——福州市非遗展示馆新春活动亮点纷呈">非遗贺新春 闽都年味浓——福州市非遗展示馆新春活动亮点纷呈</a>
-															<span>2026-02-26</span></li>
-													
-												</ul>
-												<span class="more">
-													<a href="https://wlj.fuzhou.gov.cn/zwgk/lyzx/" target="_blank" title="更多">更多&gt;</a>
-												</span>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						
-						<div class="mar_t_large mar_t_base_sm ban_list" role="viewlist" des="首页横幅">
-								<div class="bd">
-									<ul>
-										
-									</ul>
-								</div>
-								<div class="num">
-									<ul>
-										<li></li>
-									</ul>
-								</div>
-						</div>
-						<div class="con_box mar_t_large mar_t_base_sm zwgkbox">
-							<div class="trt-row trt-row-xl"><i class="col_line trt-col-push-8"></i><i class="col_line trt-col-push-16"></i>
-								<div class="trt-col-8 trt-col-sm-24 slb-trt-col-24" role="viewlist" des="政务公开">
-									<div class="tabs_02">
-										<ul>
-											<li><a href="https://wlj.fuzhou.gov.cn/zwgk/" title="政务公开" target="_blank">
-												<img src="./images/221027qznyj_icon1.png" />政务公开</a></li>
-										</ul>
-									</div>
-									<div class="tabs hasMoreTab zrzy_tabs tabs_public">
-										<div class="tabs_header tabs_hd">
-											<ul>
-												<li class="on"><a href="./zwgk/gsgg/" target="_blank" title="公示公告">公示公告</a></li>
-												<li ><a href="./zwgk/lyfg/" target="_blank" title="政策法规">政策法规</a></li>
-												<li><a href="./zwgk/rsxx/" target="_blank" title="人事信息">人事信息</a></li>
-											</ul>
-										</div>
-										<div class="tabs_content tabs_bd">
-											
-											<div class="list_base list_base_date_01">
-												<ul>
-													
-														<li><a href="./zwgk/gsgg/202603/t20260323_5299225.htm" target="_blank" title="福州市文化和旅游局关于2025年旅行社组织引客入榕、乡村游等奖励资金（第二批）的公示">福州市文化和旅游局关于2025年旅行社组织引客入榕、乡村游等奖励资金（第二批）的公示</a>
-															<span>03-23</span></li>
-													
-														<li><a href="./zwgk/gsgg/202603/t20260320_5298767.htm" target="_blank" title="福州市文化和旅游局关于福州市第28届戏剧剧本征文评审结果的公示">福州市文化和旅游局关于福州市第28届戏剧剧本征文评审结果的公示</a>
-															<span>03-20</span></li>
-													
-														<li><a href="./zwgk/gsgg/202603/t20260320_5298759.htm" target="_blank" title="福州市文化和旅游局关于征求部分文化市场综合执法行政处罚事项裁量基准调整意见的公告">福州市文化和旅游局关于征求部分文化市场综合执法行政处罚事项裁量基准调整意见的公告</a>
-															<span>03-20</span></li>
-													
-														<li><a href="./zwgk/gsgg/202603/t20260316_5295975.htm" target="_blank" title="2026年“有福之州·全民惠游”首期促消费补贴活动商户征集公告">2026年“有福之州·全民惠游”首期促消费补贴活动商户征集公告</a>
-															<span>03-16</span></li>
-													
-														<li><a href="./zwgk/gsgg/202603/t20260310_5293916.htm" target="_blank" title="福州评话伬艺传习所2026年度公开招聘外聘人员公告">福州评话伬艺传习所2026年度公开招聘外聘人员公告</a>
-															<span>03-10</span></li>
-													
-												</ul>
-												<span class="more">
-													<a href="https://wlj.fuzhou.gov.cn/zwgk/gsgg/" target="_blank" title="更多">更多&gt;</a>
-												</span>
-											</div>
-											<div class="list_base list_base_date_01">
-												<ul>
-													
-														<li class="tempNone"><a href="./zwgk/lyfg/202509/t20250909_5075237.htm" target="_blank" title="福州市文化和旅游局福州市商务局福州市发展和改革委员会福州市财政局关于印发《福州市酒店业电视终端以旧换新补贴实施细则》的通知">福州市文化和旅游局福州市商务局福州市发展和改革委员会福州市财政局关于印发《福州市酒店业电视终端以旧换新补贴实施细则》的通知</a>
-															<span>07-23</span></li>
-													
-														<li class="tempNone"><a href="./zwgk/lyfg/202507/t20250715_5048042.htm" target="_blank" title="福州市人民政府办公厅印发福州市关于扶持演艺经济繁荣发展的暂行办法的通知">福州市人民政府办公厅印发福州市关于扶持演艺经济繁荣发展的暂行办法的通知</a>
-															<span>07-15</span></li>
-													
-														<li class="tempNone"><a href="./zwgk/lyfg/202507/t20250715_5048027.htm" target="_blank" title="福州市人民政府办公厅关于印发福州市促进入境旅游若干措施的通知">福州市人民政府办公厅关于印发福州市促进入境旅游若干措施的通知</a>
-															<span>07-15</span></li>
-													
-														<li class="tempNone"><a href="./zwgk/lyfg/202511/t20251117_5232636.htm" target="_blank" title="福州市文化和旅游局关于印发《福州市文化市场综合执法行政处罚裁量基准（2025年版）》及适用说明的通知">福州市文化和旅游局关于印发《福州市文化市场综合执法行政处罚裁量基准（2025年版）》及适用说明的通知</a>
-															<span>03-10</span></li>
-													
-														<li class="tempNone"><a href="./zwgk/lyfg/202407/t20240731_4868421.htm" target="_blank" title="福州市文化和旅游局 福州市财政局关于印发《福州市促进文旅产业高质量发展的扶持措施（2024-2026年）》的通知">福州市文化和旅游局 福州市财政局关于印发《福州市促进文旅产业高质量发展的扶持措施（2024-2026年）》的通知</a>
-															<span>07-31</span></li>
-													
-												</ul>
-												<span class="more">
-													<a href="https://wlj.fuzhou.gov.cn/zwgk/lyfg/" target="_blank" title="更多">更多&gt;</a>
-												</span>
-											</div>
-											<div class="list_base list_base_date_01">
-												<ul>
-													
-														<li class="tempNone"><a href="./zwgk/rsxx/202603/t20260310_5293916.htm" target="_blank" title="福州评话伬艺传习所2026年度公开招聘外聘人员公告">福州评话伬艺传习所2026年度公开招聘外聘人员公告</a>
-															<span>03-10</span></li>
-													
-														<li class="tempNone"><a href="./zwgk/rsxx/202601/t20260116_5272449.htm" target="_blank" title="福州市文化和旅游局关于2025年度局属艺术事业单位自主公开招聘工作人员拟聘人选公示">福州市文化和旅游局关于2025年度局属艺术事业单位自主公开招聘工作人员拟聘人选公示</a>
-															<span>01-16</span></li>
-													
-														<li class="tempNone"><a href="./zwgk/rsxx/202512/t20251225_5261715.htm" target="_blank" title="福州市文化和旅游局职称改革领导小组 福州市职称改革领导小组办公室关于开展2025年度图书资料、群众文化和艺术系列中、初级职称评审工作的通知">福州市文化和旅游局职称改革领导小组 福州市职称改革领导小组办公室关于开展2025年度图书资料、群众文化和艺术系列中、初级职称评审工作的通知</a>
-															<span>12-25</span></li>
-													
-														<li class="tempNone"><a href="./zwgk/rsxx/202511/t20251113_5231336.htm" target="_blank" title="福州市文化艺术事业单位2025年度自主公开招聘面试成绩、综合成绩和岗位综合排名公示">福州市文化艺术事业单位2025年度自主公开招聘面试成绩、综合成绩和岗位综合排名公示</a>
-															<span>11-13</span></li>
-													
-														<li class="tempNone"><a href="./zwgk/rsxx/202510/t20251024_5222390.htm" target="_blank" title="福州市文化艺术事业单位2025年度自主公开招聘面试名单">福州市文化艺术事业单位2025年度自主公开招聘面试名单</a>
-															<span>10-24</span></li>
-													
-												</ul>
-												<span class="more">
-													<a href="https://wlj.fuzhou.gov.cn/zwgk/rsxx/" target="_blank" title="更多">更多&gt;</a>
-												</span>
-											</div>
-										</div>
-									</div>
-									<div class="special_title special_title_08 mar_t_base">
-										<em></em><span>政府信息公开</span><em></em>
-									</div>
-									<div class="ind_con1">
-										<div class="pad_base pad_t_xs">
-											<div class="icon_list_group icon_list_group_14 icon_list_pad_small">
-												<ul class="trt-row">
-													
-														<li class="mar_t_02 trt-col-12 trt-col-sm-24"><a href="https://wlj.fuzhou.gov.cn/zfxxgkzl/zc/" target="_blank" title="政策">政策</a></li>										
-													
-														<li class="mar_t_02 trt-col-12 trt-col-sm-24"><a href="https://wlj.fuzhou.gov.cn/zfxxgkzl/gkzn/" target="_blank" title="政府信息公开指南">政府信息公开指南</a></li>										
-													
-														<li class="mar_t_02 trt-col-12 trt-col-sm-24"><a href="http://www.fuzhou.gov.cn/zfxxgkzl/szfbmjxsqxxgk/szfbmxxgk/fzsrmzf/zfxxgkzd/" target="_blank" title="政府信息公开制度">政府信息公开制度</a></li>										
-													
-														<li class="mar_t_02 trt-col-12 trt-col-sm-24"><a href="https://wlj.fuzhou.gov.cn/zfxxgkzl/gkml/" target="_blank" title="法定主动公开内容">法定主动公开内容</a></li>										
-													
-														<li class="mar_t_02 trt-col-12 trt-col-sm-24"><a href="https://wlj.fuzhou.gov.cn/zfxxgkzl/ndbg/" target="_blank" title="政府信息公开年报">政府信息公开年报</a></li>										
-													
-														<li class="mar_t_02 trt-col-12 trt-col-sm-24"><a href="https://wlj.fuzhou.gov.cn/zfxxgkzl/ysqgk/" target="_blank" title="政府信息公开申请">政府信息公开申请</a></li>										
-													
-												</ul>
-											</div>
-										</div>
-									</div>
-									<div class="icon_list1">
-										<ul class="trt-row">
-											<li class="trt-col-12 slb-trt-col-sm-24"><a href="https://wlj.fuzhou.gov.cn/zwgk/jgxx/" target="_blank" title="机构信息"><i class="trt-iconfont trt-icon-jigou"></i>机构信息</a></li>
-											<li class="trt-col-12 slb-trt-col-sm-24"><a href="https://wlj.fuzhou.gov.cn/zwgk/lygh/" target="_blank" title="规划计划"><i class="trt-iconfont trt-icon-zhongdianlingyuxinxigongkai"></i>规划计划</a></li>
-										</ul>
-									</div>
-								</div>
-								<div class="trt-col-8 trt-col-sm-24 mar_t_base_sm slb-trt-col-24 slb_mar_t_large slb_mar_t_base_sm" role="viewlist" des="办事服务">
-									<div class="tabs_02">
-										<ul>
-											<li><a href="https://zwfw.fujian.gov.cn/person-todo/detail?userType=3&deptId=98E28E500B658C653172759D82F27C6D&bsfwCount=61&areaCode=350100&siteUnid=171D14F5EE9720E1956DEEC922F4E1F2" target="_blank" title="办事服务"><img src="./images/221027qznyj_icon2.png" />
-												办事服务</a>
-											</li>
-										</ul>
-									</div>
-									<div class="ind_con2">
-										<div class="tu"><a href="https://zwfw.fujian.gov.cn/person-todo/detail?userType=3&siteUnid=171D14F5EE9720E1956DEEC922F4E1F2&curStatus=dept&deptId=98E28E500B658C653172759D82F27C6D"  target="_blank" title="福建省网上办事大厅"><img src="./images/221119qzghj_logo1.png" alt="福建省网上办事大厅" /></a></div>
-										<div class="bar_list">
-											<a href="https://zwfw.fujian.gov.cn/person-todo/detail?userType=3&siteUnid=171D14F5EE9720E1956DEEC922F4E1F2&curStatus=dept&deptId=98E28E500B658C653172759D82F27C6D" target="_blank" title="我要办">我要办</a>
-											<a href="https://zwfw.fujian.gov.cn/person-todo/detail?userType=3&siteUnid=171D14F5EE9720E1956DEEC922F4E1F2&curStatus=dept&deptId=98E28E500B658C653172759D82F27C6D" target="_blank" title="我要查">我要查</a>
-											<a href="https://zwfw.fujian.gov.cn/listopen/index?siteUnid=171D14F5EE9720E1956DEEC922F4E1F2" target="_blank" title="我要看">我要看</a>
-											<a href="https://zwfw.fujian.gov.cn/comments/index?siteUnid=171D14F5EE9720E1956DEEC922F4E1F2" target="_blank" title="我要评">我要评</a>
-										  </div>
-									</div>
-									<div class="tabs_02 mar_t_base">
-										<ul>
-											<li><a href="https://wlj.fuzhou.gov.cn/zwgk/ztzl/fzlyzn/"  title="遇见福州" target="_blank">
-												<img src="./images/231114qznyj_icon1.png" />遇见福州</a></li>
-										</ul>
-									</div>
-									<div class="whl_video">
-										<div ms-include-src='videoBoxUrl'></div>
-									</div>
-									<div class="tabs hasMoreTab zrzy_tabs wl_fw_con tabs_public">
-										<div class="tabs_header tabs_hd">
-											<ul>
-												<li class="on"><a href="./zwgk/ztzl/fzlyzn/wlml/" target="_blank" title="文旅名录">文旅名录</a></li>
-												<li><a href="./zwgk/ztzl/fzlyzn/ggfw/" target="_blank" title="文旅活动">文旅活动</a></li>
-											</ul>
-										</div>
-										<div class="tabs_content tabs_bd">
-											<div>
-												<ul class="trt-row">
-													
-														<li class="trt-col-12 trt-clo-md-24 slb-trt-col-8 slb-trt-col-sm-12 slb-trt-col-md-24 mar_b_01 slb_mar_b_base">
-															<a href="./zwgk/ztzl/fzlyzn/wlml/202203/t20220330_4335239.htm" target="_blank" title="星级旅游饭店信息查询">星级旅游饭店信息查询</a>
-														</li>
-													
-														<li class="trt-col-12 trt-clo-md-24 slb-trt-col-8 slb-trt-col-sm-12 slb-trt-col-md-24 mar_b_01 slb_mar_b_base">
-															<a href="./zwgk/ztzl/fzlyzn/wlml/202111/t20211103_4228716.htm" target="_blank" title="A级旅游景区信息查询">A级旅游景区信息查询</a>
-														</li>
-													
-														<li class="trt-col-12 trt-clo-md-24 slb-trt-col-8 slb-trt-col-sm-12 slb-trt-col-md-24 mar_b_01 slb_mar_b_base">
-															<a href="./zwgk/ztzl/fzlyzn/wlml/202112/t20211203_4260141.htm" target="_blank" title="旅行社信息查询">旅行社信息查询</a>
-														</li>
-													
-														<li class="trt-col-12 trt-clo-md-24 slb-trt-col-8 slb-trt-col-sm-12 slb-trt-col-md-24 mar_b_01 slb_mar_b_base">
-															<a href="./zwgk/ztzl/fzlyzn/wlml/202112/t20211210_4267085.htm" target="_blank" title="图书馆信息查询">图书馆信息查询</a>
-														</li>
-													
-														<li class="trt-col-12 trt-clo-md-24 slb-trt-col-8 slb-trt-col-sm-12 slb-trt-col-md-24 mar_b_01 slb_mar_b_base">
-															<a href="./zwgk/ztzl/fzlyzn/wlml/202112/t20211210_4267022.htm" target="_blank" title="福州市公共文化馆一览表">福州市公共文化馆一览表</a>
-														</li>
-													
-														<li class="trt-col-12 trt-clo-md-24 slb-trt-col-8 slb-trt-col-sm-12 slb-trt-col-md-24 mar_b_01 slb_mar_b_base">
-															<a href="./zwgk/ztzl/fzlyzn/wlml/202112/t20211210_4267072.htm" target="_blank" title="市级非物质文化遗产代表性项目名录查询">市级非物质文化遗产代表性项目名录查询</a>
-														</li>
-													
-												</ul>
-												<span class="more none block_sm">
-													<a href="https://wlj.fuzhou.gov.cn/zwgk/ztzl/fzlyzn/wlml/" target="_blank" title="更多">更多&gt;</a>
-												</span>
-											</div>
-											<div>
-												<ul class="trt-row">
-													
-														<li class="trt-col-12 trt-clo-md-24 slb-trt-col-8 slb-trt-col-sm-12 slb-trt-col-md-24 mar_b_01 slb_mar_b_base">
-															<a href="./zwgk/ztzl/fzlyzn/ggfw/202603/t20260309_5293244.htm" target="_blank" title="赏非遗·逛市集·闹元宵  潮有young的文化盛宴圆满落幕——2026年元宵节非遗主题活动精彩回顾">赏非遗·逛市集·闹元宵  潮有young的文化盛宴圆满落幕——2026年元宵节非遗主题活动精彩回顾</a>
-														</li>
-													
-														<li class="trt-col-12 trt-clo-md-24 slb-trt-col-8 slb-trt-col-sm-12 slb-trt-col-md-24 mar_b_01 slb_mar_b_base">
-															<a href="./zwgk/ztzl/fzlyzn/ggfw/202602/t20260226_5288376.htm" target="_blank" title="非遗贺新春 闽都年味浓——福州市非遗展示馆新春活动亮点纷呈">非遗贺新春 闽都年味浓——福州市非遗展示馆新春活动亮点纷呈</a>
-														</li>
-													
-														<li class="trt-col-12 trt-clo-md-24 slb-trt-col-8 slb-trt-col-sm-12 slb-trt-col-md-24 mar_b_01 slb_mar_b_base">
-															<a href="./zwgk/ztzl/fzlyzn/ggfw/202602/t20260226_5288346.htm" target="_blank" title="“文化馆里过大年”新春系列活动精彩纷呈">“文化馆里过大年”新春系列活动精彩纷呈</a>
-														</li>
-													
-														<li class="trt-col-12 trt-clo-md-24 slb-trt-col-8 slb-trt-col-sm-12 slb-trt-col-md-24 mar_b_01 slb_mar_b_base">
-															<a href="./zwgk/ztzl/fzlyzn/ggfw/202602/t20260226_5288325.htm" target="_blank" title="潮起闽都 艺承非遗——福州新春非遗国潮快闪点亮古厝年味">潮起闽都 艺承非遗——福州新春非遗国潮快闪点亮古厝年味</a>
-														</li>
-													
-														<li class="trt-col-12 trt-clo-md-24 slb-trt-col-8 slb-trt-col-sm-12 slb-trt-col-md-24 mar_b_01 slb_mar_b_base">
-															<a href="./zwgk/ztzl/fzlyzn/ggfw/202602/t20260213_5285748.htm" target="_blank" title="来福州过福年 福聚榕城贺新春  2026福州新春文化旅游月盛大启幕">来福州过福年 福聚榕城贺新春  2026福州新春文化旅游月盛大启幕</a>
-														</li>
-													
-														<li class="trt-col-12 trt-clo-md-24 slb-trt-col-8 slb-trt-col-sm-12 slb-trt-col-md-24 mar_b_01 slb_mar_b_base">
-															<a href="./zwgk/ztzl/fzlyzn/ggfw/202601/t20260129_5278543.htm" target="_blank" title="来福州，过福年！百万红包邀您过个“福气”年！">来福州，过福年！百万红包邀您过个“福气”年！</a>
-														</li>
-													
-												</ul>
-												<span class="more none block_sm">
-													<a href="https://wlj.fuzhou.gov.cn/zwgk/ztzl/fzlyzn/ggfw/" target="_blank" title="更多">更多&gt;</a>
-												</span>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="trt-col-8 trt-col-sm-24 mar_t_base_sm slb-trt-col-24 slb_mar_t_large slb_mar_t_base_sm" role="viewlist" des="互动交流">
-									<div class="tabs_02">
-										<ul>
-											<li><a href="https://wlj.fuzhou.gov.cn/hdjl/" target="_blank" title="互动交流"><img src="./images/221027qznyj_icon3.png" />
-												互动交流</a>
-											</li>
-										</ul>
-									</div>
-									<div class="ind_con3">
-										<a href="http://fz12345.fuzhou.gov.cn/" target="_blank" title="12345便民服务平台">
-											<h3>12345便民服务平台</h3>
-											<p>有呼必应 有诉必理 有理必果</p>
-										</a>
-									</div>
-									<div class="tabs hasMoreTab zrzy_tabs">
-										<div class="tabs_header tabs_hd">
-											<ul>
-												<li class="on"><a href="./hdjl/myzj/" target="_blank" title="民意征集">民意征集</a></li>
-											</ul>
-										</div>
-										<div class="list_base list_base_date_01 list_base_state_01">
-											<ul ms-controller="myzjList">
-												<li  ms-repeat="list" ms-if-loop="$index<5" ms-class="on:el.status=='征集中'" >
-													<a ms-attr-href="'./hdjl/myzj/detail.htm?id='+el.id" ms-text="el.title|html" ms-attr-title="el.title"
-													target="_blank"></a>
-													<span ms-text="el.status"></span></li>
-											</ul>
-											<span class="more">
-												<a href="https://wlj.fuzhou.gov.cn/hdjl/myzj/" target="_blank" title="更多">更多&gt;</a>
-											</span>
-										</div>
-										
-									</div>
-									<div class="tabs hasMoreTab zrzy_tabs">
-										<div class="tabs_header tabs_hd">
-											<ul>
-												<li class="on"><a href="./hdjl/wsdc/" target="_blank" title="网上调查">网上调查</a></li>
-											</ul>
-										</div>
-										<div class="list_base list_base_date_01 list_base_state_01">
-											<ul ms-controller="wsdclist" >
-												<li ms-repeat="list" ms-if-loop="$index<5" ms-class="on:el.status=='调查中'" >
-													<a ms-attr-href="'./hdjl/wsdc/detail.htm?id='+el.id"  ms-attr-title="el.theme"  ms-text="el.theme|html"
-													target="_blank"></a>
-													<span ms-text="el.status"></span>
-												</li>
-											</ul>
-											<span class="more">
-												<a href="https://wlj.fuzhou.gov.cn/hdjl/wsdc/" target="_blank" title="更多">更多&gt;</a>
-											</span>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="content_bg_02 mar_t_base pad_base pad_base0_sm" role="viewlist" des="专题专栏">
-							<div class="ind_ztzl_tit"><span><a href="./zwgk/ztzl/" target="_blank" title="专题专栏">专题专栏</a></span></div>
-							<div class="ind_ztzl_list mar_t_base" id="ind_ztzl_list">
-								<span class="prev"><i class="trt-iconfont trt-icon-arrow-left"></i></span>
-								<span class="next"><i class="trt-iconfont trt-icon-arrow"></i></span>
-								<div class="bd">
-									<ul class="trt-row">
-										
-											<li class="trt-col-6 trt-col-sm-12 trt-col-md-24 slb-trt-col-12 slb-trt-col-sm-24">
-												<a href="https://news.fznews.com.cn/zt/2022/ddesdjs/" title="深入学习宣传贯彻党的二十大精神" target="_blank">
-													<p><span>深入学习宣传贯彻党的二十大精神</span></p>
-													<em>
-														
-															
-																<img src="./zwgk/ztzl/202311/W020231113315374736690.png" alt="深入学习宣传贯彻党的二十大精神" />
-														  
-														</em>
-												</a>
-											</li>
-										
-											<li class="trt-col-6 trt-col-sm-12 trt-col-md-24 slb-trt-col-12 slb-trt-col-sm-24">
-												<a href="https://news.fznews.com.cn/zt/2023/xxzygwzxsgzx/" title="深学争优 敢为争先 实干争效" target="_blank">
-													<p><span>深学争优 敢为争先 实干争效</span></p>
-													<em>
-														
-															
-																<img src="./zwgk/ztzl/202311/W020240228359991589163.png" alt="深学争优 敢为争先 实干争效" />
-														  
-														</em>
-												</a>
-											</li>
-										
-											<li class="trt-col-6 trt-col-sm-12 trt-col-md-24 slb-trt-col-12 slb-trt-col-sm-24">
-												<a href="https://wlj.fuzhou.gov.cn/zwgk/ztzl/jgdj/" title="机关党建" target="_blank">
-													<p><span>机关党建</span></p>
-													<em>
-														
-															
-																<img src="./zwgk/ztzl/202311/W020231113314791653046.png" alt="机关党建" />
-														  
-														</em>
-												</a>
-											</li>
-										
-											<li class="trt-col-6 trt-col-sm-12 trt-col-md-24 slb-trt-col-12 slb-trt-col-sm-24">
-												<a href="https://wlj.fuzhou.gov.cn/zwgk/ztzl/fzlyzn/" title="遇见福州" target="_blank">
-													<p><span>遇见福州</span></p>
-													<em>
-														
-															
-																<img src="./zwgk/ztzl/202311/W020231113314584815266.png" alt="遇见福州" />
-														  
-														</em>
-												</a>
-											</li>
-															
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="footer">
-	<div class="border_t_solid_01"></div>
-	<div class="row">
-		<div class="out_links"  role="navigation" des="网站链接">
-			<ul class="trt-row"  ms-controller="tabYqlj">
-				
-					<li class="trt-col-6" ms-click="$tog2(1)" ms-class="on:curr===1">
-					  <p>
-						上级主管部门
-					  </p>
-					  <div class="shadow_base" id="yqlj_1">
-						<ul class="trt-row">
-						  
-							<li class="trt-col-ave-7 trt-col-sm-24">
-							  <a href="https://www.mct.gov.cn/" target="_blank" title="文化和旅游部">文化和旅游部</a>
-							</li>
-						  
-							<li class="trt-col-ave-7 trt-col-sm-24">
-							  <a href="https://wlt.fujian.gov.cn/" target="_blank" title="福建省文化和旅游厅">福建省文化和旅游厅</a>
-							</li>
-						  
-							<li class="trt-col-ave-7 trt-col-sm-24">
-							  <a href="http://gdj.fujian.gov.cn/" target="_blank" title="福建省广播电视局">福建省广播电视局</a>
-							</li>
-						  
-						</ul>
-					  </div>
-					</li>
-				  
-					<li class="trt-col-6" ms-click="$tog2(2)" ms-class="on:curr===2">
-					  <p>
-						政府部门网站
-					  </p>
-					  <div class="shadow_base" id="yqlj_2">
-						<ul class="trt-row">
-						  
-							<li class="trt-col-ave-7 trt-col-sm-24">
-							  <a href="http://www.fuzhou.gov.cn/" target="_blank" title="市政府">市政府</a>
-							</li>
-						  
-							<li class="trt-col-ave-7 trt-col-sm-24">
-							  <a href="http://fz12345.fuzhou.gov.cn/" target="_blank" title="市12345便民服务平台">市12345便民服务平台</a>
-							</li>
-						  
-							<li class="trt-col-ave-7 trt-col-sm-24">
-							  <a href="http://www.fuzhou.gov.cn/xfzdzt/rcxf/" target="_blank" title="市消防支队">市消防支队</a>
-							</li>
-						  
-							<li class="trt-col-ave-7 trt-col-sm-24">
-							  <a href="http://jyj.fuzhou.gov.cn/" target="_blank" title="市教育局">市教育局</a>
-							</li>
-						  
-							<li class="trt-col-ave-7 trt-col-sm-24">
-							  <a href="http://www.fuzhou.gov.cn/zgfzzt/sjxw/fzjx/" target="_blank" title="市工信局">市工信局</a>
-							</li>
-						  
-							<li class="trt-col-ave-7 trt-col-sm-24">
-							  <a href="http://hyj.fuzhou.gov.cn/" target="_blank" title="市海渔局">市海渔局</a>
-							</li>
-						  
-							<li class="trt-col-ave-7 trt-col-sm-24">
-							  <a href="http://nyj.fuzhou.gov.cn/" target="_blank" title="市农业农村局">市农业农村局</a>
-							</li>
-						  
-							<li class="trt-col-ave-7 trt-col-sm-24">
-							  <a href="http://www.fuzhou.gov.cn/zgfzzt/shbj/" target="_blank" title="市生态环境局">市生态环境局</a>
-							</li>
-						  
-							<li class="trt-col-ave-7 trt-col-sm-24">
-							  <a href="http://slj.fuzhou.gov.cn/" target="_blank" title="市水利局">市水利局</a>
-							</li>
-						  
-							<li class="trt-col-ave-7 trt-col-sm-24">
-							  <a href="http://mzj.fuzhou.gov.cn/" target="_blank" title="市民政局">市民政局</a>
-							</li>
-						  
-							<li class="trt-col-ave-7 trt-col-sm-24">
-							  <a href="http://zfj.fuzhou.gov.cn/" target="_blank" title="市城管委">市城管委</a>
-							</li>
-						  
-							<li class="trt-col-ave-7 trt-col-sm-24">
-							  <a href="http://zygh.fuzhou.gov.cn/" target="_blank" title="市自然资源和规划局">市自然资源和规划局</a>
-							</li>
-						  
-							<li class="trt-col-ave-7 trt-col-sm-24">
-							  <a href="http://fzjt.fuzhou.gov.cn/" target="_blank" title="市交通运输局">市交通运输局</a>
-							</li>
-						  
-							<li class="trt-col-ave-7 trt-col-sm-24">
-							  <a href="http://swj.fuzhou.gov.cn/" target="_blank" title="市商务局">市商务局</a>
-							</li>
-						  
-							<li class="trt-col-ave-7 trt-col-sm-24">
-							  <a href="https://zjj.fuzhou.gov.cn/" target="_blank" title="市住房和城乡建设局">市住房和城乡建设局</a>
-							</li>
-						  
-							<li class="trt-col-ave-7 trt-col-sm-24">
-							  <a href="http://glj.fuzhou.gov.cn/" target="_blank" title="市公路事业发展中心">市公路事业发展中心</a>
-							</li>
-						  
-							<li class="trt-col-ave-7 trt-col-sm-24">
-							  <a href="http://sjj.fuzhou.gov.cn/" target="_blank" title="市审计局">市审计局</a>
-							</li>
-						  
-							<li class="trt-col-ave-7 trt-col-sm-24">
-							  <a href="http://tjj.fuzhou.gov.cn/" target="_blank" title="市统计局">市统计局</a>
-							</li>
-						  
-							<li class="trt-col-ave-7 trt-col-sm-24">
-							  <a href="http://www.fuzhou.gov.cn/zgfzzt/swjw/fzwj/" target="_blank" title="市卫健委">市卫健委</a>
-							</li>
-						  
-							<li class="trt-col-ave-7 trt-col-sm-24">
-							  <a href="http://fgw.fuzhou.gov.cn/" target="_blank" title="市发改委">市发改委</a>
-							</li>
-						  
-							<li class="trt-col-ave-7 trt-col-sm-24">
-							  <a href="http://bdcdj.fuzhou.gov.cn/" target="_blank" title="市不动产登记和交易中心">市不动产登记和交易中心</a>
-							</li>
-						  
-							<li class="trt-col-ave-7 trt-col-sm-24">
-							  <a href="http://ylj.fuzhou.gov.cn/" target="_blank" title="市园林中心">市园林中心</a>
-							</li>
-						  
-							<li class="trt-col-ave-7 trt-col-sm-24">
-							  <a href="http://sfj.fuzhou.gov.cn/" target="_blank" title="市司法局">市司法局</a>
-							</li>
-						  
-							<li class="trt-col-ave-7 trt-col-sm-24">
-							  <a href="http://xzfwzx.fuzhou.gov.cn/" target="_blank" title="市行政服务中心">市行政服务中心</a>
-							</li>
-						  
-							<li class="trt-col-ave-7 trt-col-sm-24">
-							  <a href="http://www.fuzhou.gov.cn/zgfzzt/skjj/kjzl/" target="_blank" title="市科技局">市科技局</a>
-							</li>
-						  
-							<li class="trt-col-ave-7 trt-col-sm-24">
-							  <a href="http://tyj.fuzhou.gov.cn/" target="_blank" title="市体育局">市体育局</a>
-							</li>
-						  
-							<li class="trt-col-ave-7 trt-col-sm-24">
-							  <a href="http://fj.cma.gov.cn/fzsqxj/" target="_blank" title="市气象局">市气象局</a>
-							</li>
-						  
-							<li class="trt-col-ave-7 trt-col-sm-24">
-							  <a href="http://fzly.fuzhou.gov.cn/" target="_blank" title="市林业局">市林业局</a>
-							</li>
-						  
-							<li class="trt-col-ave-7 trt-col-sm-24">
-							  <a href="http://www.fuzhou.gov.cn/zgfzzt/fzjzzl/fzjzzl/" target="_blank" title="市防震减灾中心">市防震减灾中心</a>
-							</li>
-						  
-							<li class="trt-col-ave-7 trt-col-sm-24">
-							  <a href="http://jcj.fuzhou.gov.cn/" target="_blank" title="市纪委监委">市纪委监委</a>
-							</li>
-						  
-							<li class="trt-col-ave-7 trt-col-sm-24">
-							  <a href="http://tdzx.fuzhou.gov.cn/" target="_blank" title="市土地发展中心">市土地发展中心</a>
-							</li>
-						  
-							<li class="trt-col-ave-7 trt-col-sm-24">
-							  <a href="http://zfgjj.fuzhou.gov.cn/" target="_blank" title="市公积金中心">市公积金中心</a>
-							</li>
-						  
-							<li class="trt-col-ave-7 trt-col-sm-24">
-							  <a href="http://gaj.fuzhou.gov.cn/" target="_blank" title="市公安局">市公安局</a>
-							</li>
-						  
-							<li class="trt-col-ave-7 trt-col-sm-24">
-							  <a href="http://fujian.chinatax.gov.cn/fzsswj/" target="_blank" title="市税务局">市税务局</a>
-							</li>
-						  
-							<li class="trt-col-ave-7 trt-col-sm-24">
-							  <a href="http://fzwb.fuzhou.gov.cn/" target="_blank" title="市外事办">市外事办</a>
-							</li>
-						  
-							<li class="trt-col-ave-7 trt-col-sm-24">
-							  <a href="http://scjg.fuzhou.gov.cn/" target="_blank" title="市市场监管局">市市场监管局</a>
-							</li>
-						  
-						</ul>
-					  </div>
-					</li>
-				  
-			</ul>
-			<div class="out_links_close shadow_base"><i class="trt-iconfont trt-icon-dacha"></i></div>
-		</div>
-	</div>
-	<div class="border_b_solid_01"></div>
-	<div class="row mar_t_base mar_t_small_sm" role="serve" des="网站信息">
-		<div class="trt-row clearflx">
-			<div class="trt-col-12 trt-col-sm-24 website_info">
-				<p>
-					<a href="https://wlj.fuzhou.gov.cn/bzzx/lxwm/" target="_blank" title="联系我们">联系我们</a>
-					
-						
-						
-						<em>|</em>
-						<a href="https://wlj.fuzhou.gov.cn/bzzx/zddt/" target="_blank" title="站点地图">站点地图</a>						
-						
-					
-						
-						
-						<em>|</em>
-						<a href="https://wlj.fuzhou.gov.cn/bzzx/ysbh/" target="_blank" title="隐私保护">隐私保护</a>						
-						
-					
-						 
-						
-					
-				</p>
-				<p><span>网站标识码：3501000002</span>
-					<span><img src="/images/babs.png" alt="闽公网安备：35010402351536号" /><a href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=35010402351536" target="_blank" title="闽公网安备：35010402351536号">闽公网安备：35010402351536号</a></span>
-					<span><a href="https://beian.miit.gov.cn/"  target="_blank" title="闽ICP备2022005143号-2">闽ICP备2022005143号-2</a></span></p>
-				<p><span>版权所有：福州市文化和旅游局</span></p>
-			</div>
-			<div class="trt-col-8 trt-col-sm-24 media_info">
-				<h3>新媒体矩阵</h3>
-				<ul class="trt-row">
-					<li class="trt-col-8"> 
-						<a href="javascript:void(0);"><span class="trt-iconfont trt-icon-minzhengtong"></span>闽政通</a>
-						<div class="ewm_tu"><img src="/public/images/20fzszf_mzt_ewm.png" alt="闽政通" /></div>
-					</li>
-					<li class="trt-col-8">
-						<a href="javascript:void(0);"><span class="trt-iconfont trt-icon-weixin1"></span>官方微信</a>
-						<div class="ewm_tu"><img src="/images/fzwlj_wxgzh.jpg" alt="官方微信" width="100%" /></div>
-					</li>
-					<li class="trt-col-8"><a href="https://weibo.com/p/1001062171536211/" target="_blank" title="官方微博"><span class="trt-iconfont trt-icon-weibo"></span>官方微博</a></li>
-			
-					
-				</ul>
-			</div>
-			<div class="trt-col-4 trt-col-sm-24 error_img">
-				<!-- <span id="_ideConac" class="foot-icon02 pho-none">
-					<script type="text/javascript">document.write(unescape("%3Cspan id='_ideConac' %3E%3C/span%3E%3Cscript src='https://dcs.conac.cn/js/14/214/0000/41519116/CA142140000415191160003.js' type='text/javascript'%3E%3C/script%3E"));</script>
-				</span>		
-				<span id="_span_jiucuo">
-					<script id="_jiucuo_" sitecode="3501000002" src="https://zfwzgl.www.gov.cn/exposure/jiucuo.js"></script>
-				</span>  -->
-				<span id="_ideConac"><a href="https://bszs.conac.cn/sitename?method=show&id=08348B95B18670E3E053012819AC2453" target="_blank"><img id="imgConac" vspace="0" hspace="0" border="0" src="/public/images/red.png" alt="党政机关" /></a></span>
-				<span id="_span_jiucuo" title="政府网站找错"></span>
-			</div>
-		</div>
-	</div>
+	
+	
+	
+    </style>
+</head>
 
-	<div class="copyright_info">
-		<div class="row">
-			<p><span>主办单位：福州市文化和旅游局</span><span>承办单位：福州市数据管理局</span></p>
-			
-		</div>
+<body style="background:#f5f5f5 url(/images/ershidasybg.jpg) no-repeat center 0;">
+
+<div>
+
+    <script type="text/javascript" language="javascript">
+        var timetbg = 500;
+        var htbg = 0;
+        var adsobj = document.getElementById("ads");
+
+        function addCount() {
+            if (timetbg > 0) {
+                timetbg--;
+                htbg = htbg + 5;
+            } else {
+                return;
+            }
+            if (htbg > 300) //高度
+            {
+                return;
+            }
+            adsobj.style.display = "block";
+            adsobj.style.height = htbg + "px";
+            setTimeout("addCount()", 10);
+        }
+
+        function showAds() {
+            addCount();
+            setTimeout("noneAds()", 7000); //停留时间自己适当调整
+        }
+        var Ttbg = 500;
+        var Ntbg = 300; //高度
+        function noneAds() {
+            if (Ttbg > 0) {
+                Ttbg--;
+                Ntbg = Ntbg - 5;
+            } else {
+                return;
+            }
+            if (Ntbg < 0) {
+                adsobj.style.display = "none";
+                return;
+            }
+            adsobj.style.height = Ntbg + "px";
+            setTimeout("noneAds()", 10);
+        }
+        if (adsobj) {
+            setTimeout("showAds()", 5000)
+        }
+    </script>
+
+    <!-- 左侧图片固定s -->
+
+    <div id="floatWindow" style="width:200px; height:130px;position: fixed;z-index: 99999;top:230px; left:20px;">
+        <div class="pic_flt">
+            
+        </div>
+        <div class="pic_flt">
+            
+        </div>
+
+
+    </div>
+
+    <script type="text/javascript">
+        var x = 0;
+        var y = 0;
+        var xin = true,
+            yin = true;
+        var step = 1;
+        var delay = 10;
+        var obj = document.getElementById("floatWindow");
+
+        function floatAD() {
+            var L = T = 0;
+            var R = document.documentElement.clientWidth - obj.offsetWidth;
+            var B = document.documentElement.clientHeight - obj.offsetHeight;
+            obj.style.left = x + document.body.scrollLeft + "px";
+            obj.style.top = y + document.body.scrollTop + "px";
+            x = x + step * (xin ? 1 : -1)
+            if (x < L) {
+                xin = true;
+                x = L
+            }
+            if (x > R) {
+                xin = false;
+                x = R
+            }
+            y = y + step * (yin ? 1 : -1)
+            if (y < T) {
+                yin = true;
+                y = T
+            }
+            if (y > B) {
+                yin = false;
+                y = B
+            }
+        }
+        var itl;
+
+        if (obj) {
+            itl = setInterval("floatAD()", delay);
+            obj.onmouseover = function() {
+                clearInterval(itl)
+            }
+            obj.onmouseout = function() {
+                itl = setInterval("floatAD()", delay)
+            }
+        } else {
+            clearInterval(itl);
+        }
+
+        function floatClose() {
+            clearInterval(itl);
+            obj.style.display = "none";
+        }
+    </script>
+
+    <!-- 左侧图片固定e -->
+
+    <!-- 右侧菜单s -->
+    <div class="InFix">
+        <ul class="InFixUl" style="display: block;">
+            <li>
+                <a href="http://gjzwfw.www.gov.cn/" target="_blank"></a>
+                <p>国家政务服务平台试运行</p>
+            </li>
+            <li class="InFixUl_wm InFixUl_mob" id="InFixUl_mob">
+                <a></a>
+                <div style="display: none;">
+                    <img src="./images/1.png" />
+                </div>
+            </li>
+            <li class="InFixUl_wm InFixUl_mob" id="InFixUl_mob">
+                <a></a>
+                <div style="display: none;">
+                    <img src="./images/2.png" />
+                </div>
+            </li>
+            <li class="InFixUl_wm InFixUl_mob" id="InFixUl_mob">
+                <a></a>
+                <div style="display: none;">
+                    <img src="./images/W020190807546720071357.png" />
+                </div>
+            </li>
+            <li class="InFixUl_wm InFixUl_mob" id="InFixUl_mob">
+                <a></a>
+                <div style="display: none;">
+                    <img src="./images/xcxm.jpg" />
+                </div>
+            </li>
+            <li class="InFixUl_wm InFixUl_weC" id="InFixUl_weC">
+                <a></a>
+                <div style="display: none;">
+                    <img src="./images/W020190306325998426873.jpg" />
+                </div>
+            </li>
+            <li class="InFixUl_wm InFixUl_aiP" id="InFixUl_aiP">
+                <a href="https://weibo.com/wenhuabu0?topnav=1&wvr=6&topsug=1&is_hot=1" target="_blank"></a>
+                <p>文化和旅游部官方微博</p>
+            </li>
+            <li class="InFixUl_mor" id="Click_s">
+                <a></a>
+            </li>
+        </ul>
+
+        <ul class="InFixUlMax" style="display: none;">
+            <li>
+                <a href="http://gjzwfw.www.gov.cn/" target="_blank"></a>
+                <p>
+                    <a href="http://gjzwfw.www.gov.cn/" target="_blank">国家政务服务平台试运行</a>
+                </p>
+            </li>
+            <li class="InFixUlMax_wm InFixUlMax_mob" id="nFixUlMax_mob">
+                <a></a>
+                <p>政务服务投诉微信小程序</p>
+                <div style="display: none;">
+                    <img src="./images/1.png" />
+                </div>
+            </li>
+            <li class="InFixUlMax_wm InFixUlMax_mob" id="nFixUlMax_mob">
+                <a></a>
+                <p>政务服务投诉支付宝小程序</p>
+                <div style="display: none;">
+                    <img src="./images/2.png" />
+                </div>
+            </li>
+            <li class="InFixUlMax_wm InFixUlMax_mob" id="nFixUlMax_mob">
+                <a></a>
+                <p>国务院客户端</p>
+                <div style="display: none;">
+                    <img src="./images/W020190807546720071357.png" />
+                </div>
+            </li>
+            <li class="InFixUlMax_wm InFixUlMax_mob" id="nFixUlMax_mob">
+                <a></a>
+                <p>国务院<br>互联网+督查</p>
+                <div style="display: none;">
+                    <img src="./images/xcxm.jpg" />
+                </div>
+            </li>
+            <li class="InFixUlMax_wm InFixUlMax_weC" id="nFixUlMax_weC">
+                <a></a>
+                <p>文化和旅游部官方微信</p>
+                <div style="display: none;">
+                    <img src="./images/W020190306325998426873.jpg" />
+                </div>
+            </li>
+            <li class="InFixUlMax_wm InFixUlMax_aiP" id="nFixUlMax_aiP">
+                <a href="https://weibo.com/wenhuabu0?topnav=1&wvr=6&topsug=1&is_hot=1" target="_blank"></a>
+                <p><a href="https://weibo.com/wenhuabu0?topnav=1&wvr=6&topsug=1&is_hot=1" target="_blank">文化和旅游部官方微博</a></p>
+            </li>
+            <li class="InFixUlMax_mor" id="Click">
+                <a>收起</a>
+            </li>
+        </ul>
+    </div>
+    <script type="text/javascript">
+        var obj_max = $('.InFixUlMax_wm')
+        var obj_min = $('.InFixUl_wm')
+        for (var i = 0; i < obj_max.length; i++) {
+            obj_max.hover(function() {
+                $(this).children('div').css("display", "block")
+            }, function() {
+                $(this).children('div').css("display", "none")
+            })
+        }
+        for (var i = 0; i < obj_min.length; i++) {
+            obj_min.hover(function() {
+                $(this).children('div').css("display", "block")
+            }, function() {
+                $(this).children('div').css("display", "none")
+            })
+        }
+        $('#Click').click(function() {
+            $('.InFixUl').css("display", "block")
+            $('.InFixUlMax').css("display", "none")
+        })
+        $('#Click_s').click(function() {
+            $('.InFixUl').css("display", "none")
+            $('.InFixUlMax').css("display", "block")
+        })
+    </script>
+    <!-- 右侧菜单e -->
+    <!--头部开始-->
+	<div style="margin:0px auto; width:1000px; text-align:right; padding:15px 0px;">
+	
+	<!--<a href="http://www.gov.cn/zhuanti/zggcddescqgdbdh/index.htm" target="_blank">
+	<img src="/images/danghuiicon.png" />
+	</a>-->
 	</div>
-</div>
-		</div>
-		<script>
-    var SiteInfo = {
-        was4doc: 290792,  //文档检索的was频道号
-        itpSiteId: 66,    //互动站点ID
-        itp4advice: 86,   //意见征集栏目ID
-        itp4poll: 1545,   //网上调查栏目ID
-        searchId: 229105, //默认的文档检索频道的ID
-        defaultPgTemp: "pgBar_fz.html",  //本站点默认的分页模板名
-        defaultPgTempMobile: "pgBar_fz.html",  //本站点默认的分页模板名，移动端
-        siteMsgType: "govSite",  //非政府网站提醒规则   currSite 非本站提醒 、govSite  非政府网站提醒
-        siteWriteList: [],  //站点白名单
-        initWindowRoot: false,  //false表示，引入model.js时，不自动生成windowRoot
-        initPageview: true,  //执行windowRoot 时自动执行pageview
-        defaultHotWords: '遇见福州;',  //通过嵌套栏目的替换内容，热搜词，设置默认的热搜词
-        registerUrl: "https://iam.e-govt.cn:8901/register?appId=5891dd2b-f89e-4cca-a90e-38a39d82e1df&redirect_uri=",
-        loginUrl: "https://www.fuzhou.gov.cn/suc/login/login?redirtUrl=https://www.fuzhou.gov.cn/suc/login/noseLogin?redirtUrl=",
-        logoutUrl: "https://www.fuzhou.gov.cn/suc/login/logout?redirtUrl=",
-        openSlb: true,//是否开启适老版
-        openWza: true, //是否开启无障碍
-        itpStatus: false, //互动更新状态
-        itpMessage: '',//互动更新提示语,
-		myzj:{
-			listUrlPre:'/staticitp/fzswlj/myzj/',
-			detailUrlPre:'/staticitp/fzswlj/17_detail/',
-			detailUrl:'https://wlj.fuzhou.gov.cn/hdjl/myzj/detail.htm'
-		},
-		wsdc:{
-			listUrlPre:'/staticitp/fzswlj/wsdc/',
-			detailUrlPre:'/staticitp/fzswlj/24_detail/',
-			detailUrl:'https://wlj.fuzhou.gov.cn/hdjl/wsdc/detail.htm'
-		}
-    };
+    <!doctype html>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="renderer" content="webkit">
+<link type="text/css" href="./images/hanweb.css" rel="stylesheet">
+<link type="text/css" href="./images/sy_culture-20180320.css" rel="stylesheet">
+<script src="./images/jquery.min.js"></script>
+<script src="./images/getdate.js" type="text/javascript" charset="utf-8"></script>
+<!--<script src="https://auth.mangren.com/boots/mct.gov.cn/esdToolsInit.js" charset="UTF-8"></script>-->
+<script id="initwzaTools" src="https://zwfw.mct.gov.cn/resource/site/bm23000001/wza/wza.js"></script>
+<!--<link rel="icon" type="image/png" href="./images/guohui.png" />-->
+<title>2019年文化部banner嵌入</title>
+<script language="javascript">
+//主导航高亮
+$(document).ready(function(){
+    var nav_len = $(".nav_sub").length;
+    for(var i=0; i<10; i++)
+    {
+        var tw_word = $(".local").eq(i).text();
+        for(var n=0; n<nav_len; n++)
+        {
+            var nav_word = $(".nav_sub").eq(n).text();
+            if(nav_word == tw_word)
+            {
+                $(".nav_sub").eq(n).css({'color':'#fff','background-color':'#b92121'}).siblings().css({'color':'#fff'});
+            }
+        }
+    }
+
+});
+
+function openToolbar(){ /*无障碍*/
+	if(window.location==top.location){
+		var str_location = window.location.href;
+		window.location.href = "/wca.html?wcaUrl=" +  str_location;
+	}
+}
+
+function checkForm(){
+	var temp = searchForm.temp.value;
+	if(temp==null || temp==''){
+		alert('请输入检索条件');
+	}
+	else{
+		//var url='http://so.mct.gov.cn/s?siteCode=bm23000001&qt='+encodeURIComponent(temp);
+var url='https://www.mct.gov.cn/mctso/s?qt='+encodeURIComponent(temp);	
+                window.open(url);
+	}
+}
+function getKey() {
+
+        if(event.keyCode == "13") {
+
+            checkForm();
+
+        } 
+
+    }
 </script>
 
-<script src="https://www.fuzhou.gov.cn/images/barrier.free.min.js" id="barrierFree" sn="0788226104547083"></script>
-<script src="https://www.fuzhou.gov.cn/images/model.min.js"></script>
-<script type="text/javascript" src="/public/images/js_rem.min.js"></script>
-<script type="text/javascript" src="/public/js/all_public_js.js"></script>
-<script type="text/javascript" src="/inc/23wlj.js"></script>
-		<script type="text/javascript" src="/public/js/sy_public_js.js"></script>
-		<script type="text/javascript">
-			require(["shangjizhuanzai", "tools", "jquery", 'list2.advice', 'list2.poll'], function (shangjizhuanzai, tools, $, adviceList, pollList) {
-				//国务院信息
-				shangjizhuanzai({
-					gwyxx: true,
-					gwyxxNum: 6,
-					szfxx: true,
-					szfxxNum: 6
-				});
-		
-				// 榕城要闻
-				var Rcyw = avalon.define({
-				$id: "rcyw",
-				list: [],
-				error: false
-				})
-				$.ajax({
-					url : 'https://www.fuzhou.gov.cn/gzdt/rcyw/rcyw.htm',
-					dataType : "jsonp",
-					jsonpCallback:"pushInfoJsonpCallBackfz",
-					success: function(data) {
-						Rcyw.list = data.docs;
-					},
-					error: function(e) {
-						Rcyw.error = e;
-					}
-				});
+
+</head>
+
+<body>
+<!--无障碍嵌入开始--->
+
+<!--无障碍嵌入结束--->
+<style>
+.t_chglf{float: left;font-size: 13px;color: #333333;}
+.top_change{width: 1000px;margin: 0 auto;height: 35px;overflow: hidden;line-height:35px;position: relative;}
+.top_right .top_link_box a{line-height:16px;}
+</style>
+<!--头部开始-->
+<div class="bt-head" style="width:1000px;">
+	<div class="top_chgwrp" style="background: #ebebeb;">
+	<div class="top_change">
+		<div class="t_chglf" id="weather"></div>
+		<div class="top_right" style="width: auto;top:8px;">
+		<div class="top_link_box">
+                   <!--<a href="https://mail.mct.gov.cn/index.php" target="_blank"><span>工作邮箱</span></a>-->
+                   <a href="https://mail.mct.gov.cn/portal/#!/login" target="_blank"><span>文旅办公</span></a>
+                   <span>|</span>
+                   <a href="https://www.mct.gov.cn/" target="_blank"><span>简</span></a>
+                   <span>|</span>
+                   <a href="https://www.mct.gov.cn/gtb/index.jsp?url=https://www.mct.gov.cn"><span>繁</span></a>
+                   <span>|</span>
+				   <a href="javascript:void(0);" class="showwza" id="toolbarSwitch"><span>无障碍浏览</span></a>
+                   <a href="/whbphone/" id="tophone" style="display:none;position: relative;top: -2px;">返回手机版</a> </div>
+	</div>
+		</div>
+		</div>
+  <div class="bt-head-cen">
+    <div class="top_left" style="z-index:999; width:735px;"><a href="./"><img src="./images/logo-20210128.jpg" width="735" style="width:735px;" height="117" alt="" /></a></div>
+    <div class="top_right" style="width:260px;">
+      <div class="sosu_box" style="float:right;width:210px;margin-top:20px;">
+        <form method='get' onsubmit="return false" target='_blank' name='searchForm'>
+							<div style='width:37px;height:30px;float:right;background:url(./images/sosuo_s.jpg);'>
+								<input name='searchButton' type='button' id='searchButton' value='搜索' onclick='checkForm();' style='width: 37px; height:30px; outline:none; font-size: 14px;' />
+							</div>
+         <div style='width:168px; height:30px; float:right;backgro
+und-image:url(./images/sosuo_box.jpg);background-repeat: no-repeat;'>
+								<input maxlength='55' onkeypress="getKey();" id="searchinput" size='30' style='width: 168px; height: 30px; line-height:30px; font-size: 13px; border: none; padding-left:10px;color:#8c8b8b; outline:none;background-image: url(./images/sosuo_box.jpg);background-repeat: no-repeat;' name='temp' type='text' />
+							
+							</div>
+          <div class="clear"></div>
+
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--头部结束--> 
+<!--导航开始-->
+<div class="bt-nav-y" style=" background:#9d1515; width:1000px; margin:0px auto;">
+  <ul class="nav">
+    <li class="nav_sub"><a href="./" title="首页">首　　页</a></li>
+    <li class="nav_sub"><a style="width: 160px;" href="/gywhb/bld/" target="_blank" title="机构简介">机构简介</a>
+      <ul class="xl_long">
+        
+           <li class="sub_nav1"><a href="./gywhb/bld/" target="_blank" title="部领导">部领导</a></li>
+
+        
+           <li class="sub_nav1"><a href="./gywhb/zyzz/" target="_blank" title="主要职责">主要职责</a></li>
+
+        
+           <li class="sub_nav1"><a href="./gywhb/lxwm/" target="_blank" title="联系我们">联系我们</a></li>
+
+        
+           <li class="sub_nav1"><a href="./gywhb/jgsz/" target="_blank" title="机构设置">机构设置</a></li>
+
+        
+      </ul>
+    </li>
+     <li class="nav_sub"><a href="./whzx/" title="信息发布" target="_blank">信息发布</a>
+      <ul>
+        
+            <li class="sub_nav1"><a href="./whzx/szyw/" target="_blank" title="时政要闻">时政要闻</a></li>
+        
+            <li class="sub_nav1"><a href="./whzx/whyw/" target="_blank" title="焦点新闻">焦点新闻</a></li>
+        
+            <li class="sub_nav1"><a href="./whzx/ldhd/" target="_blank" title="领导活动">领导活动</a></li>
+        
+	<li class="sub_nav1"><a href="https://zwgk.mct.gov.cn/zfxxgkml/" target="_blank" title="公告通知">公告通知</a></li>
+        <li class="sub_nav1"><a href="https://zwgk.mct.gov.cn/zfxxgkml/zcfg/" target="_blank" title="政策法规">政策法规</a></li>
+        <li class="sub_nav1"><a href="https://zwgk.mct.gov.cn/zfxxgkml/447/463/index_3081.html" target="_blank" title="政策解读">政策解读</a></li>
+        
+            <li class="sub_nav1"><a href="./whzx/bnsj/" target="_blank" title="工作信息">工作信息</a></li>
+        
+            <li class="sub_nav1"><a href="./whzx/djgz/" target="_blank" title="党建工作">党建工作</a></li>
+        
+            <li class="sub_nav1"><a href="./whzx/zsdw/" target="_blank" title="直属单位">直属单位</a></li>
+        
+            <li class="sub_nav1"><a href="./whzx/qgwhxxlb/" target="_blank" title="全国联播">全国联播</a></li>
+        
+            <li class="sub_nav1"><a href="./whzx/rdzt/" target="_blank" title="热点专题">热点专题</a></li>
+        
+            <li class="sub_nav1"><a href="./whzx/tpxw/" target="_blank" title="图片新闻">图片新闻</a></li>
+        
+            <li class="sub_nav1"><a href="./whzx/zxgz/" target="_blank" title="专项工作">专项工作</a></li>
+        
+            <li class="sub_nav1"><a href="./zwhcjz/" target="_blank" title="派驻机构">派驻机构</a></li>
+        
+      </ul>
+    </li>
+    <li class="nav_sub"><a href="./zwgk/" title="政务公开" target="_blank">政务公开</a>
+      <!--<ul>
+        
+            <li class="sub_nav1"><a href="./zwgk/zwgk/" target="_blank" title="政务概况">政务概况</a></li>
+        
+            <li class="sub_nav1"><a href="./zwgk/zcfg/" target="_blank" title="政策法规">政策法规</a></li>
+        
+            <li class="sub_nav1"><a href="./zwgk/rsgz/" target="_blank" title="人事工作">人事工作</a></li>
+        
+            <li class="sub_nav1"><a href="./zwgk/cwgz/" target="_blank" title="财务工作">财务工作</a></li>
+        
+            <li class="sub_nav1"><a href="./zwgk/tjsj/" target="_blank" title="统计数据">统计数据</a></li>
+        
+            <li class="sub_nav1"><a href="./zwgk/whyw/" target="_blank" title="文化业务">文化业务</a></li>
+        
+            <li class="sub_nav1"><a href="./zwgk/lyyw/" target="_blank" title="旅游业务">旅游业务</a></li>
+        
+            <li class="sub_nav1"><a href="./zwgk/rdjy_zxta/" target="_blank" title="全国人大建议、政协提案答复">全国人大建议、...</a></li>
+        
+            <li class="sub_nav1"><a href="./zwgk/xzxk/" target="_blank" title="行政许可">行政许可</a></li>
+        
+            <li class="sub_nav1"><a href="./zwgk/sjccsx/" target="_blank" title="随机抽查事项">随机抽查事项</a></li>
+        
+            <li class="sub_nav1"><a href="./zwgk/qt/" target="_blank" title="其他">其他</a></li>
+        
+      </ul>-->
+    </li>
+ <li class="nav_sub"><a href="https://zwfw.mct.gov.cn/" title="政务服务">政务服务</a>
+            <ul>
+                <li class="sub_nav1"><a href="https://zwfw.mct.gov.cn/#wycx"
+                        title="热门查询">我要查询</a></li>
+                <li class="sub_nav1"><a href="https://zwfw.mct.gov.cn/#bssx"
+                        title="办事事项">办事事项</a></li>
+                <li class="sub_nav1"><a href="https://zwfw.mct.gov.cn/#bsdt"
+                        title="办事大厅">办事大厅</a></li>
+              
+                <li class="sub_nav1"><a href="https://zwfw.mct.gov.cn/#zwsj"
+                        title="政务数据">政务数据</a></li>
+                <li class="sub_nav1"><a href="https://zwfw.mct.gov.cn/#ywlj"
+                        title="业务链接">业务链接</a></li>
+                <li class="sub_nav1"><a href="https://zwfw.mct.gov.cn/#zxwhysfw"
+                        title="在线文化艺术服务">在线文化艺术服务</a></li>
+            </ul>
+</li>
+    <li class="nav_sub"><a title="公共服务" style="cursor:pointer;">公共服务</a>
+    <ul>
+                  <li class="sub_nav1"><a href="https://whzg.mct.gov.cn/epl"
+                        title="展演讲座" target="_blank">展演讲座</a></li>
+                <li class="sub_nav1"><a href="https://whzg.mct.gov.cn/#home7"
+                        title="数字资源" target="_blank">数字资源</a></li>
+                  <li class="sub_nav1"><a href="https://www.mct.gov.cn/zxbs/cxts/" target="_blank" title="出行提示">出行提示</a></li>
+           <li class="sub_nav1"><a href="https://lyfw.mct.gov.cn/site/special/scenic"
+                        title="5A级旅游景区天气" target="_blank">5A级旅游景区天气</a></li>
+              
+            </ul>
+    </li>
+    <li class="nav_sub"><a href="./hdjl/" title="互动交流" target="_blank">互动交流</a>
+      <ul>
+        
+            <li class="sub_nav1"><a href="./hdjl/xwfbh/" target="_blank" title="新闻发布会">新闻发布会</a></li>
+        
+            <li class="sub_nav1"><a href="./hdjl/zxft/" target="_blank" title="在线访谈">在线访谈</a></li>
+        
+            <li class="sub_nav1"><a href="./hdjl/gzly/" target="_blank" title="公众留言">公众留言</a></li>
+        
+            <li class="sub_nav1"><a href="./hdjl/yjzj/" target="_blank" title="意见征集">意见征集</a></li>
+        
+            <li class="sub_nav1"><a href="./hdjl/12318whscjb/" target="_blank" title="全国文化和旅游市场网上举报投诉处理系统">全国文化和旅游...</a></li>
+        
+      </ul>
+    </li>
+  </ul>
+</div>
+<!--导航结束-->
+
+<!--微信分享图功能-->
+<div class="share-title" style="display:none"></div>
+  <div class="share-substr" style="display:none"></div>
+  <img class="share-img" style="display:none" src="./images/wxzftb.jpg" width="300" height="300" /> 
+  <script src="./images/jweixin-1.0.0.js"></script> 
+  <script src="./images/20191226wxShare.js"></script> 
+  <!--微信分享图功能--> 
+</body>
+</html>
+    <!--头部结束-->
+    <div class="bt-note-15">
+        <!--分割线加清除浮动-->
+    </div>
+    <!--内容区域开始-->
+    <div class="bt-main">
+        <div id="main_box">
+            <!--第一部分开始-->
+            <div id="part1">
+                <!--滚动图片新闻开始-->
+                <div class="part1_left fLeft bt-margin-right-20" style="width:480px;">
+                    <!--滚动图片新闻效果开始-->
+                    <div class="sc_imgnew">
+                        <div class="imgnew_img_list">
+                           
+
+                            
+                                <div class="imgnew_img">
+                                    <a href="./whzx/whyw/202602/t20260211_964701.htm" target='_blank'>
+            <IMG src="./whzx/whyw/202602/W020260211643314764438.jpg" width='580' border=0 />
+        </a>
+                                </div>
+                            
+                                <div class="imgnew_img">
+                                    <a href="./whzx/whyw/202512/t20251202_963518.htm" target='_blank'>
+            <IMG src="./whzx/whyw/202512/W020251202425749377560.jpg" width='580' border=0 />
+        </a>
+                                </div>
+                            
+                                <div class="imgnew_img">
+                                    <a href="./whzx/whyw/202511/t20251104_963089.htm" target='_blank'>
+            <IMG src="./whzx/whyw/202511/W020251104831590305972.png" width='580' border=0 />
+        </a>
+                                </div>
+                            
+                                <div class="imgnew_img">
+                                    <a href="./whzx/whyw/202511/t20251104_963088.htm" target='_blank'>
+            <IMG src="./whzx/whyw/202511/W020251104624929804355.jpg" width='580' border=0 />
+        </a>
+                                </div>
+                            
+                                <div class="imgnew_img">
+                                    <a href="./whzx/whyw/202509/t20250926_962431.htm" target='_blank'>
+            <IMG src="./whzx/whyw/202509/W020250926549415775478.jpg" width='580' border=0 />
+        </a>
+                                </div>
+                            
+
+
+
+                        </div>
+                        <div class="imgnew_title_list">
+                            
+                                <div class="imgnew_title" style="color:#fff;line-height:40px;" title="2026年全国“四季村晚”春节主场活动暨“知音湖北”新春嘉年华在湖北大冶举办">
+                                    2026年全国“四季村晚”春节主场活动暨“知音湖北”新春嘉年...
+                                </div>
+
+                            
+                                <div class="imgnew_title" style="color:#fff;line-height:40px;" title="2025年全国“四季村晚”秋季主场活动在广东韶关举办">
+                                    2025年全国“四季村晚”秋季主场活动在广东韶关举办
+                                </div>
+
+                            
+                                <div class="imgnew_title" style="color:#fff;line-height:40px;" title="第十四届中国艺术节在重庆闭幕">
+                                    第十四届中国艺术节在重庆闭幕
+                                </div>
+
+                            
+                                <div class="imgnew_title" style="color:#fff;line-height:40px;" title="“大地情深”——全国优秀群众文艺作品展演在重庆举行">
+                                    “大地情深”——全国优秀群众文艺作品展演在重庆举行
+                                </div>
+
+                            
+                                <div class="imgnew_title" style="color:#fff;line-height:40px;" title="第六届全国导游大赛总决赛圆满落幕">
+                                    第六届全国导游大赛总决赛圆满落幕
+                                </div>
+
+                            
+                        </div>
+
+                        <div class="imgnew_point_list" style="bottom:50px !important;right:175px !important;">
+                            <a class="imgnew_point"></a>
+                            <a class="imgnew_point"></a>
+                            <a class="imgnew_point"></a>
+                            <a class="imgnew_point"></a>
+                            <a class="imgnew_point"></a>
+
+                        </div>
+                    </div>
+                    <style>
+                        #part1 .part1_left,
+                        .sc_imgnew,
+                        .imgnew_img_list,
+                        .imgnew_img,
+                        .imgnew_title {
+                            width: 480px !important;
+                        }
+                        
+                        a.imgnew_point {
+                            width: 15px !important;
+                        }
+                    </style>
+                    <script>
+                        $(document).ready(function() {
+                            //首页滚动图片
+                            //图片比例自适应
+                            var imgnew_W = $(".imgnew_img_list").width();
+                            var imgnew_H = $(".imgnew_img_list").height();
+                            var imgnew_WH = imgnew_W / imgnew_H;
+                            $(".imgnew_img_list img").each(function() {
+                                var fimg_W = $(this).width();
+                                var fimg_H = $(this).height();
+                                var fimg_WH = fimg_W / fimg_H;
+                                if (fimg_WH > imgnew_WH) {
+                                    $(this).css({
+                                        width: "480px",
+                                        height: imgnew_H
+                                    });
+                                } else {
+                                    $(this).css({
+                                        width: imgnew_W,
+                                        height: "320px"
+                                    });
+                                }
+                            });
+
+                            var imgnew_i = 0;
+                            var imgnew_len = $('.imgnew_img_list .imgnew_img').length;
+
+                            function fun_imgnew() {
+                                $('.imgnew_img_list .imgnew_img').eq(imgnew_i).stop(true, true).fadeIn(500).siblings().fadeOut(400);
+                                $('.imgnew_title_list .imgnew_title').eq(imgnew_i).stop(true, true).fadeIn(500).siblings().hide();
+                                $('.imgnew_point_list .imgnew_point').eq(imgnew_i).addClass("On").siblings().removeClass("On");
+                            }
+                            fun_imgnew();
+
+                            function imgnew_auto() {
+                                imgnew_i++;
+                                imgnew_i %= imgnew_len;
+                                fun_imgnew();
+                            }
+                            var imgnew_play = setInterval(imgnew_auto, 5000);
+
+                            $('.imgnew_point_list .imgnew_point').mouseover(function() {
+                                imgnew_i = $(this).index();
+                                fun_imgnew();
+                            });
+                            $(".sc_imgnew").hover(function() {
+                                clearInterval(imgnew_play);
+                            }, function() {
+                                imgnew_play = setInterval(imgnew_auto, 5000);
+                            });
+
+                        });
+                    </script>
+                    <!--滚动图片新闻效果结束-->
+                </div>
+                <!--滚动图片新闻结束-->
+                <!--国务院要闻与文化要闻切换开始-->
+                <div class="part1_right fLeft" style="width:460px;">
+                    <!--//切换 -->
+                    <ul class="tit_part1">
+                        <li class="titqh" id="titqh_tab_0" onmousemove="Show('titqh','titqh',0,2,1);"><a href="./whzx/szyw/" title="时政要闻" target="_blank">时政要闻</a> </li>
+                        <li class="sx">|</li>
+                        <li class="titqhOn" id="titqh_tab_1" onmousemove="Show('titqh','titqh',1,2,1);"><a href="./whzx/whyw/" title="焦点新闻" target="_blank">焦点新闻</a> </li>
+                        <li class="titqh_more">
+                            <div class="more_qh" id="titqh_more_0">
+                                <a href=""></a>
+                            </div>
+                            <div class="more_qhOn" id="titqh_more_1">
+                                <a href=""></a>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="list_qh" id="titqh_cont_0">
+                        <div class="list_part1">
+                            <div class="bt-mod-wzpb-05" style="padding: 0;">
+                               <ul class="titqh_cont_1">
+                                    
+                                        <li>
+                                            <a href="https://www.gov.cn/yaowen/liebiao/202603/content_7063799.htm" target="_blank" title="总书记两会后首次考察指引“十五五”开局起步">总书记两会后首次考察指引“十五五”开局起步</a><span class="list_time_h">2026-03-26</span></li>
+                                    
+                                        <li>
+                                            <a href="https://www.gov.cn/yaowen/liebiao/202603/content_7063716.htm" target="_blank" title="“千年大计”里的政绩观">“千年大计”里的政绩观</a><span class="list_time_h">2026-03-27</span></li>
+                                    
+                                        <li>
+                                            <a href="https://www.gov.cn/yaowen/liebiao/202603/content_7063714.htm" target="_blank" title="京津冀协同发展的关键落子">京津冀协同发展的关键落子</a><span class="list_time_h">2026-03-27</span></li>
+                                    
+                                        <li>
+                                            <a href="https://www.gov.cn/yaowen/liebiao/202603/content_7063662.htm" target="_blank" title="&quot;对雄安的发展前景，我们充满信心&quot;——习近平总书记赴雄安新区考察并主持召开深入推进雄安新区高质量建设和发展座谈会纪实">"对雄安的发展前景，我们充满信心"——习近...</a><span class="list_time_h">2026-03-25</span></li>
+                                    
+                                        <li>
+                                            <a href="https://www.gov.cn/yaowen/liebiao/202603/content_7063579.htm" target="_blank" title="“十五五”开局之年，总书记指引雄安新区高质量建设和发展">“十五五”开局之年，总书记指引雄安新区高...</a><span class="list_time_h">2026-03-24</span></li>
+                                    
+                                        <li>
+                                            <a href="https://www.gov.cn/yaowen/liebiao/202603/content_7063552.htm" target="_blank" title="习近平：牢牢把握雄安新区功能定位 努力建设新时代创新高地和推动高质量发展样板">习近平：牢牢把握雄安新区功能定位 努力建设...</a><span class="list_time_h">2026-03-24</span></li>
+                                    
+                                        <li>
+                                            <a href="https://www.gov.cn/yaowen/liebiao/202603/content_7063541.htm" target="_blank" title="习近平致电祝贺通伦当选连任老挝国家主席">习近平致电祝贺通伦当选连任老挝国家主席</a><span class="list_time_h">2026-03-24</span></li>
+                                    
+                                </ul>
+                            </div>
+                            <div class="bt-clear"></div>
+                        </div>
+                    </div>
+                    <div class="list_qhOn" id="titqh_cont_1">
+                        <div class="list_part1" style="padding: 0;">
+                            <div class="bt-mod-wzpb-05" style="padding: 0;">
+                                <ul class="titqh_cont_1">
+                                    
+                                        <li><span class="bt-prefix"><img src="./images/dian.gif" /></span>
+                                            <a href="./whzx/whyw/202603/t20260326_965174.htm" target="_blank" title="中华人民共和国外交部、文化和旅游部与巴西联邦共和国外交部、文化部、旅游部关于2026“中巴文化年”的联合公告">中华人民共和国外交部、文化和旅游部与巴西...</a><span class="list_time_h">2026-03-26</span></li>
+                                    
+                                        <li><span class="bt-prefix"><img src="./images/dian.gif" /></span>
+                                            <a href="./whzx/whyw/202603/t20260320_965085.htm" target="_blank" title="2026年驻华外交官“发现中国之美”活动在京启动">2026年驻华外交官“发现中国之美”活动在京启动</a><span class="list_time_h">2026-03-20</span></li>
+                                    
+                                        <li><span class="bt-prefix"><img src="./images/dian.gif" /></span>
+                                            <a href="./whzx/whyw/202603/t20260307_964928.htm" target="_blank" title="文化和旅游部部长孙业礼：更好发挥文旅养心志育情操、赋能经济社会发展作用">文化和旅游部部长孙业礼：更好发挥文旅养心...</a><span class="list_time_h">2026-03-07</span></li>
+                                    
+                                        <li><span class="bt-prefix"><img src="./images/dian.gif" /></span>
+                                            <a href="./whzx/whyw/202603/t20260302_964871.htm" target="_blank" title="提醒中国公民暂勿前往伊朗周边地区">提醒中国公民暂勿前往伊朗周边地区</a><span class="list_time_h">2026-03-02</span></li>
+                                    
+                                        <li><span class="bt-prefix"><img src="./images/dian.gif" /></span>
+                                            <a href="./whzx/whyw/202602/t20260228_964857.htm" target="_blank" title="文化和旅游部部署开展树立和践行正确政绩观学习教育工作">文化和旅游部部署开展树立和践行正确政绩观...</a><span class="list_time_h">2026-02-28</span></li>
+                                    
+                                        <li><span class="bt-prefix"><img src="./images/dian.gif" /></span>
+                                            <a href="./whzx/whyw/202602/t20260224_964790.htm" target="_blank" title="2026年春节假期国内出游5.96亿人次">2026年春节假期国内出游5.96亿人次</a><span class="list_time_h">2026-02-24</span></li>
+                                    
+                                        <li><span class="bt-prefix"><img src="./images/dian.gif" /></span>
+                                            <a href="./whzx/whyw/202602/t20260223_964768.htm" target="_blank" title="中办印发《通知》在全党开展树立和践行正确政绩观学习教育">中办印发《通知》在全党开展树立和践行正确...</a><span class="list_time_h">2026-02-23</span></li>
+                                    
+                                </ul>
+                            </div>
+                            <div class="bt-clear"></div>
+                        </div>
+                    </div>
+                    <!--//切换end -->
+                </div>
+                <!--国务院要闻与文化要闻切换结束-->
+            </div>
+			  <div class="bt-clear"></div>
+            <!--第一部分结束-->
+            <!-- 第二部分开始 -->
+			<div style="margin-top:20px; height:620px;">
+                        <!--        领导、机构概况等-->
+                   <div id="part2" style="width:200px; float:left; min-height:620px;">
+				        <div class="left_box fLeft" style="">
+                            <ul>
+                                <li class="tit_bld">部领导</li>
+                            </ul>
+                            <ul class="list_bld">
+                                
+                                    <li>
+                                        <a href="./gywhb/bld/202311/t20231113_949677.htm" target="_blank">孙业礼</a>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="./gywhb/bld/202110/t20211011_928259.htm" target="_blank">王旭东</a>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="./gywhb/bld/202110/t20211011_928258.htm" target="_blank">腊翊凡</a>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="./gywhb/bld/202110/t20211011_928257.htm" target="_blank">卢映川</a>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="./gywhb/bld/202110/t20211011_928255.htm" target="_blank">饶　权</a>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="./gywhb/bld/202501/t20250122_958045.htm" target="_blank">高　政</a>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="./gywhb/bld/202506/t20250616_960595.htm" target="_blank">王建华</a>
+                                    </li>
+                                
+                            </ul>
+                            <ul>
+                                <li class="tit_bld">机构概览</li>
+                            </ul>
+                            <ul class="list_bld">
+                                <li><a href="./gywhb/zyzz/" TARGET="_blank" title="主要职责">主要职责</a></li>
+                                <li><a href="./gywhb/jgsz/bjg_jgsz/" TARGET="_blank" title="部机关">部机关</a></li>
+                                <li><a href="./gywhb/jgsz/zsdw_jgsz/" TARGET="_blank" title="直属单位">直属单位</a></li>
+                                <li><a href="./gywhb/jgsz/zwwhjg_jgsz/" TARGET="_blank" title="驻外机构">驻外机构</a></li>
+                                <li><a href="./gywhb/jgsz/zgxwcbdw_jgsz/" TARGET="_blank" title="主管新闻出版单位">主管新闻出版单位</a></li>
+                                <li><a href="./whzx/zxgz/whbshzzglgz/shzzml/jjh/" TARGET="_blank" title="主管社团">主管社团</a></li>
+
+                            </ul>
+                            <ul>
+                                <li class="tit_bld">派驻机构</li>
+                            </ul>
+
+                            <ul style="border:1px solid #e5e5e5;">
+
+                                <li><a href="./zwhcjz/" style="font-size:13px;line-height: 26px;">中央纪委国家监委驻文化和旅游部纪检监察组</a></li>
+                            </ul>
+                        </div>
+				   </div>
+				 
+					<!--   领导、机构概况结束-->
+			 <div class="part2_left fRight" style="width:740px;">
+			 <!--       通知公告、政策法规、政策解读切换-->
+                  <div class="news_box fLeft">
+                           
+                            <div class="news_box_top" style='height:360px'>
+                                <ul class="tit_box">
+                                    <li class="tzggqhOn" id="tzggqh_tab_0" onmousemove="Show('tzggqh','tzggqh',0,3,1);">
+                                     
+                                        <a href="https://zwgk.mct.gov.cn/" title="公告通知" target="_blank">公告通知</a></li>
+                                    <li class="sx">|</li>
+                                    <li class="tzggqh" id="tzggqh_tab_1" onmousemove="Show('tzggqh','tzggqh',1,3,1);">
+                                      
+                                        <a href="https://zwgk.mct.gov.cn/zfxxgkml/zcfg/" title="政策法规" target="_blank">政策法规</a></li>
+                                    <li class="sx">|</li>
+                                    <li class="tzggqh" id="tzggqh_tab_2" onmousemove="Show('tzggqh','tzggqh',2,3,1);">
+
+                                        <a href="http://zwgk.mct.gov.cn/zfxxgkml/447/463/index_3081.html" target="_blank">政策解读</a></li>
+                                    <li class="tzggqh_more">
+                                        <div class="more_qhOn" id="tzggqh_more_0">
+                                            <a href=""></a>
+                                        </div>
+                                        <div class="more_qh" id="tzggqh_more_1">
+                                            <a href=""></a>
+                                        </div>
+                                        <div class="more_qh" id="tzggqh_more_2">
+                                            <a href=""></a>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="tit_bj"></div>
+                                <div class="list_qhOn" id="tzggqh_cont_0">
+                                    <div class="list_part1">
+                                        <div class="bt-mod-wzpb-05" style="padding: 0;">
+                                            <ul>
+                                                
+                                                    <li><span class="bt-prefix"><img src="./images/dian.gif" /></span>
+                                                        <a href="https://zwgk.mct.gov.cn/zfxxgkml/kjjy/202603/t20260325_965136.html" target="_blank" title="文化和旅游部办公厅关于申报“人工智能+文化和旅游”应用试点的通知">文化和旅游部办公厅关于申报“人工智能+...</a><span class="list_time_h">2026-03-25</span></li>
+                                                
+                                                    <li><span class="bt-prefix"><img src="./images/dian.gif" /></span>
+                                                        <a href="https://zwgk.mct.gov.cn/zfxxgkml/kjjy/202603/t20260324_965132.html" target="_blank" title="文化和旅游部办公厅关于开展2026年度文化和旅游部重点实验室资助项目申报工作的通知">文化和旅游部办公厅关于开展2026年度文化...</a><span class="list_time_h">2026-03-24</span></li>
+                                                
+                                                    <li><span class="bt-prefix"><img src="./images/dian.gif" /></span>
+                                                        <a href="https://zwgk.mct.gov.cn/zfxxgkml/kjjy/202603/t20260324_965131.html" target="_blank" title="文化和旅游部办公厅关于开展2026年度国家文化和旅游科技创新研发项目申报推荐工作的通知">文化和旅游部办公厅关于开展2026年度国家...</a><span class="list_time_h">2026-03-24</span></li>
+                                                
+                                                    <li><span class="bt-prefix"><img src="./images/dian.gif" /></span>
+                                                        <a href="https://zwgk.mct.gov.cn/zfxxgkml/scgl/202603/t20260317_965024.html" target="_blank" title="文化和旅游部办公厅关于2025年全国特级导游等级考核结果的通知">文化和旅游部办公厅关于2025年全国特级导...</a><span class="list_time_h">2026-03-17</span></li>
+                                                
+                                                    <li><span class="bt-prefix"><img src="./images/dian.gif" /></span>
+                                                        <a href="https://zwgk.mct.gov.cn/zfxxgkml/scgl/202602/t20260226_964828.html" target="_blank" title="文化和旅游部市场管理司关于发布《2026年全国演出经纪人员资格认定考试大纲》的公告">文化和旅游部市场管理司关于发布《2026年...</a><span class="list_time_h">2026-02-26</span></li>
+                                                
+                                                    <li><span class="bt-prefix"><img src="./images/dian.gif" /></span>
+                                                        <a href="https://zwgk.mct.gov.cn/zfxxgkml/rsxx/gwyzkly/202602/t20260225_964800.html" target="_blank" title="文化和旅游部机关2026年度考试录用公务员面试人员递补公告">文化和旅游部机关2026年度考试录用公务员...</a><span class="list_time_h">2026-02-25</span></li>
+                                                
+                                                    <li><span class="bt-prefix"><img src="./images/dian.gif" /></span>
+                                                        <a href="https://zwgk.mct.gov.cn/zfxxgkml/wysy/202602/t20260212_964728.html" target="_blank" title="文化和旅游部办公厅关于公布2025—2026年度中国戏曲像音像工程录制剧节目（演员）入选名单的通知">文化和旅游部办公厅关于公布2025—2026年...</a><span class="list_time_h">2026-02-12</span></li>
+                                                
+                                                    <li><span class="bt-prefix"><img src="./images/dian.gif" /></span>
+                                                        <a href="https://zwgk.mct.gov.cn/zfxxgkml/kjjy/202602/t20260212_964727.html" target="_blank" title="文化和旅游部办公厅关于推荐2026年文化和旅游部部级社科研究项目的通知">文化和旅游部办公厅关于推荐2026年文化和...</a><span class="list_time_h">2026-02-12</span></li>
+                                                
+                                            </ul>
+                                        </div>
+                                        <div class="bt-clear"></div>
+                                    </div>
+                                </div>
+                                <div class="list_qh" id="tzggqh_cont_1">
+                                    <div class="list_part1">
+                                        <div class="bt-mod-wzpb-05" style="padding: 0;">
+                                            <ul>
+
+                                                
+                                                    <li><span class="bt-prefix"><img src="./images/dian.gif" /></span>
+                                                        <a href="https://zwgk.mct.gov.cn/zfxxgkml/zcfg/bmgz/202602/t20260211_964700.html" target="_blank" title="旅游投诉处理办法">旅游投诉处理办法</a><span class="list_time_h">2026-02-11</span></li>
+                                                
+                                                    <li><span class="bt-prefix"><img src="./images/dian.gif" /></span>
+                                                        <a href="https://zwgk.mct.gov.cn/zfxxgkml/zcfg/bmgz/202507/t20250725_961415.html" target="_blank" title="文化和旅游部行政复议和应诉办法">文化和旅游部行政复议和应诉办法</a><span class="list_time_h">2025-07-25</span></li>
+                                                
+                                                    <li><span class="bt-prefix"><img src="./images/dian.gif" /></span>
+                                                        <a href="https://zwgk.mct.gov.cn/zfxxgkml/zcfg/gfxwj/202503/t20250319_958908.html" target="_blank" title="文化和旅游部关于印发《国有公益性图书馆、美术馆免税进口藏品管理办法》的通知">文化和旅游部关于印发《国有公益性图书馆...</a><span class="list_time_h">2025-03-28</span></li>
+                                                
+                                                    <li><span class="bt-prefix"><img src="./images/dian.gif" /></span>
+                                                        <a href="https://zwgk.mct.gov.cn/zfxxgkml/zcfg/xzfg/202503/t20250311_958787.html" target="_blank" title="互联网上网服务营业场所管理条例">互联网上网服务营业场所管理条例</a><span class="list_time_h">2025-03-11</span></li>
+                                                
+                                                    <li><span class="bt-prefix"><img src="./images/dian.gif" /></span>
+                                                        <a href="https://zwgk.mct.gov.cn/zfxxgkml/zcfg/fl/202503/t20250311_958788.html" target="_blank" title="中华人民共和国文物保护法">中华人民共和国文物保护法</a><span class="list_time_h">2025-03-11</span></li>
+                                                
+                                                    <li><span class="bt-prefix"><img src="./images/dian.gif" /></span>
+                                                        <a href="https://zwgk.mct.gov.cn/zfxxgkml/zcfg/gfxwj/202502/t20250207_958277.html" target="_blank" title="关于印发《互联网军事信息传播管理办法》的通知">关于印发《互联网军事信息传播管理办法》...</a><span class="list_time_h">2025-02-12</span></li>
+                                                
+                                                    <li><span class="bt-prefix"><img src="./images/dian.gif" /></span>
+                                                        <a href="https://zwgk.mct.gov.cn/zfxxgkml/zcfg/bmgz/202501/t20250109_957755.html" target="_blank" title="导游等级考核管理办法">导游等级考核管理办法</a><span class="list_time_h">2025-01-09</span></li>
+                                                
+                                                    <li><span class="bt-prefix"><img src="./images/dian.gif" /></span>
+                                                        <a href="https://zwgk.mct.gov.cn/zfxxgkml/zcfg/gfxwj/202409/t20240920_955347.html" target="_blank" title="文化和旅游部 外交部 科技部 公安部 国家安全部 人力资源社会保障部 海关总署 国家移民局关于印发《外国政府旅游部门常驻中国代表机构管理办法》的通知">文化和旅游部 外交部 科技部 公安部 国家...</a><span class="list_time_h">2024-09-20</span></li>
+                                                
+
+                                            </ul>
+                                        </div>
+                                        <div class="bt-clear"></div>
+                                    </div>
+                                </div>
+                                <div class="list_qh" id="tzggqh_cont_2">
+                                    <div class="list_part1">
+                                        <div class="bt-mod-wzpb-05" style="padding: 0;">
+                                            <ul>
+                                                
+                                                    <li><span class="bt-prefix"><img src="./images/dian.gif" /></span>
+                                                        <a href="https://zwgk.mct.gov.cn/zfxxgkml/zcfg/zcjd/202602/t20260211_964699.html" target="_blank" title="【文字解读】《旅游投诉处理办法》政策解读">【文字解读】《旅游投诉处理办法》政策解读</a><span class="list_time_h">2026-02-11</span></li>
+                                                
+                                                    <li><span class="bt-prefix"><img src="./images/dian.gif" /></span>
+                                                        <a href="https://zwgk.mct.gov.cn/zfxxgkml/zcfg/zcjd/202602/t20260210_964667.html" target="_blank" title="【图片解读】一图读懂《中国文化艺术政府奖动漫奖评奖办法》">【图片解读】一图读懂《中国文化艺术政府...</a><span class="list_time_h">2026-02-10</span></li>
+                                                
+                                                    <li><span class="bt-prefix"><img src="./images/dian.gif" /></span>
+                                                        <a href="https://zwgk.mct.gov.cn/zfxxgkml/zcfg/zcjd/202601/t20260119_964188.html" target="_blank" title="【文字解读】2026年版团队旅游合同（示范文本）政策解读">【文字解读】2026年版团队旅游合同（示范...</a><span class="list_time_h">2026-01-20</span></li>
+                                                
+                                                    <li><span class="bt-prefix"><img src="./images/dian.gif" /></span>
+                                                        <a href="https://zwgk.mct.gov.cn/zfxxgkml/zcfg/zcjd/202512/t20251202_963522.html" target="_blank" title="【图片解读】一图读懂《文化和旅游与民航业融合发展行动方案》">【图片解读】一图读懂《文化和旅游与民航...</a><span class="list_time_h">2025-12-03</span></li>
+                                                
+                                                    <li><span class="bt-prefix"><img src="./images/dian.gif" /></span>
+                                                        <a href="https://zwgk.mct.gov.cn/zfxxgkml/zcfg/zcjd/202507/t20250725_961417.html" target="_blank" title="【文字解读】《文化和旅游部行政复议和应诉办法》政策解读">【文字解读】《文化和旅游部行政复议和应...</a><span class="list_time_h">2025-07-25</span></li>
+                                                
+                                                    <li><span class="bt-prefix"><img src="./images/dian.gif" /></span>
+                                                        <a href="https://zwgk.mct.gov.cn/zfxxgkml/zcfg/zcjd/202505/t20250523_960200.html" target="_blank" title="【图片解读】一图读懂《研学旅游服务要求》">【图片解读】一图读懂《研学旅游服务要求》</a><span class="list_time_h">2025-05-23</span></li>
+                                                
+                                                    <li><span class="bt-prefix"><img src="./images/dian.gif" /></span>
+                                                        <a href="https://zwgk.mct.gov.cn/zfxxgkml/zcfg/zcjd/202505/t20250523_960199.html" target="_blank" title="【图片解读】一图读懂《研学旅游课程与线路设计指南》">【图片解读】一图读懂《研学旅游课程与线...</a><span class="list_time_h">2025-05-23</span></li>
+                                                
+                                                    <li><span class="bt-prefix"><img src="./images/dian.gif" /></span>
+                                                        <a href="https://zwgk.mct.gov.cn/zfxxgkml/zcfg/zcjd/202505/t20250523_960197.html" target="_blank" title="【图片解读】一图读懂《出境研学旅游服务要求》">【图片解读】一图读懂《出境研学旅游服务...</a><span class="list_time_h">2025-05-23</span></li>
+                                                
+                                            </ul>
+                                        </div>
+                                        <div class="bt-clear"></div>
+                                    </div>
+                                </div>
+                                <div class="bt-clear"></div>
+                            </div>
+                          
+                        </div>
+						  <!--工作信息、直属单位、全国联播、出行提示切换-->
+			 <div class="news_box part2_right fRight">
+    
+                    <div class="part2_right_box_top"  style='height:360px'>
+                        <ul class="tit_box">
+                            <li class="bnsjqhOn" id="bnsjqh_tab_0" onmousemove="Show('bnsjqh','bnsjqh',0,4,0);">
+                                <a href="./whzx/bnsj/" title="工作信息" target="_blank">工作信息</a></li>
+                            <li class="sx">|</li>
+                         
+                            <li class="bnsjqh" id="bnsjqh_tab_1" onmousemove="Show('bnsjqh','bnsjqh',1,4,0);">
+                                <a href="./whzx/zsdw/" title="直属单位" target="_blank">直属单位</a></li>
+                            <li class="sx">|</li>
+                            <li class="bnsjqh" id="bnsjqh_tab_2" onmousemove="Show('bnsjqh','bnsjqh',2,4,0);">
+                                <a href="./whzx/qgwhxxlb/" title="全国联播" target="_blank">全国联播</a></li>
+							<li class="sx">|</li>
+							<li class="bnsjqh" id="bnsjqh_tab_3" onmousemove="Show('bnsjqh','bnsjqh',3,4,0);">
+                                <a href="./ggfw/cxts/" title="出行提示" target="_blank">出行提示</a></li>
+                        </ul>
+                        <div class="tit_bj"></div>
+                        <div class="list_qhOn" id="bnsjqh_cont_0">
+                            <div class="list_part1">
+                                <div class="bt-mod-wzpb-05" style="padding: 0;">
+                                    <ul>
+                                        
+                                            <li><span class="bt-prefix"><img src="./images/dian.gif" /></span>
+                                                <a href="./whzx/bnsj/dwwhllj/202602/t20260214_964759.html" target="_blank" title="“欢乐春节”绽放柏林——荆楚文化营造中国节庆氛围">“欢乐春节”绽放柏林——荆楚文化营造中...</a><span class="list_time_h">2026-02-14</span></li>
+                                        
+                                            <li><span class="bt-prefix"><img src="./images/dian.gif" /></span>
+                                                <a href="./whzx/bnsj/yss/202602/t20260213_964732.html" target="_blank" title="路径清晰明确，业界热切期待——《戏剧振兴三年行动计划》凝聚振兴共识">路径清晰明确，业界热切期待——《戏剧振...</a><span class="list_time_h">2026-02-14</span></li>
+                                        
+                                            <li><span class="bt-prefix"><img src="./images/dian.gif" /></span>
+                                                <a href="./whzx/bnsj/fwzwhycs/202602/t20260212_964723.html" target="_blank" title="“我们的节日·春节”主题文化活动营造喜庆祥和节日氛围">“我们的节日·春节”主题文化活动营造喜...</a><span class="list_time_h">2026-02-12</span></li>
+                                        
+                                            <li><span class="bt-prefix"><img src="./images/dian.gif" /></span>
+                                                <a href="./whzx/bnsj/dwwhllj/202602/t20260212_964708.html" target="_blank" title="2026阿联酋“欢乐春节”大联欢活动成功举办">2026阿联酋“欢乐春节”大联欢活动成功举办</a><span class="list_time_h">2026-02-12</span></li>
+                                        
+                                            <li><span class="bt-prefix"><img src="./images/dian.gif" /></span>
+                                                <a href="./whzx/bnsj/whcys/202602/t20260211_964690.html" target="_blank" title="中国文化艺术政府奖第五届动漫奖评选工作启动">中国文化艺术政府奖第五届动漫奖评选工作...</a><span class="list_time_h">2026-02-11</span></li>
+                                        
+                                            <li><span class="bt-prefix"><img src="./images/dian.gif" /></span>
+                                                <a href="./whzx/bnsj/dwwhllj/202602/t20260206_964608.html" target="_blank" title="2026“欢乐春节”音乐会暨“你好！中国”旅游推介系列活动在美国举行">2026“欢乐春节”音乐会暨“你好！中国”...</a><span class="list_time_h">2026-02-06</span></li>
+                                        
+                                            <li><span class="bt-prefix"><img src="./images/dian.gif" /></span>
+                                                <a href="./whzx/bnsj/dwwhllj/202601/t20260130_964487.html" target="_blank" title="“欢乐春节”港澳地区文旅推广月启动">“欢乐春节”港澳地区文旅推广月启动</a><span class="list_time_h">2026-01-30</span></li>
+                                        
+                                            <li><span class="bt-prefix"><img src="./images/dian.gif" /></span>
+                                                <a href="./whzx/bnsj/whcys/202601/t20260130_964486.html" target="_blank" title="全国春节文旅消费月惠民力度大">全国春节文旅消费月惠民力度大</a><span class="list_time_h">2026-01-30</span></li>
+                                        
+                                        
+                                    </ul>
+                                </div>
+                                <div class="bt-clear"></div>
+                            </div>
+                        </div>                    
+                        <div class="list_qh" id="bnsjqh_cont_1">
+                            <div class="list_part1">
+                                <div class="bt-mod-wzpb-05" style="padding: 0;">
+                                    <ul>
+                                        
+                                            <li><span class="bt-prefix"><img src="./images/dian.gif" /></span>
+                                                <a href="./whzx/zsdw/zgdfyyjtyxgs/202603/t20260327_965177.html" target="_blank" title="中国东方演艺集团在京举办“新春·东方新程”2026年剧目通气会">中国东方演艺集团在京举办“新春·东方新...</a><span class="list_time_h">2026-03-27</span></li>
+                                        
+                                            <li><span class="bt-prefix"><img src="./images/dian.gif" /></span>
+                                                <a href="./whzx/zsdw/zymzlt/202603/t20260325_965140.html" target="_blank" title="中央民族乐团“醉美花海·艺润天汉”文化志愿服务惠民演出在陕西汉中举办">中央民族乐团“醉美花海·艺润天汉”文化...</a><span class="list_time_h">2026-03-25</span></li>
+                                        
+                                            <li><span class="bt-prefix"><img src="./images/dian.gif" /></span>
+                                                <a href="./whzx/zsdw/whbysfzzx/202603/t20260325_965142.html" target="_blank" title="舞动新篇，艺启未来：央校携手共筑艺术融合发展新格局">舞动新篇，艺启未来：央校携手共筑艺术融...</a><span class="list_time_h">2026-03-25</span></li>
+                                        
+                                            <li><span class="bt-prefix"><img src="./images/dian.gif" /></span>
+                                                <a href="./whzx/zsdw/zgysyjy/202603/t20260324_965130.html" target="_blank" title="苹果CEO库克参观中国艺术研究院《药师佛佛会图》研究临摹项目">苹果CEO库克参观中国艺术研究院《药师佛...</a><span class="list_time_h">2026-03-24</span></li>
+                                        
+                                            <li><span class="bt-prefix"><img src="./images/dian.gif" /></span>
+                                                <a href="./whzx/zsdw/zgjxlt/202603/t20260324_965113.html" target="_blank" title="中国交响乐团奏响肖斯塔科维奇专场音乐会">中国交响乐团奏响肖斯塔科维奇专场音乐会</a><span class="list_time_h">2026-03-24</span></li>
+                                        
+                                            <li><span class="bt-prefix"><img src="./images/dian.gif" /></span>
+                                                <a href="./whzx/zsdw/whbysfzzx/202603/t20260324_965110.html" target="_blank" title="“聚光计划”落地江苏赋能文艺院团打造云端“第二舞台”">“聚光计划”落地江苏赋能文艺院团打造云...</a><span class="list_time_h">2026-03-24</span></li>
+                                        
+                                            <li><span class="bt-prefix"><img src="./images/dian.gif" /></span>
+                                                <a href="./whzx/zsdw/zgmsg/202603/t20260324_965106.html" target="_blank" title="“大匠之道——中国工艺美术大师邀请展”在中国美术馆举办">“大匠之道——中国工艺美术大师邀请展”...</a><span class="list_time_h">2026-03-24</span></li>
+                                        
+                                            <li><span class="bt-prefix"><img src="./images/dian.gif" /></span>
+                                                <a href="./whzx/zsdw/qgggwhfzzx/202603/t20260323_965099.html" target="_blank" title="“醉美花海·艺润天汉”文化志愿服务汉中行活动顺利举行">“醉美花海·艺润天汉”文化志愿服务汉中...</a><span class="list_time_h">2026-03-23</span></li>
+                                        
+                                    </ul>
+                                </div>
+                                <div class="bt-clear"></div>
+                            </div>
+                        </div>
+                      <div class="list_qh" id="bnsjqh_cont_2">
+                            <div class="list_part1">
+                                <div class="bt-mod-wzpb-05" style="padding: 0;">
+                                    <ul>
+                                        
+                                            <li><span class="bt-prefix"><img src="./images/dian.gif" /></span>
+                                                <a href="./whzx/qgwhxxlb/xz/202603/t20260327_965178.htm" target="_blank" title="西藏出台特色文创产品开发奖励政策 助力文旅品牌提质增效">西藏出台特色文创产品开发奖励政策 助力...</a><span class="list_time_h">2026-03-27</span></li>
+                                        
+                                            <li><span class="bt-prefix"><img src="./images/dian.gif" /></span>
+                                                <a href="./whzx/qgwhxxlb/hn/202603/t20260327_965180.htm" target="_blank" title="河南平顶山以“三张名片”推动文旅融合发展">河南平顶山以“三张名片”推动文旅融合发展</a><span class="list_time_h">2026-03-27</span></li>
+                                        
+                                            <li><span class="bt-prefix"><img src="./images/dian.gif" /></span>
+                                                <a href="./whzx/qgwhxxlb/nmg/202603/t20260327_965176.htm" target="_blank" title="内蒙古创新打造“黄河开河鱼”品牌  激发春季文旅新动能">内蒙古创新打造“黄河开河鱼”品牌  激发...</a><span class="list_time_h">2026-03-27</span></li>
+                                        
+                                            <li><span class="bt-prefix"><img src="./images/dian.gif" /></span>
+                                                <a href="./whzx/qgwhxxlb/xz/202603/t20260327_965179.htm" target="_blank" title="西藏自治区印发冰川旅游管控指南 科学规范冰川旅游发展">西藏自治区印发冰川旅游管控指南 科学规...</a><span class="list_time_h">2026-03-27</span></li>
+                                        
+                                            <li><span class="bt-prefix"><img src="./images/dian.gif" /></span>
+                                                <a href="./whzx/qgwhxxlb/ah/202603/t20260327_965185.htm" target="_blank" title="安徽省委一号文件：推出“古道行”“诗路行”等新场景">安徽省委一号文件：推出“古道行”“诗路...</a><span class="list_time_h">2026-03-27</span></li>
+                                        
+                                            <li><span class="bt-prefix"><img src="./images/dian.gif" /></span>
+                                                <a href="./whzx/qgwhxxlb/sx_7740/202603/t20260327_965186.htm" target="_blank" title="陕西加快建设宜居宜游生态汉中">陕西加快建设宜居宜游生态汉中</a><span class="list_time_h">2026-03-27</span></li>
+                                        
+                                            <li><span class="bt-prefix"><img src="./images/dian.gif" /></span>
+                                                <a href="./whzx/qgwhxxlb/js/202603/t20260327_965188.htm" target="_blank" title="江苏开启今年“家门口赏好戏”">江苏开启今年“家门口赏好戏”</a><span class="list_time_h">2026-03-27</span></li>
+                                        
+                                            <li><span class="bt-prefix"><img src="./images/dian.gif" /></span>
+                                                <a href="./whzx/qgwhxxlb/bj/202603/t20260327_965187.htm" target="_blank" title="在京郊找到别样“乡愁”">在京郊找到别样“乡愁”</a><span class="list_time_h">2026-03-27</span></li>
+                                        
+                                    </ul>
+                                </div>
+                                <div class="bt-clear"></div>
+                            </div>
+                        </div>
+						 <div class="list_qh" id="bnsjqh_cont_3">
+                            <div class="list_part1">
+                                <div class="bt-mod-wzpb-05" style="padding: 0;">
+                                    <ul>
+                                        
+                                            <li><span class="bt-prefix"><img src="./images/dian.gif" /></span>
+                                                <a href="./ggfw/cxts/202603/t20260317_965023.htm" target="_blank" title="再次提醒中国公民暂勿前往伊朗及周边地区">再次提醒中国公民暂勿前往伊朗及周边地区</a><span class="list_time_h">2026-03-17</span></li>
+                                        
+                                            <li><span class="bt-prefix"><img src="./images/dian.gif" /></span>
+                                                <a href="./ggfw/cxts/202602/t20260212_964704.htm" target="_blank" title="八条旅游安全常识，护您平安出游！">八条旅游安全常识，护您平安出游！</a><span class="list_time_h">2026-02-12</span></li>
+                                        
+                                            <li><span class="bt-prefix"><img src="./images/dian.gif" /></span>
+                                                <a href="./ggfw/cxts/202603/t20260327_965195.htm" target="_blank" title="提醒中国公民近期避免前往日本">提醒中国公民近期避免前往日本</a><span class="list_time_h">2026-03-27</span></li>
+                                        
+                                            <li><span class="bt-prefix"><img src="./images/dian.gif" /></span>
+                                                <a href="./ggfw/cxts/glqxyb/202603/t20260327_965183.htm" target="_blank" title="中国气象局与交通运输部2026年03月26日联合发布全国主要公路气象预报">中国气象局与交通运输部2026年03月26日联...</a><span class="list_time_h">2026-03-27</span></li>
+                                        
+                                            <li><span class="bt-prefix"><img src="./images/dian.gif" /></span>
+                                                <a href="./ggfw/cxts/glqxyb/202603/t20260326_965160.htm" target="_blank" title="中国气象局与交通运输部2026年03月25日联合发布全国主要公路气象预报">中国气象局与交通运输部2026年03月25日联...</a><span class="list_time_h">2026-03-26</span></li>
+                                        
+                                            <li><span class="bt-prefix"><img src="./images/dian.gif" /></span>
+                                                <a href="./ggfw/cxts/glqxyb/202603/t20260325_965144.htm" target="_blank" title="中国气象局与交通运输部2026年03月24日联合发布全国主要公路气象预报">中国气象局与交通运输部2026年03月24日联...</a><span class="list_time_h">2026-03-25</span></li>
+                                        
+                                            <li><span class="bt-prefix"><img src="./images/dian.gif" /></span>
+                                                <a href="./ggfw/cxts/glqxyb/202603/t20260324_965121.htm" target="_blank" title="中国气象局与交通运输部2026年03月23日联合发布全国主要公路气象预报">中国气象局与交通运输部2026年03月23日联...</a><span class="list_time_h">2026-03-24</span></li>
+                                        
+                                            <li><span class="bt-prefix"><img src="./images/dian.gif" /></span>
+                                                <a href="./ggfw/cxts/glqxyb/202603/t20260323_965086.htm" target="_blank" title="中国气象局与交通运输部2026年03月22日联合发布全国主要公路气象预报">中国气象局与交通运输部2026年03月22日联...</a><span class="list_time_h">2026-03-23</span></li>
+                                        
+                                    </ul>
+                                </div>
+                                <div class="bt-clear"></div>
+                            </div>
+                        </div>
+                        <div class="bt-clear"></div>
+                    </div>
+                </div>
+        	 <div class="bt-clear"></div>
+
+                            <!--       国务院 新闻发布会、在线访谈切换-->
+                            <div class="news_box_bottom" style="margin-top: 12px;">
+                                <ul class="tit_box">
+                                    <li class="zxftqh" id="zxftqh_tab_0" onmousemove="Show('zxftqh','zxftqh',0,4,1);">
+                                        <a href="http://www.gov.cn/hudong/ducha/2021-01/26/content_5582430.htm" title="国务院互联网+督查" target="_blank">国务院 <span style="font-size:14px;">互联网+督查</span></a></li>
+                                    <li class="sx">|</li>
+                                    <li class="zxftqhOn" id="zxftqh_tab_1" onmousemove="Show('zxftqh','zxftqh',1,4,1);">
+                                        <a href="./hdjl/xwfbh/" title="新闻发布会" target="_blank">新闻发布会</a></li>
+                                    <li class="sx">|</li>
+                                    <li class="zxftqh" id="zxftqh_tab_2" onmousemove="Show('zxftqh','zxftqh',2,4,1);">
+                                        <a href="./hdjl/zxft/" title="在线访谈" target="_blank">在线访谈</a>
+                                    </li>
+
+                                    
+                                    <li class="tzggqh_more">
+                                        <div class="more_qh" id="zxftqh_more_0">
+                                            <a href=""></a>
+                                        </div>
+                                        <div class="more_qhOn" id="zxftqh_more_1">
+                                            <a href=""></a>
+                                        </div>
+                                        <div class="more_qh" id="zxftqh_more_2">
+                                            <a href=""></a>
+                                       
+                                    </li>
+                                </ul>
+                                <div class="tit_bj"></div>
+								     <!--       国务院互联网+督查-->
+                                <div class="list_qh" id="zxftqh_cont_0">
+                                    <div class="list_part1">
+                                        <div class="xwfbh_list" style="padding: 0; width:740px;">
+                                            <ul>
+											  
+                                                    <li style="float:left; width:370px;">
+                                                        <div class="xwfbh_pic fLeft bt-margin-right-20">
+                                                            <a href="https://www.gov.cn/hudong/" target="_blank"><img src="./sygwy/202507/W020250721613065978309.jpg" width="120" height="90" alt="" /></a>
+                                                        </div>
+                                                        <div class="xwfbh_tit fLeft">
+                                                            <p>
+                                                                <a href="https://www.gov.cn/hudong/" target="_blank" title="@国务院-我来说">@国务院-我来说</a>
+                                                            </p>
+                                                            <span>2025-03-12</div>
+                      </li>
+                      
+                                                    <li style="float:left; width:370px;">
+                                                        <div class="xwfbh_pic fLeft bt-margin-right-20">
+                                                            <a href="https://www.gov.cn/zhengce/zczhjd/" target="_blank"><img src="./sygwy/202507/W020250721612536274951.png" width="120" height="90" alt="" /></a>
+                                                        </div>
+                                                        <div class="xwfbh_tit fLeft">
+                                                            <p>
+                                                                <a href="https://www.gov.cn/zhengce/zczhjd/" target="_blank" title="重要政策举措及实施效果">重要政策举措及实施效果</a>
+                                                            </p>
+                                                            <span>2024-07-01</div>
+                      </li>
+                      
+                                            </ul>
+                                        </div>
+                                      
+                                    </div>
+                                </div>
+                                <!--       国务院互联网+督查结束-->
+								  <div class="bt-clear"></div>
+                                <!--       新闻发布会list-->
+                                <div class="list_qhOn" id="zxftqh_cont_1">
+                                    <div class="list_part1">
+                                        <div class="xwfbh_list" style="padding: 0; width:740px;">
+                                            <ul>
+                                                
+                                                     <li style="float:left; width:370px;">
+                                                        <div class="xwfbh_pic fLeft bt-margin-right-20">
+                                                            <a href="https://www.mct.gov.cn/vipchat/home/site/2/467/" target="_blank"><img src="./hdjl/xwfbh/202603/W020260307773972109379.jpg" width="120" height="90" alt="" /></a>
+                                                        </div>
+                                                        <div class="xwfbh_tit fLeft">
+                                                            <p>
+                                                                <a href="https://www.mct.gov.cn/vipchat/home/site/2/467/" target="_blank" title="十四届全国人大四次会议民生主题记者会">十四届全国人大四次会议民生主题记者会</a>
+                                                            </p>
+                                                            <span>2026-03-07</div>
+                      </li>
+                      
+                                                     <li style="float:left; width:370px;">
+                                                        <div class="xwfbh_pic fLeft bt-margin-right-20">
+                                                            <a href="https://www.mct.gov.cn/vipchat/home/site/2/466/" target="_blank"><img src="./hdjl/xwfbh/202602/W020260213390531877182.png" width="120" height="90" alt="" /></a>
+                                                        </div>
+                                                        <div class="xwfbh_tit fLeft">
+                                                            <p>
+                                                                <a href="https://www.mct.gov.cn/vipchat/home/site/2/466/" target="_blank" title="国新办举行新闻发布会介绍2026“乐购新春”春节特别活动、保障春节市场供应有关情况">国新办举行新闻发布会介绍2026“乐购新春”春节特别活动、保障春节...</a>
+                                                            </p>
+                                                            <span>2026-02-13</div>
+                      </li>
+                      
+                                                     <li style="float:left; width:370px;">
+                                                        <div class="xwfbh_pic fLeft bt-margin-right-20">
+                                                            <a href="https://www.mct.gov.cn/vipchat/home/site/2/464/" target="_blank"><img src="./hdjl/xwfbh/202511/W020251127581304286818.png" width="120" height="90" alt="" /></a>
+                                                        </div>
+                                                        <div class="xwfbh_tit fLeft">
+                                                            <p>
+                                                                <a href="https://www.mct.gov.cn/vipchat/home/site/2/464/" target="_blank" title="国新办举行国务院政策例行吹风会 介绍增强消费品供需适配性进一步促进消费政策措施有关情况">国新办举行国务院政策例行吹风会 介绍增强消费品供需适配性进一步...</a>
+                                                            </p>
+                                                            <span>2025-11-27</div>
+                      </li>
+                      
+                                                     <li style="float:left; width:370px;">
+                                                        <div class="xwfbh_pic fLeft bt-margin-right-20">
+                                                            <a href="https://www.mct.gov.cn/vipchat/home/site/2/463/" target="_blank"><img src="./hdjl/xwfbh/202509/W020250929620785458931.png" width="120" height="90" alt="" /></a>
+                                                        </div>
+                                                        <div class="xwfbh_tit fLeft">
+                                                            <p>
+                                                                <a href="https://www.mct.gov.cn/vipchat/home/site/2/463/" target="_blank" title="【高质量完成“十四五”规划系列主题新闻发布会】介绍“十四五”时期文化和旅游高质量发展成就">【高质量完成“十四五”规划系列主题新闻发布会】介绍“十四五”时...</a>
+                                                            </p>
+                                                            <span>2025-09-29</div>
+                      </li>
+                      
+
+                    </ul>
+                  </div>
+            
+                </div>
+              </div>
+			    <div class="bt-clear"></div>
+              <!--       新闻发布会list结束--> 
+              <!--       在线访谈list-->
+              <div class="list_qh" id="zxftqh_cont_2">
+                <div class="list_part1">
+                <div class="xwfbh_list" style="padding: 0; width:740px;">
+                    <ul>
+                      
+                           <li style="float:left; width:370px;">
+                        <div class="xwfbh_pic fLeft bt-margin-right-20">
+                          <a href="https://www.mct.gov.cn/vipchat/home/site/1/465/" target="_blank"><img src="./hdjl/zxft/202512/W020251219351683779594.jpg" width="154" height="90" alt="" /></a>
+                        </div>
+                        <div class="xwfbh_tit fLeft">
+                          <p><a href="https://www.mct.gov.cn/vipchat/home/site/1/465/" target="_blank" title="为国际非遗保护事业贡献中国实践经验——文化和旅游部有关部门负责人谈赫哲族伊玛堪转入人类非遗代表作名录和入选优秀保护实践名册">为国际非遗保护事业贡献中国实践经验——文化和旅游部有关部门负责人谈赫...</a></p>
+                          <span>2025-12-12</span></div>
+                                                    </li>
+                                                
+                           <li style="float:left; width:370px;">
+                        <div class="xwfbh_pic fLeft bt-margin-right-20">
+                          <a href="https://www.mct.gov.cn/vipchat/home/site/1/452/" target="_blank"><img src="./hdjl/zxft/202502/W020250210408487216730.png" width="154" height="90" alt="" /></a>
+                        </div>
+                        <div class="xwfbh_tit fLeft">
+                          <p><a href="https://www.mct.gov.cn/vipchat/home/site/1/452/" target="_blank" title="国家互联网信息办公室、中央军委政治工作部有关部门负责人就《互联网军事信息传播管理办法》答记者问">国家互联网信息办公室、中央军委政治工作部有关部门负责人就《互联网军事...</a></p>
+                          <span>2025-02-10</span></div>
+                                                    </li>
+                                                
+                           <li style="float:left; width:370px;">
+                        <div class="xwfbh_pic fLeft bt-margin-right-20">
+                          <a href="https://www.mct.gov.cn/vipchat/home/site/1/451/" target="_blank"><img src="./hdjl/zxft/202501/W020250107548052988183.jpg" width="154" height="90" alt="" /></a>
+                        </div>
+                        <div class="xwfbh_tit fLeft">
+                          <p><a href="https://www.mct.gov.cn/vipchat/home/site/1/451/" target="_blank" title="文化和旅游部资源开发司负责人解读《红色旅游融合发展区等级划分》">文化和旅游部资源开发司负责人解读《红色旅游融合发展区等级划分》</a></p>
+                          <span>2025-01-07</span></div>
+                                                    </li>
+                                                
+                           <li style="float:left; width:370px;">
+                        <div class="xwfbh_pic fLeft bt-margin-right-20">
+                          <a href="https://www.mct.gov.cn/vipchat/home/site/1/446/" target="_blank"><img src="./hdjl/zxft/202411/W020241107542024308115.jpg" width="154" height="90" alt="" /></a>
+                        </div>
+                        <div class="xwfbh_tit fLeft">
+                          <p><a href="https://www.mct.gov.cn/vipchat/home/site/1/446/" target="_blank" title="深化文化和旅游领域改革 加快建设社会主义文化强国——访文化和旅游部党组书记、部长孙业礼">深化文化和旅游领域改革 加快建设社会主义文化强国——访文化和旅游部党...</a></p>
+                          <span>2024-09-02</span></div>
+                                                    </li>
+                                                
+
+                                            </ul>
+                                        </div>
+                                   
+                                    </div>
+                                </div>
+								  <div class="bt-clear"></div>
+                                <!--       在线访谈list结束-->
+                                     
+                            </div>
+                            <!--       新闻发布会、在线访谈切换end-->
+                        </div>
+
+ <div class="bt-clear"></div>
+		</div>
+			<!---第二部分结束-->
+			
+      <!-- 第三部分 公众服务 留言开始 -->
+	  
+	  <div class="part2_left_shu2" style="width: 960px;margin-left:0px;">
+	  	   <ul class="tit_box syt10">
+                                    <li class="gzly_tit"><a>公共服务</a></li>
+                                </ul>
+                                <div class="tit_bj syt10"></div>
+								
+								
+									  <div class="part2_left_shu2  fLeft" style="width:470px; margin-left:0px;">
+	  
+	   <div class="gzfw_list"  style="position: relative; ">
+									<a href="https://whzg.mct.gov.cn/" title="文化资源展馆" target="_blank" style="height:210px;">
+									<img src="./images/sy_whzyzgt.jpg" alt="" width="470" height="210px;" />
+										
+									</a>
+									<style>
+									.syt10{margin-top:10px;}
+									.dzlyfwrk1{position:absolute; top:102px;}
+									.dzlyfwrk1 li{ float: left; width: 65px; margin-right: 30px;}
+									.dzlyfwrk1 img{ width:62px;}
+									.dzlyfwrk1 a{ width:62px;}
+									.dzlyfwrk1 li.dzlyli11 span{background:url(.//images/sywhzyzg1.png); display:block; width:62px; height:77px;}
+									.dzlyfwrk1 li.dzlyli22 span{background:url(/images/sywhzyzg2.png); display:block; width:62px; height:77px;}
+									.dzlyfwrk1 li.dzlyli33 span{background:url(/images/sywhzyzg3.png); display:block; width:62px; height:77px;}
+									.dzlyfwrk1 li.dzlyli44 span{background:url(/images/sywhzyzg4.png); display:block; width:62px; height:77px;}
+
+									.dzlyfwrk1 li.dzlyli11:hover span{background:url(.//images/sywhzyzg01.png) no-repeat; width:62px; height:77px;}
+									.dzlyfwrk1 li.dzlyli22:hover span{background:url(/images/sywhzyzg02.png) no-repeat; width:62px; height:77px;}
+									.dzlyfwrk1 li.dzlyli33:hover span{background:url(/images/sywhzyzg03.png ) no-repeat; width:62px; height:77px;}
+									.dzlyfwrk1 li.dzlyli44:hover span{background:url(/images/sywhzyzg04.png ) no-repeat; width:62px; height:77px;}
+
+									</style>
+								<ul class="dzlyfwrk1">
+											<li class="dzlyli11" style="margin-left:63px;"><a href="https://whzg.mct.gov.cn/epl" title="展演信息" target="_blank"><span></span></a></li>
+											<li class="dzlyli22" style="margin-top:0px;"><a href="https://whzg.mct.gov.cn/#home4" title="专题展览" target="_blank"><span></span></a></li>
+											<li class="dzlyli44" style="margin-top:0px;"><a href="https://whzg.mct.gov.cn/#home7" title="剧目展演" target="_blank"><span></span></a></li>
+											<li class="dzlyli33" style="margin-top:-2px;"><a href="https://whzg.mct.gov.cn/#home5" title="剧目展演" target="_blank"><span></span></a></li>
+										
+										</ul>
+                                </div>
+	  
+	  </div>
+								
+								
+	   <div class="fRight" style="width:470px;height:210px;">
+
+                            <!--        公众服务-->
+                            <div class="gzfw" style="position: relative; ">
+                                
+                                <div class="gzfw_list">
+									<a href="https://lyfw.mct.gov.cn/site/special/home" title="大众旅游服务" target="_blank" style="height:155px;"><img src="./images/dzlyfw1.jpg" alt="" width="470" style=" height:210px;" />
+										
+									</a>
+									<style>
+									.dzlyfwrk{position:absolute; top:110px;}
+									.dzlyfwrk li{ float: left; width: 65px; margin-right: 30px;}
+									.dzlyfwrk img{ width:70px;}
+									.dzlyfwrk a{ width:70px;}
+									.dzlyfwrk li.dzlyli1 span{background:url(.//images/dazlyfwrk1.png); display:block; width:70px; height:72px;}
+									.dzlyfwrk li.dzlyli2 span{background:url(/images/dazlyfwrk2.png); display:block; width:70px; height:72px;}
+									.dzlyfwrk li.dzlyli3 span{background:url(/images/dazlyfwrk3.png); display:block; width:70px; height:72px;}
+									.dzlyfwrk li.dzlyli4 span{background:url(/images/dazlyfwrk4.png); display:block; width:70px; height:72px;}
+									.dzlyfwrk li.dzlyli5 span{background:url(/images/dazlyfwrk001.png); display:block; width:70px; height:72px;}
+									
+									.dzlyfwrk li.dzlyli1:hover span{background:url(.//images/dazlyfwrk111.png) no-repeat; width:70px; height:72px;}
+									.dzlyfwrk li.dzlyli2:hover span{background:url(/images/dazlyfwrk222.png) no-repeat; width:70px; height:72px;}
+									.dzlyfwrk li.dzlyli3:hover span{background:url(/images/dazlyfwrk333.png ) no-repeat; width:70px; height:72px;}
+									.dzlyfwrk li.dzlyli4:hover span{background:url(/images/dazlyfwrk444.png) no-repeat; width:70px; height:72px;}
+									.dzlyfwrk li.dzlyli5:hover span{background:url(/images/dazlyfwrk0001.png) no-repeat; width:70px; height:72px;}
+									</style>
+									<ul class="dzlyfwrk">
+											<li class="dzlyli5" style="margin-left:55px;"><a href="https://lyfw.mct.gov.cn/site/special/scenic" title="大众旅游服务-景区天气" target="_blank"><span></span></a></li>
+											<li class="dzlyli2"><a href="https://lyfw.mct.gov.cn/site/special/home#home3" title="大众旅游服务-旅游线路推荐" target="_blank"><span></span></a></li>
+											<li class="dzlyli3"><a href="https://www.mct.gov.cn/ggfw/cxts/" title="大众旅游服务-出行提示" target="_blank"><span></span></a></li>
+											<li class="dzlyli4"><a href="https://www.mct.gov.cn/tourism/#/list?drid=4" title="大众旅游服务-名录查询" target="_blank"><span></span></a></li>
+										</ul>
+                                </div>
+                            </div>
+                            <!--        公众服务end-->
+                        </div>
+	  
+
+	  <!--        公众服务-->
+	  <div style="clear:both;"></div>
+
 	
-				//调查
-				pollList({
-					 objId: 'wsdclist',
-					 listArgs: {
-						chnlIds: SiteInfo.itp4poll,
-						order: "-startTime"
-					},
-					listApi: {
-						url:"/staticitp/fzswlj/wsdc/1.json?cache=" + new Date().getTime(),
-						rsName: "polls", 
-						type: "get"
-					}
-				  
-				});
-				//征集
-				adviceList({
-					objId: 'myzjList',	
-					listArgs: {
-						chnlIds: SiteInfo.itp4advice,
-						order: "-startDate"
-					},
-					listApi: {
-						type: "get",
-						url:  "/staticitp/fzswlj/myzj/1.json?cache=" + new Date().getTime(),
-						rsName: "advices",
-					},
-					injGetList: function(res) {
-						for (var i = 0; i < res.data.length; i++) {
-							if (Date.parse(new Date()) > Date.parse(res.data[i].startDate.substring(0,10)) && Date.parse(new Date()) < Date.parse(res.data[i].endDate.substring(0,10))) {
-								res.data[i].status = "征集中";
-							} else if (Date.parse(new Date()) < Date.parse(res.data[i].startDate.substring(0,10))) {
-								res.data[i].status = "未开始";
-							} else {
-								res.data[i].status = "已结束";
-							}
-						}
-						return res;
-					}
-				});
+    <script src="./images/jquery.SuperSlide.2.1.1.js"></script>
 	
+       <!---热点专题  开始--->
+	   <div class="sy_rdzt syt10">
+	
+       <div class="rmzt_tit font"><a href="https://www.mct.gov.cn/whzx/rdzt/" target="_blank">热点专题</a></div>
+                        <div class="sy_ztzlbox">
+			<div class="sy_ztzl fl">
+				<div class="hd">		
+				</div>
+				<a class="prev"></a>
+				<div class="bd">
+					<ul class="picList">
+					 
+					<li style="">
+							<div class="pic"> <a href="https://zhuanti.mct.gov.cn/lianghui2026.html" target='_blank'><IMG src="./whzx/rdzt/sydbgd/202603/W020260304609730704389.jpg" border=0 /></a></div>
+						</li>
+                            
+					<li style="">
+							<div class="pic"> <a href="https://zhuanti.mct.gov.cn/lygzzyzs.html" target='_blank'><IMG src="./whzx/rdzt/sydbgd/202509/W020250929376142833972.png" border=0 /></a></div>
+						</li>
+                            
+					<li style="">
+							<div class="pic"> <a href="https://zhuanti.mct.gov.cn/hhxxgdn2026.html" target='_blank'><IMG src="./whzx/rdzt/sydbgd/202602/W020260214503984397120.jpg" border=0 /></a></div>
+						</li>
+                            
+					<li style="">
+							<div class="pic"> <a href="https://sjfw.mct.gov.cn/site/dataservice/home" target='_blank'><IMG src="./whzx/rdzt/sydbgd/202509/W020250929565566797635.png" border=0 /></a></div>
+						</li>
+                            
+					<li style="">
+							<div class="pic"> <a href="https://zhuanti.mct.gov.cn/5lhbqgqsnxqjyjx.html" target='_blank'><IMG src="./whzx/rdzt/sydbgd/202512/W020260123519580293182.jpg" border=0 /></a></div>
+						</li>
+                            
+					<li style="">
+							<div class="pic"> <a href="https://zhuanti.mct.gov.cn/yishujie14.html" target='_blank'><IMG src="./whzx/rdzt/sydbgd/202510/W020251013634783456434.png" border=0 /></a></div>
+						</li>
+                            
+					<li style="">
+							<div class="pic"> <a href="https://zhuanti.mct.gov.cn/desjqxj.html" target='_blank'><IMG src="./whzx/rdzt/sydbgd/202511/W020251107330219979467.png" border=0 /></a></div>
+						</li>
+                            
+					<li style="">
+							<div class="pic"> <a href="https://zhuanti.mct.gov.cn/10zgychjyqz.html" target='_blank'><IMG src="./whzx/rdzt/sydbgd/202509/W020250929389669556250.png" border=0 /></a></div>
+						</li>
+                            
+					<li style="">
+							<div class="pic"> <a href="https://zhuanti.mct.gov.cn/lybkzn.html" target='_blank'><IMG src="./whzx/rdzt/sydbgd/202509/W020250929373852159825.png" border=0 /></a></div>
+						</li>
+                            
+					<li style="">
+							<div class="pic"> <a href="https://zhuanti.mct.gov.cn/wlbjscxzx/index.html" target='_blank'><IMG src="./whzx/rdzt/sydbgd/202509/W020250929373279153276.png" border=0 /></a></div>
+						</li>
+                            
+					<li style="">
+							<div class="pic"> <a href="https://www.mct.gov.cn//preview/whhlyqyzcxxfw/" target='_blank'><IMG src="./whzx/rdzt/sydbgd/202509/W020250929518180041947.png" border=0 /></a></div>
+						</li>
+                            
+					<li style="">
+							<div class="pic"> <a href="https://www.mct.gov.cn/preview/special/kygz/" target='_blank'><IMG src="./whzx/rdzt/sydbgd/202509/W020250929403342530565.png" border=0 /></a></div>
+						</li>
+                            
 
-			slidesByJ(".ywxxTab", "left", "", "", "on", "3");			
-			setTimeout(function () {
-				tabWza(".ywxxTab");
-				tabWza(".tabs_public", ".tabs_bd ul", ".tabs_hd li");
-			}, 1000);
-		
-		
-			  
-			})
-		
+					</ul>
+					</div>
+						<a class="next"></a>
+					<style type="text/css">
+
+
+.tempWrap{ margin-left:12px; width:915px;}
+.sy_ztzlbox{height:270px;background:#f5f5f5;margin-top:8px;margin-bottom:3px;}
+.sy_ztzl{  position:relative;width:950px; }
+.sy_ztzl .prev,.sy_ztzl .next{ display:block;  width:15px; height:37px;overflow:hidden;cursor:pointer; position:absolute;top:110px;z-index:2;}
+.sy_ztzl .next{background:url(ztzlright.png) no-repeat; right:0; }
+.sy_ztzl .prev{ background:url(.//images/ztzlleft.png) no-repeat; left:13px; }
+.sy_ztzl .next{ background:url(.//images/ztzlright.png) no-repeat; right:3px; }
+
+.sy_ztzl .bd{ padding:20px 10px;}
+.sy_ztzl .bd ul{ overflow:hidden; zoom:1; height:240px; }
+.sy_ztzl .bd ul li{ margin:0 10px; float:left; _display:inline;overflow:hidden; text-align:center; background:#fff;  padding:0px;}
+.sy_ztzl .bd ul li .pic{ text-align:center; }
+.sy_ztzl .bd ul li .pic img{ display:block; padding:6px; width:163px; height:215px;  border:3px #e7e7e7 solid; border-radius: 6px  }
+.sy_ztzl .bd ul li .pic a:hover img{ border-color:#e8e8e8;  }
+.sy_ztzl .bd ul li .title{ line-height:24px;   }	
+.zcwsgg{width:180px;margin-top: 20px;margin-right:20px;}
+.zcwsgg img{width: 100%;height: 200px;}
+
+		</style>
+					<!----> 
+				<div class="cl"></div>		
+			
+			</div>
+		</div>
+		<script id="jsID" type="text/javascript">
+		 var ary = location.href.split("&");
+		jQuery(".sy_ztzl").slide( { mainCell:".bd ul",autoPlay:true,effect:'leftLoop',vis:5,interTime:5000,opp:false,pnLoop:true,trigger:'click',mouseOverStop:true });
+        if(/AppleWebKit.*mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){
+            if(window.location.href.indexOf("?mobile")<0){
+jQuery(".sy_ztzl").slide( { mainCell:".bd ul",autoPlay:true,effect:'leftLoop',vis:1,interTime:5000,opp:false,pnLoop:true,trigger:'click',mouseOverStop:true });
+}
+        }
 		</script>
-		<script src="https://www.fuzhou.gov.cn/res/ckplayer/ckplayer.js"></script>
-		<script>
-			//
-				require(["detailpage"], function (detailpage) {
-					detailpage({
-				
-						enableVideo: true,  //是否启用视频功能，默认为true
-						videoLinks: [
-						//传入视频数组，仅显示一篇
-						"https://wlj.fuzhou.gov.cn/zwgk/ztzl/fzlyzn/lysp/202602/P020260213383604134956.mp4",
-						""
-						],
-						// 展示视频封面
-						poster: './zwgk/ztzl/fzlyzn/lysp/202602/W020260213383615734615.png',
-					});
 
-				});
-				//
+		  <div style="clear:both;"></div>
+                  <!-- 第三部分 留言开始 -->
+	  <ul class="tit_box syt10"> <li class="gzly_tit"><a>留言与投诉</a></li></ul><div class="tit_bj syt10"></div>
+	     <style type="text/css">
+                                  
+                                    .sy_gzly a {
+                                        float: left; height:50px; line-height:50px;color:#333333; text-align:center; background:#;margin-left:2px;}
+										.sy_gzly a:hover{color:#fff;font-weight:bold;}
+
+									.sy_gzly1{width:250px; background:url(.//images/sy_wylya1.png) #e9e9e9 55px no-repeat;}
+									.sy_gzly2{width:250px; background:url(.//images/sy_wylya2.png) #e9e9e9 55px no-repeat;}
+									.sy_gzly3{width:453px; background:url(.//images/sy_wylya2.png) #e9e9e9 40px no-repeat;}
+									
+									.sy_gzly1:hover{width:250px; background:url(.//images/sy_wylya01.png) 54px no-repeat #d05454;;}
+									.sy_gzly2:hover{width:250px; background:url(.//images/sy_wylya02.png) 54px no-repeat #d05454;;}
+									.sy_gzly3:hover{width:453px; background:url(.//images/sy_wylya02.png) 40px no-repeat #d05454;;}
+					              </style>
+								<div class="sy_gzly syt10">
+								<a href="/wlhdjl/hdjl_wyxx.html" target="_blank" class="sy_gzly1" title="我要留言"><img src="" />我要留言</a>
+                                <a href="/wlhdjl/dflist.html" target="_blank" class="sy_gzly2" title="留言选登">留言选登</a>
+								<a href="https://jbts.mct.gov.cn/" target="_blank" class="sy_gzly3" title="全国文化和旅游市场网上举报投诉处理系统">全国文化和旅游市场网上举报投诉处理系统</a>
+								</div>
+
+	  </div>
+	     <div style="clear:both;"></div>
+
+	  <!-- 第三部分 留言结束 --> 
+	   </div>
+	   </div>
+       
+	   <!---热点专题  结束--->	
+	   <div style="clear:both;"></div>
+            <!-- 友情链接部分-->
+            <div id="part3" class="bt-margin-top-20">
+                <ul style="margin:0px auto;width:1000px;">
+                    <li class="wzdh" style="line-height:57px !important;"><a href="https://www.gov.cn/" target="_blank" style="color: #c44021;">中国政府网</a></li>
+                    <li style="padding-right: 23px;line-height: 55px;padding-top:0;"><img src="./images/yqlj_jg.jpg" style="margin-top: 10px;" /></li>
+
+                    <li>
 
 
-		</script>
-	</body>
+                        <select onchange="MM_jumpMenu('parent',this,1)" style="width:160px;font-size: 13px;">
+            <option selected="selected">国务院部门网站</option>
+
+              
+             <option value="https://www.fmprc.gov.cn/web/" title="外交部">外交部</option>
+              
+             <option value="http://www.mod.gov.cn/" title="国防部">国防部</option>
+              
+             <option value="https://www.ndrc.gov.cn/" title="国家发展和改革委员会">国家发展和改革委员会</option>
+              
+             <option value="http://www.moe.gov.cn/" title="教育部">教育部</option>
+              
+             <option value="http://www.most.gov.cn/" title="科学技术部">科学技术部</option>
+              
+             <option value="https://www.miit.gov.cn/" title="工业和信息化部">工业和信息化部</option>
+              
+             <option value="https://www.neac.gov.cn/" title="国家民族事务委员会">国家民族事务委员会</option>
+              
+             <option value="https://www.mps.gov.cn/" title="公安部">公安部</option>
+              
+             <option value="/" title="国家安全部">国家安全部</option>
+              
+             <option value="http://www.mca.gov.cn/" title="民政部">民政部</option>
+              
+             <option value="http://www.moj.gov.cn/" title="司法部">司法部</option>
+              
+             <option value="http://www.mof.gov.cn/index.htm" title="财政部">财政部</option>
+              
+             <option value="http://www.mohrss.gov.cn/" title="人力资源和社会保障部">人力资源和社会保障部</option>
+              
+             <option value="http://www.mnr.gov.cn/" title="自然资源部">自然资源部</option>
+              
+             <option value="http://www.mee.gov.cn/" title="生态环境部">生态环境部</option>
+              
+             <option value="http://www.mohurd.gov.cn/" title="住房和城乡建设部">住房和城乡建设部</option>
+              
+             <option value="http://www.mot.gov.cn/" title="交通运输部">交通运输部</option>
+              
+             <option value="http://www.mwr.gov.cn/" title="水利部">水利部</option>
+              
+             <option value="http://www.moa.gov.cn/" title="农业农村部">农业农村部</option>
+              
+             <option value="http://www.mofcom.gov.cn/" title="商务部">商务部</option>
+              
+             <option value="https://www.mct.gov.cn/" title="文化和旅游部">文化和旅游部</option>
+              
+             <option value="http://www.nhc.gov.cn/" title="国家卫生健康委员会">国家卫生健康委员会</option>
+              
+             <option value="http://www.mva.gov.cn/" title="退役军人事务部">退役军人事务部</option>
+              
+             <option value="http://www.mem.gov.cn/" title="应急管理部">应急管理部</option>
+              
+             <option value="http://www.pbc.gov.cn/" title="人民银行">人民银行</option>
+              
+             <option value="http://www.audit.gov.cn/" title="审计署">审计署</option>
+              
+             <option value="http://www.moe.gov.cn/jyb_sy/China_Language/" title="国家语言文字工作委员会">国家语言文字工作委员会</option>
+              
+             <option value="http://www.cnsa.gov.cn/" title="国家航天局">国家航天局</option>
+              
+             <option value="http://www.caea.gov.cn/" title="国家原子能机构">国家原子能机构</option>
+              
+             <option value="/" title="国家外国专家局">国家外国专家局</option>
+              
+             <option value="/" title="国家海洋局">国家海洋局</option>
+              
+             <option value="http://nnsa.mee.gov.cn/" title="国家核安全局">国家核安全局</option>
+              
+             <option value="https://www.nrra.gov.cn/" title="国家乡村振兴局">国家乡村振兴局</option>
+              
+             <option value="http://www.sasac.gov.cn/" title="国务院国有资产监督管理委员会">国务院国有资产监督管理委员会</option>
+              
+             <option value="http://www.customs.gov.cn/" title="海关总署">海关总署</option>
+              
+             <option value="http://www.chinatax.gov.cn/" title="国家税务总局">国家税务总局</option>
+              
+             <option value="http://www.samr.gov.cn/" title="国家市场监督管理总局">国家市场监督管理总局</option>
+              
+             <option value="http://www.cbirc.gov.cn/cn/view/pages/index/index.html" title="国家金融监督管理总局">国家金融监督管理总局</option>
+              
+             <option value="http://www.csrc.gov.cn/pub/newsite/" title="中国证券监督管理委员会">中国证券监督管理委员会</option>
+              
+             <option value="http://www.nrta.gov.cn/" title="国家广播电视总局">国家广播电视总局</option>
+              
+             <option value="http://www.sport.gov.cn/" title="国家体育总局">国家体育总局</option>
+              
+             <option value="https://www.gjxfj.gov.cn/gjxfj/index.htm" title="国家信访局">国家信访局</option>
+              
+             <option value="http://www.stats.gov.cn/" title="国家统计局">国家统计局</option>
+              
+             <option value="http://www.cnipa.gov.cn/" title="国家知识产权局">国家知识产权局</option>
+              
+             <option value="http://www.cidca.gov.cn/" title="国家国际发展合作署">国家国际发展合作署</option>
+              
+             <option value="http://www.nhsa.gov.cn/" title="国家医疗保障局">国家医疗保障局</option>
+              
+             <option value="http://www.counsellor.gov.cn/" title="国务院参事室">国务院参事室</option>
+              
+             <option value="http://www.ggj.gov.cn/" title="国家机关事务管理局">国家机关事务管理局</option>
+              
+             <option value="/" title="国家反垄断局">国家反垄断局</option>
+              
+             <option value="http://www.cnca.gov.cn/" title="国家认证认可监督管理委员会">国家认证认可监督管理委员会</option>
+              
+             <option value="http://www.sac.gov.cn/" title="国家标准化管理委员会">国家标准化管理委员会</option>
+              
+             <option value="http://www.ncac.gov.cn/" title="国家新闻出版署（国家版权局）">国家新闻出版署（国家版权局）</option>
+              
+             <option value="https://www.sara.gov.cn/" title="国家宗教事务局">国家宗教事务局</option>
+              
+             <option value="http://www.gov.cn/guoqing/2018-06/22/content_5300522.htm" title="国务院研究室">国务院研究室</option>
+              
+             <option value="http://www.gqb.gov.cn/" title="国务院侨务办公室">国务院侨务办公室</option>
+              
+             <option value="https://www.hmo.gov.cn/" title="国务院港澳事务办公室">国务院港澳事务办公室</option>
+              
+             <option value="http://www.gwytb.gov.cn/" title="国务院台湾事务办公室">国务院台湾事务办公室</option>
+              
+             <option value="http://www.cac.gov.cn/" title="国家互联网信息办公室">国家互联网信息办公室</option>
+              
+             <option value="http://www.scio.gov.cn/index.htm" title="国务院新闻办公室">国务院新闻办公室</option>
+              
+             <option value="http://203.192.6.89/xhs/" title="新华通讯社">新华通讯社</option>
+              
+             <option value="http://www.cas.cn/" title="中国科学院">中国科学院</option>
+              
+             <option value="http://www.cass.cn/" title="中国社会科学院">中国社会科学院</option>
+              
+             <option value="http://www.cae.cn/" title="中国工程院">中国工程院</option>
+              
+             <option value="https://www.drc.gov.cn/default.aspx" title="国务院发展研究中心">国务院发展研究中心</option>
+              
+             <option value="/" title="中央广播电视总台">中央广播电视总台</option>
+              
+             <option value="http://www.cma.gov.cn/" title="中国气象局">中国气象局</option>
+              
+             <option value="https://www.ccps.gov.cn/" title="国家行政学院">国家行政学院</option>
+              
+             <option value="http://www.lswz.gov.cn/" title="国家粮食和物资储备局">国家粮食和物资储备局</option>
+              
+             <option value="http://www.nea.gov.cn/" title="国家能源局">国家能源局</option>
+              
+             <option value="/" title="国家数据局">国家数据局</option>
+              
+             <option value="http://www.sastind.gov.cn/" title="国家国防科技工业局">国家国防科技工业局</option>
+              
+             <option value="http://www.tobacco.gov.cn/html/" title="国家烟草专卖局">国家烟草专卖局</option>
+              
+             <option value="https://www.nia.gov.cn/" title="国家移民管理局">国家移民管理局</option>
+              
+             <option value="http://www.forestry.gov.cn/" title="国家林业和草原局">国家林业和草原局</option>
+              
+             <option value="http://www.nra.gov.cn/" title="国家铁路局">国家铁路局</option>
+              
+             <option value="http://www.caac.gov.cn/index.html" title="中国民用航空局">中国民用航空局</option>
+              
+             <option value="http://www.spb.gov.cn/" title="国家邮政局">国家邮政局</option>
+              
+             <option value="http://www.ncha.gov.cn/" title="国家文物局">国家文物局</option>
+              
+             <option value="http://www.natcm.gov.cn/" title="国家中医药管理局">国家中医药管理局</option>
+              
+             <option value="/" title="国家疾病预防控制局">国家疾病预防控制局</option>
+              
+             <option value="https://www.chinamine-safety.gov.cn" title="国家矿山安全监察局">国家矿山安全监察局</option>
+              
+             <option value="https://www.119.gov.cn/" title="国家消防救援局">国家消防救援局</option>
+              
+             <option value="http://www.safe.gov.cn/" title="国家外汇管理局">国家外汇管理局</option>
+              
+             <option value="https://www.nmpa.gov.cn/" title="国家药品监督管理局">国家药品监督管理局</option>
+              
+          </select>
+                    </li>
+
+                    <li>
+                        <select onchange="MM_jumpMenu('parent',this,1)" style="width:160px;font-size: 13px;">
+            <option selected="selected">地方厅局网站</option>
+              
+             <option value="http://whlyj.beijing.gov.cn/" title="北京市文化和旅游局">北京市文化和旅游局</option>
+              
+             <option value="http://whly.tj.gov.cn/" title="天津市文化和旅游局">天津市文化和旅游局</option>
+              
+             <option value="https://whly.hebei.gov.cn/" title="河北省文化和旅游厅">河北省文化和旅游厅</option>
+              
+             <option value="https://wlt.shanxi.gov.cn/" title="山西省文化和旅游厅">山西省文化和旅游厅</option>
+              
+             <option value="https://wlt.nmg.gov.cn/" title="内蒙古自治区文化和旅游厅">内蒙古自治区文化和旅游厅</option>
+              
+             <option value="http://whly.ln.gov.cn/" title="辽宁省文化和旅游厅">辽宁省文化和旅游厅</option>
+              
+             <option value="http://whhlyt.jl.gov.cn/" title="吉林省文化和旅游厅">吉林省文化和旅游厅</option>
+              
+             <option value="http://wlt.hlj.gov.cn/" title="黑龙江省文化和旅游厅">黑龙江省文化和旅游厅</option>
+              
+             <option value="http://whlyj.sh.gov.cn/" title="上海市文化和旅游局">上海市文化和旅游局</option>
+              
+             <option value="https://wlt.jiangsu.gov.cn/" title="江苏省文化和旅游厅">江苏省文化和旅游厅</option>
+              
+             <option value="http://ct.zj.gov.cn/" title="浙江省文化广电和旅游厅">浙江省文化广电和旅游厅</option>
+              
+             <option value="https://ct.ah.gov.cn/" title="安徽省文化和旅游厅">安徽省文化和旅游厅</option>
+              
+             <option value="http://wlt.fujian.gov.cn/" title="福建省文化和旅游厅">福建省文化和旅游厅</option>
+              
+             <option value="http://dct.jiangxi.gov.cn/" title="江西省文化和旅游厅">江西省文化和旅游厅</option>
+              
+             <option value="http://whhly.shandong.gov.cn/" title="山东省文化和旅游厅">山东省文化和旅游厅</option>
+              
+             <option value="https://hct.henan.gov.cn/" title="河南省文化和旅游厅">河南省文化和旅游厅</option>
+              
+             <option value="https://wlt.hubei.gov.cn/" title="湖北省文化和旅游厅">湖北省文化和旅游厅</option>
+              
+             <option value="https://whhlyt.hunan.gov.cn/" title="湖南省文化和旅游厅">湖南省文化和旅游厅</option>
+              
+             <option value="http://whly.gd.gov.cn/" title="广东省文化和旅游厅">广东省文化和旅游厅</option>
+              
+             <option value="http://wlt.gxzf.gov.cn/" title="广西壮族自治区文化和旅游厅">广西壮族自治区文化和旅游厅</option>
+              
+             <option value="https://lwt.hainan.gov.cn/" title="海南省旅游和文化广电体育厅">海南省旅游和文化广电体育厅</option>
+              
+             <option value="https://whlyw.cq.gov.cn/" title="重庆市文化和旅游发展委员会">重庆市文化和旅游发展委员会</option>
+              
+             <option value="https://wlt.sc.gov.cn/" title="四川省文化和旅游厅">四川省文化和旅游厅</option>
+              
+             <option value="https://whhly.guizhou.gov.cn/" title="贵州省文化和旅游厅">贵州省文化和旅游厅</option>
+              
+             <option value="http://dct.yn.gov.cn/" title="云南省文化和旅游厅">云南省文化和旅游厅</option>
+              
+             <option value="https://wlt.xizang.gov.cn/" title="西藏自治区文化和旅游厅">西藏自治区文化和旅游厅</option>
+              
+             <option value="http://whhlyt.shaanxi.gov.cn/" title="陕西省文化和旅游厅">陕西省文化和旅游厅</option>
+              
+             <option value="http://wlt.gansu.gov.cn/" title="甘肃省文化和旅游厅">甘肃省文化和旅游厅</option>
+              
+             <option value="https://whlyt.qinghai.gov.cn/" title="青海省文化和旅游厅">青海省文化和旅游厅</option>
+              
+             <option value="http://whhlyt.nx.gov.cn/" title="宁夏回族自治区文化和旅游厅">宁夏回族自治区文化和旅游厅</option>
+              
+             <option value="http://wlt.xinjiang.gov.cn/" title="新疆维吾尔自治区文化和旅游厅">新疆维吾尔自治区文化和旅游厅</option>
+              
+             <option value="http://wtgl.xjbt.gov.cn/" title="新疆生产建设兵团文化体育广电和旅游局">新疆生产建设兵团文化体育广电和旅游局</option>
+              
+          </select>
+                    </li>
+
+                    <li>
+                        <select onchange="MM_jumpMenu('parent',this,1)" style="width:125px;font-size: 13px;">
+            <option selected="selected">直属单位网站</option>
+            
+    <option value="/" title="文化和旅游部机关服务中心（机关服务局）">文化和旅游部机关服务中心（机关服务局）</option>
+
+    <option value="/" title="文化和旅游部信息中心">文化和旅游部信息中心</option>
+
+    <option value="http://www.zgysyjy.org.cn/" title="中国艺术研究院">中国艺术研究院</option>
+
+    <option value="http://www.nlc.cn/" title="国家图书馆">国家图书馆</option>
+
+    <option value="http://www.dpm.org.cn/" title="故宫博物院">故宫博物院</option>
+
+    <option value="http://www.chnmuseum.cn/" title="中国国家博物馆">中国国家博物馆</option>
+
+    <option value="http://www.cacta.cn/" title="中央文化和旅游管理干部学院">中央文化和旅游管理干部学院</option>
+
+    <option value="http://www.ccmg.cn/" title="中国文化传媒集团有限公司">中国文化传媒集团有限公司</option>
+
+    <option value="https://www.cnpoc.cn/" title="国家京剧院">国家京剧院</option>
+
+    <option value="http://www.ntcc.com.cn/" title="中国国家话剧院">中国国家话剧院</option>
+
+    <option value="https://www.cnoddt.cn/" title="中国歌剧舞剧院">中国歌剧舞剧院</option>
+
+    <option value="http://www.dfyanyi.com/" title="中国东方演艺集团有限公司">中国东方演艺集团有限公司</option>
+
+    <option value="https://www.cnso.com.cn/" title="中国交响乐团">中国交响乐团</option>
+
+    <option value="http://www.cntc.org.cn/" title="中国儿童艺术剧院">中国儿童艺术剧院</option>
+
+    <option value="http://www.chinaopera.com.cn/" title="中央歌剧院">中央歌剧院</option>
+
+    <option value="http://www.nbc.cn/" title="中央芭蕾舞团">中央芭蕾舞团</option>
+
+    <option value="https://www.cnto.net.cn" title="中央民族乐团">中央民族乐团</option>
+
+    <option value="https://www.ccmat.net.cn/" title="中国煤矿文工团">中国煤矿文工团</option>
+
+    <option value="https://www.namoc.cn/" title="中国美术馆">中国美术馆</option>
+
+    <option value="http://www.cnap.org.cn/" title="中国国家画院">中国国家画院</option>
+
+    <option value="https://www.gmfyg.org.cn/" title="中国工艺美术馆（中国非物质文化遗产馆）">中国工艺美术馆（中国非物质文化遗产馆）</option>
+
+    <option value="http://www.cdcgc.com.cn/" title="中国数字文化集团有限公司">中国数字文化集团有限公司</option>
+
+    <option value="http://www.acgnet.cn/" title="中国动漫集团有限公司">中国动漫集团有限公司</option>
+
+    <option value="https://www.pgm.org.cn/" title="文化和旅游部恭王府博物馆">文化和旅游部恭王府博物馆</option>
+
+    <option value="http://www.hrcmct.cn/" title="文化和旅游部人才中心">文化和旅游部人才中心</option>
+
+    <option value="http://www.whbltzx.cn/" title="文化和旅游部离退休人员服务中心">文化和旅游部离退休人员服务中心</option>
+
+    <option value="http://www.mcasc.com.cn/" title="文化和旅游部艺术发展中心">文化和旅游部艺术发展中心</option>
+
+    <option value="http://www.qinghistory.cn/" title="文化和旅游部清史纂修与研究中心">文化和旅游部清史纂修与研究中心</option>
+
+    <option value="http://www.cice.org.cn/" title="中外文化和旅游交流中心">中外文化和旅游交流中心</option>
+
+    <option value="http://www.cefla.org.cn" title="文化和旅游部民族民间文艺发展中心">文化和旅游部民族民间文艺发展中心</option>
+
+    <option value="https://www.casti.org.cn/" title="中国艺术科技研究所">中国艺术科技研究所</option>
+
+    <option value="https://www.culturedc.cn/" title="文化和旅游部全国公共文化发展中心">文化和旅游部全国公共文化发展中心</option>
+
+    <option value="http://www.cnaf.cn/" title="国家艺术基金管理中心">国家艺术基金管理中心</option>
+
+    <option value="http://www.cice.org.cn/" title="文化和旅游部海外文化设施建设管理中心">文化和旅游部海外文化设施建设管理中心</option>
+
+    <option value="http://www.ctnews.com.cn/" title="《中国旅游报》社有限公司">《中国旅游报》社有限公司</option>
+
+    <option value="https://www.cttp.net.cn/" title="中国旅游出版社">中国旅游出版社</option>
+
+    <option value="http://www.ctaweb.org.cn/" title="中国旅游研究院（数据中心）">中国旅游研究院（数据中心）</option>
+
+    <option value="/" title="文化和旅游部旅游质量监督管理所">文化和旅游部旅游质量监督管理所</option>
+
+    <option value="http://www.meilanfang.com.cn/" title="梅兰芳纪念馆">梅兰芳纪念馆</option>
+
+          </select>
+                    </li>
+
+                    <li>
+                        <select onchange="MM_jumpMenu('parent',this,1)" style="width:160px;font-size: 13px;">
+            <option selected="selected">文化和旅游部专题网站</option>
+              
+             <option value="http://www.ccdy.cn/" title="中国文化传媒网">中国文化传媒网</option>
+              
+             <option value="https://www.cactatv.cn/" title="全国文化和旅游干部网络学院">全国文化和旅游干部网络学院</option>
+              
+          </select>
+                    </li>
+                    <!-- <li>-->
+                   <script type="text/javascript">
+                      function MM_jumpMenu(targ,selObj,restore){ 
+                      //alert(selObj.options[selObj.selectedIndex].value);
+                      if(selObj.options[selObj.selectedIndex].value !="/"){ 
+                         window.open(selObj.options[selObj.selectedIndex].value);
+                      }
+                               
+                         if (restore) selObj.selectedIndex=0;
+                      }
+        </script>
+
+                    <li>
+                        <select onchange="MM_jumpMenu('parent',this,1)" style="width:125px;font-size: 13px;">
+            <option selected="selected">相关链接</option>
+ 
+    <option value="http://www.wenming.cn" title="中国文明网">中国文明网</option>
+
+    <option value="http://culture.people.com.cn" title="人民网--文化频道">人民网--文化频道</option>
+
+    <option value="http://zygjjg.12388.gov.cn/" title="中央国家机关举报网站">中央国家机关举报网站</option>
+
+    <option value="https://www.redcross.org.cn/" title="中国红十字会">中国红十字会</option>
+
+    <option value="http://www.ce.cn" title="中国经济网">中国经济网</option>
+
+    <option value="https://www.mmzy.org.cn/" title="中国民主同盟">中国民主同盟</option>
+
+    <option value="http://www.cnr.cn" title="中国广播网">中国广播网</option>
+
+    <option value="http://www.china.com.cn/" title="中国互联网新闻中心(中国网)">中国互联网新闻中心(中国网)</option>
+
+    <option value="http://www.chncia.org/" title="中国文化产业协会">中国文化产业协会</option>
+
+           
+          </select>
+                    </li>
+                </ul>
+            </div>
+            <!-- 友情链接end-->
+        </div>
+    </div>
+    <!--内容区域结束-->
+    <!--版权开始-->
+    <iframe src="/footqr/index.html" width="100%" height="134" scrolling="no" frameborder="0" style="min-width:1000px !important;"></iframe>
+    <!--版权结束-->
+    <!--左侧二维码-->
+
+  </div>  
+
+
+<!--无障碍开始-->
+<!--script src="https://auth.mangren.com/boots/mct.gov.cn/esdToolsInit.js" charset="UTF-8"></script>-->
+<a id="toolbarSwitch" href="javascript:void(0);"></a>
+<!--无障碍结束-->
+</body>
+
 </html>
