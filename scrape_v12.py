@@ -89,13 +89,13 @@ MATCH_RULES = [
     (["政务服务和数据管理", "政务服务数据管理", "政务服务局", "大数据管理局", "数据局", "行政审批局", "政数局", "大数据发展局", "政务和大数据", "行政审批服务", "数据管理局", "政务服务管理"], "政务服务和数据管理局"),
     (["城市管理和综合执法", "城市管理综合执法", "城市管理局", "城管局", "城管执法", "综合行政执法", "城管和综合执法", "城市管理行政执法", "城市管理委员会", "综合执法局"], "城市管理和综合执法局"),
     (["退役军人事务", "退役军人局"], "退役军人事务局"),
-    (["宣传部", "市委宣传", "宣传部门", "中共.*宣传", "党委宣传", "委宣传部", "宣传部（", "宣传部门预算", "宣传部2026", "中共.*市委宣传", "市委.*宣传部"], "宣传部"),
+    (["宣传部", "市委宣传", "宣传部门", "中共.*宣传", "党委宣传", "委宣传部", "宣传部（", "宣传部门预算", "宣传部2026", "中共.*市委宣传", "市委.*宣传部", "宣传事务", "党委宣传部", "市委宣传部门预算", "精神文明.*办"], "宣传部"),
     (["司法局"], "司法局"),
     (["住房和建设", "住房和城乡建设", "住建局", "住房建设", "住房城乡建设", "住建委", "住房保障和房屋管理", "住房保障和房管"], "住房和建设局"),
     (["建筑工务署", "建筑工务中心", "建设工程事务", "工务署", "建筑工务", "建设工务署", "建设工务局", "建设工务中心"], "建筑工务署"),
     (["民政局"], "民政局"),
     (["财政局"], "财政局"),
-    (["气象局", "气象台", "气象部门", "气象服务", "气象中心", "气象事业", "市气象局"], "气象局"),
+    (["气象局", "气象台", "气象部门", "气象服务", "气象中心", "气象事业", "市气象局", "气象灾害防御", "气象预警"], "气象局"),
     (["应急管理局", "应急局", "安全生产监督"], "应急管理局"),
     (["审计局"], "审计局"),
     (["政府办公厅", "政府办公室", "人民政府办公"], "政府办公厅"),
@@ -329,12 +329,12 @@ def detect_pagination(soup, base_url):
                 total = int(m.group(1))
                 return total, 'page_param'
 
-    # 模式2: ?page=N 或 &page=N
+    # 模式2: ?page=N 或 &page=N 或 ?PageIndex=N 或 ?pageNo=N
     for a in soup.find_all('a', href=True):
         href = a['href']
         text = a.get_text(strip=True)
         if text in ['尾页', '末页', '最后一页']:
-            m = re.search(r'[?&]page=(\d+)', href)
+            m = re.search(r'[?&](?:page|PageIndex|pageNo|pageNum|currPage)=(\d+)', href, re.I)
             if m:
                 return int(m.group(1)), 'page_param'
 
@@ -658,6 +658,12 @@ SEARCH_URL_PATTERNS = [
     "/search/index?searchWord={query}",
     "/fullTextSearch?key={query}",
     "/search?text={query}",
+    "/search.shtml?searchWord={query}",
+    "/search/data?searchWord={query}",
+    "/search.html?keyword={query}",
+    "/search?channelId=0&searchWord={query}",
+    "/jrobotfront/search.action?searchWord={query}",
+    "/search?appid=1&searchWord={query}",
 ]
 
 def detect_search_endpoint(session, website, city):
@@ -851,11 +857,32 @@ COMMON_BUDGET_PATHS = [
     "/zwgk/bmys/2026/",
     "/zwgk/ysjs/bmys/",
     "/zwgk/ysjs/bmys/2026/",
+    # 新增路径 - 基于常见政府网站结构
+    "/zfxxgk/fdzdgknr/czyjshsg/bmczys/",
+    "/zfxxgk/fdzdgknr/czyjshsg/bmczys/2026/",
+    "/zwgk/zdly/czxx/bmys/2026/",
+    "/zwgk/zdly/czxx/yjsgk/",
+    "/zwgk/zdly/czxx/yjsgk/2026/",
+    "/zfxxgk/zdlyxxgk/czxx/bmczyjs/",
+    "/zfxxgk/zdlyxxgk/czxx/bmczyjs/2026/",
+    "/zwgk/zdly/czzj/yjsgk/",
+    "/zwgk/zdly/czzj/yjsgk/2026/",
+    "/szf/ztzl/ysgk/bmys/",
+    "/szf/ztzl/ysgk/bmys/2026/",
+    "/zwgk/zfxxgk/fdzdgknr/czxx/bmczyjs/",
+    "/zfxxgk/fdzdgknr/bmys/",
+    "/zfxxgk/fdzdgknr/bmys/2026/",
+    "/xxgk/czxx/bmczyjs/",
+    "/xxgk/czxx/bmczyjs/2026/",
+    "/xxgk/fdzdgk/czyjs/",
+    "/xxgk/fdzdgk/czyjs/2026/",
+    "/zwgk/fdzdgknr/ysjs/bmys/",
+    "/zwgk/fdzdgknr/ysjs/bmys/2026/",
 ]
 
 def probe_budget_page(session, website, city):
     # Try standard paths on the main website
-    for path in COMMON_BUDGET_PATHS[:50]:
+    for path in COMMON_BUDGET_PATHS[:70]:
         url = urljoin(website, path)
         try:
             r = fetch(session, url, timeout=8)
@@ -869,10 +896,13 @@ def probe_budget_page(session, website, city):
     # Try financial bureau subdomain (czj.xxx.gov.cn or cz.xxx.gov.cn)
     parsed = urlparse(website)
     domain = parsed.netloc.replace('www.', '')
-    cz_domains = [f"czj.{domain}", f"cz.{domain}"]
+    cz_domains = [f"czj.{domain}", f"cz.{domain}", f"caizj.{domain}"]
     cz_paths = ["/", "/zwgk/", "/xxgk/bmys/", "/ysjs/", "/ysgk/",
                 "/zwgk/czyjsgk/", "/xxgk/czsj/list.html",
-                "/zwgk_53713/yjsgktypt/ysgk/2026bmys/"]
+                "/zwgk_53713/yjsgktypt/ysgk/2026bmys/",
+                "/xxgk/bmys/2026/", "/zwgk/bmys/", "/zwgk/bmys/2026/",
+                "/zfxxgk/fdzdgknr/czxx/bmczyjs/",
+                "/xxgk/gkml/czyjs/", "/ysgkpt/"]
     for cz_domain in cz_domains:
         for cz_path in cz_paths:
             cz_url = f"http://{cz_domain}{cz_path}"
