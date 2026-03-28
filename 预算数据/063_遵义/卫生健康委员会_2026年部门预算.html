@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="baidu-site-verification" content="LF9ka3z2Ng" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--栏目标签-->
+    <meta name="SiteName" content="遵义市卫生健康局">
+  <meta name="SiteDomain" content="http://wsjkj.zunyi.gov.cn/">
+  <meta name="SiteIDCode" content="5203000037">    
+<meta name="keywords" content="遵义市卫生健康局">
+<meta name="description" content="遵义市卫生健康局">
+<!--栏目标签-->
+<meta name="ColumnName" content="遵义市卫生健康局首页">
+<meta name="ColumnKeywords" content="遵义市卫生健康局首页">
+<meta name="ColumnDescription" content="公开遵义市卫生健康局首页信息">
+<meta name="ColumnType" content="遵义市卫生健康局首页">
+    <title>遵义市卫生健康局</title>
+    <link rel="stylesheet" type="text/css" href="./images/common.css">
+    <link rel="stylesheet" type="text/css" href="./images/style.css">
+    <script type="text/javascript" src="./images/jquery.min.js"></script>
+    <script type="text/javascript" src="./images/common.js"></script>
+    <script type="text/javascript" src="./images/base.js"></script>
+    <script type="text/javascript" src="/material/trsigi/layui/layui.js"></script>
+     <link rel="stylesheet" type="text/css" href="/material/trsigi/layui/css/layui.css" />
+<style>.index-wrap1-col2-t .tit{width:79px;}
+.index-wrap3-t .tit{
+    width: 151px;
+}
+.sytt{
+    text-align: center;
+    font-size: 36px;
+    padding: 20px 0 0;
+    margin:0 auto;
+}
+.sytt a{text-decoration: none;color: #448ACA;}
+.index-headline{
+    margin-bottom: 20px;
+    padding-top: 0;
+    height: auto;
+}
+</style>
+</head>
+
+<body style="padding-bottom: 0px;">
+<div style="background: url(/images/bg7.png) top center no-repeat;">
+<!-- 页头Start-->
+<script type="text/javascript" src="/material/trsigi/js/sm2.js"></script>
+<script type="text/javascript" src="/material/images/2024/guolv_sqlzr.js"></script>
+<!-- 无障碍新接入方式 -->
+<script type="text/javascript">
+    function addWzaScriptToHeader(id) {
+        var script = document.createElement('script');
+        script.src = 'https://wza.gogbh.cn/wza/wza.min.js';
+        script.id = 'wzaScript';
+        script.setAttribute('data', '4c52c9c2052ea447ae4e738c6baab2b5'); // 自定义属性
+
+        if (document.querySelector('script[id="wzaScript"]')) {
+            console.log('已经附加过');
+        } else {
+            document.head.appendChild(script);
+            script.onload = function() {
+                var button = document.querySelector(id);
+                if (button) {
+                    $(id).click();
+                }
+            };
+        }
+    }
+    $(function() {
+        $(".top-l").prepend('<a class="wza" href="javascript:void(0)" id="assist-open">适老化及无障碍浏览</a><span>|</span>');
+        $("#assist-open").click(function() {
+            addWzaScriptToHeader('#assist-open');
+        })
+        $("#bh_oldFixed").click(function() {
+            addWzaScriptToHeader('#bh_oldFixed');
+        })
+        var bhAria = JSON.parse(localStorage.getItem('bh-aria'));
+        var bh_useOldFixed = localStorage.getItem('bh_useOldFixed')
+        if (bhAria && bhAria.isShow) {
+            // 执行相应的操作
+            if (bh_useOldFixed == 'true') {
+                addWzaScriptToHeader('#bh_oldFixed');
+            } else {
+                addWzaScriptToHeader('#assist-open');
+            }
+        }
+    })
+</script>
+<style>
+    .list_con,.local {
+        font-size: 14px;
+    }
+.nav li {
+    float: left;
+    width: 133px;
+    height: 50px;
+    margin-right: 17px;
+    text-align: center;
+    position: relative;
+}
+</style>
+<div class="header">
+    <div class="top clearfix">
+        <div class="w-container">
+            <span class="date"></span>
+            <div class="top-l rt">
+                <a href="javascript:void(0)"onclick="SetHome(this,window.location)">设为首页</a>
+                <span>|</span>
+                <a href="javascript:void(0)" onclick="shoucang(document.title,window.location)">加入收藏</a>
+<span>|</span>
+<a  target="_blank" href="https://smrz.zwfw.guizhou.gov.cn/sso/login?utype=0&redirect=istrue&client_id=MBFSQUBNF&goto=http%3A//www.guizhou.gov.cn/personalhomepage/" >个人中心</a>
+                <!-- <span>|</span>
+                 <a href="">RSS订阅</a>
+                 <span>|</span>
+                 <a href="">移动版本</a>-->
+            </div>
+        </div>
+    </div>
+    <div class="header-con w-container">
+        <a class="logo" href="/"><img src="/images/wsjkj_logo_vs1.png" /></a>
+        <div class="rt">
+            <div class="search-box">
+                <input type="text" name="" placeholder="大家正在搜：2016全国两会闭幕2" id="search-input" v-model="keyWord" @keypress="search($event)" />
+                <button onclick="subsearch()"  @click="search()">搜索</button>
+            </div>
+            <!-- <div class="search-list">
+                 <span>搜索热词：</span>
+                 <a href="">作风建设</a>
+                 <a href="">一带一路合作共赢</a>
+                 <a href="">两学一做</a>
+                 <a href="">和谐征地</a>
+             </div>-->
+        </div>
+    </div>
+</div>
+<div class="nav w-container clearfix"style="">
+    <li><a href="/">首页</a></li>
+    <li><a href="http://wsjkj.zunyi.gov.cn/gzdt/">工作动态</a></li>
+    <li><a href="http://wsjkj.zunyi.gov.cn/tzgg/">通知公告</a></li>
+    <li><a href="http://wsjkj.zunyi.gov.cn/zcfg/">政策法规</a></li>
+    <li><a href="http://wsjkj.zunyi.gov.cn/djzc/" target="_blank" class='tit '>党建之窗</a></li>
+    <li><a href="http://wsjkj.zunyi.gov.cn/zwgk/">政务公开</a></li>
+    <li><a href="http://wsjkj.zunyi.gov.cn/zfxxgk/">政府信息公开</a></li>
+    <li><a href="http://wsjkj.zunyi.gov.cn/wsdc/">网上调查</a></li>
+</div>
+    <script type="text/javascript">
+        window.onload=function(){showDate()};
+
+        // 设置为主页
+        function SetHome(obj,vrl){
+            try{
+                obj.style.behavior='url(#default#homepage)';obj.setHomePage(vrl);
+            }
+            catch(e){
+                if(window.netscape) {
+                    try {
+                        netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+                    }
+                    catch (e) {
+                        alert("此操作被浏览器拒绝！\n请在浏览器地址栏输入“about:config”并回车\n然后将 [signed.applets.codebase_principal_support]的值设置为'true',双击即可。");
+                    }
+                    var prefs = Components.classes['@mozilla.org/preferences-service;1'].getService(Components.interfaces.nsIPrefBranch);
+                    prefs.setCharPref('browser.startup.homepage',vrl);
+                }else{
+                    alert("您的浏览器不支持，请按照下面步骤操作：1.打开浏览器设置。2.点击设置网页。3.输入："+vrl+"点击确定。");
+                }
+            }
+        }
+        // 加入收藏 兼容360和IE6
+        function shoucang(sTitle,sURL) {
+            try {
+                window.external.addFavorite(sURL, sTitle);
+            }
+            catch (e) {
+                try {
+                    window.sidebar.addPanel(sTitle, sURL, "");
+                }
+                catch (e) {
+                    alert("加入收藏失败，请使用Ctrl+D进行添加");
+                }
+            }
+        }
+        //检索
+        var adrr='http://wsjkj.zunyi.gov.cn/qt/js/';
+        function subsearch() {
+            	var fixvalue = document.getElementById("search-input").value;
+    	        var ffzf=sanitizeInput(fixvalue,"search-input");
+		if(ffzf){
+            if ($("#search-input").val() == "大家正在搜：2016全国两会闭幕" || $("#search-input").val() == "") {
+                alert("请输入查询关键字!");
+                return;
+            }
+            else {
+                window.open("/so/search.shtml?tenantId=644&tenantIds=&configTenantId=&dataTypeId=4313&sign=238e3726-8ed3-4f87-f9f6-ba26ab2a8051&searchWord=" + jQuery("#search-input").val());
+                //window.open("/search.html?keyword=" + encodeURI(jQuery("#search-input").val()))
+            }
+}
+        }
+
+        //获取时间
+        var sWeek = new Array("星期日","星期一","星期二","星期三","星期四","星期五","星期六");
+
+        var CalendarData=new Array(100);
+        var madd=new Array(12);
+        var tgString="甲乙丙丁戊己庚辛壬癸";
+        var dzString="子丑寅卯辰巳午未申酉戌亥";
+        var numString="一二三四五六七八九十";
+        var monString="正二三四五六七八九十冬腊";
+        var weekString="日一二三四五六";
+        var cYear,cMonth,cDay,TheDate;
+        CalendarData = new Array(        0xA4B,0x5164B,0x6A5,0x6D4,0x415B5,0x2B6,0x957,0x2092F,0x497,0x60C96,           0xD4A,0xEA5,0x50DA9,0x5AD,0x2B6,0x3126E, 0x92E,0x7192D,0xC95,0xD4A,            0x61B4A,0xB55,0x56A,0x4155B, 0x25D,0x92D,0x2192B,0xA95,0x71695,0x6CA,          0xB55,0x50AB5,0x4DA,0xA5B,0x30A57,0x52B,0x8152A,0xE95,0x6AA,0x615AA,           0xAB5,0x4B6,0x414AE,0xA57,0x526,0x31D26,0xD95,0x70B55,0x56A,0x96D,          0x5095D,0x4AD,0xA4D,0x41A4D,0xD25,0x81AA5, 0xB54,0xB6A,0x612DA,0x95B,
+            0x49B,0x41497,0xA4B,0xA164B, 0x6A5,0x6D4,0x615B4,0xAB6,0x957,0x5092F,
+            0x497,0x64B, 0x30D4A,0xEA5,0x80D65,0x5AC,0xAB6,0x5126D,0x92E,0xC96,          0x41A95,0xD4A,0xDA5,0x20B55,0x56A,0x7155B,0x25D,0x92D,0x5192B,0xA95,          0xB4A,0x416AA,0xAD5,0x90AB5,0x4BA,0xA5B, 0x60A57,0x52B,0xA93,0x40E95);
+        madd[0]=0;madd[1]=31;madd[2]=59;madd[3]=90;
+        madd[4]=120;madd[5]=151;madd[6]=181;madd[7]=212;
+        madd[8]=243;madd[9]=273;madd[10]=304;madd[11]=334;
+        function GetBit(m,n) { return (m>>n)&1; }
+        function e2c()
+        {
+            TheDate= (arguments.length!=3) ? new Date() : new Date(arguments[0],arguments[1],arguments[2]);
+            var total,m,n,k;
+            var isEnd=false;
+            var tmp=TheDate.getFullYear();
+            total=(tmp-1921)*365+Math.floor((tmp-1921)/4)+madd[TheDate.getMonth()]+TheDate.getDate()-38; if (TheDate.getYear()%4==0&&TheDate.getMonth()>1) { total++;} for(m=0;;m++) {  k=(CalendarData[m]<0xfff)?11:12;  for(n=k;n>=0;n--)  {   if(total<=29+GetBit(CalendarData[m],n))   {    isEnd=true; break;   }   total=total-29-GetBit(CalendarData[m],n);  }  if(isEnd) break; } cYear=1921 + m; cMonth=k-n+1; cDay=total; if(k==12)  {  if(cMonth==Math.floor(CalendarData[m]/0x10000)+1) { cMonth=1-cMonth; }  if(cMonth>Math.floor(CalendarData[m]/0x10000)+1) { cMonth--; }  }}
+        function GetcDateString(){
+            var tmp="";
+            tmp+=tgString.charAt((cYear-4)%10);
+            tmp+=dzString.charAt((cYear-4)%12);
+            tmp+="年";
+            tmp+="(";
+            tmp+=zodiacYear(cYear);
+            tmp+=") ";
+            if(cMonth<1) {
+                tmp+="(闰)"; tmp+=monString.charAt(-cMonth-1);
+            } else {
+                tmp+=monString.charAt(cMonth-1);
+            } ;tmp+="月"; tmp+=(cDay<11)?"初":((cDay<20)?"十":((cDay<30)?"廿":"三十"));
+            if (cDay%10!=0||cDay==10) { tmp+=numString.charAt((cDay-1)%10); } return tmp;}
+        function GetLunarDay(solarYear,solarMonth,solarDay)
+        {
+            if (solarYear<1921 || solarYear>2020) {     return "";
+            }    else    {     solarMonth = (parseInt(solarMonth)>0) ? (solarMonth-1) : 11;     e2c(solarYear,solarMonth,solarDay); return GetcDateString();    }}
+        function zodiacYear (year) {
+            var zodiac = ['猴', '鸡', '狗', '猪', '鼠', '牛', '虎', '兔', '龙', '蛇', '马', '羊'];
+            return zodiac[year % 12];
+        }
+
+        var D=new Date();
+        var yy=D.getFullYear();
+        var mm=D.getMonth()+1;
+        var dd=D.getDate();
+        var ww=D.getDay();
+        var ss=parseInt(D.getTime() / 1000);
+        function getFullYear(d){// 修正firefox下year错误
+            yr=d.getYear();if(yr<1000)
+                yr+=1900;return yr;}
+        function showDate() {
+            var dNow = new Date();
+            var s= dNow.getSeconds();
+            var m= dNow.getMinutes();
+            s=s < 10 ? '0' + s: s;
+            m=m < 10 ? '0' +m:m;
+            var sValue ="今天是:&nbsp;&nbsp;"+ getFullYear(dNow)+"年"+(dNow.getMonth()+1)+"月"+dNow.getDate()+"日"+" "+dNow.getHours()+":"+m+":"+s+" ";
+            sValue+="农历:&nbsp;&nbsp;"+GetLunarDay(yy,mm,dd);
+            $(".date").html(sValue);
+            var t = setTimeout(function(){ showDate() }, 500);
+        };
+
+
+
+    </script>
+<div id="wangSYP_img">
+
+    <div id="img1" style="position: absolute; z-index: 1000;">
+     <!--判断是否外部链接-->
+     
+        
+            <a TARGET="_blank" href="https://www.gov.cn/zhengce/zczhjd/" title="重要政策举措及实施效果">
+        
+    
+    
+        
+    <img src="http://wsjkj.zunyi.gov.cn/qt/fdgg/202308/W020230803400965534939.jpg"/></a>
+        <div style="text-align: right; cursor: pointer; line-height: 30px;" id="closepiaofu">
+            <span style="font-size:18px;cursor:pointer;"  onclick="javascript:turnoff('img1')">关闭</span>
+        </div>
+    </div>
+
+</div>
+<script type="text/javascript" src="../../images/floatAd.js"></script>
+<script type="text/javascript">
+	var j=0;
+	
+		j++;
+	 
+	for (var i=1;i<=j;i++)
+	{
+		var ad = new AdMove("img"+i, true);
+		ad.Run();
+	}
+</script>
+<script type="text/javascript">
+	function turnoff(obj) {
+		document.getElementById(obj).style.display = "none";
+	}
+</script>
+ <style>
+#img2  a img{width: 300px;height: 160px;}
+.tagBgtc img{
+width:100%;
+height:100%;
+}
+.tagBgtc .layui-layer-setwin{
+    right: 25px;
+    top: 24px;
+}
+</style>
+
+    <div id="img_tc1" style="z-index:10000;position:absolute;">
+               <script type="text/javascript">
+                        var  str="javascript:void(0);";
+                        var str_1 = "http://javascript:void(0);";
+                        var str_4 = "";
+                        if (str=="") {
+                            document.write('<a    href="'+str_1+'" alt="'+str_4+'" title="'+str_4+'">');
+                        } else {
+                            document.write('<a    href="'+str+'" alt="'+str_4+'" title="'+str_4+'">');
+                        }
+                           var tagImg=' <img src="http://wsjkj.zunyi.gov.cn/qt/piaoTc/202503/W020250311618658952165.png"/>';
+                            var window_Width_mobile = $(window).width();
+   var window_Height_mobile = $(window).height();
+   $(window).resize(function () { //监听浏览器尺寸变化
+    window_Width_mobile = $(window).width();
+    window_Height_mobile = $(window).height();
+}); 
+                          if(window_Width_mobile<750){
+console.log(111)
+			          $('#img_tc1 a').click(function(){
+                                        layer.open({
+                                                        type: 1,
+                                                        area: ['90%', '250px'],
+                                                        title: false, //不显示标题
+                                                        shadeClose: true,
+                                                        content:  '<div class="tagBgtc" style="width:100%;height:242px;">' + tagImg +' <div>'
+                                                       });
+                                      })
+		             }else{
+console.log(2222)
+			              $('#img_tc1 a').click(function(){
+                                        layer.open({
+                                                        type: 1,
+                                                        area: ['800px', '575px'],
+                                                        title: false, //不显示标题
+                                                        shadeClose: true,
+                                                        content: tagImg
+                                                       });
+                                      })
+		           }
+                        
+                    </script>
+                  <!--获取图片-->           
+                  <img src="http://wsjkj.zunyi.gov.cn/qt/piaoTc/202503/W020250311618658825108.jpg"/></a>
+        <div style="text-align: right; cursor: pointer; line-height: 30px;" id="closepiaofu">
+            <a href="#" onclick="javascript:turnoff('img_tc1')">关闭</a>
+        </div>
+    </div>
+
+<script type="text/javascript" src="/images/floata_dv.js"></script>
+  <script type="text/javascript">
+	var j=0;
+	
+		j++;
+	 
+	for (var i=1;i<=j;i++)
+	{
+		var ad = new A_dMove("img_tc"+i, true);
+		ad.Run();
+	}
+ </script>
+ <script type="text/javascript">
+        function turnoff(obj) {
+            document.getElementById(obj).style.display = "none";
+        }
+
+
+$('.tab').each(function(index){
+   $(this).on('click',function(){
+    console.log(index);
+   $('.tab').eq(index).addClass('active');
+   })
+})
+ 
+    </script>
+<!--content start-->
+<div class="main w-container">
+    <div class="index-main">
+        <!--通知公告-->
+        <div class="index-headline clearfix">
+            <div class='sytt'>
+                                
+         	                               <a target="_blank" href="https://www.zunyi.gov.cn/xwdt/qgyw/202603/t20260326_89910797.html" title="总书记两会后首次考察指引“十五五”开局起步">
+        	 	  	 	             总书记两会后首次考察指引“十五五”开局起步
+       	 	                                </a>
+ 	                       
+              </div>
+        </div>
+        <!--图片新闻-->
+        <div class="index-wrap1 clearfix">
+            <div class="index-wrap1-col1 lf">
+                <ul class="index-newspic">
+                    
+                        <li><a target="_blank" href="https://www.guizhou.gov.cn/ztzl/2026nqzsbbzzfhfbwtxszj/">
+          <script>
+var  appimg='<img src="http://wsjkj.zunyi.gov.cn/tpxw/202603/W020260302449208583744.jpg"/>'
+if(appimg){
+document.write('<img src="http://wsjkj.zunyi.gov.cn/tpxw/202603/W020260302449208583744.jpg"/>')
+}else{
+document.write('<img src="" />')
+}
+          </script>
+</a></li>
+                    
+                        <li><a target="_blank" href="https://www.zunyi.gov.cn/ztzl/2026nqzsbbzzfhfbwtxszj/">
+          <script>
+var  appimg='<img src="http://wsjkj.zunyi.gov.cn/tpxw/202603/W020260310397412556086.jpg"/>'
+if(appimg){
+document.write('<img src="http://wsjkj.zunyi.gov.cn/tpxw/202603/W020260310397412556086.jpg"/>')
+}else{
+document.write('<img src="" />')
+}
+          </script>
+</a></li>
+                    
+                        <li><a target="_blank" href="./tpxw/202603/t20260325_89907380.html">
+          <script>
+var  appimg=''
+if(appimg){
+document.write('')
+}else{
+document.write('<img src="http://wsjkj.zunyi.gov.cn/tpxw/202603/W020260325582559784040_ORIGIN.jpg" />')
+}
+          </script>
+</a></li>
+                    
+                        <li><a target="_blank" href="./tpxw/202603/t20260316_89877753.html">
+          <script>
+var  appimg=''
+if(appimg){
+document.write('')
+}else{
+document.write('<img src="http://wsjkj.zunyi.gov.cn/tpxw/202603/W020260316675834926613_ORIGIN.jpg" />')
+}
+          </script>
+</a></li>
+                    
+                        <li><a target="_blank" href="./tpxw/202603/t20260302_89592619.html">
+          <script>
+var  appimg=''
+if(appimg){
+document.write('')
+}else{
+document.write('<img src="http://wsjkj.zunyi.gov.cn/tpxw/202603/W020260302452434096649_ORIGIN.jpg" />')
+}
+          </script>
+</a></li>
+                    
+                </ul>
+                <ul class="index-pictt">
+                    
+                        <li><a href="https://www.guizhou.gov.cn/ztzl/2026nqzsbbzzfhfbwtxszj/" target="_blank">关于公开征集群众身边不正之风和腐败问题线索的公告</a></li>
+                    
+                        <li><a href="https://www.zunyi.gov.cn/ztzl/2026nqzsbbzzfhfbwtxszj/" target="_blank">关于公开征集群众身边不正之风和腐败问题线索的公告</a></li>
+                    
+                        <li><a href="./tpxw/202603/t20260325_89907380.html" target="_blank">遵义市第一人民医院：无偿献血传大爱    医者先行...</a></li>
+                    
+                        <li><a href="./tpxw/202603/t20260316_89877753.html" target="_blank">全市卫生健康系统安全工作会召开</a></li>
+                    
+                        <li><a href="./tpxw/202603/t20260302_89592619.html" target="_blank">2025年度全市卫生健康系统党组织书记抓公立医院（...</a></li>
+                    
+                </ul>
+                <ul class="index-picpg clearfix">
+                    <li class="cur">1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                </ul>
+            </div>
+            <div class="index-wrap1-col2 rt">
+                <ul class="index-wrap1-col2-t index-tit clearfix">
+                    <a href="./szyw/" target="_blank" class='tit cur'>全国要闻</a>
+                    <a href="./gzdt/" target="_blank" class='tit'>工作动态</a>
+                    <a href="./tzgg/" target="_blank" class='tit '>通知公告</a>
+                     <a href="./jkzn/" target="_blank" class='tit '>健康指南</a>
+                     <a href="./tpxw/" target="_blank" class='tit '>图片新闻</a>
+                     <a href="./yqfk/" target="_blank" class='tit '>疫情防控</a>
+                </ul>
+                <div class="index-tab index-wrap1-col2-l">
+                    <ul class="index-item index-list1">
+                        
+                            <li><a href="./szyw/202603/t20260327_89919551.html" target="_blank">李强主持召开国务院常务会议</a><span>2026-03-27</span></li>
+                        
+                            <li><a href="./szyw/202603/t20260327_89918132.html" target="_blank">中共中央政治局召开会议 审议《中国共产...</a><span>2026-03-27</span></li>
+                        
+                            <li><a href="./szyw/202603/t20260326_89910797.html" target="_blank">总书记两会后首次考察指引“十五五”开...</a><span>2026-03-26</span></li>
+                        
+                            <li><a href="./szyw/202603/t20260325_89904091.html" target="_blank">"对雄安的发展前景，我们充满信心"——...</a><span>2026-03-25</span></li>
+                        
+                            <li><a href="./szyw/202603/t20260323_89899686.html" target="_blank">习近平：牢牢把握雄安新区功能定位 努力...</a><span>2026-03-23</span></li>
+                        
+                            <li><a href="./szyw/202603/t20260323_89899676.html" target="_blank">习近平致电祝贺通伦当选连任老挝国家主席</a><span>2026-03-23</span></li>
+                        
+                            <li><a href="./szyw/202603/t20260323_89899682.html" target="_blank">习近平在河北雄安新区考察</a><span>2026-03-23</span></li>
+                        
+                            <li><a href="./szyw/202603/t20260322_89895074.html" target="_blank">习近平向拉美和加勒比国家共同体第十届...</a><span>2026-03-22</span></li>
+                        
+                    </ul>
+                    <ul class="index-item index-list1">
+                        
+                            <li><a href="./gzdt/202603/t20260325_89907328.html" target="_blank">遵义市召开2026年母婴安全工作会议</a><span>2026-03-25</span></li>
+                        
+                            <li><a href="./gzdt/202603/t20260302_89592626.html" target="_blank">2026年全市卫生健康系统党风廉政建设工...</a><span>2026-03-02</span></li>
+                        
+                            <li><a href="./gzdt/202602/t20260224_89567018.html" target="_blank">2026年全市卫生健康工作会议召开</a><span>2026-02-24</span></li>
+                        
+                            <li><a href="./gzdt/202602/t20260205_89400310.html" target="_blank">2026年全省疾病预防控制工作会议召开</a><span>2026-02-05</span></li>
+                        
+                            <li><a href="./gzdt/202601/t20260127_89341978.html" target="_blank">华西-遵义合作帮扶丨——方便！家门口挂...</a><span>2026-01-27</span></li>
+                        
+                            <li><a href="./gzdt/202601/t20260113_89295163.html" target="_blank">华西-遵义合作帮扶丨华西-遵义合作帮扶...</a><span>2026-01-13</span></li>
+                        
+                            <li><a href="./gzdt/202512/t20251223_89081181.html" target="_blank">从3到101：医学博士助力遵义医疗服务提...</a><span>2025-12-23</span></li>
+                        
+                            <li><a href="./gzdt/202512/t20251223_89081050.html" target="_blank">凤冈：提基层医疗服务力 增群众健康获得感</a><span>2025-12-23</span></li>
+                        
+                    </ul>
+                    <ul class="index-item index-list1">
+                        
+                            <li><a href="./tzgg/202603/t20260319_89889919.html" target="_blank">遵义市医疗卫生机构从业人员违规参加学...</a><span>2026-03-19</span></li>
+                        
+                            <li><a href="./tzgg/202603/t20260324_89903200.html" target="_blank">遵义市卫生健康事业单位2025年春季面向...</a><span>2026-03-24</span></li>
+                        
+                            <li><a href="./tzgg/202603/t20260319_89889837.html" target="_blank">遵义市卫生健康局2026年医疗机构不良执...</a><span>2026-03-19</span></li>
+                        
+                            <li><a href="./tzgg/202603/t20260317_89878108.html" target="_blank">遵义市卫生健康局2026年限制类医疗技术...</a><span>2026-03-17</span></li>
+                        
+                            <li><a href="./tzgg/202603/t20260317_89878084.html" target="_blank">遵义市生活饮用水水质抽样检测结果公示</a><span>2026-03-17</span></li>
+                        
+                            <li><a href="./tzgg/202603/t20260312_89652798.html" target="_blank">遵义市卫生健康局2026年第二批医疗机构...</a><span>2026-03-12</span></li>
+                        
+                            <li><a href="./tzgg/202603/t20260312_89652782.html" target="_blank">遵义铭依眼科医院停业公告</a><span>2026-03-12</span></li>
+                        
+                            <li><a href="./tzgg/202603/t20260310_89623087.html" target="_blank">关于《遵义市卫生健康领域高频行政处罚...</a><span>2026-03-10</span></li>
+                        
+                    </ul>
+                       <ul class="index-item index-list1">
+                        
+                            <li><a href="./jkzn/202603/t20260325_89907760.html" target="_blank">【健康科普】结核潜伏感染，早防早安心</a><span>2026-03-25</span></li>
+                        
+                            <li><a href="./jkzn/202603/t20260316_89877792.html" target="_blank">国家卫生健康委党组书记、主任雷海潮：...</a><span>2026-03-16</span></li>
+                        
+                            <li><a href="./jkzn/202602/t20260224_89567020.html" target="_blank">国家卫健委：生活类美容机构等严禁开展...</a><span>2026-02-24</span></li>
+                        
+                            <li><a href="./jkzn/202602/t20260205_89400751.html" target="_blank">2026年全国卫生健康系统基层卫生和财务...</a><span>2026-02-05</span></li>
+                        
+                            <li><a href="./jkzn/202601/t20260114_89295637.html" target="_blank">2026年全国卫生健康工作会议在北京召开</a><span>2026-01-14</span></li>
+                        
+                            <li><a href="./jkzn/202512/t20251203_89009360.html" target="_blank">感染了HIV≠得了艾滋病！关于艾滋病，这...</a><span>2025-12-03</span></li>
+                        
+                            <li><a href="./jkzn/202511/t20251125_88980147.html" target="_blank">健康防护提示</a><span>2025-11-25</span></li>
+                        
+                            <li><a href="./jkzn/202511/t20251112_88936962.html" target="_blank">遵义市疾控中心提醒：积极接种流感疫苗...</a><span>2025-11-12</span></li>
+                        
+                    </ul>
+                    <ul class="index-item index-list1">
+                        
+                            <li><a href="https://www.guizhou.gov.cn/ztzl/2026nqzsbbzzfhfbwtxszj/" target="_blank">关于公开征集群众身边不正之风和腐败问...</a><span>2026-03-02</span></li>
+                        
+                            <li><a href="https://www.zunyi.gov.cn/ztzl/2026nqzsbbzzfhfbwtxszj/" target="_blank">关于公开征集群众身边不正之风和腐败问...</a><span>2026-03-10</span></li>
+                        
+                            <li><a href="./tpxw/202603/t20260325_89907380.html" target="_blank">遵义市第一人民医院：无偿献血传大爱   ...</a><span>2026-03-25</span></li>
+                        
+                            <li><a href="./tpxw/202603/t20260316_89877753.html" target="_blank">全市卫生健康系统安全工作会召开</a><span>2026-03-16</span></li>
+                        
+                            <li><a href="./tpxw/202603/t20260302_89592619.html" target="_blank">2025年度全市卫生健康系统党组织书记抓...</a><span>2026-03-02</span></li>
+                        
+                            <li><a href="./tpxw/202602/t20260224_89567022.html" target="_blank">遵义市医疗紧急救援中心：生命热线上 永...</a><span>2026-02-24</span></li>
+                        
+                            <li><a href="./tpxw/202602/t20260205_89400284.html" target="_blank">2026年全省中医药工作会议召开</a><span>2026-02-05</span></li>
+                        
+                            <li><a href="./tpxw/202601/t20260127_89342032.html" target="_blank">学科建设 | 盆腔巨大复发肿瘤患者在遵义...</a><span>2026-01-27</span></li>
+                        
+                    </ul>
+                  
+                </div>
+            </div>
+        </div>
+        <div class="mt30 clearfix">
+            <div class="index-wrap2 lf">
+                <a target="_blank" href="./zfxxgk/fdzdgknr/jyta_5681526/"><img src="./images/icon7.png" /><p>建议提案</p></a>
+                <a target="_blank" href="./zwgk/"><img src="./images/icon8.png" /><p>政务公开</p></a>
+                <a target="_blank" href="./zfxxgk/fdzdgknr/zcfg_5681523/"><img src="./images/icon9.png" /><p>政策法规</p></a>
+                <a target="_blank" href="./zfxxgk/fdzdgknr/ldzc_5982325/"><img src="./images/icon10.png" /><p>领导之窗</p></a>
+            </div>
+            <div class="index-wrap3 lf">
+                <ul class="index-wrap3-t index-tit clearfix">
+                    <a href="./zfxxgk/zfxxgkzn/" target="_blank" class='tit cur'>政府信息公开指南</a>
+                    <a href="./zfxxgk/zfxxgkzd/" target="_blank" class='tit '>政府信息公开制度</a>
+                    <a href="./zfxxgk/fdzdgknr/" target="_blank" class='tit '>法定主动公开内容</a>
+                    <a href="./zfxxgk/zfxxgknb/" target="_blank" class='tit '>政府信息公开年报</a>
+                   <a href="https://www.zunyi.gov.cn/zwgk/ysqgk/bmlb/zfgzbm/swsjkj_5818168/" class="tit" target="_blank">依申请公开</a>
+                   
+                </ul>
+                <div class="index-tab index-wrap3-l">
+                    <ul class="index-item index-list2">
+                        
+                            <li><a href="./zfxxgk/fdzdgknr/czzj/202602/t20260227_89585497.html">遵义市卫生健康局本级2026年单位预算及“三公”经费预算信息公开</a><span>2026/02/27</span></li>
+                        
+                            <li><a href="./zfxxgk/fdzdgknr/czzj/202602/t20260227_89585495.html">遵义市卫生健康局2026年部门预算及“三公”经费预算信息公开</a><span>2026/02/27</span></li>
+                        
+                            <li><a href="./zfxxgk/fdzdgknr/czzj/202602/t20260227_89585494.html">遵义市中医院2026年单位预算及“三公”经费预算信息公开</a><span>2026/02/27</span></li>
+                        
+                            <li><a href="./zfxxgk/fdzdgknr/czzj/202602/t20260227_89585493.html">遵义市中心血站2026年单位预算及“三公”经费预算信息公开</a><span>2026/02/27</span></li>
+                        
+                            <li><a href="./zfxxgk/fdzdgknr/czzj/202602/t20260227_89585492.html">遵义市精神专科医院2026年单位预算及“三公”经费预算信息公开</a><span>2026/02/27</span></li>
+                        
+                            <li><a href="./zfxxgk/fdzdgknr/czzj/202602/t20260227_89585491.html">遵义市疾病预防控制中心2026年单位预算及“三公”经费预算信息公开</a><span>2026/02/27</span></li>
+                        
+                            <li><a href="./zfxxgk/fdzdgknr/czzj/202602/t20260227_89585490.html">遵义市妇幼保健院2026年单位预算及“三公”经费预算信息公开</a><span>2026/02/27</span></li>
+                        
+                            <li><a href="./zfxxgk/fdzdgknr/czzj/202602/t20260227_89585487.html">遵义市第一人民医院2026年单位预算及“三公”经费预算信息公开</a><span>2026/02/27</span></li>
+                        
+                    </ul>
+                </div>
+            </div>
+            <div class="index-wrap4 rt">
+                <div class="index-wrap4-box1">
+                    <!--<div class="index-wrap4-bar1 clearfix">
+                        <a class="lf" target="_blank" href="./yygh/"><div><img src="./images/icon12.png" /></div><p>预约挂号</p></a>
+                        <a class="rt" target="_blank" href="./sydjfw/"><div><img src="./images/icon13.png" /></div><p>生育登记服务</p></a>
+                    </div>-->
+                    <div class="index-wrap4-nav">
+                        <a target="_blank" href="./ldxx_0/"><img src="./images/icon14.png" /><span>领导信箱</span></a>
+                        <a target="_blank" href="./bszn/"><img src="./images/icon15.png" /><span>办事指南</span></a>
+                    </div>
+                </div>
+                <div class="index-wrap4-bar2">
+                    <span class="prev btn"></span>
+                    <span class="next btn"></span>
+                    <ul class="index-wrap4-img">
+                        
+                            <li><a target="_blank" href="./ztlm/aqsczl/"><img src="./ztlm/aqsczl/images/P020191121809486063993.jpg" width="255" height="100" /></a></li>
+                        
+                            <li><a target="_blank" href="./ztlm/shqgwmcsjs/"><img src="./ztlm/shqgwmcsjs/images/P020200804518635405710.jpg" width="255" height="100" /></a></li>
+                        
+                            <li><a target="_blank" href="./ztlm/jkgzzyxd/"><img src="./ztlm/jkgzzyxd/images/P020230418360850201651.jpg" width="255" height="100" /></a></li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="index-banner1 mt30 clearfix">
+            <a target="_blank" class="lf" href="./wsbsdt/"><img style="width:380px;height:100px;" src="./images/img3.png" /></a>
+            <a target="_blank" class="lf" href="http://www.zunyiyj.gov.cn/"><img style="width:380px;height:100px;margin-left:13px;" src="./images/zunyi_shiweizuzhibu.png" /></a>
+            <a target="_blank" class="rt" href="./hmzcmbk/"><img style="width:380px;height:100px;" src="./images/img4.png" /></a>
+        </div>
+    </div>
+
+    <!--页脚start-->
+    <div class="footer">
+    <div class="f-link">
+        <img src="/images/link.png" />
+        <span>友情链接</span>
+        <div class="drop-groups">
+            
+                <div class="drop-down">
+                    <p class="tag">新闻网站</p>
+                    <ul class="drop-lists">
+                        
+                            <li><a href="http://www.xinhuanet.com">新华网</a></li>
+                        
+                            <li><a href="http://www.people.com.cn/">人民网</a></li>
+                        
+                    </ul>
+                </div>
+            
+                <div class="drop-down">
+                    <p class="tag">政府网站</p>
+                    <ul class="drop-lists">
+                        
+                            <li><a href="http://www.gov.cn">中央人民政府</a></li>
+                        
+                            <li><a href="http://www.guizhou.gov.cn/">贵州省人民政府</a></li>
+                        
+                            <li><a href="http://www.zunyi.gov.cn">遵义市人民政府</a></li>
+                        
+                    </ul>
+                </div>
+            
+                <div class="drop-down">
+                    <p class="tag">卫生健康委网站</p>
+                    <ul class="drop-lists">
+                        
+                            <li><a href="http://www.nhc.gov.cn/">国家卫生健康委</a></li>
+                        
+                            <li><a href="http://wjw.guizhou.gov.cn/">贵州省卫生健康委</a></li>
+                        
+                    </ul>
+                </div>
+            
+                <div class="drop-down">
+                    <p class="tag">医疗单位网站</p>
+                    <ul class="drop-lists">
+                        
+                            <li><a href="https://www.zmuhospital.com/?view=pc">遵义医科大学附属医院</a></li>
+                        
+                            <li><a href="https://www.zy2yy.cn/">遵义医科大学第二附属医院</a></li>
+                        
+                            <li><a href="https://www.zykq.org/">遵义医科大学附属口腔医院</a></li>
+                        
+                            <li><a href="http://www.zunyihospital.com/">遵义市第一人民医院</a></li>
+                        
+                            <li><a href="http://www.zybjy.cn/">遵义市妇幼保健院</a></li>
+                        
+                            <li><a href="http://www.zyszyy.com.cn/">遵义市中医院</a></li>
+                        
+                            <li><a href="http://www.zysdsrmyy.cn/">遵义市传染病医院</a></li>
+                        
+                            <li><a href="http://www.gzhtyy.org.cn/">贵州航天医院</a></li>
+                        
+                            <li><a href="http://jkzx.zunyi.gov.cn/">遵义市疾控中心</a></li>
+                        
+                    </ul>
+                </div>
+            
+                <div class="drop-down">
+                    <p class="tag">推荐网站</p>
+                    <ul class="drop-lists">
+                        
+                            <li><a href="http://www.cfnews.org.cn/">中国家庭报</a></li>
+                        
+                            <li><a href="http://www.jkb.com.cn/">健康报</a></li>
+                        
+                    </ul>
+                </div>
+            
+        </div>
+    </div>
+    <div class="f-help">
+        <!-- <a href=""><img class="f-img1" src="../../images/f-img2.png" /></a>-->
+        <script id="_jiucuo_" sitecode='5203000037' src='https://zfwzgl.www.gov.cn/exposure/jiucuo.js'></script>
+        <div class="f-text">
+            <p><span>遵义市卫生健康局 主办</span><span><a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank">黔ICP备19012339号-1</a> <a style="color:black;" href="http://wsjkj.zunyi.gov.cn/qt/yj/wzdt/" target="_blank">站点地图</a><a style="color:black;margin-left:6px;" href="http://wsjkj.zunyi.gov.cn/wzndbb/" target="_blank">网站年报</a></span></p>
+            <p><span>地址：遵义市新蒲新区建投大厦3号楼4楼 </span><span>网站标识码：5203000037</span><span>电话：0851-27613060</span></p>
+            <p>
+                <div style="width:300px;margin:0 auto; padding:20px 0;">
+                <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=52030002001078" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="/images/beian.png" style="float:left;" /><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">贵公网安备 52030002001078号</p></a>
+            </div>
+        </div>
+        <script type="text/javascript">document.write(unescape("%3Cspan id='_ideConac' %3E%3C/span%3E%3Cscript src='//dcs.conac.cn/js/24/356/0000/40586391/CA243560000405863910002.js' type='text/javascript'%3E%3C/script%3E"));</script>
+    </div>
+</div>
+    <script id="_trs_ta_js" src="//ta.trs.cn/c/js/ta.js?mpid=4767" async="async" defer="defer"></script>
+
+</div>
+<!--微信微博 start-->
+<div class="index-float">
+    
+    <a class="wx" href="javascript:void(0); "></a>  
+    
+    <a class="wb" href="https://weibo.com/p/1001065587431981/home?from=page_100106&mod=TAB"></a>
+</div>
+</div>
+</body>
+
+<!--清明节哀悼样式-->
+<script type="text/javascript" src="http://www.guizhou.gov.cn/material/ChangePageStyle.js"></script>
+</html>

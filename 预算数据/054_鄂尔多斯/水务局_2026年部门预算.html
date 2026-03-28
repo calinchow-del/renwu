@@ -1,0 +1,2539 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+<meta name="SiteName" content="鄂尔多斯市水利局">
+<meta name="SiteDomain" content="slj.ordos.gov.cn">
+<meta name="SiteIDCode" content="1506000039">
+		<title>鄂尔多斯市水利局</title>
+		<!--Bootstrap全局使用的jQuery 和JS-->
+		<script type="text/javascript" src="./images/jquery-1.10.2.min.js"></script>
+		<!--引入自己的样式-->
+		<style type="text/css">
+     .clear{clear: both;}
+     .clearfix:before,.clearfix:after { content: ''; display: table;}
+     .clearfix:after { clear: both;}
+     .clearfix { *zoom: 1; /*IE/7/6*/}
+        /*首页开始*/
+		header {
+			width: 1300px;
+			min-height: 257px;
+			margin: 0px auto;
+		}
+		.first_one {
+			overflow: hidden;
+			width: 100%;
+			height: auto;
+			background: url(./images/header_bj.jpg) no-repeat top center;
+		}
+		.hd_t {
+			width: 1300px;
+			height: 30px;
+			margin: 20px auto 5px;
+		}
+		.hd_t li {
+			float: right;
+			position: relative;
+			margin-left: 12px;
+		}
+		.hd_t li img {
+			-webkit-transition: transform .6s ease-out 0s;
+			-moz-transition: transform .6s ease-out 0s;
+			transition: transform .6s ease-out 0s;
+		}
+		.hd_t li img:hover {
+			transform: scale(1.08);
+		}
+		.hd_t li img {
+			width: 36px;
+			height: 30px;
+		}
+		.wx {
+			position: absolute;
+			display: none;
+			width: 100px;
+			height: 100px;
+			background: url(./images/wxbj.jpg) no-repeat;
+			background-size: 100%;
+		}
+		.wb {
+			position: absolute;
+			display: none;
+			width: 100px;
+			height: 100px;
+			background: url(./images/wbbj.png) no-repeat;
+			background-size: 100%;
+		}
+		.wxx:hover span {
+			position: absolute;
+			display: block;
+			width: 100px;
+			height: 100px;
+			top: 36px;
+			left: -68px;
+			z-index: 999;
+		}
+		.wbb:hover span {
+			position: absolute;
+			display: block;
+			width: 100px;
+			height: 100px;
+			top: 36px;
+			left: -20px;
+			z-index: 999;
+		}
+		.sousuo {
+			width: 250px;
+			height: 30px;
+			display: block;
+			background: #f1fafc;
+			border-radius: 40px;
+			float: right;
+		}
+		.wordinput {
+			width: 220px;
+			height: 30px;
+			background: none;
+			color: #666666;
+			text-indent: 1em;
+			border: 0px;
+			outline: none;
+			cursor: pointer;
+			line-height: 30px;
+		}
+		.sstb {
+			float: right;
+			margin: 4px 6px 0px 0px;
+			outline: none;
+			cursor: pointer;
+		}
+		.navi_body {
+			width: 1300px;
+			height: 50px;
+			margin: 82px auto 0px;
+			background: #0182e2;
+		}
+		.navi_body ul {
+			position: relative;
+		}
+		.navi_body ul li {
+                        padding:0 23px;
+	
+			height: 50px;
+			float: left;
+			text-align: center;
+		}
+		.navi_body ul li img {
+			float: left;
+			margin: 10px 10px 0px 30px;
+		}
+		.navi_body ul li>a {
+			font-size: 24px;
+			line-height: 50px;
+			margin-top: 0;
+			text-align: left;
+			color: #ffffff;
+			display: block;
+		}
+		.navi_body ul li>a:hover {
+			height: 48px;
+			line-height: 48px;
+			border-bottom: 2px #ffffff solid;
+		}
+		.navi_body ul li span {
+			display: none;
+		}
+		.navi_body ul li:hover span {
+			position: absolute;
+			width: 1300px;
+			height: 28px;
+			background: rgba(1, 130, 226, 1);
+			top: 50px;
+			left: 0px;
+			z-index: 999;
+			display: block;
+			border-top: 2px #ffffff solid;
+			padding: 32px 0px;
+		}
+		.navi_body ul li span a {
+			font-size: 20px;
+			color: #ffffff;
+			padding: 0px 20px;
+		}
+		.navi_body ul li span a:hover {
+			font-weight: bold;
+			text-decoration: underline;
+		}
+		.tt {
+			width: 1300px;
+			height: 70px;
+			margin: 24px auto 0px;
+			background: #f1f0f0;
+		}
+		.tt>a {
+			float: left;
+		}
+		.tt h1 a {
+			width: 95%;
+			display: block;
+			float: left;
+			font-size: 36px;
+			color: #d40202;
+			line-height: 70px;
+			text-align: center;
+		}
+		.tt h1 a:hover {
+			color: #0182e2;
+		}
+		.one {
+			width: 1300px;
+			height: 415px;
+			margin: 28px auto;
+		}
+		.area img {
+			vertical-align: top;
+			border: 0;
+		}
+		.area {
+			width: 650px;
+			height: 415px;
+			zoom: 1;
+			float: left;
+		}
+		.focus-box {
+			clear: both;
+		}
+		.focusImage {}
+		.focusImage-inner {
+			width: 650px;
+			position: relative;
+		}
+		.focusImage-content li {
+			display: none;
+		}
+		.focusImage-content li.current {
+			display: block;
+		}
+		.focusImage-content img {
+			display: inline-block;
+			height: 415px;
+			width: 650px;
+		}
+		.focusImage-title {
+			height: 33px;
+			line-height: 33px;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+		}
+		.focusImage-title-bg {
+			background: #000;
+			opacity: .3;
+			position: absolute;
+			z-index: 5;
+			height: 33px;
+			width: 100%;
+			border-top: 1px #f6f6f6 solid;
+		}
+		.focusImage-title p {
+			padding: 0 0 0 10px;
+			font-size: 16px;
+			position: absolute;
+			z-index: 10;
+			letter-spacing: 2px;
+		}
+		.focusImage-title a,
+		.focusImage-title a:visited,
+		.focusImage-title a:hover {
+			color: #fff;
+			text-decoration: none
+		}
+		.focusImage-slide {
+			position: absolute;
+			z-index: 15;
+			right: 10px;
+			bottom: 10px;
+		}
+		.focusImage-slide li {
+			width: 15px;
+			font-size: 0px;
+			background: #ffffff;
+			display: inline-block;
+			color: #ffffff;
+			cursor: pointer;
+			float: left;
+			margin-right: 8px;
+			line-height: 14px;
+			height: 14px;
+			border-radius: 50%;
+		}
+		.focusImage-slide li.current {
+			border-radius: 10px;
+			width: 45px;
+			background: #ffffff;
+			color: #ffffff;
+		}
+		.one_rt {
+			width: 615px;
+			height: 415px;
+			float: right;
+		}
+		#tab1 {
+			height: 41px;
+			width: 615px;
+			position: relative;
+			border-bottom: 1px #d3d3d3 solid;
+		}
+		#tab1 ul {
+			margin: 0;
+			padding: 0;
+		}
+		#tab1 ul span {
+			height: 41px;
+			line-height: 41px;
+			font-size: 20px;
+		}
+		#tab1 ul span a:hover {
+			height: 41px;
+			line-height: 41px;
+			font-size: 20px;
+			color: #0182e2;
+		}
+		#tab1 li {
+			font-size: 20px;
+			float: left;
+			line-height: 41px;
+			text-align: center;
+			cursor: pointer;
+			height: 41px;
+			width: 104px;
+			margin-right: 10px;
+		}
+		#tab1 li.now {
+			width: 99px;
+			height: 40px;
+			font-size: 20px;
+			float: left;
+			line-height: 40px;
+			text-align: center;
+			border-bottom: 2px #0182e2 solid;
+			font-weight: bold;
+			margin-right: 10px;
+		}
+		#tab1 li.now a {
+			color: #0182e2;
+		}
+		#tablist1 {
+			width: 615px;
+			height: auto;
+		}
+		.tablist {
+			width: 615px;
+			height: auto;
+			display: none;
+		}
+		.tablist ul li {
+			height: 73px;
+		}
+		.tablist ul li a {
+			display: block;
+			border-bottom: 1px #D3D3D3 solid;
+			width: 479px;
+			height: 54px;
+			float: right;
+			line-height: 24px;
+			padding: 10px 0px;
+		}
+		.tablist ul li a:hover {
+			color: #0182e2;
+		}
+		.tablist ul li span {
+			width: 136px;
+			height: 73px;
+			display: block;
+			float: left;
+			line-height: 73px;
+			text-indent: 6px;
+		}
+		.tablist ul li span font {
+			font-size: 30px;
+			margin: 0px 10px;
+			color: #666666;
+		}
+		.block {
+			display: block;
+		}
+		.tow {
+			margin: 30px auto;
+			overflow: hidden;
+			width: 1338px;
+		}
+		.tow ul li {
+			width: 410px;
+			float: left;
+			height: 111px;
+			margin: 0px 18px;
+		}
+		.first_tow {
+			width: 100%;
+			height: 682px;
+			background: #f0f9fc;
+			overflow: hidden;
+		}
+		#tabzw2 {
+			height: 56px;
+			width: 1302px;
+			position: relative;
+			margin: 30px auto 5px auto;
+		}
+		#tabzw2 ul {
+			margin: 0;
+			padding: 0;
+		}
+		#tabzw2 li {
+			font-size: 20px;
+			float: left;
+			line-height: 56px;
+			text-align: center;
+			cursor: pointer;
+			height: 56px;
+			width: 430px;
+			background: #ffffff;
+			margin: 0px 2px;
+		}
+		#tabzw2 li.now0,
+		#tabzw2 li.now1,
+		#tabzw2 li.now2 {
+			background: #0182e2;
+			font-size: 20px;
+			color: #fff;
+			float: left;
+			line-height: 56px;
+			text-align: center;
+			margin: 0px 2px;
+		}
+		#tabzw2 li.now0 a,
+		#tabzw2 li.now1 a,
+		#tabzw2 li.now2 a {
+			background-repeat: no-repeat;
+			background-position: 132px;
+			display: block;
+			color: #ffffff;
+			font-weight: bold;
+		}
+		#tabzw2 li.now0 a {
+			background-image: url(./images/zwb.png);
+		}
+		#tabzw2 li.now1 a {
+			background-image: url(./images/ztb.png);
+		}
+		#tabzw2 li.now2 a {
+			background-image: url(./images/hdb.png);
+		}
+		#tabzw2 li.nowl0 a,
+		#tabzw2 li.nowl1 a,
+		#tabzw2 li.nowl2 a {
+			background-repeat: no-repeat;
+			background-position: 132px;
+			display: block;
+			color: #0182e2;
+			font-weight: bold;
+		}
+		#tabzw2 li.nowl0 a {
+			background-image: url(./images/zwl.png);
+		}
+		#tabzw2 li.nowl1 a {
+			background-image: url(./images/ztl.png);
+		}
+		#tabzw2 li.nowl2 a {
+			background-image: url(./images/hdl.png);
+		}
+		#tabzwlist2 {
+			width: 1220px;
+			height: 520px;
+			margin: 0px auto;
+			background: #FFFFFF;
+			padding: 20px 40px;
+		}
+		.tabzwlist1 {
+			width: 100%;
+			height: auto;
+			display: none;
+		}
+		.block {
+			display: block;
+		}
+		.zw_tp,
+		.zw_bt {
+			width: 100%;
+			height: 260px;
+		}
+		.sts {
+			width: 590px;
+			height: 260px;
+			float: left;
+		}
+		#tab2 {
+			font-size: 20px;
+			height: 49px;
+			width: 590px;
+			border-bottom: 1px #D3D3D3 solid;
+		}
+		#tab2 ul {
+			margin: 0;
+			padding: 0;
+		}
+		#tab2 li {
+			font-size: 20px;
+			float: left;
+			line-height: 50px;
+			text-align: center;
+			height: 46px;
+			width: 124px;
+		}
+		#tab2 li.now {
+			border-bottom: 3px #0182E2 solid;
+		}
+		#tab2 li.now a {
+			color: #0182E2;
+		}
+		#tablist2 {
+			width: 590px;
+			height: auto;
+		}
+		.tablist1 {
+			width: 590px;
+			height: auto;
+			display: none;
+		}
+		.tablist1 ul li {
+			color: #c0bdbd;
+			float: right;
+			width: 95%;
+			height: 40px;
+			line-height: 40px;
+			list-style-type: disc;
+		}
+		.tablist1 ul li a {
+			display: block;
+			float: left;
+			color: #333333;
+		}
+		.tablist1 ul li a:hover {
+			color: #0182E2;
+		}
+		.tablist1 ul li span {
+			width: 106px;
+			height: 40px;
+			display: block;
+			float: right;
+			line-height: 40px;
+			color: #333333;
+		}
+		.block {
+			display: block;
+		}
+		.xrc {
+			width: 590px;
+			height: 260px;
+			float: right;
+		}
+		#tab3 {
+			font-size: 20px;
+			height: 49px;
+			width: 590px;
+			border-bottom: 1px #D3D3D3 solid;
+		}
+		#tab3 ul {
+			margin: 0;
+			padding: 0;
+		}
+		#tab3 li {
+			font-size: 20px;
+			float: left;
+			line-height: 50px;
+			text-align: center;
+			height: 46px;
+			width: 124px;
+		}
+		#tab3 li.now {
+			border-bottom: 3px #0182E2 solid;
+		}
+		#tab3 li.now a {
+			color: #0182E2;
+		}
+		#tablist3 {
+			width: 590px;
+			height: auto;
+		}
+		.tablist2 {
+			width: 590px;
+			height: auto;
+			display: none;
+		}
+		.tablist2 ul li {
+			color: #c0bdbd;
+			float: right;
+			width: 95%;
+			height: 40px;
+			line-height: 40px;
+			list-style-type: disc;
+		}
+		.tablist2 ul li a {
+			display: block;
+			float: left;
+			color: #333333;
+		}
+		.tablist2 ul li a:hover {
+			color: #0182E2;
+		}
+		.tablist2 ul li span {
+			width: 106px;
+			height: 40px;
+			display: block;
+			float: right;
+			line-height: 40px;
+			color: #333333;
+		}
+		.block {
+			display: block;
+		}
+		#tab4 {
+			font-size: 20px;
+			height: 49px;
+			width: 590px;
+			border-bottom: 1px #D3D3D3 solid;
+		}
+		#tab4 ul {
+			margin: 0;
+			padding: 0;
+		}
+		#tab4 li {
+			font-size: 20px;
+			float: left;
+			line-height: 50px;
+			text-align: center;
+			height: 46px;
+			width: 124px;
+		}
+		#tab4 li.now {
+			border-bottom: 3px #0182E2 solid;
+		}
+		#tab4 li.now a {
+			color: #0182E2;
+		}
+		#tablist4 {
+			width: 590px;
+			height: auto;
+		}
+		.tablist3 {
+			width: 590px;
+			height: auto;
+			display: none;
+		}
+		.tablist3 ul li {
+			color: #c0bdbd;
+			float: right;
+			width: 95%;
+			height: 40px;
+			line-height: 40px;
+			list-style-type: disc;
+		}
+		.tablist3 ul li a {
+			display: block;
+			float: left;
+			color: #333333;
+		}
+		.tablist3 ul li a:hover {
+			color: #0182E2;
+		}
+		.tablist3 ul li span {
+			width: 106px;
+			height: 40px;
+			display: block;
+			float: right;
+			line-height: 40px;
+			color: #333333;
+		}
+		.block {
+			display: block;
+		}
+		#tab5 {
+			font-size: 20px;
+			height: 49px;
+			width: 590px;
+			border-bottom: 1px #D3D3D3 solid;
+		}
+		#tab5 ul {
+			margin: 0;
+			padding: 0;
+		}
+		#tab5 li {
+			font-size: 20px;
+			float: left;
+			line-height: 50px;
+			text-align: center;
+			height: 46px;
+			width: 180px;
+		}
+		#tab5 li.now {
+			border-bottom: 3px #0182E2 solid;
+		}
+		#tab5 li.now a {
+			color: #0182E2;
+		}
+		#tablist5 {
+			width: 590px;
+			height: auto;
+		}
+		.tablist4 {
+			width: 590px;
+			height: auto;
+			display: none;
+		}
+		.tablist4 ul li {
+			color: #c0bdbd;
+			float: right;
+			width: 95%;
+			height: 40px;
+			line-height: 40px;
+			list-style-type: disc;
+		}
+		.tablist4 ul li a {
+			display: block;
+			float: left;
+			color: #333333;
+		}
+		.tablist4 ul li a:hover {
+			color: #0182E2;
+		}
+		.tablist4 ul li span {
+			width: 106px;
+			height: 40px;
+			display: block;
+			float: right;
+			line-height: 40px;
+			color: #333333;
+		}
+		.block {
+			display: block;
+		}
+		.ztzl {
+			width: 100%;
+			height: auto;
+		}
+		.ztzl a {
+			float: left;
+			width: 390px;
+			height: 130px;
+			display: block;
+			margin: 22px 8px;
+		}
+		.ztzl a img {
+			width: 390px;
+			height: 130px;
+		}
+		.ztzl a:hover img {
+			border-radius: 20px;
+			-webkit-transform: scale(1);
+			-moz-transform: scale(1);
+			transform: scale(1);
+			-moz-box-shadow: 0 3px 10px #888;
+			-webkit-box-shadow: 0 3px 10px #888;
+			-webkit-transition: .3s;
+			-moz-transition: .3s;
+			-o-transition: .3s;
+			-ms-transition: .3s;
+		}
+		.hd_left {
+			float: left;
+			width: 860px;
+			margin-top: 10px;
+		}
+		.hd_tp {
+			width: 100%;
+			height: 50px;
+		}
+		.hd_tp span {
+			font-size: 20px;
+			color: #0182e2;
+			line-height: 50px;
+			float: left;
+		}
+		.hd_tp a {
+			float: right;
+			width: 102px;
+			height: 28px;
+			margin: 10px 0px;
+		}
+		.hd_bt {
+			width: 100%;
+			margin-top: 10px;
+                        height:274px;
+		}
+		.hd_bt ul {
+			width: 100%;
+		}
+		#bs>:first-child {
+			font-weight: bold;
+		}
+		#bs>:not(:first-child)>:first-child {
+			text-indent: 1em;
+			text-align: left;
+		}
+		.hd_bt ul li {
+			float: left;
+			text-align: center;
+		}
+		.hd_bt ul li a:hover {
+			color: #0182e2;
+		}
+		.a {
+			width: 530px;
+		}
+		.b {
+			width: 160px;
+			margin: 0px 4px;
+		}
+		.c {
+			width: 160px;
+		}
+		.evenrow {
+			height: 34px;
+			line-height: 34px;
+		}
+		.evenrow li {
+			height: 34px;
+			line-height: 34px;
+			background: #eff0f0;
+		}
+		.oddrow {
+			height: 46px;
+			line-height: 46px;
+		}
+		.oddrow li {}
+		.hd_btt {
+			width: 100%;
+			height: 100px;
+			margin-top: 40px;
+		}
+		.hd_btt a {
+			width: 278px;
+			height: 100px;
+			float: left;
+			display: block;
+			margin-right: 10px;
+		}
+		.hd_btt a:last-child {
+			margin-right: 0px;
+		}
+		.hd_btt a:hover img {
+			-webkit-transform: scale(1);
+			-moz-transform: scale(1);
+			transform: scale(1);
+			-moz-box-shadow: 0 3px 10px #888;
+			-webkit-box-shadow: 0 3px 10px #888;
+			-webkit-transition: .3s;
+			-moz-transition: .3s;
+			-o-transition: .3s;
+			-ms-transition: .3s;
+		}
+		.hd_right {
+			width: 320px;
+			float: right;
+			margin-top: 10px;
+		}
+		.hd_right p {
+			padding: 14px 24px;
+		}
+		.hd_right p:nth-of-type(odd) {
+			color: #d70202;
+		}
+		.hd_right p:nth-of-type(even) {
+			background: url(./images/jbbj.jpg) no-repeat;
+		}
+		.hd_right>a{display: inline-block;  width: 100%;}
+		.hd_right>a img{width: 100%;}
+
+
+		.first_three {
+			width: 100%;
+			height: 196px;
+			background-color: #0182e2;
+			overflow: hidden;
+		}
+		.yqlj {
+			width: 1300px;
+			height: 28px;
+			margin: 10px auto 20px;
+		}
+		.yqlj a {
+			padding: 0px 15px;
+			height: 28px;
+			border: 1px #60ade7 solid;
+			float: left;
+			margin-right: 140px;
+			line-height: 28px;
+			color: #ffffff;
+		}
+		.yqlj a:last-child {
+			margin-right: 0px;
+		}
+		.yqlj a:hover {
+			font-weight: bold;
+		}
+		.bottom {
+			width: 1300px;
+			margin: auto;
+		}
+		.bottom ul li {
+			float: left;
+			border-right: 1px #4ea8eb solid;
+			height: 90px;
+			padding: 12px 10px;
+		}
+		.bottom ul li:last-child {
+			border-right: 0px;
+		}
+		.bottom ul li p {
+			line-height: 30px;
+			color: #ffffff;
+		}
+                .bottom ul li p a{
+			color: #ffffff;
+		}
+		.bottom ul li ol {
+			padding: 0px;
+			height: 84px;
+			display: block;
+			margin-top:0px;
+		}
+		.bottom ul li ol span {
+			height: 84px;
+			display: block;
+			float: left;
+			margin-right:00px;
+		}
+                .bottom ul .foot_li_sec{
+                       width: 360px;
+                }
+
+
+
+		/*首页结束*/
+		/*二级列表页开始*/
+		.slp {
+			width: 1300px;
+			height: 960px;
+			margin: 20px auto;
+		}
+		.slp_lt {
+			width: 280px;
+			float: left;
+		}
+		.slp_lt h1 {
+			text-align: center;
+			color: #ffffff;
+			background-color: #0182e2;
+			line-height: 70px;
+		}
+		.slp_lt ul {
+			height: 895px;
+			background-color: #efefef;
+		}
+		.slp_lt ul li {
+			line-height: 62px;
+			text-align: center;
+		}
+		.slp_lt ul li a {
+			font-size: 20px;
+			text-align: center;
+		}
+		.ejlby_left {
+			background: #ffffff;
+			border-bottom: 2px #0182E2 solid;
+			color: #0182E2;
+		}
+		.ejlby_left a {
+			color: #0182E2;
+		}
+		.slp_rt {
+			width: 998px;
+			float: right;
+			border: 1px #e5e5e5 solid;
+		}
+		.slp_rtt {
+			width: 1300px;
+			float: right;
+			border: 1px #e5e5e5 solid;
+		}
+		.ejlby_dqwz {
+			color: #999999;
+			width: 100%;
+			height: 40px;
+			border-bottom: 1px #edeeed solid;
+			line-height: 40px;
+		}
+		.ejlby_dqwz a {
+			color: #999999;
+		}
+		.ejlby_dqwz img {
+			float: left;
+			margin: 6px;
+		}
+		.ejlby_lb {height:877px;}
+		.ejlby_lb ul li {
+			line-height: 40px;
+			list-style-type: disc;
+			margin: 0px 10px 0px 30px;
+		}
+		.ejlby_lb ul li a {}
+		.ejlby_lb ul li a:hover {
+			color: #0182E2;
+		}
+		.ejlby_lb ul li span {
+			float: right;
+		}
+		.fgx {
+			border: 1px #D3D3D3 solid;
+			width: 97%;
+			height: 0px;
+			margin: 18px auto;
+		}
+		.fy {
+			width: 100%;
+			height: 42px;
+			text-align: center;
+			line-height: 42px;
+		}
+		/*二级列表页结束*/
+		/*二级内容页开始*/
+		.ejnry {
+			line-height: 30px;
+			font-size: 18px;
+			padding: 15px 20px;
+			height: 847px;
+			overflow-y: auto;
+			text-align: justify;
+		}
+		.ejnry::-webkit-scrollbar {
+			width: 10px;
+			height: 10px;
+		}
+		.ejnry::-webkit-scrollbar-button {
+			display: none;
+		}
+		.ejnry::-webkit-scrollbar-track {
+			display: none;
+		}
+		.ejnry::-webkit-scrollbar-track-piece {
+			background: #ffffff;
+		}
+		.ejnry::-webkit-scrollbar-thumb {
+			background: #0182E2;
+			border-radius: 4px;
+		}
+		/*二级内容页结束*/
+		/*内容页开始*/
+		.Content {
+			border: 1px #e5e5e5 solid;
+			width: 1240px;
+			min-height: 700px;
+			margin: 10px auto 20px;
+			padding: 0px 30px;
+		}
+		.Content h1 {
+			font-size: 36px;
+			text-align: center;
+			line-height: 60px;
+			margin: 40px auto 30px;
+		}
+		.wzxx {
+			background: #efefef;
+			width: 100%;
+			height: 40px;
+		}
+		.wzxx table {
+			line-height: 40px;
+			width: 100%;
+		}
+		.wzxx table td {
+			text-align: center;
+		}
+		.wzzw {
+			padding: 20px 0px;
+			font-size: 16px;
+			text-align: justify;
+			line-height: 26px;
+		}
+		.nry_dqwz {
+			width: 1300px;
+			height: 40px;
+			line-height: 40px;
+			margin: 10px auto;
+		}
+		.nry_dqwz a {
+			color: #999999;
+		}
+		.nry_dqwz img {
+			float: left;
+			margin: 6px;
+		}
+		.con-ewm {
+			margin-top: 20px;
+			border: 1px #0182e2 dashed;
+			padding: 30px;
+			border-radius: 20px;
+		}
+		/*内容页结束*/
+		/*领导班子开始*/
+		.ejlby_ldbz {
+			padding: 20px;
+		}
+		.slpldbz {
+			width: 1300px;
+			height: 1058px;
+			margin: 20px auto;
+		}
+		.slpldbz_lt {
+			width: 280px;
+			float: left;
+		}
+		.slpldbz_lt h1 {
+			text-align: center;
+			color: #ffffff;
+			background-color: #0182e2;
+			line-height: 70px;
+		}
+		.slpldbz_lt ul {
+			height: 990px;
+			background-color: #efefef;
+		}
+		.slpldbz_lt ul li {
+			padding-left: 82px;
+			line-height: 74px;
+			text-align: left;
+		}
+		.slpldbz_lt ul li a {
+			font-size: 20px;
+			text-align: center;
+		}
+		.slpldbz_rt {
+			width: 998px;
+			height: 1058px;
+			float: right;
+			border: 1px #e5e5e5 solid;
+		}
+		.zp {
+			width: 162px;
+			float: left;
+		}
+		.zp img {
+			width: 162px;
+			height: 220px;
+		}
+		.jj {
+			width: 772px;
+			height: auto;
+			float: right;
+		}
+		.jj h1 {
+			font-size: 24px;
+			color: #0182e2;
+		}
+		.jj p {
+			font-size: 16px;
+			color: #666666;
+			padding:10px 0px;
+			line-height: 24px;
+		}
+		.jj ul {
+			padding: 0px;
+			font-size: 18px;
+			color: #666666;
+			line-height: 40px;
+		}
+		/*领导班子结束*/
+		/*领导班子开始*/
+		.ejnry_zl {
+			line-height: 30px;
+			font-size: 18px;
+			padding: 15px 20px;
+			height: 847px;
+			overflow-y: auto;
+			text-align: justify;
+		}
+		.ejnry_zl a {
+			display: block;
+			width: 390px;
+			height: 130px;
+			float: left;
+			margin: 10px 44px;
+		}
+		/*领导班子结束*/
+                /*局长信箱开始*/
+                .ejlby_xxlb {height:847px;}
+		.ejlby_xxlb ul li {
+			line-height: 40px;
+			list-style-type: disc;
+			margin: 0px 10px 0px 30px;
+		}
+		.ejlby_xxlb ul li a {}
+		.ejlby_xxlb ul li a:hover {
+			color: #0182E2;
+		}
+		.ejlby_xxlb ul li span {
+			width: 15%;
+                        float: right;
+                        text-align: center;
+		}
+		.btlxdf{
+			width: 100%;
+			height: 30px;
+			background:#eff0f0;
+		}
+		.btlxdf li{
+			float: left;
+			font-size: 18px;
+			font-weight: bold;
+			height: 30px;
+			line-height: 30px;
+			text-align: center;
+		}
+		.btlxdfa1{
+			width: 70%;
+		}
+		.btlxdfa2{
+			width: 14%;
+			border-left: 2px #ffffff solid;
+			border-right: 2px #ffffff solid;
+		}
+		.btlxdfa3{
+			width: 15%;
+		}
+		/*局长信箱结束*/
+	@media only screen and (min-width:1200px) {
+		
+	}
+	
+	@media only screen and (min-width:992px) {}
+	
+	@media only screen and (min-width:768px) {}
+	
+	@media only screen and (max-width: 768px) {}
+</style>
+		<link rel="stylesheet" type="text/css" href="./images/general.css" />
+		<!--引入自己的js文件-->
+		<script type="text/javascript">
+
+<!--滑动Js-->
+function setTab(m, n) {
+	var menu = document.getElementById("tab" + m).getElementsByTagName("li");
+	var showdiv = document.getElementById("tablist" + m).getElementsByTagName("div");
+	for(i = 0; i < menu.length; i++) {
+		menu[i].className = i == n ? "now" : "";
+		showdiv[i].style.display = i == n ? "block" : "none";
+	}
+}
+<!--滑动Js-->
+<!--政务滑动Js-->
+function setTabzw(m, n) {
+	var menuu = document.getElementById("tabzw" + m).getElementsByTagName("li");
+	var showzw = document.getElementById("tabzwlist" + m).getElementsByClassName("tabzwlist1");
+	for(i = 0; i < menuu.length; i++) {
+		menuu[i].className = i == n ? "now" + i : "nowl" + i;
+		showzw[i].style.display = i == n ? "block" : "none";
+	}
+}
+<!--政务滑动Js-->
+<!--信箱列表Js-->
+function altRows(id) {
+	if(document.getElementsByTagName) {
+		var tbody = document.getElementById("bs");
+		var rows = tbody.getElementsByTagName("div").children;
+		for(i = 0; i < rows.length; i++) {
+			if(i % 2 == 0) {
+				rows[i].className = "evenrow";
+			} else {
+				rows[i].className = "oddrow";
+			}
+		}
+	}
+}
+
+<!--信箱列表Js-->
+<!--二级列表左侧Js-->
+function getPys() {
+	var texts = document.getElementById("py").getElementsByTagName("h1")[0].innerHTML;
+	var lis = document.getElementById("uls").getElementsByTagName("li");
+	for(var i = 0; i < lis.length; i++) {
+		lis[i].onmouseover = function() {
+			for(var j = 0; j < lis.length; j++) {
+				lis[j].className = "";
+			}
+			this.className = "ejlby_left";
+		}
+		var ass = lis[i].getElementsByTagName("a");
+		for(var z = 0; z < ass.length; z++) {
+			if(texts == ass[z].innerHTML) {
+				lis[i].className = "ejlby_left";
+			}
+		}
+	}
+}
+<!--二级列表左侧Js-->
+<!--二级列表加横线Js-->
+function getLb() {
+	var lbs = document.getElementById("lb").getElementsByTagName("li");
+	var oTest = document.getElementById("lb");
+	for(i = 1; i < 4; i++) {
+		var newNodei = document.createElement("div");
+		num = 5 * i - 1;
+		var reforeNodei = lbs[num];
+		newNodei.className = "fgx";
+		oTest.insertBefore(newNodei, reforeNodei.nextSibling);
+	}
+}
+<!--二级列表加横线Js-->
+
+//分类法展开收起
+function groupClassification() {
+	var swiopened = jQuery('#zwgk_calebox').attr('data-sud');
+	if(swiopened == 'unfold') {
+		jQuery('#zwgk_calebox').css('display', 'none');
+		jQuery('#zwgk_calebox').attr("data-sud", "fold");
+		jQuery('#gceleud i').css({
+			'background': 'url(./images/jia_l.png) no-repeat center'
+		})
+	} else if(swiopened == 'fold') {
+		jQuery('#zwgk_calebox').css('display', 'block');
+		jQuery('#zwgk_calebox').attr("data-sud", "unfold");
+		jQuery('#gceleud i').css({
+			'background': 'url(./images/jian_l.png) no-repeat center'
+		})
+	}
+}
+
+function groupClassification1() {
+	var swiopened = jQuery('#zwgk_calebox1').attr('data-sud');
+	if(swiopened == 'unfold') {
+		jQuery('#zwgk_calebox1').css('display', 'none');
+		jQuery('#zwgk_calebox1').attr("data-sud", "fold");
+		jQuery('#gceleud1 i').css({
+			'background': 'url(./images/jia_l.png) no-repeat center'
+		})
+	} else if(swiopened == 'fold') {
+		jQuery('#zwgk_calebox1').css('display', 'block');
+		jQuery('#zwgk_calebox1').attr("data-sud", "unfold");
+		jQuery('#gceleud1 i').css({
+			'background': 'url(./images/jian_l.png) no-repeat center'
+		})
+	}
+}
+
+function groupClassification2() {
+	var swiopened = jQuery('#zwgk_calebox2').attr('data-sud');
+	if(swiopened == 'unfold') {
+		jQuery('#zwgk_calebox2').css('display', 'none');
+		jQuery('#zwgk_calebox2').attr("data-sud", "fold");
+		jQuery('#gceleud1 i').css({
+			'background': 'url(./images/jia_l.png) no-repeat center'
+		})
+	} else if(swiopened == 'fold') {
+		jQuery('#zwgk_calebox2').css('display', 'block');
+		jQuery('#zwgk_calebox2').attr("data-sud", "unfold");
+		jQuery('#gceleud2 i').css({
+			'background': 'url(./images/jian_l.png) no-repeat center'
+		})
+	}
+}
+
+		
+</script>
+                <style>
+                     /* 小于等于767px 临时为公众号显示正常设置 */
+                     @media only screen and (max-width: 767px) {
+                         body{width: 1920px;margin: auto;}
+                     }
+ .hf{position:absolute;}
+                        .hf a{display:none}
+.hf a img{width:100%;height:100%;}
+                </style>
+
+	</head>
+
+	<body>
+		<!--主体开始-->
+		<section class="first_one">
+			<style>
+	.hd_t .login{
+		position: relative;float: left;top: 12px;
+	}
+	.hd_t .login a{color: #0182e2;}
+	.hd_t .login .userInfo{
+		display: none;
+		position: absolute;
+		left: 0;
+		top: 25px;
+		background: rgba(255,255,255,0.7);
+	}
+	.hd_t .login .userInfo li{
+		border: none;
+		height: 35px;
+		line-height: 35px;
+		width: 100%;
+		text-align: center;
+	}
+        .navi_body ul li {
+                height: 50px;
+                float: left;
+                text-align: center;
+       }
+</style>
+
+
+<header>
+				<div class="hd_t">
+
+   <div class="login">
+	<a id="loginA" href="http://slj.ordos.gov.cn/sso/index.jsp?client_id=CC0G9XROY&amp;url=http://slj.ordos.gov.cn/">登录/注册</a>
+	<ul class="userInfo">
+	    <li><a href="https://zwfw.nmg.gov.cn/sso/sso/main?utype=0&client_id=CC0G9XROY">用户中心</a></li>
+	    <li class="logout"><a href="http://zwfw.nmg.gov.cn/sso/sso/logout?utype=0&client_id=CC0G9XROY&goto=http://slj.ordos.gov.cn">退出</a></li>
+	</ul>
+   </div>
+					<ul>
+<li><a href="javascript:;" onclick="aria.oldFixedStart()"><img src="./images/W020230506416098865442.png" /></a></li>
+<li><a href="javascript:;" onclick="aria.start()"><img src="./images/W020230506416098674707.png" /></a></li>
+
+						<li>
+							<i class="wxx"><img src="./images/wx.png" /><span class="wx"></span></i>
+						</li>
+						<li>
+							
+						</li>
+						<li>
+
+<form name="frmSearch" method="post" class="form-inline" action="https://slj.ordos.gov.cn/was40/search" target="_blank">
+	<span class="sousuo">
+	<input name="searchword" autocomplete="off" type="text" class="wordinput" value="请输入搜索关键字" onfocus="if (value =='请输入搜索关键字'){value =''}" onblur="if (value ==''){value='请输入搜索关键字'}" aria-describedby="basic-addon2" />
+    <input type="hidden" name="channelid" value="280700" />
+    <input type="hidden" name="topurl" value="https://slj.ordos.gov.cn/qt/tbqt/" />
+    <input type="hidden" name="bottomurl" value="https://slj.ordos.gov.cn/qt/dbqt/" />
+    <input type="hidden" name="topframeh" value="322px" />
+    <input type="hidden" name="bottomframeh" value="190px" />
+	<input type="image" src="./images/sstb.png" class="sstb" id="basic-addon2" />
+	</span>			
+</form>
+
+						</li>
+
+
+
+
+
+					</ul>
+				</div>
+				<div class="hd_c">
+					<img src="./images/W020221031573010704078.png" />
+				</div>
+								<div class="navi_body" >
+					<ul>
+						<li>
+							<a href="/" target="_blank"><img src="./images/sy.png" />首页</a>
+						</li>
+						<li>
+							<a href="./zwgk/xxgkzn1/" target="_self"><img src="./images/zw.png" />政府信息公开</a>
+
+						</li>
+						<li>
+							<a href="./shmsl/" target="_self"><img src="./images/W020201202398126823865.png" />机关党建</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);" target="_self"><img src="./images/zl.png" />专题专栏</a>
+                                                         <span>
+								 
+                                                                 <a href="./ddqzlxjysjhd/wlaq/" target="_blank">网络安全</a>
+                                                               
+                                                                 <a href="./ddqzlxjysjhd/bmxcy/" target="_blank">保密宣传月</a>
+                                                               
+                                                                 <a href="./ddqzlxjysjhd/fwsxqd/" target="_blank">“水利办...</a>
+                                                               
+                                                                 <a href="./ddqzlxjysjhd/fzzf/" target="_blank">法治政府</a>
+                                                               
+                                                                 <a href="./ddqzlxjysjhd/yysf/" target="_blank">以案释法</a>
+                                                               
+							</span>
+						</li>
+						<li>
+							<a href="http://zwfw.nmg.gov.cn/OrgItem_index?regionCode=150600000000&orgCode=11150600MB1511443H&record=istrue" target="_self"><img src="./images/fw.png" />办事服务</a>
+						</li>
+						<li>
+							<a><img src="./images/hd.png" />互动交流</a>
+							<span>
+                                                                <a class="dddl_wyxx" href="http://www.ordos.gov.cn/zwfwbmrx/home/writeLetters?areaCode=1506&objectCode=150600213" dataurl="./hdjl/jzxx/" >局长信箱</a>
+                                                                 <a class="dddl_wyxx" href="./hdjl/dczj/" dataurl="./hdjl/dczj/" >调查征集</a>
+                                                                <a class="dddl_wyxx" href="./hdjl/tsjb/" dataurl="./hdjl/tsjb/" >投诉举报</a>
+								
+							</span>
+						</li>
+					</ul>
+				</div>
+
+			</header>
+
+
+<!--无障碍/适老化-->
+<script defer async type="text/javascript" src="//gov.govwza.cn/dist/aria.js?appid=6dcc787676ff8470a625f4e1f380d104" charset="utf-8" id="ariascripts"></script>
+
+
+
+
+
+		<script type="text/javascript">
+			/****************************登陆用户中心js******************************/
+			$(function() {
+				$.ajax({
+					url: "http://slj.ordos.gov.cn/sso/getLoginUser.jsp",
+					cache: "false",
+					dataType: "json",
+					success: function(data) {
+						if(data.success == false) {
+							//$("#LoginRegister").show();
+						}
+						if(data.success == true) {
+							var data_user = data.user;
+							var b = JSON.stringify(data_user);
+							sessionStorage.setItem("key_user", b);
+
+							var name = data.user.nickName;
+							name = "*" + name.substring(1, name.length);
+							$("#loginA").html('欢迎您，' + name);
+
+						}
+					}
+				})
+			})
+
+
+
+    $(".dddl_wyxx").click(function(){
+       console.log(sessionStorage.getItem("key_user"))
+      
+      if(sessionStorage.getItem("key_user")){
+        var dataUrl = $(".dddl_wyxx").attr("dataUrl");
+        window.open(dataUrl);
+      }else{
+        var r=confirm("请登录后操作");
+        if (r==true){
+          window.location.href = "http://slj.ordos.gov.cn/sso/index.jsp?client_id=CC0G9XROY&amp;url=http://slj.ordos.gov.cn/";
+        }else{
+          alert("登录后才可以操作");
+        }
+      }
+    })
+		</script>
+			<div class="tt">
+				<a href="./tt/" target="_self"><img src="./images/tt.png" /></a>
+				
+					<h1><a href="./tt/202603/t20260318_3882139.html" target="_self">《求是》杂志发表习近平总书记重要文章《推动海洋经济高...</a></h1>
+				
+			</div>
+			<div class="one">
+				<div class="area">
+					<div class="focusImage" id="focusImage">
+						<div class="focusImage-inner">
+							<div class="focusImage-content">
+								<ul class="js-content" id="focusImage-content">
+									
+										<li class="">
+												<a href="https://tousu.www.gov.cn/dc/2024yxyshjjs/index.htm" target="_blank"><img src="./tpxw2/202402/W020240202294332893297.png" alt="W020240201577857481537.png"/></a>
+												<div class="focusImage-title">
+													<div class="focusImage-title-bg"></div>
+													<p>
+														<a href="https://tousu.www.gov.cn/dc/2024yxyshjjs/index.htm" target="_blank">影响营商环境建设问题线索征集</a>
+													</p>
+												</div>
+											</li>
+									
+										<li class="">
+												<a href="./tpxw2/202603/t20260318_3882156.html" target="_blank"><img src="./tpxw2/202603/W020260318396764988570.png" alt="640.webp (2).png"/></a>
+												<div class="focusImage-title">
+													<div class="focusImage-title-bg"></div>
+													<p>
+														<a href="./tpxw2/202603/t20260318_3882156.html" target="_blank">黄河鄂尔多斯段全线开河</a>
+													</p>
+												</div>
+											</li>
+									
+										<li class="">
+												<a href="./tpxw2/202603/t20260318_3882152.html" target="_blank"><img src="./tpxw2/202603/W020260318395299197965.png" alt="640.webp (1).png"/></a>
+												<div class="focusImage-title">
+													<div class="focusImage-title-bg"></div>
+													<p>
+														<a href="./tpxw2/202603/t20260318_3882152.html" target="_blank">李理调研防凌防汛、森林草原防火、生态保护等工作</a>
+													</p>
+												</div>
+											</li>
+									
+										<li class="">
+												<a href="./tpxw2/202603/t20260318_3882142.html" target="_blank"><img src="./tpxw2/202603/W020260318392955451412.png" alt="640.webp.png"/></a>
+												<div class="focusImage-title">
+													<div class="focusImage-title-bg"></div>
+													<p>
+														<a href="./tpxw2/202603/t20260318_3882142.html" target="_blank">鄂尔多斯市水利局党组召开2025年度党员领导干部民主生活会</a>
+													</p>
+												</div>
+											</li>
+									
+
+								</ul>
+							</div>
+							<div class="focusImage-slide">
+								<ul class="js-tab" id="focusImage-tab">
+									<li class=""></li>
+									<li class=""></li>
+									<li class=""></li>
+									<li class=""></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+
+					<script type="text/javascript">
+						function focusImage(interval) {
+							var content = document.getElementById("focusImage-content").getElementsByTagName("li");
+							var tab = document.getElementById("focusImage-tab").getElementsByTagName("li");
+							var num = tab.length;
+							var current = 0;
+							var intervalObj;
+
+							function init() {
+								tab[0].className = 'current';
+								content[0].className = 'current';
+								for (var i = 0; i < tab.length; i++) {
+									tab[i].onclick = function() {
+										tabOnClick(this);
+									}
+								}
+								intervalObj = window.setTimeout(scrollImage, interval * 1000);
+							}
+
+							function tabOnClick(liTag) {
+								var i = parseInt(liTag.innerHTML) - 1;
+								if (i == current) {
+									return;
+								}
+								clearInterval(intervalObj);
+								tab[current].className = '';
+								content[current].className = '';
+								tab[i].className = 'current';
+								content[i].className = 'current';
+								current = i;
+								intervalObj = window.setTimeout(scrollImage, interval * 1000);
+							}
+
+							function scrollImage() {
+								clearInterval(intervalObj);
+								tab[current].className = '';
+								content[current].className = '';
+								current++;
+								if (current >= num) {
+									current = 0;
+								}
+								tab[current].className = 'current';
+								content[current].className = 'current';
+								intervalObj = window.setTimeout(scrollImage, interval * 1000);
+							}
+							init();
+						}
+						new focusImage(6);
+					</script>
+
+
+
+				<div class="one_rt">
+					<div id="tab1">
+						<ul>
+							<li onmouseover="setTab(1,0)" class="now">
+								<a href="./xw/slyw/" target="_self">水利要闻</a>
+							</li>
+							<li onmouseover="setTab(1,1)">
+								<a href="./xw/bmdt/" target="_self">部门动态</a>
+							</li>
+							<li onmouseover="setTab(1,2)">
+								<a href="./xw/qqdt/" target="_self">旗区水事</a>
+							</li>
+							<li onmouseover="setTab(1,3)">
+								<a href="./xw/lxxx/" target="_self">凌汛信息</a>
+							</li>
+							<span>
+								<a href="http://www.gov.cn/pushinfo/v150203/"  target="_self">国务院政策信息</a>
+							</span>
+						</ul>
+					</div>
+					<div id="tablist1">
+						<div class="tablist block">
+							<ul>
+								
+									<li><span>2026-03<font>19</font></span>
+										<a href="./xw/slyw/202603/t20260319_3882536.html" target="_blank" title="鄂尔多斯市水利局召开2026年安全生产工作部署会">鄂尔多斯市水利局召开2026年安全生产工作部署会</a>
+									</li>
+								
+									<li><span>2026-03<font>16</font></span>
+										<a href="./xw/slyw/202603/t20260319_3882530.html" target="_blank" title="黄河鄂尔多斯段全线开河">黄河鄂尔多斯段全线开河</a>
+									</li>
+								
+									<li><span>2026-03<font>04</font></span>
+										<a href="./xw/slyw/202603/t20260304_3878896.html" target="_blank" title="鄂尔多斯市水利局召开春节节后“第一会”">鄂尔多斯市水利局召开春节节后“第一会”</a>
+									</li>
+								
+									<li><span>2026-02<font>13</font></span>
+										<a href="./xw/slyw/202603/t20260319_3882562.html" target="_blank" title="鄂尔多斯市水利局党组召开2025年度党员领导干部民主生活会">鄂尔多斯市水利局党组召开2025年度党员领导干部民主生活会</a>
+									</li>
+								
+									<li><span>2026-02<font>06</font></span>
+										<a href="./xw/slyw/202602/t20260206_3874954.html" target="_blank" title="生效友赴鄂尔多斯督导调研中央巡视及第三轮中央生态环境保护督察反馈涉水问题整改情况">生效友赴鄂尔多斯督导调研中央巡视及第三轮中央生态环境保护督察反馈涉水问题整改情况</a>
+									</li>
+								
+							</ul>
+						</div>
+						<div class="tablist">
+							<ul>
+								
+									<li><span>2026-03<font>26</font></span>
+										<a href="./xw/bmdt/202603/t20260326_3884031.html" target="_blank" title="鄂尔多斯市水利局举办树立和践行正确政绩观学习教育专题读书班">鄂尔多斯市水利局举办树立和践行正确政绩观学习教育专题读书班</a>
+									</li>
+								
+									<li><span>2026-03<font>16</font></span>
+										<a href="./xw/bmdt/202603/t20260326_3884030.html" target="_blank" title="鄂尔多斯市水利局召开2026年安全生产工作部署会">鄂尔多斯市水利局召开2026年安全生产工作部署会</a>
+									</li>
+								
+									<li><span>2026-03<font>04</font></span>
+										<a href="./xw/bmdt/202603/t20260304_3878898.html" target="_blank" title="鄂尔多斯市水利局召开春节节后“第一会”">鄂尔多斯市水利局召开春节节后“第一会”</a>
+									</li>
+								
+									<li><span>2026-02<font>06</font></span>
+										<a href="./xw/bmdt/202602/t20260206_3874970.html" target="_blank" title="中共鄂尔多斯市水利事业发展中心第一支部委员会组织召开党员大会">中共鄂尔多斯市水利事业发展中心第一支部委员会组织召开党员大会</a>
+									</li>
+								
+									<li><span>2026-02<font>06</font></span>
+										<a href="./xw/bmdt/202602/t20260206_3874967.html" target="_blank" title="中共鄂尔多斯市水利事业发展中心第三支部委员会召开党员大会">中共鄂尔多斯市水利事业发展中心第三支部委员会召开党员大会</a>
+									</li>
+								
+							</ul>
+						</div>
+						<div class="tablist">
+							<ul>
+								
+									<li><span>2026-03<font>26</font></span>
+										<a href="./xw/qqdt/202603/t20260326_3884033.html" target="_blank" title="做好“加减乘法” 答好为企服务卷 准格尔旗水利局以高质量水利保障赋能营商环境">做好“加减乘法” 答好为企服务卷 准格尔旗水利局以高质量水利保障赋能营商环境</a>
+									</li>
+								
+									<li><span>2026-03<font>11</font></span>
+										<a href="./xw/qqdt/202603/t20260318_3882174.html" target="_blank" title="伊金霍洛旗农牧和水利局开展3·5“学雷锋”系列志愿服务活动">伊金霍洛旗农牧和水利局开展3·5“学雷锋”系列志愿服务活动</a>
+									</li>
+								
+									<li><span>2026-02<font>27</font></span>
+										<a href="./xw/qqdt/202603/t20260318_3882175.html" target="_blank" title="准格尔旗水利局召开节后收心动员会">准格尔旗水利局召开节后收心动员会</a>
+									</li>
+								
+									<li><span>2026-02<font>12</font></span>
+										<a href="./xw/qqdt/202603/t20260318_3882173.html" target="_blank" title="多措并举防凌汛 勠力同心守安全——达拉特旗水利局扎实开展各项防凌工作">多措并举防凌汛 勠力同心守安全——达拉特旗水利局扎实开展各项防凌工作</a>
+									</li>
+								
+									<li><span>2026-01<font>28</font></span>
+										<a href="./xw/qqdt/202601/t20260128_3872591.html" target="_blank" title="乌审旗水利局召开党组理论学习中心组（扩大）第一次集体学习会议">乌审旗水利局召开党组理论学习中心组（扩大）第一次集体学习会议</a>
+									</li>
+								
+							</ul>
+						</div>
+						<div class="tablist">
+							<ul>
+								
+									<li><span>2026-03<font>18</font></span>
+										<a href="./xw/lxxx/202603/t20260318_3882161.html" target="_blank" title="冰河铸盾 安澜为诺——2025—2026年度黄河防凌工作综述">冰河铸盾 安澜为诺——2025—2026年度黄河防凌工作综述</a>
+									</li>
+								
+									<li><span>2026-03<font>04</font></span>
+										<a href="./xw/lxxx/202603/t20260318_3882164.html" target="_blank" title="鄂尔多斯市全力筑牢黄河开河期防凌安全防线">鄂尔多斯市全力筑牢黄河开河期防凌安全防线</a>
+									</li>
+								
+									<li><span>2026-02<font>23</font></span>
+										<a href="./xw/lxxx/202603/t20260318_3882165.html" target="_blank" title="黄河凌汛进入开河关键期 水利部门落实落细各项防凌措施">黄河凌汛进入开河关键期 水利部门落实落细各项防凌措施</a>
+									</li>
+								
+									<li><span>2026-02<font>06</font></span>
+										<a href="./xw/lxxx/202603/t20260318_3882171.html" target="_blank" title="防凌汛常识">防凌汛常识</a>
+									</li>
+								
+									<li><span>2026-01<font>21</font></span>
+										<a href="./xw/lxxx/202601/t20260121_3870843.html" target="_blank" title="黄河鄂尔多斯段全线稳定封河">黄河鄂尔多斯段全线稳定封河</a>
+									</li>
+								
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div> 
+ 
+
+				<script type="text/javascript">
+				        var a = 0;
+				        var b = 0;
+				        var c = 0;
+                                        function abc(){
+				 	a = c%$(".hf a").length;
+				 	b = (c+1)%$(".hf a").length;
+				 	$(".hf a").eq(a).hide();
+				 	$(".hf a").eq(b).show();
+				 	c++;
+				 }
+				 times = setInterval(abc,8000);
+				 $(".hf a").hover(function(){
+						clearInterval(times);
+					},function(){
+						clearInterval(times);
+						times = setInterval(abc,8000);
+					});
+
+                                        
+				</script>
+
+<div style="width:1300px;height:100px;margin:10px auto">
+<a href="https://slj.ordos.gov.cn/zwgk/xxgkzn1/" target="_blank" style="float: left;display: block;"><img src="./images/W020230303617716408591.jpg" /></a>
+<a href="http://www.ordos.gov.cn/zt_127959/yzwfsxmd/" target="_blank" style="float: left;display: block;"><img src="./images/W020240720524968741738.jpg" /></a>
+<a href="http://slj.ordos.gov.cn/zcwdk/" target="_blank"><img src="./images/W020230303617716535224.jpg" /></a>
+</div>
+<div class="hf" style="width:1300px;height:100px;margin:10px auto;    position: initial;">
+
+<a href="http://www.ordos.gov.cn/zt_127959/yhyshj/" target="_blank" style="display: block;">
+                                   <img src="./images/W020220321708631828606.jpg" style="width:100%;display: block;" />
+                            </a>
+
+
+						 <a href="http://www.ordos.gov.cn/zt_127959/gyyqypggs/" target="_blank" style="display: block;">
+                                   <img src="./images/W020220524410451786222.jpg" style="width:100%;display: block;" />
+                            </a>
+<!--<a href="https://liuyan.www.gov.cn/2023wxzlsjh/bmdf.html?q=nmg" target="_blank"><img src="./images/W020221209390143368157.png" /></a>-->
+
+				</div>
+
+		</section>
+		<section class="first_tow">
+			<div id="tabzw2">
+				<ul>
+					<li onmouseover="setTabzw(2,0)" class="now0">
+						<a href="./zw/" target="_self">政务公开</a>
+					</li>
+					<li onmouseover="setTabzw(2,1)" class="nowl1">
+						<a href="./ddqzlxjysjhd/" target="_self">专题专栏</a>
+					</li>
+					<li onmouseover="setTabzw(2,2)" class="nowl2">
+						<a href="./hdjl/dczj/" target="_self">互动交流</a>
+					</li>
+				</ul>
+			</div>
+			<div id="tabzwlist2">
+				<div class="tabzwlist1 block">
+					<ul class="zw_tp">
+						<div class="sts">
+							<div id="tab2">
+								<ul>
+									<li onmouseover="setTab(2,0)" class="now">
+										<a href="./zw/sjwj/" target="_self">上级文件</a>
+									</li>
+									<li onmouseover="setTab(2,1)">
+										<a href="./zw/tzgg_68168/" target="_self">通知公告</a>
+									</li>
+									<li onmouseover="setTab(2,2)">
+										<a href="./zw/slgb/" target="_self">水利公报</a>
+									</li>
+								</ul>
+							</div>
+							<div id="tablist2">
+								<div class="tablist1 block">
+									<ul>
+										
+											<li>
+												<a href="./zw/sjwj/202601/t20260104_3866251.html" target="_blank" title="全国首部保障农民工工资支付的地方性法规于7月1日起实施">全国首部保障农民工工资支付的地方性法规于7月1日起实施</a>
+												<span>[2026-01-04]</span>
+											</li>
+										
+											<li>
+												<a href="./zw/sjwj/202512/t20251212_3859933.html" target="_blank" title="中共中央办公厅 国务院办公厅关于全面推进江河保护治理的意见">中共中央办公厅 国务院办公厅关于全面推进江河保护治...</a>
+												<span>[2025-12-12]</span>
+											</li>
+										
+											<li>
+												<a href="./zw/sjwj/202512/t20251212_3859928.html" target="_blank" title="内蒙古自治区节约用水条例">内蒙古自治区节约用水条例</a>
+												<span>[2025-12-12]</span>
+											</li>
+										
+											<li>
+												<a href="./zw/sjwj/202507/t20250704_3812278.html" target="_blank" title="内蒙古自治区第十四届人民代表大会常务委员会公告（第五十四号）">内蒙古自治区第十四届人民代表大会常务委员会公告（...</a>
+												<span>[2025-07-04]</span>
+											</li>
+										
+											<li>
+												<a href="./zw/sjwj/202504/t20250423_3788399.html" target="_blank" title="内蒙古自治区水利厅司法厅关于提升水行政执法质量和效能的实施意见">内蒙古自治区水利厅司法厅关于提升水行政执法质量和...</a>
+												<span>[2025-04-23]</span>
+											</li>
+										
+									</ul>
+								</div>
+								<div class="tablist1">
+									<ul>
+										
+											<li>
+												<a href="./zw/tzgg_68168/202601/t20260126_3872032.html" target="_blank" title="鄂尔多斯市水利工程招标投标领域投诉举报渠道">鄂尔多斯市水利工程招标投标领域投诉举报渠道</a>
+												<span>[2024-05-17]</span>
+											</li>
+										
+											<li>
+												<a href="./zw/tzgg_68168/202507/t20250728_3820112.html" target="_blank" title="鄂尔多斯市水利局公开全市水利工程欠薪投诉受理联系方式">鄂尔多斯市水利局公开全市水利工程欠薪投诉受理联系方式</a>
+												<span>[2026-01-26]</span>
+											</li>
+										
+											<li>
+												<a href="./zw/tzgg_68168/202603/t20260327_3884690.html" target="_blank" title="鄂尔多斯市本级事业单位2026年度第一批引进高层次和紧缺人才公告">鄂尔多斯市本级事业单位2026年度第一批引进高层次和...</a>
+												<span>[2026-03-27]</span>
+											</li>
+										
+											<li>
+												<a href="./zw/tzgg_68168/202603/t20260325_3883769.html" target="_blank" title="第二批大型风电光伏基地一鄂尔多斯采煤沉陷区400万千瓦新能源项目配套220千伏接网工程水土保持设施自主验收报备回执">第二批大型风电光伏基地一鄂尔多斯采煤沉陷区400万千...</a>
+												<span>[2026-03-25]</span>
+											</li>
+										
+											<li>
+												<a href="./zw/tzgg_68168/202603/t20260324_3883571.html" target="_blank" title="专用账户开户银行比选公告">专用账户开户银行比选公告</a>
+												<span>[2026-03-24]</span>
+											</li>
+										
+									</ul>
+								</div>
+								<div class="tablist1">
+									<ul>
+										
+											<li>
+												<a href="./zw/slgb/202601/t20260119_3869811.html" target="_blank" title="2025年鄂尔多斯市水利局政府网站工作年度报表">2025年鄂尔多斯市水利局政府网站工作年度报表</a>
+												<span>[2026-01-19]</span>
+											</li>
+										
+											<li>
+												<a href="./zw/slgb/202508/t20250825_3829020.html" target="_blank" title="2024年水资源公报">2024年水资源公报</a>
+												<span>[2025-08-25]</span>
+											</li>
+										
+											<li>
+												<a href="./zw/slgb/202502/t20250219_3765676.html" target="_blank" title="鄂尔多斯市水利局2024年度政府信息公开工作报告">鄂尔多斯市水利局2024年度政府信息公开工作报告</a>
+												<span>[2025-01-14]</span>
+											</li>
+										
+											<li>
+												<a href="./zw/slgb/202501/t20250115_3758355.html" target="_blank" title="2024年度政府网站工作年度报表">2024年度政府网站工作年度报表</a>
+												<span>[2025-01-15]</span>
+											</li>
+										
+											<li>
+												<a href="./zw/slgb/202404/t20240417_3593118.html" target="_blank" title="鄂尔多斯市2023年水资源公报">鄂尔多斯市2023年水资源公报</a>
+												<span>[2024-04-17]</span>
+											</li>
+										
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="xrc">
+							<div id="tab3">
+								<ul>
+									  <li onmouseover="setTab(3,0)" class="now">
+										<a href="./zw/rsrm1/" target="_self">人事信息</a>
+									</li>
+                                                                        
+									<li onmouseover="setTab(3,1)">
+										<a href="./zw/bmyjs/" target="_self">财务信息</a>
+									</li>
+									
+								</ul>
+							</div>
+							<div id="tablist3">
+								<div class="tablist2 block">
+									<ul>
+										
+											<li>
+												<a href="./zw/rsrm1/202507/t20250721_3818157.html" target="_blank" title="关于对鄂尔多斯市水利局拟引进人员进行公示的公告">关于对鄂尔多斯市水利局拟引进人员进行公示的公告</a>
+												<span>[2025-07-21]</span>
+											</li>
+										
+											<li>
+												<a href="./zw/rsrm1/202505/t20250515_3794371.html" target="_blank" title="关于公布鄂尔多斯市水利局所属事业单位引进高层次人才总成绩的公告">关于公布鄂尔多斯市水利局所属事业单位引进高层次人...</a>
+												<span>[2025-05-15]</span>
+											</li>
+										
+											<li>
+												<a href="./zw/rsrm1/202505/t20250508_3792185.html" target="_blank" title="关于组织开展鄂尔多斯市水利局所属事业单位引进高层次人才面试的公告">关于组织开展鄂尔多斯市水利局所属事业单位引进高层...</a>
+												<span>[2025-05-08]</span>
+											</li>
+										
+											<li>
+												<a href="./zw/rsrm1/202504/t20250428_3790046.html" target="_blank" title="关于公布鄂尔多斯市水利局所属事业单位引进高层次人才笔试成绩的公告">关于公布鄂尔多斯市水利局所属事业单位引进高层次人...</a>
+												<span>[2025-04-28]</span>
+											</li>
+										
+											<li>
+												<a href="./zw/rsrm1/202504/t20250418_3787062.html" target="_blank" title="关于鄂尔多斯市水利局所属事业单位引进高层次人才笔试的公告">关于鄂尔多斯市水利局所属事业单位引进高层次人才笔...</a>
+												<span>[2025-04-18]</span>
+											</li>
+										
+									</ul>
+								</div>
+								<div class="tablist2">
+									<ul>
+										
+											<li>
+												<a href="./zw/bmyjs/202602/t20260228_3878055.html" target="_blank" title="2026年度鄂尔多斯市水利局预算公开（全局）">2026年度鄂尔多斯市水利局预算公开（全局）</a>
+												<span>[2026-02-24]</span>
+											</li>
+										
+											<li>
+												<a href="./zw/bmyjs/202602/t20260228_3878052.html" target="_blank" title="2026年度鄂尔多斯市水利局预算公开（本级）">2026年度鄂尔多斯市水利局预算公开（本级）</a>
+												<span>[2026-02-24]</span>
+											</li>
+										
+											<li>
+												<a href="./zw/bmyjs/202512/t20251215_3860342.html" target="_blank" title="2025年度鄂尔多斯市水旱灾害防御技术中心预算公开报告">2025年度鄂尔多斯市水旱灾害防御技术中心预算公开报告</a>
+												<span>[2025-12-15]</span>
+											</li>
+										
+											<li>
+												<a href="./zw/bmyjs/202512/t20251215_3860340.html" target="_blank" title="2025年度鄂尔多斯市水利工程建设质量与安全监督服务中心预算公开报告">2025年度鄂尔多斯市水利工程建设质量与安全监督服务...</a>
+												<span>[2025-12-15]</span>
+											</li>
+										
+											<li>
+												<a href="./zw/bmyjs/202510/t20251015_3842482.html" target="_blank" title="内蒙古自治区鄂尔多斯市水利局2024年度决算公开报告">内蒙古自治区鄂尔多斯市水利局2024年度决算公开报告</a>
+												<span>[2025-10-15]</span>
+											</li>
+										
+									</ul>
+								</div>
+								
+							</div>
+						</div>
+					</ul>
+					<ul class="zw_bt">
+						<div class="sts">
+							<div id="tab4">
+								<ul>
+									<li onmouseover="setTab(4,0)" class="now">
+										<a href="./zw/zcfg/" target="_self">政策法规</a>
+									</li>
+									<li onmouseover="setTab(4,1)">
+										<a href="./zw/zcjd/" target="_self">政策解读</a>
+									</li>
+								</ul>
+							</div>
+							<div id="tablist4">
+								<div class="tablist3 block">
+									<ul>
+										
+											<li>
+												<a href="./zw/zcfg/202512/t20251212_3859988.html" target="_blank" title="中共中央办公厅国务院办公厅关于全面推进江河保护治理的意见">中共中央办公厅国务院办公厅关于全面推进江河保护治...</a>
+												<span>[2025-12-12]</span>
+											</li>
+										
+											<li>
+												<a href="./zw/zcfg/202507/t20250722_3818635.html" target="_blank" title="内蒙古自治区保障农民工工资支付条例">内蒙古自治区保障农民工工资支付条例</a>
+												<span>[2025-07-03]</span>
+											</li>
+										
+											<li>
+												<a href="./zw/zcfg/202504/t20250423_3788403.html" target="_blank" title="《鄂尔多斯市节水行动方案》">《鄂尔多斯市节水行动方案》</a>
+												<span>[2025-04-23]</span>
+											</li>
+										
+											<li>
+												<a href="./zw/zcfg/202409/t20240904_3652140.html" target="_blank" title="《鄂尔多斯市水利行业信用分级分类监管工作实施方案(试行)》">《鄂尔多斯市水利行业信用分级分类监管工作实施方案(...</a>
+												<span>[2024-08-05]</span>
+											</li>
+										
+											<li>
+												<a href="./zw/zcfg/202404/t20240428_3596786.html" target="_blank" title="保障农民工工资支付条例（2019年国务院令第724号）">保障农民工工资支付条例（2019年国务院令第724号）</a>
+												<span>[2024-04-28]</span>
+											</li>
+										
+									</ul>
+								</div>
+								<div class="tablist3">
+									<ul>
+										
+											<li>
+												<a href="./zw/zcjd/202512/t20251212_3859989.html" target="_blank" title="一图读懂《内蒙古自治区节约用水条例》">一图读懂《内蒙古自治区节约用水条例》</a>
+												<span>[2025-12-12]</span>
+											</li>
+										
+											<li>
+												<a href="./zw/zcjd/202503/t20250324_3776284.html" target="_blank" title="《鄂尔多斯市节水行动方案》方案解读">《鄂尔多斯市节水行动方案》方案解读</a>
+												<span>[2025-04-23]</span>
+											</li>
+										
+											<li>
+												<a href="./zw/zcjd/202404/t20240424_3595247.html" target="_blank" title="鄂尔多斯市水利局关于《鄂尔多斯市水行政处罚自由裁量权基准（试行）》的制定说明">鄂尔多斯市水利局关于《鄂尔多斯市水行政处罚自由裁...</a>
+												<span>[2024-04-23]</span>
+											</li>
+										
+											<li>
+												<a href="./zw/zcjd/202309/t20230904_3482258.html" target="_blank" title="《鄂尔多斯市加强水资源高效利用推动高质量发展实施方案》的政策解读">《鄂尔多斯市加强水资源高效利用推动高质量发展实施...</a>
+												<span>[2023-08-14]</span>
+											</li>
+										
+											<li>
+												<a href="./zw/zcjd/202305/t20230511_3389921.html" target="_blank" title="《鄂尔多斯市水利局推行包容审慎监管执法清单（试行）》的政策解读">《鄂尔多斯市水利局推行包容审慎监管执法清单（试行...</a>
+												<span>[2023-05-05]</span>
+											</li>
+										
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="xrc">
+							<div id="tab5">
+								<ul>
+									<li onmouseover="setTab(5,0)" class="now">
+										<a href="./zw/ssjygk/" target="_self">“双随机、一公开”</a>
+									</li>
+									<li onmouseover="setTab(6,1)">
+										<a href="http://zwfw.nmg.gov.cn/OrgItem_index?regionCode=150600000000&orgCode=11150600MB1511443H">权责清单</a>
+									</li>
+								</ul>
+							</div>
+							<div id="tablist5">
+								<div class="tablist4 block">
+									<ul>
+										
+									</ul>
+								</div>
+								<div class="tablist4">
+									<ul>
+										
+									</ul>
+								</div>
+							</div>
+						</div>
+					</ul>
+				</div>
+				<div class="tabzwlist1">
+					<div class="ztzl">
+						
+							<a href="http://slj.ordos.gov.cn/ddqzlxjysjhd/fwsxqd/" target="_blank">
+								<img src="./ddqzlxjysjhd/202304/W020250610411419477749.jpg" alt="微信图片_20250610112546.jpg"/>
+							</a>
+						
+							<a href="http://www.ordos.gov.cn/ordosml/bmlq/lqzc/sbjzcwj/" target="_blank">
+								<img src="./ddqzlxjysjhd/202211/W020250717623534699772.png" alt="便利.png"/>
+							</a>
+						
+							<a href="http://slj.ordos.gov.cn/ddqzlxjysjhd/wlaq/" target="_blank">
+								<img src="./ddqzlxjysjhd/202012/W020201210583649264048.jpg" alt="wlaq.jpg"/>
+							</a>
+						
+							<a href="http://slj.ordos.gov.cn/ddqzlxjysjhd/bmxcy/" target="_blank">
+								<img src="./ddqzlxjysjhd/202012/W020201202693742009482.jpg" alt="bmxcy.jpg"/>
+							</a>
+						
+					</div>
+				</div>
+				<div class="tabzwlist1">
+					<div class="hd_left">
+						<div class="hd_tp">
+							<span>局长信箱</span>
+							<a class="dddl_wyxx_sy" href="http://www.ordos.gov.cn/zwfwbmrx/home/writeLetters?areaCode=1506&objectCode=150600213" ><img src="./images/wyxx.png" /></a>
+						</div>
+						<div class="hd_bt" id="bs">
+							<ul class="evenrow">
+								<li class="a">主题</li>
+								<li class="b">类型</li>
+								<li class="c">处理时间</li>
+							</ul>
+
+                                                        <div id="messageboxtab"></div>
+                                                        
+
+
+
+
+<!--
+							
+-->
+
+
+
+						</div>
+
+
+                                             <!--
+						<div class="hd_btt">
+							<a href="./hdjl/dczj/" target="_blank"><img src="./images/zjdc.jpg" /></a>
+							<a class="dddl_wyxx_sy" href="http://www.ordos.gov.cn/zwfwbmrx/home/writeLetters?areaCode=1506&objectCode=150600213" dataurl="./hdjl/tsjb/" ><img src="./images/tsjb.jpg" /></a>
+							<a href="./hdjl/xjkd/" target="_blank"><img src="./images/lxxd.jpg" /></a>
+						</div>
+
+                                              -->
+
+					</div>
+					<div class="hd_right">
+							<a href="./hdjl/dczj/" target="_blank"><img src="./images/zjdc.jpg" /></a>
+							<a class="dddl_wyxx_sy" href="http://www.ordos.gov.cn/zwfwbmrx/home/writeLetters?areaCode=1506&objectCode=150600213" dataurl="./hdjl/tsjb/" ><img src="./images/tsjb.jpg" /></a>
+						<!--	<a href="./hdjl/xjkd/" target="_blank"><img src="./images/lxxd.jpg" /></a> -->
+
+
+
+
+
+
+					</div>
+				</div>
+			</div>
+		</section>
+		<div class="first_three">
+	<div class="yqlj">
+		<a href="http://www.mwr.gov.cn/" target="_blank">中华人民共和国水利部</a>
+		<a href="http://slt.nmg.gov.cn/" target="_blank">内蒙古自治区水利厅</a>
+		<a href="http://www.ordos.gov.cn/" target="_blank">鄂尔多斯市人民政府</a>
+	</div>
+	<div class="bottom">
+		<ul class="clearfix">
+			<li>
+				<span style="color:white">主办：鄂尔多斯市水利局 </span>
+                                <span><a href="./wzdt/" target="_blank" style="color:white">网站地图</a></span>
+				<p>
+					<a href="http://beian.miit.gov.cn" target="_blank">蒙ICP备19003943号</a>
+				</p>
+				<p>
+					<a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=15062702000125" target="_blank"><img src="./images/W020161206430865739543.png" style="float:left;" />蒙公网安备 15062702000125号</a>
+				</p>
+			</li>
+			<li class="foot_li_sec">
+				<p>邮箱：ordossl@163.com </p>
+				<p>电话（传真）：0477-8582224</p>
+				<p>地址：鄂尔多斯市人民政府第二行政办公区CBD T2 21层</p>
+			</li>
+			<li>
+				<p>网站标识码：1506000039</p>
+				<p>技术支持：内蒙古海瑞科技有限责任公司</p>
+				<p>
+					<script type="text/javascript">
+						document.write(unescape("%3Cspan id='cnzz_stat_icon_1278575881'%3E%3C/span%3E%3Cscript src='https://v1.cnzz.com/stat.php%3Fid%3D1278575881%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+					</script>
+				</p>
+			</li>
+			<li>
+				<ol>
+					<span>
+						<script type="text/javascript">
+						document.write(unescape("%3Cspan id='_ideConac' %3E%3C/span%3E%3Cscript src='https://dcs.conac.cn/js/07/136/0000/60140415/CA071360000601404150001.js' type='text/javascript'%3E%3C/script%3E"));
+						</script>
+					</span>
+					<span style="margin-top: 10px;"><script id="_jiucuo_" sitecode='1506000039' src='https://zfwzgl.www.gov.cn/exposure/jiucuo.js'></script></span>
+
+					<span style="margin-top: 10px;"><a href="http://wza.isc.org.cn/rzpt/bsgl/dt/20230731/2078.html" target="_blank"><img src="./images/W020230810331022121049.jpg" /></a></span>
+				</ol>
+			</li>
+		</ul>
+	</div>
+</div>
+		<!--主体结束-->
+
+
+
+
+<!--新对联开始-->
+<!--<style type=text/css>
+.duilian{top:220px;position:absolute; overflow:hidden; }
+.duilian_left{left:20px;}
+.duilian_right{right:20px;}
+.duilian_con{  overflow:hidden;}
+.duilian_close{ width:100%; height:24px; line-height:24px; text-align:right; display:block; font-size:13px; color:#d92d2b; text-decoration:none;}
+</style>
+<script type="text/javascript">
+$(document).ready(function(){
+	var duilian = $("div.duilian");
+	var duilian_close = $("a.duilian_close");
+	
+	var window_w = $(window).width();
+	if(window_w>1000){duilian.show();}
+	$(window).scroll(function(){
+		var scrollTop = $(window).scrollTop();
+		duilian.stop().animate({top:scrollTop+220});
+	});
+	duilian_close.click(function(){
+		$(this).parent().hide();
+		return false;
+	});
+	
+	
+});
+</script>
+
+<div class="duilian duilian_left" >
+  <a href="#" class="duilian_close">×关闭</a>
+	<div class="duilian_con"> <a href='http://slj.ordos.gov.cn/shmsl/wwqzbsszqyj/' target='_blank'><img src='./images/W020210526643796619066.jpg' width='160' height='220' border='0' /></a></div>
+  
+</div>
+<div class="duilian duilian_right">
+  <a href="#" class="duilian_close">×关闭</a>
+	<div class="duilian_con"> <a href="http://toupiao.www.gov.cn/100dudian/index.htm" target="_blank"> <img src='./images/W020180709628411266948.png' width='140' height='330' border='0' /></a></div>
+  
+</div>
+
+新对联结束-->
+
+
+		<style>
+.yxjbox{
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      z-index:3;
+}
+.yxj_gb {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      text-align: center;
+    font-size: 20px;
+    color: #000000;
+    }
+.yxj_xq {
+      position: absolute;
+      bottom: 73px;
+      left: 40px;
+      width: 60px;
+      height: 20px;
+      cursor: pointer;
+    }
+</style>
+<div class="yxjbox">
+  <img src="./images/W020210729548743778813.jpg" border="0" />
+<span class="yxj_gb">×</span>
+</div>
+
+<script>
+
+  $(".yxj_gb").click(function(){
+  $(".yxjbox").animate({height:"0px"});
+});
+
+</script>
+		<style>
+.yxjbox5{
+      position: fixed;
+      bottom: 300px;
+      right: 0;
+width:180px;
+height:300px;
+      z-index:3;
+}
+.yxj_gb5 {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      text-align: center;
+    font-size: 20px;
+    color: #000000;
+    }
+.yxj_xq5 {
+      position: absolute;
+      bottom: 73px;
+      left: 40px;
+      width: 60px;
+      height: 20px;
+      cursor: pointer;
+    }
+.yxj2_img{
+width:100%;
+height:100%;
+}
+</style>
+<a href="http://slj.ordos.gov.cn/zw/zcfg/202404/t20240428_3596786.html">
+<div class="yxjbox5">
+  <img class="yxj2_img" src="./images/W020240719545907905288.jpg" style="width:180px;" /><span class="yxj_gb5">×</span>
+</div></a>
+
+<script>
+  $(".yxj_gb5").click(function(){
+  $(".yxjbox5").animate({bottom:"-600px"});
+});
+</script>
+		<style>
+.yxjboxl{
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      z-index:3;
+}
+.yxj_gbl {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 20px;
+      height: 40px;
+      cursor: pointer;
+text-align: center;
+    color: #000;
+    font-size: 16px;
+    }
+.yxj_xql {
+      position: absolute;
+      bottom: 73px;
+      left: 40px;
+      width: 60px;
+      height: 20px;
+      cursor: pointer;
+    }
+</style>
+<div class="yxjboxl">
+
+<a href="http://www.gov.cn/hudong/index.htm" target="_blank">
+   <img src="./images/W020230404595900482414.jpg" style="border-width: 0px;" alt="" />
+</a>
+
+<!-- 政务服务条例
+<a href="http://www.ordos.gov.cn/gk_128120/zcfg/zcjd/zcjd/202203/t20220302_3157994.html" target="_blank">
+   <img src="./images/W020220304415063936740.jpg" style="border-width: 0px;" alt="" />
+</a>
+-->
+
+<span class="yxj_gbl">x</span>
+
+</div>
+
+<script>
+
+  $(".yxj_gbl").click(function(){
+  $(".yxjboxl").animate({height:"0px"});
+});
+
+</script>
+
+<style>
+.yxjbox2{
+      position: fixed;
+      bottom: 300px;
+      left: 0;
+      z-index:3;
+}
+.yxj_gb2 {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 20px;
+      height: 40px;
+      cursor: pointer;
+text-align: center;
+    color: #000;
+    font-size: 16px;
+    }
+.yxj_xq2 {
+      position: absolute;
+      bottom: 73px;
+      left: 40px;
+      width: 60px;
+      height: 20px;
+      cursor: pointer;
+    }
+.zxj_a{
+     width:300px;
+     height:300px;
+}
+</style>
+<div class="yxjbox2">
+
+<a href="./kp/slgc1/" target="_blank">
+<img class="zxj_a" src="./images/W020240719547516074287.jpg" style="border-width: 0px;widht:300px;" alt="" />
+</a>
+
+<span class="yxj_gb2">x</span>
+
+</div>
+
+<script>
+
+  $(".yxj_gb2").click(function(){
+  $(".yxjbox2").animate({bottom:"-300px"});
+});
+
+</script>
+
+
+		<script>
+			//定义个ajax的路径变量前端页面调用：
+			function getajaxpath2023() {
+				return "https://www.ordos.gov.cn";
+			};
+
+			// 区长信箱获取
+			function indexGetMesg2023() {
+				var path2023 = getajaxpath2023() + "/zwfwbmrx/derenboot/busLetterInfo/getForeignBannerAreaList";
+				$.ajax({
+					url: path2023,
+					async: false,
+					type: 'GET',
+					dataType: "json",
+					cache: false,
+					data: {
+						areaCode: "1506",
+						objectCode: "150600213"
+					},
+					success: function(result) {
+						console.log(result);
+						if (result.result.content.length < 6) {
+							var str = "";
+							for (var i = 0; i < result.result.content.length; i++) {
+								str = str + "<ul>" +
+									"<li class='a'><a href='./xjnr/?autoId=" + result.result.content[i].autoId + "'>" + result.result.content[i].letterTitle + 
+
+"</a></li>" +
+									"<li class='b'>" + result.result.content[i].letterType + "</li>" +
+									"<li class='c'>" + result.result.content[i].ptime.split(" ")[0] + "</li>" +
+									"</ul>";
+							}
+						} else {
+							console.log("请求接口异常");
+							console.log(result);
+							alert(result);
+						}
+
+                                                console.log(str);
+						$("#messageboxtab").append(str);
+					}
+				});
+			};
+
+
+			
+			indexGetMesg2023();	
+			
+
+		</script>
+
+		<script>
+window.onload = function() {
+	altRows('bs');
+}
+		</script>
+	</body>
+
+</html>

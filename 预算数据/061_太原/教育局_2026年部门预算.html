@@ -1,0 +1,541 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <!--网站标签-->
+  <!--网站名称、网站域名、政府网站标识码、描述、关键字 -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="SiteName" content="太原市教育局网站" />
+<meta name="SiteDomain" content="jyj.taiyuan.gov.cn" />
+<meta name="SiteIDCode" content="CA061130000413013300002" />
+<meta name="description" content="太原市教育局">
+<meta name="keywords" content="">  <meta name="ColumnName" content="首页">
+  <meta name="ColumnDescription" content="太原市教育局网站首页。">
+  <meta name="ColumnKeywords" content="">
+  <meta name="ColumnType" content="网站首页">
+
+  <title>太原市教育局网站</title>
+  <link rel="stylesheet" type="text/css" href="/r/cms/site28/default/tysjyj/static/css/index_ty.css" />
+  <link rel="stylesheet" type="text/css" href="/r/cms/site28/default/tysjyj/static/css/xiugai02.css" />
+<script src="/r/cms/site28/default/tysjyj/static/js/jquery-1.7.1.min.js"></script>
+<script src="/r/cms/site28/default/tysjyj/static/js/common.js"></script>
+  <script language="javascript" type="text/javascript" src="/r/cms/site28/default/tysjyj/static/js/jquery.tab.js"></script>
+  <script language="javscraipt" type="text/javascript" src="/r/cms/site28/default/tysjyj/static/js/jquery.roll.js"></script>
+  <script language="javascript" type="text/javascript" src="/r/cms/site28/default/tysjyj/static/js/jquery.SuperSlide.js"></script>
+</head>
+
+<body>
+
+<script type="text/javascript">
+/*accessible-read start*/
+	var close = localStorage.getItem("close");
+	var protocol = window.location.protocol
+	if(close=='true'){
+		show()
+	}
+
+	function show(){
+		let xml = window.XMLHttpRequest?new XMLHttpRequest():new ActiveXObject('Microsoft.XMLHttp');
+		xml.open('GET','https://api.jeecms.com/MODULE-ACCESSIBLE-READING/front/readings/checkAvailability?callingCode=4cU3e84wRBad3qyPeq4wU7if3aTD-m3bAkdd33zAtc39AQ1e3oEQBb3qQnxv4rPjd74rP8ym4lTz-j4mUz-b4nEPRv4oS7ek3qyPeq39y49e34A4t93qzkdg4aQjdh4pP7mk4cQl2932ETmS4zU49v39CRW=3fSEyu4XU4ar39TQio4WSBOC3qBjev4eQTig4VT7am3qT7mk4vQPd73eA7mu3fzQ593cy4lc3qzQB93YMh62');
+		xml.send();
+		xml.onreadystatechange=function(){
+			if($('#ABTInterface').length!=0){
+				return
+			}
+			if (xml.readyState==4 && xml.status==200){
+				let res = JSON.parse(xml.responseText);
+				if (res.code == 200) {
+					localStorage.setItem("close", true);
+					let script = document.createElement('script');
+					// script.src = res.data.abtJsUrl;
+					let host = window.location.protocol+"//"+window.location.host;
+					script.src = host+"/r/cms/site28/default/reading/abt.js";
+					//重写为本地js
+					res.data.abtJsUrl=host+"/r/cms/site28/default/reading/abt.js";
+					res.data.gbkJsUrl=host+"/r/cms/site28/default/reading/gbk.js";
+					res.data.helpHtmlUrl=host+"/r/cms/site28/default/reading/help.html";
+					res.data.pinyinJsUrl=host+"/r/cms/site28/default/reading/pinyin.js";
+					res.data.skinCssUrl=host+"/r/cms/site28/default/reading/skin.css";
+					document.body.appendChild(script);
+					console.log(window.location.host)
+					console.log(res.data)
+					script.onload = function(){ABTshow(res.data);}
+				} else if (res.code == 500){
+					alert(res.message);
+				}
+			}
+		}
+	}
+
+</script>
+<script type="text/javascript" language="javascript">
+function collect(){
+//加入收藏
+      var ctrl = (navigator.userAgent.toLowerCase()).indexOf('mac') != -1 ? 'Command/Cmd': 'CTRL';
+      try{
+        if (document.all) { //IE类浏览器
+            try {
+                window.external.toString(); //360浏览器不支持window.external，无法收藏
+                window.alert("国内开发的360浏览器等不支持主动加入收藏。\n您可以尝试通过浏览器菜单栏 或快捷键 ctrl+D 试试。");
+            }
+            catch (e){   
+                try{
+window.external.addFavorite(window.location, document.title);
+                }
+                catch (e){
+window.external.addToFavoritesBar(window.location, document.title);  //IE8
+                }
+            }
+        }
+        else if (window.sidebar) { //firfox等浏览器
+            window.sidebar.addPanel(document.title, window.location, "");
+        }
+        else {
+            alert('您可以尝试通过快捷键' + ctrl + ' + D 加入到收藏夹~');
+        }
+    }
+    catch (e){
+       alert('您可以尝试通过快捷键' + ctrl + ' + D 加入到收藏夹~');
+    }
+}
+ 
+    //设为首页
+ 
+    function setHome(){
+ url= window.location.href;
+        if (document.all) {
+ 
+            document.body.style.behavior='url(#default#homepage)';
+ 
+               document.body.setHomePage(url);
+ 
+        }else{ 
+            alert("您好,您的浏览器不支持自动设置页面为首页功能,请您手动在浏览器里设置该页面为首页!");
+        }
+    }
+</script>
+<!--
+<script type="text/javascript">
+$(function(){
+  $('#sub').click(function(){
+    window.location.href='http://221.204.12.144:8090/fzlm/js/index.shtml?query='+$("#keyword").val();
+  });
+});
+</script>!-->
+<div class="head_top">
+	<div class="head_top_con">
+    	<ul class="fr clearfix">
+        <li><a href="javascript:void(0);" onclick="collect();">加入收藏</a></li>
+        <li><a href="javascript:void(0);" onclick="setHome();">设为首页</a></li>
+        <li><a href="javascript:void(0);" onclick="show();">无障碍通道</a></li>
+        </ul>
+    </div>       
+</div>  
+<div class="navbox">
+	<div class="navbox_con">
+        <ul class="nav_ul fl" style="margin-left:-18px;">
+        <li><a href="http://jyj.taiyuan.gov.cn/index.html">首&nbsp;&nbsp;页</a></li>
+        <li><a href="/dwgk.html" target="_blank">单位概况</a></li>
+        <li><a href="/zcfg.html" target="_blank">政策法规</a></li>
+        <li><a href="/zfxxgkzn.html" target="_blank">政务信息公开</a></li>
+        <li><a href="http://ty.sxzwfw.gov.cn/icity/icity/departmental_matters?deptid=1401010303" target="_blank">政务服务</a></li>
+        <li><a href="/mbjy.html" target="_blank">民办教育</a></li>
+        <li><a href="/zyjy.html" target="_blank">职业教育</a></li>        
+        <li><a href="/zkzs.html" target="_blank">中考招生</a></li>
+        </ul>
+        <ul class="ser_ul fr clearfix" style="margin-right: -50px;">
+        <li class="srk"><input type="text" name="" id="keyword" placeholder="请输入关键字" /></li>
+        <li class="btn"><input type="button" name=""  onclick="window.open('/search.htm?q='+$('#keyword').val())" /></li>
+        </ul>
+    </div>
+</div>
+<div class="banner clearfix">
+	<h1 class="logo fl"><a href="http://jyj.taiyuan.gov.cn/index.html" class="fix_bg">太原市教育局</a></h1>
+</div>  <div class="container">
+    <div class="clearfix">
+      <div class="w755 fl">
+        <div id="slideBox" class="slideBox01_ty">
+          <div class="bd">
+            <ul>
+              <li><a href="/jykx/20260317/30288142.html" target="_blank" title="全省教育系统新春第一会召开 深入落实“健康第一”教育理念 全面部署春季开学工作"><img src="/u/cms/site28/202603/17102955y2iq.jpg" /></a></li>
+              <li><a href="/jykx/20260123/30279651.html" target="_blank" title="市委教育工委召开2025年度市属学校（单位）党组织书记抓基层党建工作述职评议会"><img src="/u/cms/site28/202601/23150110rmxv.jpg" /></a></li>
+              <li><a href="/jykx/20251010/30260384.html" target="_blank" title="太原市教育局开展校园安全治本攻坚三年行动“实操能力”提升集中培训"><img src="/u/cms/site28/202510/10160455mvcw.png" /></a></li>
+              <li><a href="/jykx/20250421/30212727.html" target="_blank" title="第二十四届太原市青少年机器人竞赛暨太原市第十届“创新未来”中小学生机器人竞赛活动举办"><img src="/u/cms/site28/202504/22121551lj9h.jpg" /></a></li>
+              <li><a href="/jykx/20250220/30197234.html" target="_blank" title="市委教育工委召开2025年度全市教育系统党的建设暨全市教育工作会"><img src="/u/cms/site28/202502/20095915sa70.jpg" /></a></li>
+            </ul>
+          </div>
+          <div class="hd">
+            <ul>
+              <li class="on"><p><a href="/jykx/20260317/30288142.html" target="_blank" title="全省教育系统新春第一会召开 深入落实“健康第一”教育理念 全面部署春季开学工作">全省教育系统新春第一会召开 深入落实“健康...</a></p></li>
+              <li class="on"><p><a href="/jykx/20260123/30279651.html" target="_blank" title="市委教育工委召开2025年度市属学校（单位）党组织书记抓基层党建工作述职评议会">市委教育工委召开2025年度市属学校（单位）党...</a></p></li>
+              <li class="on"><p><a href="/jykx/20251010/30260384.html" target="_blank" title="太原市教育局开展校园安全治本攻坚三年行动“实操能力”提升集中培训">太原市教育局开展校园安全治本攻坚三年行动“...</a></p></li>
+              <li class="on"><p><a href="/jykx/20250421/30212727.html" target="_blank" title="第二十四届太原市青少年机器人竞赛暨太原市第十届“创新未来”中小学生机器人竞赛活动举办">第二十四届太原市青少年机器人竞赛暨太原市第...</a></p></li>
+              <li class="on"><p><a href="/jykx/20250220/30197234.html" target="_blank" title="市委教育工委召开2025年度全市教育系统党的建设暨全市教育工作会">市委教育工委召开2025年度全市教育系统党的建...</a></p></li>
+            </ul>
+          </div>
+        </div>
+        <script type="text/javascript">jQuery(".slideBox01_ty").slide({ mainCell: ".bd ul", effect: "fade", interTime: 4000, autoPlay: true });</script>
+      </div>
+      <div class="w315 fr">
+        <div class="boxTy01 gzdt_h">
+          <h2 class="clearfix"><span class="tit blue fl">通知公告</span><span class="more grey fr"><a href="/tzgg.html" target="_blank">更多>></a></span></h2>
+          <div class="boxTy01_con">
+            <div class="uproll01">
+              <div class="div1">
+                <ul class="listTy01 font14">
+                  <li><a href="/tzgg/20260325/30289726.html" target="_blank" title="太原市行政审批服务管理局关于开展2026年面向社会认定高级中学及中等职业学校教师资格工作的公告">太原市行政审批服务管理局关于开展2026年面向社会认定高级中学及...<span>&emsp;03-25</span></a></li>
+                  <li><a href="/tzgg/20260213/30284037.html" target="_blank" title="关于举办第二十五届太原市青少年机器人竞赛暨太原市第十一届“创新未来”中小学生机器人竞赛活动的通知">关于举办第二十五届太原市青少年机器人竞赛暨太原市第十一届“创...<span>&emsp;02-13</span></a></li>
+                  <li><a href="/tzgg/20260123/30279600.html" target="_blank" title="育英中学校星河湾校区建设项目群众意见征询调查公示">育英中学校星河湾校区建设项目群众意见征询调查公示<span>&emsp;01-23</span></a></li>
+                  <li><a href="/tzgg/20260113/30277160.html" target="_blank" title="设立太原卫生职业学院（暂定）重大事项社会影响调查公示">设立太原卫生职业学院（暂定）重大事项社会影响调查公示<span>&emsp;01-13</span></a></li>
+                  <li><a href="/tzgg/20260109/30276684.html" target="_blank" title="太原市教育局2025年度政府网站工作年度报表">太原市教育局2025年度政府网站工作年度报表<span>&emsp;01-09</span></a></li>
+                  <li><a href="/tzgg/20251224/30274690.html" target="_blank" title="太原市教育局治理欠薪投诉举报电话">太原市教育局治理欠薪投诉举报电话<span>&emsp;12-24</span></a></li>
+                  <li><a href="/tzgg/20251219/30273102.html" target="_blank" title="2025年度太原市教育市场“双随机、一公开”联合执法检查结果公示">2025年度太原市教育市场“双随机、一公开”联合执法检查结果公示<span>&emsp;12-19</span></a></li>
+                  <li><a href="/tzgg/20251208/30271010.html" target="_blank" title="太原市教育局法律顾问候选名单公示">太原市教育局法律顾问候选名单公示<span>&emsp;12-08</span></a></li>
+                  <li><a href="/tzgg/20250930/30259361.html" target="_blank" title="太原市教育局 太原市人力资源和社会保障局关于开展2025年度全市中小学高级教师和市直属中小学一级教师职称评审工作的通知">太原市教育局 太原市人力资源和社会保障局关于开展2025年度全市...<span>&emsp;09-30</span></a></li>
+                </ul>
+              </div>
+              <div class="div2">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--滚动图开始 -->
+
+    <div class="mgt15">
+      <div id="slideBox2" class="slideBox2">
+        <div class="hd">
+          <ul>
+            <li class=""></li>
+          </ul>
+        </div>
+        <div class="bd">
+          <ul>
+            <!--<li><a href="https://liuyan.www.gov.cn/2023wxzlsjh/index.htm"><img src="/r/cms/site28/default/images/2023wxzlsjh.jpg" /></a></li>-->
+            <li><a href="http://www.gov.cn/hudong/index.htm"><img src="/r/cms/site28/default/tysjyj/static/images/gwywls.jpg" /></a></li>
+
+
+          </ul>
+        </div>
+      </div>
+      <script
+        type="text/javascript">jQuery(".slideBox2").slide({ mainCell: ".bd ul", autoPlay: true, interTime: 2500 });</script>
+      <style>
+        .slideBox2 {
+          width: 100%;
+          height: 109px;
+          overflow: hidden;
+          position: relative;
+          border: 1px solid #ddd;
+        }
+
+        .slideBox2 .hd {
+          height: 15px;
+          overflow: hidden;
+          position: absolute;
+          right: 10px;
+          bottom: 10px;
+          z-index: 1;
+        }
+
+        .slideBox2 .hd ul {
+          overflow: hidden;
+          zoom: 1;
+          float: left;
+        }
+
+        .slideBox2 .hd ul li {
+          float: left;
+          margin-right: 5px;
+          width: 15px;
+          height: 15px;
+          line-height: 14px;
+          text-align: center;
+          background: #fff;
+          cursor: pointer;
+          border-radius: 7px;
+        }
+
+        .slideBox2 .hd ul li.on {
+          background: #f00;
+          color: #fff;
+        }
+
+        .slideBox2 .bd {
+          position: relative;
+          height: 100%;
+          z-index: 0;
+        }
+
+        .slideBox2 .bd img {
+          width: 100%;
+          height: 109px;
+        }
+      </style>
+    </div>
+
+    <!-- 滚动图结束 -->
+
+    <div class="clearfix mgt25">
+      <div class="w755 fl" style="border-top:#1b417d solid 2px;">
+        <div class="clearfix">
+          <div class="w335 fl">
+            <div class="boxTy02 mgt15 boxTy02_sty01">
+               <h3 class="clearfix">
+                <span class="tit font16 fl">教育快讯</span>
+                <span class="more grey font14 fr"><a href="/jykx.html" target="_blank">更多>></a></span>
+               </h3>
+              <div class="boxTy02_con">
+                <ul class="listTy02 font14 lh28">
+                  <li><span class="grey fr">03-27</span>
+                    <a href="/jykx/20260327/30290311.html" target="_blank" title="山西省2026中小学教师资格认定公告">
+山西省2026中小学教师资格认定公告                    </a>
+                  </li>
+                  <li><span class="grey fr">03-17</span>
+                    <a href="/jykx/20260317/30288142.html" target="_blank" title="全省教育系统新春第一会召开 深入落实“健康第一”教育理念 全面部署春季开学工作">
+全省教育系统新春第一会召开 深入...                    </a>
+                  </li>
+                  <li><span class="grey fr">03-10</span>
+                    <a href="/jykx/20260310/30286861.html" target="_blank" title="全市创建全国文明城市工作推进会召开林红玉讲话 范兆森主持 武晓花周计伟杨继承出席">
+全市创建全国文明城市工作推进会召...                    </a>
+                  </li>
+                  <li><span class="grey fr">01-23</span>
+                    <a href="/jykx/20260123/30279651.html" target="_blank" title="市委教育工委召开2025年度市属学校（单位）党组织书记抓基层党建工作述职评议会">
+市委教育工委召开2025年度市属学校...                    </a>
+                  </li>
+                  <li><span class="grey fr">01-16</span>
+                    <a href="/jykx/20260116/30277761.html" target="_blank" title="【重要会议】2026年全国教育工作会议召开">
+【重要会议】2026年全国教育工作会...                    </a>
+                  </li>
+                  <li><span class="grey fr">10-10</span>
+                    <a href="/jykx/20251010/30260384.html" target="_blank" title="太原市教育局开展校园安全治本攻坚三年行动“实操能力”提升集中培训">
+太原市教育局开展校园安全治本攻坚...                    </a>
+                  </li>
+                  <li><span class="grey fr">08-13</span>
+                    <a href="/jykx/20250813/30247210.html" target="_blank" title="范兆森在太原市第五中学校调研">
+范兆森在太原市第五中学校调研                    </a>
+                  </li>
+                  <li><span class="grey fr">04-21</span>
+                    <a href="/jykx/20250421/30212735.html" target="_blank" title="杏花岭区召开中小学校服采购专项检查工作部署会强化规范管理 筑牢安全防线">
+杏花岭区召开中小学校服采购专项检...                    </a>
+                  </li>
+                  <li><span class="grey fr">04-21</span>
+                    <a href="/jykx/20250421/30212727.html" target="_blank" title="第二十四届太原市青少年机器人竞赛暨太原市第十届“创新未来”中小学生机器人竞赛活动举办">
+第二十四届太原市青少年机器人竞赛...                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="boxTy02 mgt10">
+              <h3 class="clearfix"><span class="tit font16 fl">法定主动公开内容</span></h3>
+              <div class="boxTy02_con">
+                <p class="pTy_sty01 font14 lh25">
+
+                  <a href="/dwgk.html" title="单位概况">单位概况</a> <em>|</em>
+                  <a href="/jgsz.html" title="机构设置">机构设置</a> <em>|</em>
+                  <a href="/zcfg.html" title="政策法规">政策法规</a> <em>|</em>
+                  <a href="/cwxx.html" title="财务信息">财务信息</a><br />
+                  <a href="/sjzc.html" title=""双减"政策">"双减"政策</a>
+                  <em>|</em> <a href="/zrrqsmzqjyfwsx.html" title="自然人全生命周期教育服务事项">自然人全生命周期教育服务事项</a> 
+                </p>
+                <p class="pTy_sty02 white mgt10 clearfix">
+<a href="/zfxxgkgzndbg.html" target="_blank" title=" 政府信息公开工作年度报告">政府信息公开工作年度报告</a>
+                </p>
+              </div>
+            </div>
+
+          </div>
+          <div class="w378 fr">
+            <h2 class="h2_sty01 blue">公共服务<span class="more grey font14 fr" style="padding-top:6px;"><a href="/ggfw.html"  target="_blank">更多>></a></span></h2>
+            <div class="boxTy02_con">
+              <ul class="listTy02 font14 lh28" style="padding-top:10px;">
+
+                <li><span class="grey fr">03-27</span><a href="/ggxx/20260327/30290141.html" target="_blank" title="国调（太原）产业投资基金赋能大会举行 林红玉奚正平致辞 范兆森出席">国调（太原）产业投资基金赋能大会举...</a></li>
+                <li><span class="grey fr">03-25</span><a href="/ggxx/20260325/30289752.html" target="_blank" title="范兆森调研督导汾河生态治理工作">范兆森调研督导汾河生态治理工作</a></li>
+                <li><span class="grey fr">03-25</span><a href="/ggxx/20260325/30289751.html" target="_blank" title="林红玉主持召开市委审计委员会会议
+">林红玉主持召开市委审计委员会会议
+</a></li>
+                <li><span class="grey fr">03-24</span><a href="/ggxx/20260324/30289338.html" target="_blank" title="我市召开中央生态环境保护督察整改工作推进会 林红玉主持并讲话">我市召开中央生态环境保护督察整改工作...</a></li>
+                <li><span class="grey fr">03-19</span><a href="/ggxx/20260319/30288729.html" target="_blank" title="林红玉调研督导中央生态环境保护督察反馈问题整改工作">林红玉调研督导中央生态环境保护督察反...</a></li>
+                <li><span class="grey fr">03-18</span><a href="/ggxx/20260318/30288406.html" target="_blank" title="市委常委会召开会议 林红玉主持">市委常委会召开会议 林红玉主持</a></li>
+                <li><span class="grey fr">03-17</span><a href="/ggxx/20260317/30288129.html" target="_blank" title="市政府党组召开会议 范兆森主持">市政府党组召开会议 范兆森主持</a></li>
+                <li><span class="grey fr">03-17</span><a href="/ggxx/20260317/30288122.html" target="_blank" title="市委常委会召开扩大会议 林红玉主持">市委常委会召开扩大会议 林红玉主持</a></li>
+                <li><span class="grey fr">03-13</span><a href="/ggxx/20260313/30287639.html" target="_blank" title="林红玉与华为公司副总裁蒋旺成举行工作会谈">林红玉与华为公司副总裁蒋旺成举行工作...</a></li>
+                <li><span class="grey fr">03-13</span><a href="/ggxx/20260313/30287636.html" target="_blank" title="林红玉督导检查全市信访工作">林红玉督导检查全市信访工作</a></li>
+                <li><span class="grey fr">03-12</span><a href="/ggxx/20260312/30287422.html" target="_blank" title="林红玉调研产学研融合发展">林红玉调研产学研融合发展</a></li>
+                <li><span class="grey fr">03-11</span><a href="/ggxx/20260311/30287132.html" target="_blank" title="市委常委会召开会议 林红玉主持">市委常委会召开会议 林红玉主持</a></li>
+                <li><span class="grey fr">03-06</span><a href="/ggxx/20260306/30286319.html" target="_blank" title="市领导集中收看十四届全国人大四次会议开幕会">市领导集中收看十四届全国人大四次会议...</a></li>
+                <li><span class="grey fr">03-05</span><a href="/ggxx/20260305/30286122.html" target="_blank" title="全市创建全国文明城市工作推进会召开">全市创建全国文明城市工作推进会召开</a></li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w315 fr">
+        <div class="boxTy03" style="height:440px;">
+          <h2 class="blue">互动交流</h2>
+          <div class="boxTy02 boxTy02_sty01" style="margin-top:5px;">
+<style>
+
+.slidehd .hd{position:relative}
+.slidehd .hd a{position:absolute;width:8px;height:35px;cursor:pointer;top:30px}
+.slidehd .hd a.prev{left:-10px;background:url(/r/cms/site28/default/images/l_a01.png) no-repeat}
+.slidehd .hd a.next{right:-10px;background:url(/r/cms/site28/default/images/r_a01.png) no-repeat}
+.slidehd .bd{width:270px;overflow:hidden;margin:10px;padding-bottom:10px}
+.slidehd .bd .listTy03 li{width:80px;}
+</style>
+                    <div class="slidehd">
+                        <div class="hd">
+                            <a class="prev"></a>
+                            <a class="next"></a>
+                        </div>
+                        <div class="bd" style="margin: 0 auto 10px auto">
+                            <ul class="listTy03 clearfix" style="border-bottom: none;">
+                                <li class="sp01">
+                                    <a href="https://www.taiyuan.gov.cn/hdjl.html">写信须知</a>
+                                </li>
+                                <li class="sp02">
+                                    <a href="https://www.taiyuan.gov.cn/hdjl.html">来信办理
+                                        <br />规则</a>
+                                </li>
+                                <li class="sp03">
+                                    <a href="https://www.taiyuan.gov.cn/hdjl.html">我要写信</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+    <script type="text/javascript">
+        			      $(".slidehd").slide({mainCell: ".bd ul",effect: "leftLoop",vis: "3",scroll: 1,autoPlay: true,delaytime: 2000,interTime: 4000,})
+    </script>
+          </div>
+          <!-- 专题专栏 -->
+          <div class="boxTy02">
+            <h2 class="blue">专题专栏</h2>
+            <div class="boxTy02_con font14">
+              <p style="line-height:26px;">
+                            <a href="/bjEkt.html" title="保健e课堂">保健e课堂</a> | 
+                           <!--   <a href="/c/site28/qlxx.jhtml" title="清廉学校">清廉学校</a> |  -->
+                            <a href="/jyjjh.html" title="教育基金会">教育基金会</a> | 
+                            <a href="/xczx.html" title="乡村振兴">乡村振兴</a>  
+                            <a href="/wlaq.html" title="网络安全">网络安全</a>  
+
+              </p>
+            </div>
+            <p class="pTy_sty03"><a href="jxzy.html" target="_blank" title="教学应用平台"><img src="/uploadfiles/202005/25/2020052509302669611603.jpg" style="width:100%;margin-top:-10px;" /></a></p>
+          </div>
+          <!-- 专题专栏 -->
+        </div>
+      </div>
+    </div>
+    <div class="home21">
+      <div class="picScroll-left">
+        <div class="bd">
+          <ul>
+            <li><img src="/u/cms/site28/202306/08170154nulz.jpg" /></li>
+            </li>
+            <li><img src="/uploadfiles/202207/22/2022072210235747995068-thumbnail.jpg" /></li>
+            </li>
+            <li><img src="/uploadfiles/202009/09/2020090911154970420361.jpg" /></li>
+            </li>
+            <li><img src="/uploadfiles/202009/09/2020090910502354521601.jpg" /></li>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      jQuery(".leftLoop").slide({ mainCell: ".bd ul", effect: "leftLoop", vis: 5, scroll: 5, autoPlay: true });
+      $('.picScroll-left').slide({ mainCell: ".bd ul", effect: "leftLoop", vis: "auto", scroll: 1, autoPlay: true, delaytime: 2000, interTime: 3000 });
+    </script>
+    <style>
+      .foot_link {
+        margin-top: 15px;
+        margin-bottom: -15px;
+        background: #fff;
+        border-top: 1px solid #e3e3e3;
+        background: #f5f5f5
+      }
+
+      .foot_link dl {
+        width: 1090px;
+        margin: 0 auto;
+        padding: 10px 0;
+        line-height: 24px;
+        overflow: hidden;
+        zoom: 1
+      }
+
+      .foot_link dt {
+        float: left;
+        width: 100px;
+        text-align: right;
+        font-size: 18px
+      }
+
+      .foot_link dd {
+        float: right;
+        width: 96%;
+        word-wrap: break-word;
+        padding-bottom: 10px;
+      }
+
+      .foot_link dd a {
+        display: inline-block;
+        margin-left: 15px;
+        white-space: nowrap
+      }
+
+      .foot_link dd select {
+        margin-left: 15px
+      }
+
+      .foot_link dd a img {
+        width: 220px;
+        height: 80px;
+      }
+    </style>
+
+  </div>
+
+  </div>
+  <script type="text/javascript">
+    $(function () {
+
+window.onload = function() {  
+    setTimeout(function(){  
+      $(".uproll01").myScrollTop(50);
+      $(".uproll02").myScrollTop(50);
+    }, 2000);  
+};  
+
+
+    })
+  </script>
+<div id="foot" class="white">
+  <p>太原市教育局&nbsp;&nbsp;版权所有&emsp;&emsp;<a href="/wzdt.html">
+      网站地图</p>
+  <p>地址：山西省太原市杏花岭区新建路69号&nbsp;&nbsp;邮编：030082&nbsp;&nbsp;电话：0351-4227535</p>
+  <p><a href="https://beian.miit.gov.cn">晋ICP备05003854号</a>&emsp;&emsp;网站总访问量：<em id="pvTotal"></em>
+    <script src="/r/cms/site28/default/js/front.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+        $(function () {
+          Cms.siteFlow(""); 
+        });
+</script>
+  </p>
+  <p><span class="fix_bg"><img src="/r/cms/site28/default/tysjyj/static/images/jinghui.png" /></span><a target="_blank"
+      href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=14010002001529"
+      style="padding-left:10px;">&nbsp;&nbsp;晋公网安备 14010002001529号</a>&emsp;&emsp;网站标识码：1401000001</p>
+  <p><a href="http://bszs.conac.cn/sitename?method=show&id=31839CD491E2763FE053012819ACEBCA" class="fix_bg"><img
+        src="/r/cms/site28/default/tysjyj/static/images/red.png" /></a>
+    <span>
+      <script id="_jiucuo_" sitecode='1401000001' src="/r/cms/site28/default/tysjyj/static/js/jiucuo.js"></script>
+    </span>
+  </p>
+</div></body>
+
+</html>

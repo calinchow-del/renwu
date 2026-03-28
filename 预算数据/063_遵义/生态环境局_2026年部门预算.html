@@ -1,0 +1,1866 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>遵义市生态环境局</title>
+    <link rel="stylesheet" href="/images/index.css" />
+<!--网站标签-->
+<meta name="SiteName" content="遵义市生态环境局">
+<meta name="SiteDomain" content="http://zyepb.zunyi.gov.cn/">
+<meta name="SiteIDCode" content='5203000032'>
+<!--栏目标签-->
+<meta name="ColumnName" content="遵义市生态环境局首页">
+<meta name="ColumnKeywords" content="遵义市生态环境局首页">
+<meta name="ColumnDescription" content="公开遵义市生态环境局首页信息">
+<meta name="ColumnType" content="遵义市生态环境局首页">
+    <meta name="description" content="生态环境督察办公室。经市政府授权，对全市县（市、区）政府及相关部门环境保护法律法规、标准、政策、规划执行情况，“一岗双责”落实情况，以及环境质量责任落实情况进行监督检查">
+    <script src="/images/jquery-1.8.3.min.js"></script>
+<script src="/images/jquery.SuperSlide.2.1.1.js"></script>
+<script src="/images/show.js"></script>
+<script type="text/javascript" src="/tools/layui/layui.js"></script>
+<script type="text/javascript" src="/tools/js/layer/layer.js"></script>
+<script src="/images/JStools.js" type="text/javascript" charset="utf-8"></script>
+<link rel="icon" href="http://www.gov.cn/govweb/xhtml/favicon.ico" type="image/gif" />
+<script src="/material/images/2024/guolv_sqlzr.js" type="text/javascript" charset="utf-8"></script>
+<script>
+        // 设置为主页
+        function SetHome(obj,vrl){
+            try{
+                obj.style.behavior='url(#default#homepage)';obj.setHomePage(vrl);
+            }
+            catch(e){
+                if(window.netscape) {
+                    try {
+                        netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+                    }
+                    catch (e) {
+                        alert("此操作被浏览器拒绝！\n请在浏览器地址栏输入“about:config”并回车\n然后将 [signed.applets.codebase_principal_support]的值设置为'true',双击即可。");
+                    }
+                    var prefs = Components.classes['@mozilla.org/preferences-service;1'].getService(Components.interfaces.nsIPrefBranch);
+                    prefs.setCharPref('browser.startup.homepage',vrl);
+                }else{
+                    alert("您的浏览器不支持，请按照下面步骤操作：1.打开浏览器设置。2.点击设置网页。3.输入："+vrl+"点击确定。");
+                }
+            }
+        }
+        // 加入收藏 兼容360和IE6
+        function AddFavorite(sTitle,sURL)
+        {
+            try
+            {
+                window.external.addFavorite(sURL, sTitle);
+            }
+            catch (e)
+            {
+                try
+                {
+                    window.sidebar.addPanel(sTitle, sURL, "");
+                }
+                catch (e)
+                {
+                    alert("加入收藏失败，请使用Ctrl+D进行添加");
+                }
+            }
+        }
+
+    </script>
+
+<script type="text/javascript">
+	function getQueryString(name) {
+	    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)","i");
+	    var r = window.location.search.substr(1).match(reg);
+	    if (r!=null) return (r[2]); return null;
+	}
+</script>
+<script type="text/javascript">
+    function GetQueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return (r[2]); return null;
+    }
+</script>
+<script>
+		function getMyDate(timestamp) {
+            var date = new Date(timestamp);//时间戳为10位需*1000，时间戳为13位的话不需乘1000
+            Y = date.getFullYear() + '-';
+            M = (date.getMonth()+1 < 10 ? '0'+(date.getMonth()+1) : date.getMonth()+1) + '-';
+            D = date.getDate() + ' ';
+            h = date.getHours() + ':';
+            m = date.getMinutes() + ':';
+            s = getzf(date.getSeconds());
+            return Y+M+D;
+        }
+        function getzf(num){  
+          if(parseInt(num) < 10){ num = '0'+num; }
+          return num;  
+        }
+        function GetStatus(status){
+            if(status == "4"){
+                status = "待办理";
+            }else if(status == "5"){
+                status = "待审核";
+            }else if(status == "7"){
+                status = "已办结";
+            }else{
+                status = "办理中";
+            }
+            return status;
+        }
+	</script>
+
+ <script>
+        $(function(){
+            var Height = 40; //li的高度
+            var pTop = 0; // .lanrenzhijia 的paddding-top的值
+            $('.Left_Nav .li_nav').mouseover(function(){
+                $(this).addClass('on').siblings().removeClass('on');
+                var index=$('.li_nav').index(this);
+                var distance = index*(Height+1)+pTop+'px'; //如果你的li有个border-bottom为1px高度的话，这里需要加1
+                $('.Left_Nav .hover').stop().animate({top:distance},150); //默认动画时间为150毫秒，懒人们可根据需要修改
+            });
+        });
+                            function timetrans(date){
+                                var date = new Date(date);//如果date为10位不需要乘1000
+                                var Y = date.getFullYear() + '-';
+                                var M = (date.getMonth()+1 < 10 ? '0'+(date.getMonth()+1) : date.getMonth()+1) + '-';
+                                var D = (date.getDate() < 10 ? '0' + (date.getDate()) : date.getDate()) + ' ';
+                                var h = (date.getHours() < 10 ? '0' + date.getHours() : date.getHours()) + ':';
+                                var m = (date.getMinutes() <10 ? '0' + date.getMinutes() : date.getMinutes()) + ':';
+                                var s = (date.getSeconds() <10 ? '0' + date.getSeconds() : date.getSeconds());
+                                return Y+M+D+h+m+s;
+                            }
+    </script>
+
+
+<script type="text/javascript">
+        $(document).ready(function () {
+            for (var i = 0; i < document.links.length; i++) {
+                var url = document.links[i].href.toLowerCase();
+                if (url.indexOf("http://localhost") == -1 && url.indexOf("zyepb.zunyi.gov.cn") == -1 && url.indexOf("javascript:") == -1 && url != "#" && !document.links[i].onclick) {
+                    document.links[i].onclick = function () {
+                        return confirm("您访问的链接即将离开“遵义市生态环境局“，是否继续？")
+                    };
+
+                }
+            }
+        });
+    </script>
+
+<script type="text/javascript">
+	$(document).ready(function (){
+		var titleId = document.getElementById("ParentChid").value;//获取当前栏目的顶层父级栏目id
+		var navId = [123456,5236344,5236347,5236380,5236411,5236421,5236431];//各导航栏目id
+		//alert(title);
+		$(".nav li").each(function(index){
+			if(titleId==navId[index]){
+				$(".nav li").removeClass("on");
+				$(".nav li").eq(index).addClass("on");
+			}
+		});
+	});
+
+</script>
+<script type="text/javascript" src="//www.guizhou.gov.cn/material/ChangePageStyle.js"></script>
+</head>
+<style>
+#letterList{height:120px; overflow: hidden;}
+.bottom_link li{margin: 0 39px 0 65px;}
+
+  .yiguidang1 {
+        height: 78px;
+        width: 81px;
+        position: absolute;
+        background: url(/images/xin_ygd.png) no-repeat;
+        right: 0;
+        top: 0
+    }
+.sytt{
+    text-align: center;
+    font-size: 30px;
+    padding: 5px 0 19px;
+    margin:0 auto;
+}
+.sytt a{color: #494949;text-decoration: none;}
+</style>
+<body>
+
+<input id="Chid" value="" type="hidden" />
+<input id="ParentChid" value="123456" type="hidden" />
+<script type="text/javascript" src="/material/trsigi/js/sm2.js"></script>
+
+<script type="text/javascript">
+    function addWzaScriptToHeader(id) {
+        var script = document.createElement('script');
+        script.src = 'https://wza.gogbh.cn/wza/wza.min.js';
+        script.id = 'wzaScript';
+        script.setAttribute('data', 'de75d378ff92e3859c764207d1615694'); // 自定义属性
+
+        if (document.querySelector('script[id="wzaScript"]')) {
+            console.log('已经附加过');
+        } else {
+            document.head.appendChild(script);
+            script.onload = function() {
+                var button = document.querySelector(id);
+                if (button) {
+                    $(id).click();
+                }
+            };
+        }
+    }
+    $(function() {
+        $("#assist-open").click(function() {
+            addWzaScriptToHeader('#assist-open');
+        })
+        $("#bh_oldFixed").click(function() {
+            addWzaScriptToHeader('#bh_oldFixed');
+        })
+        var bhAria = JSON.parse(localStorage.getItem('bh-aria'));
+        var bh_useOldFixed = localStorage.getItem('bh_useOldFixed')
+        if (bhAria && bhAria.isShow) {
+            // 执行相应的操作
+            if (bh_useOldFixed == 'true') {
+                addWzaScriptToHeader('#bh_oldFixed');
+            } else {
+                addWzaScriptToHeader('#assist-open');
+            }
+        }
+    })
+</script>
+
+<!--头部开始-->
+<div class="header">
+    <div class="top">
+        <div class="w">
+            <div class="l_date">
+                <span style="position: relative; "></span>
+          	    	<span style="position: relative; ">
+          	    		<script>
+                            var date = new Date();
+                            var year = date.getFullYear();
+                            var month = date.getMonth()+1;
+                            var day = date.getDate();
+                            document.write(year+"年"+month+"月"+day+"日");
+                        </script>
+          	    	</span>
+          	    	<span style="position: relative; ">
+          	    		<script>
+                            var date = new Date();
+                            var weekDay = ["星期天", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
+                            var year = date.getFullYear();    var month = date.getMonth()+1;
+                            var day = date.getDate();    var week = weekDay[date.getDay()];
+                            document.write(week);
+                        </script>
+          	    	</span>
+          	    	<span class="tianqi" style="position: relative;">
+          <iframe width="450" scrolling="no" height="18" frameborder="0" allowtransparency="true" src="//i.tianqi.com/index.php?c=code&id=1&icon=1&py=zunyi&wind=1&num=1&site=12"></iframe>
+          	    	</span>
+            </div>
+            <div class="r_swsy">
+                <ul>
+                    <li><a href="javascript:void(0)" onclick="SetHome(this,window.location)">设为首页</a></li>
+                    <li>|</li>
+                    <li><a onclick="AddFavorite(window.location,document.title)" href="javascript:void(0)">加入收藏</a></li>
+                      <li>|</li>
+                    <li><a href="https://smrz.zwfw.guizhou.gov.cn/sso/login?utype=0&redirect=istrue&client_id=MBFSQUBNF&goto=http%3A//www.guizhou.gov.cn/personalhomepage/">个人中心</a></li>
+<div class="wza" id="assist-open"> | 适老化及无障碍浏览</div>
+                </ul>
+
+<style>.wza{float: right;  font-size: 14px;cursor: pointer;    margin-right: 10px;}</style>
+
+            </div>
+        </div>
+    </div>
+    <div class="logo">
+        <div class="w">
+            <div class="search">
+                <input id="keyword" name="keyword" type="text" placeholder="请输入关键字搜索" onfocus="return refocus();" onkeydown="EnterSub(event);" onblur="return reblur();" autocomplete="off" v-model="keyWord" @keypress="search($event)" />
+                <div class="button" id="s-btn" onclick="sub()"><i></i>搜索</div>
+            </div>
+        </div>
+    </div>
+    <div class="nav">
+        <div class="w">
+            <ul>
+                <li class="n1"><a href="/">首页</a></li>
+                <div class="line"></div>
+                <li class="n2"><a href="http://zyepb.zunyi.gov.cn/xwzx/">新闻中心</a></li>
+                <div class="line"></div>
+                <li class="n3"><a href="http://zyepb.zunyi.gov.cn/zwgk_500569/zfxxgk/">政务公开</a></li>
+                <div class="line"></div>
+                <li class="n4"><a href="http://zyepb.zunyi.gov.cn/ywgz/">业务工作</a></li>
+                <div class="line"></div>
+                <li class="n5"><a href="http://zyepb.zunyi.gov.cn/bsfw/">办事服务</a></li>
+                <div class="line"></div>
+                <li class="n6"><a href="http://zyepb.zunyi.gov.cn/hdjl/">互动交流</a></li>
+                <div class="line"></div>
+                <li class="n7"><a href="http://zyepb.zunyi.gov.cn/ztzl/">专题专栏</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    //改变顶部导航栏状态
+    jQuery(document).ready(function(){
+        jQuery(".header_nav  li").removeClass("active");
+        var str=location.pathname.substring(1,5);
+        //console.log(str);
+        if(str==""||str==null){
+            jQuery(".n1").addClass("active");
+        }else if(str=="xwzx"){
+            jQuery(".n2").addClass("active");
+        }else if(str=="zwgk"){
+            jQuery(".n3").addClass("active");
+        }else if(str=="ywgz"){
+            jQuery(".n4").addClass("active");
+        }else if(str=="bsfw"){
+            jQuery(".n5").addClass("active");
+        }else if(str=="hdjl"){
+            jQuery(".n6").addClass("active");
+        }else if(str=="ztzl"){
+            jQuery(".n7").addClass("active");
+        }
+
+    });
+
+</script>
+<script type="text/javascript">
+    function refocus() {
+        var getquery = document.getElementById("keyword");
+        getquery.value = "";
+        getquery.autocomplete = "off";
+        getquery.focus();
+    }
+    function reblur() {
+        var getquery = document.getElementById("keyword");
+        if (getquery.value == "") {
+            getquery.value = "请输入搜索关键字";
+        }
+    }
+    String.prototype.trim = function () {
+        return this.replace(/(^\s*)|(\s*$)/g, "");
+    }
+
+    function sub() {
+        //必需，先将文本转换为utf-8
+        document.charset = "utf-8";
+        var fixvalue = document.getElementById("keyword").value;
+        fixvalue = fixvalue.replace(/\~|\!|\*|\?|\^|\\|\(|\)|\[|\]|\+|\-|\:|\{|\}|\"/g, "");
+	var ffzf=sanitizeInput(fixvalue,"keyword");
+		if(ffzf){
+        if (fixvalue.trim() == "") {
+            document.getElementById("keyword").value = "";
+            alert("关键字不能为空！");
+            return false;
+        } else {
+            window.location.href = '/so/search.shtml?tenantId=406&tenantIds=&configTenantId=&dataTypeId=3946&sign=ac655363-288c-46be-e033-6b6447b6807d&searchWord=' + encodeURI(fixvalue); //传入参数
+        }
+}
+        return false;
+    }
+    //回车提交方法
+    function EnterSub() {
+        var len = arguments.length;
+        var event;
+        if (len == 1) {
+            event = arguments[0];
+        }
+        var evt = event ? event : (window.event ? window.event : null);
+        if (evt.keyCode == 13) {
+            //必需，先将文本转换为utf-8
+            document.charset = "utf-8";
+            var fixvalue = document.getElementById("keyword").value;
+            fixvalue = fixvalue.replace(/\~|\!|\*|\?|\^|\\|\(|\)|\[|\]|\+|\-|\:|\{|\}|\"/g, "");
+var ffzf=sanitizeInput(fixvalue,"keyword");
+		if(ffzf){
+            if (fixvalue.trim() == "") {
+                document.getElementById("keyword").value = "";
+                alert("关键字不能为空！");
+                return false;
+            } else {
+                window.location.href = '/so/search.shtml?tenantId=406&tenantIds=&configTenantId=&dataTypeId=3946&sign=ac655363-288c-46be-e033-6b6447b6807d&searchWord=' + encodeURI(fixvalue); //传入参数
+            }
+}
+            return false;
+        }
+    }
+</script>
+
+    <div id="img1" style="position: absolute; z-index: 1000;">
+     <!--判断是否外部链接-->
+		
+    	   	
+			 <a TARGET="_blank" title=""  href="https://www.zunyi.gov.cn/ztzl/2026nqzsbbzzfhfbwtxszj/index.html">
+			  <!--获取图片-->           
+                    
+                    	
+                    <img src="http://zyepb.zunyi.gov.cn/syqt/piao/202603/W020260309414938732785.jpg" width="350" />				
+                    
+                    
+                </a>
+		    
+		  
+		  
+		  	
+		          
+        <div style="text-align: right; cursor: pointer; line-height: 30px;" id="closepiaofu">
+            <a onclick="javascript:turnoff('img1')">关闭</a>
+        </div>
+    </div>
+ 
+
+    <div id="img2" style="position: absolute; z-index: 1000;">
+     <!--判断是否外部链接-->
+		
+    	   	
+			 <a TARGET="_blank" title=""  href="https://www.guizhou.gov.cn/zmhd/znwz/">
+			  <!--获取图片-->           
+                    
+                    	
+                    <img src="http://zyepb.zunyi.gov.cn/syqt/piao/202503/W020250318546036993934.png" width="350" />				
+                    
+                    
+                </a>
+		    
+		  
+		  
+		  	
+		          
+        <div style="text-align: right; cursor: pointer; line-height: 30px;" id="closepiaofu">
+            <a onclick="javascript:turnoff('img2')">关闭</a>
+        </div>
+    </div>
+ 
+
+
+	
+    <script type="text/javascript" src="/images/floatadv.js"></script>
+  <script type="text/javascript">
+	var j=0;
+	
+		j++;
+	
+		j++;
+	 
+	for (var i=1;i<=j;i++)
+	{
+		var ad = new AdMove("img"+i, true);
+		ad.Run();
+	}
+</script>
+    <script type="text/javascript">
+        function turnoff(obj) {
+            document.getElementById(obj).style.display = "none";
+        }
+    </script>
+
+<!--主体部分开始-->
+<div class="main_body w">
+    <div class='sytt'>
+                                
+         	                               <a target="_blank" href="https://www.zunyi.gov.cn/xwdt/qgyw/202603/t20260326_89910797.html" title="总书记两会后首次考察指引“十五五”开局起步">
+        	 	  	 	             总书记两会后首次考察指引“十五五”开局起步
+       	 	                                </a>
+ 	                       
+     </div>
+     <div> <a href="http://zyepb.zunyi.gov.cn/ztzl/srxxgc/index.html"><img src="./images/srxxgc.png" style="width: 100%;" /></a></div>
+    <div class="top_part">
+        <!--左边焦点图-->
+        <div class="swfbf">
+            <div class="focusPic fl">
+    <div class="slidebox fl">
+        <ul>
+            
+                <li>
+                    
+                        
+                    
+                    
+                        
+                            <a TARGET="_blank" href="http://zyepb.zunyi.gov.cn/xwzx/hjyw/202603/t20260318_89885671.html" title="【生态资讯】实战大练兵表现突出｜播州环保铁军获生态环境部通报表扬">
+                        
+                    
+                    <!--获取图片-->
+                    <img src="http://zyepb.zunyi.gov.cn/xwzx/hjyw/202603/W020260318599992999480.jpg"/>
+                    </a>
+                </li>
+            
+                <li>
+                    
+                        
+                    
+                    
+                        
+                            <a TARGET="_blank" href="http://zyepb.zunyi.gov.cn/xwzx/hjyw/202603/t20260312_89653946.html" title="2026年全市生态环境保护工作会议召开">
+                        
+                    
+                    <!--获取图片-->
+                    <img src="http://zyepb.zunyi.gov.cn/xwzx/hjyw/202603/W020260312579012145282_ORIGIN.jpg"/>
+                    </a>
+                </li>
+            
+                <li>
+                    
+                        
+                    
+                    
+                        
+                            <a TARGET="_blank" href="https://www.guizhou.gov.cn/ztzl/2026nqzsbbzzfhfbwtxszj/" title="关于公开征集群众身边不正之风和腐败问题线索的公告">
+                        
+                    
+                    <!--获取图片-->
+                    <img src="http://zyepb.zunyi.gov.cn/xwzx/hjyw/202603/W020260310368992428509_ORIGIN.jpg"/>
+                    </a>
+                </li>
+            
+                <li>
+                    
+                        
+                    
+                    
+                        
+                            <a TARGET="_blank" href="http://zyepb.zunyi.gov.cn/xwzx/hjyw/202602/t20260225_89574149.html" title="码上举报 马上行动">
+                        
+                    
+                    <!--获取图片-->
+                    <img src="http://zyepb.zunyi.gov.cn/xwzx/hjyw/202602/W020260309363647723372_ORIGIN.png"/>
+                    </a>
+                </li>
+            
+                <li>
+                    
+                        
+                    
+                    
+                        
+                            <a TARGET="_blank" href="http://zyepb.zunyi.gov.cn/xwzx/hjyw/202601/t20260122_89322151.html" title="全国首批美丽乡村先行区，遵义湄潭入选！">
+                        
+                    
+                    <!--获取图片-->
+                    <img src="http://zyepb.zunyi.gov.cn/xwzx/hjyw/202601/W020260122357507155716_ORIGIN.jpg"/>
+                    </a>
+                </li>
+            
+        </ul>
+    </div>
+    <div class="control_btn">
+        <div class="prev" style="opacity: 0.5;"></div>
+        <div class="next" style="opacity: 0.5;"></div>
+    </div>
+    <div class="focusBox">
+        <ul>
+            
+                <li style="background: rgb(255, 255, 255);">
+                    <span>1</span>
+                </li>
+            
+                <li style="background: rgb(255, 255, 255);">
+                    <span>2</span>
+                </li>
+            
+                <li style="background: rgb(255, 255, 255);">
+                    <span>3</span>
+                </li>
+            
+                <li style="background: rgb(255, 255, 255);">
+                    <span>4</span>
+                </li>
+            
+                <li style="background: rgb(255, 255, 255);">
+                    <span>5</span>
+                </li>
+            
+        </ul>
+    </div>
+        <div class="slideNum">
+       
+            <span>2</span>/<i>5</i>
+
+        </div>
+    <div class="slideTitle">
+          <a href=""></a>
+    </div>
+</div>
+        </div>
+        <!--右边新闻-->
+        <div class="r_news">
+            <div class="hd">
+                <ul>
+                    <li><a href="http://zyepb.zunyi.gov.cn/xwzx/szyw/">全国要闻</a></li>
+                    <li><a href="http://zyepb.zunyi.gov.cn/xwzx/hjyw/">环境要闻</a></li>
+                    <li><a href="http://zyepb.zunyi.gov.cn/xwzx/qxdt/">区县动态</a></li>
+                    <li><a href="http://zyepb.zunyi.gov.cn/xwzx/tzgg/">通知公告</a></li>
+                </ul>
+            </div>
+            <div class="bd">
+               <div class="slide">
+                    
+<div class="one_message">
+    <p class="bt">
+        
+            
+        
+        
+            
+                <a TARGET="_blank" title="李强主持召开国务院常务会议"  href="http://zyepb.zunyi.gov.cn/xwzx/szyw/202603/t20260327_89919551.html">
+            
+        
+        李强主持召开国务院常务会议
+        </a>
+    </p>
+
+    <div class="nr">
+        李强主持召开国务院常务会议
+　　学习贯彻习近平总书记在深入推进雄安新区高质量建设和发展座谈会上的重要讲话精神
+　　听取当前我国服务业发...
+        
+            
+        
+        
+            
+                <a TARGET="_blank" title="李强主持召开国务院常务会议"  href="http://zyepb.zunyi.gov.cn/xwzx/szyw/202603/t20260327_89919551.html">
+            
+        
+        &gt;&gt;详细查看
+        </a>
+        <span>2026-03-27</span>
+    </div>
+</div>
+
+<div class="list">
+    <ul>
+          
+        <li>
+            
+                
+            
+            
+                
+                    <a TARGET="_blank" title="中共中央政治局召开会议 审议《中国共产党地方委员会工作条例》 中共中央总书记习近平主持会议"  href="http://zyepb.zunyi.gov.cn/xwzx/szyw/202603/t20260327_89918132.html">
+                
+            
+            中共中央政治局召开会议 审议《中国共产党地方委员会工作条例》 中共中央总书记习近平主持会议
+            </a>
+            <span>2026-03-27</span>
+        </li>
+          
+        <li>
+            
+                
+            
+            
+                
+                    <a TARGET="_blank" title="总书记两会后首次考察指引“十五五”开局起步"  href="http://zyepb.zunyi.gov.cn/xwzx/szyw/202603/t20260326_89910797.html">
+                
+            
+            总书记两会后首次考察指引“十五五”开局起步
+            </a>
+            <span>2026-03-26</span>
+        </li>
+          
+        <li>
+            
+                
+            
+            
+                
+                    <a TARGET="_blank" title=""对雄安的发展前景，我们充满信心"——习近平总书记赴雄安新区考察并主持召开深入推进雄安新区高质量建设和发展座谈会纪实"  href="http://zyepb.zunyi.gov.cn/xwzx/szyw/202603/t20260325_89904091.html">
+                
+            
+            "对雄安的发展前景，我们充满信心"——习近平总书记赴雄安新区考察并主持召开深入推进雄安新区高质量建设和发展座谈会纪实
+            </a>
+            <span>2026-03-25</span>
+        </li>
+          
+        <li>
+            
+                
+            
+            
+                
+                    <a TARGET="_blank" title="习近平：牢牢把握雄安新区功能定位 努力建设新时代创新高地和推动高质量发展样板"  href="http://zyepb.zunyi.gov.cn/xwzx/szyw/202603/t20260323_89899686.html">
+                
+            
+            习近平：牢牢把握雄安新区功能定位 努力建设新时代创新高地和推动高质量发展样板
+            </a>
+            <span>2026-03-23</span>
+        </li>
+   
+    </ul>
+</div>
+                </div>
+                <div class="slide">
+                    
+<div class="one_message">
+    <p class="bt">
+        
+            
+        
+        
+            
+                <a TARGET="_blank" title="【生态资讯】实战大练兵表现突出｜播州环保铁军获生态环境部通报表扬"  href="http://zyepb.zunyi.gov.cn/xwzx/hjyw/202603/t20260318_89885671.html">
+            
+        
+        【生态资讯】实战大练兵表现突出｜播州环保铁军获生态环境部通报表扬
+        </a>
+    </p>
+
+    <div class="nr">
+        
+　　近日，生态环境部印发《关于表扬2025年生态环境保护执法实战大练兵表现突出集体和个人的函》，对全国表现突出的省级、市级、县级集体及...
+        
+            
+        
+        
+            
+                <a TARGET="_blank" title="【生态资讯】实战大练兵表现突出｜播州环保铁军获生态环境部通报表扬"  href="http://zyepb.zunyi.gov.cn/xwzx/hjyw/202603/t20260318_89885671.html">
+            
+        
+        &gt;&gt;详细查看
+        </a>
+        <span>2026-03-18</span>
+    </div>
+</div>
+
+<div class="list">
+    <ul>
+          
+        <li>
+            
+                
+            
+            
+                
+                    <a TARGET="_blank" title="2026年全市生态环境保护工作会议召开"  href="http://zyepb.zunyi.gov.cn/xwzx/hjyw/202603/t20260312_89653946.html">
+                
+            
+            2026年全市生态环境保护工作会议召开
+            </a>
+            <span>2026-03-12</span>
+        </li>
+          
+        <li>
+            
+                
+                    <a TARGET="_blank" title="关于公开征集群众身边不正之风和腐败问题线索的公告" href="https://www.guizhou.gov.cn/ztzl/2026nqzsbbzzfhfbwtxszj/">
+                
+            
+            
+                
+            
+            关于公开征集群众身边不正之风和腐败问题线索的公告
+            </a>
+            <span>2026-03-10</span>
+        </li>
+          
+        <li>
+            
+                
+            
+            
+                
+                    <a TARGET="_blank" title="码上举报 马上行动"  href="http://zyepb.zunyi.gov.cn/xwzx/hjyw/202602/t20260225_89574149.html">
+                
+            
+            码上举报 马上行动
+            </a>
+            <span>2026-02-25</span>
+        </li>
+          
+        <li>
+            
+                
+            
+            
+                
+                    <a TARGET="_blank" title="一图读懂丨环境空气质量标准（GB 3095—2026）"  href="http://zyepb.zunyi.gov.cn/xwzx/hjyw/202602/t20260225_89573125.html">
+                
+            
+            一图读懂丨环境空气质量标准（GB 3095—2026）
+            </a>
+            <span>2026-02-25</span>
+        </li>
+   
+    </ul>
+</div>
+                </div>
+                   <div class="slide">
+                    
+<div class="one_message">
+    <p class="bt">
+        
+            
+        
+        
+            
+                <a TARGET="_blank" title="赤水分局紧扣五大要求，系统推进“十五五”生态环境保护规划编制"  href="http://zyepb.zunyi.gov.cn/xwzx/qxdt/202603/t20260326_89909510.html">
+            
+        
+        赤水分局紧扣五大要求，系统推进“十五五”生态环境保护规划编制
+        </a>
+    </p>
+
+    <div class="nr">
+        为科学谋划未来五年赤水市生态环境保护工作，切实筑牢区域生态安全屏障，赤水分局严格对标上级部署要求，紧紧围绕市局党委提出的“定位要高、...
+        
+            
+        
+        
+            
+                <a TARGET="_blank" title="赤水分局紧扣五大要求，系统推进“十五五”生态环境保护规划编制"  href="http://zyepb.zunyi.gov.cn/xwzx/qxdt/202603/t20260326_89909510.html">
+            
+        
+        &gt;&gt;详细查看
+        </a>
+        <span>2026-03-26</span>
+    </div>
+</div>
+
+<div class="list">
+    <ul>
+          
+        <li>
+            
+                
+            
+            
+                
+                    <a TARGET="_blank" title="汇川区召开重点企业环境保护工作培训会"  href="http://zyepb.zunyi.gov.cn/xwzx/qxdt/202603/t20260318_89883816.html">
+                
+            
+            汇川区召开重点企业环境保护工作培训会
+            </a>
+            <span>2026-03-18</span>
+        </li>
+          
+        <li>
+            
+                
+            
+            
+                
+                    <a TARGET="_blank" title="凤冈分局参与“3·15”国际消费者权益日宣传"  href="http://zyepb.zunyi.gov.cn/xwzx/qxdt/202603/t20260312_89652996.html">
+                
+            
+            凤冈分局参与“3·15”国际消费者权益日宣传
+            </a>
+            <span>2026-03-12</span>
+        </li>
+          
+        <li>
+            
+                
+            
+            
+                
+                    <a TARGET="_blank" title="务川分局开展“三八”国际劳动妇女节系列活动"  href="http://zyepb.zunyi.gov.cn/xwzx/qxdt/202603/t20260307_89613834.html">
+                
+            
+            务川分局开展“三八”国际劳动妇女节系列活动
+            </a>
+            <span>2026-03-07</span>
+        </li>
+          
+        <li>
+            
+                
+            
+            
+                
+                    <a TARGET="_blank" title="新蒲分局开展“学雷锋·庆三八” 主题党日活动"  href="http://zyepb.zunyi.gov.cn/xwzx/qxdt/202603/t20260306_89611387.html">
+                
+            
+            新蒲分局开展“学雷锋·庆三八” 主题党日活动
+            </a>
+            <span>2026-03-06</span>
+        </li>
+   
+    </ul>
+</div>
+                </div> 
+                <div class="slide">
+                    
+<div class="one_message">
+    <p class="bt">
+        
+            
+        
+        
+            
+                <a TARGET="_blank" title="遵义市2026年企业环境信息依法披露名单"  href="http://zyepb.zunyi.gov.cn/xwzx/tzgg/202603/t20260325_89905943.html">
+            
+        
+        遵义市2026年企业环境信息依法披露名单
+        </a>
+    </p>
+
+    <div class="nr">
+        按照中华人民共和国生态环境部、省生态环境厅工作安排部署，为贯彻落实《企业环境信息依法披露管理办法》（部令第24号）要求，依法推动企业披...
+        
+            
+        
+        
+            
+                <a TARGET="_blank" title="遵义市2026年企业环境信息依法披露名单"  href="http://zyepb.zunyi.gov.cn/xwzx/tzgg/202603/t20260325_89905943.html">
+            
+        
+        &gt;&gt;详细查看
+        </a>
+        <span>2026-03-25</span>
+    </div>
+</div>
+
+<div class="list">
+    <ul>
+          
+        <li>
+            
+                
+            
+            
+                
+                    <a TARGET="_blank" title="遵义市生态环境局关于印发遵义市2026年环境监管重点单位名录的通知"  href="http://zyepb.zunyi.gov.cn/xwzx/tzgg/202603/t20260325_89905898.html">
+                
+            
+            遵义市生态环境局关于印发遵义市2026年环境监管重点单位名录的通知
+            </a>
+            <span>2026-03-25</span>
+        </li>
+          
+        <li>
+            
+                
+            
+            
+                
+                    <a TARGET="_blank" title="遵义市2026年正面清单企业名单"  href="http://zyepb.zunyi.gov.cn/xwzx/tzgg/202603/t20260324_89900550.html">
+                
+            
+            遵义市2026年正面清单企业名单
+            </a>
+            <span>2026-03-24</span>
+        </li>
+          
+        <li>
+            
+                
+            
+            
+                
+                    <a TARGET="_blank" title="遵义市生态环境局2026年2月双随机执法台账"  href="http://zyepb.zunyi.gov.cn/xwzx/tzgg/202603/t20260319_89888979.html">
+                
+            
+            遵义市生态环境局2026年2月双随机执法台账
+            </a>
+            <span>2026-03-19</span>
+        </li>
+          
+        <li>
+            
+                
+            
+            
+                
+                    <a TARGET="_blank" title="关于2025年度企业环境信息依法披露名单部分企业信息变更的公示"  href="http://zyepb.zunyi.gov.cn/xwzx/tzgg/202603/t20260316_89877477.html">
+                
+            
+            关于2025年度企业环境信息依法披露名单部分企业信息变更的公示
+            </a>
+            <span>2026-03-16</span>
+        </li>
+   
+    </ul>
+</div>
+                </div>
+            </div>
+            <div class="gwyxx">
+                <ul>
+                    <li class="b1"><a href="http://www.gov.cn/pushinfo/v150203/" target="_blank"><i></i>国务院信息</a></li>
+                    <li class="b2"><a href="http://www.gov.cn/zhengce/index.htm" target="_blank"><i></i>国务院文件</a></li>
+                    <li class="b3"><a href="http://www.guizhou.gov.cn/zwgk/zcfg/szfwj_8191/szfl_8192/index.html" target="_blank"><i></i>省政府文件</a></li>
+                </ul>
+            </div>
+        </div>
+        <script type="text/javascript">
+            jQuery(".r_news").slide({titCell: ".hd li", mainCell: ".bd", effect: "fold"});
+        </script>
+    </div>
+
+    <!--专题专栏-->
+    <div class="special_column">
+        <div class="hd">
+            <a href="http://zyepb.zunyi.gov.cn/ztzl/"><img src="/images/ztzl_bg.png" alt="" /></a>
+        </div>
+        <div class="bd">
+            <ul>
+                
+    <li style="position:relative">
+        
+            
+                <a TARGET="_blank" href="https://zyepb.zunyi.gov.cn/ztzl/2023gjwlaqxcz/" title="2024国家网络安全宣传周">
+            
+        
+        
+            
+        
+        <!--获取图片-->
+        <img src="http://zyepb.zunyi.gov.cn/ztzl/202409/W020240904395743904943.jpg"/>
+       <span class="85541612">
+			<script>
+				var isok = '否'
+				var time1 = '归档时间：2024年09月25日'
+                                 var docid= 85541612
+				if (isok == "否") {
+					$('.' + docid).html(''+ time1 +'<span class="yiguidang1"></span>')
+                                        $('.'+docid).css({ 'width': '100%' ,'background':'rgba(0, 0, 0, .5)','position': 'absolute','left': '0','font-size': '20px','text-align': 'center','color': 'white'})
+
+				}
+			</script>
+		</span>
+        </a>
+    </li>   
+
+    <li style="position:relative">
+        
+            
+                <a TARGET="_blank" href="/ztzl/2023ngzssthjbhdc/" title="2023年贵州省生态环境保护督察">
+            
+        
+        
+            
+        
+        <!--获取图片-->
+        <img src="http://zyepb.zunyi.gov.cn/ztzl/202309/W020230915539701911922.jpg"/>
+       <span class="82414460">
+			<script>
+				var isok = '否'
+				var time1 = '归档时间：2023年11月01日'
+                                 var docid= 82414460
+				if (isok == "否") {
+					$('.' + docid).html(''+ time1 +'<span class="yiguidang1"></span>')
+                                        $('.'+docid).css({ 'width': '100%' ,'background':'rgba(0, 0, 0, .5)','position': 'absolute','left': '0','font-size': '20px','text-align': 'center','color': 'white'})
+
+				}
+			</script>
+		</span>
+        </a>
+    </li>   
+
+    <li style="position:relative">
+        
+            
+                <a TARGET="_blank" href="https://www.gov.cn/zhengce/zczhjd/" title="重要政策举措及实施效果">
+            
+        
+        
+            
+        
+        <!--获取图片-->
+        <img src="http://zyepb.zunyi.gov.cn/ztzl/202308/W020230803328073843719.jpg"/>
+       <span class="81445350">
+			<script>
+				var isok = '是'
+				var time1 = ''
+                                 var docid= 81445350
+				if (isok == "否") {
+					$('.' + docid).html(''+ time1 +'<span class="yiguidang1"></span>')
+                                        $('.'+docid).css({ 'width': '100%' ,'background':'rgba(0, 0, 0, .5)','position': 'absolute','left': '0','font-size': '20px','text-align': 'center','color': 'white'})
+
+				}
+			</script>
+		</span>
+        </a>
+    </li>   
+
+    <li style="position:relative">
+        
+            
+                <a TARGET="_blank" href="http://zyepb.zunyi.gov.cn/ztzl/rhpwkzzgz/index.html" title="入河排污口整治工作">
+            
+        
+        
+            
+        
+        <!--获取图片-->
+        <img src="http://zyepb.zunyi.gov.cn/ztzl/202305/W020230504386401531236.png"/>
+       <span class="79508681">
+			<script>
+				var isok = '否'
+				var time1 = '归档时间【2025年08月21日】'
+                                 var docid= 79508681
+				if (isok == "否") {
+					$('.' + docid).html(''+ time1 +'<span class="yiguidang1"></span>')
+                                        $('.'+docid).css({ 'width': '100%' ,'background':'rgba(0, 0, 0, .5)','position': 'absolute','left': '0','font-size': '20px','text-align': 'center','color': 'white'})
+
+				}
+			</script>
+		</span>
+        </a>
+    </li>   
+
+    <li style="position:relative">
+        
+            
+                <a TARGET="_blank" href="http://www.gov.cn/zhuanti/zggcddescqgdbdh/index.htm" title="中国共产党第二十次全国代表大会">
+            
+        
+        
+            
+        
+        <!--获取图片-->
+        <img src="http://zyepb.zunyi.gov.cn/ztzl/202210/W020221015752045097971.jpg"/>
+       <span class="76746841">
+			<script>
+				var isok = '是'
+				var time1 = ''
+                                 var docid= 76746841
+				if (isok == "否") {
+					$('.' + docid).html(''+ time1 +'<span class="yiguidang1"></span>')
+                                        $('.'+docid).css({ 'width': '100%' ,'background':'rgba(0, 0, 0, .5)','position': 'absolute','left': '0','font-size': '20px','text-align': 'center','color': 'white'})
+
+				}
+			</script>
+		</span>
+        </a>
+    </li>   
+
+    <li style="position:relative">
+        
+            
+                <a TARGET="_blank" href="http://www.guizhou.gov.cn/zwgk/yqfkzccs/sjzccs/index.html" title="贵州省疫情防控政策措施">
+            
+        
+        
+            
+        
+        <!--获取图片-->
+        <img src="http://zyepb.zunyi.gov.cn/ztzl/202108/P020210826372282468007.png"/>
+       <span class="69773766">
+			<script>
+				var isok = '否'
+				var time1 = '归档时间：2023年01月16日'
+                                 var docid= 69773766
+				if (isok == "否") {
+					$('.' + docid).html(''+ time1 +'<span class="yiguidang1"></span>')
+                                        $('.'+docid).css({ 'width': '100%' ,'background':'rgba(0, 0, 0, .5)','position': 'absolute','left': '0','font-size': '20px','text-align': 'center','color': 'white'})
+
+				}
+			</script>
+		</span>
+        </a>
+    </li>   
+
+    <li style="position:relative">
+        
+            
+                <a TARGET="_blank" href="http://zyepb.zunyi.gov.cn/ztzl/dfzw/index.html" title="珍爱生命拒绝毒品">
+            
+        
+        
+            
+        
+        <!--获取图片-->
+        <img src="http://zyepb.zunyi.gov.cn/ztzl/202305/W020230517547735882284.png"/>
+       <span class="79775940">
+			<script>
+				var isok = '是'
+				var time1 = ''
+                                 var docid= 79775940
+				if (isok == "否") {
+					$('.' + docid).html(''+ time1 +'<span class="yiguidang1"></span>')
+                                        $('.'+docid).css({ 'width': '100%' ,'background':'rgba(0, 0, 0, .5)','position': 'absolute','left': '0','font-size': '20px','text-align': 'center','color': 'white'})
+
+				}
+			</script>
+		</span>
+        </a>
+    </li>   
+
+            </ul>
+        </div>
+    </div>
+    <script type="text/javascript">jQuery(".special_column").slide({mainCell: ".bd ul",autoPlay: true,effect: "leftMarquee",vis: 4,interTime: 50,trigger: "click"});</script>
+
+    <!--政务公开-->
+    <div class="government_affairs">
+        <div class="affairs_hd">
+            <a href="http://zyepb.zunyi.gov.cn/zwgk_500569/"><i></i>政务公开</a>
+        </div>
+        <div class="affairs_bd">
+            <div class="affairs_l_bd">
+                <!--政策法规、政策解读-->
+                <div class="regulations">
+                    <div class="hd" style="width: 739px;">
+                        <ul>
+                            <li>
+                                <a href="http://zyepb.zunyi.gov.cn/zwgk_500569/zfxxgk/fdzdgknr/zcfg/zcfg_5236360/">政策法规</a>
+                                <div class="more"><a href="http://zyepb.zunyi.gov.cn/zwgk_500569/zfxxgk/fdzdgknr/zcfg/zcfg_5236360/">更多</a></div>
+                            </li>
+                            <li>
+                                <!--<a href="http://zyepb.zunyi.gov.cn/zwgk_500569/zfxxgk/fdzdgknr/zcfg/zcjd/">政策解读</a>
+                                <div class="more"><a href="http://zyepb.zunyi.gov.cn/zwgk_500569/zfxxgk/fdzdgknr/zcfg/zcjd/">更多</a></div>
+                            </li>-->
+                        </ul>
+                    </div>
+                    <div class="bd">
+                        <div class="zcfg_list">
+                            <div class="wjjs">
+                                <span>文件检索：</span>
+                                <input id="wjk" name="wjk" class="input" type="text" value="" placeholder="请输入检索内容" />
+                                <div class="button" onclick="subwjk();">搜索</div> 
+                                    <script type="text/javascript">function subwjk() {
+                                //必需，先将文本转换为utf-8
+                                document.charset = "utf-8";
+                                var fixvalue = document.getElementById("wjk").value;
+                                fixvalue = fixvalue.replace(/\~|\!|\*|\?|\^|\\|\(|\)|\[|\]|\+|\-|\:|\{|\}|\"/g, "");
+              	var ffzf=sanitizeInput(fixvalue,"wjk");
+		if(ffzf){
+                                if(fixvalue.trim() == "") {
+                                    document.getElementById("wjk").value = "";
+                                    alert("关键字不能为空！");
+                                    return false;
+                                } else {
+                                    window.open('/zwgk_500569/search.html?title=' + encodeURI($.trim(fixvalue))); //传入参数
+                                }
+}
+                                return false;
+                            }
+                            </script>
+                            </div>
+                            <ul style="width: 739px;">
+                               
+        <li>
+            
+                
+            
+            
+                
+                    <a TARGET="_blank" title="生态环境监测条例（中华人民共和国国务院令 第820号）"  href="http://zyepb.zunyi.gov.cn/zwgk_500569/zfxxgk/fdzdgknr/zcfg/zcfg_5236360/202512/t20251230_89104402.html">
+                
+            
+            生态环境监测条例（中华人民共和国国务院令 第820号）
+            </a>
+            <span>2025-12-30</span>
+        </li>
+   
+        <li>
+            
+                
+            
+            
+                
+                    <a TARGET="_blank" title="排污许可管理办法"  href="http://zyepb.zunyi.gov.cn/zwgk_500569/zfxxgk/fdzdgknr/zcfg/zcfg_5236360/202509/t20250928_88660810.html">
+                
+            
+            排污许可管理办法
+            </a>
+            <span>2025-09-28</span>
+        </li>
+   
+        <li>
+            
+                
+            
+            
+                
+                    <a TARGET="_blank" title="中共中央 国务院印发《生态环境保护督察工作条例》"  href="http://zyepb.zunyi.gov.cn/zwgk_500569/zfxxgk/fdzdgknr/zcfg/zcfg_5236360/202509/t20250928_88660341.html">
+                
+            
+            中共中央 国务院印发《生态环境保护督察工作条例》
+            </a>
+            <span>2025-09-28</span>
+        </li>
+   
+        <li>
+            
+                
+            
+            
+                
+                    <a TARGET="_blank" title="中华人民共和国水污染防治法"  href="http://zyepb.zunyi.gov.cn/zwgk_500569/zfxxgk/fdzdgknr/zcfg/zcfg_5236360/202507/t20250704_88233380.html">
+                
+            
+            中华人民共和国水污染防治法
+            </a>
+            <span>2025-07-04</span>
+        </li>
+   
+        <li>
+            
+                
+            
+            
+                
+                    <a TARGET="_blank" title="国务院办公厅关于严格规范涉企行政检查的意见  国办发〔2024〕54号"  href="http://zyepb.zunyi.gov.cn/zwgk_500569/zfxxgk/fdzdgknr/zcfg/zcfg_5236360/202504/t20250411_87503822.html">
+                
+            
+            国务院办公厅关于严格规范涉企行政检查的意见  国办发〔2024〕54号
+            </a>
+            <span>2025-04-11</span>
+        </li>
+   
+                            </ul>
+                        </div>
+                    
+                    </div>
+                </div>
+                <script type="text/javascript">
+                    jQuery(".regulations").slide({
+                        titCell: ".hd li",
+                        mainCell: ".bd"
+                    });
+                </script>
+               <!--暂时下线-->
+            </div>
+
+            <div class="affairs_r_bd">
+                <ul>
+                    <li class="c1"><a href="http://zyepb.zunyi.gov.cn/zwgk_500569/zfxxgk/zfxxgkzn/"><i></i>政府信息公开指南</a></li>
+                    <li class="c2"><a href="http://zyepb.zunyi.gov.cn/zwgk_500569/zfxxgk/zfxxgkzd/"><i></i>政府信息公开制度</a></li>
+                    <li class="c3"><a href="http://zyepb.zunyi.gov.cn/zwgk_500569/zfxxgk/zfxxgknb/"><i></i>政府信息公开年报</a></li>
+                    <li class="c4"><a href="http://zyepb.zunyi.gov.cn/zwgk_500569/zfxxgk/fdzdgknr/"><i></i>法定主动公开内容</a></li>
+                    <li class="c5"><a href="http://zyepb.zunyi.gov.cn/zwgk_500569/fgkxxml/"><i></i>非公开信息目录</a></li>
+                    <li class="c6"><a href="http://zyepb.zunyi.gov.cn/zwgk_500569/xxgkyjx/"><i></i>信息公开意见箱</a></li>
+                    <li class="c7"><a href="http://zyepb.zunyi.gov.cn/zwgk_500569/ysqgk/"><i></i>依申请公开</a></li>
+                    <li class="c8"><a href="http://zyepb.zunyi.gov.cn/zwgk_500569/zfxxgk/fdzdgknr/jgsz/"><i></i>组织机构</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!--业务工作-->
+    <div class="operation">
+        <div class="service_hd">
+            <a href="http://zyepb.zunyi.gov.cn/ywgz/"><i></i>业务工作</a>
+        </div>
+        <div class="service_bd" style="display: flex;justify-content: center;">
+            <ul>
+               <!-- <li class="d1"><a href=""><i></i>自然生态</a></li>-->
+                <li class="d2"><a href="http://zyepb.zunyi.gov.cn/ywgz/hjjcv2/"><i></i>环境监察</a></li>
+                <li class="d3"><a href="http://zyepb.zunyi.gov.cn/ywgz/hjjc/"><i></i>环境监测</a></li>
+                <!-- <li class="d4"><a href=""><i></i>环保行政处罚</a></li>-->
+                <li class="d5"><a href="http://zyepb.zunyi.gov.cn/ywgz/wrfz/"><i></i>污染防治</a></li>
+                <li class="d6"><a href="http://zyepb.zunyi.gov.cn/ywgz/xcjy/"><i></i>宣传教育</a></li>
+                 <!-- <li class="d7"><a href=""><i></i>总量控制</a></li>-->
+            </ul>
+        </div>
+    </div>
+
+    <!--下部分开始-->
+    <div class="bottom_part">
+        <!--互动交流-->
+        <div class="interaction">
+            <div class="interaction_hd">
+                <div class="l_hd">
+                    <a href="http://zyepb.zunyi.gov.cn/hdjl/"><i></i>互动交流</a>
+                </div>
+                <div class="r_hd">
+                    <ul>
+                        <li class="f1"><a href="http://zyepb.zunyi.gov.cn/hdjl/ldxx/xxxz/"><i></i>写信须知</a></li>
+                        <li class="f2"><a href="http://zyepb.zunyi.gov.cn/hdjl/ldxx/wyxx/"><i></i>我要写信</a></li>
+                        <li class="f3"><a href="https://smrz.zwfw.guizhou.gov.cn/sso/login?utype=0&redirect=istrue&client_id=MBFSQUBNF&goto=http%3A//www.guizhou.gov.cn/personalhomepage/"><i></i>信件查询</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="interaction_bd">
+                <!--领导信箱-->
+                <div class="mailbox">
+                    <div class="title">
+                        <a href="http://zyepb.zunyi.gov.cn/hdjl/ldxx/">领导信箱</a>
+                    </div>
+                    <div class="mailbox_hd">
+                        <ul>
+                            <li>标题</li>
+                            <li>来信时间</li>
+                        </ul>
+                    </div>
+                    <div class="mailbox_bd">
+                        <ul id="letterList">
+
+                        </ul>
+                    </div>
+                </div>
+                <script type="text/javascript">
+                    $(function(){
+                                $.ajax({
+                                        url:'/IGI/nbhd/openGovmsgbox.do?method=listGovmsgboxs',
+                                        type:'GET',
+                                        data: {
+                                                orderby:'submitTime_desc',
+                                                siteId: 500569,
+                                    //order:2,
+                                        pageIndex: 1,
+                                        pageSize: 5,
+                                        appId:464
+                            },
+                            dataType: 'json',
+                            cache: false,
+                            success:function(result){
+                        var list = result.datas.data;
+                        var html="";
+                        if (list != null) {
+                            for (var i = 0; i < list.length; i++) {  //这里面都是创建li并赋值
+                                html +='<li>';
+                                html +='<a href="'+(list[i].PUBLISHURL ? list[i].PUBLISHURL : '/hdjl/ldxx/xjgs/view.html?ID=' + list[i].METADATAID)+'" target="_blank" title="'+cutstr(list[i].TITLE,40)+'">'+list[i].TITLE+'</a>';
+                                html +='<span>'+getMyDate(parseInt(list[i].CRTIME))+'</span>';
+                                html +='</li>';
+                            }
+                        }
+                        $("#letterList").append(html);
+                    }
+                    });
+                    });
+                </script>
+                <!--在线调查、意见征集-->
+                <div class="investigation">
+                    <div class="title">
+                        <a href="http://zyepb.zunyi.gov.cn/hdjl/zxdc/">在线调查</a>
+                        <a href="http://zyepb.zunyi.gov.cn/hdjl/yjzj/">意见征集</a>
+                    </div>
+                    <div class="investigation_hd">
+                        <ul>
+                            <li>标题</li>
+                            <li>时间</li>
+                        </ul>
+                    </div>
+                    <div class="investigation_bd">
+                        <ul id="wsdc">
+
+                        </ul>
+                        <ul id="wszj">
+
+                        </ul>
+                    </div>
+                </div>
+                <script type="text/javascript">
+                    $(function () {
+                                function sortprice(a,b){
+                                    return b.startTime-a.startTime
+                                }
+                                $.ajax({
+                                        url: '/IGI/open/survey/list',
+                                        data: {
+                                                siteId: 500569,
+                                        pageIndex: 1,
+                                        pageSize: 4
+                            },
+                            async: true,
+                            type: 'get',
+                            dataType: 'json',
+                            success: function (data) {
+                        var docListdc = data.datas.data;
+                        var _htmldc = "";
+                        $.each(docListdc.sort(sortprice), function (i, v) {
+                            _htmldc += '<li>';
+                            _htmldc += '<a href="' + (v.publishUrl ? v.publishUrl : '/hdjl/zxdc/view.html?siteId=500569&metadataId=' + v.id) +'" target="_blank">'+ cutstr(v.title, 35) +'</a>';
+                            _htmldc += '<span>'+getMyDate(parseInt(v.startTime)).substring(0,10)+'</span>';
+                            _htmldc += '</li>';
+                        })
+                        $("#wsdc").html(_htmldc);
+                    }
+                    })
+                    $.ajax({
+                            url: '/IGI/opinion/web/list',
+                            data: {
+                                    siteId: 500569,
+                            pageIndex: 1,
+                            pageSize: 4
+                    },
+                    async: true,
+                            type: 'get',
+                            dataType: 'json',
+                            success: function (data) {
+                        var docListdc = data.datas.data;
+                        var _htmlzj = "";
+                        $.each(docListdc.sort(sortprice), function (i, v) {
+let Url = undefined;
+if(v.exLink && v.exLink!=''){
+Url = v.exLink;
+}else if(v.publishUrl && v.publishUrl != ''){
+Url = v.publishUrl;
+}else{
+Url = '/hdjl/yjzj/view.html?siteId=500569&id==' + v.id;
+}
+                            _htmlzj += '<li>';
+                            _htmlzj += '<a href="' + Url +'" target="_blank">'+ cutstr(v.theme, 35)  +'</a>';
+                            _htmlzj += '<span>'+getMyDate(parseInt(v.beginTime)).substring(0,10)+'</span>';
+                            _htmlzj += '</li>';
+                        })
+                        $("#wszj").html(_htmlzj);
+                    }
+                    })
+                    })
+                </script>
+
+                <script type="text/javascript">
+                    jQuery(".investigation").slide({titCell: ".title a",mainCell: ".investigation_bd",effect:"fold"});
+                </script>
+            </div>
+        </div>
+
+        <!--办事服务-->
+        <div class="business">
+            <div class="business_hd">
+                <a href="http://zyepb.zunyi.gov.cn/bsfw/"><i></i>办事服务</a>
+            </div>
+            <div class="business_bd">
+                <ul>
+                    <li class="k1"><a href="https://zwfw.guizhou.gov.cn/eptemp.aspx?t=Znzw.bsfw.slyjPage&istest=1&ocode=jrb000000&areacode=520300#"target="_blank"><i></i>事项依据</a></li>
+                    <li class="k2"><a href="https://zwfw.guizhou.gov.cn/"target="_blank"><i></i>部门办事</a></li>
+                    <li class="k3"><a href="https://zwfw.guizhou.gov.cn/eptemp.aspx?t=Znzw.bsfw.bgxzPage&istest=1&ocode=jrb000000&areacode=520300#"target="_blank"><i></i>资料下载</a></li>
+                </ul>
+            </div>
+            <!--<div class="monthly">
+                <a href="http://zyepb.zunyi.gov.cn/ywgz/hjjc/hjyb/"><img src="/images/bsfw_bg.png" alt="" /></a>
+            </div>-->
+        </div>
+    </div>
+
+<div class="bottom_link">
+    <ul>
+        <!--<li><a href="http://202.98.194.198:6661/hjxypj/xypj/index.jsp" target="_blank"><img src="/images/bot_link1.png" alt="" /></a></li>-->
+        <li><a href="https://beian.china-eia.com/" target="_blank"><img src="/images/bott_li03.png" alt="" /></a></li>
+        <!--<li><a href="http://202.98.194.159:6661/qysb/xmspEntrance.jsp?SXBM=520300009500730001&regionCode=520300" target="_blank"><img src="/images/bott_li04.png" alt="" /></a></li>-->
+        <li><a href="https://beian.china-eia.com/f/announcement/announcementShow" target="_blank"><img src="/images/bott_li05.png" alt="" /></a></li>
+        <li><a href="http://permit.mee.gov.cn/" target="_blank"><img src="/images/bot_link4.png" alt="" /></a></li>
+        <li><a href="http://cx.guizhou.gov.cn/index.html" target="_blank"><img src="/images/bot_link5.png" alt="" /></a></li>
+    </ul>
+</div>
+    <a href="https://www.zunyi.gov.cn/sjfb" target="_blank"><img src="./images/zyszfsjkfpt.png" /></a>    
+</div>
+<div class="bottom">
+    <div class="links" style='display:none;'>
+        <dl>
+            <dt>友情链接：</dt>
+            <dd>
+                <ul class="yqlj">
+                    <li class="nLi">
+                        <h3><a id="yqlj1" href="#1">--国家部委--</a></h3>
+                        <ul id="box1" class="sub">
+                            <a id="gb1" class="guanbi">关闭</a>
+                            <div class="ww1">
+                                <ul>
+	
+</ul>
+                            </div>
+                        </ul>
+                    </li>
+                    <li class="nLi">
+                        <h3><a id="yqlj2" href="#1">--省级政府网站--</a></h3>
+                        <ul id="box2" class="sub">
+                            <a id="gb2" class="guanbi">关闭</a>
+                            <div class="ww1">
+                                 <ul>
+	
+</ul>
+                            </div>
+                        </ul>
+                    </li>
+                    <li class="nLi">
+                        <h3><a id="yqlj3" href="#1">--省内地市州网站--</a></h3>
+                        <ul id="box3" class="sub">
+                            <a id="gb3" class="guanbi">关闭</a>
+                            <div class="ww1">
+                                <ul>
+	
+		<li>
+			<!--判断是否外部链接-->
+			
+				
+				 <a TARGET="_blank" title="贵安新区"  href="http://www.gaxq.gov.cn/">
+				
+			
+			
+				
+			
+			贵安新区
+			</a>
+		</li>
+	
+		<li>
+			<!--判断是否外部链接-->
+			
+				
+				 <a TARGET="_blank" title="黔西南州"  href="http://www.qxn.gov.cn/">
+				
+			
+			
+				
+			
+			黔西南州
+			</a>
+		</li>
+	
+		<li>
+			<!--判断是否外部链接-->
+			
+				
+				 <a TARGET="_blank" title="黔南州"  href="http://www.qiannan.gov.cn/">
+				
+			
+			
+				
+			
+			黔南州
+			</a>
+		</li>
+	
+		<li>
+			<!--判断是否外部链接-->
+			
+				
+				 <a TARGET="_blank" title="黔东南州"  href="http://www.qdn.gov.cn/">
+				
+			
+			
+				
+			
+			黔东南州
+			</a>
+		</li>
+	
+		<li>
+			<!--判断是否外部链接-->
+			
+				
+				 <a TARGET="_blank" title="铜仁市"  href="http://www.trs.gov.cn/">
+				
+			
+			
+				
+			
+			铜仁市
+			</a>
+		</li>
+	
+		<li>
+			<!--判断是否外部链接-->
+			
+				
+				 <a TARGET="_blank" title="毕节市"  href="http://www.bijie.gov.cn/">
+				
+			
+			
+				
+			
+			毕节市
+			</a>
+		</li>
+	
+		<li>
+			<!--判断是否外部链接-->
+			
+				
+				 <a TARGET="_blank" title="安顺市"  href="http://www.anshun.gov.cn/">
+				
+			
+			
+				
+			
+			安顺市
+			</a>
+		</li>
+	
+		<li>
+			<!--判断是否外部链接-->
+			
+				
+				 <a TARGET="_blank" title="六盘水市"  href="http://www.gzlps.gov.cn/">
+				
+			
+			
+				
+			
+			六盘水市
+			</a>
+		</li>
+	
+		<li>
+			<!--判断是否外部链接-->
+			
+				
+				 <a TARGET="_blank" title="遵义市"  href="http://www.zunyi.gov.cn/">
+				
+			
+			
+				
+			
+			遵义市
+			</a>
+		</li>
+	
+		<li>
+			<!--判断是否外部链接-->
+			
+				
+				 <a TARGET="_blank" title="贵阳市"  href="http://www.guiyang.gov.cn/">
+				
+			
+			
+				
+			
+			贵阳市
+			</a>
+		</li>
+	
+</ul>
+                            </div>
+                        </ul>
+                    </li>
+                    <li class="nLi">
+                        <h3><a id="yqlj4" href="#1">--区县政府网站--</a></h3>
+                        <ul id="box4" class="sub">
+                            <a id="gb4" class="guanbi">关闭</a>
+                            <div class="ww1">
+                                <ul>
+	
+</ul>
+                            </div>
+                        </ul>
+                    </li>
+                    <script type="text/javascript">
+                        $(document).ready(function(){
+                            $("#yqlj1").click(function(){
+                                $("#box2").hide();
+                                $("#box3").hide();
+                                $("#box4").hide();
+                                $("#box1").toggle();
+                            });
+                            $("#gb1").click(function(){
+                                $("#box1").hide();
+                            })
+                            $("#yqlj2").click(function(){
+                                $("#box1").hide();
+                                $("#box3").hide();
+                                $("#box4").hide();
+                                $("#box2").toggle();
+                            });
+                            $("#gb2").click(function(){
+                                $("#box2").hide();
+                            })
+                            $("#yqlj3").click(function(){
+                                $("#box1").hide();
+                                $("#box2").hide();
+                                $("#box4").hide();
+                                $("#box3").toggle();
+                            });
+                            $("#gb3").click(function(){
+                                $("#box3").hide();
+                            })
+                            $("#yqlj4").click(function(){
+                                $("#box1").hide();
+                                $("#box2").hide();
+                                $("#box3").hide();
+                                $("#box4").toggle();
+                            });
+                            $("#gb4").click(function(){
+                                $("#box4").hide();
+                            })
+                        });
+                    </script>
+                </ul>
+            </dd>
+        </dl>
+    </div>
+    <div class="footer">
+        <div class="f_nav">
+            <a href="http://zyepb.zunyi.gov.cn/syqt/bzxx/">帮助信息</a>
+            <span>|</span>
+            <a href="http://zyepb.zunyi.gov.cn/syqt/lxwm/">联系我们</a>
+            <span>|</span>
+            <a href="http://zyepb.zunyi.gov.cn/syqt/wzdt/">网站地图</a>
+             <span>|</span>
+            <a href="http://zyepb.zunyi.gov.cn/ztzl/wzgznb/index.html">网站年报</a>
+            <span>|</span>
+            <a href="http://zyepb.zunyi.gov.cn/syqt/ysjbqsm/">隐私及版权说明</a>
+        </div>
+        <div class="f_text w">
+            <span style="position: absolute; left: 20px; top: -20px;"><script id="_jiucuo_" sitecode='5203000032' src='https://zfwzgl.www.gov.cn/exposure/jiucuo.js'></script></span>
+            <span class="dzjg"><a href="http://bszs.conac.cn/sitename?method=show&id=06CE2E358CB32777E053012819ACFA89" target="_blank"><img src="/images/dzgg.png" alt="" /></a></span>
+            <!--span class="zfzc"><a href="javascript:void(0);"><img src="/images/zfzc.png" alt="" /></a></span-->
+            <div class="text">
+                <p>版权所有：遵义市生态环境局&nbsp;&nbsp;主办单位：遵义市生态环境局</p>
+                <p>地址：遵义市新蒲新区三贤北路9号&nbsp;&nbsp;联系电话：0851-23119198&nbsp;&nbsp;ICP备案号：<a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank">黔ICP备2021004045号
+</a></p>
+                <p><span><img src="/images/ggwba.png" alt="" /><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=52030002001037" target="_blank">贵公网安备52030002001037</a></span>&nbsp;&nbsp;网站标识码：5203000032&nbsp;&nbsp;技术支持：贵州多彩博虹科技有限公司</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="winRightNab">
+    <p class="openKeys"></p>
+    <div class="winrul">
+        <ul>
+            <li class="wx1">
+                <a href="javascript:;">
+                    <img src="/images/wb_w1.png" alt="" />
+                    政务微信
+                </a>
+            </li>
+            <li class="wx2">
+                <a href="javascript:;">
+                    <img src="/images/wb_w2.png" alt="" />
+                    政务微博
+                </a>
+            </li>
+
+        </ul> 
+    </div>
+</div>
+
+ <script id="_trs_ta_js" src="//ta.trs.cn/c/js/ta.js?mpid=3289" async="async" defer="defer"></script>
+
+
+
+
+<script type="text/javascript" src="//www.guizhou.gov.cn/images/Arctext.js"></script>
+<script>
+    /*添加归档图章*/
+    function SetIsArchive() {
+        let DocIsArchive = ($("meta[name='DocIsArchive']").length > 0) ? ($("meta[name='DocIsArchive']").attr("content").split("|")) : [0, 0];
+        let ChannelIsArchive = ($("meta[name='ChannelIsArchive']").length > 0) ? ($("meta[name='ChannelIsArchive']").attr("content").split("|")) : [0, 0];
+        if (parseInt(DocIsArchive[0]) == 1) {
+            AddArchiveHtml(DocIsArchive[1]);
+        } else if (parseInt(ChannelIsArchive[0]) == 1) {
+            //AddArchiveHtml(ChannelIsArchive[1]);
+            if (ChannelIsArchive[1] && ChannelIsArchive[1].indexOf('归档时间【') > -1) {
+                let gdsj = ChannelIsArchive[1].substring(ChannelIsArchive[1].indexOf('归档时间【') + 5, ChannelIsArchive[1].indexOf('】'));
+                AddArchiveHtml(gdsj);
+            } else {
+                AddArchiveHtml(ChannelIsArchive[2]);
+            }
+        }
+    }
+    /*填充图章html结构，根据图章情况编写*/
+    function AddArchiveHtml(date) {
+        $("body").append(`<div class="ArchiveGdPart"><p>` + date + `</p ></div>
+<style type="text/css"> .ArchiveGdPart{ position: absolute; width: 200px; background: url(/images/gd_red.png) no-repeat center top; padding: 120px 0 25px; z-index: 99; top: 290px; right: 50%; margin-right:-600px; transform: rotateZ(-20deg); }.ArchiveGdPart p{ font-size: 12px; color: #F00; display: block; text-align: center; line-height: 20px; letter-spacing: -1px;} @media screen and (max-width:750px ) { .ArchiveGdPart{margin-right: 0px;right: 0;zoom: 0.7;} } </style>`);
+        $(".ArchiveGdPart p").arctext({ dir: 0, radius: 60 }); // 执行文字弯曲
+    }
+    $(function () {
+
+
+        // 加载归档图章
+        SetIsArchive();
+
+    });
+
+</script>
+
+<!--网站试运行公告
+<script src="/tools/js/layer.js" type="text/javascript"></script>
+<script>
+  $(function () {
+    layer.open({
+      title: '通知'
+      , skin: 'layui-layer-lan'
+      , offset: 'c'
+      , area: '500px'
+      , shade: 0
+      , content: '<h3 style="font-size: 20px; font-weight: bold; text-align: center; padding-bottom: 15px;">通知</h3><p style="display: block; text-indent: 2em; text-align: justify;">遵义市生态环境局门户网站已于2019年12月9日正式在“贵州省政府网站集约化平台”上线试运行，网站域名：zyepb.zunyi.gov.cn。在网站上线试运行过程中，可能会出现网站暂时不能访问、部分栏目异常等问题，我们将会及时进行处理，尽快修复，对此造成的不便，敬请广大公众谅解。</p><p style="display: block; text-align: right;">遵义市生态环境局</p><p style="display: block; text-align: right;">2019年12月9日</p>'
+    });
+  });
+</script>-->
+</body>
+</html>
+<script type="text/javascript" src="http://www.guizhou.gov.cn/material/ChangePageStyle.js"></script>

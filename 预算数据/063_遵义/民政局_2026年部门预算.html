@@ -1,0 +1,2568 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>遵义市民政局</title>
+<!--网站标签-->
+    <meta name="SiteName" content="遵义市民政局">
+    <meta name="SiteDomain" content="http://mzj.zunyi.gov.cn">
+    <meta name="SiteIDCode" content='5203000017'>
+    <meta name="keywords" content="遵义市民政局门户网站,遵义市,遵义市民政局门户网站">
+    <meta name="description" content="6月18日，市民政局离退休党支部召开全体党员大会。市民政局党组书记、局长宋波参加并讲话。市民政局机关党委副书记、三级调研员李碧蓉，退休老党员、人事教育科、局办公室相关同志共计30余人参加。会议由市民政局离退休党支部书记黄明刚主持。">
+<!--栏目标签-->
+<meta name="ColumnName" content="遵义市民政局首页">
+<meta name="ColumnType" content="遵义市民政局首页">
+<meta name="ColumnKeywords" content="遵义市民政局首页">
+<meta name="ColumnDescription" content="公开遵义市民政局首页信息">
+    <link rel="stylesheet" href="/images/index.css" />
+    <meta name="viewport" content="width=1200px, initial-scale=0.3, user-scalable=no">
+<script src="/images/jquery-1.9.1.min.js"></script>
+<script src="/images/jquery.SuperSlide.2.1.1.js"></script>
+<script src="/material/images/2024/index.js"></script>
+<script type="text/javascript" src="/tools/layui/layui.js"></script>
+<link rel="stylesheet" type="text/css" href="/tools/layui/css/layui.css" />
+<script type="text/javascript" src="/material/trsigi/js/sm2.js"></script>
+<script type="text/javascript" src="/material/images/2024/guolv_sqlzr.js"></script>
+<script type="text/javascript">
+var layer;
+layui.use('layer', function(){
+  layer = layui.layer;
+});
+</script>
+<script type="text/javascript">
+//微信
+function alertwx(){
+	var imgs = '/images/wx.png';
+	if(imgs!=""){
+		layer.open({
+			type: 1,
+			area: ['200px', '232px'],
+			title: false, //不显示标题
+			shadeClose: true,
+			content: '<img src='+imgs+' width="200px" />'
+		});
+	}else{
+		layer.msg('暂无微信！');
+	}
+}
+</script>
+
+<style>
+body {
+    background: linear-gradient(to bottom, #deeef6 70%, #FFF,transparent);
+}
+.special_column .special_slide .s_bd li a img {
+    width: 420px;
+    height: 160px;
+}
+.r_news .hd li{width: 141px;}
+ .sytt{
+    text-align: center;
+    font-size: 36px;
+    padding: 20px 0 19px;
+    margin:0 auto;
+}
+.sytt a{color: #494949;text-decoration: none;}
+.headline{padding-top: 0;height: auto;}
+</style>
+</head>
+<body>
+
+<input id="ParentChid" value="12138" type="hidden" />
+<script id="wzaScript" src="https://wza.gogbh.cn/wza/wza.min.js" data="dd5ba4644fd4247d84fffa73662d2673" /></script >
+<script>
+function BackTheDates(demo){
+    let now = new Date();
+    let NowDate = now.getFullYear() + "年" + ((now.getMonth() + 1)<10?'0'+(now.getMonth() + 1):(now.getMonth() + 1)) + "月" + (now.getDate()<10?'0'+(now.getDate()):now.getDate()) + "日";
+    let WeekArr = new Array("星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六");
+    NowDate += "&ensp;"+WeekArr[now.getDay()];
+    $(demo).html("今天是："+NowDate);
+}</script>
+<!--头部开始-->
+<div class="header">
+    <div class="t_header">
+        <div class="t_weather w">
+            <div class="l_werther">
+                        <span id='HeaderDate'>
+                            <!--<script src="/images/Date.js"></script>-->
+                            <script type="text/javascript">BackTheDates("#HeaderDate");</script>
+                        </span>
+            </div>
+            <div class="rssdy">
+                <ul>
+                     <li><a class="wza" id="assist-open" href="javascript:void(0);">适老化及无障碍浏览</a></li>
+                    <li>|</li>
+                    <!--li><a href="http://mzj.zunyi.gov.cn/syqt/rss/">RSS订阅</a></li>
+                    <li>|</li-->
+                    <li><a href="javascript:SetHome(this,window.location.href);">设为首页</a></li>
+                    <li>|</li>
+                    <li><a href="javascript:AddFavorite(window.location.href,document.title);">加入收藏</a></li>
+					<li>|</li>
+					<li><a href="https://smrz.zwfw.guizhou.gov.cn/sso/login?utype=0&redirect=istrue&client_id=MBFSQUBNF&goto=http%3A//www.guizhou.gov.cn/personalhomepage/" target="_blank">个人中心</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="logo w">
+            <div class="l_logo">
+                <a href="/"><img src="/images/zysmzjlogo.png" alt="" /></a>
+            </div>
+            <div class="r_search">
+                <input type="text" id="keyword" placeholder="请输入关键字" onkeydown="entersearch()" @keypress="search($event)" />
+                <div class="button" id="s-btn" onclick="sub()" @click="search()"><i></i></div>
+            </div>
+        </div>
+    </div>
+    <div class="nav">
+        <ul class="w">
+            <li><a href="/">首页</a></li>
+            <li><a href="http://mzj.zunyi.gov.cn/mzyw/">新闻中心</a></li>
+            <li><a href="http://mzj.zunyi.gov.cn/zwgk/">政务公开</a></li>
+            <li><a href="http://mzj.zunyi.gov.cn/hdjl/">互动交流</a></li>
+            <li><a href="http://mzj.zunyi.gov.cn/bsfw/">办事服务</a></li>
+            <li><a href="http://mzj.zunyi.gov.cn/ztzl/">专题专栏</a></li>
+        </ul>
+    </div>
+</div>
+<!--主体部分开始-->
+<div class="main_body">
+    <!--首页飘-->
+    
+
+<script src="//www.zunyi.gov.cn/images/floatAd.js" type="text/javascript"></script>
+<script type="text/javascript">
+	var j=0;
+	 
+	for (var i=1;i<=j;i++)
+	{
+		var ad = new AdMove("img"+i, true);
+		ad.Run();
+	}
+</script>
+<script type="text/javascript">
+	function turnoff(obj) {
+		document.getElementById(obj).style.display = "none";
+	}
+</script>
+    <!--头条新闻-->
+    <div class="headline">
+            <div class='sytt'>
+                  
+         	        <a target="_blank" href="https://www.zunyi.gov.cn/xwdt/qgyw/202603/t20260326_89910797.html" title="总书记两会后首次考察指引“十五五”开局起步">
+        	 	 	 	总书记两会后首次考察指引“十五五”开局起步
+       	 	       </a>
+ 	         
+            </div>
+    </div>
+         <script type="text/javascript">// jQuery(".headline").slide({mainCell:".r_tt",autoPlay:true,effect:"topMarquee",interTime:50,trigger:"click"});</script>
+    <!--上部分开始 -->
+    <div class="top_box">
+        <!--左边焦点图-->
+        <div class="focus_picture">
+            <div class="focusBox">
+    <ul class="pic" id="pics">
+        
+        <li>
+            <!--判断是否外部链接-->
+            
+                
+            
+            
+                
+                    <a TARGET="_blank" title="群众身边不正之风和腐败问题线索征集" href="http://mzj.zunyi.gov.cn/mzyw/tpxw/202504/t20250403_87336509.html">
+                
+            
+            <!--获取图片路径-->
+            <img src="http://mzj.zunyi.gov.cn/mzyw/tpxw/202504/W020260302427071378532_ORIGIN.jpg"/>
+            </a>
+        </li>
+        
+        <li>
+            <!--判断是否外部链接-->
+            
+                
+            
+            
+                
+                    <a TARGET="_blank" title="2026年遵义市群众身边不正之风和腐败问题线索征集" href="http://mzj.zunyi.gov.cn/mzyw/tpxw/202603/t20260309_89617858.html">
+                
+            
+            <!--获取图片路径-->
+            <img src="http://mzj.zunyi.gov.cn/mzyw/tpxw/202603/W020260309511955474400_ORIGIN.jpg"/>
+            </a>
+        </li>
+        
+        <li>
+            <!--判断是否外部链接-->
+            
+                
+            
+            
+                
+                    <a TARGET="_blank" title="遵义市2026年老龄委全体会议暨民政重点工作专题会议召开" href="http://mzj.zunyi.gov.cn/mzyw/tpxw/202602/t20260213_89513456.html">
+                
+            
+            <!--获取图片路径-->
+            <img src="http://mzj.zunyi.gov.cn/mzyw/tpxw/202602/W020260213366818382377_ORIGIN.jpg"/>
+            </a>
+        </li>
+        
+        <li>
+            <!--判断是否外部链接-->
+            
+                
+            
+            
+                
+                    <a TARGET="_blank" title="遵义市直民政系统召开深入学习贯彻党的二十届四中全会精神年轻干部交流座谈会" href="http://mzj.zunyi.gov.cn/mzyw/tpxw/202601/t20260112_89290462.html">
+                
+            
+            <!--获取图片路径-->
+            <img src="http://mzj.zunyi.gov.cn/mzyw/tpxw/202601/W020260112582685835171_ORIGIN.png"/>
+            </a>
+        </li>
+        
+        <li>
+            <!--判断是否外部链接-->
+            
+                
+            
+            
+                
+                    <a TARGET="_blank" title="遵义民政：惠民暖政筑牢幸福底线" href="http://mzj.zunyi.gov.cn/mzyw/tpxw/202512/t20251215_89046135.html">
+                
+            
+            <!--获取图片路径-->
+            <img src="http://mzj.zunyi.gov.cn/mzyw/tpxw/202512/W020251215624673990988_ORIGIN.jpg"/>
+            </a>
+        </li>
+        
+    </ul>
+    <div class="txt-bg"></div>
+    <div class="txt" id="texts">
+        <ul style="bottom: -57px;">
+            
+            <li>
+                <!--判断是否外部链接-->
+                
+                    
+                
+                
+                    
+                        <a TARGET="_blank" title="群众身边不正之风和腐败问题线索征集" href="http://mzj.zunyi.gov.cn/mzyw/tpxw/202504/t20250403_87336509.html">
+                    
+                
+                群众身边不正之风和腐败问题线索征集</a>
+            </li>
+            
+            <li>
+                <!--判断是否外部链接-->
+                
+                    
+                
+                
+                    
+                        <a TARGET="_blank" title="2026年遵义市群众身边不正之风和腐败问题线索征集" href="http://mzj.zunyi.gov.cn/mzyw/tpxw/202603/t20260309_89617858.html">
+                    
+                
+                2026年遵义市群众身边不正之风和腐败问题线索征集</a>
+            </li>
+            
+            <li>
+                <!--判断是否外部链接-->
+                
+                    
+                
+                
+                    
+                        <a TARGET="_blank" title="遵义市2026年老龄委全体会议暨民政重点工作专题会议召开" href="http://mzj.zunyi.gov.cn/mzyw/tpxw/202602/t20260213_89513456.html">
+                    
+                
+                遵义市2026年老龄委全体会议暨民政重点工作专题会议召开</a>
+            </li>
+            
+            <li>
+                <!--判断是否外部链接-->
+                
+                    
+                
+                
+                    
+                        <a TARGET="_blank" title="遵义市直民政系统召开深入学习贯彻党的二十届四中全会精神年轻干部交流座谈会" href="http://mzj.zunyi.gov.cn/mzyw/tpxw/202601/t20260112_89290462.html">
+                    
+                
+                遵义市直民政系统召开深入学习贯彻党的二十届四中全会精...</a>
+            </li>
+            
+            <li>
+                <!--判断是否外部链接-->
+                
+                    
+                
+                
+                    
+                        <a TARGET="_blank" title="遵义民政：惠民暖政筑牢幸福底线" href="http://mzj.zunyi.gov.cn/mzyw/tpxw/202512/t20251215_89046135.html">
+                    
+                
+                遵义民政：惠民暖政筑牢幸福底线</a>
+            </li>
+            
+        </ul>
+    </div>
+    <ul class="num" id="btns">
+        
+        <li><a></a></li>
+        
+        <li><a></a></li>
+        
+        <li><a></a></li>
+        
+        <li><a></a></li>
+        
+        <li><a></a></li>
+        
+    </ul>
+   <span class="sprev"></span>
+     <span class="snext"></span>
+</div>
+            <script type="text/javascript">
+                jQuery(".focus_picture .focusBox").slide({
+                    titCell: ".num li", mainCell: ".pic", effect: "fade", autoPlay: true, prevCell:".sprev",nextCell:".snext",trigger: "click",
+                    startFun: function (i) {
+                        jQuery(".focus_picture .focusBox .txt li").eq(i).animate({"bottom": 0}).siblings().animate({"bottom": -57});
+                    }
+                });
+            </script>
+        </div>
+
+        <!--右边新闻-->
+        <div class="r_news">
+            <div class="hd clearfix">
+                <ul>
+                    <li class="on"><a href="http://mzj.zunyi.gov.cn/mzyw/qgyw/">全国要闻</a></li>
+                    <li><a href="http://mzj.zunyi.gov.cn/mzyw/bmdt/">部门动态</a></li>
+                    <li><a href="http://mzj.zunyi.gov.cn/mzyw/jcdt/">基层动态</a></li>
+                    <li><a href="http://mzj.zunyi.gov.cn/mzyw/tzgs/">通知公示</a></li>
+                </ul>
+            </div>
+            <div class="bd">
+                <div class="slide">
+                    <div class="list">
+                        <ul>
+                            
+    <li>
+        
+            
+        
+        
+            
+                <a TARGET="_blank" title="李强主持召开国务院常务会议"  href="http://mzj.zunyi.gov.cn/mzyw/qgyw/202603/t20260327_89919551.html">
+            
+        
+        李强主持召开国务院常务会议
+        </a>
+        <span>2026-03-27</span>
+    </li>
+
+    <li>
+        
+            
+        
+        
+            
+                <a TARGET="_blank" title="中共中央政治局召开会议 审议《中国共产党地方委员会工作条例》 中共中央总书记习近平主持会议"  href="http://mzj.zunyi.gov.cn/mzyw/qgyw/202603/t20260327_89918132.html">
+            
+        
+        中共中央政治局召开会议 审议《中国共产党地方委员会工作条例》 中共中央总书记习近平主持会议
+        </a>
+        <span>2026-03-27</span>
+    </li>
+
+    <li>
+        
+            
+        
+        
+            
+                <a TARGET="_blank" title="总书记两会后首次考察指引“十五五”开局起步"  href="http://mzj.zunyi.gov.cn/mzyw/qgyw/202603/t20260326_89910797.html">
+            
+        
+        总书记两会后首次考察指引“十五五”开局起步
+        </a>
+        <span>2026-03-26</span>
+    </li>
+
+    <li>
+        
+            
+        
+        
+            
+                <a TARGET="_blank" title=""对雄安的发展前景，我们充满信心"——习近平总书记赴雄安新区考察并主持召开深入推进雄安新区高质量建设和发展座谈会纪实"  href="http://mzj.zunyi.gov.cn/mzyw/qgyw/202603/t20260325_89904091.html">
+            
+        
+        "对雄安的发展前景，我们充满信心"——习近平总书记赴雄安新区考察并主持召开深入推进雄安新区高质量建设和发展座谈会纪实
+        </a>
+        <span>2026-03-25</span>
+    </li>
+
+    <li>
+        
+            
+        
+        
+            
+                <a TARGET="_blank" title="习近平：牢牢把握雄安新区功能定位 努力建设新时代创新高地和推动高质量发展样板"  href="http://mzj.zunyi.gov.cn/mzyw/qgyw/202603/t20260323_89899686.html">
+            
+        
+        习近平：牢牢把握雄安新区功能定位 努力建设新时代创新高地和推动高质量发展样板
+        </a>
+        <span>2026-03-23</span>
+    </li>
+
+    <li>
+        
+            
+        
+        
+            
+                <a TARGET="_blank" title="习近平致电祝贺通伦当选连任老挝国家主席"  href="http://mzj.zunyi.gov.cn/mzyw/qgyw/202603/t20260323_89899676.html">
+            
+        
+        习近平致电祝贺通伦当选连任老挝国家主席
+        </a>
+        <span>2026-03-23</span>
+    </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="list">
+                        <ul>
+                            
+    <li>
+        
+            
+        
+        
+            
+                <a TARGET="_blank" title="2026年清明节文明祭扫倡议书"  href="http://mzj.zunyi.gov.cn/mzyw/bmdt/202603/t20260327_89915644.html">
+            
+        
+        2026年清明节文明祭扫倡议书
+        </a>
+        <span>2026-03-27</span>
+    </li>
+
+    <li>
+        
+            
+        
+        
+            
+                <a TARGET="_blank" title="从“养老”到“享老” ，遵义养老服务绘就幸福晚年图景"  href="http://mzj.zunyi.gov.cn/mzyw/bmdt/202603/t20260320_89891526.html">
+            
+        
+        从“养老”到“享老” ，遵义养老服务绘就幸福晚年图景
+        </a>
+        <span>2026-03-20</span>
+    </li>
+
+    <li>
+        
+            
+        
+        
+            
+                <a TARGET="_blank" title="司法聚力护民生  多元协同助公益——遵义市涉食药安全公益诉讼惩罚性赔偿金公益执行活动圆满完成"  href="http://mzj.zunyi.gov.cn/mzyw/bmdt/202603/t20260313_89870768.html">
+            
+        
+        司法聚力护民生  多元协同助公益——遵义市涉食药安全公益诉讼惩罚性赔偿金公益执行活动圆满完成
+        </a>
+        <span>2026-03-13</span>
+    </li>
+
+    <li>
+        
+            
+        
+        
+            
+                <a TARGET="_blank" title="遵义市民政局举办深入学习贯彻习近平总书记关于民政工作重要论述精神读书班"  href="http://mzj.zunyi.gov.cn/mzyw/bmdt/202603/t20260302_89592581.html">
+            
+        
+        遵义市民政局举办深入学习贯彻习近平总书记关于民政工作重要论述精神读书班
+        </a>
+        <span>2026-03-02</span>
+    </li>
+
+    <li>
+        
+            
+        
+        
+            
+                <a TARGET="_blank" title="这个春节，遵义民政为您暖心守护！"  href="http://mzj.zunyi.gov.cn/mzyw/bmdt/202602/t20260214_89552857.html">
+            
+        
+        这个春节，遵义民政为您暖心守护！
+        </a>
+        <span>2026-02-14</span>
+    </li>
+
+    <li>
+        
+            
+        
+        
+            
+                <a TARGET="_blank" title="遵义市民政局致全市儿童督导员和儿童主任的一封信"  href="http://mzj.zunyi.gov.cn/mzyw/bmdt/202602/t20260214_89552728.html">
+            
+        
+        遵义市民政局致全市儿童督导员和儿童主任的一封信
+        </a>
+        <span>2026-02-14</span>
+    </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="list">
+                        <ul>
+                             
+    <li>
+        
+            
+        
+        
+            
+                <a TARGET="_blank" title="以考促学强本领  以学促安守底线—红花岗区民政局开展养老机构安全管理应知应会测试"  href="http://mzj.zunyi.gov.cn/mzyw/jcdt/202603/t20260327_89915696.html">
+            
+        
+        以考促学强本领  以学促安守底线—红花岗区民政局开展养老机构安全管理应知应会测试
+        </a>
+        <span>2026-03-27</span>
+    </li>
+
+    <li>
+        
+            
+        
+        
+            
+                <a TARGET="_blank" title="播州区民政局链接爱心资源    宁波科拓连续两年助学暖人心"  href="http://mzj.zunyi.gov.cn/mzyw/jcdt/202603/t20260327_89915659.html">
+            
+        
+        播州区民政局链接爱心资源    宁波科拓连续两年助学暖人心
+        </a>
+        <span>2026-03-27</span>
+    </li>
+
+    <li>
+        
+            
+        
+        
+            
+                <a TARGET="_blank" title="饭菜咸淡老人说了算 | 遵义爵仕蓝岛社区探索“食堂共治”新模式"  href="http://mzj.zunyi.gov.cn/mzyw/jcdt/202603/t20260320_89891572.html">
+            
+        
+        饭菜咸淡老人说了算 | 遵义爵仕蓝岛社区探索“食堂共治”新模式
+        </a>
+        <span>2026-03-20</span>
+    </li>
+
+    <li>
+        
+            
+        
+        
+            
+                <a TARGET="_blank" title="【新婚俗 新风尚】坐上“公交婚车” 驶向“幸福站台”"  href="http://mzj.zunyi.gov.cn/mzyw/jcdt/202603/t20260318_89885737.html">
+            
+        
+        【新婚俗 新风尚】坐上“公交婚车” 驶向“幸福站台”
+        </a>
+        <span>2026-03-18</span>
+    </li>
+
+    <li>
+        
+            
+        
+        
+            
+                <a TARGET="_blank" title="珍爱生命 远离毒品—遵义市儿童福利院开展禁毒宣传教育活动"  href="http://mzj.zunyi.gov.cn/mzyw/jcdt/202603/t20260302_89592587.html">
+            
+        
+        珍爱生命 远离毒品—遵义市儿童福利院开展禁毒宣传教育活动
+        </a>
+        <span>2026-03-02</span>
+    </li>
+
+    <li>
+        
+            
+        
+        
+            
+                <a TARGET="_blank" title="福彩童行 策马迎春——遵义市儿童福利院、遵义市社会福利彩票发行中心联合举办迎春主题活动"  href="http://mzj.zunyi.gov.cn/mzyw/jcdt/202602/t20260214_89552900.html">
+            
+        
+        福彩童行 策马迎春——遵义市儿童福利院、遵义市社会福利彩票发行中心联合举办迎春主题活动
+        </a>
+        <span>2026-02-14</span>
+    </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="list">
+                        <ul>
+                            
+    <li>
+        
+            
+        
+        
+            
+                <a TARGET="_blank" title="便民电话"  href="http://mzj.zunyi.gov.cn/mzyw/tzgs/202006/t20200618_61154668.html">
+            
+        
+        便民电话
+        </a>
+        <span>2025-04-22</span>
+    </li>
+
+    <li>
+        
+            
+        
+        
+            
+                <a TARGET="_blank" title="遵义市民政局关于公布公益慈善类社会组织、慈善活动违法违规行为监督举报方式的公告"  href="http://mzj.zunyi.gov.cn/mzyw/tzgs/202505/t20250516_87881579.html">
+            
+        
+        遵义市民政局关于公布公益慈善类社会组织、慈善活动违法违规行为监督举报方式的公告
+        </a>
+        <span>2025-05-16</span>
+    </li>
+
+    <li>
+        
+            
+        
+        
+            
+                <a TARGET="_blank" title="关于公开征集全市集中整治社会救助不到位问题线索的公告"  href="http://mzj.zunyi.gov.cn/mzyw/tzgs/202505/t20250509_87830364.html">
+            
+        
+        关于公开征集全市集中整治社会救助不到位问题线索的公告
+        </a>
+        <span>2025-05-09</span>
+    </li>
+
+    <li>
+        
+            
+        
+        
+            
+                <a TARGET="_blank" title="关于公开征集全市养老服务突出问题专项整治问题线索的公告"  href="http://mzj.zunyi.gov.cn/mzyw/tzgs/202504/t20250423_87568060.html">
+            
+        
+        关于公开征集全市养老服务突出问题专项整治问题线索的公告
+        </a>
+        <span>2025-04-23</span>
+    </li>
+
+    <li>
+        
+            
+        
+        
+            
+                <a TARGET="_blank" title="遵义市精神病院2026年见习人员招募公告"  href="http://mzj.zunyi.gov.cn/mzyw/tzgs/202603/t20260312_89651002.html">
+            
+        
+        遵义市精神病院2026年见习人员招募公告
+        </a>
+        <span>2026-03-12</span>
+    </li>
+
+    <li>
+        
+            
+        
+        
+            
+                <a TARGET="_blank" title="“爱在遵义”首届公益创投大赛第三方执行机构采购项目竞争性磋商招标公告"  href="http://mzj.zunyi.gov.cn/mzyw/tzgs/202603/t20260309_89619189.html">
+            
+        
+        “爱在遵义”首届公益创投大赛第三方执行机构采购项目竞争性磋商招标公告
+        </a>
+        <span>2026-03-09</span>
+    </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <ul class="gwyxx mt20">
+                <li class="li1"> <a href="http://www.gov.cn/pushinfo/v150203/index.htm" target="_blank"><i class=""></i><span>国务院信息</span></a> </li>
+                <li class="li2"> <a href="http://www.gov.cn/zhengce/index.htm" target="_blank"><i></i><span>国务院文件</span></a> </li>
+                <li class="li3"> <a href="https://www.mca.gov.cn/n152/n164/index.html" target="_blank"><i></i><span>民政部信息</span></a> </li>
+                <li class="li4"> <a href="http://www.guizhou.gov.cn/zwgk/zcfg/szfwj_8191/szfl_8192/index.html" target="_blank"><i></i><span>省政府文件</span></a> </li>
+            </ul>
+        </div>
+        <script type="text/javascript">
+            jQuery(".r_news").slide({titCell: ".hd li",mainCell: ".bd",effect:"fade"});
+        </script>
+    </div>
+    <!--中间部分开始-->
+    <div class="middle_box">
+        <!--政务公开-->
+        <div class="government_affairs">
+            <div class="affairs_title">
+                    政务公开
+                <div class="line"></div>
+            </div>
+            <div class="affairs_listone">
+                <ul>
+                    <li class="b1"><a href="http://mzj.zunyi.gov.cn/zwgk/xxgkzn/"><i></i>信息公开指南</a></li>
+                    <li class="b2"><a href="http://mzj.zunyi.gov.cn/zwgk/xxgkzd/"><i></i>信息公开制度</a></li>
+                    <li class="b3"><a href="http://mzj.zunyi.gov.cn/zwgk/xxgknb/"><i></i>信息公开年报</a></li>
+                    <li class="b4"><a href="http://mzj.zunyi.gov.cn/zwgk/zdlygk/"><i></i>重点领域公开</a></li>
+                    <!--<li class="b5"><a href="http://mzj.zunyi.gov.cn/zwgk/fgkxxml/"><i></i>非公开信息目录</a></li>-->
+                    <li class="b6"><a href="http://www.zunyi.gov.cn/zwgk/ysqgk/bmlb/zfgzbm/smzj_5818156/" target="_blank"><i></i>依申请公开</a></li>
+                    <!--<li class="b7"><a href=""><i></i>信息公开意见箱</a></li>-->
+                    <li class="b8"><a href="http://mzj.zunyi.gov.cn/zwgk/wzgznb/"><i></i>网站工作年报</a></li>
+                </ul>
+            </div>
+            <div class="affairs_listtwo">
+                <div class="hd">
+                    <ul>
+                        <li><a href="http://mzj.zunyi.gov.cn/zwgk/fdzdgknr/zcfg/">政策法规</a></li>
+                        <li><a href="http://mzj.zunyi.gov.cn/zwgk/fdzdgknr/zcjd/">政策解读</a></li>
+                        <li><a href="http://mzj.zunyi.gov.cn/zwgk/fdzdgknr/zjxx/">资金信息</a></li>
+                        <li><a href="http://mzj.zunyi.gov.cn/zwgk/fdzdgknr/xzql/">行政权力</a></li>
+                        <li><a href="http://mzj.zunyi.gov.cn/zwgk/fdzdgknr/shjd/">社会监督</a></li>
+                    </ul>
+                </div>
+                <div class="bd">
+                    <ul>
+                        
+    <li>
+        
+            
+        
+        
+            
+                <a TARGET="_blank" title="儿童福利机构管理办法"  href="http://mzj.zunyi.gov.cn/zwgk/fdzdgknr/zcfg/202603/t20260302_89592072.html">
+            
+        
+        儿童福利机构管理办法
+        </a>
+        <span>2026-03-02</span>
+    </li>
+
+    <li>
+        
+            
+        
+        
+            
+                <a TARGET="_blank" title="关于印发《贵州省普惠性养老机构认定与管理办法(试行)》的通知"  href="http://mzj.zunyi.gov.cn/zwgk/fdzdgknr/zcfg/202602/t20260224_89565840.html">
+            
+        
+        关于印发《贵州省普惠性养老机构认定与管理办法(试行)》的通知
+        </a>
+        <span>2026-02-24</span>
+    </li>
+
+    <li>
+        
+            
+        
+        
+            
+                <a TARGET="_blank" title="省民政厅关于印发《贵州省进一步加强和规范高龄津贴发放管理工作若干措施》的通知"  href="http://mzj.zunyi.gov.cn/zwgk/fdzdgknr/zcfg/202507/t20250723_88321424.html">
+            
+        
+        省民政厅关于印发《贵州省进一步加强和规范高龄津贴发放管理工作若干措施》的通知
+        </a>
+        <span>2025-07-23</span>
+    </li>
+
+    <li>
+        
+            
+        
+        
+            
+                <a TARGET="_blank" title="民政部公布《行政区划代码管理办法》"  href="http://mzj.zunyi.gov.cn/zwgk/fdzdgknr/zcfg/202507/t20250710_88268902.html">
+            
+        
+        民政部公布《行政区划代码管理办法》
+        </a>
+        <span>2025-07-10</span>
+    </li>
+
+    <li>
+        
+            
+        
+        
+            
+                <a TARGET="_blank" title="遵义市民政局关于印发遵义市刚性支出困难家庭认定实施细则的通知"  href="http://mzj.zunyi.gov.cn/zwgk/fdzdgknr/zcfg/202503/t20250305_86990535.html">
+            
+        
+        遵义市民政局关于印发遵义市刚性支出困难家庭认定实施细则的通知
+        </a>
+        <span>2025-03-05</span>
+    </li>
+
+                    </ul>
+                    <ul>
+                        
+    <li>
+        
+            
+        
+        
+            
+                <a TARGET="_blank" title="《儿童福利机构管理办法》解读"  href="http://mzj.zunyi.gov.cn/zwgk/fdzdgknr/zcjd/202603/t20260302_89592116.html">
+            
+        
+        《儿童福利机构管理办法》解读
+        </a>
+        <span>2026-03-02</span>
+    </li>
+
+    <li>
+        
+            
+        
+        
+            
+                <a TARGET="_blank" title="图解 | 《贵州省普惠性养老机构认定与管理办法(试行)》的通知"  href="http://mzj.zunyi.gov.cn/zwgk/fdzdgknr/zcjd/202602/t20260224_89565872.html">
+            
+        
+        图解 | 《贵州省普惠性养老机构认定与管理办法(试行)》的通知
+        </a>
+        <span>2026-02-24</span>
+    </li>
+
+    <li>
+        
+            
+        
+        
+            
+                <a TARGET="_blank" title="《贵州省进一步加强和规范高龄津贴发放管理工作若干措施》政策解读"  href="http://mzj.zunyi.gov.cn/zwgk/fdzdgknr/zcjd/202507/t20250723_88321433.html">
+            
+        
+        《贵州省进一步加强和规范高龄津贴发放管理工作若干措施》政策解读
+        </a>
+        <span>2025-07-23</span>
+    </li>
+
+    <li>
+        
+            
+        
+        
+            
+                <a TARGET="_blank" title="一文详解《行政区划代码管理办法》"  href="http://mzj.zunyi.gov.cn/zwgk/fdzdgknr/zcjd/202507/t20250710_88268920.html">
+            
+        
+        一文详解《行政区划代码管理办法》
+        </a>
+        <span>2025-07-10</span>
+    </li>
+
+    <li>
+        
+            
+        
+        
+            
+                <a TARGET="_blank" title="《遵义市刚性支出困难家庭认定实施细则》政策解读"  href="http://mzj.zunyi.gov.cn/zwgk/fdzdgknr/zcjd/202503/t20250305_86990561.html">
+            
+        
+        《遵义市刚性支出困难家庭认定实施细则》政策解读
+        </a>
+        <span>2025-03-05</span>
+    </li>
+
+                    </ul>
+                    <ul>
+                        
+    <li>
+        
+            
+        
+        
+            
+                <a TARGET="_blank" title="遵义市务川精神病院2026年单位预算及“三公”经费预算信息公开"  href="http://mzj.zunyi.gov.cn/zwgk/fdzdgknr/zjxx/202602/t20260227_89583069.html">
+            
+        
+        遵义市务川精神病院2026年单位预算及“三公”经费预算信息公开
+        </a>
+        <span>2026-02-27</span>
+    </li>
+
+    <li>
+        
+            
+        
+        
+            
+                <a TARGET="_blank" title="遵义市精神病院2026年单位预算及“三公”经费预算信息"  href="http://mzj.zunyi.gov.cn/zwgk/fdzdgknr/zjxx/202602/t20260227_89583034.html">
+            
+        
+        遵义市精神病院2026年单位预算及“三公”经费预算信息
+        </a>
+        <span>2026-02-27</span>
+    </li>
+
+    <li>
+        
+            
+        
+        
+            
+                <a TARGET="_blank" title="遵义市民政局2026年部门预算及“三公”经费预算信息"  href="http://mzj.zunyi.gov.cn/zwgk/fdzdgknr/zjxx/202602/t20260227_89582990.html">
+            
+        
+        遵义市民政局2026年部门预算及“三公”经费预算信息
+        </a>
+        <span>2026-02-27</span>
+    </li>
+
+    <li>
+        
+            
+        
+        
+            
+                <a TARGET="_blank" title="遵义市民政局2026年单位预算及“三公”经费预算信息"  href="http://mzj.zunyi.gov.cn/zwgk/fdzdgknr/zjxx/202602/t20260227_89582970.html">
+            
+        
+        遵义市民政局2026年单位预算及“三公”经费预算信息
+        </a>
+        <span>2026-02-27</span>
+    </li>
+
+    <li>
+        
+            
+        
+        
+            
+                <a TARGET="_blank" title="2025年第四季度“三公”经费执行情况表"  href="http://mzj.zunyi.gov.cn/zwgk/fdzdgknr/zjxx/202601/t20260106_89120889.html">
+            
+        
+        2025年第四季度“三公”经费执行情况表
+        </a>
+        <span>2026-01-06</span>
+    </li>
+
+                    </ul>
+                    <ul>
+                       
+    <li>
+        
+            
+        
+        
+            
+                <a TARGET="_blank" title="遵义市民政局2025年下半年市本级社会组织“双随机、一公开”抽查情况公告"  href="http://mzj.zunyi.gov.cn/zwgk/fdzdgknr/xzql/202512/t20251202_89006740.html">
+            
+        
+        遵义市民政局2025年下半年市本级社会组织“双随机、一公开”抽查情况公告
+        </a>
+        <span>2025-12-02</span>
+    </li>
+
+    <li>
+        
+            
+        
+        
+            
+                <a TARGET="_blank" title="遵义市民政局2025年上半年市本级社会组织“双随机、一公开”抽查情况公告"  href="http://mzj.zunyi.gov.cn/zwgk/fdzdgknr/xzql/202508/t20250807_88424138.html">
+            
+        
+        遵义市民政局2025年上半年市本级社会组织“双随机、一公开”抽查情况公告
+        </a>
+        <span>2025-08-13</span>
+    </li>
+
+    <li>
+        
+            
+        
+        
+            
+                <a TARGET="_blank" title="遵义市市级社会组织2024年度检查补检拟定结论及相关数据公示"  href="http://mzj.zunyi.gov.cn/mzyw/tzgs/202508/t20250808_88432310.html">
+            
+        
+        遵义市市级社会组织2024年度检查补检拟定结论及相关数据公示
+        </a>
+        <span>2025-08-08</span>
+    </li>
+
+    <li>
+        
+            
+        
+        
+            
+                <a TARGET="_blank" title="遵义市市级社会组织2024年度检查拟定结论及相关数据公示（第六批）"  href="http://mzj.zunyi.gov.cn/zwgk/fdzdgknr/xzql/202507/t20250717_88298497.html">
+            
+        
+        遵义市市级社会组织2024年度检查拟定结论及相关数据公示（第六批）
+        </a>
+        <span>2025-07-17</span>
+    </li>
+
+    <li>
+        
+            
+        
+        
+            
+                <a TARGET="_blank" title="遵义市市级社会组织2024年度检查拟定结论及相关数据公示（第三批）"  href="http://mzj.zunyi.gov.cn/zwgk/fdzdgknr/xzql/202506/t20250605_88017522.html">
+            
+        
+        遵义市市级社会组织2024年度检查拟定结论及相关数据公示（第三批）
+        </a>
+        <span>2025-06-05</span>
+    </li>
+
+                    </ul>
+                    <ul>
+                        
+    <li>
+        
+            
+        
+        
+            
+                <a TARGET="_blank" title="遵义市民政局重大行政执法决定法制审核清单"  href="http://mzj.zunyi.gov.cn/zwgk/fdzdgknr/shjd/202511/t20251120_88962608.html">
+            
+        
+        遵义市民政局重大行政执法决定法制审核清单
+        </a>
+        <span>2025-11-20</span>
+    </li>
+
+    <li>
+        
+            
+        
+        
+            
+                <a TARGET="_blank" title="遵义市市级社会组织2024年度检查拟定结论及相关数据公示（第四批）"  href="http://mzj.zunyi.gov.cn/zwgk/fdzdgknr/shjd/202506/t20250620_88166287.html">
+            
+        
+        遵义市市级社会组织2024年度检查拟定结论及相关数据公示（第四批）
+        </a>
+        <span>2025-06-20</span>
+    </li>
+
+    <li>
+        
+            
+        
+        
+            
+                <a TARGET="_blank" title="遵义市市级社会组织2024年度检查拟定结论及相关数据公示（第三批）"  href="http://mzj.zunyi.gov.cn/zwgk/fdzdgknr/shjd/202506/t20250605_88017522.html">
+            
+        
+        遵义市市级社会组织2024年度检查拟定结论及相关数据公示（第三批）
+        </a>
+        <span>2025-06-05</span>
+    </li>
+
+    <li>
+        
+            
+        
+        
+            
+                <a TARGET="_blank" title="遵义市民政局2024年法治建设工作情况报告"  href="http://mzj.zunyi.gov.cn/zwgk/fdzdgknr/shjd/202501/t20250123_86675864.html">
+            
+        
+        遵义市民政局2024年法治建设工作情况报告
+        </a>
+        <span>2025-03-06</span>
+    </li>
+
+    <li>
+        
+            
+        
+        
+            
+                <a TARGET="_blank" title="遵义市民政局关于连续两年以上未参加年检市级社会组织名单公示"  href="http://mzj.zunyi.gov.cn/zwgk/fdzdgknr/shjd/202410/t20241011_85925663.html">
+            
+        
+        遵义市民政局关于连续两年以上未参加年检市级社会组织名单公示
+        </a>
+        <span>2024-10-11</span>
+    </li>
+
+                    </ul>
+                </div>
+            </div>
+            <script type="text/javascript">
+                jQuery(".affairs_listtwo").slide({titCell: ".hd li",mainCell: ".bd",effect:"fade"});
+            </script>
+            <div class="affairs_listthree">
+                <ul>
+                    <li class="c1"><a href="http://mzj.zunyi.gov.cn/zwgk/fdzdgknr/zzjg/"><i></i>组织机构</a></li>
+                    <li class="c2"><a href="http://mzj.zunyi.gov.cn/zwgk/fdzdgknr/rsxx/"><i></i>人事信息</a></li>
+                    <li class="c3"><a href="http://mzj.zunyi.gov.cn/zwgk/fdzdgknr/tjxx/"><i></i>统计信息</a></li>
+                    <li class="c4"><a href="http://mzj.zunyi.gov.cn/zwgk/fdzdgknr/ghjh/"><i></i>规划信息</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!--办事服务、互动交流、专题专栏-->
+        <div class="r_box">
+            <!--办事服务-->
+            <div class="business">
+                <div class="hd">
+                    <a href="http://mzj.zunyi.gov.cn/bsfw/"></a>
+                </div>
+                <div class="bd">
+                    <div class="fw_logo"><a href="http://mzj.zunyi.gov.cn/bsfw/"></a></div>
+                    <div class="list">
+                        <ul>
+                            <li><a href="https://bmcx.zwfw.guizhou.gov.cn:86/bmcx/?areacode=520300" target="_blank">便民服务</a></li>
+                            <li><a href="https://zwfw.guizhou.gov.cn/yewulist.do?areacode=520300" target="_blank">办件公示</a></li>
+                            <li><a href="https://zwfw.guizhou.gov.cn/qyfw.do?ctype=2&code=0&status=0&areacode=520300" target="_blank">行政审批</a></li>
+                            <li class="public"><a href="http://103.3.152.87:81/eptemp.aspx?t=Zwzx.pj.windowsevaluate&istest=1&oname=%E9%81%B5%E4%B9%89%E5%B8%82%E6%B0%91%E6%94%BF%E5%B1%80&ocode=009500570&areacode=520300" target="_blank">我要评价</a></li>
+                            <li><a href="https://smrz.zwfw.guizhou.gov.cn/sso/login?utype=0&redirect=istrue&client_id=5ZYPTXH7G&goto=http://zwfw.guizhou.gov.cn/api/oauth/return_url.aspx" target="_blank">我要咨询</a></li>
+                            <li><a href="https://smrz.zwfw.guizhou.gov.cn/sso/login?utype=0&redirect=istrue&client_id=5ZYPTXH7G&goto=http://zwfw.guizhou.gov.cn/api/oauth/return_url.aspx" target="_blank">我要投诉</a></li>
+                            <li><a href="https://smrz.zwfw.guizhou.gov.cn/sso/login?utype=0&redirect=istrue&client_id=5ZYPTXH7G&goto=http://zwfw.guizhou.gov.cn/api/oauth/return_url.aspx" target="_blank">我要建议</a></li>
+                            <li class="public"><a href="https://smrz.zwfw.guizhou.gov.cn/sso/login?utype=0&redirect=istrue&client_id=5ZYPTXH7G&goto=http://zwfw.guizhou.gov.cn/api/oauth/return_url.aspx" target="_blank">我要举报</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!--互动交流-->
+            <div class="interaction">
+                <div class="hd">
+                    <a href="http://mzj.zunyi.gov.cn/hdjl/"></a>
+                </div>
+                <div class="bd">
+                    <ul>
+                        <li><a href="http://mzj.zunyi.gov.cn/hdjl/ldxx/" target="_blank"><i></i>领导信箱</a></li>
+                        <li><a href="http://mzj.zunyi.gov.cn/hdjl/wszj/"><i></i>征集调查</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!--专题专栏-->
+            <div class="special_column">
+                <div class="hd">
+                    <a href="http://mzj.zunyi.gov.cn/ztzl/"></a>
+                </div>
+                <div class="special_slide">
+                       <style>
+    .guidang1 {
+        color: red;
+        font-size: 30px;
+        position: absolute;
+        background: rgba(0, 0, 0, 0.5);
+        width: 100%;
+        color: white;
+        top: 0;
+        left: 0;
+    }
+
+    .yiguidang1 {
+        height: 78px;
+        width: 81px;
+        position: absolute;
+        background: url(/images/xin_ygd.png) no-repeat;
+        right: 11px;
+        top: 40px;
+    }
+</style>
+<div class="s_bd">
+    <ul>
+        
+            <li style="position:relative">
+                
+                    
+                        <a TARGET="_blank" href="http://mzj.zunyi.gov.cn/ztzl/bzfw/index.html" title="殡葬服务">
+                    
+                
+                
+                    
+                
+                <!--获取图片-->
+                <img src="http://mzj.zunyi.gov.cn/ztzl/rdzt/202510/W020251028570096323208.jpg"/>
+                <script>
+        var isok = '是'
+        var time1 = ''
+        if (isok == "否") {
+            document.write('<span class="yiguidang1"></span><span class="guidang1">' + time1 + '</span>')
+        }
+    </script>
+                </a>
+            </li>
+        
+            <li style="position:relative">
+                
+                    
+                        <a TARGET="_blank" href="http://mzj.zunyi.gov.cn/ztzl/2025gjwlaqxcz/index.html" title="2025年国家网络安全宣传周">
+                    
+                
+                
+                    
+                
+                <!--获取图片-->
+                <img src="http://mzj.zunyi.gov.cn/ztzl/rdzt/202509/W020250918446373236653.png"/>
+                <script>
+        var isok = '是'
+        var time1 = ''
+        if (isok == "否") {
+            document.write('<span class="yiguidang1"></span><span class="guidang1">' + time1 + '</span>')
+        }
+    </script>
+                </a>
+            </li>
+        
+            <li style="position:relative">
+                
+                    
+                        <a TARGET="_blank" href="https://www.gov.cn/zhengce/zczhjd/" title="重要政策举措及实施效果">
+                    
+                
+                
+                    
+                
+                <!--获取图片-->
+                <img src="http://mzj.zunyi.gov.cn/ztzl/rdzt/202308/W020230801565565537917.jpg"/>
+                <script>
+        var isok = '是'
+        var time1 = ''
+        if (isok == "否") {
+            document.write('<span class="yiguidang1"></span><span class="guidang1">' + time1 + '</span>')
+        }
+    </script>
+                </a>
+            </li>
+        
+            <li style="position:relative">
+                
+                    
+                        <a TARGET="_blank" href="https://117.187.130.246:1314/appointment/biz/index.html#/home" title="婚姻登记预约">
+                    
+                
+                
+                    
+                
+                <!--获取图片-->
+                <img src="http://mzj.zunyi.gov.cn/ztzl/rdzt/202004/P020200416535000014610.jpg"/>
+                <script>
+        var isok = ''
+        var time1 = ''
+        if (isok == "否") {
+            document.write('<span class="yiguidang1"></span><span class="guidang1">' + time1 + '</span>')
+        }
+    </script>
+                </a>
+            </li>
+        
+            <li style="position:relative">
+                
+                    
+                        <a TARGET="_blank" href="http://61.243.10.146:9090/" title="双随机一公开">
+                    
+                
+                
+                    
+                
+                <!--获取图片-->
+                <img src="http://mzj.zunyi.gov.cn/ztzl/rdzt/202004/P020200416534998849814.jpg"/>
+                <script>
+        var isok = ''
+        var time1 = ''
+        if (isok == "否") {
+            document.write('<span class="yiguidang1"></span><span class="guidang1">' + time1 + '</span>')
+        }
+    </script>
+                </a>
+            </li>
+        
+            <li style="position:relative">
+                
+                    
+                        <a TARGET="_blank" href="https://gzzy.zhiyuanyun.com/" title="志愿遵义">
+                    
+                
+                
+                    
+                
+                <!--获取图片-->
+                <img src="http://mzj.zunyi.gov.cn/ztzl/rdzt/202004/P020200416535001190010.jpg"/>
+                <script>
+        var isok = ''
+        var time1 = ''
+        if (isok == "否") {
+            document.write('<span class="yiguidang1"></span><span class="guidang1">' + time1 + '</span>')
+        }
+    </script>
+                </a>
+            </li>
+        
+    </ul>
+</div>
+<div class="s_hd">
+    <ul>
+        
+            <li></li>
+        
+            <li></li>
+        
+            <li></li>
+        
+            <li></li>
+        
+            <li></li>
+        
+    </ul>
+</div>
+                </div>
+                <script type="text/javascript">
+                    jQuery(".special_slide").slide({titCell: ".s_hd li",mainCell: ".s_bd ul",effect:"fade"});
+                </script>
+            </div>
+        </div>
+    </div>
+    <!--<a href="http://www.zunyi.gov.cn/ztzl/jjdyyqfkjqz/" target="_blank"><img src="./images/yqfk.png" /></a>-->
+</div>
+<!--友情链接-->
+<div class="f_link">
+    <div class="links">
+        <dl>
+            <dt>友情链接：</dt>
+            <dd>
+                <ul class="yqlj">
+                    <li class="nLi">
+                        <div class="pub_f"><a id="yqlj1" href="javascript:void(0)">国家部委网站</a></div>
+                        <ul id="box1" class="sub" style="display: none;">
+                            <a id="gb1" class="guanbi">关闭</a>
+                            <div class="ww1">
+                                <ul>
+                                    
+		<li>
+			<!--判断是否外部链接-->
+			
+				
+				 <a TARGET="_blank" title="交通运输部"  href="http://www.mot.gov.cn/">
+				
+			
+			
+				
+			
+			交通运输部
+			</a>
+		</li>
+	
+		<li>
+			<!--判断是否外部链接-->
+			
+				
+				 <a TARGET="_blank" title="商务部"  href="http://www.mofcom.gov.cn/">
+				
+			
+			
+				
+			
+			商务部
+			</a>
+		</li>
+	
+		<li>
+			<!--判断是否外部链接-->
+			
+				
+				 <a TARGET="_blank" title="农业农村部"  href="http://www.moa.gov.cn/">
+				
+			
+			
+				
+			
+			农业农村部
+			</a>
+		</li>
+	
+		<li>
+			<!--判断是否外部链接-->
+			
+				
+				 <a TARGET="_blank" title="水利部"  href="http://www.mwr.gov.cn/">
+				
+			
+			
+				
+			
+			水利部
+			</a>
+		</li>
+	
+		<li>
+			<!--判断是否外部链接-->
+			
+				
+				 <a TARGET="_blank" title="住房和城乡建设部"  href="http://www.mohurd.gov.cn/">
+				
+			
+			
+				
+			
+			住房和城乡建设部
+			</a>
+		</li>
+	
+		<li>
+			<!--判断是否外部链接-->
+			
+				
+				 <a TARGET="_blank" title="生态环境部"  href="http://www.mee.gov.cn/">
+				
+			
+			
+				
+			
+			生态环境部
+			</a>
+		</li>
+	
+		<li>
+			<!--判断是否外部链接-->
+			
+				
+				 <a TARGET="_blank" title="自然资源部"  href="http://www.mnr.gov.cn/">
+				
+			
+			
+				
+			
+			自然资源部
+			</a>
+		</li>
+	
+		<li>
+			<!--判断是否外部链接-->
+			
+				
+				 <a TARGET="_blank" title="人力资源和社会保障部"  href="http://www.mohrss.gov.cn/">
+				
+			
+			
+				
+			
+			人力资源和社会保障部
+			</a>
+		</li>
+	
+		<li>
+			<!--判断是否外部链接-->
+			
+				
+				 <a TARGET="_blank" title="财政部"  href="http://www.mof.gov.cn/">
+				
+			
+			
+				
+			
+			财政部
+			</a>
+		</li>
+	
+		<li>
+			<!--判断是否外部链接-->
+			
+				
+				 <a TARGET="_blank" title="司法部"  href="http://www.moj.gov.cn/">
+				
+			
+			
+				
+			
+			司法部
+			</a>
+		</li>
+	
+		<li>
+			<!--判断是否外部链接-->
+			
+				
+				 <a TARGET="_blank" title="民政部"  href="http://www.mca.gov.cn/">
+				
+			
+			
+				
+			
+			民政部
+			</a>
+		</li>
+	
+		<li>
+			<!--判断是否外部链接-->
+			
+				
+				 <a TARGET="_blank" title="公安部"  href="https://www.mps.gov.cn/">
+				
+			
+			
+				
+			
+			公安部
+			</a>
+		</li>
+	
+		<li>
+			<!--判断是否外部链接-->
+			
+				
+				 <a TARGET="_blank" title="国家民族事务委员会"  href="http://www.seac.gov.cn/">
+				
+			
+			
+				
+			
+			国家民族事务委员会
+			</a>
+		</li>
+	
+		<li>
+			<!--判断是否外部链接-->
+			
+				
+				 <a TARGET="_blank" title="工业和信息化部"  href="http://www.miit.gov.cn/">
+				
+			
+			
+				
+			
+			工业和信息化部
+			</a>
+		</li>
+	
+		<li>
+			<!--判断是否外部链接-->
+			
+				
+				 <a TARGET="_blank" title="教育部"  href="http://www.moe.gov.cn/">
+				
+			
+			
+				
+			
+			教育部
+			</a>
+		</li>
+	
+		<li>
+			<!--判断是否外部链接-->
+			
+				
+				 <a TARGET="_blank" title="国家发展和改革委员会"  href="http://www.ndrc.gov.cn/">
+				
+			
+			
+				
+			
+			国家发展和改革委员会
+			</a>
+		</li>
+	
+		<li>
+			<!--判断是否外部链接-->
+			
+				
+				 <a TARGET="_blank" title="国防部"  href="http://www.mod.gov.cn/">
+				
+			
+			
+				
+			
+			国防部
+			</a>
+		</li>
+	
+		<li>
+			<!--判断是否外部链接-->
+			
+				
+				 <a TARGET="_blank" title="外交部"  href="http://www.fmprc.gov.cn/web/">
+				
+			
+			
+				
+			
+			外交部
+			</a>
+		</li>
+	
+		<li>
+			<!--判断是否外部链接-->
+			
+				
+				 <a TARGET="_blank" title="科学技术部"  href="http://www.most.gov.cn/">
+				
+			
+			
+				
+			
+			科学技术部
+			</a>
+		</li>
+	
+                                </ul>
+                            </div>
+                        </ul>
+                    </li>
+                    <li class="nLi">
+                        <div class="pub_f"><a id="yqlj2" href="javascript:void(0)">省级政府网站</a></div>
+                        <ul id="box2" class="sub" style="display: none;">
+                            <a id="gb2" class="guanbi">关闭</a>
+                            <div class="ww1">
+                                <ul>
+                                    
+		<li>
+			<!--判断是否外部链接-->
+			
+				
+				 <a TARGET="_blank" title="浙江"  href="http://www.zj.gov.cn/">
+				
+			
+			
+				
+			
+			浙江
+			</a>
+		</li>
+	
+		<li>
+			<!--判断是否外部链接-->
+			
+				
+				 <a TARGET="_blank" title="广西"  href="http://www.gxzf.gov.cn/">
+				
+			
+			
+				
+			
+			广西
+			</a>
+		</li>
+	
+		<li>
+			<!--判断是否外部链接-->
+			
+				
+				 <a TARGET="_blank" title="广东"  href="http://www.gd.gov.cn/">
+				
+			
+			
+				
+			
+			广东
+			</a>
+		</li>
+	
+		<li>
+			<!--判断是否外部链接-->
+			
+				
+				 <a TARGET="_blank" title="湖南"  href="http://www.hunan.gov.cn/">
+				
+			
+			
+				
+			
+			湖南
+			</a>
+		</li>
+	
+		<li>
+			<!--判断是否外部链接-->
+			
+				
+				 <a TARGET="_blank" title="湖北"  href="http://www.hubei.gov.cn/">
+				
+			
+			
+				
+			
+			湖北
+			</a>
+		</li>
+	
+		<li>
+			<!--判断是否外部链接-->
+			
+				
+				 <a TARGET="_blank" title="河南"  href="http://www.henan.gov.cn/">
+				
+			
+			
+				
+			
+			河南
+			</a>
+		</li>
+	
+		<li>
+			<!--判断是否外部链接-->
+			
+				
+				 <a TARGET="_blank" title="山东"  href="http://www.shandong.gov.cn/">
+				
+			
+			
+				
+			
+			山东
+			</a>
+		</li>
+	
+		<li>
+			<!--判断是否外部链接-->
+			
+				
+				 <a TARGET="_blank" title="江西"  href="http://www.jiangxi.gov.cn/">
+				
+			
+			
+				
+			
+			江西
+			</a>
+		</li>
+	
+		<li>
+			<!--判断是否外部链接-->
+			
+				
+				 <a TARGET="_blank" title="福建"  href="http://www.fujian.gov.cn/">
+				
+			
+			
+				
+			
+			福建
+			</a>
+		</li>
+	
+		<li>
+			<!--判断是否外部链接-->
+			
+				
+				 <a TARGET="_blank" title="安徽"  href="http://www.ah.gov.cn/">
+				
+			
+			
+				
+			
+			安徽
+			</a>
+		</li>
+	
+		<li>
+			<!--判断是否外部链接-->
+			
+				
+				 <a TARGET="_blank" title="江苏"  href="http://www.jiangsu.gov.cn/">
+				
+			
+			
+				
+			
+			江苏
+			</a>
+		</li>
+	
+		<li>
+			<!--判断是否外部链接-->
+			
+				
+				 <a TARGET="_blank" title="上海"  href="http://www.shanghai.gov.cn/">
+				
+			
+			
+				
+			
+			上海
+			</a>
+		</li>
+	
+		<li>
+			<!--判断是否外部链接-->
+			
+				
+				 <a TARGET="_blank" title="黑龙江"  href="http://www.hlj.gov.cn/">
+				
+			
+			
+				
+			
+			黑龙江
+			</a>
+		</li>
+	
+		<li>
+			<!--判断是否外部链接-->
+			
+				
+				 <a TARGET="_blank" title="吉林"  href="http://www.jl.gov.cn/">
+				
+			
+			
+				
+			
+			吉林
+			</a>
+		</li>
+	
+		<li>
+			<!--判断是否外部链接-->
+			
+				
+				 <a TARGET="_blank" title="辽宁"  href="http://www.ln.gov.cn/">
+				
+			
+			
+				
+			
+			辽宁
+			</a>
+		</li>
+	
+		<li>
+			<!--判断是否外部链接-->
+			
+				
+				 <a TARGET="_blank" title="内蒙古"  href="http://www.nmg.gov.cn/">
+				
+			
+			
+				
+			
+			内蒙古
+			</a>
+		</li>
+	
+		<li>
+			<!--判断是否外部链接-->
+			
+				
+				 <a TARGET="_blank" title="山西"  href="http://www.shanxi.gov.cn/">
+				
+			
+			
+				
+			
+			山西
+			</a>
+		</li>
+	
+		<li>
+			<!--判断是否外部链接-->
+			
+				
+				 <a TARGET="_blank" title="河北"  href="http://www.hebei.gov.cn/">
+				
+			
+			
+				
+			
+			河北
+			</a>
+		</li>
+	
+		<li>
+			<!--判断是否外部链接-->
+			
+				
+				 <a TARGET="_blank" title="天津"  href="http://www.tj.gov.cn/">
+				
+			
+			
+				
+			
+			天津
+			</a>
+		</li>
+	
+		<li>
+			<!--判断是否外部链接-->
+			
+				
+				 <a TARGET="_blank" title="北京"  href="http://www.beijing.gov.cn/">
+				
+			
+			
+				
+			
+			北京
+			</a>
+		</li>
+	
+                                </ul>
+                            </div>
+                        </ul>
+                    </li>
+                    <li class="nLi">
+                        <div class="pub_f"><a id="yqlj3" href="javascript:void(0)">各省民政网站</a></div>
+                        <ul id="box3" class="sub" style="display: none;">
+                            <a id="gb3" class="guanbi">关闭</a>
+                            <div class="ww1">
+                                <ul>
+                                    
+		<li>
+			<!--判断是否外部链接-->
+			
+				
+				 <a TARGET="_blank" title="贵州省"  href="http://mzt.guizhou.gov.cn/">
+				
+			
+			
+				
+			
+			贵州省
+			</a>
+		</li>
+	
+		<li>
+			<!--判断是否外部链接-->
+			
+				
+				 <a TARGET="_blank" title="山东省"  href="http://mzt.shandong.gov.cn/">
+				
+			
+			
+				
+			
+			山东省
+			</a>
+		</li>
+	
+		<li>
+			<!--判断是否外部链接-->
+			
+				
+				 <a TARGET="_blank" title="陕西省"  href="http://mzt.shaanxi.gov.cn/">
+				
+			
+			
+				
+			
+			陕西省
+			</a>
+		</li>
+	
+		<li>
+			<!--判断是否外部链接-->
+			
+				
+				 <a TARGET="_blank" title="河南省"  href="http://www.henanmz.gov.cn/">
+				
+			
+			
+				
+			
+			河南省
+			</a>
+		</li>
+	
+		<li>
+			<!--判断是否外部链接-->
+			
+				
+				 <a TARGET="_blank" title="湖南省"  href="http://mzt.hunan.gov.cn/">
+				
+			
+			
+				
+			
+			湖南省
+			</a>
+		</li>
+	
+		<li>
+			<!--判断是否外部链接-->
+			
+				
+				 <a TARGET="_blank" title="吉林省"  href="http://mzt.jl.gov.cn/">
+				
+			
+			
+				
+			
+			吉林省
+			</a>
+		</li>
+	
+		<li>
+			<!--判断是否外部链接-->
+			
+				
+				 <a TARGET="_blank" title="广东省"  href="http://smzt.gd.gov.cn/">
+				
+			
+			
+				
+			
+			广东省
+			</a>
+		</li>
+	
+                                </ul>
+                            </div>
+                        </ul>
+                    </li>
+                    <li class="nLi">
+                        <div class="pub_f"><a id="yqlj4" href="javascript:void(0)">各市民政局网站</a></div>
+                        <ul id="box4" class="sub" style="display: none;">
+                            <a id="gb4" class="guanbi">关闭</a>
+                            <div class="ww1">
+                                <ul>
+                                    
+		<li>
+			<!--判断是否外部链接-->
+			
+				
+				 <a TARGET="_blank" title="黔西南州"  href="http://www.qxn.gov.cn/zwgk/zfjg/zmzj_5135069/bmxxgkml_5135072/">
+				
+			
+			
+				
+			
+			黔西南州
+			</a>
+		</li>
+	
+		<li>
+			<!--判断是否外部链接-->
+			
+				
+				 <a TARGET="_blank" title="黔南州"  href="http://mzj.qiannan.gov.cn/">
+				
+			
+			
+				
+			
+			黔南州
+			</a>
+		</li>
+	
+		<li>
+			<!--判断是否外部链接-->
+			
+				
+				 <a TARGET="_blank" title="黔东南州"  href="http://mzj.qdn.gov.cn/">
+				
+			
+			
+				
+			
+			黔东南州
+			</a>
+		</li>
+	
+		<li>
+			<!--判断是否外部链接-->
+			
+				
+				 <a TARGET="_blank" title="铜仁市"  href="http://mzj.trs.gov.cn/">
+				
+			
+			
+				
+			
+			铜仁市
+			</a>
+		</li>
+	
+		<li>
+			<!--判断是否外部链接-->
+			
+				
+				 <a TARGET="_blank" title="毕节市"  href="http://www.bijie.gov.cn/bm/bjsmzj/index.shtml">
+				
+			
+			
+				
+			
+			毕节市
+			</a>
+		</li>
+	
+		<li>
+			<!--判断是否外部链接-->
+			
+				
+				 <a TARGET="_blank" title="六盘水市"  href="http://mzj.gzlps.gov.cn/">
+				
+			
+			
+				
+			
+			六盘水市
+			</a>
+		</li>
+	
+		<li>
+			<!--判断是否外部链接-->
+			
+				
+				 <a TARGET="_blank" title="安顺市"  href="http://smzj.anshun.gov.cn/">
+				
+			
+			
+				
+			
+			安顺市
+			</a>
+		</li>
+	
+		<li>
+			<!--判断是否外部链接-->
+			
+				
+				 <a TARGET="_blank" title="贵阳市"  href="http://mzj.guiyang.gov.cn/">
+				
+			
+			
+				
+			
+			贵阳市
+			</a>
+		</li>
+	
+                                </ul>
+                            </div>
+                        </ul>
+                    </li>
+                    <li class="nLi">
+                        <div class="pub_f"><a id="yqlj5" href="javascript:void(0)">遵义市区县网站</a></div>
+                        <ul id="box5" class="sub" style="display: none;">
+                            <a id="gb4" class="guanbi">关闭</a>
+                            <div class="ww1">
+                                <ul>
+                                    
+		<li>
+			<!--判断是否外部链接-->
+			
+				
+				 <a TARGET="_blank" title="红花岗区人民政府"  href="http://www.zyhhg.gov.cn/">
+				
+			
+			
+				
+			
+			红花岗区人民政府
+			</a>
+		</li>
+	
+		<li>
+			<!--判断是否外部链接-->
+			
+				
+				 <a TARGET="_blank" title="汇川区人民政府"  href="http://www.zyhc.gov.cn/">
+				
+			
+			
+				
+			
+			汇川区人民政府
+			</a>
+		</li>
+	
+		<li>
+			<!--判断是否外部链接-->
+			
+				
+				 <a TARGET="_blank" title="新蒲新区管理委员会"  href="http://www.xinpu.gov.cn/">
+				
+			
+			
+				
+			
+			新蒲新区管理委员会
+			</a>
+		</li>
+	
+		<li>
+			<!--判断是否外部链接-->
+			
+				
+				 <a TARGET="_blank" title="仁怀市人民政府"  href="http://www.rh.gov.cn/">
+				
+			
+			
+				
+			
+			仁怀市人民政府
+			</a>
+		</li>
+	
+		<li>
+			<!--判断是否外部链接-->
+			
+				
+				 <a TARGET="_blank" title="桐梓县人民政府"  href="http://www.gztongzi.gov.cn/">
+				
+			
+			
+				
+			
+			桐梓县人民政府
+			</a>
+		</li>
+	
+		<li>
+			<!--判断是否外部链接-->
+			
+				
+				 <a TARGET="_blank" title="湄潭县人民政府"  href="http://www.meitan.gov.cn/">
+				
+			
+			
+				
+			
+			湄潭县人民政府
+			</a>
+		</li>
+	
+		<li>
+			<!--判断是否外部链接-->
+			
+				
+				 <a TARGET="_blank" title="凤冈县人民政府"  href="http://www.gzfenggang.gov.cn/">
+				
+			
+			
+				
+			
+			凤冈县人民政府
+			</a>
+		</li>
+	
+		<li>
+			<!--判断是否外部链接-->
+			
+				
+				 <a TARGET="_blank" title="余庆县人民政府"  href="http://www.zgyq.gov.cn/">
+				
+			
+			
+				
+			
+			余庆县人民政府
+			</a>
+		</li>
+	
+		<li>
+			<!--判断是否外部链接-->
+			
+				
+				 <a TARGET="_blank" title="绥阳县人民政府"  href="http://www.suiyang.gov.cn/">
+				
+			
+			
+				
+			
+			绥阳县人民政府
+			</a>
+		</li>
+	
+		<li>
+			<!--判断是否外部链接-->
+			
+				
+				 <a TARGET="_blank" title="正安县人民政府"  href="http://www.gzza.gov.cn/">
+				
+			
+			
+				
+			
+			正安县人民政府
+			</a>
+		</li>
+	
+		<li>
+			<!--判断是否外部链接-->
+			
+				
+				 <a TARGET="_blank" title="道真自治县人民政府"  href="http://www.gzdaozhen.gov.cn/">
+				
+			
+			
+				
+			
+			道真自治县人民政府
+			</a>
+		</li>
+	
+		<li>
+			<!--判断是否外部链接-->
+			
+				
+				 <a TARGET="_blank" title="务川自治县人民政府"  href="http://www.gzwuchuan.gov.cn/">
+				
+			
+			
+				
+			
+			务川自治县人民政府
+			</a>
+		</li>
+	
+		<li>
+			<!--判断是否外部链接-->
+			
+				
+				 <a TARGET="_blank" title="习水县人民政府"  href="http://www.xsx.gov.cn/">
+				
+			
+			
+				
+			
+			习水县人民政府
+			</a>
+		</li>
+	
+                                </ul>
+                            </div>
+                        </ul>
+                    </li>
+
+                    <script type="text/javascript">
+                        $(document).ready(function(){
+                            $("#yqlj1").click(function(){
+                                $("#box2").hide();
+                                $("#box3").hide();
+                                $("#box4").hide();
+                                $("#box5").hide();
+                                $("#box6").hide();
+                                $("#box7").hide();
+                                $("#box1").toggle();
+                            });
+                            $("#gb1").click(function(){
+                                $("#box1").hide();
+                            })
+                            $("#yqlj2").click(function(){
+                                $("#box1").hide();
+                                $("#box3").hide();
+                                $("#box4").hide();
+                                $("#box5").hide();
+                                $("#box6").hide();
+                                $("#box7").hide();
+                                $("#box2").toggle();
+                            });
+                            $("#gb2").click(function(){
+                                $("#box2").hide();
+                            })
+                            $("#yqlj3").click(function(){
+                                $("#box1").hide();
+                                $("#box2").hide();
+                                $("#box4").hide();
+                                $("#box5").hide();
+                                $("#box6").hide();
+                                $("#box7").hide();
+                                $("#box3").toggle();
+                            });
+                            $("#gb3").click(function(){
+                                $("#box3").hide();
+                            })
+                            $("#yqlj4").click(function(){
+                                $("#box1").hide();
+                                $("#box2").hide();
+                                $("#box3").hide();
+                                $("#box5").hide();
+                                $("#box6").hide();
+                                $("#box7").hide();
+                                $("#box4").toggle();
+                            });
+                            $("#gb4").click(function(){
+                                $("#box4").hide();
+                            })
+                            $("#yqlj5").click(function(){
+                                $("#box1").hide();
+                                $("#box2").hide();
+                                $("#box3").hide();
+                                $("#box4").hide();
+                                $("#box6").hide();
+                                $("#box7").hide();
+                                $("#box5").toggle();
+                            });
+                            $("#gb5").click(function(){
+                                $("#box5").hide();
+                            })
+                            $("#yqlj6").click(function(){
+                                $("#box1").hide();
+                                $("#box2").hide();
+                                $("#box3").hide();
+                                $("#box4").hide();
+                                $("#box5").hide();
+                                $("#box7").hide();
+                                $("#box6").toggle();
+                            });
+                            $("#gb6").click(function(){
+                                $("#box6").hide();
+                            })
+                            $("#yqlj7").click(function(){
+                                $("#box1").hide();
+                                $("#box2").hide();
+                                $("#box3").hide();
+                                $("#box4").hide();
+                                $("#box5").hide();
+                                $("#box6").hide();
+                                $("#box7").toggle();
+                            });
+                            $("#gb7").click(function(){
+                                $("#box7").hide();
+                            })
+                        });
+                    </script>
+                </ul>
+            </dd>
+        </dl>
+    </div>
+</div>
+<!--底部开始-->
+<div class="footer">
+    <div class="w">
+        <div class="l_dzjg_icon">
+            <ul>
+                <li><a href="http://bszs.conac.cn/sitename?method=show&id=05FDCEF2DD0879BAE053022819AC469A" target="_blank"><img src="/images/footer_img_01.png" alt="" /></a></li>
+                <li><script id="_jiucuo_" sitecode='5203000017' src='https://zfwzgl.www.gov.cn/exposure/jiucuo.js'></script></li>
+                <!--li><a href=""><img src="/images/zfzc.png" alt="" /></a></li-->
+            </ul>
+        </div>
+        <div class="c_text">
+            <p>主办单位：遵义市民政局 &nbsp;&nbsp; 地址：遵义市新蒲新区府前路建投大厦1号楼5楼</p>
+            <p>电话：0851-27615788&nbsp;&nbsp; <a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank">黔ICP备19011624号</a>&nbsp;&nbsp;网站标识码：5203000017</p>
+            <p><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=52030002001134" target="_blank"><span><img src="/images/footer_img.png" alt="" /></span>贵公网安备52030002001134号</a>&nbsp;&nbsp; 遵义市民政局&nbsp;版权所有</p>
+        </div>
+        <div class="r_nav">
+            <ul>
+                <li><a href="http://mzj.zunyi.gov.cn/syqt/gywm/">关于我们</a></li>
+                <!--<li>|</li>
+                <li><a href="http://mzj.zunyi.gov.cn/syqt/bqbh/">版权保护</a></li>-->
+                <li>|</li>
+                <li><a href="http://mzj.zunyi.gov.cn/syqt/lxwm/">联系我们</a></li>
+                <li>|</li>
+                <li><a href="http://mzj.zunyi.gov.cn/syqt/yssm/">隐私声明</a></li>
+                <li>|</li>
+                <li><a href="http://mzj.zunyi.gov.cn/syqt/wzdt/">网站地图</a></li>
+                <li>|</li>
+                <li><a href="http://mzj.zunyi.gov.cn/zwgk/wzgznb/">网站年报</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+  <!--右侧微博微信-->
+   <!--div class="wbwx">
+       <ul>
+           <li><a href="javascript:alertwx()"><i></i>微信</a></li>
+           <li><a href="https://weibo.com/p/1001065381035687/home?from=page_100106&mod=TAB&is_all=1#place" target="_blank"><i></i>微博</a></li>
+       </ul>
+   </div-->
+ <script id="_trs_ta_js" src="//ta.trs.cn/c/js/ta.js?mpid=4048" async="async" defer="defer"></script>
+
+
+
+
+<script type="text/javascript" src="//www.guizhou.gov.cn/images/Arctext.js"></script>
+<script>
+/*添加归档图章*/
+function SetIsArchive() {
+    let DocIsArchive = ($("meta[name='DocIsArchive']").length>0)?($("meta[name='DocIsArchive']").attr("content").split("|")):[0,0];
+    let ChannelIsArchive = ($("meta[name='ChannelIsArchive']").length>0)?($("meta[name='ChannelIsArchive']").attr("content").split("|")):[0,0];
+    if(parseInt(DocIsArchive[0]) == 1){
+        AddArchiveHtml(DocIsArchive[1]);
+    }else if(parseInt(ChannelIsArchive[0]) == 1){
+        //AddArchiveHtml(ChannelIsArchive[1]);
+        if(ChannelIsArchive[1] && ChannelIsArchive[1].indexOf('归档时间【')>-1){
+            let gdsj = ChannelIsArchive[1].substring(ChannelIsArchive[1].indexOf('归档时间【')+5,ChannelIsArchive[1].indexOf('】'));
+            AddArchiveHtml(gdsj);
+        }else{
+            AddArchiveHtml(ChannelIsArchive[2]);
+        }
+    }
+}
+/*填充图章html结构，根据图章情况编写*/
+function AddArchiveHtml(date) {
+    $("body").append(`
+         <div class="ArchiveGdPart">
+            <p>`+ date +`</p >            
+        </div>
+<style type="text/css">
+                .ArchiveGdPart{ position: absolute; width: 200px; background: url(/images/gd_red.png) no-repeat center top; padding: 120px 0 25px; z-index: 99; top: 50px; right: 30%; margin-right:-600px; transform: rotateZ(-20deg); }
+                .ArchiveGdPart p{ font-size: 12px; color: #F00; display: block; text-align: center; line-height: 20px; letter-spacing: -1px;}
+                @media screen and (max-width:750px ) {
+                    .ArchiveGdPart{margin-right: 0px;right: 0;zoom: 0.7;}
+                }
+            </style>
+    `);
+    $(".ArchiveGdPart p").arctext({dir:0,radius:60}); // 执行文字弯曲
+}
+$(function () {
+
+
+// 加载归档图章
+SetIsArchive();
+
+});
+</script>
+<style type="text/css">
+    /*这是归档的样式代码，*/
+    .ArchiveGdPart {
+        position: absolute;
+        width: 200px;
+        background: url(/images/gd_red.png) no-repeat center top;
+        padding: 120px 0 25px;
+        z-index: 99;
+        top: 300px;
+        right: 50%;
+        margin-right: -600px;
+        transform: rotateZ(-20deg);
+    }
+
+    .ArchiveGdPart p {
+        font-size: 12px;
+        color: #F00;
+        display: block;
+        text-align: center;
+        line-height: 0px;
+        letter-spacing: -1px;
+    }
+
+    @media screen and (max-width:750px) {
+        .ArchiveGdPart {
+            margin-right: 0px;
+            right: 0;
+            zoom: 0.7;
+        }
+    }
+</style>
+</body>
+</html>

@@ -1,0 +1,592 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><script language="javascript" src="/module/jslib/jquery/jquery.js"></script>
+<script language="javascript" src="/module/jslib/urite/urite.min.js"></script>
+
+<link href="/script/hanweb.css" type=text/css rel=stylesheet>
+<link href="/module/jslib/tag/css/infotag.css" type=text/css rel=stylesheet>
+<meta name='WebId' content='27'>
+
+<link href="/images/1068/style3.css"  type="text/css"  rel="stylesheet"/>
+<link href="/images/1068/hanweb.css" type="text/css"  rel="stylesheet" />
+<script type="text/javascript" src="/images/1068/qiehuan.js"></script>
+
+<title>淄博市水利局</title>
+<meta name='Maketime' content='2026-03-26 11:45:19'>
+
+<meta name="SiteName" content="淄博市水利局">
+<meta name="SiteDomain"  content="sl.zibo.gov.cn,淄博市水利局.政务">
+<meta name="SiteIDCode"  content="3703000060">
+<meta name="siteurl"  content="http://sl.zibo.gov.cn/index.html">
+<meta name="guild"    content="">
+<meta name="district"    content="">
+<meta name="sitecatalog"    content="">
+
+
+</head>
+<body id="page_type" alt="综合页"><div id='barrierfree_container'><script src="https://www.zibo.gov.cn/script/0/2106251957235303.js"></script>
+<!--顶部top-->
+<div class="top_box color1" ergodic="serve">
+	<div class="top_nr_box"><script src="/script/47/2501012045437019.js"></script>
+<script src="/script/47/2207141623116859.js"></script></div>
+</div>
+<div class="banner_box" ergodic="serve">
+    <div class="banner_style" style="width: 750px;float: left;"><script src="/script/0/1499845735207.js"></script></div>
+	<div class="sousuo"><script src="/script/0/1499845735201.js"></script></div>
+</div>
+<div class="logo_box color1" ergodic="navigation">
+	<div class="logo_nr"><script src="/script/0/1499845735185.js"></script></div>
+</div>
+<div class="wrapper" ergodic="view">
+	<div class="first">
+<div class="first_title" style="text-align:center;"><a href="/art/2026/3/26/art_699_2993076.html" target="_blank" title="博山区：创新河湖管护“三个三”新模式赋能颜山孝水文化新发展" class="color2">博山区：创新河湖管护“三个三”新模式赋能颜山孝水文...</a></div>
+<div class="first_list" style="line-height: 30px;text-indent: 2em"><span tabindex="0">近年来，博山区水利局建立三项巡河机制、开启三个“党建+”引擎、瞄准三个突破点的“三个三”河湖管护新模式，做实河湖管护“网格化”，构建起良好的水生态环境，不断促进颜山孝水文化新发展。建立三项巡河机制，念好“巡”字经。建立“...</span><span readexclude style="font-size:15px;font-family:'微软雅黑'"  class="color2">[<a href="/art/2026/3/26/art_699_2993076.html" style="font-size:15px;font-family:'微软雅黑'" href="" target="_blank" class="color2">详情</a>]</span></div>
+</div>
+    <!--第二部分-->
+    
+    <div class="second">
+    	<div class="second_tpxw">
+<script type="text/javascript">
+$(function() {
+    var sWidth = $("#focus").width(); //获取焦点图的宽度（显示面积）
+    var len = $("#focus ul li").length; //获取焦点图个数
+    var index = 0;
+    var picTimer;
+    
+    //以下代码添加数字按钮和按钮后的半透明条，还有上一页、下一页两个按钮
+    var btn = "<div class='btnBg'></div><div class='btn'>";
+    for(var i=0; i < len; i++) {
+        btn += "<span readexclude></span>";
+    }
+    btn += "</div><div class='preNext pre'></div><div class='preNext next'></div>";
+    $("#focus").append(btn);
+    $("#focus .btnBg").css("opacity",0.5);
+
+    //为小按钮添加鼠标滑入事件，以显示相应的内容
+    $("#focus .btn span").css("opacity",0.4).mouseenter(function() {
+        index = $("#focus .btn span").index(this);
+        showPics(index);
+    }).eq(0).trigger("mouseenter");
+
+    //上一页、下一页按钮透明度处理
+    $("#focus .preNext").css("opacity",0.2).hover(function() {
+        $(this).stop(true,false).animate({"opacity":"0.5"},300);
+    },function() {
+        $(this).stop(true,false).animate({"opacity":"0.2"},300);
+    });
+
+    //上一页按钮
+    $("#focus .pre").click(function() {
+        index -= 1;
+        if(index == -1) {index = len - 1;}
+        showPics(index);
+    });
+
+    //下一页按钮
+    $("#focus .next").click(function() {
+        index += 1;
+        if(index == len) {index = 0;}
+        showPics(index);
+    });
+
+    //本例为左右滚动，即所有li元素都是在同一排向左浮动，所以这里需要计算出外围ul元素的宽度
+    $("#focus ul").css("width",sWidth * (len));
+    
+    //鼠标滑上焦点图时停止自动播放，滑出时开始自动播放
+    $("#focus").hover(function() {
+        clearInterval(picTimer);
+    },function() {
+        picTimer = setInterval(function() {
+            showPics(index);
+            index++;
+            if(index == len) {index = 0;}
+        },4000); //此4000代表自动播放的间隔，单位：毫秒
+    }).trigger("mouseleave");
+    
+    //显示图片函数，根据接收的index值显示相应的内容
+    function showPics(index) { //普通切换
+        var nowLeft = -index*sWidth; //根据index值计算ul元素的left值
+        $("#focus ul").stop(true,false).animate({"left":nowLeft},300); //通过animate()调整ul元素滚动到计算出的position
+        $("#focus .btn span").removeClass("on").eq(index).addClass("on"); //为当前的按钮切换到选中的效果
+        $("#focus .btn span").stop(true,false).animate({"opacity":"0.4"},300).eq(index).stop(true,false).animate({"opacity":"1"},300); //为当前的按钮切换到选中的效果
+    }
+});
+
+</script>
+<div id="focus">
+<ul>			
+
+<li style="position:relative">
+    <a href="/art/2026/3/11/art_699_2990682.html" target="_blank"  >
+         
+        
+        <img src="/picture/0/s_ec7da0ef27c643388730a715bc390341.png" alt="市委第二巡察组对市水利局党组巡察“回头看”工作动员会议召开" width="400" height="300"/>
+    </a> 
+    <div class="photo_bt">
+        <a href="/art/2026/3/11/art_699_2990682.html" target="_blank" title="市委第二巡察组对市水利局党组巡察“回头看”工作动员会议召开" style="color:#ffffff; font-size:15px; font-family:'微软雅黑';">市委第二巡察组对市水利局党组巡察“回...</a>
+    </div>
+</li>
+
+<li style="position:relative">
+    <a href="/art/2026/1/20/art_699_2982310.html" target="_blank"  >
+         
+        
+        <img src="/picture/0/s_2f0adc3557834a82928838ca07b1dc26.png" alt="一图读懂淄博水利2025-2026" width="400" height="300"/>
+    </a> 
+    <div class="photo_bt">
+        <a href="/art/2026/1/20/art_699_2982310.html" target="_blank" title="一图读懂淄博水利2025-2026" style="color:#ffffff; font-size:15px; font-family:'微软雅黑';">一图读懂淄博水利2025-2026</a>
+    </div>
+</li>
+
+<li style="position:relative">
+    <a href="/art/2025/10/29/art_699_2967863.html" target="_blank"  >
+         
+        
+        <img src="/picture/-1/251029165120922279.jpg" alt="市水利局开展“重阳佳节看变化共谋水利新发展”活动" width="400" height="300"/>
+    </a> 
+    <div class="photo_bt">
+        <a href="/art/2025/10/29/art_699_2967863.html" target="_blank" title="市水利局开展“重阳佳节看变化共谋水利新发展”活动" style="color:#ffffff; font-size:15px; font-family:'微软雅黑';">市水利局开展“重阳佳节看变化共谋水利...</a>
+    </div>
+</li>
+
+<li style="position:relative">
+    <a href="/art/2025/5/19/art_699_2916713.html" target="_blank"  >
+         
+        
+        <img src="/picture/0/s_25747a11dba74fb487fe9819f0fcb5f7.jpg" alt="节水润淄博 共绘人水和谐新画卷——全国城市节约用水宣传周暨“节水淄博”主题活动启动仪式侧记" width="400" height="300"/>
+    </a> 
+    <div class="photo_bt">
+        <a href="/art/2025/5/19/art_699_2916713.html" target="_blank" title="节水润淄博 共绘人水和谐新画卷——全国城市节约用水宣传周暨“节水淄博”主题活动启动仪式侧记" style="color:#ffffff; font-size:15px; font-family:'微软雅黑';">节水润淄博 共绘人水和谐新画卷——全...</a>
+    </div>
+</li>
+
+<li style="position:relative">
+    <a href="/art/2025/5/16/art_699_2916658.html" target="_blank"  >
+         
+        
+        <img src="/picture/0/s_d391d947de1c488691b9d1d859ef313b.jpg" alt="淄博市2025年全国城市节约用水宣传周暨“节水淄博”主题活动启动" width="400" height="300"/>
+    </a> 
+    <div class="photo_bt">
+        <a href="/art/2025/5/16/art_699_2916658.html" target="_blank" title="淄博市2025年全国城市节约用水宣传周暨“节水淄博”主题活动启动" style="color:#ffffff; font-size:15px; font-family:'微软雅黑';">淄博市2025年全国城市节约用水宣传...</a>
+    </div>
+</li>
+
+</ul>
+</div></div>
+        <div class="jrsd">
+        	<div class="jrsd_title"><div class="hover" style="float:left" onmouseover="setTab('one',1,2);" id="one1"><span>水利要闻
+</span></div>
+            <div  class="default" id="one2" onmouseover="setTab('one',2,2);" style="float:left; margin-left:10px;display: none;">
+            <span tabindex="0">
+</span></div>
+                <div class="gengduo jr_gd" id="con-one-1" >
+<a title="水利要闻更多" href="/col/col699/index.html" target="_blank">更多>></a> 
+
+</div>
+                <div class="gengduo jr_gd" id="con-one-2" style="display:none;">
+</div>
+            </div>
+            <div class="jrsd_list"  id="son-one-1"><ul class="nr_list_ul">
+
+<li>
+<div class="nr_qz"></div>
+<div class="nr_list_bt"><a href="/art/2026/3/26/art_699_2993075.html" title="沂源县：治河护水践初心 水润民生绘新篇" target="_blank">沂源县：治河护水践初心 水润民生绘新篇</a></div>
+</li>
+
+<li>
+<div class="nr_qz"></div>
+<div class="nr_list_bt"><a href="/art/2026/3/23/art_699_2992591.html" title="碧水十年润淄博 淄博市纪念“世界水日”“中国水周”暨“山东省节水宣传月”主题宣传活动启动仪式举行" target="_blank">碧水十年润淄博 淄博市纪念“世界水日”“中国水...</a></div>
+</li>
+
+<li>
+<div class="nr_qz"></div>
+<div class="nr_list_bt"><a href="/art/2026/3/23/art_699_2992590.html" title="河长守河湖 清水润童心" target="_blank">河长守河湖  清水润童心</a></div>
+</li>
+
+<li>
+<div class="nr_qz"></div>
+<div class="nr_list_bt"><a href="/art/2026/3/23/art_699_2992589.html" title="高青县水利局举办2026年“世界水日”“中国水周”暨山东省节约用水宣传月主题公益宣传活动" target="_blank">高青县水利局举办2026年“世界水日”“中国水...</a></div>
+</li>
+
+<li>
+<div class="nr_qz"></div>
+<div class="nr_list_bt"><a href="/art/2026/3/23/art_699_2992588.html" title="市萌山水库管理中心：节水护水进村庄 科普宣传入民心" target="_blank">市萌山水库管理中心：节水护水进村庄  科普宣传...</a></div>
+</li>
+
+<li>
+<div class="nr_qz"></div>
+<div class="nr_list_bt"><a href="/art/2026/3/23/art_699_2992587.html" title="世界水日启新程 淄博市计划“十五五”期间完成水网投资205亿元" target="_blank">世界水日启新程 淄博市计划“十五五”期间完成水...</a></div>
+</li>
+
+<li>
+<div class="nr_qz"></div>
+<div class="nr_list_bt"><a href="/art/2026/3/23/art_699_2992586.html" title="淄博：80多亿立方米客水赋能安全发展" target="_blank">淄博：80多亿立方米客水赋能安全发展</a></div>
+</li>
+
+</ul></div>
+             <div class="jrsd_list"  id="son-one-2" style="display:none;"></div>
+        </div>
+        
+        <div class="tzgg">
+        	<div class="ttgg_title">
+            	<span tabindex="0" class="color2 wz_span jrsd_title_span">
+<span readexclude class="color2 wz_span jrsd_title_span  "><a href="/col/col2607/index.html" target="_blank" class="color2">水质公告</a></span>
+</span>
+               
+            </div>
+             <div class="jrsd_list"><ul class="nr_list_ul">
+
+<li>
+<div class="nr_qz"></div>
+<div class="nr_list_bt"><a href="http://www.zibowater.com/html/csgsfw/szxx/index.html" title="水质公告查询" target="_blank">水质公告查询</a></div>
+</li>
+
+<li>
+<div class="nr_qz"></div>
+<div class="nr_list_bt"><a href="https://sl.zibo.gov.cn/gongkai/channel_c_5f9fa491ab327f36e4c13065_n_1605682607.8703/doc_61c18a2891b9b931d7439eab.html" title="淄博市供水企业收费、代收项目一览表" target="_blank">淄博市供水企业收费、...</a></div>
+</li>
+
+</ul></div>
+        </div>
+    </div>
+    <div style="width:1100px"></div>
+    <div style="width:1100px;"><p style="height:20px;" readexclude></p>
+<div style="overflow: hidden;">
+    <a href="https://www.gov.cn/zhengce/zczhjd/" target="_blank" title="重要政策举措及实施效果">
+        <img width="545" style="float: left;" class="tyzt" alt="重要政策举措及实施效果" src="https://www.zibo.gov.cn/picture/37/2312011647244181773.jpg">
+    </a>
+    <a href="/col/col19857/index.html" target="_blank" title="政府网站工作年度报表">
+        <img width="545" style="margin-left: 10px;float: left;" class="tyzt" alt="政府网站工作年度报表" src="https://www.zibo.gov.cn/picture/37/2312011647024768678.jpg">
+    </a>
+</div>
+<p style="height:10px;" readexclude></p>
+<script src="https://www.zibo.gov.cn/script/0/2110071243448436.js"></script>
+<p style="height:10px;" readexclude></p>
+<img title="2025年全市水利建设系统“质量月”活动" src="/picture/101/2509181700449097121.jpg">
+<p style="height:10px;" readexclude></p>
+
+
+
+
+<div class="third_list" style="width:100%;margin-right:0;float: none;">
+	<a style="width:100%;text-align:center" title="防汛抗灾" href="http://sl.zibo.gov.cn/gongkai/channel_614fdd1833f21018546c1898/" target="_blank"><img height="100%" width="100%" src="/picture/0/a8b39a83c8c344ed9b326919873d404e.jpg" /></a>
+</div>
+<p style="height:10px;" readexclude></p>
+
+<div class="third_list" style="width:100%;margin-right:0;float: none;">
+	<a style="width:100%;text-align:center" title="淄博文明网" href="http://zb.wenming.cn/" target="_blank"><img height="100%" width="100%" src="/picture/0/f0b76a31b9cb4fcf9f4f946924af4ac4.jpg" /></a>
+</div>
+<p style="height:10px;" readexclude></p>
+</div>
+    <div class="third" style="height: auto;overflow: hidden;margin: 0;"></div>
+    <div class="fourth">
+    	<div class="fourth_left">
+        	<table width='100%' cellspacing='0' cellpadding='0' border='0'>
+<tr>
+<td style=''>
+<a class="xxgk_list" target="_blank" href="http://sl.zibo.gov.cn/gongkai/channel_c_5f9fa491ab327f36e4c13065_n_1605682622.2572/">河长制工作</a>
+</td><td style=''>
+<a class="xxgk_list" target="_blank" href="http://www.zibo.gov.cn/icity/department/hall?deptId=370300slj">办事指南</a>
+</td></tr>
+<tr>
+<td style=''>
+<a class="xxgk_list" target="_blank" href="http://sl.zibo.gov.cn/gongkai/channel_61c3ed3021a04ccab943a01d/">行政执法</a>
+</td><td style=''>
+<a class="xxgk_list" target="_blank" href="http://www.zibo.gov.cn/zb/icity/powerduty/qzlist?is_contain_city_list=1">权责清单</a>
+</td></tr>
+<tr>
+<td style=''>
+<a class="xxgk_list" target="_blank" href="http://www.zibo.gov.cn/zb/icity/result?deptid=370300slj">办事结果</a>
+</td><td style=''>
+<a class="xxgk_list" target="_blank" href="http://sl.zibo.gov.cn/gongkai/channel_614fe55b5f8deaa22d6c18a0/">重大民生实事</a>
+</td></tr>
+<tr>
+<td style=''>
+<a class="xxgk_list" target="_blank" href="http://www.zibo.gov.cn/col/col6/index.html">监督投诉</a>
+</td>
+</tr></table>
+
+        </div>
+        <div class="fourth_middle" style="width: 725px;">
+        	<div class="ttgg_title">
+<span tabindex="0" class="color2 wz_span jrsd_title_span  ">通知公示</span>
+<div class="gengduo jr_gd"><a href="http://sl.zibo.gov.cn/gongkai/channel_c_5f9fa491ab327f36e4c13065_n_1605682607.8703/"  title="通知公示更多" target="_blank">更多>></a></div>
+</div>
+            <div class="fourth_left_list" style="width: 685px;"><ul class="nr_list_ul">
+<!-- 通知公示 -->
+<script src="/gongkai/script_channel_c_5f9fa491ab327f36e4c13065_n_1605682607.8703.js?size=0&size=6" type="text/javascript" charset="utf-8"></script>
+<script>
+	str_html = ""
+	for(i = 0;i<window["channel_c_5f9fa491ab327f36e4c13065_n_1605682607.8703"].items.length;i++){
+		str_html += "<li><div class='nr_qz'></div><div class='nr_list_bt'><a style='width: 600px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;' href='"+window["channel_c_5f9fa491ab327f36e4c13065_n_1605682607.8703"].items[i].router+"' class='bt_link' title='"+window["channel_c_5f9fa491ab327f36e4c13065_n_1605682607.8703"].items[i].title+"' target='_blank'>"+window["channel_c_5f9fa491ab327f36e4c13065_n_1605682607.8703"].items[i].title+"</a></div><div class='nr_time'><span readexclude=''>"+window["channel_c_5f9fa491ab327f36e4c13065_n_1605682607.8703"].items[i].release+"</span></div></li>"
+	}
+	document.write(str_html)
+</script>
+</ul></div>
+        </div>
+         <div class="fourth_middle" style="display: none;">
+        	<div class="ttgg_title"></div>
+            <div class="fourth_left_list"></div>
+        </div>
+    </div>
+    <div class="fifth_box">
+    	<div class="fifth__left">
+        	<div class="fifth__left_title "><span tabindex="0" class="color2" style="margin-left:35px;">政务公开</span></div>
+            <div class="fifth__left_list">
+                
+<div class="fifth__left_list_first" style="margin: 5px 0 0 5px;"><a href="http://sl.zibo.gov.cn/gongkai/?open=zfxxgkzn" target="_blank">政府信息公开指南</a></div>
+
+<div class="fifth__left_list_first" style="margin: 5px 0 0 5px;"><a href="http://sl.zibo.gov.cn/gongkai/?open=zfxxgkzd" target="_blank">政府信息公开制度</a></div>
+
+<div class="fifth__left_list_first" style="margin: 5px 0 0 5px;"><a href="http://sl.zibo.gov.cn/gongkai/?open=fdzdgknr" target="_blank">法定主动公开内容</a></div>
+
+<div class="fifth__left_list_first" style="margin: 5px 0 0 5px;"><a href="http://sl.zibo.gov.cn/gongkai/?open=zfxxgknb" target="_blank">政府信息公开年度报告</a></div>
+
+                
+<div class="fifth__left_list_second" style="margin: 7px 0 0 5px;"><a href="http://www.zibo.gov.cn/jact/front/main.do?sysid=2" target="_blank">政府信息依申请公开</a></div>
+
+<div class="fifth__left_list_second" style="margin: 7px 0 0 5px;"><a href="http://sl.zibo.gov.cn/gongkai/channel_c_5f9fa491ab327f36e4c13065_5fb3bd23d98b82ee13bb98b5/" target="_blank">人事任免</a></div>
+
+<div class="fifth__left_list_second" style="margin: 7px 0 0 5px;"><a href="http://sl.zibo.gov.cn/gongkai/channel_c_5f9fa491ab327f36e4c13065_n_1605682602.6038/" target="_blank">部门文件</a></div>
+
+<div class="fifth__left_list_second" style="margin: 7px 0 0 5px;"><a href="http://sl.zibo.gov.cn/gongkai/channel_c_5f9fa491ab327f36e4c13065_n_1605682608.8614/" target="_blank">重大决策意见征集</a></div>
+
+                
+<div class="fifth__left_list_third" style="margin: 7px 0 0 5px;"><a href="http://sl.zibo.gov.cn/gongkai/channel_c_5f9fa491ab327f36e4c13065_5fb3bcc8d98b82ee13bb9895/" target="_blank" class="color1 ldzl">政策解读</a></div>
+
+<div class="fifth__left_list_third" style="margin: 7px 0 0 5px;"><a href="http://sl.zibo.gov.cn/gongkai/channel_c_5f9fa491ab327f36e4c13065_5fb3bcbad98b82ee13bb988f/ " target="_blank" class="color1 ldzl">机构职能</a></div>
+
+            </div>
+        </div>
+        <div class="fifth__left_right">
+        	<div class="ttgg_title"><div class="hover" style="float:left" onmouseover="setTab('two',1,3);" id="two1"><span onfocus="setTab('two',1,3);" tabindex="0">党务公开</span></div>
+            <div style="float:left; margin-left:10px;display: none;" onmouseover="setTab('two',2,3);" id="two2" class="default"><span onfocus="setTab('two',2,3);" tabindex="0"></span></div>
+            <div style="float:left; margin-left:10px;display: none;" onmouseover="setTab('two',3,3);" id="two3" class="default"><span onfocus="setTab('two',3,3);" tabindex="0"></span></div>
+            <div class="gengduo jr_gd" id="con-two-1" >
+<a title="党务公开更多" href="/col/col18694/index.html" target="_blank">更多>></a> 
+</div> 
+            <div class="gengduo jr_gd" id="con-two-2" style="display:none;" ></div>
+            <div class="gengduo jr_gd" id="con-two-3" style="display:none;" ></div>
+        </div>
+            <div class="fifth__left_right_list" id="son-two-1"><ul class="nr_list_ul">
+
+<li>
+<div class="nr_qz"></div>
+<div class="nr_list_bt"><a href="/art/2023/7/21/art_18694_2727953.html" title="中共淄博市水利局党组党务公开目录07月21日" target="_blank">中共淄博市水利局党组党务公开目录</a></div>
+<div class="nr_time"><span readexclude>07-21</span></div>
+</li>
+
+<li>
+<div class="nr_qz"></div>
+<div class="nr_list_bt"><a href="/art/2026/2/28/art_18694_2988284.html" title="市水利局组织开展节后集中学习教育02月28日" target="_blank">市水利局组织开展节后集中学习教育</a></div>
+<div class="nr_time"><span readexclude>02-28</span></div>
+</li>
+
+<li>
+<div class="nr_qz"></div>
+<div class="nr_list_bt"><a href="/art/2026/2/27/art_18694_2988027.html" title="市水利局组织开展网络安全专题培训02月27日" target="_blank">市水利局组织开展网络安全专题培训</a></div>
+<div class="nr_time"><span readexclude>02-27</span></div>
+</li>
+
+<li>
+<div class="nr_qz"></div>
+<div class="nr_list_bt"><a href="/art/2026/2/27/art_18694_2988026.html" title="市水利局组织开展廉政教育专题党课02月27日" target="_blank">市水利局组织开展廉政教育专题党课</a></div>
+<div class="nr_time"><span readexclude>02-27</span></div>
+</li>
+
+<li>
+<div class="nr_qz"></div>
+<div class="nr_list_bt"><a href="/art/2026/2/16/art_18694_2988024.html" title="中共中央办公厅印发《党委（党组）对下级党组织“一把手”开展监督谈话工作办法》02月16日" target="_blank">中共中央办公厅印发《党委（党组）对下级党组织“一把手”开展监督谈话工作办...</a></div>
+<div class="nr_time"><span readexclude>02-16</span></div>
+</li>
+
+<li>
+<div class="nr_qz"></div>
+<div class="nr_list_bt"><a href="/art/2026/1/26/art_18694_2988016.html" title="市水利局举办2026年第二期“水利大讲堂”活动01月26日" target="_blank">市水利局举办2026年第二期“水利大讲堂”活动</a></div>
+<div class="nr_time"><span readexclude>01-26</span></div>
+</li>
+
+</ul></div>
+            <div class="fifth__left_right_list"  id="son-two-2" style="display:none;"></div>
+            <div class="fifth__left_right_list"  id="son-two-3" style="display:none;"></div>
+        </div>
+    </div>
+    <div class="fourth" style="display:none">
+    	<div class="fourth_left">
+        	<div class="ttgg_title"></div>
+            <div class="fourth_left_list"></div>
+        </div>
+        <div class="fourth_middle">
+        	<div class="ttgg_title"></div>
+            <div class="fourth_left_list"></div>
+        </div>
+         <div class="fourth_middle">
+        	<div class="ttgg_title"></div>
+            <div class="fourth_left_list"></div>
+        </div>
+    </div>
+    <div class="fourth"  style="display:none">
+    	<div class="fourth_left">
+        	<div class="ttgg_title"></div>
+            <div class="fourth_left_list"></div>
+        </div>
+        <div class="fourth_middle">
+        	<div class="ttgg_title"></div>
+            <div class="fourth_left_list"></div>
+        </div>
+         <div class="fourth_middle">
+        	<div class="ttgg_title"></div>
+            <div class="fourth_left_list"></div>
+        </div>
+    </div>
+</div>
+<div class="yqlj"  ergodic="serve">
+	<div class="yqlj_box">
+    	<div class="yqlj_title">
+        	<span class="yqlj_span" tabindex="0">
+            	友情链接
+            </span>
+            <span tabindex="0" id="yq1" class="qiehuan" style="margin-left:50px;">国家级政府网站</span>
+            <span tabindex="0" id="yq2">省市水利厅局网站</span>
+            <span tabindex="0" id="yq3" style="display: none;">区县水务局网站 </span>
+            <span tabindex="0" id="yq4">相关政府部门网站 </span>
+            <span tabindex="0" id="yq5">其他水利网站</span>
+        </div>
+        <div class="yqlj_list" id="yq_list1">
+<div class="yqlj_lb"> <span readexclude></span> <a href="http://www.gov.cn/" target="_blank">中国政府网</a> </div>
+
+<div class="yqlj_lb"> <span readexclude></span> <a href="http://www.mwr.gov.cn/" target="_blank">水利部</a> </div>
+</div>
+        <div class="yqlj_list" id="yq_list2" style="display:none">
+<div class="yqlj_lb"> <span readexclude></span> <a href="http://wr.shandong.gov.cn/" target="_blank">省水利厅</a> </div>
+
+<div class="yqlj_lb"> <span readexclude></span> <a href="http://jnwater.jinan.gov.cn/" target="_blank">济南市</a> </div>
+
+<div class="yqlj_lb"> <span readexclude></span> <a href="http://swglj.qingdao.gov.cn/" target="_blank">青岛市</a> </div>
+
+<div class="yqlj_lb"> <span readexclude></span> <a href="http://scxswj.zaozhuang.gov.cn/" target="_blank">枣庄市</a> </div>
+
+<div class="yqlj_lb"> <span readexclude></span> <a href="http://dysw.dongying.gov.cn/" target="_blank">东营市</a> </div>
+
+<div class="yqlj_lb"> <span readexclude></span> <a href="http://slj.weifang.gov.cn/" target="_blank">潍坊市</a> </div>
+
+<div class="yqlj_lb"> <span readexclude></span> <a href="http://slj.weihai.gov.cn/" target="_blank">威海市</a> </div>
+
+<div class="yqlj_lb"> <span readexclude></span> <a href="http://slj.rizhao.gov.cn/" target="_blank">日照市</a> </div>
+
+<div class="yqlj_lb"> <span readexclude></span> <a href="http://slj.linyi.gov.cn/" target="_blank">临沂市</a> </div>
+
+<div class="yqlj_lb"> <span readexclude></span> <a href="http://dzwater.dezhou.gov.cn/" target="_blank">德州市</a> </div>
+
+<div class="yqlj_lb"> <span readexclude></span> <a href="http://slj.liaocheng.gov.cn/" target="_blank">聊城市</a> </div>
+
+<div class="yqlj_lb"> <span readexclude></span> <a href="http://sl.binzhou.gov.cn/" target="_blank">滨州市</a> </div>
+
+<div class="yqlj_lb"> <span readexclude></span> <a href="http://hzswj.heze.gov.cn/" target="_blank">菏泽市</a> </div>
+</div>
+        <div class="yqlj_list" id="yq_list3" style="display:none"></div>
+        <div class="yqlj_list" id="yq_list4" style="display:none">
+<div class="yqlj_lb"> <span readexclude></span> <a href="http://ggzyjyzx.shandong.gov.cn/wssc/zibo/index.html" target="_blank">淄博市政府采购网上商城</a> </div>
+
+<div class="yqlj_lb"> <span readexclude></span> <a href="http://www.lznews.cn/" target="_blank">鲁中网</a> </div>
+
+<div class="yqlj_lb"> <span readexclude></span> <a href="http://ggzyjy.zibo.gov.cn/TPFront/dhy/index.html" target="_blank">淄博公共资源交易网</a> </div>
+
+<div class="yqlj_lb"> <span readexclude></span> <a href="http://www.zbnews.net/" target="_blank">淄博新闻网</a> </div>
+
+<div class="yqlj_lb"> <span readexclude></span> <a href="http://zb.wenming.cn/" target="_blank">淄博文明网</a> </div>
+</div>
+        <div class="yqlj_list" id="yq_list5" style="display:none">
+<div class="yqlj_lb"> <span readexclude></span> <a href="http://www.chinawater.com.cn/" target="_blank">中国水利</a> </div>
+
+<div class="yqlj_lb"> <span readexclude></span> <a href="http://www.skysd.com/" target="_blank">山东水利科学研究院</a> </div>
+</div>
+    </div>
+</div>
+<div class="banquan" ergodic="serve">
+	<div class="banquan_box"><script src="/script/47/2207141623118174.js"></script></div>
+</div>
+
+<script>
+$(function (){
+$('.newalert').animate({right:'2px'},1000);
+$('.newalert .close').click(function(){
+   $('.newalert').hide();
+});
+});
+</script>
+<table width='100%' cellspacing='0' cellpadding='0' border='0'>
+<tr>
+<td style=''>
+<div class="newalert" style="z-index:999999;">
+<a href="javascript:" class="close" style="float:right;">关闭</a>
+<div style="width:240px;">
+<a title="举报专区" href='/art/2022/4/26/art_4146_2283580.html' target="_blank"><img src="/picture/0/118ff2c68dfb491faa2ef92eca050e7c.jpg" width="280"/></a>
+</div>
+</div>
+</td>
+</tr></table>
+
+<div class="leftgdpc">
+
+    <div class="leftgdpc_box01 leftgdpc_boxgx">
+        <span class="pc_claer">X</span>
+        
+        <a title="投诉电话" href="http://supe.mwr.gov.cn/#/" target="_blank">
+            <img src="/picture/0/d9209be6d5e648a984895da740d017e9.jpg" alt="投诉电话">
+        </a>
+        
+    </div>
+</div>
+<script>
+    $('document').ready(function () {
+        $('.pc_claer').click(function () {
+            $('.leftgdpc').hide()
+
+        })
+    })
+</script>
+
+
+<script>
+    $(function () {
+        $('.newalert8').animate({ right: '2px' }, 1000);
+        $('.newalert8 .close8').click(function () {
+            $('.newalert8').hide();
+        });
+    });
+</script>
+
+
+
+<table width='100%' cellspacing='0' cellpadding='0' border='0'>
+<tr>
+<td style=''>
+<div class="newalert8" style="z-index:999999; margin-top:50px;">
+    <a href="javascript:" class="close close8" style="float:right; display: block;">关闭</a>
+    <div style="width:280px;">
+        <a href='/art/2021/11/15/art_4146_2184061.html' target="_blank"><img src="/picture/0/c73849dc05f240139770f3abf5a94672.jpg" width="280px;" /></a>
+    </div>
+</div>
+</td>
+</tr></table>
+<script>
+$(".yqlj_title span").focus(function() {
+    $(this).siblings('span').removeClass('qiehuan');
+    $(this).addClass('qiehuan');
+    var num = $(this).index();
+    if(num !=0){
+        var numindex = num-1;
+        $('.yqlj_list').hide();
+        $('.yqlj_list').eq(numindex).show();
+    }
+})
+</script></div>
+</div>
+<!-- visitcount Begin --><iframe src='./module/visitcount/visit.jsp?type=1&i_webid=27&i_columnid=697' name="vishidden" id="vishidden" frameborder="0" style="width:0; height:0; display:none"></iframe><!-- visitcount End -->
+<script language="javascript" src='/script/pagecontrol.js'></script><script language="javascript" src='/script/web_front.js'></script>
+</body>
+</html>

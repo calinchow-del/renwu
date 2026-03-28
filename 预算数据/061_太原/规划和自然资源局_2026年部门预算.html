@@ -1,0 +1,960 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <!--网站标签-->
+    <!--网站名称、网站域名、政府网站标识码、描述、关键字 -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="SiteName" content="太原市规划和自然资源局网站" />
+<meta name="SiteDomain" content="ghzy.taiyuan.gov.cn" />
+<meta name="SiteIDCode" content="CA061130000404164110001" />
+<meta name="description" content="太原市国土局">
+<meta name="keywords" content="太原市国土局">    <meta name="ColumnName" content="首页">
+    <meta name="ColumnDescription" content="太原市国土局网站首页">
+    <meta name="ColumnKeywords" content="太原市国土局">
+    <meta name="ColumnType" content="网站首页">
+
+    <title>太原市规划和自然资源局网站</title>
+    <link rel="stylesheet" type="text/css" href="/r/cms/site40/default/static/css/index_ty.css" />
+<script src="/r/cms/site40/default/static/js/jquery-1.7.1.min.js"></script>
+<script src="/r/cms/site40/default/static/js/common.js"></script>
+    <script language="javascript" type="text/javascript" src="/r/cms/site40/default/static/js/jquery.tab.js"></script>
+    <script language="javascript" type="text/javascript" src="/r/cms/site40/default/static/js/jquery.roll.js"></script>
+    <script language="javascript" type="text/javascript" src="/r/cms/site40/default/static/js/jquery.SuperSlide.js"></script>
+    <script language="javascript" type="text/javascript" src="/r/cms/site40/default/static/js/calendar.js"></script>
+    <script language="javascript" type="text/javascript" src="/r/cms/site40/default/static/js/calendar-setup.js"></script>
+    <script language="javascript" type="text/javascript" src="/r/cms/site40/default/static/js/calendar-zh.js"></script>
+
+</head>
+
+<body>
+    <!--<div><img src="/r/cms/site40/default/static/images/jd100znbm.jpg" style="width:100%;"/></div>-->
+<div id="float_div" class="float_div position" style="position:fixed;bottom:0px;left:0;">
+  <div align=right><a class="clear">关闭&nbsp;X</a></div>
+	   <img style="vertical-align: middle;width:222px;" src="/r/cms/site40/default/static/images/jsqgtydsc.jpg">
+</div>
+<!--
+ <div id="float_div1" class="float_div position" style="position:fixed;top:0px;left:0;">
+  <div align=right><a class="clear">关闭&nbsp;X</a></div>
+	   <a href="http://218.77.104.248:58082/landSupermarket/index"><img style="vertical-align: middle;width:222px;" src="/r/cms/site40/default/static/images/bdyx.png"></a>
+</div>
+-->
+<style type="text/css">
+.float_div{font-size:14px;z-index:9999;}
+.float_div .cont{background:#015293;color:#ffffff;border-radius:15px;padding:10px;}
+.float_div .title{font-weight: bold;font-size:16px;}
+
+#float_div1 {top: 200px;left: 500px;}
+#float_div2 {top: 500px;left: 200px;}
+</style>
+<script>
+$(function(){
+	//floatwin("float_div");
+	//floatwin("float_div1");
+});
+function floatwin(obj){
+	var intervalX = 1, intervalY = 1;
+    var posX = 0, posY = 0;
+	var interval = 1, itl= null;
+	var floatobj = $("#"+obj);
+    var stop = $("#"+obj+" .clear")
+    posX = floatobj.offset().left;
+    posY = floatobj.offset().top;
+	var dofloat = function(){
+    	posX += (interval * intervalX);
+		posY += (interval * intervalY);
+        floatobj.css("top", posY);
+		floatobj.css("left", posX);
+    	if (posX < 1 || posX +  floatobj.width()+10 > $(window).width()) {
+			intervalX = -intervalX;
+		}
+		if (posY < 1 || posY + floatobj.height()+10 > $(window).height()) {
+			intervalY = -intervalY;
+		}
+    }
+    dofloat();
+    itl = setInterval(dofloat,30);
+    floatobj.mouseover(function(){clearInterval(itl)}); 
+	floatobj.mouseout(function(){itl = setInterval(dofloat,30);}); 
+    stop.click(function(){floatobj.remove()});
+}   
+
+</script><style type="text/css"> 
+.sv_newalert{background-color:#1a31a1;position:fixed;right:20px;bottom:20px;border-radius:5px 0 0 5px;}
+.sv_newalert p{font-size:18px;color:#fff;line-height:22px;}
+.sv_newalert a{font-size:14px;color:#fff;text-decoration:none;}
+.sv_newalert .close{width:40px;height:18px;line-height:22px;display:block;float:right;}
+</style>  
+<script>
+$(function (){
+$('.sv_newalert').animate({right:'10px'},1000);
+$('.sv_newalert .close').click(function(){
+$('.sv_newalert').hide();
+});
+});
+</script>
+<div class="sv_newalert" style="z-index: 999999;"><a class="close" >关闭</a>
+<div style="margin: 18px 10px 15px;padding: 10px 2px;">
+<p align="center" style="font-size:22px;">清理历史沉淀保证金</p>
+<br/>
+<p>投诉电话：</p>
+<p align="center">3586659</p>
+<p>电子邮箱：</p>
+<p align="center">qqkk611612@163.com</p>
+</div>
+</div><script type="text/javascript">
+/*accessible-read start*/
+	var close = localStorage.getItem("close");
+	var protocol = window.location.protocol
+	if(close=='true'){
+		show()
+	}
+
+	function show(){
+		let xml = window.XMLHttpRequest?new XMLHttpRequest():new ActiveXObject('Microsoft.XMLHttp');
+		xml.open('GET','https://api.jeecms.com/MODULE-ACCESSIBLE-READING/front/readings/checkAvailability?callingCode=4cU3e84wRBad3qyPeq4wU7if3aTD-m3bAkdd33zAtc39AQ1e3oEQBb3qQnxv4rPjd74rP8ym4lTz-j4mUz-b4nEPRv4oS7ek3qyPeq39y49e34A4t93qzkdg4aQjdh4pP7mk4cQl2932ETmS4zU49v39CRW=3fSEyu4XU4ar39TQio4WSBOC3qBjev4eQTig4VT7am3qT7mk4vQPd73eA7mu3fzQ593cy4lc3qzQB93YMh62');
+		xml.send();
+		xml.onreadystatechange=function(){
+			if($('#ABTInterface').length!=0){
+				return
+			}
+			if (xml.readyState==4 && xml.status==200){
+				let res = JSON.parse(xml.responseText);
+				if (res.code == 200) {
+					localStorage.setItem("close", true);
+					let script = document.createElement('script');
+					// script.src = res.data.abtJsUrl;
+					let host = window.location.protocol+"//"+window.location.host;
+					script.src = host+"/r/cms/site40/default/reading/abt.js";
+					//重写为本地js
+					res.data.abtJsUrl=host+"/r/cms/site40/default/reading/abt.js";
+					res.data.gbkJsUrl=host+"/r/cms/site40/default/reading/gbk.js";
+					res.data.helpHtmlUrl=host+"/r/cms/site40/default/reading/help.html";
+					res.data.pinyinJsUrl=host+"/r/cms/site40/default/reading/pinyin.js";
+					res.data.skinCssUrl=host+"/r/cms/site40/default/reading/skin.css";
+					document.body.appendChild(script);
+					console.log(window.location.host)
+					console.log(res.data)
+					script.onload = function(){ABTshow(res.data);}
+				} else if (res.code == 500){
+					alert(res.message);
+				}
+			}
+		}
+	}
+
+</script>
+<script type="text/javascript" language="javascript">
+$(function(){
+
+  $('#seachSub').click(function(){
+    window.location.href='/fzlm/js/index.shtml?query='+$("#keyword").val();
+  });
+  
+    $.ajax({
+          type : 'post',
+          url:'/intertidwebapp_ty/member/checkIsLogin',
+          dataType:'json',
+          async:false,
+          success:function(data){
+            if(data.success){
+                outTime();
+                $(".head_top_con ul:first").removeClass("fr").addClass("fl");
+                $(".head_top_con ul li:first").remove();
+            	$(".head_top_con ul").show();
+                $("#username").text(data.username);
+            }
+          },
+          error: function(XMLHttpRequest, textStatus, errorThrown) {
+          }
+    });
+    $("#logout").click(function(){ 
+        	$.ajax({
+        		type:'post',
+            	url:'/intertidwebapp_ty/member/logout',
+            	dataType:'json',
+            	success:function(data){
+            		location.reload();
+            	},
+           		error: function(XMLHttpRequest, textStatus, errorThrown) {
+          			var msg = XMLHttpRequest.responseText;
+                	alert("确定要退出？");
+            	}
+        	});
+   });
+});
+function outTime (){
+	var Datetimes = new Date();
+    var time = Datetimes.getHours();
+    if(time>=7 && time<12){
+    	$('#greet').html("上午好！");
+    }else if(time == 12){
+    	$('#greet').html("中午好！");
+    }else if(time>=13 && time<=18){
+    	$('#greet').html("下午好！");
+    }else{
+    	$('#greet').html("晚上好！");
+    }
+}
+function collect(){
+//加入收藏
+      var ctrl = (navigator.userAgent.toLowerCase()).indexOf('mac') != -1 ? 'Command/Cmd': 'CTRL';
+      try{
+        if (document.all) { //IE类浏览器
+            try {
+                window.external.toString(); //360浏览器不支持window.external，无法收藏
+                window.alert("国内开发的360浏览器等不支持主动加入收藏。\n您可以尝试通过浏览器菜单栏 或快捷键 ctrl+D 试试。");
+            }
+            catch (e){
+                try{
+window.external.addFavorite(window.location, document.title);
+                }
+                catch (e){
+window.external.addToFavoritesBar(window.location, document.title);  //IE8
+                }
+            }
+        }
+        else if (window.sidebar) { //firfox等浏览器
+            window.sidebar.addPanel(document.title, window.location, "");
+        }
+        else {
+            alert('您可以尝试通过快捷键' + ctrl + ' + D 加入到收藏夹~');
+        }
+    }
+    catch (e){
+       alert('您可以尝试通过快捷键' + ctrl + ' + D 加入到收藏夹~');
+    }
+}
+ 
+    //设为首页
+ 
+    function setHome(){
+ url= window.location.href;
+        if (document.all) {
+ 
+            document.body.style.behavior='url(#default#homepage)';
+ 
+               document.body.setHomePage(url);
+ 
+        }else{
+            alert("您好,您的浏览器不支持自动设置页面为首页功能,请您手动在浏览器里设置该页面为首页!");
+        }
+    }
+</script>
+<div class="head_top">
+	<div class="head_top_con">
+    	<ul class="fr clearfix">
+        <li><a href="javascript:void(0);" onclick="collect();">加入收藏</a></li>
+        <li><a href="javascript:void(0);" onclick="setHome();">设为首页</a></li>
+        <li><a href="javascript:void(0);" onclick="show();">无障碍通道</a></li>
+        </ul>
+    </div>
+</div>
+<div class="navbox clearfix">
+	<div class="navbox_con"> 
+        <ul class="nav_ul fl">
+        <li><a href="http://ghzy.taiyuan.gov.cn/index.html">首&nbsp;&nbsp;页</a></li>
+        <li><a href="/tzgg.html">通知公告</a></li>
+        <li><a href="/xwdt.html">新闻动态</a></li>
+        <li><a href="/zwgk.html">政务公开</a></li>
+        <li><a href="http://ty.sxzwfw.gov.cn/icity/icity/departmental_matters?deptid=1401011700" target="_blank">政务服务</a></li>
+        <li><a href="https://www.taiyuan.gov.cn/hdjl.html">互动交流</a></li>
+        </ul>
+        <ul class="ser_ul fr clearfix">
+        <li class="srk"><input type="text" name="" id="keyword" placeholder="请输入关键字" /></li>
+        <li class="btn"><input type="button" name=""  onclick="window.open('/search.htm?q='+$('#keyword').val())"/></li>
+        </ul>
+    </div>
+</div>
+<div class="banner clearfix">
+	<h1 class="logo fl"><a href="http://ghzy.taiyuan.gov.cn/index.html" class="fix_bg">太原市规划和自然资源局</a></h1>
+</div>
+<!--<$[head]>end-->
+    <div class="container">
+        <div class="clearfix">
+            <div class="w755 fl">
+                <div id="slideBox" class="slideBox01_ty">
+                    <div class="bd">
+                        <ul>
+                            <li>
+                                <a href="http://www.tynews.com.cn/system/2025/12/09/030960630.shtml" target="_blank" title="“锦绣汾东”项目正式选房"><img src="/u/cms/site40/202512/09160217xzzm.jpg" /></a>
+                            </li>
+                            <li>
+                                <a href="/sjdt/20251120/30268246.html" target="_blank" title="太原市规划和自然资源局举办学习贯彻党的二十届四中全会精神宣讲辅导"><img src="/u/cms/site40/202511/201611418qi4.jpg" /></a>
+                            </li>
+                            <li>
+                                <a href="https://www.taiyuan.gov.cn/tpxw/20251118/30267743.html" target="_blank" title="“能量海绵”：解锁恒温节能生活新密码"><img src="/u/cms/site40/202511/19110412ox2r.jpg" /></a>
+                            </li>
+                            <li>
+                                <a href="http://www.tynews.com.cn/system/2025/11/03/030947336.shtml" target="_blank" title="晴好天气带火“周末游”"><img src="/u/cms/site40/202511/03100723mm3v.jpg" /></a>
+                            </li>
+                            <li>
+                                <a href="/sjdt/20250928/30258688.html" target="_blank" title="太原市规划和自然资源局开展警示教育暨集体廉政谈话活动"><img src="/u/cms/site40/202509/2815130345rs.jpg" /></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="hd">
+                        <ul>
+                            <li class="on">
+                                <p><a href="http://www.tynews.com.cn/system/2025/12/09/030960630.shtml" target="_blank">“锦绣汾东”项目正式选房</a>
+                                </p>
+                            </li>
+                            <li class="on">
+                                <p><a href="/sjdt/20251120/30268246.html" target="_blank">太原市规划和自然资源局举办学习贯彻党的二十...</a>
+                                </p>
+                            </li>
+                            <li class="on">
+                                <p><a href="https://www.taiyuan.gov.cn/tpxw/20251118/30267743.html" target="_blank">“能量海绵”：解锁恒温节能生活新密码</a>
+                                </p>
+                            </li>
+                            <li class="on">
+                                <p><a href="http://www.tynews.com.cn/system/2025/11/03/030947336.shtml" target="_blank">晴好天气带火“周末游”</a>
+                                </p>
+                            </li>
+                            <li class="on">
+                                <p><a href="/sjdt/20250928/30258688.html" target="_blank">太原市规划和自然资源局开展警示教育暨集体廉...</a>
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <script
+                    type="text/javascript">jQuery(".slideBox01_ty").slide({ mainCell: ".bd ul", effect: "fade", interTime: 4000, autoPlay: true });</script>
+            </div>
+            <div class="w315 fr">
+                <div class="boxTy01 gzdt_h">
+                    <h2 class="clearfix">
+                        <ol class="clearfix">
+                            <li>新闻动态</li>
+                            <li>
+                                通知公告
+                            </li>
+                        </ol>
+                    </h2>
+                    <div class="boxTy01_con" style="position:relative">
+                        <span class="more grey fr"><a
+                                href="/xwdt.html">更多&gt;&gt;</a></span>
+                        <div class="uproll01">
+                            <div class="div1">
+                                <ul class="listTy01 font14">
+                                    <li>
+                                        <a href="https://mp.weixin.qq.com/s?__biz=MjM5NDgyOTEwOA==&mid=2448866882&idx=1&sn=7c3500d64d59a7030bc17de412ceaaf7&chksm=b326d46a9f4ad39793c52ed8e318458e1ece8474eb769477bc17e75a30c0dd2b6080f54ca070&mpshare=1&scene=1&srcid=0327X9Jm1hJrhkRPoxkBWsMq&sharer_shareinfo=d68a218acbdfcb266bdb873218e91efc&sharer_shareinfo_first=d68a218acbdfcb266bdb873218e91efc&exportkey=n_ChQIAhIQgrNNoemZGEdLQFMXVug0YBKfAgIE97dBBAEAAAAAAIqFIwRSaHMAAAAOpnltbLcz9gKNyK89dVj0iam0%2Fc1dJ1Ahm8Ce1zRkiEyWrsscBNqASOb3UGsWfIRPLZnz5au8HOAseJuXLQ7uoDqRI" target="_blank" title="国调（太原）产业投资基金赋能大会举行 林红玉奚正平致辞 范兆森出席">国调（太原）产业投资基金赋能大会举行 林红玉奚正平致辞 范兆森出席</a>
+                                        <span>&emsp;03-27</span>
+                                    </li>
+                                    <li>
+                                        <a href="/sjdt/20260325/30289768.html" target="_blank" title="省自然资源厅姚青林厅长一行 赴太原市开展实地帮扶对接 深化定点帮扶机制 赋能省会高质量发展">省自然资源厅姚青林厅长一行 赴太原市开展实地帮扶对接 深化定点帮扶机制 赋能省会高质量发展</a>
+                                        <span>&emsp;03-25</span>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.tynews.com.cn/system/2026/03/24/031001528.shtml" target="_blank" title="范兆森调研督导汾河生态治理工作">范兆森调研督导汾河生态治理工作</a>
+                                        <span>&emsp;03-25</span>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.tynews.com.cn/system/2026/03/24/031001531.shtml" target="_blank" title="林红玉主持召开市委审计委员会会议">林红玉主持召开市委审计委员会会议</a>
+                                        <span>&emsp;03-25</span>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.tynews.com.cn/system/2026/03/24/031001166.shtml" target="_blank" title="我市召开中央生态环境保护督察整改工作推进会">我市召开中央生态环境保护督察整改工作推进会</a>
+                                        <span>&emsp;03-24</span>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.tynews.com.cn/system/2026/03/18/030998535.shtml" target="_blank" title="林红玉调研督导中央生态环境保护督察反馈问题整改工作">林红玉调研督导中央生态环境保护督察反馈问题整改工作</a>
+                                        <span>&emsp;03-19</span>
+                                    </li>
+                                    <li>
+                                        <a href="https://mp.weixin.qq.com/s?__biz=MjM5NDgyOTEwOA==&mid=2448866477&idx=1&sn=73d03c3aebf6c17898fd1d5271bd751d&chksm=b3aa2b727073c844c6657a75259a2396c8c36d4259b53f516baebc28e92477ad3eaa88a637c4&mpshare=1&scene=1&srcid=0318en7nfEr2Nc3XKUbsVpH3&sharer_shareinfo=954685b5c7608c8526dd23ff69796b50&sharer_shareinfo_first=954685b5c7608c8526dd23ff69796b50&exportkey=n_ChQIAhIQLqb4VHSIbx3eJPVNk%2F346RKfAgIE97dBBAEAAAAAAE1cDC0G60sAAAAOpnltbLcz9gKNyK89dVj0%2Bc3RrKGJROOFmgjEQuswiDkjGMSzvcX9QtjpusgEWE10iBfDgJZERxreaAoAb8dv7tm" target="_blank" title="市委常委会召开会议 林红玉主持">市委常委会召开会议 林红玉主持</a>
+                                        <span>&emsp;03-18</span>
+                                    </li>
+                                    <li>
+                                        <a href="https://mp.weixin.qq.com/s?__biz=MzA3NDExMzMwNA==&mid=2652837028&idx=1&sn=122c2207afd545194f3d33568b433c79&chksm=8513b8946701812e719d4992f6a65057037bda577345afa4a47f4d62c959ec32ab856c657667&mpshare=1&scene=1&srcid=0317mleX51kHLcJWfZpoJPhm&sharer_shareinfo=a6e9165f6043ec10258477b6a8a40410&sharer_shareinfo_first=a6e9165f6043ec10258477b6a8a40410&exportkey=n_ChQIAhIQTpfaszn1bUjXPYqQFMbbXxKfAgIE97dBBAEAAAAAANpGE7J461kAAAAOpnltbLcz9gKNyK89dVj0k5w54fA4ZWQ5SKzjiqA826JrRyInPTp9KAqr1g73fPvY%2FCa5%2FEpzhOB0XKt4ojUo%2F" target="_blank" title="市政府党组召开会议 范兆森主持">市政府党组召开会议 范兆森主持</a>
+                                        <span>&emsp;03-17</span>
+                                    </li>
+                                    <li>
+                                        <a href="https://mp.weixin.qq.com/s?__biz=MjM5NDgyOTEwOA==&mid=2448866441&idx=1&sn=4c0cc1b63b8ff7220420ebd2a6b2e14c&chksm=b349578ab4b07a4bee50036dc211e76532cc05498e65926b1a1dbe24d60c1841bc6c7213e3e7&mpshare=1&scene=1&srcid=0317mTZYgr52jzzkhylU6uqi&sharer_shareinfo=6718889e6163641d76219c5f1ea4dcf4&sharer_shareinfo_first=6718889e6163641d76219c5f1ea4dcf4&exportkey=n_ChQIAhIQnHm1mAFmI0bOXmbleSYfYBKfAgIE97dBBAEAAAAAALx6Jit9k34AAAAOpnltbLcz9gKNyK89dVj06Bpo4ZIZ%2FPY1AjeyPAV5%2BQUA2VMiQGOla55P8gCJkvKNqf%2FoirgV%2FCm%2FwjjV3" target="_blank" title="市委常委会召开扩大会议 林红玉主持">市委常委会召开扩大会议 林红玉主持</a>
+                                        <span>&emsp;03-17</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="div2">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="boxTy01_con" style="position:relative">
+                        <span class="more grey fr"><a
+                                href="/tzgg.html">更多&gt;&gt;</a></span>
+                        <div class="uproll02">
+                            <div class="div1">
+                                <ul class="listTy01 font14">
+                                    <li><a href="/sjtz/20260324/30289388.html" target="_blank" title="太原市国土绿化中心2026年度濒危古树名木抢救复壮项目监理询比结果公告">太原市国土绿化中心2026年度濒危古树名木抢救复壮项目监理询比结果公告</a>
+                                        <span>&emsp;03-24</span>
+                                    </li>
+                                    <li><a href="/sjtz/20260324/30289386.html" target="_blank" title="太原市国土绿化中心2026年度濒危古树名木抢救复壮项目设计询比结果公告">太原市国土绿化中心2026年度濒危古树名木抢救复壮项目设计询比结果公告</a>
+                                        <span>&emsp;03-24</span>
+                                    </li>
+                                    <li><a href="/sjtz/20260324/30289380.html" target="_blank" title="太原市林业和草原工程技术中心社会车辆租赁服务采购结果的公示">太原市林业和草原工程技术中心社会车辆租赁服务采购结果的公示</a>
+                                        <span>&emsp;03-24</span>
+                                    </li>
+                                    <li><a href="/sjtz/20260323/30289236.html" target="_blank" title="2026年天龙山国家森林公园本底资源调查项目红外相机采购供应商遴选结果公示">2026年天龙山国家森林公园本底资源调查项目红外相机采购供应商遴选结果公示</a>
+                                        <span>&emsp;03-23</span>
+                                    </li>
+                                    <li><a href="/sjtz/20260319/30288805.html" target="_blank" title="国有建设用地使用权出让地价评估报名公告">国有建设用地使用权出让地价评估报名公告</a>
+                                        <span>&emsp;03-19</span>
+                                    </li>
+                                    <li><a href="/sjtz/20260317/30288085.html" target="_blank" title="太原市国有林场林下中药材种植技术试验围网工程施工单位遴选公告">太原市国有林场林下中药材种植技术试验围网工程施工单位遴选公告</a>
+                                        <span>&emsp;03-17</span>
+                                    </li>
+                                    <li><a href="/sjtz/20260313/30287545.html" target="_blank" title="太原市国有林场采购公告">太原市国有林场采购公告</a>
+                                        <span>&emsp;03-13</span>
+                                    </li>
+                                    <li><a href="/sjtz/20260312/30287375.html" target="_blank" title="山西省自然资源厅关于开展“太原市西峪井田”等9个登记单元自然资源确权登记的公告（首次登记）">山西省自然资源厅关于开展“太原市西峪井田”等9个登记单元自然资源确权登记的公告（首次登记）</a>
+                                        <span>&emsp;03-12</span>
+                                    </li>
+                                    <li><a href="/sjtz/20260311/30287296.html" target="_blank" title="太原市规划和自然资源局2026年3月至4月政府采购意向">太原市规划和自然资源局2026年3月至4月政府采购意向</a>
+                                        <span>&emsp;03-11</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="div2">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mgt15">
+            <div id="slideBox" class="slideBox">
+                <div class="hd">
+                    <ul>
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                        <li>6</li>
+                    
+                    </ul>
+                </div>
+                <div class="bd">
+                    <ul>
+<!--
+                       
+                        <li><img src="/r/cms/site40/default/static/images/wlaqwrm.jpg" /></li>
+                        <li><img src="/r/cms/site40/default/static/images/mywl.jpg" /></li>
+                        <li><img src="/r/cms/site40/default/static/images/tdqmgcssxf.jpg" /></li>
+                        <li><img src="/r/cms/site40/default/static/images/tdxfsrrx.jpg" /></li>-->
+                        <li><img src="/r/cms/site40/default/static/images/wlaqwrmwlankrm.jpg" /></li>
+                        <li><img src="/r/cms/site40/default/static/images/qmgjaqjy.jpg" /></li>
+                        <li><a href="https://www.mnr.gov.cn/zt/zh/yshjpjdj/"><img src="/r/cms/site40/default/static/images/yhyshj.jpg" /></a></li>
+                        <li><a href="http://www.gov.cn/hudong/index.htm"><img src="/r/cms/site40/default/images/gwywls.jpg" /></a></li>
+                        <li><a href="https://tousu.www.gov.cn/dc/index.htm" target="_blank"><img src="/r/cms/site40/default/static/images/sxlgwyhlwjdc.png" /></a></li>
+                        <li><img src="/r/cms/site40/default/static/images/20220524ylzpjbdh12337.jpg" /></li>
+                    </ul>
+                </div>
+            </div>
+            <script
+                type="text/javascript">jQuery(".slideBox").slide({ mainCell: ".bd ul", autoPlay: true, interTime: 2500 });</script>
+            <style>
+                .slideBox {
+                    width: 100%;
+                    height: 109px;
+                    overflow: hidden;
+                    position: relative;
+                    border: 1px solid #ddd;
+                }
+
+                .slideBox .hd {
+                    height: 15px;
+                    overflow: hidden;
+                    position: absolute;
+                    right: 10px;
+                    bottom: 10px;
+                    z-index: 1;
+                }
+
+                .slideBox .hd ul {
+                    overflow: hidden;
+                    zoom: 1;
+                    float: left;
+                }
+
+                .slideBox .hd ul li {
+                    float: left;
+                    margin-right: 5px;
+                    width: 15px;
+                    height: 15px;
+                    line-height: 14px;
+                    text-align: center;
+                    background: #fff;
+                    cursor: pointer;
+                }
+
+                .slideBox .hd ul li.on {
+                    background: #f00;
+                    color: #fff;
+                }
+
+                .slideBox .bd {
+                    position: relative;
+                    height: 100%;
+                    z-index: 0;
+                }
+
+                .slideBox .bd img {
+                    width: 1090px;
+                    height: 109px;
+                }
+            </style>
+        </div>
+        <div class="clearfix mgt15" style="border-top:#1b417d solid 2px;">
+            <div class="w755 fl">
+                <div class="clearfix">
+
+                    <!-- 左侧 -->
+                    <div class="w335 fl">
+                        <h2 class="h2_sty01 blue">政务公开</h2>
+                        <!-- 位置1-1 -->
+                        <div class="boxTy02 mgt15 boxTy02_sty01" style="height:190px;">
+                            <h3 class="clearfix"><span class="tit font16 fl">批前公示</span><span
+                                    class="more grey font14 fr"><a
+                                        href="/pqgs.html"
+                                        target="_blank">更多>></a></span></h3>
+                            <div class="boxTy02_con">
+                                <ul class="listTy02 font14 lh28">
+                                    <li><span class="grey fr">
+                                            03-23
+                                        </span>
+                                        <a href="/pqgs/20260323/30289275.html" target="_blank" title="文瀛湖片区—文瀛漫道项目—大濮府工程方案公示2026年公示第092号">文瀛湖片区—文瀛漫道项目—大濮府...</a>
+                                    </li>
+                                    <li><span class="grey fr">
+                                            03-20
+                                        </span>
+                                        <a href="/pqgs/20260320/30289037.html" target="_blank" title="山西瑞拓房地产开发有限公司违法建设查处">山西瑞拓房地产开发有限公司违法建...</a>
+                                    </li>
+                                    <li><span class="grey fr">
+                                            03-20
+                                        </span>
+                                        <a href="/pqgs/20260320/30289036.html" target="_blank" title="山西莱钢绿建置业有限公司违法建设查处">山西莱钢绿建置业有限公司违法建设...</a>
+                                    </li>
+                                    <li><span class="grey fr">
+                                            03-20
+                                        </span>
+                                        <a href="/pqgs/20260320/30289035.html" target="_blank" title="太原市俊恒房地产开发有限公司违法建设查处">太原市俊恒房地产开发有限公司违法...</a>
+                                    </li>
+                                    <li><span class="grey fr">
+                                            03-20
+                                        </span>
+                                        <a href="/pqgs/20260320/30289034.html" target="_blank" title="太原市俊恒房地产开发有限公司违法建设查处">太原市俊恒房地产开发有限公司违法...</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- 位置1-2 -->
+                        <div class="boxTy02 mgt15 boxTy02_sty01" style="height:190px;">
+                            <h3 class="clearfix"><span class="tit font16 fl">土地矿业权招拍挂公告及结果公示</span><span
+                                    class="more grey font14 fr"><a
+                                        href="/tdkyqzpgggjjggs.html"
+                                        target="_blank">更多>></a></span></h3>
+                            <div class="boxTy02_con">
+                                <ul class="listTy02 font14 lh28">
+                                    <li><span class="grey fr">
+                                            03-27
+                                        </span>
+                                        <a href="/tdkyqzpgggjjggs/20260327/30290340.html" target="_blank" title="关于SWP-2609地块出让的结果公示">关于SWP-2609地块出让的结果公示                                            </a>
+                                    </li>
+                                    <li><span class="grey fr">
+                                            03-27
+                                        </span>
+                                        <a href="/tdkyqzpgggjjggs/20260327/30290324.html" target="_blank" title="太原市规划和自然资源局国有建设用地使用权拍卖出让公告(并自然资公出告字[2026]29号)">太原市规划和自然资源局国有建设用...                                            </a>
+                                    </li>
+                                    <li><span class="grey fr">
+                                            03-27
+                                        </span>
+                                        <a href="/tdkyqzpgggjjggs/20260327/30290320.html" target="_blank" title="关于SWP-2539地块出让的结果公示">关于SWP-2539地块出让的结果公示                                            </a>
+                                    </li>
+                                    <li><span class="grey fr">
+                                            03-27
+                                        </span>
+                                        <a href="/tdkyqzpgggjjggs/20260327/30290318.html" target="_blank" title="关于SWP-2613地块出让的结果公示">关于SWP-2613地块出让的结果公示                                            </a>
+                                    </li>
+                                    <li><span class="grey fr">
+                                            03-27
+                                        </span>
+                                        <a href="/tdkyqzpgggjjggs/20260327/30290315.html" target="_blank" title="关于SWP-2611地块出让的结果公示">关于SWP-2611地块出让的结果公示                                            </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- 位置1-3 -->
+                        <div class="boxTy02 mgt15 boxTy02_sty01" style="height:190px;">
+                            <h3 class="clearfix"><span class="tit font16 fl">遗失声明</span><span
+                                    class="more grey font14 fr"><a
+                                        href="/yssm.html"
+                                        target="_blank">更多>></a></span></h3>
+                            <div class="boxTy02_con">
+                                <ul class="listTy02 font14 lh28">
+                                    <li><span class="grey fr">
+                                            03-27
+                                        </span>
+                                        <a href="/yssm/20260327/30290362.html" target="_blank" title="吴景山、张印萍房屋所有权证遗失声明">吴景山、张印萍房屋所有权证遗失声明</a>
+                                    </li>
+                                    <li><span class="grey fr">
+                                            03-27
+                                        </span>
+                                        <a href="/yssm/20260327/30290361.html" target="_blank" title="张晶不动产登记证明遗失声明">张晶不动产登记证明遗失声明</a>
+                                    </li>
+                                    <li><span class="grey fr">
+                                            03-27
+                                        </span>
+                                        <a href="/yssm/20260327/30290357.html" target="_blank" title="杨蕾不动产权证书遗失声明">杨蕾不动产权证书遗失声明</a>
+                                    </li>
+                                    <li><span class="grey fr">
+                                            03-27
+                                        </span>
+                                        <a href="/yssm/20260327/30290308.html" target="_blank" title="夏叶斌不动产权证书遗失声明">夏叶斌不动产权证书遗失声明</a>
+                                    </li>
+                                    <li><span class="grey fr">
+                                            03-27
+                                        </span>
+                                        <a href="/yssm/20260327/30290307.html" target="_blank" title="樊宇不动产权证书遗失声明">樊宇不动产权证书遗失声明</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- 位置1-4 -->
+
+                        <!-- 位置1-5 -->
+
+                        <!-- 位置1-5 end -->
+                    </div>
+
+                    <!-- 中间 -->
+                    <div class="w335 fl" style="margin-left: 42px;">
+                        <h2 class="h2_sty01"></h2>
+                        <!-- 位置2-1 -->
+                        <div class="boxTy02 mgt15 boxTy02_sty01" style="margin-top:43px;height:190px;">
+                            <h3 class="clearfix"><span class="tit font16 fl">批后公告</span><span
+                                    class="more grey font14 fr"><a
+                                        href="/phgg.html"
+                                        target="_blank">更多>></a></span></h3>
+                            <div class="boxTy02_con">
+                                <ul class="listTy02 font14 lh28">
+                                    <li><span class="grey fr">
+                                            03-23
+                                        </span>
+                                        <a href="/phgg/20260323/30289274.html" target="_blank" title="WBL-01片区03街区022、023等地块控制性详细规划修改方案">WBL-01片区03街区022、023等地块控...</a>
+                                    </li>
+                                    <li><span class="grey fr">
+                                            03-10
+                                        </span>
+                                        <a href="/phgg/20260310/30287041.html" target="_blank" title="XD-05片区01街区091等地块控制性详细规划修改方案">XD-05片区01街区091等地块控制性详...</a>
+                                    </li>
+                                    <li><span class="grey fr">
+                                            03-05
+                                        </span>
+                                        <a href="/phgg/20260305/30286205.html" target="_blank" title="XHL-01片区04街区033等地块控制性详细规划修改方案公告">XHL-01片区04街区033等地块控制性...</a>
+                                    </li>
+                                    <li><span class="grey fr">
+                                            03-05
+                                        </span>
+                                        <a href="/phgg/20260305/30286204.html" target="_blank" title="XHL-01片区04街区032地块控制性详细规划修改方案公告">XHL-01片区04街区032地块控制性详...</a>
+                                    </li>
+                                    <li><span class="grey fr">
+                                            03-05
+                                        </span>
+                                        <a href="/phgg/20260305/30286203.html" target="_blank" title="XHL-02片区01街区020地块控制性详细规划修改方案公告">XHL-02片区01街区020地块控制性详...</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- 位置2-2 -->
+                        <div class="boxTy02 mgt15 boxTy02_sty01" style="height:190px;">
+                            <h3 class="clearfix"><span class="tit font16 fl">登记公告</span><span
+                                    class="more grey font14 fr"><a
+                                        href="/djgg.html"
+                                        target="_blank">更多>></a></span></h3>
+                            <div class="boxTy02_con">
+                                <ul class="listTy02 font14 lh28">
+                                    <li><span class="grey fr">
+                                            03-27
+                                        </span>
+                                        <a href="/djgg/20260327/30290313.html" target="_blank" title="关于为王美萍办理不动产继承转移登记的公告">关于为王美萍办理不动产继承转移登...</a>
+                                    </li>
+                                    <li><span class="grey fr">
+                                            03-27
+                                        </span>
+                                        <a href="/djgg/20260327/30290312.html" target="_blank" title="关于为程勇办理不动产继承转移登记的公告">关于为程勇办理不动产继承转移登记...</a>
+                                    </li>
+                                    <li><span class="grey fr">
+                                            03-27
+                                        </span>
+                                        <a href="/djgg/20260327/30290310.html" target="_blank" title="关于为武瑞卿办理不动产继承转移登记的公告">关于为武瑞卿办理不动产继承转移登...</a>
+                                    </li>
+                                    <li><span class="grey fr">
+                                            03-25
+                                        </span>
+                                        <a href="/djgg/20260325/30289785.html" target="_blank" title="关于为孙恺办理不动产继承转移登记的公告">关于为孙恺办理不动产继承转移登记...</a>
+                                    </li>
+                                    <li><span class="grey fr">
+                                            03-25
+                                        </span>
+                                        <a href="/djgg/20260325/30289784.html" target="_blank" title="关于为王鹏办理不动产继承转移登记的公告">关于为王鹏办理不动产继承转移登记...</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- 位置2-3 -->
+                        <div class="boxTy02 mgt15 boxTy02_sty01" style="height:190px;">
+                            <h3 class="clearfix"><span class="tit font16 fl">作废公告</span><span
+                                    class="more grey font14 fr"><a
+                                        href="/zfgg.html"
+                                        target="_blank">更多>></a></span></h3>
+                            <div class="boxTy02_con">
+                                <ul class="listTy02 font14 lh28">
+                                    <li><span class="grey fr">
+                                            03-27
+                                        </span>
+                                        <a href="/zfgg/20260327/30290365.html" target="_blank" title="关于作废山西新大陆房地产开发有限公司位于朝阳街39号1幢-1层0010B号、朝阳街39号1幢3层3080C号《不动产权证书/登记证明》的公告">关于作废山西新大陆房地产开发有限...</a>
+                                    </li>
+                                    <li><span class="grey fr">
+                                            03-27
+                                        </span>
+                                        <a href="/zfgg/20260327/30290364.html" target="_blank" title="关于作废任晓杰、薄涛、张威位于胜利东街7号63幢3单元3层0304号《不动产权证书/登记证明》的公告">关于作废任晓杰、薄涛、张威位于胜...</a>
+                                    </li>
+                                    <li><span class="grey fr">
+                                            03-27
+                                        </span>
+                                        <a href="/zfgg/20260327/30290363.html" target="_blank" title="关于作废周续模、任振华位于迎泽街296号3幢2单元6层12号《不动产权证书/登记证明》的公告">关于作废周续模、任振华位于迎泽街...</a>
+                                    </li>
+                                    <li><span class="grey fr">
+                                            03-27
+                                        </span>
+                                        <a href="/zfgg/20260327/30290349.html" target="_blank" title="关于杨志贞、武晋生不动产权证书作废公告">关于杨志贞、武晋生不动产权证书作...</a>
+                                    </li>
+                                    <li><span class="grey fr">
+                                            03-26
+                                        </span>
+                                        <a href="/zfgg/20260326/30290003.html" target="_blank" title="关于作废太原天泰房地产开发有限公司位于五一路118号1幢12层1207号《不动产权证书/登记证明》的公告">关于作废太原天泰房地产开发有限公...</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- 位置2-4 -->
+                        <!-- 位置2-4 end-->
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- 最右边 -->
+            <div class="w335 fr">
+                <!-- 位置3-1 -->
+                <h2 class="h2_sty01 blue"></h2>
+                <div class="boxTy02 mgt15 boxTy02_sty01" style="margin-top:43px;height:190px;">
+                    <h3 class="clearfix"><span class="tit font16 fl">行政许可、处罚双公示</span><span
+                            class="more grey font14 fr"><a href="/xzxkcfsgs.html"
+                            target="_blank">更多>></a></span></h3>
+                    <div class="boxTy02_con">
+                        <ul class="listTy02 font14 lh28">
+                            <li><span class="grey fr">
+                                    03-20
+                                </span>
+                                <a href="/xzcf/20260320/30289045.html" target="_blank" title="行政处罚公示2026年第10期">行政处罚公示2026年第10期</a>
+                            </li>
+                            <li><span class="grey fr">
+                                    03-03
+                                </span>
+                                <a href="/xzcf/20260303/30285760.html" target="_blank" title="行政处罚公示2026年第9期">行政处罚公示2026年第9期</a>
+                            </li>
+                            <li><span class="grey fr">
+                                    02-06
+                                </span>
+                                <a href="/xzcf/20260206/30282507.html" target="_blank" title="行政处罚公示2026年第8期">行政处罚公示2026年第8期</a>
+                            </li>
+                            <li><span class="grey fr">
+                                    01-23
+                                </span>
+                                <a href="/xzcf/20260123/30279823.html" target="_blank" title="行政处罚公示2026年第7期">行政处罚公示2026年第7期</a>
+                            </li>
+                            <li><span class="grey fr">
+                                    01-23
+                                </span>
+                                <a href="/xzcf/20260123/30279821.html" target="_blank" title="行政处罚公示2026年第6期">行政处罚公示2026年第6期</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 位置3-2 -->
+                <div class="boxTy02 mgt15 boxTy02_sty01" style="height:190px;">
+                    <h3 class="clearfix"><span class="tit font16 fl">其它公告</span><span
+                            class="more grey font14 fr"><a href="/qtgg.html"
+                            target="_blank">更多>></a></span></h3>
+                    <div class="boxTy02_con">
+                        <ul class="listTy02 font14 lh28">
+                            <li><span class="grey fr">
+                                    03-06
+                                </span>
+                                <a href="/qtgg/20260306/30286462.html" target="_blank" title="关于办理太原市房管局职工公房出售的公告">关于办理太原市房管局职工公房出售...</a>
+                            </li>
+                            <li><span class="grey fr">
+                                    01-30
+                                </span>
+                                <a href="/qtgg/20260130/30281643.html" target="_blank" title="关于太原煤炭气化（集团）有限责任公司部分职工办理公有住房调购手续的公告">关于太原煤炭气化（集团）有限责任...</a>
+                            </li>
+                            <li><span class="grey fr">
+                                    01-30
+                                </span>
+                                <a href="/qtgg/20260130/30281642.html" target="_blank" title="关于太原煤炭气化（集团）有限责任公司部分职工办理公有住房补差及调购手续的公告">关于太原煤炭气化（集团）有限责任...</a>
+                            </li>
+                            <li><span class="grey fr">
+                                    01-04
+                                </span>
+                                <a href="/qtgg/20260104/30275397.html" target="_blank" title="关于丽华北街1号拟办理换证业务的公告">关于丽华北街1号拟办理换证业务的公告</a>
+                            </li>
+                            <li><span class="grey fr">
+                                    12-30
+                                </span>
+                                <a href="/qtgg/20251230/30274809.html" target="_blank" title="关于晋西工业集团有限责任公司部分职工办理公有住房调购手续的公告">关于晋西工业集团有限责任公司部分...</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 位置3-3 -->
+                        <div class="boxTy02 mgt15 boxTy02_sty01" style="height:190px;">
+                            <h3 class="clearfix"><span class="tit font16 fl">变更公告</span><span
+                                    class="more grey font14 fr"><a
+                                        href="/bggg.html"
+                                        target="_blank">更多>></a></span></h3>
+                            <div class="boxTy02_con">
+                                <ul class="listTy02 font14 lh28">
+                                    <li><span class="grey fr">
+                                            05-27
+                                        </span>
+                                        <a href="/bggg/20250527/30221779.html" target="_blank" title="关于太原保利房地产开发有限公司土地合并变更登记的公告">关于太原保利房地产开发有限公司土...</a>
+                                    </li>
+                                    <li><span class="grey fr">
+                                            02-06
+                                        </span>
+                                        <a href="/bggg/20250206/30194270.html" target="_blank" title="关于太原学院土地合并变更登记的公告">关于太原学院土地合并变更登记的公告</a>
+                                    </li>
+                                    <li><span class="grey fr">
+                                            08-15
+                                        </span>
+                                        <a href="/bggg/20240815/30151796.html" target="_blank" title="关于山西金地慧远房地产开发有限公司土地合并变更登记的公告">关于山西金地慧远房地产开发有限公...</a>
+                                    </li>
+                                    <li><span class="grey fr">
+                                            07-09
+                                        </span>
+                                        <a href="/bggg/20240709/30142404.html" target="_blank" title="关于山西昌盛恒运房地产开发有限公司土地合并变更登记的公告">关于山西昌盛恒运房地产开发有限公...</a>
+                                    </li>
+                                    <li><span class="grey fr">
+                                            06-27
+                                        </span>
+                                        <a href="/bggg/20240627/30139129.html" target="_blank" title="关于中国电子科技集团公司第三十三研究所土地合并变更登记的公告">关于中国电子科技集团公司第三十三...</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                <!-- 位置3-4 -->
+
+                <!-- 位置3-5 -->
+
+                <!-- 位置3-5 end -->
+
+
+            </div>
+        </div>
+        <style>
+            .foot_link {
+                margin-top: 30px;
+                margin-bottom: -15px;
+                background: #fff;
+                border-top: 1px solid #e3e3e3;
+                background: #f5f5f5
+            }
+
+            .foot_link dl {
+                width: 1090px;
+                margin: 0 auto;
+                padding: 10px 0;
+                line-height: 24px;
+                overflow: hidden;
+                zoom: 1
+            }
+
+            .foot_link dt {
+                float: left;
+                width: 100px;
+                text-align: right;
+                font-size: 18px
+            }
+
+            .foot_link dd {
+                float: right;
+                width: 98%;
+                word-wrap: break-word
+            }
+
+            .foot_link dd a {
+                display: inline-block;
+                margin: 10px 8px;
+                white-space: nowrap;
+                /*width: 31%*/
+            }
+
+            /*.foot_link dd a{ display: inline-block;margin: 10px 45px;white-space: nowrap;width: 40%;}*/
+
+            .foot_link dd a img {
+                width: 100%;
+                height: 74px;
+            }
+        </style>
+        <div class="foot_link">
+            <dl>
+                <dd style="display: flex;justify-content: space-between;">
+                    <a href="/yshjyhts.html" target="_blank"><img src="/r/cms/site40/default/static/images/yhyshj.png" /></a>
+                    <a href="http://yiwuzhishu.cn/sxywzs/index.php" target="_blank"><img src="/r/cms/site40/default/static/images/lhty.jpg"></a>
+                    <a href="https://zrzyt.shanxi.gov.cn/sxzdxxgk/" target="_blank"><img src="/r/cms/site40/default/static/images/zdxxzl.jpg" /></a>
+
+                </dd>
+            </dl>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(function () {
+            $(".uproll01").myScrollTop(50);
+            $(".uproll02").myScrollTop(50);
+            $(".boxTy01").tab({ tabs: "h2 ol li", evtype: "mouseover", box: ".boxTy01_con" });
+        })
+    </script>
+<div id="foot" class="white">
+  <p>太原市规划和自然资源局（太原市林业局）&nbsp;&nbsp;版权所有&emsp;&emsp;
+    <a href="/wzdt.html"> 网站地图</a>
+  </p>
+  <p>办公地址：山西省太原市金刚堰路2号&nbsp;&nbsp;邮编：030009&nbsp;&nbsp;邮箱：hdt3_87@163.com</p>
+  <p><a href="https://beian.miit.gov.cn">晋ICP备05003854号</a>&nbsp;&nbsp;访问统计,网站总访问量：<em id="pvTotal"></em>
+    <script src="/r/cms/site40/default/js/front.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+      $(function () {
+        Cms.siteFlow("");
+      });
+    </script>
+  </p>
+  <p><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=14010002001529"><span class="fix_bg"><img
+          src="/r/cms/site40/default/static/images/jinghui.png" /></span>&nbsp;&nbsp;晋公网安备
+      14010002001529号</a>&emsp;&emsp;网站标识码：1401000016</p>
+  <p><a href="http://bszs.conac.cn/sitename?method=show&id=0C23751B2D737D6CE053012819ACD277" class="fix_bg"><img
+        src="/r/cms/site40/default/static/images/red.png" /></a>
+    <span>
+      <script id="_jiucuo_" sitecode='1401000016' src="/r/cms/site40/default/static/js/jiucuo.js"></script>
+    </span>
+  </p>
+</div></body>
+
+</html>

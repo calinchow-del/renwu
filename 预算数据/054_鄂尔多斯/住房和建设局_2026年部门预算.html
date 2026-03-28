@@ -1,0 +1,1710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./images/W020210311566339502648.gif" rel="shortcut icon" type="image/x-icon" />
+<meta name="SiteName" content="鄂尔多斯市住房和城乡建设局">
+<meta name="SiteDomain" content="zjj.ordos.gov.cn">
+<meta name="SiteIDCode" content="1506000031">
+  <title>鄂尔多斯市住房和城乡建设局</title>
+  <link rel="stylesheet" href="./images/swiper-bundle.min.css">
+  <link rel="stylesheet" href="./images/base_1.css">
+  <link rel="stylesheet" href="./images/header_footer.css">
+  <link rel="stylesheet" href="./images/header_footerh5.css" media="screen and (max-width:750px)" />
+  <link rel="stylesheet" href="./images/home.css">
+  <link rel="stylesheet" href="./images/homeh5.css" media="screen and (max-width:750px)" />
+
+  <style>
+    .query .scroll .swiper-slide a {
+      display: flex;
+      align-items: center;
+    }
+    .query .scroll .swiper-slide a img {
+      width: 100%;
+      height: 46px;
+    }
+  </style>
+    <style>
+      .industry {
+        margin-top: 40px;
+      }
+      .industry-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 51px;
+        border-bottom: 1px solid #ca0000;
+      }
+      .industry-title .text {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 150px;
+        height: 50px;
+        background-color: #ca0000;
+        font-size: 22px;
+        color: #fff;
+      }
+      .industry-title .more {
+        font-size: 16px;
+        color: #333;
+      }
+      .industry-title .more:hover {
+        color: #ca0000;
+      }
+  
+      .industry .swiper-container {
+        position: relative;
+        width: 100%;
+        height: 220px;
+        overflow: hidden;
+        margin-top: 24px;
+      }
+      .industry .swiper-container .swiper-slide {
+        width: 100%;
+        height: 100%;
+      }
+      .industry .swiper-container .swiper-slide a {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+      .industry .swiper-container .swiper-slide a img {
+        width: 100%;
+        height: 150px;
+      }
+      .industry .swiper-container .swiper-slide a .mask {
+        display: flex;
+        align-items: center;
+        height: 40px;
+        background-color: #eee;
+        padding: 0 10px;
+        color: #333;
+      }
+      .industry-button-next {
+        position: absolute;
+        top: 0;
+        right: 0;
+        cursor: pointer;
+        z-index: 999;
+      }
+  
+      .industry-button-prev {
+        position: absolute;
+        top: 0;
+        left: 0;
+        cursor: pointer;
+        z-index: 999;
+      }
+.policy .policy-r .policy-list li a{display: flex;justify-content: space-between;}
+    </style>
+</head>
+<body>
+  <!-- 嵌套头部 -->
+  <style>
+  .header {
+    background-image: url(./tpbc/202401/W020240129516879770453.png);
+  }
+  .header .header-banner .header-main {
+    background-image: url(./tpbc/202401/W020240129516879947507.png);
+  }
+  .header .header-banner .header-main .search-web .search-button {
+    background-image: url(./tpbc/202401/W020240129516880062638.png);
+  }
+</style>  
+
+<!-- 公共头部 -->
+<div class="header">
+  <div class="header-banner">
+    <div class="shortcut w">
+      <div class="shortcut-l">今天是：<span id="date"></span></div>
+      <ul class="shortcut-r">
+        <li>
+          <a href="javascript:;" onclick="aria.start()" clickhide="false">
+            <img src="./images/accessibility_icon.png" alt="" />
+            <span>无障碍</span>
+          </a>
+        </li>
+        <li></li>
+        <li>
+          <a href="javascript:;" onclick="aria.oldFixedStart()" clickhide="false">
+            <img src="./images/W020240603529246549762.png" alt="" />
+            <span>长者模式</span>
+          </a>
+        </li>
+        <li></li>
+        <li>
+          <a>
+            <img src="./images/wechat_icon.png" alt="" />
+            <span>微信公众号</span>
+            <div class="ewm">
+              <img src="./images/ewm.png" alt="" />
+            </div>
+          </a>
+        </li>
+        <li></li>
+        <li>
+          <a id="loginA" href="http://zjj.ordos.gov.cn/sso/index.jsp?client_id=W3SNNPQSL&amp;url=http://zjj.ordos.gov.cn/" target="_blank">
+            <img src="./images/user_icon.png" alt="" />
+            <span>统一身份登录</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+
+
+		<script type="text/javascript">
+			/****************************登陆用户中心js******************************/
+			$(function() {
+				$.ajax({
+					url: "http://zjj.ordos.gov.cn/sso/getLoginUser.jsp",
+					cache: "false",
+					dataType: "json",
+					success: function(data) {
+						if(data.success == false) {
+							//$("#LoginRegister").show();
+						}
+						if(data.success == true) {
+							var data_user = data.user;
+							var b = JSON.stringify(data_user);
+							sessionStorage.setItem("key_user", b);
+
+							var name = data.user.nickName;
+							name = "*" + name.substring(1, name.length);
+							$("#loginA").html('欢迎您，' + name);
+
+						}
+					}
+				})
+			})
+		</script>
+
+<!--无障碍-->
+<script defer async type="text/javascript" src="//gov.govwza.cn/dist/aria.js?appid=cb108edc89c12755d0f722e97121274d" charset="utf-8" id="ariascripts"></script>
+
+    <div class="header-main w">
+      <div class="title">
+        <img class="logo" src="./images/logo.png" alt="" />
+        <a href="#" class="ordos">
+          <img src="./images/ordos.png" alt="" />
+        </a>
+      </div>
+      <!-- 搜索框 -->
+      <form method="post" class="search-web" action="https://zjj.ordos.gov.cn/was40/search" target="_blank">
+        <input class="search-text" type="text" name="searchword" placeholder="请输入关键词搜索" />
+        <input type="hidden" name="channelid" value="225667" />
+        <input type="hidden" name="topurl" value="https://zjj.ordos.gov.cn/ssqt/sstb/" />
+        <input type="hidden" name="bottomurl" value="https://zjj.ordos.gov.cn/ssqt/ssdb/" />
+        <input type="hidden" name="topframeh" value="302px" />
+        <input type="hidden" name="bottomframeh" value="240px" />
+        <input class="search-button" type="submit" value="" />
+      </form>
+    </div>
+  </div> 
+
+  <ul class="header-nav w">
+    <li>
+      <a href="/" target="_blank">网站首页</a>
+    </li>
+    <li>
+      <a href="./xxgkx/" target="_blank">政务公开</a>
+    </li>
+    <li>
+      <a href="./djgzx/" target="_blank">党建工作</a>
+    </li>
+
+    <li>
+      <a href="./zxfwx/zwfw/" target="_blank">政务服务</a>
+    </li>
+    <li>
+      <a href="./hdjl/" target="_blank">互动交流</a>
+    </li>
+  </ul>
+</div>
+  <!-- 头条 -->
+  <div class="headlines w">
+    
+      <div class="headlines-l">
+        <a href="./jrtt/" target="_blank">
+          <img src="./images/headlines_icon.png" alt="" />
+          <span>头条</span>
+        </a>
+      </div>
+      <a href="./jrtt/202603/t20260324_3883438.html" target="_blank" class="headlines-c ellipsis">
+        习近平会见土库曼斯坦民族领袖、人民委员会主席别尔德穆哈梅多夫
+      </a>
+    
+    <a href="https://www.gov.cn/pushinfo/v150203/" class="headlines-r" target="_blank">
+      <img src="./images/gov_icon.png" alt="" />
+      <span>国务院信息</span>
+    </a>
+  </div>
+
+  <!-- 新闻 -->
+  <div class="news w">
+    <div class="news-l">
+      <div class="swiper news-swiper">
+        <div class="swiper-wrapper">
+          
+            <div class="swiper-slide">
+              <a href="./tpxw/202603/t20260312_3880904.html" target="_blank"><img src="./tpxw/202603/W020260312715200545635.png" alt="图片2.png"/></a>
+              <div class="mask">
+                自治区住建厅赴我市调研历史建筑修缮工作
+              </div>
+            </div>
+          
+            <div class="swiper-slide">
+              <a href="./tpxw/202603/t20260310_3880380.html" target="_blank"><img src="./tpxw/202603/W020260310683628201010.jpg" alt="0.jpg"/></a>
+              <div class="mask">
+                鄂尔多斯市住房公积金管理委员会2026年第一...
+              </div>
+            </div>
+          
+            <div class="swiper-slide">
+              <a href="./tpxw/202603/t20260303_3878830.html" target="_blank"><img src="./tpxw/202603/W020260303650165232872.jpg" alt="1.jpg"/></a>
+              <div class="mask">
+                市住建局组织召开全市建筑业高质量发展协调会
+              </div>
+            </div>
+          
+            <div class="swiper-slide">
+              <a href="./tpxw/202603/t20260302_3878576.html" target="_blank"><img src="./tpxw/202603/W020260302669340199800.jpg" alt="0.jpg"/></a>
+              <div class="mask">
+                市住建局推动党政机关办公用房权属统一登记...
+              </div>
+            </div>
+          
+            <div class="swiper-slide">
+              <a href="./tpxw/202602/t20260211_3876148.html" target="_blank"><img src="./tpxw/202602/W020260211640320537928.png" alt="图片1.png"/></a>
+              <div class="mask">
+                市住建局召开全市城镇燃气安全专项整治2026...
+              </div>
+            </div>
+          
+        </div>
+        <div class="swiper-pagination news-pagination"></div>
+      </div>
+    </div>
+    <div class="news-r">
+      <div class="news-head">
+        <ul class="news-nav">
+          <li index="0" class="active">工作动态</li>
+          <li index="1">公示公告</li>
+          <li class="2">行业前沿</li>
+        </ul>
+        <a class="more news-more-0" href="./gzdtx/" target="_blank">更多>></a>
+        <a style="display: none;" class="more news-more-1" href="./gsgg/" target="_blank">更多>></a>
+        <a style="display: none;" class="more news-more-2" href="./hyqy/" target="_blank">更多>></a>
+      </div>
+      <ul class="news-list news-list-0">
+        
+          <div class="first">
+            <div class="date">
+              <div class="day">
+                20
+              </div>
+              <div class="month">
+                3<span>月</span>
+                
+              </div>
+            </div>
+            <div class="first-r">
+              <a href="./gzdtx/202603/t20260320_3883000.html" class="title" target="_blank">
+                市住建局召开树立和践行正确政绩观学习教育读书班...
+              </a>
+              <div class="desc">
+                
+　　3月18日至19日，市住建局召开树立和践行正确政绩观学习教育读书班暨党组理论学习中心组2... </TRS_DOCUMENT>
+              </div>
+            </div>
+          </div>
+        
+        
+          <li>
+            <a href="./gzdtx/202603/t20260318_3882288.html" target="_blank">
+              <span>
+                市住建局召开全市住建领域规范涉企行政检查工作推进会
+              </span>
+              <span>
+                2026-03-18
+              </span>
+            </a>
+          </li>
+        
+          <li>
+            <a href="./gzdtx/202603/t20260317_3882034.html" target="_blank">
+              <span>
+                市住建局组织开展工程项目复工复产安全生产检查
+              </span>
+              <span>
+                2026-03-17
+              </span>
+            </a>
+          </li>
+        
+          <li>
+            <a href="./gzdtx/202603/t20260316_3881777.html" target="_blank">
+              <span>
+                全市住房公积金工作暨党风廉政建设会议召开部署2026年重...
+              </span>
+              <span>
+                2026-03-16
+              </span>
+            </a>
+          </li>
+        
+          <li>
+            <a href="./gzdtx/202603/t20260313_3881314.html" target="_blank">
+              <span>
+                灵活就业人员缴存使用指南
+              </span>
+              <span>
+                2026-03-13
+              </span>
+            </a>
+          </li>
+        
+          <li>
+            <a href="https://mp.weixin.qq.com/s/KJ-QXhccI3GGgRYAa9ve0g" target="_blank">
+              <span>
+                鄂尔多斯住房公积金10项新政 3月16日全面落地！
+              </span>
+              <span>
+                2026-03-13
+              </span>
+            </a>
+          </li>
+        
+      </ul>
+      <ul class="news-list news-list-1" style="display: none;">
+        
+          <div class="first">
+            <div class="date">
+              <div class="day">
+                27
+              </div>
+              <div class="month">
+                3<span>月</span>
+                
+              </div>
+            </div>
+            <div class="first-r">
+              <a href="./gsgg/202603/t20260327_3884580.html" class="title" target="_blank">
+                鄂尔多斯市2026年度第二批建筑施工企业“安管人员...
+              </a>
+              <div class="desc">
+                　　根据内蒙古自治区住房和城乡建设厅《关于全区建筑施工企业主要负责人、项目负责人和专职... </TRS_DOCUMENT>
+              </div>
+            </div>
+          </div>
+        
+        
+          <li>
+            <a href="./gsgg/202603/t20260326_3884102.html" target="_blank">
+              <span>
+                鄂尔多斯市住房和城乡建设局关于2026年第十批建筑施工企...
+              </span>
+              <span>
+                2026-03-25
+              </span>
+            </a>
+          </li>
+        
+          <li>
+            <a href="./gsgg/202603/t20260323_3883385.html" target="_blank">
+              <span>
+                鄂尔多斯市住房和城乡建设局关于核准2026年第八批行政审...
+              </span>
+              <span>
+                2026-03-23
+              </span>
+            </a>
+          </li>
+        
+          <li>
+            <a href="./gsgg/202603/t20260323_3883384.html" target="_blank">
+              <span>
+                鄂尔多斯市住房和城乡建设局关于2026年第九批行政审批事...
+              </span>
+              <span>
+                2026-03-23
+              </span>
+            </a>
+          </li>
+        
+          <li>
+            <a href="./gsgg/202603/t20260323_3883237.html" target="_blank">
+              <span>
+                鄂尔多斯市住房和城乡建设局关于2026年第九批建筑施工企...
+              </span>
+              <span>
+                2026-03-23
+              </span>
+            </a>
+          </li>
+        
+          <li>
+            <a href="./gsgg/202603/t20260316_3881775.html" target="_blank">
+              <span>
+                鄂尔多斯市住房和城乡建设局关于核准2026年第七批行政审...
+              </span>
+              <span>
+                2026-03-16
+              </span>
+            </a>
+          </li>
+        
+      </ul>
+      <ul class="news-list news-list-2" style="display: none;">
+        
+          <div class="first">
+            <div class="date">
+              <div class="day">
+                10
+              </div>
+              <div class="month">
+                3<span>月</span>
+                
+              </div>
+            </div>
+            <div class="first-r">
+              <a href="./hyqy/202603/t20260310_3880379.html" class="title" target="_blank">
+                @人力资源公司（劳务派遣）的缴存职工：您是否有一...
+              </a>
+              <div class="desc">
+                
+　　市本级、伊旗服务部各缴存单位、缴存职工：
+　　为规范和加强住房公积金缴存账户管理，... </TRS_DOCUMENT>
+              </div>
+            </div>
+          </div>
+        
+        
+          <li>
+            <a href="./hyqy/202602/t20260228_3878255.html" target="_blank">
+              <span>
+                暖城·住小贷 | 鄂尔多斯住房公积金“商转公”直转贷款这...
+              </span>
+              <span>
+                2026-02-28
+              </span>
+            </a>
+          </li>
+        
+          <li>
+            <a href="./hyqy/202603/t20260304_3879072.html" target="_blank">
+              <span>
+                鄂尔多斯住房公积金“接诉即办”诉求工单热点问题政策解答
+              </span>
+              <span>
+                2026-02-24
+              </span>
+            </a>
+          </li>
+        
+          <li>
+            <a href="./hyqy/202602/t20260203_3874323.html" target="_blank">
+              <span>
+                巧用公积金对冲| 还贷日子更轻松！
+              </span>
+              <span>
+                2026-02-03
+              </span>
+            </a>
+          </li>
+        
+          <li>
+            <a href="./hyqy/202511/t20251119_3851961.html" target="_blank">
+              <span>
+                @鄂尔多斯的银行人：赶紧把你的“沉睡资金”用起来吧！
+              </span>
+              <span>
+                2025-11-19
+              </span>
+            </a>
+          </li>
+        
+          <li>
+            <a href="./hyqy/202511/t20251103_3847600.html" target="_blank">
+              <span>
+                【营商环境】鄂尔多斯市：开设供热诉求专线擦亮营商环境...
+              </span>
+              <span>
+                2025-11-03
+              </span>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  <!-- 政策问答 -->
+  <div class="policy w">
+    <div class="policy-l">
+      <ul class="side">
+        <li>
+          <a href="http://www.ordos.gov.cn/zwfwbmrx/home/writeLetters?areaCode=1506&objectCode=150600210">局长信箱</a>
+        </li>
+        <li class="active">政策问答</li>
+        <li>
+          <a href="./hdjl/zjdc/">征集调查</a>
+        </li>
+      </ul>
+      <div class="con">
+        
+          <div class="con-item">
+            <div class="question">
+              <img src="./images/question.png" alt="" />
+              <a href="./hdjl/zcwd/202402/t20240218_3573120.html" target="_blank">
+                住房公积金办理常见问题答疑
+              </a>
+            </div>
+            <div class="answer">
+              <img src="./images/answer.png" alt="" />
+              <span>
+                
+　　一、公积金缴存业务
+　　1.开设单位住房公积金缴存账户的办理方式有哪些？
+　　单位开户需要将办理... </TRS_DOCUMENT>
+              </span>
+            </div>
+          </div>
+        
+          <div class="con-item">
+            <div class="question">
+              <img src="./images/question.png" alt="" />
+              <a href="./hdjl/zcwd/202402/t20240218_3573116.html" target="_blank">
+                农民工工资拖欠和建筑市场常见问题答疑
+              </a>
+            </div>
+            <div class="answer">
+              <img src="./images/answer.png" alt="" />
+              <span>
+                
+　　1.农民工被拖欠工资该如何维权？
+　　被拖欠工资的农民工有权依法投诉，或者申请劳动争议调解仲裁... </TRS_DOCUMENT>
+              </span>
+            </div>
+          </div>
+        
+        <div class="check">
+          <a href="./hdjl/zcwd/" target="_blank" class="more">查看更多>></a>
+        </div>
+      </div>
+    </div>
+    <div class="policy-r">
+      <div class="policy-head">
+        <ul class="policy-nav">
+          <li index="0" class="active">政策文件</li>
+          <li index="1">政策解读</li>
+        </ul>
+
+        <a class="more policy-more-0" href="./xxgkx/fdzdgknr/zcwj/" target="_blank">更多>></a>
+        <a style="display: none;" class="more policy-more-1" href="./xxgkx/fdzdgknr/zcjd/" target="_blank">更多>></a>
+      </div>
+      <ul class="policy-list policy-list-0">
+        
+          <li>
+            <a class="ellipsis" href="./xxgkx/fdzdgknr/zcwj/202510/t20251014_3841874.html" target="_blank">
+              鄂尔多斯市人民政府关于进一步优化政策措施促进房地产业高质...
+              <span>
+                2025-08-08
+              </span>
+            </a>
+          </li>
+        
+          <li>
+            <a class="ellipsis" href="./xxgkx/fdzdgknr/zcwj/202511/t20251103_3847412.html" target="_blank">
+              鄂尔多斯市住房和城乡建设局关于印发《房屋市政工程施工安全...
+              <span>
+                2025-07-29
+              </span>
+            </a>
+          </li>
+        
+          <li>
+            <a class="ellipsis" href="./xxgkx/fdzdgknr/zcwj/202511/t20251106_3848551.html" target="_blank">
+              鄂尔多斯市住房公积金管理委员会关于修改《鄂尔多斯市住房公...
+              <span>
+                2025-03-18
+              </span>
+            </a>
+          </li>
+        
+          <li>
+            <a class="ellipsis" href="./xxgkx/fdzdgknr/zcwj/202511/t20251105_3848432.html" target="_blank">
+              鄂尔多斯市住房和城乡建设局关于印发《鄂尔多斯市推动释放居...
+              <span>
+                2025-03-17
+              </span>
+            </a>
+          </li>
+        
+          <li>
+            <a class="ellipsis" href="./xxgkx/fdzdgknr/zcwj/202511/t20251105_3848440.html" target="_blank">
+              鄂尔多斯市住房和城乡建设局关于印发《鄂尔多斯市全域公园城...
+              <span>
+                2024-11-28
+              </span>
+            </a>
+          </li>
+        
+      </ul>
+      <ul class="policy-list policy-list-1" style="display: none;">
+        
+          <li>
+            <a class="ellipsis" href="./xxgkx/fdzdgknr/zcjd/202603/t20260313_3881313.html" target="_blank">
+              政策解读∣ 鄂尔多斯住房公积金 10 项惠民新政 利好全覆盖
+               <span>
+                2026-03-13
+              </span>
+            </a>
+          </li>
+        
+          <li>
+            <a class="ellipsis" href="./xxgkx/fdzdgknr/zcjd/202512/t20251215_3860444.html" target="_blank">
+              干货解读！鄂尔多斯住房公积金10项惠民政策解锁安居福利
+               <span>
+                2025-12-12
+              </span>
+            </a>
+          </li>
+        
+          <li>
+            <a class="ellipsis" href="./xxgkx/fdzdgknr/zcjd/202510/t20251014_3841875.html" target="_blank">
+              《关于进一步优化政策措施促进房地产业高质量发展的意见》政...
+               <span>
+                2025-08-08
+              </span>
+            </a>
+          </li>
+        
+          <li>
+            <a class="ellipsis" href="./xxgkx/fdzdgknr/zcjd/202508/t20250814_3825323.html" target="_blank">
+              一图读懂《房屋市政工程施工安全行政处罚简易程序》
+               <span>
+                2025-07-31
+              </span>
+            </a>
+          </li>
+        
+          <li>
+            <a class="ellipsis" href="./xxgkx/fdzdgknr/zcjd/202506/t20250603_3802948.html" target="_blank">
+              鄂尔多斯市住房公积金新政解读 ---鄂尔多斯市住房和城乡建设...
+               <span>
+                2025-06-03
+              </span>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  <!-- 个人办事 -->
+  <div class="guide w">
+    <div class="guide-head">
+      <ul class="guide-nav">
+        <li index="0" class="active">个人办事</li>
+        <li index="1">法人办事</li>
+        <li index="2">公共服务</li>
+        <li index="3">行业网站</li>
+      </ul>
+      <a class="more guide-more-0" href="https://zwfw.nmg.gov.cn/handle_affairs?regionCode=150600000000&workType=personal">更多>></a>
+      <a style="display: none;" class="more guide-more-1" href="https://zwfw.nmg.gov.cn/handle_affairs?workType=corporation&regionCode=150600000000">更多>></a>
+      <a style="display: none;" class="more guide-more-2" href="https://zwfw.nmg.gov.cn/OrgItem_index?regionCode=150600000000&orgCode=11150600MB1771157H&record=istrue/">更多>></a>
+      <!-- <a style="display: none;" class="more guide-more-3" href="#">更多>></a> -->
+    </div>
+    <div class="guide-con guide-0 w">
+      <div class="swiper-container guide-swiper-0">
+        <div class="swiper-wrapper">
+          
+            <div class="swiper-slide">
+              <a href="https://zwfw.nmg.gov.cn/handle_affairs_detail_simple?item_detail_id=ff80808175da8f3f0175dfd8ec525141&regionCode=150600000000&record=istrue" target="_blank">
+                <img src="./zxfwx/zwfw/grbs/155294/images/P020240203307087277273.png" />
+              </a>
+            </div>
+          
+            <div class="swiper-slide">
+              <a href="https://zwfw.nmg.gov.cn/handle_affairs?regionCode=150600000000&workType=personal" target="_blank">
+                <img src="./zxfwx/zwfw/grbs/155295/images/P020240203307947390388.png" />
+              </a>
+            </div>
+          
+            <div class="swiper-slide">
+              <a href="https://zwfw.nmg.gov.cn/handle_affairs_detail_simple?item_detail_id=ff8080817cedd729017cef9f433a4d8c&regionCode=150600000000&record=istrue" target="_blank">
+                <img src="./zxfwx/zwfw/grbs/155296/images/P020240203310884133587.png" />
+              </a>
+            </div>
+          
+            <div class="swiper-slide">
+              <a href="https://zwfw.nmg.gov.cn/handle_affairs_detail_simple?item_detail_id=bb4497086b1a5d56016b1b4bf0c26499&regionCode=150600000000&record=istrue" target="_blank">
+                <img src="./zxfwx/zwfw/grbs/155297/images/P020240203310921525997.png" />
+              </a>
+            </div>
+          
+            <div class="swiper-slide">
+              <a href="https://zwfw.nmg.gov.cn/handle_affairs_detail_simple?item_detail_id=bb4497086b03fa83016b0c00014f2aa5&regionCode=150600000000&record=istrue" target="_blank">
+                <img src="./zxfwx/zwfw/grbs/155298/images/P020240203311031553420.png" />
+              </a>
+            </div>
+          
+            <div class="swiper-slide">
+              <a href="https://zwfw.nmg.gov.cn/handle_affairs_detail_simple?item_detail_id=ff80808175da8f3f0175de7db918788c&regionCode=150600000000&record=istrue" target="_blank">
+                <img src="./zxfwx/zwfw/grbs/155299/images/P020240203311251160033.png" />
+              </a>
+            </div>
+          
+            <div class="swiper-slide">
+              <a href="https://zwfw.nmg.gov.cn/handle_affairs_detail_simple?item_detail_id=ff8080817d7f891e017d97b30bc315c9&regionCode=150600000000&record=istrue" target="_blank">
+                <img src="./zxfwx/zwfw/grbs/155300/images/P020240203311320106270.png" />
+              </a>
+            </div>
+          
+            <div class="swiper-slide">
+              <a href="https://zwfw.nmg.gov.cn/handle_affairs_detail_simple?item_detail_id=ff8080817d7f891e017d97c09be42493&regionCode=150600000000&record=istrue" target="_blank">
+                <img src="./zxfwx/zwfw/grbs/155301/images/P020240203311595824774.png" />
+              </a>
+            </div>
+          
+            <div class="swiper-slide">
+              <a href="https://zwfw.nmg.gov.cn/handle_affairs_detail_simple?item_detail_id=ff8080817d7f891e017d8d9b47766d20&regionCode=150600000000&record=istrue" target="_blank">
+                <img src="./zxfwx/zwfw/grbs/155302/images/P020240203311604397608.png" />
+              </a>
+            </div>
+          
+            <div class="swiper-slide">
+              <a href="https://zwfw.nmg.gov.cn/handle_affairs_detail_simple?item_detail_id=ff8080817d7f8b45017d97cc099a2820&regionCode=150600000000&record=istrue" target="_blank">
+                <img src="./zxfwx/zwfw/grbs/155303/images/P020240203311817631562.png" />
+              </a>
+            </div>
+          
+        </div>
+        <div class="swiper-pagination guide-pagination"></div>
+      </div>
+    </div>
+    <div class="guide-con guide-1 w" style="display: none;">
+      <div class="swiper-container guide-swiper-1">
+        <div class="swiper-wrapper">
+          
+            <div class="swiper-slide">
+              <a href="https://zwfw.nmg.gov.cn/handle_affairs_detail_simple?item_detail_id=ff8080817d7f891e017d97b30bc315c9&regionCode=150600000000&record=istrue" target="_blank">
+                <img src="./zxfwx/zwfw/frbs/155304/images/P020240203315248708481.png" />
+              </a>
+            </div>
+          
+            <div class="swiper-slide">
+              <a href="https://zwfw.nmg.gov.cn/handle_affairs?workType=corporation&regionCode=150600000000" target="_blank">
+                <img src="./zxfwx/zwfw/frbs/155305/images/P020240203315470392051.png" />
+              </a>
+            </div>
+          
+            <div class="swiper-slide">
+              <a href="https://zwfw.nmg.gov.cn/handle_affairs_detail_simple?item_detail_id=ff80808175da8f3f0175e343594130b2&regionCode=150600000000&record=istrue" target="_blank">
+                <img src="./zxfwx/zwfw/frbs/155306/images/P020250718568610996182.jpg" />
+              </a>
+            </div>
+          
+            <div class="swiper-slide">
+              <a href="https://zwfw.nmg.gov.cn/handle_affairs_detail_simple?item_detail_id=bb4497086bb11260016bc121de062811&regionCode=150600000000&record=istrue" target="_blank">
+                <img src="./zxfwx/zwfw/frbs/155307/images/P020240203315647916822.png" />
+              </a>
+            </div>
+          
+            <div class="swiper-slide">
+              <a href="https://zwfw.nmg.gov.cn/handle_affairs_detail_simple?item_detail_id=ff80808175fe29ad017607a270be6863&regionCode=150600000000&record=istrue" target="_blank">
+                <img src="./zxfwx/zwfw/frbs/155308/images/P020250718569090529994.jpg" />
+              </a>
+            </div>
+          
+            <div class="swiper-slide">
+              <a href="https://zwfw.nmg.gov.cn/handle_affairs_detail_simple?item_detail_id=ff8080817d7f891e017d9432a42433c1&regionCode=150600000000&record=istrue" target="_blank">
+                <img src="./zxfwx/zwfw/frbs/158187/images/P020241111610519508451.jpg" />
+              </a>
+            </div>
+          
+            <div class="swiper-slide">
+              <a href="https://zwfw.nmg.gov.cn/handle_affairs_detail_simple?item_detail_id=ff8080817d7f891e017d942b8afe2029&regionCode=150600000000&record=istrue" target="_blank">
+                <img src="./zxfwx/zwfw/frbs/158184/images/P020241111571763213577.jpg" />
+              </a>
+            </div>
+          
+            <div class="swiper-slide">
+              <a href="https://zwfw.nmg.gov.cn/handle_affairs_detail_simple?item_detail_id=ff8080817cedd729017cef9f433a4d8c&regionCode=150600000000&record=istrue" target="_blank">
+                <img src="./zxfwx/zwfw/frbs/155310/images/P020240203315918561570.png" />
+              </a>
+            </div>
+          
+            <div class="swiper-slide">
+              <a href="https://zwfw.nmg.gov.cn/handle_affairs_detail_simple?item_detail_id=8a8e93668b46da13018b5a479b003cc0&regionCode=150600000000&record=istrue" target="_blank">
+                <img src="./zxfwx/zwfw/frbs/155311/images/P020240203316150166782.png" />
+              </a>
+            </div>
+          
+            <div class="swiper-slide">
+              <a href="https://zwfw.nmg.gov.cn/handle_affairs_detail_simple?item_detail_id=bb4497086b1a5d56016b1b4bf0c26499&regionCode=150600000000&record=istrue" target="_blank">
+                <img src="./zxfwx/zwfw/frbs/155312/images/P020240203316244265653.png" />
+              </a>
+            </div>
+          
+            <div class="swiper-slide">
+              <a href="https://zwfw.nmg.gov.cn/handle_affairs_detail_simple?item_detail_id=ff8080817cda9ea0017ce8a7e47a2894&regionCode=150600000000&record=istrue" target="_blank">
+                <img src="./zxfwx/zwfw/frbs/155313/images/P020240203316218975649.png" />
+              </a>
+            </div>
+          
+            <div class="swiper-slide">
+              <a href="https://zwfw.nmg.gov.cn/handle_affairs_detail_simple?item_detail_id=ff80808175fe29ad017607953ca95a92&regionCode=150600000000&record=istrue" target="_blank">
+                <img src="./zxfwx/zwfw/frbs/161315/images/P020250718570508315363.jpg" />
+              </a>
+            </div>
+          
+        </div>
+        <div class="swiper-pagination guide-pagination"></div>
+      </div>
+    </div>
+    <div class="guide-con guide-2 w" style="display: none;">
+      <div class="swiper-container guide-swiper-2">
+        <div class="swiper-wrapper">
+          
+            <div class="swiper-slide">
+              <a href="https://zwfw.nmg.gov.cn/handle_affairs_detail_simple?item_detail_id=ff8080817cedd729017cef9f433a4d8c&regionCode=150600000000&record=istrue" target="_blank">
+                <img src="./zxfwx/zwfw/ggfw/155314/images/P020240203318475148603.png" />
+              </a>
+            </div>
+          
+            <div class="swiper-slide">
+              <a href="https://zwfw.nmg.gov.cn/handle_affairs_detail_simple?item_detail_id=ff8080817d7f891e017d97b30bc315c9&regionCode=150600000000&record=istrue" target="_blank">
+                <img src="./zxfwx/zwfw/ggfw/155315/images/P020240203318652033218.png" />
+              </a>
+            </div>
+          
+            <div class="swiper-slide">
+              <a href="https://zwfw.nmg.gov.cn/handle_affairs_detail_simple?item_detail_id=ff8080817d7f891e017d97c09be42493&regionCode=150600000000&record=istrue" target="_blank">
+                <img src="./zxfwx/zwfw/ggfw/155316/images/P020240203318757493709.png" />
+              </a>
+            </div>
+          
+            <div class="swiper-slide">
+              <a href="https://zwfw.nmg.gov.cn/handle_affairs_detail_simple?item_detail_id=ff8080817d7f891e017d8d9b47766d20&regionCode=150600000000&record=istrue" target="_blank">
+                <img src="./zxfwx/zwfw/ggfw/155317/images/P020240203318852979558.png" />
+              </a>
+            </div>
+          
+            <div class="swiper-slide">
+              <a href="https://zwfw.nmg.gov.cn/handle_affairs_detail_simple?item_detail_id=ff8080817d7f8b45017d97cc099a2820&regionCode=150600000000&record=istrue" target="_blank">
+                <img src="./zxfwx/zwfw/ggfw/155318/images/P020240203318852241467.png" />
+              </a>
+            </div>
+          
+            <div class="swiper-slide">
+              <a href="https://zwfw.nmg.gov.cn/handle_affairs_detail_simple?item_detail_id=ff8080817d7f891e017d942b8afe2029&regionCode=150600000000&record=istrue" target="_blank">
+                <img src="./zxfwx/zwfw/ggfw/155319/images/P020241111546240436424.jpg" />
+              </a>
+            </div>
+          
+            <div class="swiper-slide">
+              <a href="https://zwfw.nmg.gov.cn/handle_affairs_detail_simple?item_detail_id=ff8080817d7f891e017d9432a42433c1&regionCode=150600000000&record=istrue" target="_blank">
+                <img src="./zxfwx/zwfw/ggfw/158183/images/P020241111547289550403.jpg" />
+              </a>
+            </div>
+          
+        </div>
+        <div class="swiper-pagination guide-pagination"></div>
+      </div>
+    </div>
+    <div class="guide-con guide-3 w" style="display: none;">
+      <div class="swiper-container guide-swiper-3">
+        <div class="swiper-wrapper">
+          
+            <div class="swiper-slide">
+              <a href="http://116.136.138.70:801/eedswuye/login.html" target="_blank">
+                <img src="./zxfwx/hywz/155323/images/P020240203449198420063.png" />
+              </a>
+            </div>
+          
+            <div class="swiper-slide">
+              <a href="https://www.esgrfc.com:8084/" target="_blank">
+                <img src="./zxfwx/hywz/155324/images/P020240203449187178493.png" />
+              </a>
+            </div>
+          
+            <div class="swiper-slide">
+              <a href="https://ordos.luocaro.com/#/" target="_blank">
+                <img src="./zxfwx/hywz/162556/images/P020260313358286989107.jpg" />
+              </a>
+            </div>
+          
+        </div>
+        <div class="swiper-pagination guide-pagination"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 便民查询 -->
+  <div class="query w">
+    <div class="title">便民查询</div>
+    <div class="scroll">
+      <div class="swiper-container swiper-query">
+        <div class="swiper-wrapper">
+
+
+          
+            <div class="swiper-slide">
+              <a href="./zxfwx/bmcx/jzaz/" target="_blank">
+                <img src="./zxfwx/bmcx/jzaz/images/P020240206317244905052.png" />
+              </a>
+            </div>
+          
+            <div class="swiper-slide">
+              <a href="./zxfwx/bmcx/gsc/" target="_blank">
+                <img src="./zxfwx/bmcx/gsc/images/P020240206317398835139.png" />
+              </a>
+            </div>
+          
+
+            <div class="swiper-slide">
+              <a href="http://zjj.ordos.gov.cn/gsgg/202507/t20250709_3814604.html" target="_blank">
+                <img src="./images/W020250716593912833987.png" />
+              </a>
+            </div>
+
+
+        </div>
+        <div class="query-button-next">
+          <img src="./images/arrow-r.png" alt="" />
+        </div>
+        <div class="query-button-prev">
+          <img src="./images/arrow-l.png" alt="" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 专题专栏 -->
+  <div class="special w">
+    <div class="special-title">
+      <div class="text">专题专栏</div>
+      <!-- <a href="#" class="more">更多++</a> -->
+    </div>
+    <div class="swiper-container special-swiper">
+      <div class="swiper-wrapper">
+        
+          <div class="swiper-slide">
+            <a href="./ztzlx/xzzf/" target="_blank">
+              <img src="./ztzlx/xzzf/images/P020240203456929087301.jpg" />
+            </a>
+          </div>
+        
+          <div class="swiper-slide">
+            <a href="./ztzlx/axeeds/" target="_blank">
+              <img src="./ztzlx/axeeds/images/P020240203456994352546.jpg" />
+            </a>
+          </div>
+        
+          <div class="swiper-slide">
+            <a href="https://www.xuexi.cn/" target="_blank">
+              <img src="./ztzlx/155273/images/P020240203457183901211.png" />
+            </a>
+          </div>
+        
+          <div class="swiper-slide">
+            <a href="http://www.ordos.gov.cn/zt_127959/yhyshj/" target="_blank">
+              <img src="./ztzlx/155268/images/P020240203456335598832.png" />
+            </a>
+          </div>
+        
+          <div class="swiper-slide">
+            <a href="http://116.136.137.16:9090/" target="_blank">
+              <img src="./ztzlx/155274/images/P020240203457197672621.jpg" />
+            </a>
+          </div>
+        
+          <div class="swiper-slide">
+            <a href="http://www.ordos.gov.cn/zt_127959/yzwfsxmd/" target="_blank">
+              <img src="./ztzlx/156170/images/P020240618281126314972.jpg" />
+            </a>
+          </div>
+        
+      </div>
+      <div class="special-button-next">
+        <img src="./images/r.png" alt="" />
+      </div>
+      <div class="special-button-prev">
+        <img src="./images/l.png" alt="" />
+      </div>
+    </div>
+  </div>
+
+
+  <!-- 行业风采 -->
+
+<!--
+  <div class="industry w">
+    <div class="industry-title">
+      <div class="text">行业风采</div>
+      <a href="./hyfc/" class="more">更多>></a>
+    </div>
+    <div class="swiper-container industry-swiper">
+      <div class="swiper-wrapper">
+        
+      </div>
+      <div class="industry-button-next">
+        <img src="./images/r.png" alt="" />
+      </div>
+      <div class="industry-button-prev">
+        <img src="./images/l.png" alt="" />
+      </div>
+    </div>
+  </div>
+-->
+
+
+
+  <!-- 嵌套底部 -->
+  <!-- 公共底部 -->
+<style>
+.footer .copyright .img-link .dang {
+    margin-right: 6px;
+}
+</style>
+
+<div class="footer">
+  <div class="w">
+    <ul class="foot-nav">
+      <li>
+        <a href="https://www.gov.cn/" target="_blank">中国政务网</a>
+      </li>
+      <li>
+        <a href="https://www.nmg.gov.cn/" target="_blank">内蒙古自治区人民政府网</a>
+      </li>
+      <li>
+        <a href="http://www.ordos.gov.cn/" target="_blank">鄂尔多斯市人民政府</a>
+      </li>
+      <li>
+        <a href="https://www.mohurd.gov.cn/" target="_blank">中华人民共和国住房和城乡建设部</a>
+      </li>
+      <li>
+        <a href="https://zjt.nmg.gov.cn/" target="_blank">内蒙古自治区住房和城乡建设厅</a>
+      </li>
+    </ul>
+    <div class="copyright">
+      <div class="img-link">
+        <a href="https://bszs.conac.cn/sitename?method=show&id=080A8AB707733135E053022819ACF357" target="_blank" class="dang">
+          <img src="./images/dang.png" alt="" />
+        </a>
+
+<script id="_jiucuo_" sitecode='1506000031' src='http://pucha.kaipuyun.cn/exposure/jiucuo.js'></script>
+<!--
+        <a href="https://zfwzgl.www.gov.cn/exposure/jiucuo.html?site_code=1506000031&url=http%3A%2F%2Fzjj.ordos.gov.cn%2F" target="_blank" class="dang">
+          <img src="./images/error.png" alt="" />
+        </a>
+-->
+        <a href="http://wza.isc.org.cn/rzpt/bsgl/dt/20240710/3494.html" target="_blank" class="error">
+          <img src="./images/W020240717404961092229.jpg" alt="" />
+        </a>
+      </div>
+      <div class="item">
+        <a href="./wzdtx/" target="_blank">
+          <span>网站地图</span>
+          <script type="text/javascript">document.write(unescape("%3Cspan id='cnzz_stat_icon_1279733285'%3E%3C/span%3E%3Cscript src='https://v1.cnzz.com/stat.php%3Fid%3D1279733285%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
+        </a>
+       
+        <div>主办：鄂尔多斯市住房和城乡建设局</div>
+        <div>承办：鄂尔多斯市住建局综合保障中心</div>
+      </div>
+      <div class="item">
+        <div>&nbsp;</div>
+        <div>地址：鄂尔多斯市康巴什区正阳街3号</div>
+        <div>电话：0477-8580005 0477-8580092</div>
+      </div>
+      <div class="item">
+        <a href="https://beian.miit.gov.cn/state/outPortal/loginPortal.action;jsessionid=4-U04tzYv0oGvRJE6OJ0KoHIAuVn94wVYYgqlA_lqDIRhx3JRz_K!1690538009#/Integrated/index" target="_blank">蒙ICP备19004420号-1</a>
+        <div>网站标识码：1506000031</div>
+        <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=15060302000150" target="_blank">  
+          <img src="./images/hui.png" alt="" />
+          蒙公网安备 15060302000150号
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="./images/jquery.min.js"></script>
+<script>
+    let currentDate = new Date();
+    let year = currentDate.getFullYear(); // 获取当前年份
+    let month = currentDate.getMonth() + 1; // 获取当前月份，注意月份从0开始，所以要加1
+    let day = currentDate.getDate(); // 获取当前日期
+    let week = currentDate.getDay()
+
+    let txt = year+' 年 '+month+' 月 '+day+' 日'
+    $('#date').text(txt)
+   
+
+</script>
+  <!--漂浮开始-->
+<style type="text/css">
+img{border:0;}
+</style>
+<SCRIPT type=text/javascript>
+function addEvent(obj,evtType,func,cap){
+    cap=cap||false;
+if(obj.addEventListener){
+     obj.addEventListener(evtType,func,cap);
+   return true;
+}else if(obj.attachEvent){
+        if(cap){
+         obj.setCapture();
+         return true;
+     }else{
+      return obj.attachEvent("on" + evtType,func);
+   }
+}else{
+   return false;
+    }
+}
+function getPageScroll(){
+    var xScroll,yScroll;
+if (self.pageXOffset) {
+   xScroll = self.pageXOffset;
+} else if (document.documentElement && document.documentElement.scrollLeft){
+   xScroll = document.documentElement.scrollLeft;
+} else if (document.body) {
+   xScroll = document.body.scrollLeft;
+}
+if (self.pageYOffset) {
+   yScroll = self.pageYOffset;
+} else if (document.documentElement && document.documentElement.scrollTop){
+   yScroll = document.documentElement.scrollTop;
+} else if (document.body) {
+   yScroll = document.body.scrollTop;
+}
+arrayPageScroll = new Array(xScroll,yScroll);
+return arrayPageScroll;
+}
+function GetPageSize(){
+    var xScroll, yScroll;
+    if (window.innerHeight && window.scrollMaxY) { 
+        xScroll = document.body.scrollWidth;
+        yScroll = window.innerHeight + window.scrollMaxY;
+    } else if (document.body.scrollHeight > document.body.offsetHeight){
+        xScroll = document.body.scrollWidth;
+        yScroll = document.body.scrollHeight;
+    } else {
+        xScroll = document.body.offsetWidth;
+        yScroll = document.body.offsetHeight;
+    }
+    var windowWidth, windowHeight;
+    if (self.innerHeight) {
+        windowWidth = self.innerWidth;
+        windowHeight = self.innerHeight;
+    } else if (document.documentElement && document.documentElement.clientHeight) {
+        windowWidth = document.documentElement.clientWidth;
+        windowHeight = document.documentElement.clientHeight;
+    } else if (document.body) {
+        windowWidth = document.body.clientWidth;
+        windowHeight = document.body.clientHeight;
+    } 
+    if(yScroll < windowHeight){
+        pageHeight = windowHeight;
+    } else { 
+        pageHeight = yScroll;
+    }
+    if(xScroll < windowWidth){ 
+        pageWidth = windowWidth;
+    } else {
+        pageWidth = xScroll;
+    }
+    arrayPageSize = new Array(pageWidth,pageHeight,windowWidth,windowHeight) 
+    return arrayPageSize;
+}
+//广告脚本文件 AdMove.js
+/*
+例子
+<div id="Div2">
+    ***** content ******
+</div>
+var ad=new AdMove("Div2");
+ad.Run();
+*/
+var AdMoveConfig=new Object();
+AdMoveConfig.IsInitialized=false;
+AdMoveConfig.ScrollX=0;
+AdMoveConfig.ScrollY=0;
+AdMoveConfig.MoveWidth=0;
+AdMoveConfig.MoveHeight=0;
+AdMoveConfig.Resize=function(){
+    var winsize=GetPageSize();
+    AdMoveConfig.MoveWidth=winsize[2];
+    AdMoveConfig.MoveHeight=winsize[3];
+    AdMoveConfig.Scroll();
+}
+AdMoveConfig.Scroll=function(){
+    var winscroll=getPageScroll();
+    AdMoveConfig.ScrollX=winscroll[0];
+    AdMoveConfig.ScrollY=winscroll[1];
+}
+addEvent(window,"resize",AdMoveConfig.Resize);
+addEvent(window,"scroll",AdMoveConfig.Scroll);
+function AdMove(id){
+    if(!AdMoveConfig.IsInitialized){
+        AdMoveConfig.Resize();
+        AdMoveConfig.IsInitialized=true;
+    }
+    var obj=document.getElementById(id);
+    obj.style.position="absolute";
+    var W=AdMoveConfig.MoveWidth-obj.offsetWidth;
+    var H=AdMoveConfig.MoveHeight-obj.offsetHeight;
+    var x = W*Math.random(),y = H*Math.random();
+    var rad=(Math.random()+1)*Math.PI/6;
+    var kx=Math.sin(rad),ky=Math.cos(rad);
+    var dirx = (Math.random()<0.5?1:-1), diry = (Math.random()<0.5?1:-1);
+    var step = 1;
+    var interval;
+    this.SetLocation=function(vx,vy){x=vx;y=vy;}
+    this.SetDirection=function(vx,vy){dirx=vx;diry=vy;}
+    obj.CustomMethod=function(){
+        obj.style.left = (x + AdMoveConfig.ScrollX) + "px";
+        obj.style.top = (y + AdMoveConfig.ScrollY) + "px";
+        rad=(Math.random()+1)*Math.PI/6;
+        W=AdMoveConfig.MoveWidth-obj.offsetWidth;
+        H=AdMoveConfig.MoveHeight-obj.offsetHeight;
+        x = x + step*kx*dirx;
+        if (x < 0){dirx = 1;x = 0;kx=Math.sin(rad);ky=Math.cos(rad);} 
+        if (x > W){dirx = -1;x = W;kx=Math.sin(rad);ky=Math.cos(rad);}
+        y = y + step*ky*diry;
+        if (y < 0){diry = 1;y = 0;kx=Math.sin(rad);ky=Math.cos(rad);} 
+        if (y > H){diry = -1;y = H;kx=Math.sin(rad);ky=Math.cos(rad);}
+    }
+    this.Run=function(){
+        var delay = 10;
+        interval=setInterval(obj.CustomMethod,delay);
+        obj.onmouseover=function(){clearInterval(interval);}
+        obj.onmouseout=function(){interval=setInterval(obj.CustomMethod, delay);}
+    }
+}
+
+</SCRIPT>
+<script type="text/javascript">
+function clo(){
+	var ad1= document.getElementById("ad1");
+	ad1.style.display="none"
+	}
+function clos(){
+	var ad2= document.getElementById("ad2");
+	ad2.style.display="none"
+	}
+function closee(){
+	var ad3= document.getElementById("ad3");
+	ad3.style.display="none"
+	}
+function closes(){
+	var ad4= document.getElementById("ad4");
+	ad4.style.display="none"
+	}
+
+</script>
+
+
+<!--
+
+<div id="ad1" style="z-index: 10;" >
+<a href="https://mp.weixin.qq.com/s/RUDHH4UUMdHxv6xRMUL5XQ" target="_blank"><img style="width:300px;" src="./images/W020240710588081126826.jpg" /></a>
+<br><span style="CURSOR:pointer;color:red;font-size:12px;" onclick="clo();">关闭</span>
+</div>
+
+-->
+
+
+
+
+<SCRIPT type=text/javascript>
+        var ad1=new AdMove("ad1");
+        ad1.Run();
+        var ad2=new AdMove("ad2");
+        ad2.Run();
+        var ad3=new AdMove("ad3");
+        ad3.Run();
+       var ad4=new AdMove("ad4");
+        ad4.Run();
+</SCRIPT>
+  <!--新对联开始-->
+<style type=text/css>
+	.duilian {
+		top: 400px;
+		position: absolute;
+		overflow: hidden;
+                z-index: 999;
+	}
+	
+	.duilian_left {
+		left: 50px;
+	}
+	
+	.duilian_right {
+		right: 50px;
+	}
+	
+	.duilian_con {
+		overflow: hidden;
+		text-align: center;
+	}
+	
+	.duilian_close {
+		width: 100%;
+		height: 24px;
+		line-height: 24px;
+		text-align: right;
+		display: block;
+		font-size: 13px;
+		color: #d92d2b;
+		text-decoration: none;
+	}
+</style>
+<script type="text/javascript">
+	$(document).ready(function() {
+		var duilian = $("div.duilian");
+		var duilian_close = $("a.duilian_close");
+
+		var window_w = $(window).width();
+		if(window_w > 1000) {
+			duilian.show();
+		}
+		$(window).scroll(function() {
+			var scrollTop = $(window).scrollTop();
+			duilian.stop().animate({
+				top: scrollTop + 400
+			});
+		});
+		duilian_close.click(function() {
+			$(this).parent().hide();
+			return false;
+		});
+	});
+</script>
+
+
+
+<!--
+<div class="duilian duilian_left">
+	<a href="#" class="duilian_close">×关闭</a>
+	<div class="duilian_con" id="duilian_con">
+		<a href="http://zjj.ordos.gov.cn/gzdtx/202602/t20260214_3876821.html" target="_blank"><img src="./images/W020260214535859326153.png" style="width:240px;" /></a>
+	</div>
+</div>
+-->
+
+<!--
+<div class="duilian duilian_right">
+	<a href="#" class="duilian_close">×关闭</a>
+	<div class="duilian_con" id="duilian_con">
+		<a href="http://zjj.ordos.gov.cn/gsgg/202507/t20250709_3814604.html" target="_blank"><img src='./images/W020250716602859430191.jpg' style="width:240px;" /></a>
+	</div>
+</div>
+-->
+
+
+<!--新对联结束-->
+  <style>
+.yxjbox{
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      z-index:3;
+}
+/*
+.yxjbox a img{
+      width:180px;
+      height:360px;
+}
+*/
+.yxj_gb {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      text-align: center;
+    font-size: 20px;
+    color: #fff;
+    }
+.yxj_xq {
+      position: absolute;
+      bottom: 73px;
+      left: 40px;
+      width: 60px;
+      height: 20px;
+      cursor: pointer;
+    }
+</style>
+
+
+
+<div class="yxjbox clearfix">
+     <span class="yxj_gb">×</span>
+     <a href="http://zjj.ordos.gov.cn/xxgkx/fdzdgknr/zfwzgzbb/202501/t20250115_3758357.html" target="_blank"><img src="./images/W020260105579489620815.jpg" style="border-width: 0px;" alt="" /></a>
+</div>
+
+
+
+<script>
+  $(".yxj_gb").click(function(){
+     $(".yxjbox").animate({height:"0px"});
+ });
+</script>
+
+  <script src="./images/jquery.min.js"></script>
+  <script src="./images/swiper-bundle.min.js"></script>
+  <script src="./images/h5.js"></script>
+  <script src="./images/resize.js"></script>
+  <script>
+      const judgeDeviceType = () =>
+        /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|OperaMini/i.test(
+          navigator.userAgent
+        )
+          ? "Mobile"
+          : "PC";
+
+          
+    /* 图片新闻 */
+    var newsswiper = new Swiper(".news-swiper", {
+      loop: true,
+      autoplay: {
+          delay: 3000,
+      },
+      pagination: {
+        el: ".news-pagination",
+        clickable: true,
+      },
+    });
+
+    /* 个人办事 */
+    var guideswiper0 = new Swiper('.guide-swiper-0', {
+      slidesPerView: judgeDeviceType() == "Mobile" ? 3 : 6,
+      spaceBetween: 30,
+      slidesPerGroup: 1,
+      loop: true,
+      loopFillGroupWithBlank: true,
+      pagination: {
+        el: '.guide-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.guide-button-next',
+        prevEl: '.guide-button-prev',
+      },
+    });
+
+    /* 法人办事 */
+    var guideswiper1 = new Swiper('.guide-swiper-1', {
+      slidesPerView: judgeDeviceType() == "Mobile" ? 3 : 6,
+      spaceBetween: 30,
+      slidesPerGroup: 1,
+      loop: true,
+      loopFillGroupWithBlank: true,
+      pagination: {
+        el: '.guide-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.guide-button-next',
+        prevEl: '.guide-button-prev',
+      },
+    });
+
+    /* 公共服务 */
+    var guideswiper2 = new Swiper('.guide-swiper-2', {
+      slidesPerView: judgeDeviceType() == "Mobile" ? 3 : 6,
+      spaceBetween: 30,
+      slidesPerGroup: 1,
+      loop: true,
+      loopFillGroupWithBlank: true,
+      pagination: {
+        el: '.guide-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.guide-button-next',
+        prevEl: '.guide-button-prev',
+      },
+    });
+    /* 行业网站 */
+    var guideswiper2 = new Swiper('.guide-swiper-3', {
+      slidesPerView: judgeDeviceType() == "Mobile" ? 3 : 6,
+      spaceBetween: 30,
+      slidesPerGroup: 1,
+      loop: true,
+      loopFillGroupWithBlank: true,
+      pagination: {
+        el: '.guide-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.guide-button-next',
+        prevEl: '.guide-button-prev',
+      },
+    });
+
+    /* 便民查询 */
+    var queryswiper = new Swiper('.swiper-query', {
+      slidesPerView: judgeDeviceType() == "Mobile" ? 1 : 3,
+      spaceBetween: 30,
+      slidesPerGroup: 1,
+      loop: true,
+      loopFillGroupWithBlank: true,
+      navigation: {
+        nextEl: '.query-button-next',
+        prevEl: '.query-button-prev',
+      },
+    });
+
+    /* 专题专栏 */
+    var specialswiper = new Swiper('.special-swiper', {
+      slidesPerView: judgeDeviceType() == "Mobile" ? 2 : 4,
+      autoplay: {
+          delay: 3000,
+      },
+      spaceBetween: 30,
+      slidesPerGroup: 1,
+      loop: true,
+      loopFillGroupWithBlank: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.special-button-next',
+        prevEl: '.special-button-prev',
+      },
+    });
+    /* 行业风采 */
+    var industryswiper = new Swiper('.industry-swiper', {
+      slidesPerView: judgeDeviceType() == "Mobile" ? 2 : 4,
+      autoplay: {
+          delay: 3000,
+      },
+      spaceBetween: 30,
+      slidesPerGroup: 1,
+      loop: true,
+      loopFillGroupWithBlank: true,
+      navigation: {
+        nextEl: '.industry-button-next',
+        prevEl: '.industry-button-prev',
+      },
+    });
+  </script>
+  <script>
+    
+
+    /* 工作动态 */
+    $('.news-nav li').click(function() {
+      $(this).addClass('active').siblings().removeClass('active')
+
+      var currentIndex = $(this).attr("index");
+
+      if(currentIndex=="0") {
+        $('.news-more-0').show()
+        $('.news-more-1').hide()
+        $('.news-more-2').hide()
+
+        $('.news-list-0').show()
+        $('.news-list-1').hide()
+        $('.news-list-2').hide()
+      } else if(currentIndex=="1") {
+        $('.news-more-0').hide()
+        $('.news-more-1').show()
+        $('.news-more-2').hide()
+
+        $('.news-list-0').hide()
+        $('.news-list-1').show()
+        $('.news-list-2').hide()
+      }else {
+        $('.news-more-0').hide()
+        $('.news-more-1').hide()
+        $('.news-more-2').show()
+
+        $('.news-list-0').hide()
+        $('.news-list-1').hide()
+        $('.news-list-2').show()
+      }
+    })
+
+    /* 政策文件 */
+    $('.policy-nav li').click(function () {  
+      $(this).addClass('active').siblings().removeClass('active')
+
+      var currentIndex = $(this).attr("index");
+
+      if(currentIndex=="0") {
+        $('.policy-more-0').show()
+        $('.policy-more-1').hide()
+
+        $('.policy-list-0').show()
+        $('.policy-list-1').hide()
+      } else {
+        $('.policy-more-0').hide()
+        $('.policy-more-1').show()
+
+        $('.policy-list-0').hide()
+        $('.policy-list-1').show()
+      }
+    })
+
+    /* 个人办事 */
+    $('.guide-nav li').click(function () {  
+      $(this).addClass('active').siblings().removeClass('active')
+
+      var currentIndex = $(this).attr("index");
+
+      if(currentIndex=="0") {
+        $('.guide-more-0').show()
+        $('.guide-more-1').hide()
+        $('.guide-more-2').hide()
+        $('.guide-more-3').hide()
+
+        $('.guide-0').show()
+        $('.guide-1').hide()
+        $('.guide-2').hide()
+        $('.guide-3').hide()
+
+   
+      } else if(currentIndex == "1") {
+        $('.guide-more-0').hide()
+        $('.guide-more-1').show()
+        $('.guide-more-2').hide()
+        $('.guide-more-3').hide()
+
+        $('.guide-0').hide()
+        $('.guide-1').show()
+        $('.guide-2').hide()
+        $('.guide-3').hide()
+      }else if(currentIndex=="2") {
+        $('.guide-more-0').hide()
+        $('.guide-more-1').hide()
+        $('.guide-more-2').show()
+        $('.guide-more-3').hide()
+
+        $('.guide-0').hide()
+        $('.guide-1').hide()
+        $('.guide-2').show()
+        $('.guide-3').hide()
+      } else {
+        $('.guide-more-0').hide()
+        $('.guide-more-1').hide()
+        $('.guide-more-2').hide()
+        $('.guide-more-3').show()
+
+        $('.guide-0').hide()
+        $('.guide-1').hide()
+        $('.guide-2').hide()
+        $('.guide-3').show()
+      }
+    })
+  </script>
+</body>
+</html>

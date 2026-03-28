@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+    <script type="text/javascript" src="https://p.so-gov.cn/common/js/ieTips.js"></script>
+
+ <script>
+    var chatPath = 'https://chatapi.so-gov.cn/'
+ </script><html lang="zh">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+          <meta name="SiteIDCode" content="4210000002">
+          <meta name="SiteName" content="湖北省_荆州市人民政府">
+          <meta name="SiteDomain" content="www.jingzhou.gov.cn">
+
+    <!-- 基础ss样式 -->
+    <link rel="stylesheet" href="https://p.so-gov.cn/web/pc/enterprise/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://p.so-gov.cn/web/pc/enterprise/css/pagination.css">
+        <link rel="stylesheet" href="https://p.so-gov.cn/custom/4210000002zw/css/search.css">
+    <link rel="stylesheet" href="https://file.so-gov.cn/cps/pro/4210000002/css/govSearchPc.css">
+    <link rel="stylesheet" href="https://p.so-gov.cn/web/i18n/zh/lang.css">
+
+    <!-- 基础js -->
+    <script src="https://p.so-gov.cn/web/pc/enterprise/js/jquery.min.js"></script>
+    <script type="text/javascript" src="https://p.so-gov.cn/web/api/api.js"></script>
+    <!--  模板js转化数据  -->
+    <script>
+      var langType = 'zh';
+      var basicPath = 'https://p.so-gov.cn/';
+      api.basic = 'https://api.so-gov.cn/';
+    </script>
+
+    <script src='https://p.so-gov.cn/web/pc/enterprise/js/echarts.js'></script>
+    <script src='https://p.so-gov.cn/web/pc/enterprise/js/echarts-wordcloud.js'></script>
+    <script src="https://p.so-gov.cn/web/pc/enterprise/js/swiper-bundle.min.js"></SCRIPT>
+    <script src="https://p.so-gov.cn/web/pc/enterprise/js/jquery.pagination.js"></script>
+    <script src="https://p.so-gov.cn/web/pc/enterprise/js/laydate.js"></script>
+    <script src="https://p.so-gov.cn/custom/4210000002zw/js/pageClick.js"></script>
+    <script src="https://p.so-gov.cn/web/pc/enterprise/js/other.js"></script>
+
+    <script src="https://p.so-gov.cn/web/pc/enterprise/js/sse.js"></script>
+
+    <!--  多语言  -->
+    <script type="text/javascript" src="https://p.so-gov.cn/web/i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="https://p.so-gov.cn/web/i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="https://p.so-gov.cn/web/i18n/jquery.i18n.messagestore.js"></script>
+
+    <!-- 业务js -->
+    <script type="text/javascript" src="https://p.so-gov.cn/custom/4210000002zw/js/util.js"></script>
+    <script type="text/javascript" src="https://p.so-gov.cn/custom/4210000002zw/js/component.js"></script>
+    <script type="text/javascript" src="https://p.so-gov.cn/web/api/store.js"></script>
+    <script type="text/javascript" src="https://p.so-gov.cn/custom/4210000002zw/js/handle.js"></script>
+    <script type="text/javascript" src="https://p.so-gov.cn/web/api/event.js"></script>
+    <script type="text/javascript" src="https://p.so-gov.cn/web/api/searchbox.js"></script>
+    <script type="text/javascript" src="https://p.so-gov.cn/web/api/query.js"></script>
+    <script type="text/javascript" src="https://p.so-gov.cn/web/api/access.js"></script>
+  </head>
+
+  <body>
+      
+    <!-- 头部 -->
+<!-- bander start -->
+<div id="topA" class="header">
+  <div class="header-banner">
+    <div class="header-banner-middle">
+      <div class="banner-logo">
+        <!--  站点logo  -->
+        <a><img id="site-logo" src="" alt=""></a>
+      </div>
+      <div class="banner-search">
+        <div class="search-area-div">
+          <div class="search-input">
+            <div class="search-all-select">
+              <div class="all-select-input search-all-select-width">
+                <div class="select-region">
+                  <span></span>
+                  <div class="select-region-img"></div>
+                  <div class="select-region-hr"></div>
+                </div>
+                <input type="hidden" name="siteCode" id="siteCode" value="4210000002">
+                <input type="hidden" name="tab" id="tab" value="qs">
+                <input class="header-input" type="text" name="qt" id="qt" value="发改委" data-origin-qt="发改委" placeholder="请输入搜索词" autoComplete="off" i18n="true">
+                <div id="speechBtn" class="voice-image" style="display: none">
+                  <div class="voice-tips" i18n="true">
+                    长按开始语音识别
+                  </div>
+                </div>
+              </div>
+              <div class="option-div search-all-select-width" id="ulSearchList"></div>
+            </div>
+            <div class="search-all-btn" id="searchBtn">
+              <div class="search-all-img"></div>
+              <div class="all-btn-txt" i18n="true">
+                搜索
+              </div>
+            </div>
+          </div>
+          <div class="option-region">
+            <div class="region-city">
+            </div>
+            <div class="region-div-list">
+            </div>
+            <div class="region-btn-div">
+              <div class="region-agree" i18n="true">
+                确认
+              </div>
+              <div class="region-cancel" i18n="true">
+                取消
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header-search-hot" style="display: none">
+          <div class="h-hot-title h-hot-word" i18n="true">
+            热搜词：
+          </div>
+          <div class="h-hot-list">
+          </div>
+        </div>
+      </div>
+      <div class="header_nav_float">
+        <div class="left_container">
+          <div class="every_part" onclick="navgitorFunc('https://www.jingzhou.gov.cn/znwd/')">智能问答</div>
+          <div class="every_part">无障碍阅读</div>
+          <div class="every_part has_more_span">
+            <span class="change_span" style="margin-right: 15px;">繁體版</span>
+            <span>/</span>
+            <span class="change_span" style="margin: 0 10px;" onclick="navgitorFunc('http://english.jingzhou.gov.cn/')">英文版</span>
+          </div>
+          <a class="zzms_cls" href="https://www.jingzhou.gov.cn/public/slh/" target="_blank">长者模式</a>
+        </div>
+        <div class="right_container">
+          <a class="qzdh_cls" href="https://www.jingzhou.gov.cn/wzdh/index.shtml" target="_blank">全站导航</a>
+          <div class="every_part" onclick="navgitorFunc('https:\/\/www.jingzhou.gov.cn/zfwzq/')">
+            网站集群
+          </div>
+          <div class="every_part" onclick="navgitorFunc('https:\/\/oauth.hubei.gov.cn:8443/uias/mainChain.do?appCode=jzszfwzjyhpt&code=90000&checkUser=1&flag=false')">
+            登录
+          </div>
+          <div class="every_part" onclick="navgitorFunc('https:\/\/oauth.hubei.gov.cn:8443/hbyzw/zwfw/personinfo/personInfoAction_toPersonOrEntResign.do?appCode=jzszfwzjyhpt&type=1')">
+            注册
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .header-banner {
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+
+  .banner-logo {
+    margin-top: 50px;
+  }
+
+  .banner-search {
+    margin-top: 260px;
+  }
+
+  .header_nav_float {
+    position: absolute;
+    height: 50px;
+    top: 0;
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .left_container {
+    width: 502px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .every_part {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+    font-weight: 500;
+    color: white;
+  }
+
+  .every_part:hover {
+    color: #22A7F0;
+  }
+
+  .every_part>img {
+    margin-right: 10px;
+  }
+
+  .has_more_span {
+    cursor: unset;
+  }
+
+  .has_more_span:hover {
+    color: white;
+  }
+
+  .has_more_span>.change_span {
+    cursor: pointer;
+  }
+
+  .has_more_span>.change_span:hover {
+    color: #22A7F0;
+  }
+
+  .zzms_cls {
+    display: inline-block;
+    background-color: #ce1f1f;
+    line-height: 30px;
+    padding: 0 15px;
+    border-radius: 15px;
+    color: white;
+    font-weight: 500;
+  }
+
+  .zzms_cls:hover {
+    background: #af0f0f;
+  }
+
+  .right_container {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .qzdh_cls {
+    display: inline-block;
+    background-color: #ddf3ff;
+    line-height: 30px;
+    padding: 0 15px;
+    border-radius: 15px;
+    color: #22A7F0;
+    margin-right: 15px;
+    font-weight: 500;
+  }
+
+  .qzdh_cls:hover {
+    background: #22A7F0;
+    color: white;
+  }
+
+  .right_container>.every_part {
+    margin-right: 15px;
+  }
+</style>
+<script>
+  function navgitorFunc(url) {
+    if (url != '') {
+      window.open(url, '_blank');
+    }
+  }
+</script>
+<!-- bander end -->
+    <div id="filter-box">
+    </div>
+
+    <div style="display: flex; justify-content: center;">
+      <div class="header-nav">
+        <div class="header-nav-middle">
+          <!-- nav菜单 -->
+        </div>
+      </div>
+      <div>
+        <!-- 筛选栏 -->
+<!-- toolbar start -->
+<div class="search-toolbar" style="display: none">
+    <div class="search-toolbar-left">
+        <div class="search-toolbar-order toolbar-tile">
+            <div class="search-toolbar-title" i18n="true">
+                结果排序：
+            </div>
+            <div class="order-con item-choose" data-sort="relevance" i18n="true">
+                按相关度
+            </div>
+            <div class="order-con item-choose" data-sort="dateDesc" i18n="true">
+                按日期
+            </div>
+        </div>
+
+        <div class="search-toolbar-position toolbar-tile">
+            <div class="search-toolbar-title" i18n="true">
+                搜索位置：
+            </div>
+            <div class="position-con item-choose" data-key-place="0" i18n="true">
+                全文
+            </div>
+            <div class="position-con item-choose " data-key-place="1" i18n="true">
+                标题
+            </div>
+        </div>
+
+        <div class="select-search-div toolbar-drop">
+            <div class="search-toolbar-title" i18n="true">
+                结果排序：
+            </div>
+            <div class="select-search-con">
+                <div class="select-search-top">
+                    <span i18n="true">按相关度</span>
+                    <div class="select-search-img"></div>
+                </div>
+                <div class="select-search-bottom" style="display: none;">
+                    <div class="select-search-item on" data-sort="relevance" i18n="true">按相关度</div>
+                    <div class="select-search-item" data-sort="dateDesc" i18n="true">按日期</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="select-position-div toolbar-drop">
+            <div class="search-toolbar-title" i18n="true">
+                搜索位置：
+            </div>
+            <div class="select-position-con">
+                <div class="select-position-top">
+                    <span i18n="true">全文</span>
+                    <div class="select-position-img"></div>
+                </div>
+                <div class="select-position-bottom" style="display: none;">
+                    <div class="select-position-item on" data-key-place="0" i18n="true">全文</div>
+                    <div class="select-position-item" data-key-place="1" i18n="true">标题</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="attachment-type-div">
+            <div class="search-toolbar-title" i18n="true">
+                附件类型：
+            </div>
+            <div class="attachment-type-con">
+                <div class="attachment-type-top">
+                    <span i18n="true">不限</span>
+                    <div class="select-attachment-type-img"></div>
+                </div>
+                <div class="attachment-type-bottom">
+                    <div class="attachment-item on" data-file-type="" i18n="true">不限</div>
+                    <div class="attachment-item" data-file-type="word">word</div>
+                    <div class="attachment-item" data-file-type="ppt">ppt</div>
+                    <div class="attachment-item" data-file-type="excel">excel</div>
+                    <div class="attachment-item" data-file-type="pdf">pdf</div>
+                    <div class="attachment-item" data-file-type="txt">txt</div>
+                    <div class="attachment-item" data-file-type="zip">zip</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="time-frame-div">
+            <div class="search-toolbar-title" i18n="true">
+                时间范围：
+            </div>
+            <div class="time-frame-con">
+                <div class="time-frame-top">
+                    <span i18n="true">时间不限</span>
+                    <div class="select-time-frame-img"></div>
+                </div>
+                <div class="time-frame-bottom">
+                    <div class="time-frame-item on" data-time-option="0" i18n="true">时间不限</div>
+                    <div class="time-frame-item" data-time-option="1" data-days="365" i18n="true">一年内</div>
+                    <div class="time-frame-item" data-time-option="1" data-days="30" i18n="true">一月内</div>
+                    <div class="time-frame-item" data-time-option="1" data-days="7" i18n="true">一周内</div>
+                    <div class="time-frame-hr"></div>
+
+                    <div class="time-frame-title" i18n="true">自定义</div>
+                    <div class="time-frame-choose">
+                        <div class="time-frame-start">
+                            <span i18n="true">从</span>
+                            <input type="text" class="time-frame-input" placeholder="开始日期" id="start-time-frame" i18n="true"
+                                   data-time-option="2" data-start-date-str="" i18n="true">
+                        </div>
+                        <div class="time-frame-end">
+                            <span i18n="true">至</span>
+                            <input type="text" class="time-frame-input" placeholder="结束日期" id="end-time-frame" i18n="true"
+                                   data-time-option="2" data-end-date-str="" i18n="true">
+                        </div>
+                        <div class="time-frame-btn"  i18n="true">
+                            确认
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="search-toolbar-right">
+        <div id="toolbar_adv" class="position-con item-choose" onclick="clickSenior(this,1)" i18n="true">
+            高级搜索
+        </div>
+        <div id="toolbar_zhengce"  class="position-con item-choose " onclick="clickSenior(this,2)" i18n="true">
+            文件搜索
+        </div>
+    </div>
+
+</div>
+
+<div class="work-toolbar" style="display: none">
+
+    <div class="work-area">
+        <div i18n="true">当前位置：</div>
+        <div id="showArea"></div>
+    </div>
+
+    <div class="work-filter">
+        <!-- 服务对象 -->
+        <div class="work-filter-obj" style="display: none">
+
+            <div class="filter-obj-top">
+                <span i18n="true">服务对象</span>
+                <div class="filter-obj-img"></div>
+            </div>
+
+            <div class="filter-obj-bottom">
+            </div>
+
+        </div>
+
+        <!-- 全部类型 -->
+        <div class="work-all-type" style="display: none">
+
+            <div class="filter-all-top">
+                <span i18n="true">事项类型</span>
+                <div class="filter-obj-img"></div>
+            </div>
+
+            <div class="filter-all-bottom">
+            </div>
+        </div>
+    </div>
+
+    <div class="search-toolbar-right">
+        <div id="toolbar_adv" class="position-con item-choose" onclick="clickSenior(this,1)" i18n="true">
+            高级搜索
+        </div>
+        <div id="toolbar_zhengce"  class="position-con item-choose " onclick="clickSenior(this,2)" i18n="true">
+            文件搜索
+        </div>
+    </div>
+
+</div>
+
+
+
+
+<!-- 高级搜索和文件搜索弹框 -->
+<div class="draw">
+    <!--高级搜索弹框-->
+    <div class="search-adv">
+        <div class="draw-con-div">
+            <div class="draw-top">
+                <ul id="tabbox1" class="ul-tabsb1 TAB_CLICK ul-na">
+                    <li id="draw_adv" onclick="clickBtnShow(this,1)">
+                        <div class="g-titb1"><span i18n="true">高级搜索</span></div>
+                    </li>
+                    <li id="draw_zhengce" onclick="clickBtnShow(this,2)" >
+                        <div class="g-titb1"><span i18n="true">文件搜索</span></div>
+                    </li>
+                </ul>
+                <div class="draw-top-img" onclick="clickBtnClose()"></div>
+            </div>
+            <div class="draw-main">
+                <!-- 高级搜索块 -->
+                <div class="height-search">
+                    <div class="draw-searchResult">
+                        <div class="draw-left" i18n="true">
+                            搜索结果:
+                        </div>
+                        <div class="draw-right">
+                            <div class="search-bigDiv">
+                                <div class="search-small-left" i18n="true">
+                                    包含全部关键词
+                                </div>
+                                <div class="search-small-right">
+                                    <input type="text" placeholder="请输入包含全部关键词" data-all-key-word="" i18n="true">
+                                </div>
+                            </div>
+                            <div class="search-bigDiv">
+                                <div class="search-small-left" i18n="true">
+                                    包含完整关键词
+                                </div>
+                                <div class="search-small-right">
+                                    <input type="text" placeholder="请输入包含完整关键词" data-whole-key-word="" i18n="true">
+                                </div>
+                            </div>
+                            <div class="search-bigDiv">
+                                <div class="search-small-left" i18n="true">
+                                    包含任意关键词
+                                </div>
+                                <div class="search-small-right">
+                                    <input type="text" placeholder="请输入包含任意关键词" data-any-key-word="" i18n="true" >
+                                </div>
+                            </div>
+                            <div class="search-bigDiv">
+                                <div class="search-small-left" i18n="true">
+                                    不包括关键词
+                                </div>
+                                <div class="search-small-right">
+                                    <input type="text" placeholder="请输入不包括关键词" data-not-key-word="" i18n="true">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="draw-word">
+                        <div class="draw-left" i18n="true">
+                            文档格式:
+                        </div>
+                        <div class="draw-right">
+                            <label class="word-lable">
+                                <input type="radio" name="fileType" value="" data-file-type="" checked >
+                                <span i18n="true">全部格式</span>
+                            </label>
+                            <label class="word-lable">
+                                <input type="radio" name="fileType" value="word" data-file-type="word">
+                                WORD
+                            </label>
+                            <label class="word-lable">
+                                <input type="radio" name="fileType" value="ppt" data-file-type="ppt">
+                                PPT</label>
+                            <label class="word-lable">
+                                <input type="radio" name="fileType" value="excel" data-file-type="excel">
+                                EXCEL</label>
+                            <label class="word-lable">
+                                <input type="radio" name="fileType" value="pdf" data-file-type="pdf">
+                                PDF</label>
+                            <label class="word-lable">
+                                <input type="radio" name="fileType" value="txt" data-file-type="txt">
+                                TXT</label>
+                            <label class="word-lable">
+                                <input type="radio" name="fileType" value="zip" data-file-type="zip">
+                                ZIP</label>
+                        </div>
+                    </div>
+                    <div class="draw-time">
+                        <div class="draw-left" i18n="true">
+                            时间范围：
+                        </div>
+                        <div class="draw-right">
+                            <label class="time-lable" onclick="clickTimeSelect(0)">
+                                <input type="radio" name="days" value="" data-time-option="0"  checked i18n="true">
+                                <span i18n="true">全部时间</span>
+                                </label>
+                            <label class="time-lable" onclick="clickTimeSelect(0)">
+                                <input type="radio" name="days" value="365" data-time-option="1" data-days="365" i18n="true">
+                                <span i18n="true">一年内</span></label>
+                            <label class="time-lable" onclick="clickTimeSelect(0)">
+                                <input type="radio" name="days" value="30" data-time-option="1" data-days="30" i18n="true">
+                                <span i18n="true">一月内</span>
+                                </label>
+                            <label class="time-lable" onclick="clickTimeSelect(0)">
+                                <input type="radio" name="days" value="7" data-time-option="1" data-days="7" >
+                                <span i18n="true">一周内</span></label>
+                            <label class="time-lable" onclick="clickTimeSelect(1)">
+                                <input type="radio" name="days" value="-1" class="zdyradio" data-time-option="2">
+                                <span i18n="true">自定义</span></label>
+                            <div class="time-search-div">
+                                <input type="text" class="start-input" placeholder="开始日期" id="advStartDate" i18n="true"
+                                    data-start-date-str="">
+                                <span class="time-zhi" i18n="true">至</span>
+                                <input type="text" class="end-input" placeholder="结束日期" id="advEndDate" i18n="true"
+                                    data-end-date-str="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="draw-order">
+                        <div class="draw-left" i18n="true">
+                            结果排序：
+                        </div>
+                        <div class="draw-right">
+                            <label class="order-lable">
+                                <input type="radio" name="sort" value="relevance" data-sort="relevance"  checked >
+                                <span i18n="true">按相关度</span>
+                                </label>
+                            <label class="order-lable">
+                                <input type="radio" name="sort" value="dateDesc" data-sort="dateDesc" i18n="true">
+                                <span i18n="true">按日期</span>
+                                </label>
+                        </div>
+                    </div>
+                    <div class="draw-place">
+                        <div class="draw-left" i18n="true">
+                            搜索位置：
+                        </div>
+                        <div class="draw-right">
+                            <label class="place-lable">
+                                <input type="radio" name="keyplace" value="0" data-key-place="0"  checked >
+                                <span i18n="true">全文</span>
+                                </label>
+                            <label class="place-lable">
+                                <input type="radio" name="keyplace" value="1" data-key-place="1" >
+                                <span i18n="true">标题</span>
+                                </label>
+                        </div>
+                    </div>
+
+                                        <div id="adv_custom">
+                    </div>
+                </div>
+                <!-- 文件搜索块 -->
+                <div class="zhengce-wenjian">
+                    <div class="draw-gjc">
+                        <div class="draw-left" i18n="true">
+                            关键词:
+                        </div>
+                        <div class="draw-right">
+                            <input class="gjc-inp" type="text" placeholder="请输入关键词" data-qt="">
+                        </div>
+                    </div>
+                    <div class="draw-fwjg">
+                        <div class="draw-left" i18n="true">
+                            发文机构：
+                        </div>
+                        <div class="draw-right">
+                            <input class="fwjg-inp" type="text" placeholder="请输入发文机构" data-pub-name="" i18n="true">
+                        </div>
+                    </div>
+                    <div class="draw-fwzh">
+                        <div class="draw-left" i18n="true">
+                            发文字号：
+                        </div>
+                        <div class="draw-right">
+                            <input class="fwzh-inp1" type="text" placeholder="机关代字" data-doc-wz="" i18n="true">
+                            <input class="fwzh-inp2" type="text" placeholder="2024" data-doc-nf="">
+                            <input class="fwzh-inp3" type="text" placeholder="1" data-doc-jtwh=""> <span i18n="true">号</span>
+                        </div>
+                    </div>
+                    <div class="draw-zctime">
+                        <div class="draw-left" i18n="true">
+                            日&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp期：
+                        </div>
+                        <div class="draw-right">
+                            <div class="time-select-div">
+                                <div class="time-select-one" onclick="clickBtnSelect()">
+                                    <div class="time-select-one-con" i18n="true" i18n="true">
+                                        发布时间
+                                    </div>
+                                    <div class="time-select-one-img"></div>
+                                </div>
+                                <div class="search-nav-left-bottom">
+                                    <input type="text" hidden data-time-option="2">
+                                    <div class="nav-div-one on" data-doc-date-type="DOCOPENDATE"  onclick="clickBtnSelectSmall(this)" i18n="true">
+                                        发布时间
+                                    </div>
+                                    <div class="nav-div-one" data-doc-date-type="DOCSTARTDATE" onclick="clickBtnSelectSmall(this)" i18n="true">
+                                        实施时间
+                                    </div>
+                                    <div class="nav-div-one" data-doc-date-type="DOCPUBDATE" onclick="clickBtnSelectSmall(this)" i18n="true">
+                                        成文时间
+                                    </div>
+                                    <div class="nav-div-one"data-doc-date-type="DOCINVALIDDATE"  onclick="clickBtnSelectSmall(this)" i18n="true">
+                                        失效时间
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="time-span" i18n="true">从</span>
+                            <input type="text" class="start-input" placeholder="开始日期" id="test3" data-start-date-str=""  i18n="true">
+                            <span class="time-span" i18n="true">至</span>
+                            <input type="text" class="end-input" placeholder="结束日期" id="test4" data-end-date-str=""  i18n="true">
+
+                        </div>
+                    </div>
+                    <div class="draw-searchwz">
+                        <div class="draw-left" i18n="true">
+                            搜索位置：
+                        </div>
+                        <div class="draw-right">
+                            <label class="searchwz-lable">
+                                <input type="radio" name="keyPlacet" value="" data-key-place="0" checked i18n="true">
+                                <span  i18n="true">全文</span>
+                                </label>
+                            <label class="searchwz-lable">
+                                <input type="radio" name="keyPlacet" data-key-place="1" value="1" i18n="true">
+                                <span  i18n="true">标题 </span>
+                                </label>
+                        </div>
+                    </div>
+                    <div class="draw-searchjg">
+                        <div class="draw-left" i18n="true">
+                            结果排序：
+                        </div>
+                        <div class="draw-right">
+                            <label class="searchjg-lable">
+                                <input type="radio" name="sortt" value="relevance" data-sort="relevance" checked  i18n="true">
+                                    <span  i18n="true">按相关度排序</span>
+                                </label>
+                            <label class="searchjg-lable">
+                                <input type="radio" name="sortt" data-sort="CUSTOM:DOCOPENDATE:DESC" value="CUSTOM:DOCOPENDATE:DESC" i18n="true">
+                                <span  i18n="true">按发布日期排序</span>
+                            </label>
+                            <label class="searchjg-lable">
+                                <input type="radio" name="sortt"  data-sort="CUSTOM:DOCSTARTDATE:DESC" value="CUSTOM:DOCSTARTDATE:DESC" i18n="true">
+                                <span  i18n="true">按实施日期排序</span>
+                                </label>
+                        </div>
+                    </div>
+
+                    <div id="zhengce_custom">
+                    </div>
+
+                </div>
+            </div>
+            <div class="search-btn-div">
+                <div class="search-btn" i18n="true">
+                    开始搜索
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- toolbar end -->
+
+
+<div class="work-draw" style="display: none;">
+    <div class="work-draw-div">
+
+        <div class="work-header">
+            <div class="work-header-title">
+            </div>
+            <div class="work-header-close"></div>
+        </div>
+
+        <div class="work-main">
+
+            <div class="main-region">
+                <div class="main-region-title" i18n="true">请您选择办理区域：</div>
+                <div class="main-region-con">
+                </div>
+            </div>
+
+            <div class="main-region-list">
+            </div>
+
+            <div class="work-list">
+            </div>
+
+            <div class="work-page">
+                <div class="similar-item-page">
+                    <div class="m-style M-box11"></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+
+        </div>
+    </div>
+</div>        <!-- 筛选内容 -->
+<!-- filter box start -->
+<div class="search-filter" style='display: none'>
+    <div class="search-filter-items">
+    </div>
+
+    <div class="reset-filter-choose">
+        <div class="search-filter-choose-left">
+            <div class="search-filter-choose-title" i18n="true">
+                已选条件
+            </div>
+            <div class="search-filter-choose-con">
+
+            </div>
+        </div>
+        <div class="search-filter-choose-right">
+            <div class="filter-reset-img"></div>
+            <div class="reset-title" i18n="true">
+                重置筛选
+            </div>
+        </div>
+    </div>
+
+    <div class="search-filter-expend" onclick="showSearchCon()">
+        <div class="filter-left">
+            <div class="dashed-div"></div>
+        </div>
+        <div class="filter-middle">
+            <span i18n="true">折叠</span>
+            <div class="filter-middle-img"></div>
+        </div>
+        <div class="filter-right">
+            <div class="dashed-div"></div>
+        </div>
+    </div>
+</div>
+<!-- filter box end -->
+        <div class="banner-image" style="display: none">
+        </div>
+
+        <div class="banner-video" style="display: none">
+        </div>
+
+        <div id="banner-box">
+        </div>
+
+        <!-- 中间 -->
+        <div class="middle">
+          <div class="middle-con">
+            <!-- 左侧 -->
+            <div class="middle-con-left">
+
+              <div class="load-container">
+                <div class="loading-box"></div>
+              </div>
+
+              <!-- 左侧上半部分 -->
+              <div class="middle-con-left-top" id="left-box">
+              </div>
+
+              <!--  左侧下半部分--分页 -->
+              <div class="middle-con-left-bottom">
+                <div class="m-style M-box"></div>
+              </div>
+            </div>
+            <!-- 右侧 -->
+            <div class="middle-con-right" id="right-box">
+              <div id="right-box-first"></div>
+              <div id="staticHtml"></div>
+              <div id="relatedPerson"></div>
+              <div id="relatedSystem"></div>
+              <div id="relatedOrg"></div>
+              <div id="knowledge_graph"></div>
+              <div id="countInfo"></div>
+              <div id="uWord"></div>
+              <div id="recommed"></div>
+              <div id="hot-info"></div>
+              <div id="hot-word"></div>
+              <div id="insterest"></div>
+              <div id="feedback"></div>
+              <div id="history"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 底部 -->
+    <div class="search-bottom">
+      <div class="search-footer">
+        <a id="government-organs-a" href="javascript:void('0')" target="_blank" style="display: none">
+          <div class="government-organs"></div>
+        </a>
+        <a id="affiliated-institutions-a" href="javascript:void('0')" target="_blank" style="display: none">
+          <div class="affiliated-institutions"></div>
+        </a>
+
+        <a id="error-correction-a" href="javascript:void('0')" style="display: none">
+          <div class="error-correction"></div>
+        </a>
+
+        <div id="systemFooter" class="footer-content">
+        </div>
+
+      </div>
+    </div>
+
+    <!--置顶按钮-->
+    <div class="topping" style="display: none">
+      <a href="javascript:void(0)">
+        <div class="back-top-img"></div>
+      </a>
+    </div>
+
+    <div id="copyRightFilter" style="display: none">
+    </div>
+
+    <!-- 弹框 -->
+
+<!--满意弹框-->
+<div class="satisfied-draw">
+    <div class="satisfied-draw-div">
+        <div class="satisfied-draw-img">
+        </div>
+        <div class="satisfied-draw-title" i18n="true" >
+            感谢您的反馈！
+        </div>
+        <div class="satisfied-draw-btn" i18n="true">
+            确定
+        </div>
+    </div>
+</div>
+
+<!--不满意弹框-->
+<div class="dissatisfied-draw">
+    <div class="dissatisfied-draw-div">
+        <div class="dissatisfied-draw-head">
+            <div class="dissatisfied-draw-title" i18n="true">
+                搜索反馈
+            </div>
+            <div class="draw-top-img" ></div>
+        </div>
+        <div class="dissatisfied-draw-keyword">
+            <div class="draw-title" i18n="true">
+                您搜索的关键词
+            </div>
+            <input type="text" placeholder="请输入关键词" disabled i18n="true">
+        </div>
+        <div class="dissatisfied-draw-question">
+            <div class="draw-title" i18n="true">
+                选择问题
+            </div>
+            <div class="draw-question-select">
+                <div class="question-select-input" i18n="true">
+                    页面结果和搜索词无关
+                </div>
+                <div class="question-select-btn">
+                    <div class="question-select-img"></div>
+                </div>
+            </div>
+            <div class="draw-question-option">
+                <div class="item-question-option" i18n="true">
+                    页面结果和搜索词无关
+                </div>
+                <div class="item-question-option" i18n="true">
+                    想找的内容太靠后
+                </div>
+                <div class="item-question-option" i18n="true">
+                    页面显示不清晰，看不懂
+                </div>
+                <div class="item-question-option" i18n="true">
+                    找不到想要的内容
+                </div>
+                <div class="item-question-option" i18n="true">
+                    其他
+                </div>
+            </div>
+        </div>
+        <div class="dissatisfied-draw-detail" >
+            <div class="draw-title" i18n="true">
+                详细内容*
+            </div>
+            <textarea maxlength="300" class="dissatisfied-draw-textarea" resize="none" placeholder="请您详细描述您的问题" i18n="true"></textarea>
+            <div class="verification-tips" >
+                    <em id="msgTips"></em>
+            </div>
+        </div>
+        <div class="dissatisfied-draw-tel">
+            <div class="draw-title" i18n="true">
+                联系方式*
+            </div>
+            <input type="text" placeholder="手机号、邮箱等" i18n="true">
+            <div class="verification-tips">
+                    <em id="telTips"></em>
+            </div>
+        </div>
+        <div class="dissatisfied-draw-verification">
+            <div class="draw-title" i18n="true">
+                验证码*
+            </div>
+            <div class="draw-verification-div">
+                <input type="text" placeholder="请输入验证码" i18n="true">
+                <div class="verification-img">
+                    <img src="" alt="" id="verifyCodeImg">
+                </div>
+            </div>
+        </div>
+        <div class="verification-tips">
+            <em id="codeTips"></em>
+        </div>
+
+        <div class="dissatisfied-draw-btn">
+            <div class="dissatisfied-btn-confirm" i18n="true">
+                确定
+            </div>
+            <div class="dissatisfied-btn-cancel" i18n="true">
+                取消
+            </div>
+        </div>
+    </div>
+
+</div>    <script type="text/javascript" src="https://p.so-gov.cn/web/api/lang.js"></script>
+
+    <div>
+      <script src="https://www.jingzhou.gov.cn/ggpz/thirduse/jzgov_footer_4124.js" charset="UTF-8"></script>
+<style>
+body {
+  background: #f2f2f2;
+  position: relative;
+}
+
+.right_container{
+  width: unset;
+}
+
+.zzms_cls:hover {
+  color: white;
+}
+</style>
+    </div>
+    <style>
+      .search-count-item {
+        border: unset;
+      }
+
+      .search-count-text {
+        display: flex;
+        align-items: center;
+      }
+
+      .search-count-list {
+        margin-left: 24px;
+      }
+
+      .search-count-pointer {
+        width: 6px;
+        height: 6px;
+        background: #DEDEDE;
+        border-radius: 50%;
+        margin-right: 9px;
+      }
+
+      .count-expend-img {
+        width: 10px;
+        cursor: pointer;
+        background: url(https://p.so-gov.cn/custom/4210000002zw/image/jh_hidden.png) no-repeat;
+      }
+
+      .search-count .search-count-item .open .count-expend-img {
+        background: url(https://p.so-gov.cn/custom/4210000002zw/image/jh_show.png) no-repeat;
+        -webkit-transform: unset;
+        -moz-transform: unset;
+        -ms-transform: unset;
+        -o-transform: unset;
+        transform: unset;
+      }
+
+      .search-count-list>.list-item:last-child>.search-count-item-title {
+        margin-bottom: 10px;
+      }
+
+      .header-nav-middle .on {
+        background: #22a7f0 url(custom/4210000002zw/image/youjiantou.png) no-repeat right !important;
+        border: unset !important;
+      }
+    </style>
+  </body>
+
+</html>

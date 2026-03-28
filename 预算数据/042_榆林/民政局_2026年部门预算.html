@@ -1,0 +1,986 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>榆林市民政局</title>
+  <!-- ---- 通用>>--【通用CSSJSMETA】 -- 标签开始 ---- -->
+  <meta name="renderer" content="webkit">
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow" />
+  <meta name="keywords" content="榆林民政,榆林民政局,榆林市民政,榆林市民政局" />
+  <meta name="description" content="榆林民政,榆林民政局,榆林市民政,榆林市民政局" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <link rel="shortcut icon" type="image/ico" href="./images/favicon.png">
+  <link rel="stylesheet" type="text/css" href="./images/group.css" />
+  <link rel="stylesheet" type="text/css" href="./images/index.css" />
+  <script type="text/javascript" src="./images/jquery.js"></script>
+  <script type="text/javascript" src="./images/common.js"></script>
+  <!-- ---- 通用>>--【通用CSSJSMETA】 -- 标签结束 ---- -->
+  <script type="text/javascript" src="./images/koala.min.1.5.js"></script>
+  <script type="text/javascript" src="./images/jquery.superslide.2.1.1.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $.ajax({
+        url : 'https://www.gov.cn/pushinfo/v150203/pushinfo.jsonp',
+        dataType : "jsonp",
+        jsonp : "pushInfoJsonpCallBack",
+        jsonpCallback:"pushInfoJsonpCallBack",
+        success : function(data) {
+          $.each(data,function(i,json){
+            var str1= json.pubDate;
+            str1=str1.substr(5,10);
+            var str2 = json.title;
+            /*if(str2.length > 28)
+            {
+            str2=str2.substr(0,28) + "...";
+          }*/
+            $("#con_xw_3 ul").append("<li><span>"+str1+"</span><a href='"+json.link+"' target='_blank' title='"+ json.title + "'>"+str2+"</a></li>");
+          })
+        },
+        error:function(){
+          // alert('fail');
+        }
+
+      });
+
+    });
+  </script>
+  <script type="text/javascript">
+
+    let fixedUrl="http://ylmzj.yl.gov.cn/";
+    var make=window.location.search;
+    if(make!="?pc"){
+        if(navigator.userAgent.match(/(iPhone|iPod|Android|ios)/i)){
+            window.location.href=fixedUrl+"wap.html";
+        }
+
+    }
+</script>
+</head>
+<body>
+
+<!-- ---- 通用>>--【导航和搜索】 -- 标签开始 ---- -->
+<script type="text/javascript" src="//ylmzj.yl.gov.cn/images/sm2.js"></script>
+<style>
+#canyou_toolbar_div{background-color: #cf1515 !important;}
+</style>
+<div class="bgx " style="height:auto;">
+    <div class="bgx banner">
+      <div class="infobar">
+        <span>本站支持IPV6访问</span>
+<a  id="dlxx" href="javascript:void(0)"  >登录</a>
+<a id="zcxx" href="javascript:void(0)"  >注册</a>
+<a id="toolbarSwitch" href="javascript:void(0)"  title="无障碍浏览">无障碍浏览</a>
+      </div>
+                              <!--hide-->
+                            <span style="display: none;" id="userdata"></span>
+                            <span style="display: none;" id="secretvalue"></span>
+                            <!--hide-->
+   <a style="    display: block;    width: 400px;    height: 100px;" href="http://ylmzj.yl.gov.cn/"> </a>
+    </div>
+  </div>
+  <div class="nav">
+    <div class="mbox">
+      <div class="nav_list">
+        <a href="http://ylmzj.yl.gov.cn/" class="hover" id="nav1">网站首页</a>
+        <a href="http://ylmzj.yl.gov.cn/mzyw/" id="nav2">民政要闻</a>
+        <a href="http://ylmzj.yl.gov.cn/zfxxgk/" id="nav3">政府信息公开</a>
+        <a href="http://ylmzj.yl.gov.cn/mzyw_0/" id="nav4">民政业务</a>
+        <a href="http://ylmzj.yl.gov.cn/mzfw/" id="nav5">民政服务</a>
+        <a href="http://ylmzj.yl.gov.cn/zmhd/" id="nav6">政民互动</a>
+      </div>
+      <div class="nav_srh">
+        <div class="search">
+          <form >
+            <input type="text" name="q" id="qwjs" class="sc_text" value="" onkeydown="if(event.keyCode==13){SubsiteSearch(); return false;}" />
+            <input type="button" class="sc_btn right" onclick="SubsiteSearch();" />
+          
+<script>
+    function SubsiteSearch(){
+        var SearchKey = $("#qwjs").val();
+        var searchType="全部";
+        SearchKey=$.trim(SearchKey);
+        var reg =/[`~!@#$%^&*_+<>{}\/'[\]]/im;
+        if(reg.test(SearchKey)){
+            alert('您输入的信息包含非法字符!');
+            return false;
+        }
+        if(SearchKey=="" || SearchKey== null ){
+            alert("请输入检索条件!");
+            return false;
+        }else{
+            SearchKey = SearchKey.replace("-","\-");
+            SearchKey = SearchKey.replace("(","\(");
+            SearchKey = SearchKey.replace(")","\)");
+        }
+        SearchKey = encodeURIComponent(SearchKey);
+        window.open("/irs-b-web/search.html?tenantId=3142&code=18bd0b3dce2&searchWord="+SearchKey+"&fltype="+searchType);
+
+    }
+        </script>
+          </form>
+          <script type="text/javascript">
+            function checkSc(){var search_text = jQuery(".sc_text").val();if(search_text=="" || search_text == "请输入关键字"){alert("请输入关键字！");return false;}else{searchform.submit();}}
+          </script>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+<!-- ---- 通用>>--【导航和搜索】 -- 标签结束 ---- -->
+<div class="mbox">
+  <div class="blank30"></div>
+</div>
+<!--新闻-->
+<div class="mbox">
+  <div class="ofh">
+    <div class="xwlt">
+      <!--焦点图-->
+      <div id="fsD1" class="focus">
+        <div id="D1pic1" class="fPic">
+          
+            <div class="fcon" style="">
+              <a target="_blank" href="https://www.mca.gov.cn/zt/n2987/index.html"><img src="./mzyw/mzyw/202508/W020250813592561917396.jpg" style="opacity: 1;" /></a>
+              <span class="shadow"><a target="_blank" href="https://www.mca.gov.cn/zt/n2987/index.html" title="">
+            2025年民政服务机构安全管理月
+            </a></span>
+            </div>
+          
+            <div class="fcon" style="">
+              <a target="_blank" href="./mzyw/mzyw/202506/t20250609_2006751.html"><img src="./mzyw/mzyw/202506/W020250609604962984278.jpg" style="opacity: 1;" /></a>
+              <span class="shadow"><a target="_blank" href="./mzyw/mzyw/202506/t20250609_2006751.html" title="">
+            榆林市民政局祝全体小朋友节日快乐！
+            </a></span>
+            </div>
+          
+            <div class="fcon" style="">
+              <a target="_blank" href="./mzyw/mzyw/202502/t20250211_1960019.html"><img src="./mzyw/mzyw/202502/W020250211378041233952.jpg" style="opacity: 1;" /></a>
+              <span class="shadow"><a target="_blank" href="./mzyw/mzyw/202502/t20250211_1960019.html" title="">
+            市委书记、市长张胜利与市儿童福利院少年儿童欢度除夕迎新春
+            </a></span>
+            </div>
+          
+            <div class="fcon" style="">
+              <a target="_blank" href="./mzyw/mzyw/202411/t20241101_1923135.html"><img src="./mzyw/mzyw/202411/W020241112413905361196.jpg" style="opacity: 1;" /></a>
+              <span class="shadow"><a target="_blank" href="./mzyw/mzyw/202411/t20241101_1923135.html" title="">
+            “陕西民政通”上线啦！
+            </a></span>
+            </div>
+          
+            <div class="fcon" style="">
+              <a target="_blank" href="./mzyw/mzyw/202410/t20241031_1922671.html"><img src="./mzyw/mzyw/202410/W020241031385823183297.png" style="opacity: 1;" /></a>
+              <span class="shadow"><a target="_blank" href="./mzyw/mzyw/202410/t20241031_1922671.html" title="">
+            第五轮县级行政区域界线联检总结暨经验交流现场会在横山召开
+            </a></span>
+            </div>
+          
+        </div>
+        <div class="fbg">
+          <div class="D1fBt" id="D1fBt">
+            <a href="javascript:void(0)" hidefocus="true" target="_self" class="current"></a>
+            <a href="javascript:void(0)" hidefocus="true" target="_self"></a>
+            <a href="javascript:void(0)" hidefocus="true" target="_self"></a>
+            <a href="javascript:void(0)" hidefocus="true" target="_self"></a>
+            <a href="javascript:void(0)" hidefocus="true" target="_self"></a>
+          </div>
+        </div>
+        <span class="prev"></span> <span class="next"></span> </div>
+      <script type="text/javascript">
+        Qfast.add('widgets', { path: "images/terminator2.2.min.js", type: "js", requires: ['fx'] });
+        Qfast(false, 'widgets', function () {
+          K.tabs({
+            id: 'fsD1',   //焦点图包裹id
+            conId: "D1pic1",  //** 大图域包裹id
+            tabId:"D1fBt",
+            tabTn:"a",
+            conCn: '.fcon', //** 大图域配置class
+            auto: 1,   //自动播放 1或0
+            effect: 'fade',   //效果配置
+            eType: 'click', //** 鼠标事件
+            pageBt:true,//是否有按钮切换页码
+            bns: ['.prev', '.next'],//** 前后按钮配置class
+            interval: 3000  //** 停顿时间
+          })
+        })
+      </script>
+      <!--焦点图end-->
+    </div>
+    <div class="xwrt">
+      <div class="xwtit">
+        <ul>
+          <li id="xw1" onmousemove="setTab('xw',1,5)" class="hover"><a href="http://ylmzj.yl.gov.cn/mzyw/mzyw/">民政要闻</a></li>
+          <li id="xw2" onmousemove="setTab('xw',2,5)"><a href="http://ylmzj.yl.gov.cn/mzyw/szzx/">时政资讯</a></li>
+          <li id="xw3" onmousemove="setTab('xw',3,5)" ><a href="http://www.gov.cn/pushinfo/v150203/index.htm" target="_blank">国务院信息</a></li>
+          <li id="xw4" onmousemove="setTab('xw',4,5)"><a href="http://ylmzj.yl.gov.cn/mzyw/jcdt/">基层动态</a></li>
+          <li id="xw5" onmousemove="setTab('xw',5,5)"><a href="http://ylmzj.yl.gov.cn/mzyw/tzgg/">通知公告</a></li>
+        </ul>
+      </div>
+      <div class="xwcnt">
+        <div class="xwinr">
+          <div class="xwlist" id="con_xw_1" style="display:block;height:282px;overflow:hidden;">
+            <ul>
+              
+                <li><span>
+                  2026-03-16
+                  </span><a href="./mzyw/mzyw/202603/t20260316_2081341.html" target="_blank" title="">
+                  市民政局召开党组（扩大）会议部署开展树立和践行正...
+                </a></li>
+              
+                <li><span>
+                  2026-02-28
+                  </span><a href="./mzyw/mzyw/202602/t20260228_2076527.html" target="_blank" title="">
+                  榆林市民政局党组召开2025年度民主生活会
+                </a></li>
+              
+                <li><span>
+                  2026-02-24
+                  </span><a href="./mzyw/mzyw/202602/t20260226_2076135.html" target="_blank" title="">
+                  副市长沈效功到市儿童福利院开展春节慰问活动
+                </a></li>
+              
+                <li><span>
+                  2026-01-22
+                  </span><a href="./mzyw/mzyw/202601/t20260122_2070369.html" target="_blank" title="">
+                  我市为80周岁及以上老年人购买意外伤害保险 织密晚年...
+                </a></li>
+              
+                <li><span>
+                  2025-12-23
+                  </span><a href="./mzyw/mzyw/202512/t20251223_2062799.html" target="_blank" title="">
+                  【强国复兴有我】榆林市人口老龄化国情教育走进党校课堂
+                </a></li>
+              
+                <li><span>
+                  2025-12-04
+                  </span><a href="./mzyw/mzyw/202601/t20260116_2068830.html" target="_blank" title="">
+                  市民政局积极参加2025年榆林市“宪法宣传周”活动
+                </a></li>
+              
+            </ul>
+          </div>
+          <div class="xwlist" id="con_xw_2" style="display:none;">
+            <ul>
+              
+                <li><span>
+                  2026-03-12
+                  </span><a href="https://www.gov.cn/yaowen/liebiao/202603/content_7061998.htm" target="_blank" title="">
+                  全国政协十四届四次会议闭幕 习近平等出席
+                </a></li>
+              
+                <li><span>
+                  2025-10-10
+                  </span><a href="https://www.gov.cn/yaowen/liebiao/202510/content_7043765.htm" target="_blank" title="">
+                  习近平就朝鲜劳动党成立80周年向朝鲜劳动党总书记金...
+                </a></li>
+              
+                <li><span>
+                  2025-09-29
+                  </span><a href="https://www.gov.cn/yaowen/liebiao/202509/content_7042699.htm" target="_blank" title="">
+                  “开创新疆更加美好的明天”——习近平总书记率中央...
+                </a></li>
+              
+                <li><span>
+                  2025-09-12
+                  </span><a href="https://www.gov.cn/yaowen/liebiao/202509/content_7039926.htm" target="_blank" title="">
+                  习近平向2025年中国国际服务贸易交易会致贺信
+                </a></li>
+              
+                <li><span>
+                  2025-09-09
+                  </span><a href="https://www.gov.cn/yaowen/liebiao/202509/content_7039685.htm" target="_blank" title="">
+                  习近平出席金砖国家领导人线上峰会并发表重要讲话
+                </a></li>
+              
+                <li><span>
+                  2025-09-03
+                  </span><a href="https://www.gov.cn/yaowen/liebiao/202509/content_7038994.htm" target="_blank" title="">
+                  纪念中国人民抗日战争暨世界反法西斯战争胜利80周年...
+                </a></li>
+              
+            </ul>
+          </div>
+          <div class="xwlist" id="con_xw_3"  style="display:none;">
+            <ul>
+            </ul>
+          </div>
+          <div class="xwlist" id="con_xw_4" style="display:none;">
+            <ul>
+              
+                <li><span>
+                  2026-03-16
+                  </span><a href="./mzyw/jcdt/202603/t20260316_2081251.html" target="_blank" title="">
+                  榆阳区老龄健康服务中心走进马合镇郝家伙场村老年互...
+                </a></li>
+              
+                <li><span>
+                  2026-03-09
+                  </span><a href="./mzyw/jcdt/202603/t20260310_2079975.html" target="_blank" title="">
+                  春风送暖学雷锋 福彩公益伴我行——榆林福彩开展学雷...
+                </a></li>
+              
+                <li><span>
+                  2026-01-27
+                  </span><a href="./mzyw/jcdt/202601/t20260127_2071170.html" target="_blank" title="">
+                  绥德县民政局为困难群众发放生活物资 筑牢民生保障网
+                </a></li>
+              
+                <li><span>
+                  2025-10-27
+                  </span><a href="./mzyw/jcdt/202510/t20251027_2046785.html" target="_blank" title="">
+                  榆林福彩学习贯彻全省民政会议精神
+                </a></li>
+              
+                <li><span>
+                  2025-10-23
+                  </span><a href="./mzyw/jcdt/202510/t20251023_2046096.html" target="_blank" title="">
+                  榆林市举办2025年老龄工作暨业务能力提升培训班
+                </a></li>
+              
+                <li><span>
+                  2025-10-21
+                  </span><a href="./mzyw/jcdt/202510/t20251021_2044883.html" target="_blank" title="">
+                  市社会福利院组织开展“以学促干”赋能培训活动
+                </a></li>
+              
+            </ul>
+          </div>
+          <div class="xwlist" id="con_xw_5" style="display:none;">
+            <ul>
+              
+                <li><span>
+                  2026-03-02
+                  </span><a href="./mzyw/tzgg/202603/t20260302_2076894.html" target="_blank" title="">
+                  榆林市民政局关于开展2025年度全市性民办非企业单位...
+                </a></li>
+              
+                <li><span>
+                  2026-03-02
+                  </span><a href="./mzyw/tzgg/202603/t20260302_2076871.html" target="_blank" title="">
+                  榆林市民政局关于开展2025年度社会团体年度检查工作...
+                </a></li>
+              
+                <li><span>
+                  2026-02-04
+                  </span><a href="./mzyw/tzgg/202602/t20260204_2072898.html" target="_blank" title="">
+                  全市殡仪馆服务项目、收费标准、服务流程公示
+                </a></li>
+              
+                <li><span>
+                  2025-12-23
+                  </span><a href="./mzyw/tzgg/202512/t20251223_2062716.html" target="_blank" title="">
+                  榆林市民政局关于市级社会组织2024年度检查情况的通报
+                </a></li>
+              
+                <li><span>
+                  2025-10-21
+                  </span><a href="./mzyw/tzgg/202510/t20251021_2044812.html" target="_blank" title="">
+                  2025年全国“敬老月”活动倡议书
+                </a></li>
+              
+                <li><span>
+                  2025-09-11
+                  </span><a href="./mzyw/tzgg/202509/t20250911_2035905.html" target="_blank" title="">
+                  全国老龄办、民政部、中国老龄协会、中国消费者协会...
+                </a></li>
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--新闻-->
+<div class="mbox">
+  <div class="blank12"></div>
+  <div class="blank12"></div>
+</div>
+<!--公开、业务-->
+<div class="mbox">
+  <div class="zblt">
+    <div class="xbx">
+      <div class="xtit xbg1">
+        <div class="xnm"><a href="http://ylmzj.yl.gov.cn/zfxxgk/">政务公开</a></div>
+        <div class="xmr"><a href="http://ylmzj.yl.gov.cn/zfxxgk/">更多+</a></div>
+      </div>
+      <div class="xcnt">
+        <div class="xinr">
+          <div class="gkilist">
+            <!-- ---- 通用>>--【首页公开连接】 -- 标签开始 ---- -->
+            <a class="gki1" href=""><span>政府信息公开规定</span></a> <a class="gki3" href=""><span>政府网站年度报表</span></a> <a class="gki4" href="http://ylmzj.yl.gov.cn/zfxxgk/ysqgk/"><span>依申请公开</span></a> <a class="gki5" href="http://ylmzj.yl.gov.cn/zfxxgk/zfxxgkml/"><span>政府信息公开目录</span></a> <a class="gki6" href="http://ylmzj.yl.gov.cn/zfxxgk/fdzdgknr/zzjg/"><span>组织机构</span></a> <a class="gki7" href="http://ylmzj.yl.gov.cn/zfxxgk/fdzdgknr/czxx/"><span>财政信息</span></a> <a class="gki8" href="http://ylmzj.yl.gov.cn/zfxxgk/fdzdgknr/rsxx/"><span>人事信息</span></a> <a class="gki9" href="http://ylmzj.yl.gov.cn/zfxxgk/fdzdgknr/zcwj/"><span>政策文件</span></a> <a class="gki10" href="http://ylmzj.yl.gov.cn/zfxxgk/fdzdgknr/zcjd/"><span>政策解读</span></a> <a class="gki11" href="http://qzqd.shaanxi.gov.cn/smp/index.action?siteUnid=0B0E09D7EE9097299B3A68D1EA2BEC2D&amp;deptUnid=9D94B3A1ED5A92179127756B94032D5B" target="_blank"><span>权责清单</span></a> <a class="gki12" href="http://ylmzj.yl.gov.cn/zfxxgk/fdzdgknr/tajy/"><span>提案建议</span></a> <a class="gki2" href="http://ylmzj.yl.gov.cn/zfxxgk/fdzdgknr/ghjh/"><span>规划计划</span></a>
+            <!-- ---- 通用>>--【首页公开连接】 -- 标签结束 ---- -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="zbrt">
+    <div class="xbx">
+      <div class="xtit xbg2">
+        <div class="xnm"><a href="http://ylmzj.yl.gov.cn/mzyw_0/">民政业务</a></div>
+        <div class="xmr"><a href="http://ylmzj.yl.gov.cn/mzyw_0/">更多+</a></div>
+      </div>
+      <div class="xcnt">
+        <div class="xinr">
+          <div class="wailist"> <a  href="http://ylmzj.yl.gov.cn/mzyw_0/shjz/"> <span class="p1"></span>
+            <h3   >社会救助</h3>
+          </a> <a  href="http://ylmzj.yl.gov.cn/mzyw_0/llgz/"> <span class="p2"></span>
+            <h3    style="font-size:13px;" >老龄工作</h3>
+          </a> <a  href="http://ylmzj.yl.gov.cn/mzyw_0/qhdm/"> <span class="p3"></span>
+            <h3   >区划地名</h3>
+          </a> <a  href="http://ylmzj.yl.gov.cn/mzyw_0/shsw/"> <span class="p4"></span>
+            <h3   >社会事务</h3>
+          </a> <a  href="http://ylmzj.yl.gov.cn/mzyw_0/shzz/"> <span class="p5"></span>
+            <h3   >社会组织</h3>
+          </a> <a  href="http://ylmzj.yl.gov.cn/mzyw_0/jgdj/"> <span class="p6"></span>
+            <h3   >机关党建</h3>
+          </a> <a  href="http://ylmzj.yl.gov.cn/mzyw_0/ylfw/"> <span class="p7"></span>
+            <h3   >养老服务</h3>
+          </a> <a  href="http://ylmzj.yl.gov.cn/mzyw_0/etfl/"> <span class="p8"></span>
+            <h3   >儿童福利</h3>
+          </a> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--公开、业务-->
+<div class="mbox">
+  <div class="blank18"></div>
+</div>
+<!-- ---- 通用>>--【首页横条图】 -- 标签开始 ---- -->
+<div class="mbox">
+  <div class="glb_bx">
+    <div id="slideBox" class="slideBox">
+      <div class="hd">
+        <ul>
+          <li class="on">1</li>
+          <li>2</li>
+          <li>3</li>
+          <li>4</li>
+          <li>5</li>
+        </ul>
+      </div>
+      <div class="bd">
+        <ul>
+          
+            <li style="" ><a href="https://liuyan.www.gov.cn/2025wwzfgzbgtjy/bmdf.html?q=shx" target="_blank"> <img src="./ggbf/hft/zhft/202312/W020250311371476766596.png" height="110" /></a> </li>
+          
+            <li style="" ><a href="/ztzl/jqzfjszl/index.html" target="_blank"> <img src="./ggbf/hft/zhft/202312/W020231216335414467453.png" height="110" /></a> </li>
+          
+            <li style="" ><a href="https://www.gov.cn/hudong/index.htm" target="_blank"> <img src="./ggbf/hft/zhft/202312/W020231216334806083371.png" height="110" /></a> </li>
+          
+            <li style="" ><a href="" target="_blank"> <img src="./ggbf/hft/zhft/202312/W020231216334356220387.png" height="110" /></a> </li>
+          
+            <li style="" ><a href="/ztzl/shcezxdz/index.html" target="_blank"> <img src="./ggbf/hft/zhft/202312/W020231216333272657975.png" height="110" /></a> </li>
+          
+        </ul>
+      </div>
+    </div>
+    <script type="text/javascript">jQuery("#slideBox").slide( { mainCell:".bd ul",autoPlay:true,interTime:4000} );</script>
+  </div>
+</div>
+<!-- ---- 通用>>--【首页横条图】 -- 标签结束 ---- -->
+<div class="mbox">
+  <div class="blank18"></div>
+</div>
+<!--服务、互动-->
+<div class="mbox">
+  <div class="zblt">
+    <div class="xbx2">
+      <div class="xtit2">
+        <div class="xnm2"><a href="http://ylmzj.yl.gov.cn/mzfw/">民政服务</a></div>
+        <div class="xmr"><a href="http://ylmzj.yl.gov.cn/mzfw/">更多+</a></div>
+      </div>
+      <div class="xcnt">
+        <div class="xinr">
+          <div class="xxnt">
+            <div class="xxtit"> <a href="http://zwfw.yl.gov.cn/yl-web-zwdt/epointzwmhwz/pages/eventdetail/wanttodo_new?bltype=ou&isnormal=1&vname=610800&areacode=610800&ztvalue=84e9b1c2-0c82-11ea-a315-00ff73e887f4&renew=true&flag=false&client_id=000000108" id="bs2"><span><em>|</em>办事指南</span></a> <a href="http://ylmzj.yl.gov.cn/mzfw/bgxz/" id="bs3"><span><em>|</em>表格下载</span></a> </div>
+            <div class="xxcnt">
+              <div class="xxlist bx1" >
+                <ul style="height: 140px;overflow: hidden;">
+ 
+<li><span> 2023-06-26</span> <a href="http://ylmzj.yl.gov.cn/wcm.files/upload/CMSylmzj/202306/202306260428006.doc" target="_blank" >  榆林市建筑物标准名称申报审核表</a>
+  
+<li><span> 2019-03-06</span> <a href="./mzfw/bgxz/201903/t20190306_1319563.html" target="_blank" >  社会组织登记、变更、注销材料及表格二维码</a>
+  
+<li><span> 2019-03-06</span> <a href="http://ylmzj.yl.gov.cn/wcm.files/upload/CMSylmzj/201903/201903060557034.doc" target="_blank" >  榆林市民政局申请社会团体变更登记材料清单及表格</a>
+  
+<li><span> 2019-03-06</span> <a href="http://ylmzj.yl.gov.cn/wcm.files/upload/CMSylmzj/201903/201903060557016.doc" target="_blank" >  榆林市民政局申请民办非企业单位变更登记材料清...</a>
+  
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="zbrt">
+    <div class="xbx2">
+      <div class="xtit2">
+        <div class="xnm2"><a href="http://ylmzj.yl.gov.cn/zmhd/">政民互动</a></div>
+        <div class="xmr"><a href="http://ylmzj.yl.gov.cn/zmhd/">更多+</a></div>
+      </div>
+      <div class="xcnt">
+        <div class="xinr">
+          <div class="xxnt">
+            <div class="xxtit"> <a href="http://ylmzj.yl.gov.cn/zmhd/zjdc/" id="hd1"><span><em>|</em>征集调查</span></a> <a href="http://ylmzj.yl.gov.cn/zmhd/ldxx/wyxx.html" id="hd2"><span><em>|</em>在线咨询</span></a> </div>
+            <div class="xxcnt">
+              <div class="xxlist bx2">
+                <ul id="hd_list">
+                  <!--RL4-->
+                  <!-- <li><span>[已回复]</span> <a href="=1" target="_blank" >职工大病不可以申请低保吗</a> </li>-->
+                </ul>
+                <!--获取信件-->
+                <script>
+                  //时间戳转换
+                  function getMyDate(str) {
+                    if(typeof str == "undefined" || str == null || str == "" || str == "0"){
+                      return "";
+                    }
+                    var oDate = new Date(str),
+                            oYear = oDate.getFullYear(),
+                            oMonth = oDate.getMonth() + 1,
+                            oDay = oDate.getDate(),
+                            oHour = oDate.getHours(),
+                            oMin = oDate.getMinutes(),
+                            oSen = oDate.getSeconds(),
+                            //oTime = getzf(oMonth) + '-' + getzf(oDay);//最后拼接时间
+                            oTime = oYear + '-' + getzf(oMonth) + '-' + getzf(oDay);//最后拼接时间
+                    return oTime;
+                  }
+
+                  //补0操作
+                  function getzf(num) {
+                    if (parseInt(num) < 10) {
+                      num = '0' + num;
+                    }
+                    return num;
+                  }
+                  $(function () {
+                    getXJList(53,1,4,86220); //siteId  pageIndex pageSize appId
+                  });
+
+                  function removeQuotes(str) {
+                    return str.replace(/^"|"$/g, ' ');
+                  }
+                  //信箱参数
+                  // site_id 53
+                  // app_id 86220
+                  // 榆林市民政局 dealDeptId  group_id= 120
+                  /**获取信件列表*/
+                  function getXJList(siteId, pageIndex, pageSize,appId){
+                    var url = "/IGI/nbhd/openGovmsgbox.do?method=listGovmsgboxs";
+                    var datajson = {
+                      "siteId": siteId,
+                      "appId":appId,
+                      "pageIndex": pageIndex,
+                      "pageSize": pageSize,
+                      "orderBy":"submitTime_desc",
+                      "resultType": "json",
+                      //"groupId": 120,
+                    };
+
+                    $.ajax({
+                      url: url,
+                      dataType: "json",
+                      data: datajson,
+                      type:"get",
+                      async:"true",
+                      success: function (data) {
+                        if(data.statusCode != 200){
+                          return;
+                        }else{
+                          var html="";
+                          var html1="";
+                          var html2="";
+                          let fixedUrl="http://ylmzj.yl.gov.cn/"; //固定的URL
+                          for(var i=0;i<data.datas.data.length;i++){
+                            var title = data.datas.data[i].TITLE;//标题
+                            //   var detailUrl = data.datas.data[i].PUBLISHURL;//跳转地址
+                            var detailUrl =(data.datas.data[i].PUBLISHURL!=null)?JSON.parse(data.datas.data[i].PUBLISHURL)[0].PUBLISHURL:"";//跳转地址
+                            var GOVMSGBOXTYPE = data.datas.data[i].GOVMSGBOXTYPE;//类型
+                            var GOVMSGBOXTYPE1 = data.datas.data[i].GOVMSGBOXTYPE1;//类型1
+                            var stime =getMyDate(parseInt(data.datas.data[i].SUBMITTIME)); //时间戳  提交时间
+                            var DEALDEPTNAME = data.datas.data[i].DEALDEPTNAME;//处理部门
+                            var etime = getMyDate(parseInt(data.datas.data[i].FINISHTIME));//完成时间
+                            var xjbh=data.datas.data[i].QUERYNUMBER;//信件编号
+                            var id =  data.datas.data[i].METADATAID;
+                            var num = parseInt(i+1);
+                            var STATUS =data.datas.data[i].STATUS ;
+                            if(STATUS ==7){
+                              //PC list
+                              let _fullUrl=fixedUrl+"zmhd/ldxx/detail.html?metadataId="+id;
+                              let PUBLISHURL = removeQuotes(data.datas.data[i].PUBLISHURL);
+                              let _stUrl=JSON.parse(PUBLISHURL)[0].PUBLISHURL;
+
+                              html1+="<li><span>[已回复]</span> <a href=\""+_stUrl+"\" target=\"_blank\" title=\""+title+"\">"+title+"</a> </li>";
+
+                            }
+                          }
+                          $("#hd_list").html(html1);
+                        }
+                      },error:function(data){
+                        console.info(data);
+                      }
+                    });
+                  }
+
+                </script>
+                <!--获取信件END-->
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+#qybox{display:none;}
+</style>
+<!--服务、互动-->
+<div class="mbox">
+  <div class="blank12"></div>
+  <div class="blank12"></div>
+</div>
+<!-- ---- 通用>>--【友情链接】 -- 标签开始 ---- -->
+<div class="yqlj">
+  <div class="yq_cnt">
+    <div class="link">
+      <ul>
+        <li>
+          <select onchange="if(this.value != '') {window.open(this.value);this.options[0].selected=true;}">
+            <option>行政主管部门网站</option>
+            <option value="http://www.mca.gov.cn/">民政部</option>
+            <option value="http://mzt.shaanxi.gov.cn/">陕西省民政厅</option>
+          </select>
+        </li>
+        <li>
+          <select onchange="if(this.value != '') {window.open(this.value);this.options[0].selected=true;}">
+            <option>榆林市各级部门网站</option>
+            <option value="http://drc.yl.gov.cn/">市发改委</option>
+            <option value="http://jyj.yl.gov.cn/">市教育局</option>
+            <option value="http://kjj.yl.gov.cn/">市科技局</option>
+            <option value="http://gxj.yl.gov.cn/">市工信局</option>
+            <option value="http://gaj.yl.gov.cn/">市公安局</option>
+            <option value="http://sfj.yl.gov.cn/">市司法局</option>
+            <option value="http://ylhrss.yl.gov.cn/">市人社局</option>
+            
+            <option value="http://hb.yl.gov.cn/">市环保局</option>
+            <option value="http://wjw.yl.gov.cn/">市卫健委</option>
+            <option value="http://zjj.yl.gov.cn/">市住建局</option>
+            <option value="http://gtj.yl.gov.cn/">市资源规划局</option>
+            <option value="http://zfj.yl.gov.cn/">市执法局</option>
+            <option value="http://jtysj.yl.gov.cn/">市交通局</option>
+            <option value="http://slj.yl.gov.cn">市水利局</option>
+            <option value="http://nyj.yl.gov.cn/">市农业局</option>
+            <option value="http://lyj.yl.gov.cn/">市林业局</option>
+            <option value="http://swj.yl.gov.cn">市商务局</option>
+            <option value="http://sjj.yl.gov.cn/">市审计局</option>
+            <option value="http://tyj.yl.gov.cn/">市体育局</option>
+            <option value="http://yjgl.yl.gov.cn/">市应急局</option>
+            <option value="http://tjj.yl.gov.cn/">市统计局</option>
+            
+            <option value="http://xfj.yl.gov.cn/">市信访局</option>
+            
+            <option value="http://yl.snaic.gov.cn/">市工商局</option>
+            <!--option value="http://yul.snqi.gov.cn/">市质监局</option-->
+            
+            
+            <option value="http://jgsw.yl.gov.cn/">市机关事务局</option>
+            
+            <option value="http://coop.yl.gov.cn/">市供销联社</option>
+            
+            
+            
+            <option value="http://fpb.yl.gov.cn/">市扶贫办</option>
+            
+            <!--option value="http://ywj.yl.gov.cn/">市盐务局</option-->
+            <option value="http://gxq.yl.gov.cn/">榆林高新区</option>
+            <option value="http://ysia.yl.gov.cn/">榆神工业区</option>
+            <option value="http://kgstq.yl.gov.cn/">空港生态区</option>
+            <option value="http://ylgajj.yl.gov.cn/">市交警支队</option>
+            
+            <option value="http://zwfw.yl.gov.cn/CMS/index.action">市政务服务中心</option>
+            <option value="http://zfgjj.yl.gov.cn/">住房公积金中心</option>
+          </select>
+        </li>
+        <li>
+          <select onchange="if(this.value != '') {window.open(this.value);this.options[0].selected=true;}">
+            <option>各省民政网站</option>
+            <option value="http://mzj.beijing.gov.cn/ "  title="北京民政">北京民政</a></option>
+            <option value="https://mz.tj.gov.cn/ "  title="天津民政">天津民政</a></option>
+            <option value="https://minzheng.hebei.gov.cn/ "  title="河北民政">河北民政</a></option>
+            <option value="http://mzt.shanxi.gov.cn/ "  title="山西民政">山西民政</a></option>
+            <option value="http://mzt.nmg.gov.cn/ "  title="内蒙古民政">内蒙古民政</a></option>
+            <option value="https://mzt.ln.gov.cn/ "  title="辽宁民政">辽宁民政</a></option>
+            <option value="http://mzt.jl.gov.cn/ "  title="吉林民政">吉林民政</a></option>
+            <option value="https://mzt.hlj.gov.cn/ "  title="黑龙江民政">黑龙江民政</a></option>
+            <option value="https://mzj.sh.gov.cn/ "  title="上海民政">上海民政</a></option>
+            <option value="http://mzt.jiangsu.gov.cn/ "  title="江苏民政">江苏民政</a></option>
+            <option value="http://mzt.zj.gov.cn/ "  title="浙江民政">浙江民政</a></option>
+            <option value="http://mz.ah.gov.cn/ "  title="安徽民政">安徽民政</a></option>
+            <option value="http://mzt.fujian.gov.cn/ "  title="福建民政">福建民政</a></option>
+            <option value="http://mzt.jiangxi.gov.cn/ "  title="江西民政">江西民政</a></option>
+            <option value="http://mzt.shandong.gov.cn/ "  title="山东民政">山东民政</a></option>
+            <option value="https://mzt.henan.gov.cn/ "  title="河南民政">河南民政</a></option>
+            <option value="http://mzt.hubei.gov.cn/ "  title="湖北民政">湖北民政</a></option>
+            <option value="http://mzt.hunan.gov.cn/ "  title="湖南民政">湖南民政</a></option>
+            <option value="http://smzt.gd.gov.cn/ "  title="广东民政">广东民政</a></option>
+            <option value="http://mzt.gxzf.gov.cn/ "  title="广西民政">广西民政</a></option>
+            <option value="http://mz.hainan.gov.cn/ "  title="海南民政">海南民政</a></option>
+            <option value="http://mzj.cq.gov.cn/ "  title="重庆民政">重庆民政</a></option>
+            <option value="http://mzt.sc.gov.cn/ "  title="四川民政">四川民政</a></option>
+            <option value="http://mzt.guizhou.gov.cn/ "  title="贵州民政">贵州民政</a></option>
+            <option value="http://ynmz.yn.gov.cn/preview/ynmzt/index.jhtml "  title="云南民政">云南民政</a></option>
+            <option value="http://mzt.xizang.gov.cn/ "  title="西藏民政">西藏民政</a></option>
+            <option value="http://mzt.shaanxi.gov.cn/ "  title="陕西民政">陕西民政</a></option>
+            <option value="http://mzt.gansu.gov.cn/ "  title="甘肃民政">甘肃民政</a></option>
+            <option value="http://mca.nx.gov.cn/ "  title="宁夏民政">宁夏民政</a></option>
+            <option value="http://mzt.xinjiang.gov.cn/ "  title="新疆民政">新疆民政</a></option>
+          </select>
+        </li>
+        <li style="margin-right:0;">
+          <select onchange="if(this.value != '') {window.open(this.value);this.options[0].selected=true;}">
+            <option>其他网站链接</option>
+            <option value="http://www.xinhuanet.com/">新华网</option>
+            <option value="http://www.people.com.cn/">人民网</option>
+            <option value="https://www.creditchina.gov.cn/">信用中国</option>
+            <option value="http://www.gsxt.gov.cn/index.html/">国家企业信用信息公示系统</option>
+            <option value="http://credit.shaanxi.gov.cn/">信用中国（陕西）</option>
+            <option value="http://www.ylcredit.gov.cn/">信用中国（陕西榆林）</option>
+            
+            
+            
+          </select>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- ---- 通用>>--【友情链接】 -- 标签结束 ---- -->
+
+<!-- ---- 通用>>--【版权】 -- 标签开始 ---- -->
+<div class="footer">
+  <div class="mbox">
+    <div class="cpright">
+      <div class="dzjg">
+        <a href="https://bszs.conac.cn/sitename?method=show&id=57629DC1C4207D6BE053022819AC1FC7" target="_blank"><img src="//ylmzj.yl.gov.cn/images/red.png" alt="" />
+       <script type="text/javascript">document.write(unescape("%3Cspan id='_ideConac' %3E%3C/span%3E%3Cscript src='http://dcs.conac.cn/js/27/388/0000/40889262/CA273880000408892620002.js' type='text/javascript'%3E%3C/script%3E"));</script>
+      </div>
+      <div class="cprt">
+        <p>榆林市民政局主办&nbsp;&nbsp;&nbsp;&nbsp;榆林市民政局承办&nbsp;&nbsp;&nbsp;<span><a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank">陕ICP备19005614号</a></span></p>
+        <p>网站标识码：6108000041&nbsp;&nbsp;&nbsp;<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=61080202000261" style="display:inline-block;text-decoration:none;"><img src="http://ylmzj.yl.gov.cn/images/201903290925053.png" style="float:left;margin-left: 0px;margin-right: 4px;margin-top: 3px;" />陕公网安备 61080202000261号</a></p>
+        <p>办公地址：陕西省榆阳区青山西路1号&nbsp;&nbsp;&nbsp;&nbsp;联系电话：0912-8190399 &nbsp;&nbsp;&nbsp;&nbsp;<a href="http://ylmzj.yl.gov.cn/ggbf/wzdt/" target="_blank" style="font-weight:bold;">网站地图</a></p>
+      </div>
+      <div class="wzzc">
+        <script id="_jiucuo_" sitecode='6108000041' src='//ylmzj.yl.gov.cn/images/jiucuo.js'></script>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--无障碍js-->
+<script src="https://auth.mangren.com/boots/ylmzj.yl.gov.cn/esdToolsInit.js" charset="UTF-8"></script>
+<!--网脉ID-->
+<script id="_trs_ta_js" src="//ta.trs.cn/c/js/ta.js?mpid=6187" async="async" defer="defer"></script>
+<!--注册登录-->
+<script>
+    (function(window,localStorage,undefined){
+        var LS = {
+                set : function(key, value){
+                    //在iPhone/iPad上有时设置setItem()时会出现诡异的QUOTA_EXCEEDED_ERR错误
+                    //这时一般在setItem之前，先removeItem()就ok了
+                    if( this.get(key) !== null )
+                        this.remove(key);
+                    localStorage.setItem(key, value);
+                },
+                //查询不存在的key时，有的浏览器返回undefined，这里统一返回null
+                get : function(key){
+                    var v = localStorage.getItem(key);
+                    return v === undefined ? null : v;
+                },
+                remove : function(key){ localStorage.removeItem(key); },
+                clear : function(){ localStorage.clear(); },
+                each : function(fn){
+                    var n = localStorage.length, i = 0, fn = fn || function(){}, key;
+                    for(; i<n; i++){
+                        key = localStorage.key(i);
+                        if( fn.call(this, key, this.get(key)) === false )
+                            break;
+                        //如果内容被删除，则总长度和索引都同步减少
+                        if( localStorage.length < n ){
+                            n --;
+                            i --;
+                        }
+                    }
+                }
+            },
+            j = window.jQuery, c = window.Core;
+        //扩展到相应的对象上
+        window.LS = window.LS || LS;
+        //扩展到其他主要对象上
+        if(j) j.LS = j.LS || LS;
+        if(c) c.LS = c.LS || LS;
+    })(window,window.localStorage);
+    var searchUrl=window.location.href;
+    var SSOSignOrder= /code=(\w*)/;
+    var SSOSign = searchUrl.match(SSOSignOrder);
+    SSOSign = SSOSign ? SSOSign [1] : '';
+    if(SSOSign=="" || SSOSign==null||SSOSign==undefined) {
+        SSOSign = localStorage.SSOSign;
+    }
+    function addTrack(){
+        $.ajax({
+            url: '/fsp/user/center/addTrack',
+            type: 'post',
+            headers: {
+                SSOSign: SSOSign
+            },
+            data: JSON.stringify({
+                articleName: $("meta[name=ArticleTitle]").attr("content"),
+                articleAddress: $("meta[name=Url]").attr("content"),
+                siteName:$("meta[name=SiteName]").attr("content"),
+                siteDomain:$("meta[name=SiteDomain]").attr("content")
+            }),
+            "contentType": 'application/json',
+            success: function(data) {
+                data = JSON.parse(data);
+                if (data.code === '200') {
+                    console.log("记录足迹");
+                }
+            }
+        })
+    }
+    function userInfoByKey(){
+        $.ajax({
+            type: "get",//方法类型
+            dataType: "json",//预期服务器返回的数据类型
+            url: "/fsp/login/userInfoByKey" ,//url
+            contentType:"application/json",
+            headers: {
+                SSOSign: SSOSign
+            },
+            success: function (result) {
+                if(result.code==200){
+                    var secretKey = result.summary_info.secretKey;
+                    var userdata = result.datas;
+                    $.ajax({
+                        type: "get",//方法类型
+                        dataType: "json",//预期服务器返回的数据类型
+                        url: "/fsp/login/getPrivateKey?secureKey="+secretKey ,//url
+                        contentType:"application/json",
+                        headers: {
+                            SSOSign: SSOSign
+                        },
+                        success: function (result) {
+                            //userdata
+                            $("#userdata").text(userdata);
+                            //secretvalue
+                            $("#secretvalue").text(result.datas.secretvalue);
+                            var decryptData = sm2.doDecrypt(userdata,result.datas.secretvalue, 1)
+                            decryptData = JSON.parse(decryptData);
+                            //console.log(decryptData);
+                            if(result.code==200){
+                                localStorage.SSOSign=SSOSign;
+                                //ref  dlxx 登录+人名
+                                //ref  zcxx 注册+退出
+                                $("#dlxx").text("你好，"+decryptData.nickname);
+                                // $("#username").text("你好，"+decryptData.nickname);
+                                //$("#dlxx").attr("href","/ids.html"); 此处不进入个人中心
+                                $("#dlxx").attr("href","https://zwfw.shaanxi.gov.cn/icity/uinfo");
+                                $("#zcxx").text("退出");
+                                $("#zcxx").attr("href","javascript:logout();");
+                                if(decryptData.accttype == "10"){
+                                    $("#dlxx").text("你好，"+decryptData.username);
+                                    //$("#username").text("你好，"+decryptData.username);
+                                    //$("#dlxx2").text(decryptData.username);
+                                }else{
+                                    $("#dlxx").text("你好，"+decryptData.corpname);
+                                    //$("#username").text("你好，"+decryptData.corpname);
+                                    //$("#dlxx2").text(decryptData.corpName);
+                                }
+                                //$("#dlxx2_a").attr("href","javascript:void(0)");
+                                //$("#zcxx2").text("退出");
+                                //$("#zcxx2_a").attr("href","javascript:logout();");
+                                //addTrack();
+                            }else{
+                                //$("#modalAuth").css('display','block');
+                                //$("#mask").css('display','block');
+                                //$("#loginuser").attr("href",(result.link[0].url+window.location.href));
+                            }
+                        },
+                        error : function(result) {
+                        }
+                    });
+                }else{
+                    //替换响应站点的 ClientId
+                    let _mzjClientId="2E3PYJ3F3QPE53"
+                    let _flkLink="http://sfrz.shaanxi.gov.cn/sysauthserver/authorize?client_id="+_mzjClientId+"&response_type=code&redirect_uri="
+                    $("#zcxx").attr("href",(_flkLink+window.location.href).replace("amp;",""));//给注册赋值
+                    $("#dlxx").attr("href",(_flkLink+window.location.href).replace("amp;",""));//给登录赋值
+                }
+            },
+            error : function(result) {
+            }
+        });
+    }
+    userInfoByKey();
+    function logout(){
+        $.ajax({
+            type: "get",//方法类型
+            dataType: "json",//预期服务器返回的数据类型
+            url: "/fsp/login/ucBinLogout.do" ,//url
+            contentType:"application/json",
+            beforeSend: function (XMLHttpRequest) {
+                XMLHttpRequest.setRequestHeader("SSOSign", SSOSign);
+            },
+            success: function (result) {
+                if(result.code==200){
+                    localStorage.removeItem("SSOSign");
+                    window.location.href=(result.datas+window.location.href.replace(/\?.*$/, ""));
+                    alert(result.msg);
+                }
+            },
+            error : function(result) {
+                alert("退出失败，请稍后再试");
+            }
+        });
+    }
+</script>
+<!--注册登录END-->
+
+<!--迁移公告-->
+<style>
+    .qyBox{width: 340px;padding: 20px;position: fixed;top: 70%;right: 0%;z-index: 9999;background: #fff;border: 1px solid #D1DAEE;box-shadow: 0 4px 24px #7A8CA8}
+    .qyclose{font-size: 22px;position: absolute;top: 1%;right: 4%;cursor: pointer;}
+    .qytitle{text-align: center;font-size: 18px;font-weight: 600;margin-bottom: 10px}
+    .qycontent{font-size: 16px;white-space: normal;}
+    .qycontent p{text-indent: 2em;}
+</style>
+<div id="qybox" class="qyBox">
+    <div class="qyclose">x</div>
+    <div class="qytitle">
+       榆林市民政局网站改版试运行公告
+    </div>
+    <div class="qycontent">
+        <p>榆林市民政局新版门户网站已于2024年9月29日上线试运行，敬请社会各界和广大网友对新版网站提出宝贵的意见和建议。试运行期间，网站部分内容可能仍需进一步修改、调整和完善，由此给您带来的不便，敬请谅解！</p>
+        <p>联系电话：0912-8190399</p>
+    </div>
+</div>
+<script>
+    $(".qyclose").on('click', function() {
+        $("#qybox").remove();
+    });
+</script>
+
+<!--迁移公告end-->
+<!-- 右侧悬浮 -->
+
+</body>
+</html>

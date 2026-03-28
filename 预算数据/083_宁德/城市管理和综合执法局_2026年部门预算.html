@@ -1,0 +1,1720 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="SiteName" content="宁德市城市管理局">
+  <meta name="SiteDomain" content="csglj.ningde.gov.cn">
+  <meta name="SiteIDCode" content="3509000054">
+  <title>
+    宁德市城市管理局
+  </title>
+  <link rel="stylesheet" href="./images/iconfont.css">
+  <link rel="stylesheet" href="./images/20210914-ndyl-golbal.css">
+  <link rel="stylesheet" href="./images/20210914-ndyl-style.css">
+  <link rel="stylesheet" href="./images/csglj_21gb.css">
+  <style>
+    .xw-nr-box .gengduo {
+      position: absolute;
+      right: 0px;
+      top: 0px;
+    }
+
+    .xw-nr-box {
+      position: relative;
+    }
+
+    .ldzc-box .bd {
+      height: auto !important;
+    }
+
+    /* 轮播图 */
+    .xw-lb {
+      overflow: hidden;
+    }
+
+    #slideBox,
+    .lbt {
+      max-height: 351px;
+      overflow: hidden;
+    }
+
+    #slideBox .bd img,
+    #tabGzdt .bd {
+      height: auto !important;
+    }
+
+    #slideBox {
+      position: relative;
+      overflow: hidden;
+      margin: 0px auto;
+      width: 100%;
+    }
+
+    #slideBox .hd {
+      position: absolute;
+      z-index: 999;
+      bottom: 10px;
+      text-align: center;
+      right: 15px;
+      cursor: pointer;
+    }
+
+    #slideBox .hd li {
+      display: inline-block;
+      width: 10px;
+      height: 8px;
+      background: grey;
+      margin: 0 4px;
+      cursor: pointer;
+      overflow: hidden;
+      border-radius: 13px;
+    }
+
+    #slideBox .hd li.on {
+      background-color: #fff;
+      width: 18px;
+    }
+
+    #slideBox .bd {
+      position: relative;
+      z-index: 0;
+      overflow: hidden;
+      height: 100%;
+    }
+
+    #slideBox .bd li {
+      position: relative;
+      text-align: center;
+      height: 100%;
+    }
+
+    #slideBox .bd li img {
+      vertical-align: top;
+      width: 100%;
+      height: 400px;
+    }
+
+    #slideBox .bd li a {
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+
+    #slideBox .bd li .title1 {
+      text-align: left;
+      font-weight: normal;
+      line-height: 50px;
+      color: #ffffff;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      padding-left: 24px;
+      font-size: 18px;
+      padding-right: 130px;
+      z-index: 999;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    #slideBox .pic {
+      z-index: 1;
+    }
+
+    #slideBox .bd li .txt-bg {
+      position: absolute;
+      bottom: 0px;
+      z-index: 1;
+      height: 50px;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    @media screen and (max-width:999px) {
+      #slideBox .bd {
+        height: auto;
+      }
+
+      #slideBox .bd li img {
+        height: auto;
+      }
+
+      #slideBox,
+      .lbt {
+        max-height: 534px;
+        overflow: hidden;
+      }
+    }
+
+    @media screen and (max-width: 767px) {
+
+      .slideBox .bd li .title1,
+      .slideBox .bd li .txt-bg {
+        display: none;
+      }
+
+      .slideBox {
+        height: 190px;
+      }
+    }
+
+    @media screen and (max-width: 650px) {
+      .zxft-tp img {
+        height: auto;
+      }
+    }
+
+    @media screen and (max-width:500px) {
+      #slideBox .hd li {
+        width: 8px;
+        height: 8px;
+        margin: 0 2px;
+        border-radius: 8px;
+      }
+
+      #slideBox .bd li .title1 {
+        padding-right: 90px;
+        font-size: 14px;
+        line-height: 40px;
+      }
+
+      #slideBox .hd {
+        bottom: 7px;
+      }
+
+      #slideBox .bd li .txt-bg {
+        height: 40px;
+      }
+    }
+
+    .xw-nr-box {
+      position: relative;
+    }
+
+    #focusBox1 .tempWrap {
+      width: inherit !important;
+    }
+
+    #focusBox1 ul li {
+      height: 122px;
+    }
+
+    .slb #focusBox1 ul li {
+      height: auto;
+    }
+
+    .ztzl-box ul {
+      margin-left: -20px !important;
+      height: auto !important;
+    }
+
+    .ztzl-box ul li {
+      margin-left: 20px !important;
+    }
+
+    .tt-top h4 a {
+      color: #1658a0;
+    }
+
+    .zxft-tp {
+      text-align: center;
+    }
+
+    /* 政府信息公开目录 */
+    .xxgkml_div {
+      margin-top: 30px;
+    }
+
+    .xxgkml_div a {
+      display: block;
+      text-align: center;
+      padding: 16px 20px;
+      line-height: 30px;
+      background: #D1E8FF center;
+      background-size: cover;
+    }
+
+    .xxgkml_div a h1 {
+      font-size: 26px;
+      font-weight: bold;
+      color: #1658A0;
+    }
+
+    .SLB .xxgkml_div a h1 {
+      font-size: 32px;
+    }
+
+    .SLB .xxgkml_div a {
+      line-height: 50px;
+    }
+    /* 20240906-头条 */
+    .sy-hf{margin-bottom: 18px;}
+    .announcement_03{padding: 0rem; padding-bottom: 16px; border-bottom: none; }
+    .announcement_03 h3{text-align: center; margin-bottom: 14px;}
+    .announcement_03 h3 a{color: #1658A0; font-size: 32px;line-height: 40px;}
+    .announcement_03 p{font-size:17px; color: #1658a0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; text-align: center;}
+    .announcement_03 p a{color: #1658A0;}
+
+    .SLB .announcement_03 h3 a{font-size:40px;}
+    .SLB .announcement_03 p{font-size:24px;}
+
+    @media screen and (max-width:992px) {
+        .announcement_03 h3 a{color: #1658A0; font-size: 28px; }
+        .announcement_03 p {overflow: inherit; line-height:26px; white-space: inherit; text-overflow: inherit; }
+        .SLB .announcement_03 h3 a{font-size:32px;}
+        .SLB .announcement_03 p{font-size:22px; line-height:28px;}
+    }
+  </style>
+</head>
+
+<body class="mw-bg" ms-controller="windowRoot">
+  <!--头部开始-->
+  <div class="top-link-wap_2021" role="navigation" des="头部信息">
+    <div class="top-link_2021" id="top-link">
+        <div class="w_1300_2021 clearflx_2021">
+            <div class="logo_2021"><a href="/" title="宁德市城市管理局"><img src="/images/20210930-ndcs-logo.png" alt="宁德市城市管理局" /></a></div>
+            <div class="xyfd_2021">
+                <div class="rig-top_2021 clearflx_2021"> <span>网站支持IPV6</span>
+                    <ul ms-visible="isLogin" style="display:none;" class="clearflx_2021 ft-list_2021">
+                        <li>
+                            <a href="javascript:;" class="ydb_2021">闽政通
+                                <div class="ydtk_2021 clearflx">
+                                    <div class="ewp_2021">
+                                        <i><img src="/images/202010mzt_qrcode.png" width="100" alt="闽政通APP" /></i>
+                                        <em>闽政通APP</em>
+                                    </div>
+                                </div>
+                            </a>
+                            <em>|</em>
+                        </li>
+                        <li>
+                            <a ms-attr-title='loginInfo.showname'>你好，{{loginInfo.showname|truncate(12)}}</a>
+                            <em>|</em>
+                        </li>
+                        <li>
+                            <a ms-attr-href="logoutUrl">退出</a>
+                        </li>
+                    </ul>
+                    <ul ms-visible="!isLogin" style="display:none;" class="clearflx_2021 ft-list_2021">
+                        <li>
+                            <a href="javascript:;" class="ydb_2021">闽政通
+                                <div class="ydtk_2021 clearflx">
+                                    <div class="ewp_2021">
+                                        <i><img src="/images/202010mzt_qrcode.png" width="100" alt="" /></i>
+                                        <em>闽政通APP</em>
+                                    </div>
+                                </div>
+                            </a>
+                            <em>|</em>
+                        </li>
+                        <li>
+                            <a id="registered" href="#" ms-click="$register">注册</a>
+                            <em>|</em>
+                        </li>
+                        <li>
+                            <a id="logined" href="#" ms-click="$login">登录</a>
+                        </li>
+                    </ul>
+                    <div class="gwp_2021">
+                        <a href="http://www.gov.cn/" target="_blank" title="国务院">国务院</a>
+                        <a href="https://www.fujian.gov.cn/" target="_blank" title="省政府">省政府</a>
+                        <a href="http://www.ningde.gov.cn/" target="_blank" title="市政府">市政府</a>
+                    </div>
+                </div>
+                <div class="pho-fix_2021">
+                    <span class="allMenu-right"></span>
+                    <!--<i class="close_2021"><img src="images/2021close.png" alt="" /></i>-->
+                    <ul class="nav_2021 clearflx_2021">
+                        <li ms-class="active_2021:paths[3]==''"><a href="/" title="首页">首页</a></li>
+                        <li ms-class="active_2021:paths[3]=='zwgk'">
+                            <a href="http://csglj.ningde.gov.cn/zwgk/" title="政务公开">政务公开
+                                <em></em>
+                            </a>
+                            <div class="nav_con_2021 m_3_2021">
+                                <div class="nav_warp_2021">
+                                    <a href="http://csglj.ningde.gov.cn/zwgk/zxgg/" target="_blank"
+                                        title="最新公告">最新公告</a>
+                                    <a href="http://csglj.ningde.gov.cn/zwgk/zcfg/" target="_blank"
+                                        title="政策法规">政策法规</a>
+                                    <a href="http://csglj.ningde.gov.cn/zwgk/djgz/" target="_blank"
+                                        title="党建工作">党建工作</a>
+                                    <a href="http://csglj.ningde.gov.cn/zwgk/rsxx/" target="_blank"
+                                        title="人事信息">人事信息</a>
+                                    <a href="http://csglj.ningde.gov.cn/zwgk/czxx/" target="_blank"
+                                        title="财政信息">财政信息</a>
+                                    <a href="http://csglj.ningde.gov.cn/zwgk/xzzf/" target="_blank"
+                                        title="行政执法">行政执法</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li><a href="http://csglj.ningde.gov.cn/zwgk/zcfg/zcjd/" title="解读回应">解读回应</a>
+                        </li>
+                        <li><a href="http://zwfw.fujian.gov.cn/person-todo/detail?userType=3&curStatus=dept&deptId=A729256B0913218EF7123880B8823C41&bsfwCount=5&xzjgCount=1&siteUnid=FF6F84404BCF4EE6B68434FC69668ED3"
+                                target="_blank" title="办事服务">办事服务</a></li>
+                        <li ms-class="active_2021:paths[3]=='gzcy'">
+                            <a href="http://csglj.ningde.gov.cn/gzcy/" title="互动交流">互动交流
+                                <em></em>
+                            </a>
+                            <div class="nav_con_2021 m_6_2021">
+                                <div class="nav_warp_2021">
+                                    <a href="http://csglj.ningde.gov.cn/gzcy/ldxx/" target="_blank"
+                                        title="领导信箱">领导信箱</a>
+                                    <a href="http://csglj.ningde.gov.cn/gzcy/wsdc/" target="_blank"
+                                        title="网上调查">网上调查</a>
+                                    <a href="http://csglj.ningde.gov.cn/gzcy/myzj/" target="_blank"
+                                        title="民意征集">民意征集</a>
+                                    <a href="http://csglj.ningde.gov.cn/gzcy/zxfts/"
+                                        target="_blank" title="在线访谈">在线访谈</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li ms-class="active_2021:paths[3]=='ztxx'"><a
+                                href="http://csglj.ningde.gov.cn/ztxx/" title="专题专栏">专题专栏</a>
+                        </li>
+
+                    </ul>
+                    <!-- <form method="get" action="/search/" target="_blank">
+                        <div class="pho-search_2021 clearflx_2021">
+                            <input type="text" name="key" placeholder="请输入搜索内容" required="required" value="" />
+                            <button type="submit" class="iconfont" style="cursor: pointer;"></button>
+                        </div>
+                    </form> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="gaod_2021"></div>
+<div class="deb-banner_2021 clearflx">
+    <div class="w1300" style="position: relative;height: 11.5rem;">
+        <div class="ss_box2_2021 clearflx" id="header" role="interaction" des="搜索">
+            <form id="form" ms-attr-method="searchMethod" ms-attr-action="searchAction" target="_blank"
+                ms-if="!avalon.vmodels.windowRoot.isStatic">
+                <div class="picker_2021" ms-click="$searchChange()">
+                    <input type="hidden" ms-duplex="levelSiteId" name="levelSiteId" />
+                    <input type="hidden" ms-duplex="searchSiteId" name="siteId" />
+                    <input type="hidden" ms-duplex="isMain" name="isMain" />
+                    <input type="text" ms-duplex="searchSite" class="header_21_inp" readonly />
+                    <a class="upDown_2021"></a>
+                </div>
+                <input type="text" placeholder="请输入您要搜索的内容" name="key" class="inp_2021" required="required" />
+                <button type="submit" class="btn_2021">搜索<i></i></button>
+                <div class="search-log_2021" style="display: block;">
+                    <!-- <div class="rs_tit1_2021" style="display: none;">历史搜索：</div> -->
+                    <div class="rs_tit1_2021" style="display: block;">
+                        <span>热搜词：</span>
+                        <a ms-repeat="hotWords" ms-attr-href="el.url" ms-text="el.title" target="_blank"
+                            title="热搜词"></a>
+                    </div>
+                </div>
+            </form>
+            <form ms-if="avalon.vmodels.windowRoot.isStatic" style="display: none" ms-visible="avalon.vmodels.windowRoot.isStatic" action="https://www.fujian.gov.cn/ssp/main/index.html" target="_blank">
+                <div class="picker_2021">
+                    <input type="hidden" value="ff808081624641aa0162476c0e0e0055" name="siteId" />
+                    <input type="hidden" value="1" name="isMain" />
+                    <input type="text" value="全省" class="header_21_inp" readonly />
+                    <a class="upDown_2021"></a>
+                </div>
+                <input type="text" placeholder="请输入您要搜索的内容" name="key" class="inp_2021" required="required" />
+                <button type="submit" class="btn_2021">搜索<i></i></button>
+            </form>
+        </div>
+
+        <!-- <div class="top-sl">
+            <ul class="clearflx">
+                <li class="icon1">
+                    <a href="#">
+                        <span><img src="../images/20220107-icon1.png" alt="长者模式" /></span>
+                        <p>长者模式</p>
+                    </a>
+                </li>
+                <li class="icon2">
+                    <a id="barrierFreeBtn" href="javascript:;" class="wza">
+                        <span><img src="/images/20220107-icon2.png" alt="无障碍浏览" /></span>
+                        <p>无障碍浏览</p>
+                    </a>
+                </li>
+            </ul>
+        </div> -->
+    </div>
+</div>
+  <!--头部结束-->
+
+  <div class="w1300  clearflx mw-sy">
+    <div class="xw-box clearflx">
+
+      <!-- 时政要闻 -->
+      <div class="announcement announcement_03 mar_t32">
+        <h3>
+          
+            <a href="./sylm/szyw/202603/t20260327_2449236.htm" target="_blank" title="总书记两会后首次考察指引“十五五”开局起步">总书记两会后首次考察指引“十五五”开局起步</a>
+          
+        </h3>
+        <p ms-visible="''==''"
+          style="display:none">
+          
+            定了就要落实，一步一步朝前走 | 锚定发展主题，打造高质量发展样板 | 始终聚焦于人，发展与民生相统一
+          
+        </p>
+      </div>
+
+      <div class="xw-lb clearflx">
+        <!--轮播图-->
+        <div class="lbt fl rel" role="viewlist" des="图片轮播">
+
+          <div id="slideBox">
+            <a href="javascript:;" class="xyjt1 prev"><img src="./images/20210914-ndyl-left.png" alt="左" /></a>
+            <a href="javascript:;" class="xyjt2 next"><img src="./images/20210914-ndyl-right.png" alt="右" /></a>
+            <div class="bd">
+              <ul>
+                
+                  <li><a target="_blank" href="https://liuyan.www.gov.cn/2025wwzfgzbgtjy/bmdf.html?q=fj"
+                      title="@国务院 我来说">
+                      <img src='./dtyw/cgzs/202312/W020240311626011988783.jpg' thumb="" alt="@国务院 我来说" /></a>
+                    <a href="https://liuyan.www.gov.cn/2025wwzfgzbgtjy/bmdf.html?q=fj" class="title1" target="_blank"
+                      title="@国务院 我来说">
+                      @国务院 我来说
+                    </a>
+                  </li>
+                
+                  <li><a target="_blank" href="./dtyw/cgzs/202603/t20260325_2448752.htm"
+                      title="“一周一市场”治出农贸市场新秩序">
+                      <img src='./dtyw/cgzs/202603/W020260325408582959711.jpg' thumb="" alt="“一周一市场”治出农贸市场新秩序" /></a>
+                    <a href="./dtyw/cgzs/202603/t20260325_2448752.htm" class="title1" target="_blank"
+                      title="“一周一市场”治出农贸市场新秩序">
+                      “一周一市场”治出农贸市场新秩序
+                    </a>
+                  </li>
+                
+                  <li><a target="_blank" href="./dtyw/cgzs/202603/t20260317_2447261.htm"
+                      title="以榜样为镜 向先进而行——东侨城市管理综合执法大队走进五里亭派出所学习观摩">
+                      <img src='./dtyw/cgzs/202603/W020260317596379876471.jpg' thumb="" alt="以榜样为镜 向先进而行——东侨城市管理综合执法大队走进五里亭派出所学习观摩" /></a>
+                    <a href="./dtyw/cgzs/202603/t20260317_2447261.htm" class="title1" target="_blank"
+                      title="以榜样为镜 向先进而行——东侨城市管理综合执法大队走进五里亭派出所学习观摩">
+                      以榜样为镜 向先进而行——东侨城市管理综合执法大队走进五里...
+                    </a>
+                  </li>
+                
+                  <li><a target="_blank" href="./zwgk/djgz/202603/t20260312_2446311.htm"
+                      title="中共宁德市城市管理局党组召开树立和践行正确政绩观学习教育部署会">
+                      <img src='./zwgk/djgz/202603/W020260312566135634841.jpg' thumb="" alt="中共宁德市城市管理局党组召开树立和践行正确政绩观学习教育部署会" /></a>
+                    <a href="./zwgk/djgz/202603/t20260312_2446311.htm" class="title1" target="_blank"
+                      title="中共宁德市城市管理局党组召开树立和践行正确政绩观学习教育部署会">
+                      中共宁德市城市管理局党组召开树立和践行正确政绩观学习教育...
+                    </a>
+                  </li>
+                
+                  <li><a target="_blank" href="./dtyw/cgzs/202603/t20260309_2445320.htm"
+                      title="城市里的那束光：她们用另一种方式诠释漂亮">
+                      <img src='./dtyw/cgzs/202603/W020260309379208414682.jpg' thumb="" alt="城市里的那束光：她们用另一种方式诠释漂亮" /></a>
+                    <a href="./dtyw/cgzs/202603/t20260309_2445320.htm" class="title1" target="_blank"
+                      title="城市里的那束光：她们用另一种方式诠释漂亮">
+                      城市里的那束光：她们用另一种方式诠释漂亮
+                    </a>
+                  </li>
+                
+              </ul>
+            </div>
+            <div class="hd">
+              <ul>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!--轮播图end-->
+        <!--工作动态-->
+        <div class="xw-nr-box fr" id="tabGzdt" role="viewlist" des="工作动态">
+          <div class="tab1 hd clearflx">
+            <ul class="fl clearflx new-tit new-tit1">
+              <li>
+                <a href="http://www.gov.cn/pushinfo/v150203/index.htm" target="_blank" title="国务院信息">
+                  国务院信息
+                  <em></em>
+                </a>
+              </li>
+              <i></i>
+              <li>
+                <a href="https://www.fujian.gov.cn/" target="_blank" title="福建要闻">
+                  福建要闻
+                  <em></em>
+                </a>
+              </li>
+              <i></i>
+              <li>
+                <a href="http://www.ningde.gov.cn/zwgk/gzdt/jryw/" target="_blank" title="宁德要闻">
+                  宁德要闻
+                  <em></em>
+                </a>
+              </li>
+              <i></i>
+              <li class="on">
+                <a href="./dtyw/cgzs/" target="_blank"
+                  title="工作动态">
+                  工作动态
+                  <em></em>
+                </a>
+              </li>
+            </ul>
+            <a class="gengduo bf-pass" href="http://www.gov.cn/pushinfo/v150203/index.htm" target="_blank"
+              title="更多">更多></a>
+            <a class="gengduo bf-pass" href="https://www.fujian.gov.cn/" target="_blank" title="更多">更多></a>
+            <a class="gengduo bf-pass" href="http://www.ningde.gov.cn/zwgk/gzdt/jryw/" target="_blank"
+              title="更多">更多></a>
+            <a class="gengduo bf-pass" href="./dtyw/cgzs/" target="_blank"
+              title="更多">更多></a>
+          </div>
+
+          <div class="bd">
+
+            <ul class="xw-list-1 xw-right" ms-controller="gwyxx">
+              <li ms-repeat="list" ms-if-loop="$index<8">
+                <span ms-text="el.pubDate| date('MM-dd')" class="bf-pass"></span><i></i>
+                <a ms-attr-href="el.link" target="_blank" ms-attr-title="el.title" ms-text="el.title | html"></a>
+              </li>
+            </ul>
+            <ul class="xw-list-1 xw-right" ms-controller="szfxx" style="display: none;" ms-visible="list.length>0">
+
+              <li ms-repeat="list" ms-if-loop="$index < 8">
+                <span class="bf-pass" ms-text="el.time | date('MM-dd')"></span>
+                <i></i>
+                <a ms-attr-href="el.url" target="_blank" ms-attr-title="el.title" ms-text="el.title"></a>
+              </li>
+            </ul>
+            <ul class="xw-list-1 xw-right">
+              
+                <li>
+                  <span class="bf-pass">
+                    03-27
+                  </span>
+                  <i></i>
+                  <a href="http://www.ningde.gov.cn/zwgk/gzdt/jryw/202603/t20260327_2449289.htm" target="_blank" title="核电汽轮机控制系统国产化改造在宁德核电成功应用">核电汽轮机控制系统国产化改造在宁德核电成功应用</a>
+                </li>
+              
+                <li>
+                  <span class="bf-pass">
+                    03-27
+                  </span>
+                  <i></i>
+                  <a href="http://www.ningde.gov.cn/zwgk/gzdt/jryw/202603/t20260327_2449287.htm" target="_blank" title="当好市委的“坚强前哨”“巩固后院” 努力为宁德高质量发展作出更大贡献">当好市委的“坚强前哨”“巩固后院” 努力为宁德高质量发展作出更大贡献</a>
+                </li>
+              
+                <li>
+                  <span class="bf-pass">
+                    03-26
+                  </span>
+                  <i></i>
+                  <a href="http://www.ningde.gov.cn/zwgk/gzdt/jryw/202603/t20260326_2449018.htm" target="_blank" title="打造“家门口”的“幸福地标”——宁德市探索“嵌入式”养老新路径">打造“家门口”的“幸福地标”——宁德市探索“嵌入式”养老新路径</a>
+                </li>
+              
+                <li>
+                  <span class="bf-pass">
+                    03-26
+                  </span>
+                  <i></i>
+                  <a href="http://www.ningde.gov.cn/zwgk/gzdt/jryw/202603/t20260326_2449014.htm" target="_blank" title="宁德市2026年首批市本级公租房摇号30日启动">宁德市2026年首批市本级公租房摇号30日启动</a>
+                </li>
+              
+                <li>
+                  <span class="bf-pass">
+                    03-24
+                  </span>
+                  <i></i>
+                  <a href="http://www.ningde.gov.cn/zwgk/gzdt/jryw/202603/t20260324_2448416.htm" target="_blank" title="我市4家企业获评国家级绿色工厂">我市4家企业获评国家级绿色工厂</a>
+                </li>
+              
+                <li>
+                  <span class="bf-pass">
+                    03-23
+                  </span>
+                  <i></i>
+                  <a href="http://www.ningde.gov.cn/zwgk/gzdt/jryw/202603/t20260323_2448181.htm" target="_blank" title="宁德市首条“线上公交”上金贝专线正式运营">宁德市首条“线上公交”上金贝专线正式运营</a>
+                </li>
+              
+                <li>
+                  <span class="bf-pass">
+                    03-19
+                  </span>
+                  <i></i>
+                  <a href="http://www.ningde.gov.cn/zwgk/gzdt/jryw/202603/t20260319_2447666.htm" target="_blank" title="我市连续14年未发生任何级别食品安全事故">我市连续14年未发生任何级别食品安全事故</a>
+                </li>
+              
+                <li>
+                  <span class="bf-pass">
+                    03-18
+                  </span>
+                  <i></i>
+                  <a href="http://www.ningde.gov.cn/zwgk/gzdt/jryw/202603/t20260318_2447436.htm" target="_blank" title="我市全面排查“漂白鸡爪” 下架封存3552件">我市全面排查“漂白鸡爪” 下架封存3552件</a>
+                </li>
+              
+            </ul>
+            <ul class="xw-list-1 xw-right">
+              
+                <li>
+                  <span class="bf-pass">
+                    03-25
+                  </span>
+                  <i></i>
+                  <a href="./dtyw/cgzs/202603/t20260325_2448752.htm" target="_blank" title="“一周一市场”治出农贸市场新秩序">“一周一市场”治出农贸市场新秩序</a>
+                </li>
+              
+                <li>
+                  <span class="bf-pass">
+                    03-17
+                  </span>
+                  <i></i>
+                  <a href="./dtyw/cgzs/202603/t20260317_2447261.htm" target="_blank" title="以榜样为镜 向先进而行——东侨城市管理综合执法大队走进五里亭派出所学习观摩">以榜样为镜 向先进而行——东侨城市管理综合执法大队走进五里亭派出所学习观摩</a>
+                </li>
+              
+                <li>
+                  <span class="bf-pass">
+                    03-12
+                  </span>
+                  <i></i>
+                  <a href="./zwgk/djgz/202603/t20260312_2446311.htm" target="_blank" title="中共宁德市城市管理局党组召开树立和践行正确政绩观学习教育部署会">中共宁德市城市管理局党组召开树立和践行正确政绩观学习教育部署会</a>
+                </li>
+              
+                <li>
+                  <span class="bf-pass">
+                    03-09
+                  </span>
+                  <i></i>
+                  <a href="./dtyw/cgzs/202603/t20260309_2445320.htm" target="_blank" title="城市里的那束光：她们用另一种方式诠释漂亮">城市里的那束光：她们用另一种方式诠释漂亮</a>
+                </li>
+              
+                <li>
+                  <span class="bf-pass">
+                    03-03
+                  </span>
+                  <i></i>
+                  <a href="./dtyw/cgzs/202603/t20260309_2445313.htm" target="_blank" title="明灯庆元宵 服务暖民心">明灯庆元宵 服务暖民心</a>
+                </li>
+              
+                <li>
+                  <span class="bf-pass">
+                    02-25
+                  </span>
+                  <i></i>
+                  <a href="./dtyw/cgzs/202602/t20260225_2443196.htm" target="_blank" title="看，这是东侨城市管理综合执法大队交出的2025答卷请您阅览！">看，这是东侨城市管理综合执法大队交出的2025答卷请您阅览！</a>
+                </li>
+              
+                <li>
+                  <span class="bf-pass">
+                    02-15
+                  </span>
+                  <i></i>
+                  <a href="./dtyw/cgzs/202602/t20260225_2443189.htm" target="_blank" title="【木秀青山·踏马迎春】镜台山公园邀您共赴新春繁花盛宴">【木秀青山·踏马迎春】镜台山公园邀您共赴新春繁花盛宴</a>
+                </li>
+              
+                <li>
+                  <span class="bf-pass">
+                    02-14
+                  </span>
+                  <i></i>
+                  <a href="./dtyw/cgzs/202602/t20260225_2443179.htm" target="_blank" title="【福马宁德·新春纳祥】人民广场花境打卡点出炉，解锁马年浪漫！">【福马宁德·新春纳祥】人民广场花境打卡点出炉，解锁马年浪漫！</a>
+                </li>
+              
+            </ul>
+
+          </div>
+
+        </div>
+        <!--工作动态end-->
+      </div>
+    </div>
+    <!--学习十九届党的五中全会-->
+    <div class="sy-hf">
+      
+        <img src='./inc/syhf/202301/W020230110541922205429.jpg' alt="横幅" width="1300px" />
+      
+    </div>
+    <!--学习十九届党的五中全会end-->
+    <!--政府信息公开-->
+    <div class="clearflx" role="viewlist" des="政府信息公开">
+      <ul class="zwgk-list clearflx yj-zwgk-list">
+        <li>
+          <a target="_blank" href="./zfxxgkzl/zfxxgkzn/" title="政府信息公开指南">
+            <i class="zw-icon1"></i>政府信息公开指南</a>
+        </li>
+        <li>
+          <a target="_blank" href="./zfxxgkzl/zfxxgkzdgd/" title="政府信息公开制度">
+            <i class="zw-icon2"></i>政府信息公开制度</a>
+        </li>
+        <li>
+          <a target="_blank" href="./zfxxgkzl/zfxxgkml/" title="法定主动公开内容">
+            <i class="zw-icon3"></i>法定主动公开内容</a>
+        </li>
+        <li>
+          <a target="_blank" href="./zfxxgkzl/zfxxgkndbg/" title="政府信息公开年报">
+            <i class="zw-icon4"></i>政府信息公开年报</a>
+        </li>
+        <li>
+          <a target="_blank" href="./zfxxgkzl/ysq/" title="政府信息公开申请">
+            <i class="zw-icon5"></i>政府信息公开申请</a>
+        </li>
+
+      </ul>
+    </div>
+    <div class="xxgkml_div">
+      <a title="政务公开任务清单" href="./zwgkqd/" target="_blank">
+        <h1>政务公开任务清单</h1>
+      </a>
+    </div>
+    <!--政府信息公开end-->
+    <div class="clearflx">
+      <div class="w70 fl">
+        <!--最新公告tab栏-->
+        <div class="gsgg-box" id="tabZxgg" role="viewlist" des="工作业务">
+          <div class="tab1 tab2 hd clearflx">
+            <ul class="fl clearflx new-tit">
+              <li class="on"><a href="./zwgk/zxgg/" target="_blank"
+                  title="最新公告">最新公告<em></em></a></li><i></i>
+              <li><a href="./zwgk/zcfg/" target="_blank"
+                  title="政策法规">政策法规<em></em></a></li><i></i>
+              <li><a href="./zwgk/djgz/" target="_blank"
+                  title="党建工作">党建工作<em></em></a></li><i></i>
+              <li><a href="./zwgk/rsxx/" target="_blank" title="人事信息">人事信息<em></em></a></li>
+              <i></i>
+              <li><a href="./zwgk/czxx/" target="_blank" title="财政信息">财政信息<em></em></a></li>
+            </ul>
+          </div>
+
+          <div class="bd">
+            <!--最新公告bd-->
+            <div>
+              
+                <div class="xw-zk-box clearflx">
+                  <div class="xw-zk-left fl">
+                    <h4 class="bf-pass">
+                      12
+                    </h4>
+                    <p class="bf-pass">
+                      2026-02
+                    </p>
+                  </div>
+                  <div class="xw-zk-right fr">
+                    <h4>
+                      <a href="./zwgk/zxgg/202602/t20260212_2442036.htm" target="_blank" title="关于征集2026年度中心城区城市道路占用与挖掘审批需求的通知">关于征集2026年度中心城区城市道路占用与挖掘审批需求的通知</a>
+                    </h4>
+                    <p class="bf-pass">
+                      
+　　为进一步加强中心城区城市道路管理，规范道路占用与挖掘行为，根据《宁德市中心城区道路挖掘计划统筹管理方案》文件精神，现向社会公开征集2026年度城市道路占用与挖掘需求（...
+                      <a href="./zwgk/zxgg/202602/t20260212_2442036.htm" target="_blank" title="查看详情">[查看详情]</a>
+                    </p>
+                  </div>
+                </div>
+              
+              <ul class="xw-list-1">
+                
+                  <li>
+                    <span class="bf-pass">
+                      01-27
+                    </span>
+                    <i></i>
+                    <a href="./zwgk/zxgg/202601/t20260127_2438194.htm" target="_blank" title="关于《宁德市城市管理局行政处罚工作规程 （征求意见稿）》公开征求意见建议的公告">关于《宁德市城市管理局行政处罚工作规程 （征求意见稿）》公开征求意见建议的公告</a>
+                  </li>
+                
+                  <li>
+                    <span class="bf-pass">
+                      01-07
+                    </span>
+                    <i></i>
+                    <a href="./zwgk/zxgg/202601/t20260107_2432156.htm" target="_blank" title="2025年第四季度网站自查情况">2025年第四季度网站自查情况</a>
+                  </li>
+                
+                  <li>
+                    <span class="bf-pass">
+                      01-05
+                    </span>
+                    <i></i>
+                    <a href="./zwgk/zxgg/202601/t20260105_2431056.htm" target="_blank" title="2025年宁德市城市管理局政府网站工作年度报表">2025年宁德市城市管理局政府网站工作年度报表</a>
+                  </li>
+                
+                  <li>
+                    <span class="bf-pass">
+                      12-30
+                    </span>
+                    <i></i>
+                    <a href="./zwgk/zxgg/202512/t20251230_2429826.htm" target="_blank" title="宁德一中家长驿站项目施工发包中标公示">宁德一中家长驿站项目施工发包中标公示</a>
+                  </li>
+                
+              </ul>
+            </div>
+            <!--最新公告bd结束-->
+            <!--政策法规bd-->
+            <div>
+              
+                <div class="xw-zk-box clearflx">
+                  <div class="xw-zk-left fl">
+                    <h4 class="bf-pass">
+                      30
+                    </h4>
+                    <p class="bf-pass">
+                      2026-01
+                    </p>
+                  </div>
+                  <div class="xw-zk-right fr">
+                    <h4>
+                      <a href="./zwgk/zcfg/zcjd/202601/t20260130_2439222.htm" target="_blank" title="图解：《宁德市中心城区道路挖掘计划统筹管理方案》">图解：《宁德市中心城区道路挖掘计划统筹管理方案》</a>
+                    </h4>
+                    <p class="bf-pass">
+                      
+                      <a href="./zwgk/zcfg/zcjd/202601/t20260130_2439222.htm" target="_blank" title="查看详情">[查看详情]</a>
+                    </p>
+                  </div>
+                </div>
+              
+              <ul class="xw-list-1">
+                
+                  <li>
+                    <span class="bf-pass">
+                      01-30
+                    </span>
+                    <i></i>
+                    <a href="./zwgk/zcfg/zcjd/202601/t20260130_2439200.htm" target="_blank" title="《宁德市中心城区道路挖掘计划统筹管理方案》政策解读">《宁德市中心城区道路挖掘计划统筹管理方案》政策解读</a>
+                  </li>
+                
+                  <li>
+                    <span class="bf-pass">
+                      01-30
+                    </span>
+                    <i></i>
+                    <a href="./zfxxgkzl/zc/xzgfxwj/202601/t20260130_2439197.htm" target="_blank" title="宁德市城市管理局关于印发《宁德市中心城区道路挖掘计划统筹管理方案》的通知">宁德市城市管理局关于印发《宁德市中心城区道路挖掘计划统筹管理方案》的通知</a>
+                  </li>
+                
+                  <li>
+                    <span class="bf-pass">
+                      12-05
+                    </span>
+                    <i></i>
+                    <a href="./zwgk/zcfg/zcjd/202512/t20251205_2423007.htm" target="_blank" title="图解：《宁德市“摊规点”管理办法（试行）》">图解：《宁德市“摊规点”管理办法（试行）》</a>
+                  </li>
+                
+                  <li>
+                    <span class="bf-pass">
+                      12-05
+                    </span>
+                    <i></i>
+                    <a href="./zwgk/zcfg/zcjd/202512/t20251205_2422993.htm" target="_blank" title="《宁德市“摊规点”管理办法（试行）》政策解读">《宁德市“摊规点”管理办法（试行）》政策解读</a>
+                  </li>
+                
+              </ul>
+            </div>
+            <!--政策法规bd结束-->
+            <!--党建工作bd-->
+            <div>
+              
+                <div class="xw-zk-box clearflx">
+                  <div class="xw-zk-left fl">
+                    <h4 class="bf-pass">
+                      12
+                    </h4>
+                    <p class="bf-pass">
+                      2026-03
+                    </p>
+                  </div>
+                  <div class="xw-zk-right fr">
+                    <h4>
+                      <a href="./zwgk/djgz/202603/t20260312_2446311.htm" target="_blank" title="中共宁德市城市管理局党组召开树立和践行正确政绩观学习教育部署会">中共宁德市城市管理局党组召开树立和践行正确政绩观学习教育部署会</a>
+                    </h4>
+                    <p>
+                      
+　　3月10日，中共宁德市城市管理局党组召开树立和践行正确政绩观学习教育部署会，传达学习习近平总书记关于树立和践行正确政绩观学习教育的重要讲话和重要指示精神和中央、省委...
+                      <a href="./zwgk/djgz/202603/t20260312_2446311.htm" target="_blank" title="查看详情">[查看详情]</a>
+                    </p>
+                  </div>
+                </div>
+              
+              <ul class="xw-list-1">
+                
+                  <li>
+                    <span class="bf-pass">
+                      02-12
+                    </span>
+                    <i></i>
+                    <a href="./zwgk/djgz/202602/t20260213_2442562.htm" target="_blank" title="中共宁德市城市管理局党组召开2025年度全面从严治党暨党风廉政建设和反腐败工作专题分析会">中共宁德市城市管理局党组召开2025年度全面从严治党暨党风廉政建设和反腐败工作专题分析会</a>
+                  </li>
+                
+                  <li>
+                    <span class="bf-pass">
+                      02-06
+                    </span>
+                    <i></i>
+                    <a href="./zwgk/djgz/202602/t20260206_2440973.htm" target="_blank" title="中共宁德市城市管理局党组召开2025年度民主生活会">中共宁德市城市管理局党组召开2025年度民主生活会</a>
+                  </li>
+                
+                  <li>
+                    <span class="bf-pass">
+                      08-27
+                    </span>
+                    <i></i>
+                    <a href="./zwgk/djgz/202508/t20250827_2176608.htm" target="_blank" title="中共宁德市城市管理局党组召开2025年上半年全面从严治党暨党风廉政建设和反腐败 工作专题分析会">中共宁德市城市管理局党组召开2025年上半年全面从严治党暨党风廉政建设和反腐败 工作专题分析会</a>
+                  </li>
+                
+                  <li>
+                    <span class="bf-pass">
+                      04-30
+                    </span>
+                    <i></i>
+                    <a href="./zwgk/djgz/202504/t20250430_2034064.htm" target="_blank" title="中共宁德市城市管理局党组举办深入贯彻中央八项规定精神学习教育读书班">中共宁德市城市管理局党组举办深入贯彻中央八项规定精神学习教育读书班</a>
+                  </li>
+                
+              </ul>
+            </div>
+            <!--党建工作bd结束-->
+            <!--人事信息bd-->
+            <div>
+              
+                <div class="xw-zk-box clearflx">
+                  <div class="xw-zk-left fl">
+                    <h4 class="bf-pass">
+                      04
+                    </h4>
+                    <p class="bf-pass">
+                      2026-01
+                    </p>
+                  </div>
+                  <div class="xw-zk-right fr">
+                    <h4>
+                      <a href="./zfxxgkzl/zfxxgkml/jgxx/202601/t20260114_2434477.htm" target="_blank" title="中共宁德市城市管理局党组关于林剑青正式任职的通知">中共宁德市城市管理局党组关于林剑青正式任职的通知</a>
+                    </h4>
+                    <p>
+                      
+　　宁城管党组〔2026〕1号  中共宁德市城市管理局党组关于林剑青正式任职的通知 局机关各科室、局属各单位：经试用期满考核合格，林剑青同志的宁德市园林绿化中心主任职务予...
+                      <a href="./zfxxgkzl/zfxxgkml/jgxx/202601/t20260114_2434477.htm" target="_blank" title="查看详情">[查看详情]</a>
+                    </p>
+                  </div>
+                </div>
+              
+              <ul class="xw-list-1">
+                
+                  <li>
+                    <span class="bf-pass">
+                      12-01
+                    </span>
+                    <i></i>
+                    <a href="./zfxxgkzl/zfxxgkml/jgxx/202512/t20251201_2421622.htm" target="_blank" title="中共宁德市城市管理局党组关于张丰翊同志任职的通知">中共宁德市城市管理局党组关于张丰翊同志任职的通知</a>
+                  </li>
+                
+                  <li>
+                    <span class="bf-pass">
+                      10-31
+                    </span>
+                    <i></i>
+                    <a href="./zfxxgkzl/zfxxgkml/jgxx/202510/t20251031_2408509.htm" target="_blank" title="中共宁德市城市管理局党组关于刘国华等5位同志职务职级任免的通知">中共宁德市城市管理局党组关于刘国华等5位同志职务职级任免的通知</a>
+                  </li>
+                
+                  <li>
+                    <span class="bf-pass">
+                      09-19
+                    </span>
+                    <i></i>
+                    <a href="./zfxxgkzl/zfxxgkml/jgxx/202509/t20250919_2192549.htm" target="_blank" title="中共宁德市城市管理局党组关于李燕榕同志任职的通知">中共宁德市城市管理局党组关于李燕榕同志任职的通知</a>
+                  </li>
+                
+                  <li>
+                    <span class="bf-pass">
+                      09-02
+                    </span>
+                    <i></i>
+                    <a href="./zfxxgkzl/zfxxgkml/jgxx/202509/t20250902_2187710.htm" target="_blank" title="中共宁德市城市管理局党组关于陈晶同志任职的通知">中共宁德市城市管理局党组关于陈晶同志任职的通知</a>
+                  </li>
+                
+              </ul>
+            </div>
+            <!--人事信息bd结束-->
+            <!--财政信息bd-->
+            <div>
+              
+                <div class="xw-zk-box clearflx">
+                  <div class="xw-zk-left fl">
+                    <h4 class="bf-pass">
+                      14
+                    </h4>
+                    <p class="bf-pass">
+                      2026-02
+                    </p>
+                  </div>
+                  <div class="xw-zk-right fr">
+                    <h4>
+                      <a href="./zwgk/czxx/202603/t20260309_2445312.htm" target="_blank" title="2026年度东侨经济技术开发区城市管理综合执法大队单位预算（开发区）公开">2026年度东侨经济技术开发区城市管理综合执法大队单位预算（开发区）公开</a>
+                    </h4>
+                    <p class="bf-pass">
+                       按有关规定，现将2026年度东侨经济技术开发区城市管理综合执法大队单位预算（开发区）公开，详见附件。
+                      <a href="./zwgk/czxx/202603/t20260309_2445312.htm" target="_blank" title="查看详情">[查看详情]</a>
+                    </p>
+                  </div>
+                </div>
+              
+              <ul class="xw-list-1">
+                
+                  <li>
+                    <span class="bf-pass">
+                      02-14
+                    </span>
+                    <i></i>
+                    <a href="./zwgk/czxx/202603/t20260303_2444436.htm" target="_blank" title="2026年度宁德市城市管理局部门整体绩效目标表">2026年度宁德市城市管理局部门整体绩效目标表</a>
+                  </li>
+                
+                  <li>
+                    <span class="bf-pass">
+                      02-14
+                    </span>
+                    <i></i>
+                    <a href="./zwgk/czxx/202603/t20260303_2444434.htm" target="_blank" title="2026年度环卫中心单位预算公开">2026年度环卫中心单位预算公开</a>
+                  </li>
+                
+                  <li>
+                    <span class="bf-pass">
+                      02-14
+                    </span>
+                    <i></i>
+                    <a href="./zwgk/czxx/202603/t20260303_2444418.htm" target="_blank" title="2026年度工程技术中心单位预算公开">2026年度工程技术中心单位预算公开</a>
+                  </li>
+                
+                  <li>
+                    <span class="bf-pass">
+                      02-14
+                    </span>
+                    <i></i>
+                    <a href="./zwgk/czxx/202603/t20260303_2444415.htm" target="_blank" title="2026年度路灯中心单位预算公开">2026年度路灯中心单位预算公开</a>
+                  </li>
+                
+              </ul>
+            </div>
+            <!--财政信息bd结束-->
+
+          </div>
+
+        </div>
+        <!--最新公告tab栏end-->
+
+        <!--在线访谈-->
+        <div class="gsgg-box" role="viewlist" des="在线访谈">
+          <div class="tab1 tab2 hd clearflx">
+            <ul class="fl clearflx new-tit">
+              <li class="on">
+                <a href="./gzcy/zxfts/" target="_blank"
+                  title="在线访谈">在线访谈
+                  <em></em>
+                </a>
+              </li>
+
+            </ul>
+            <a class="gengduo bf-pass" href="./gzcy/zxfts/" target="_blank"
+              title="更多">更多></a>
+          </div>
+          <div class="zxft clearflx">
+            
+              <div class="zxft-tp">
+                <a ms-visible="''!=''" href="
+                https://www.ningde.gov.cn/hdjl/zxft/202601/t20260122_2436596.htm" title="
+                【在线访谈】合理规划“摊规点”，让城市文明与烟火气一起升腾" target="_blank">
+                <img src='' height="180" alt="在线访谈" />
+                </a>
+                <a ms-visible="''==''" href="
+                https://www.ningde.gov.cn/hdjl/zxft/202601/t20260122_2436596.htm" title="
+                【在线访谈】合理规划“摊规点”，让城市文明与烟火气一起升腾" target="_blank">
+                <img src='/images/20210930-ndcs-zxft-sy.png' width="319" height="180" alt="在线访谈" />
+                </a>
+              </div>
+              <div class="zxft-nr">
+                <h5>
+                  <a target="_blank" href="https://www.ningde.gov.cn/hdjl/zxft/202601/t20260122_2436596.htm"
+                    title="【在线访谈】合理规划“摊规点”，让城市文明与烟火气一起升腾">
+                    <span>本期访谈：【在线访谈】合理规划“摊规点”，让城市文明与烟火气一起升腾</span></a>
+                </h5>
+                <div class="clearflx">
+                  <p class="bf-pass">
+                    <span>时间：</span>
+                    2026年01月22日  星期四  15时00分
+                  </p>
+                  <p>
+                    <span>嘉宾：</span>
+                    宁德市城市管理局三级调研员徐木春
+                  </p>
+                  <p class="zy">
+                    <span>简介：</span>
+                    
+                    <a href="https://www.ningde.gov.cn/hdjl/zxft/202601/t20260122_2436596.htm" TARGET="_blank" title="查看更多">[查看更多]</a>
+                  </p>
+
+                </div>
+              </div>
+            
+          </div>
+          <ul class="xw-list-1">
+            
+              <li>
+                <span class="bf-pass">
+                  12-22
+                </span>
+                <i></i>
+                <a href="./gzcy/zxfts/202512/t20251222_2426800.htm" target="_blank" title="【文字访谈】规范设置促美观 安全责任记心间">【文字访谈】规范设置促美观 安全责任记心间</a>
+              </li>
+            
+              <li>
+                <span class="bf-pass">
+                  11-10
+                </span>
+                <i></i>
+                <a href="./gzcy/zxfts/202511/t20251111_2410913.htm" target="_blank" title="【文字访谈】推进文明执法，建设美丽宁德">【文字访谈】推进文明执法，建设美丽宁德</a>
+              </li>
+            
+              <li>
+                <span class="bf-pass">
+                  02-20
+                </span>
+                <i></i>
+                <a href="https://www.ningde.gov.cn/hdjl/zxft/202502/t20250218_2017348.htm" target="_blank" title="【访谈实录】用心用情提升中心城区路灯管护质效">【访谈实录】用心用情提升中心城区路灯管护质效</a>
+              </li>
+            
+          </ul>
+
+
+
+        </div>
+        <!--在线访谈end-->
+      </div>
+
+      <div class="w30 fr">
+
+        <!--机构概况-->
+        <div class="ldzc-box" role="viewlist" des="机构概况">
+
+          <div class="tab1 tab2 hd clearflx">
+            <ul class="fl clearflx new-tit">
+              <li class="on"><a href="./jggk/" target="_blank"
+                  title="机构概况">机构概况<em></em></a></li>
+            </ul>
+          </div>
+
+          <ul class="ldzc-ul clearflx">
+            <li><a href="./jggk/ldbz/" target="_blank" title="领导简介">
+                <span><img src="./images/20210930-ndcs-jgicon1.png" alt="领导简介" /></span>
+                <p>领导简介</p>
+              </a>
+            </li>
+            <li><a href="./jggk/zyzn/" target="_blank" title="主要职能">
+                <span><img src="./images/20210930-ndcs-jgicon2.png" alt="主要职能" /></span>
+                <p>主要职能</p>
+              </a>
+            </li>
+            <li><a href="./jggk/nsks/" target="_blank" title="内设机构">
+                <span><img src="./images/20210930-ndcs-jgicon3.png" alt="内设机构" /></span>
+                <p>内设机构</p>
+              </a>
+            </li>
+          </ul>
+
+        </div>
+        <!--机构概况end-->
+        <!--网上办事-->
+        <div class="tdt-box">
+          <a href="https://zwfw.fujian.gov.cn/person-todo/detail?userType=3&curStatus=dept&deptId=81A9B3E33C626FB9C08FFB60C628E41D&bsfwCount=29&xzjgCount=0"
+            target="_blank" title="网上办事">
+            <em></em>
+            <h4>网上办事</h4>
+            <em></em>
+          </a>
+        </div>
+        <!--网上办事end-->
+        <!--网上调查-->
+        <div class="ldzc-box clearflx" id="tabWsdc" role="viewlist" des="网上调查">
+          <div class="tab1 tab2 hd clearflx yj-hdjl-tab1">
+            <ul class="fl clearflx new-tit">
+              <li class="on">
+                <a href="./gzcy/wsdc/" target="_blank"
+                  title="网上调查">网上调查
+                  <em></em>
+                </a>
+              </li><i></i>
+              <li>
+                <a href="./gzcy/myzj/" target="_blank"
+                  title="民意征集">民意征集
+                  <em></em>
+                </a>
+              </li>
+            </ul>
+            <a class="gengduo" href="./gzcy/wsdc/" target="_blank" title="更多">更多></a>
+            <a class="gengduo" href="./gzcy/myzj/" target="_blank" title="更多">更多></a>
+          </div>
+
+          <div class="bd">
+            <ul class="xw-list-1 xw-list-11 yjzj-ul" ms-controller="wsdc">
+              <li ms-repeat="list" data-repeat-rendered="callRepeat" ms-if-loop="$index<5">
+                <em class="curr" ms-visible="isRuning(el.endTime)">进行中</em>
+                <em ms-visible="!isRuning(el.endTime)">已结束</em>
+                <a ms-visible="!el.outerUrl"
+                  ms-attr-href="'./gzcy/wsdc/detail.htm?id='+el.id" target="_blank"
+                  ms-attr-title="el.theme" ms-text="el.theme|html"></a>
+                <a ms-visible="el.outerUrl" ms-attr-href="el.outerUrl" ms-attr-title="el.theme" target="_blank"
+                  ms-text="el.theme | html"></a>
+              </li>
+            </ul>
+            <ul class="xw-list-1 xw-list-11 yjzj-ul" ms-controller="myzj">
+              <li ms-repeat="list" ms-if-loop="$index < 5">
+                <em class="curr" ms-if="isRuning(el.endDate)">征集中</em>
+                <em ms-if="!isRuning(el.endDate)">已结束</em>
+                <a ms-visible="!el.outerUrl" ms-attr-href="'./gzcy/myzj/detail.htm?id='+el.id"
+                  ms-text="el.title" ms-attr-title="el.title" target="_blank"></a>
+                <a ms-visible="el.outerUrl" ms-attr-href="el.outerUrl" ms-attr-title="el.title" target="_blank"
+                  ms-text="el.title | html"></a>
+              </li>
+            </ul>
+          </div>
+          <div class="clearflx">
+            <ul class="zxft-ul clearflx">
+              <li>
+                <a href="./gzcy/ldxx/" target="_blank"
+                  title="领导信箱">
+                  <span>
+                    <img src="./images/20210930-ndcs-jzxx.png" alt="领导信箱" />
+                  </span>
+                  <p>领导信箱</p>
+                </a>
+              </li>
+              <!-- <li>
+                    <a href="" target="_blank" title="">
+                      <span>
+                        <img src="./images/20210930-ndcs-xjcx.png" alt="" />
+                      </span>
+                      <p>信件查询</p>
+                    </a>
+                  </li> -->
+              <li>
+                <a href="https://www.ningde.gov.cn/uc/login/login?redirtUrl=https://csglj.ningde.gov.cn/uc/login/noseLogin?redirtUrl=https://csglj.ningde.gov.cn/gzcy/ldxx/wyxx.htm" target="_blank" title="我要写信">
+                  <span>
+                    <img src="./images/20210930-ndcs-wyxx.png" alt="我要写信" />
+                  </span>
+                  <p>我要写信</p>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!--网上调查end-->
+
+      </div>
+    </div>
+
+    <div class="clearflx">
+      <!--专题专栏轮播图-->
+      <div class="ztzl-box yj-ztzl-box" id="focusBox1" role="viewlist" des="专题专栏">
+        <a href="javascript:void(0)" class="xyjt1 prev">
+          <img src="./images/20210914-ndyl-left.png" alt="左" />
+        </a>
+        <a href="javascript:void(0)" class="xyjt2 next">
+          <img src="./images/20210914-ndyl-right.png" alt="右" />
+        </a>
+
+        <ul class="clearflx leftscroll">
+          
+            <li>
+              <a href="https://csglj.ningde.gov.cn/ztxx/xfxxjy/" target="_blank"
+                title="消防学习教育">
+                <img src="./ztxx/202603/W020260324424334454562.png" alt="消防学习教育" />
+              </a>
+            </li>
+          
+            <li>
+              <a href="https://csglj.ningde.gov.cn/ztxx/xxgc20jie3zqh/" target="_blank"
+                title="学习贯彻党的二十届三中全会精神">
+                <img src="./ztxx/202408/W020240805378402713223.png" alt="学习贯彻党的二十届三中全会精神" />
+              </a>
+            </li>
+          
+            <li>
+              <a href="https://csglj.ningde.gov.cn/ztxx/djxxjy" target="_blank"
+                title="党纪学习教育">
+                <img src="./ztxx/202407/W020240709332875380536.jpg" alt="党纪学习教育" />
+              </a>
+            </li>
+          
+            <li>
+              <a href="http://csglj.ningde.gov.cn/zwgk/ywzt/dqtgd/" target="_blank"
+                title="东侨经济技术开发区“摊规点”">
+                <img src="./ztxx/202310/W020231027665102160431.png" alt="东侨经济技术开发区“摊规点”" />
+              </a>
+            </li>
+          
+            <li>
+              <a href="http://csglj.ningde.gov.cn/ztxx/xxgc20da/" target="_blank"
+                title="学习贯彻党的二十大精神">
+                <img src="./ztxx/202309/W020230926629604497654.png" alt="学习贯彻党的二十大精神" />
+              </a>
+            </li>
+          
+            <li>
+              <a href="http://csglj.ningde.gov.cn/ztxx/dsjyzl/" target="_blank"
+                title="党史教育专栏">
+                <img src="./ztxx/202112/W020211206665021726325.png" alt="党史教育专栏" />
+              </a>
+            </li>
+          
+            <li>
+              <a href="http://csglj.ningde.gov.cn/ztxx/xxgcxjp/" target="_blank"
+                title="学习贯彻习近平新时代中国特色社会主义思想">
+                <img src="./ztxx/202112/W020211206665018038968.png" alt="学习贯彻习近平新时代中国特色社会主义思想" />
+              </a>
+            </li>
+          
+            <li>
+              <a href="http://csglj.ningde.gov.cn/ztxx/xxjl/" target="_blank"
+                title="学习交流">
+                <img src="./ztxx/202112/W020211206665014358710.jpg" alt="学习交流" />
+              </a>
+            </li>
+          
+            <li>
+              <a href="http://csglj.ningde.gov.cn/ztxx/xxzl/" target="_blank"
+                title="学习资料">
+                <img src="./ztxx/202112/W020211206665009606399.jpg" alt="学习资料" />
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+      <!--专题专栏轮播图end-->
+    </div>
+
+  </div>
+  <!--底部嵌套 begin-->
+  <!-- 底部嵌套 -->
+<div id="footer_2021">
+    <div class="pho-foot_2021" role="navigation" des="网站链接">
+      <div class="xzk_2021" ms-controller="tabYqlj_mobile">
+        <ul>
+          <li ms-click="$tog2(1)" ms-class="curr:curr===1">
+            <p>省级以上住建系统网站</p>
+            <div class="mark_2021" style="display: none" id="yqlj_mobile_1">
+              <div class="dialog_2021">
+                <ul>
+                  
+                    <li><a href="http://www.mohurd.gov.cn/" target="_blank" title="中华人民共和国住房和城乡建设部">中华人民共和国住房和城...</a></li>
+                  
+                    <li><a href="http://zjt.fujian.gov.cn/" target="_blank" title="福建省住房和城乡建设厅">福建省住房和城乡建设厅</a></li>
+                  
+                </ul>
+              </div>
+            </div>
+          </li>
+          
+          <li ms-click="$tog2(2)" ms-class="curr:curr===2">
+            <p>市政府及部门网站</p>
+            <div class="mark_2021" style="display: none" id="yqlj_mobile_2">
+              <div class="dialog_2021">
+                <ul>
+                  
+                    <li><a href="http://www.ningde.gov.cn/" target="_blank" title="宁德市人民政府">宁德市人民政府</a></li>
+                  
+                    <li><a href="http://gaj.ningde.gov.cn/" target="_blank" title="宁德市公安局">宁德市公安局</a></li>
+                  
+                    <li><a href="http://zjj.ningde.gov.cn/" target="_blank" title="宁德市住房和城乡建设局">宁德市住房和城乡建设局</a></li>
+                  
+                    <li><a href="http://zrzyj.ningde.gov.cn/" target="_blank" title="宁德市自然资源局">宁德市自然资源局</a></li>
+                  
+                    <li><a href="http://scjd.ningde.gov.cn/" target="_blank" title="宁德市市场监督管理局">宁德市市场监督管理局</a></li>
+                  
+                    <li><a href="http://sthjj.ningde.gov.cn/" target="_blank" title="宁德市生态环境局">宁德市生态环境局</a></li>
+                  
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li ms-click="$tog2(3)" ms-class="curr:curr===3">
+            <p>市级城市管理系统网站</p>
+            <div class="mark_2021" style="display: none" id="yqlj_mobile_3">
+              <div class="dialog_2021">
+                <ul>
+                  
+                    <li><a href="http://zfj.fuzhou.gov.cn/" target="_blank" title="福州市城市管理委员会">福州市城市管理委员会</a></li>
+                  
+                    <li><a href="http://cg.xm.gov.cn/" target="_blank" title="厦门市城市管理行政执法局">厦门市城市管理行政执法局</a></li>
+                  
+                    <li><a href="http://cgj.zhangzhou.gov.cn/" target="_blank" title="漳州市城市管理局">漳州市城市管理局</a></li>
+                  
+                    <li><a href="http://csglj.quanzhou.gov.cn/" target="_blank" title="泉州市城市管理局">泉州市城市管理局</a></li>
+                  
+                    <li><a href="http://csglj.longyan.gov.cn/" target="_blank" title="龙岩市城市管理局">龙岩市城市管理局</a></li>
+                  
+                    <li><a href="http://csglj.np.gov.cn/" target="_blank" title="南平市城市管理局">南平市城市管理局</a></li>
+                  
+                </ul>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="yqlj_con_2021" role="navigation" des="网站链接">
+      <div class="w_1300_2021 rel_2021">
+        <div class="yqlj_tit1_2021" ms-controller="tabYqlj">
+          <ul>
+            <li ms-click="$tog2(1)">
+              <p>省级以上住建系统网站<em></em><i></i></p>
+              <div class="yqlj_con1_2021" ms-class="curr:curr===1" id="yqlj_1">
+                <ul>
+                  
+                    <li><a href="http://www.mohurd.gov.cn/" target="_blank" title="中华人民共和国住房和城乡建设部">中华人民共和国住房和城...</a></li>
+                  
+                    <li><a href="http://zjt.fujian.gov.cn/" target="_blank" title="福建省住房和城乡建设厅">福建省住房和城乡建设厅</a></li>
+                  
+                </ul>
+              </div>
+            </li>
+            
+            <li ms-click="$tog2(2)">
+              <p>市政府及部门网站 <em></em><i></i></p>
+              <div class="yqlj_con1_2021" ms-class="curr:curr===2" id="yqlj_2">
+                <ul>
+                  
+                    <li><a href="http://www.ningde.gov.cn/" target="_blank" title="宁德市人民政府">宁德市人民政府</a></li>
+                  
+                    <li><a href="http://gaj.ningde.gov.cn/" target="_blank" title="宁德市公安局">宁德市公安局</a></li>
+                  
+                    <li><a href="http://zjj.ningde.gov.cn/" target="_blank" title="宁德市住房和城乡建设局">宁德市住房和城乡建设局</a></li>
+                  
+                    <li><a href="http://zrzyj.ningde.gov.cn/" target="_blank" title="宁德市自然资源局">宁德市自然资源局</a></li>
+                  
+                    <li><a href="http://scjd.ningde.gov.cn/" target="_blank" title="宁德市市场监督管理局">宁德市市场监督管理局</a></li>
+                  
+                    <li><a href="http://sthjj.ningde.gov.cn/" target="_blank" title="宁德市生态环境局">宁德市生态环境局</a></li>
+                  
+                </ul>
+              </div>
+            </li>
+            <li ms-click="$tog2(3)">
+              <p>市级城市管理系统网站<em></em><i></i></p>
+              <div class="yqlj_con1_2021" ms-class="curr:curr===3" id="yqlj_3">
+                <ul>
+                  
+                    <li><a href="http://zfj.fuzhou.gov.cn/" target="_blank" title="福州市城市管理委员会">福州市城市管理委员会</a></li>
+                  
+                    <li><a href="http://cg.xm.gov.cn/" target="_blank" title="厦门市城市管理行政执法局">厦门市城市管理行政执法局</a></li>
+                  
+                    <li><a href="http://cgj.zhangzhou.gov.cn/" target="_blank" title="漳州市城市管理局">漳州市城市管理局</a></li>
+                  
+                    <li><a href="http://csglj.quanzhou.gov.cn/" target="_blank" title="泉州市城市管理局">泉州市城市管理局</a></li>
+                  
+                    <li><a href="http://csglj.longyan.gov.cn/" target="_blank" title="龙岩市城市管理局">龙岩市城市管理局</a></li>
+                  
+                    <li><a href="http://csglj.np.gov.cn/" target="_blank" title="南平市城市管理局">南平市城市管理局</a></li>
+                  
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+    <div class="bot_bg_2021" role="serve" des="底部信息">
+      <div class="w_1300_2021 twhite1_2021">
+        <div class="bot_l_2021">
+          <h3>
+            <a href="javascript:;" ms-click="setHome(window.location)" title="设为首页">设为首页</a>|
+            <a href="http://csglj.ningde.gov.cn/bzzx/zddt/" target="_blank" title="站点地图">站点地图</a> <em ms-if="!isFirefox">|</em>
+            <a href="http://csglj.ningde.gov.cn/ysbh/" target="_blank" title="隐私保护">隐私保护</a> <em ms-if="!isFirefox">|</em>
+            <a href="javascript:;" ms-click="addFavorite()" ms-if="!isFirefox" title="收藏本站">收藏本站</a>
+          </h3>
+          <p>
+            <span>网站标识码：3509000054 </span>
+              <span>
+                <a href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=35099902000067" target="_blank" title="闽公网安备：35099902000067号">
+                  <img src="/images/20210903-ndzrzy-guohui.png" alt="闽公网安备：35099902000067号" />闽公网安备：35099902000067号
+                </a>
+              </span>
+              <span>
+                <a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank" title="闽ICP备19023736号">
+                闽ICP备19023736号
+                </a>
+              </span>
+          </p>
+          <p><span>地址：福建省宁德市东侨经济技术开发区闽东东路1号市环保大楼8-10楼</span></p>
+        <p>
+          <span>电话：0593-2916006 </span><span>E-mail：n2953016@163.com</span>
+        </p>
+        </div>
+        <span class="dzjg_2021">
+          <script type="text/javascript">
+            document.write(unescape("%3Cspan id='_ideConac' %3E%3C/span%3E%3Cscript src='https://dcs.conac.cn/js/14/222/0000/60940858/CA142220000609408580001.js' type='text/javascript'%3E%3C/script%3E"));</script>
+          <script id="_jiucuo_" sitecode='3509000054' src='https://zfwzgl.www.gov.cn/exposure/jiucuo.js'></script>
+        </span>
+        <div class="bot_r_2021">
+          
+          <ul>
+            <li>
+              <a href="javascript:;">
+                <i class="iconfont">
+                  <img src="/images/20210930-ndcs-ewm1.png" alt="官方微信" />
+                </i>
+                宁德城市管理局<br>官方微信</a>
+              <div class="codebox_2021"> 
+                <img src="/images/20210930-ndcs-ewm11.png" alt="官方微信" /> </div>
+            </li>
+            <li><a href="https://www.fujian.gov.cn/bsfw/mztapp/" target="_blank"><i class="iconfont"><img src="/images/20210930-ndcs-ewm2.png" alt="闽政通APP" /></i>闽政通APP</a>
+              <div class="codebox_2021"> <img src="/images/202010mzt_qrcode1.png" alt="闽政通APP" /> </div>
+            </li>
+          
+          </ul>
+          <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+    <div class="fot-bot_2021">
+      <div class="w_1300_2021">
+        <p><span>主办：福建省宁德市城市管理局</span></p>
+      </div>
+    </div>
+  </div>
+  <!-- 底部嵌套end -->
+  <!--底部嵌套 end-->
+  <!-- 全站嵌套 -->
+  <script>
+  var SiteInfo = {
+     was4doc: 275126
+      , itp4apply:1494
+      , itpSiteId:701
+      , itp4poll: 1964
+      , itp4advice: 2152
+      , searchId : 203686     //默认的文档检索频道的ID
+      , defaultPgTemp : "pgBar_nd.html"   //本站点默认的分页模板名
+      , defaultPgTempMobile : "pgBar_nd.html"   //本站点默认的分页模板名，移动端
+      , siteMsgType: "govSite"  //非政府网站提醒规则   currSite 非本站提醒 、govSite  非政府网站提醒
+      , siteWriteList: []     //站点白名单
+      , initWindowRoot : false   //引入model.js时，不自动生成windowRoot
+      , initPageview : true   //执行windowRoot 时自动执行pageview
+      , defaultHotWords : '垃圾分类'  //通过嵌套栏目的替换内容，热搜词，设置默认的热搜词
+      , registerUrl : "https://iam.e-govt.cn:8901/register?appId=a4974648-7a50-452b-8657-4ee62731f7f6&redirect_uri="
+      , loginUrl : "/uc/login/login?redirtUrl=https://csglj.ningde.gov.cn/uc/login/noseLogin?redirtUrl="
+      , logoutUrl : "/uc/login/logout?redirtUrl="
+      , redirtUrl : ""
+      , homeUrl : "http://www.ningde.gov.cn/uc/users/index"
+      ,levelSiteId : 'ff8080817d17c500017d2689e1150032'  //智能搜索站点编号
+        , mapkey : "749cfe5691ec87ad26e4080c1238d569"
+  };
+</script>
+<script src="https://www.ningde.gov.cn/images/barrier.free.min.js" id="barrierFree" sn="4089082864277581"></script>
+<script src='https://www.ningde.gov.cn/images/model.min.js'></script>
+<script src='https://www.ningde.gov.cn/images/ndsbm_21bz.js'></script>
+  <!-- 全站嵌套 end-->
+  <script>
+    require(['shangjizhuanzai', "tools", "jquery", 'list2.advice', 'list2.poll'], function (shangjizhuanzai, tools, $, adviceList, pollList) {
+
+      //国务院信息
+      shangjizhuanzai({
+        gwyxx: true,
+        gwyxxNum: 8,
+        szfxx: true
+      });
+      //选项卡切换
+      $('#tabGzdt').slide({
+        titCell: ".hd li",
+        mainCell: ".bd",
+        effect: "leftLoop",
+        titOnClassName: "on",
+        autoPlay: "false",
+        //更多切换
+        startFun: function (i) {
+          $("#tabGzdt .gengduo").eq(i).show().siblings("#tabGzdt .gengduo").hide();
+        }
+      });
+      $('#tabZxgg').slide({
+        titCell: ".hd li",
+        mainCell: ".bd",
+        effect: "leftLoop",
+        titOnClassName: "on"
+      });
+
+      //网上调查tab栏
+      pollList({
+        objId: 'wsdc',
+        listArgs: {
+          siteId: SiteInfo.itpSiteId,
+          chnlIds: SiteInfo.itp4poll,
+          order: "-startTime"
+        },
+        callRepeat: function () {
+          $('#tabWsdc').slide({
+            titCell: ".hd li",
+            mainCell: ".bd",
+            effect: "left",
+            titOnClassName: "on",
+            startFun: function (i) {
+              $("#tabWsdc .gengduo").eq(i).show().siblings("#tabWsdc .gengduo").hide();
+            }
+          });
+        },
+        listApi: {
+          url: '/staticitp/csglj/wsdc/1.json',
+          type: 'get'
+        },
+        vmArgsExt: {
+          isRuning: function (time) {
+            return tools.getStatus(time);
+          }
+        }
+      });
+      adviceList({
+        objId: "myzj",
+        listArgs: {
+          chnlIds: SiteInfo.itp4advice,
+          order: "-startDate"
+        },
+        vmArgsExt: {
+          isRuning: function (time) {
+            return tools.getStatus(time);
+          }
+        },
+        listApi: {
+          type: 'get',
+          url: '/staticitp/csglj/myzj/1.json'
+        }
+      });
+      //  首页轮播图
+      var $slideBox = $("#slideBox");
+      var slideImg = $("#slideBox .bd li img");
+      var slideLi = $("#slideBox .bd li");
+      var _w = $('.lbt').width();
+      var slideH = 344 * _w / 613;
+      $slideBox.height(slideH);
+      slideImg.height(slideH);
+      slideLi.height(slideH);
+      $("#slideBox").slide({
+        titCell: ".hd ul",
+        mainCell: ".bd ul",
+        autoPage: "<li></li>",
+        prevCell: ".prev",
+        nextCell: ".next",
+        effect: "leftLoop",
+        autoPlay: true,
+        vis: 1
+      })
+      //底部轮播图
+      var vis = 4, width = $(window).width();
+      if (width < 1001 && width > 749) { vis = 3; }
+      if (width < 750 && width > 419) { vis = 2; }
+      if (width < 420) { vis = 1; }
+
+      $("#focusBox1").slide({
+        mainCell: ".leftscroll",
+        effect: "leftLoop",
+        autoPlay: false,
+        autoPage: true,
+        scroll: 1,
+        vis: vis,
+        delayTime: 500,
+        trigger: "click"
+      });
+    });
+    setTimeout(function () {
+      tabWza("#tabGzdt");
+      tabWza("#tabZxgg");
+      tabWza("#tabWsdc");
+    }, 1000)
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,2304 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>淄博市教育局</title>
+<meta name='Maketime' content='2026-03-28 03:01:51'>
+
+<meta name="SiteName" content="淄博市教育局">
+<meta name="SiteDomain"  content="edu.zibo.gov.cn">
+<meta name="SiteIDCode"  content="3703000049">
+<meta name="siteurl"  content="http://edu.zibo.gov.cn/index.html">
+<meta name="guild"    content="">
+<meta name="district"    content="">
+<meta name="sitecatalog"    content="">
+
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"><script language="javascript" src="/module/jslib/jquery/jquery.js"></script>
+<script language="javascript" src="/module/jslib/urite/urite.min.js"></script>
+
+<link href="/script/hanweb.css" type=text/css rel=stylesheet>
+<link href="/module/jslib/tag/css/infotag.css" type=text/css rel=stylesheet>
+<meta name='WebId' content='4'>
+
+    <meta http-equiv=X-UA-Compatible content=IE=EmulateIE8>
+    <meta name="renderer" content="webkit">
+    <link href="/images/997/style.css" type="text/css" rel="stylesheet">
+    <link href="/images/997/index.css" type="text/css" rel="stylesheet">
+    <!--
+<SCRIPT>
+function goPAGE() {
+	if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+		window.location.href="http://m.zbedu.gov.cn/";
+}
+	else {
+			}
+}
+goPAGE();
+</script>
+-->
+    <script src="/images/997/index.js" type="text/javascript"></script>
+    <script src="/images/997/quehuan.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/images/997/lrtk.js"></script>
+    <script src="/images/997/until.js"></script>
+    <script>
+        function addEvent(obj, evtType, func, cap) {
+
+            cap = cap || false;
+
+            if (obj.addEventListener) {
+
+                obj.addEventListener(evtType, func, cap);
+
+                return true;
+
+            } else if (obj.attachEvent) {
+
+                if (cap) {
+
+                    obj.setCapture();
+
+                    return true;
+
+                } else {
+
+                    return obj.attachEvent("on" + evtType, func);
+
+                }
+
+            } else {
+
+                return false;
+
+            }
+
+        }
+
+        function getPageScroll() {
+
+            var xScroll, yScroll;
+
+            if (self.pageXOffset) {
+
+                xScroll = self.pageXOffset;
+
+            } else if (document.documentElement && document.documentElement.scrollLeft) {
+
+                xScroll = document.documentElement.scrollLeft;
+
+            } else if (document.body) {
+
+                xScroll = document.body.scrollLeft;
+
+            }
+
+            if (self.pageYOffset) {
+
+                yScroll = self.pageYOffset;
+
+            } else if (document.documentElement && document.documentElement.scrollTop) {
+
+                yScroll = document.documentElement.scrollTop;
+
+            } else if (document.body) {
+
+                yScroll = document.body.scrollTop;
+
+            }
+
+            arrayPageScroll = new Array(xScroll, yScroll);
+
+            return arrayPageScroll;
+
+        }
+
+        function GetPageSize() {
+
+            var xScroll, yScroll;
+
+            if (window.innerHeight && window.scrollMaxY) {
+
+                xScroll = document.body.scrollWidth;
+
+                yScroll = window.innerHeight + window.scrollMaxY;
+
+            } else if (document.body.scrollHeight > document.body.offsetHeight) {
+
+                xScroll = document.body.scrollWidth;
+
+                yScroll = document.body.scrollHeight;
+
+            } else {
+
+                xScroll = document.body.offsetWidth;
+
+                yScroll = document.body.offsetHeight;
+
+            }
+
+            var windowWidth, windowHeight;
+
+            if (self.innerHeight) {
+
+                windowWidth = self.innerWidth;
+
+                windowHeight = self.innerHeight;
+
+            } else if (document.documentElement && document.documentElement.clientHeight) {
+
+                windowWidth = document.documentElement.clientWidth;
+
+                windowHeight = document.documentElement.clientHeight;
+
+            } else if (document.body) {
+
+                windowWidth = document.body.clientWidth;
+
+                windowHeight = document.body.clientHeight;
+
+            }
+
+            if (yScroll < windowHeight) {
+
+                pageHeight = windowHeight;
+
+            } else {
+
+                pageHeight = yScroll;
+
+            }
+
+            if (xScroll < windowWidth) {
+
+                pageWidth = windowWidth;
+
+            } else {
+
+                pageWidth = xScroll;
+
+            }
+
+            arrayPageSize = new Array(pageWidth, pageHeight, windowWidth, windowHeight)
+
+            return arrayPageSize;
+
+        }
+
+
+
+        var AdMoveConfig = new Object();
+
+        AdMoveConfig.IsInitialized = false;
+
+        AdMoveConfig.ScrollX = 0;
+
+        AdMoveConfig.ScrollY = 0;
+
+        AdMoveConfig.MoveWidth = 0;
+
+        AdMoveConfig.MoveHeight = 0;
+
+        AdMoveConfig.Resize = function () {
+
+            var winsize = GetPageSize();
+
+            AdMoveConfig.MoveWidth = winsize[2];
+
+            AdMoveConfig.MoveHeight = winsize[3];
+
+            AdMoveConfig.Scroll();
+
+        }
+
+        AdMoveConfig.Scroll = function () {
+
+            var winscroll = getPageScroll();
+
+            AdMoveConfig.ScrollX = winscroll[0];
+
+            AdMoveConfig.ScrollY = winscroll[1];
+
+        }
+
+        addEvent(window, "resize", AdMoveConfig.Resize);
+
+        addEvent(window, "scroll", AdMoveConfig.Scroll);
+
+        function AdMove(id) {
+
+            if (!AdMoveConfig.IsInitialized) {
+
+                AdMoveConfig.Resize();
+
+                AdMoveConfig.IsInitialized = true;
+
+            }
+
+            var obj = document.getElementById(id);
+
+            obj.style.position = "absolute";
+
+            var W = AdMoveConfig.MoveWidth - obj.offsetWidth;
+
+            var H = AdMoveConfig.MoveHeight - obj.offsetHeight;
+
+            var x = W * Math.random(), y = H * Math.random();
+
+            var rad = (Math.random() + 1) * Math.PI / 6;
+
+            var kx = Math.sin(rad), ky = Math.cos(rad);
+
+            var dirx = (Math.random() < 0.5 ? 1 : -1), diry = (Math.random() < 0.5 ? 1 : -1);
+
+            var step = 1;
+
+            var interval;
+
+            this.SetLocation = function (vx, vy) { x = vx; y = vy; }
+
+            this.SetDirection = function (vx, vy) { dirx = vx; diry = vy; }
+
+            obj.CustomMethod = function () {
+
+                obj.style.left = (x + AdMoveConfig.ScrollX) + "px";
+
+                obj.style.top = (y + AdMoveConfig.ScrollY) + "px";
+
+                rad = (Math.random() + 1) * Math.PI / 6;
+
+                W = AdMoveConfig.MoveWidth - obj.offsetWidth;
+
+                H = AdMoveConfig.MoveHeight - obj.offsetHeight;
+
+                x = x + step * kx * dirx;
+
+                if (x < 0) { dirx = 1; x = 0; kx = Math.sin(rad); ky = Math.cos(rad); }
+
+                if (x > W) { dirx = -1; x = W; kx = Math.sin(rad); ky = Math.cos(rad); }
+
+                y = y + step * ky * diry;
+
+                if (y < 0) { diry = 1; y = 0; kx = Math.sin(rad); ky = Math.cos(rad); }
+
+                if (y > H) { diry = -1; y = H; kx = Math.sin(rad); ky = Math.cos(rad); }
+
+            }
+
+            this.Run = function () {
+
+                var delay = 10;
+
+                interval = setInterval(obj.CustomMethod, delay);
+
+                obj.onmouseover = function () { clearInterval(interval); }
+
+                obj.onmouseout = function () { interval = setInterval(obj.CustomMethod, delay); }
+
+            }
+
+        }
+
+
+
+
+        function closead() {
+
+            var obj = document.getElementById("floatAdd");
+
+            obj.style.visibility = "hidden";
+
+        }
+
+    </script>
+    <style>
+        .tab-div4 ul li {
+            margin-left: 0px;
+        }
+    </style>
+</head>
+
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0"  id="page_type" alt="综合页" style="background: none;">
+<div id="barrierfree_container">
+    <div style="min-width: 1011px;width: 100%;z-index: -1;background: url(/images/997/bg_top.jpg) #f6f6f6 no-repeat top center;position: absolute;height: 542px;" readlabel="" title="淄博市教育局"></div>
+    <script src="https://www.zibo.gov.cn/script/0/2106251957235303.js"></script>
+    <script src="https://www.zibo.gov.cn/script/0/2211302238266468.js"></script>
+    <!-- Save for Web Slices (zb.jpg - Slices: 01, 02, 03) -->
+    <style>
+	*{ margin:0; paddding:0; font-family:"微软雅黑";}
+	.cloud{position:fixed; z-index:99999;top:0px; left:0px;  }
+	.cloud_close{ width:25px; height:25px; position:absolute; top:0px; right:0px; font-size:20px; line-height:25px; color:#fff; text-align:center; cursor:pointer;}
+	.cloud_close:hover{ background-color:#000;}
+	</style>
+	
+	<script>
+	$(document).ready(function(){
+	  /*初始设置*/
+	  var f_speed = 30; /*漂浮速度*/
+	  var fi_top=50,fi_left=20; /*初始位置：上、左*/
+	  var $f_cloud = $("#cloud"); /*选定漂浮元素*/
+	  
+	  var f_top=0,f_left=0;
+	  var f_W = $(window).width()-$f_cloud.width();
+	  var f_H = $(window).height()-$f_cloud.height();
+	  function f_auto(){
+		if(fi_top>=0 && fi_top<f_H){
+		  fi_top++;
+		  f_top = 1*fi_top;
+		}else if(fi_top>=f_H && fi_top<2*f_H){
+		  fi_top++;
+		  f_top = 2*f_H-fi_top;
+		}else{
+		  fi_top=0;
+		  fi_top++;
+		  f_top = 1*fi_top;
+		}
+		if(fi_left>=0 && fi_left<f_W){
+		  fi_left++;
+		  f_left = 1*fi_left;
+		}else if(fi_left>=f_W && fi_left<2*f_W){
+		  fi_left++;
+		  f_left = 2*f_W-fi_left;
+		}else{
+		  fi_left=0;
+		  fi_left++;
+		  f_left = 1*fi_left;
+		}
+		$f_cloud.css({top:f_top,left:f_left});
+	  }
+	  var f_cloud = setInterval(f_auto,f_speed);
+	  f_auto();
+	  /*鼠标移入移出*/
+	  $f_cloud.hover(function(){
+		clearInterval(f_cloud);
+	  },function(){
+		f_cloud = setInterval(f_auto,f_speed);
+	  });
+	  /*自适应屏幕*/
+	  $(window).resize(function(){
+		f_W = $(window).width()-$f_cloud.width();
+		f_H = $(window).height()-$f_cloud.height();
+		f_auto();
+	  });
+	});
+	</script>
+    <script type="text/javascript">
+        //var ad1 = new AdMove("floatAdd");
+        //ad1.Run();
+    </script>
+    <div style="position: relative;width: 100%;z-index: -1;">
+        <div style="position: absolute;width: 100%;">
+            <div style="width: 1011px;height: 120px;margin: 0 auto;position: relative;">
+                <img class="red_guohui" style="position: absolute;top: 31px;width: 69px;left: 6px;z-index: 1;" alt="国徽" src="/picture/0/2212012018426162214.png">
+            </div>
+        </div>
+    </div>
+    <div class="head">
+        <table id="__01" width="1011" height="193" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+                <td width="719" height="144">
+                    <img src="/images/461/logo.png" alt="淄博市教育局">
+                </td>
+                <td>
+                    <table id="__01" width="292" height="144" border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td width="292" height="17"></td>
+                        </tr>
+                        <tr>
+                            <td width="292" height="38" align="right" style="font-size:12px;">
+                                <script src="/script/30/2207061003131990.js"></script>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="292" height="41" align="right">
+                                <div class="search">
+                                    <script src="/script/0/9e0db8defbc04c9b817e60e9c0748558.js"></script>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="292" height="48"></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" width="1011" height="49" style="background:url(/images/997/zb_01_02.jpg)">
+                    <div class="nav" ergodic="navigation">
+                        <ul>
+                            <script src="/script/0/686045e8991a45d38de6b7a13ded7303.js"></script>
+                        </ul>
+                    </div>
+                </td>
+        </table>
+    </div>
+    <div class="bigdiv">
+
+
+
+
+        <div class="main" ergodic="view">
+            <table id="__01" width="1011" height="1472" border="0" cellpadding="0" cellspacing="0" style="margin:auto;">
+                <tr>
+                    <td width="1011" height="22"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <table id="__01" width="1011" height="344" border="0" cellpadding="0" cellspacing="0"
+                            bgcolor="#FFFFFF">
+                            <tr>
+                                <td width="11" height="344">
+                                </td>
+                                <td>
+                                    <table id="__01" width="368" height="344" border="0" cellpadding="0"
+                                        cellspacing="0">
+                                        <tr>
+                                            <td width="368" height="30">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td width="368" height="298">
+                                                
+<style type="text/css">
+/* qqshop focus */
+*{ padding:0; list-style:none; border:none;}
+#focus {width:368px; height:298px; overflow:hidden; position:relative;margin:0 auto;}
+#focus ul {height:860px; position:absolute;margin:0;padding:0;}
+#focus ul li {float:left; width:368px; height:298px; overflow:hidden; position:relative; background:#000;}
+#focus ul li div.photo_bt {position:absolute; bottom:-2px; left:12px; font-size:15px; color:#ffffff; z-index:1; line-height:40px;}
+#focus .btnBg {position:absolute; width:368px; height:36px; left:0; bottom:0; background:#000;}
+#focus .btn {position:absolute; width:368px; height:11px; padding:6px 0; right:10px; bottom:15px; text-align:right;}
+#focus .btn span {display:inline-block; _display:inline; _zoom:1; width:10px; height:10px; _font-size:0; margin-left:5px; cursor:pointer; background:#c9c9c9;border-radius:10px;}
+#focus .btn span.on {background:#ffc600;}
+</style>
+<script type="text/javascript">
+$(function() {
+	var sWidth = $("#focus").width(); //获取焦点图的宽度（显示面积）
+	var len = $("#focus ul li").length; //获取焦点图个数
+	var index = 0;
+	var picTimer;
+	
+	//以下代码添加数字按钮和按钮后的半透明条，还有上一页、下一页两个按钮
+	var btn = "<div class='btnBg'></div><div class='btn'>";
+	for(var i=0; i < len; i++) {
+		btn += "<span readexclude></span>";
+	}
+	btn += "</div><div class='preNext pre'></div><div class='preNext next'></div>";
+	$("#focus").append(btn);
+	$("#focus .btnBg").css("opacity",0.5);
+
+	//为小按钮添加鼠标滑入事件，以显示相应的内容
+	$("#focus .btn span").css("opacity",0.4).mouseenter(function() {
+		index = $("#focus .btn span").index(this);
+		showPics(index);
+	}).eq(0).trigger("mouseenter");
+
+	//上一页、下一页按钮透明度处理
+	$("#focus .preNext").css("opacity",0.2).hover(function() {
+		$(this).stop(true,false).animate({"opacity":"0.5"},300);
+	},function() {
+		$(this).stop(true,false).animate({"opacity":"0.2"},300);
+	});
+
+	//上一页按钮
+	$("#focus .pre").click(function() {
+		index -= 1;
+		if(index == -1) {index = len - 1;}
+		showPics(index);
+	});
+
+	//下一页按钮
+	$("#focus .next").click(function() {
+		index += 1;
+		if(index == len) {index = 0;}
+		showPics(index);
+	});
+
+	//本例为左右滚动，即所有li元素都是在同一排向左浮动，所以这里需要计算出外围ul元素的宽度
+	$("#focus ul").css("width",sWidth * (len));
+	
+	//鼠标滑上焦点图时停止自动播放，滑出时开始自动播放
+	$("#focus").hover(function() {
+		clearInterval(picTimer);
+	},function() {
+		picTimer = setInterval(function() {
+			showPics(index);
+			index++;
+			if(index == len) {index = 0;}
+		},4000); //此4000代表自动播放的间隔，单位：毫秒
+	}).trigger("mouseleave");
+	
+	//显示图片函数，根据接收的index值显示相应的内容
+	function showPics(index) { //普通切换
+		var nowLeft = -index*sWidth; //根据index值计算ul元素的left值
+		$("#focus ul").stop(true,false).animate({"left":nowLeft},300); //通过animate()调整ul元素滚动到计算出的position
+		$("#focus .btn span").removeClass("on").eq(index).addClass("on"); //为当前的按钮切换到选中的效果
+		$("#focus .btn span").stop(true,false).animate({"opacity":"0.4"},300).eq(index).stop(true,false).animate({"opacity":"1"},300); //为当前的按钮切换到选中的效果
+	}
+});
+
+</script>
+<div id="focus">
+<ul>			
+
+<li style="position:relative">
+	<a href="/art/2026/3/18/art_20414_2992883.html" target="_blank" title="凝心铸魂守初心 赋能育人启新程——2026年淄博市教育系统宣传和思想政治工作会议召开" >
+		 
+		
+		<img src="/picture/0/s_5f18c7f46f994591bc05b9caeddf7093.jpg" alt="凝心铸魂守初心 赋能育人启新程——2026年淄博市教育系统宣传和思想政治工作会议召开" width="368" height="298"/>
+	</a> 
+	<div class="photo_bt">
+		<a href="/art/2026/3/18/art_20414_2992883.html" target="_blank" title="凝心铸魂守初心 赋能育人启新程——2026年淄博市教育系统宣传和思想政治工作会议召开" style="color:#ffffff; font-size:15px; font-family:'微软雅黑';">凝心铸魂守初心 赋能育人启新程—...</a>
+	</div>
+</li>
+
+<li style="position:relative">
+	<a href="/art/2026/3/12/art_20414_2990765.html" target="_blank" title="我市举办全市职业教育深化教学关键要素改革专题讲座" >
+		 
+		
+		<img src="/picture/0/s_769ffd4296774ec5ae00a65fc52b9614.png" alt="我市举办全市职业教育深化教学关键要素改革专题讲座" width="368" height="298"/>
+	</a> 
+	<div class="photo_bt">
+		<a href="/art/2026/3/12/art_20414_2990765.html" target="_blank" title="我市举办全市职业教育深化教学关键要素改革专题讲座" style="color:#ffffff; font-size:15px; font-family:'微软雅黑';">我市举办全市职业教育深化教学关键...</a>
+	</div>
+</li>
+
+<li style="position:relative">
+	<a href="/art/2026/2/12/art_20414_2987500.html" target="_blank" title="淄博教育督导工作获奖案例取得新突破" >
+		 
+		
+		<img src="/picture/0/s_929ff0aae64c4632943aee65f8d23a43.png" alt="淄博教育督导工作获奖案例取得新突破" width="368" height="298"/>
+	</a> 
+	<div class="photo_bt">
+		<a href="/art/2026/2/12/art_20414_2987500.html" target="_blank" title="淄博教育督导工作获奖案例取得新突破" style="color:#ffffff; font-size:15px; font-family:'微软雅黑';">淄博教育督导工作获奖案例取得新突...</a>
+	</div>
+</li>
+
+<li style="position:relative">
+	<a href="/art/2026/1/30/art_20414_2987068.html" target="_blank" title="全市教育领域全面从严治党暨思想政治工作会议召开" >
+		 
+		
+		<img src="/picture/0/s_fb76c54033eb4ab59b23c8ebe5da0474.jpg" alt="全市教育领域全面从严治党暨思想政治工作会议召开" width="368" height="298"/>
+	</a> 
+	<div class="photo_bt">
+		<a href="/art/2026/1/30/art_20414_2987068.html" target="_blank" title="全市教育领域全面从严治党暨思想政治工作会议召开" style="color:#ffffff; font-size:15px; font-family:'微软雅黑';">全市教育领域全面从严治党暨思想政...</a>
+	</div>
+</li>
+
+<li style="position:relative">
+	<a href="/art/2026/2/6/art_20414_2986506.html" target="_blank" title="新春潮动 聚力攻坚——淄博市聚焦整建制实现义务教育优质均衡发展开展系列活动" >
+		 
+		
+		<img src="/picture/0/s_e84b07acce194e549680451525b3a1e9.png" alt="新春潮动 聚力攻坚——淄博市聚焦整建制实现义务教育优质均衡发展开展系列活动" width="368" height="298"/>
+	</a> 
+	<div class="photo_bt">
+		<a href="/art/2026/2/6/art_20414_2986506.html" target="_blank" title="新春潮动 聚力攻坚——淄博市聚焦整建制实现义务教育优质均衡发展开展系列活动" style="color:#ffffff; font-size:15px; font-family:'微软雅黑';">新春潮动 聚力攻坚——淄博市聚焦...</a>
+	</div>
+</li>
+
+</ul>
+</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td width="351" height="16">
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td width="11" height="344"></td>
+
+                                <td width="373" height="344">
+
+                                    <table id="__01" width="373" height="344" border="0" cellpadding="0"
+                                        cellspacing="0">
+                                        <tr>
+                                            <td valign="top">
+                                                <div class="tab-div">
+                                                    <ul>
+                                                        <li class="tb-on" id="tb1" onmouseover="setTab('tb',1,4)">
+                                                            <div><a style="font-size:15PX; font-weight:bolder; " href="/col/col3531/index.html" target="_blank"  class="white">工作动态</a></div>
+                                                        </li>
+                                                        <li class="tb-off" id="tb2" onmouseover="setTab('tb',2,4)">
+                                                            <div><a style="font-size:15PX; font-weight:bolder;" href="/col/col224/index.html" target="_blank" class="white">媒体聚焦</a></div>
+                                                        </li>
+                                                        <li class="tb-off" id="tb3" onmouseover="setTab('tb',3,4)">
+                                                            <div><a style="font-size:15PX; font-weight:bolder;" href="/col/col3533/index.html" target="_blank"  class="white">区县采风</a></div>
+                                                        </li>
+                                                        <li class="tb-off" id="tb4" onmouseover="setTab('tb',4,4)">
+                                                            <div><a style="font-size:15PX; font-weight:bolder;" href="/col/col225/index.html" target="_blank"  class="white">基层传真</a></div>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="tab-div-more02" id="more_tb_1"></div>
+                                                    <div class="tab-div-more02" id="more_tb_2" style="display:none">
+                                                    </div>
+                                                    <div class="tab-div-more02" id="more_tb_3" style="display:none">
+                                                    </div>
+                                                    <div class="tab-div-more02" id="more_tb_4" style="display:none">
+                                                    </div>
+
+                                                </div>
+
+
+
+                                                <div class="tab-list" id="con_tb_1">
+                                                    <table id="__01" width="373" height="281" border="0" cellpadding="0"
+                                                        cellspacing="0">
+                                                        <tr>
+                                                            <td width="373" height="94"
+                                                                background="/images/997/zb_02_02_03_01_01.jpg" valign="top">
+                                                                <style type="text/css">
+.aa a:hover{ color:red;}
+</style>
+<table width='100%' cellspacing='0' cellpadding='0' border='0'>
+<tr>
+<td style=''><div class="aa"><a style='cursor:hand' href='/art/2026/3/26/art_3531_2993078.html' class='bt_link' title='立德树人担使命 述职评议促提升——2025年度局属学校团委书记述职评议会召开' target=_blank><p style='line-height:33px; color:#da0300;font-weight:bold; font-size:14px;'>立德树人担使命 述职评议促提升——2025年度...</p><p style='line-height:24px; font-size:12px;text-indent:2em; width:358px;'>为深入学习贯彻习近平总书记关于青年工作的重要思想，进一步加强局属学校共青团组织建设，提升团...<font style="color:#ed4400;"> 详情</font></p></a></div></td>
+</tr></table>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td width="373" height="187" valign="top">
+                                                                <style type="text/css">
+.aa a:hover{ color:red;}
+</style>
+<table width='100%' cellspacing='0' cellpadding='0' border='0'>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="2"></td>
+<td align="left"  class="aa"><a href='/art/2026/3/25/art_3531_2992885.html' class='bt_link' title='春暖花开日 毽舞正当时——2026年市直教育系统第十届女教职工毽球比赛圆满结束03月25日' target=_blank  style="line-height:26px; "><span>春暖花开日 毽舞正当时——2026年市直教育系统第...</span>
+</a></td>
+<td width="45" align="center" class="bt_time" style="line-height:26px; color:#707070;"><span readexclude>03-25</span></td><td width="13"></td></tr></table></td></tr>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="2"></td>
+<td align="left"  class="aa"><a href='/art/2026/3/23/art_3531_2992405.html' class='bt_link' title='山东省中小学人工智能教育交流研讨活动成功举行03月23日' target=_blank  style="line-height:26px; "><span>山东省中小学人工智能教育交流研讨活动成功举行</span>
+</a></td>
+<td width="45" align="center" class="bt_time" style="line-height:26px; color:#707070;"><span readexclude>03-23</span></td><td width="13"></td></tr></table></td></tr>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="2"></td>
+<td align="left"  class="aa"><a href='/art/2026/3/18/art_3531_2991776.html' class='bt_link' title='凝心铸魂守初心 赋能育人启新程——2026年淄博市教育系统宣传和思想政治工作会议召开03月18日' target=_blank  style="line-height:26px; "><span>凝心铸魂守初心 赋能育人启新程——2026年淄博市...</span>
+</a></td>
+<td width="45" align="center" class="bt_time" style="line-height:26px; color:#707070;"><span readexclude>03-18</span></td><td width="13"></td></tr></table></td></tr>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="2"></td>
+<td align="left"  class="aa"><a href='/art/2026/3/13/art_3531_2991115.html' class='bt_link' title='市教育局启动部署树立和践行正确政绩观学习教育03月13日' target=_blank  style="line-height:26px; "><span>市教育局启动部署树立和践行正确政绩观学习教育</span>
+</a></td>
+<td width="45" align="center" class="bt_time" style="line-height:26px; color:#707070;"><span readexclude>03-13</span></td><td width="13"></td></tr></table></td></tr>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="2"></td>
+<td align="left"  class="aa"><a href='/art/2026/3/12/art_3531_2990764.html' class='bt_link' title='我市举办全市职业教育深化教学关键要素改革专题讲座03月12日' target=_blank  style="line-height:26px; "><span>我市举办全市职业教育深化教学关键要素改革专题讲座</span>
+</a></td>
+<td width="45" align="center" class="bt_time" style="line-height:26px; color:#707070;"><span readexclude>03-12</span></td><td width="13"></td></tr></table></td></tr>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="2"></td>
+<td align="left"  class="aa"><a href='/art/2026/3/9/art_3531_2989988.html' class='bt_link' title='我市案例入选全国“十四五”时期科技赋能教育典型案例03月09日' target=_blank  style="line-height:26px; "><span>我市案例入选全国“十四五”时期科技赋能教育典型案例</span>
+</a></td>
+<td width="45" align="center" class="bt_time" style="line-height:26px; color:#707070;"><span readexclude>03-09</span></td><td width="13"></td></tr></table></td></tr>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="2"></td>
+<td align="left"  class="aa"><a href='/art/2026/2/28/art_3531_2988303.html' class='bt_link' title='2026年全市教育工作会议召开02月28日' target=_blank  style="line-height:26px; "><span>2026年全市教育工作会议召开</span>
+</a></td>
+<td width="45" align="center" class="bt_time" style="line-height:26px; color:#707070;"><span readexclude>02-28</span></td><td width="13"></td></tr></table></td>
+</tr></table>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                                <div class="tab-list" id="con_tb_2" style="display:none">
+                                                    <table id="__01" width="373" height="281" border="0" cellpadding="0"
+                                                        cellspacing="0">
+                                                        <tr>
+                                                            <td width="373" height="94"
+                                                                background="/images/997/zb_02_02_03_01_01.jpg" valign="top">
+                                                                <table width='100%' cellspacing='0' cellpadding='0' border='0'>
+<tr>
+<td style=''><div class="aa"><a style='cursor:hand' href='/art/2026/3/24/art_224_2992748.html' class='bt_link' title='《德育报》：《立德树人筑根基，课后服务提质效》' target=_blank><p style='line-height:33px; color:#da0300;font-weight:bold; font-size:14px;'>《德育报》：《立德树人筑根基，课后服务提质效》</p><p style='line-height:24px; font-size:12px;text-indent:2em; width:358px;'>近日，《德育报》以《立德树人筑根基，课后服务提质效》为题，刊发了齐都花园小学创新构建特色课...<font style="color:#ed4400;"> 详情</font></p></a></div></td>
+</tr></table>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td width="373" height="187" valign="top">
+                                                                <table width='100%' cellspacing='0' cellpadding='0' border='0'>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="2" ></td><td align="left" class="aa"><a href='/art/2026/3/24/art_224_2992747.html' class='bt_link' title='《中国教育报》：为“科创苗”营造一方沃土03月24日' target=_blank  style="line-height:26px;">《中国教育报》：为“科创苗”营造一方沃土</a></td><td width="45" align="center" class="bt_time" style="line-height:26px; color:#767676;"><span readexclude>03-24</span></td><td width="13"></td></tr></table></td></tr>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="2" ></td><td align="left" class="aa"><a href='/art/2026/3/20/art_224_2992256.html' class='bt_link' title='《中国教育报》以《以教育科研为引擎 构建融合共育新生态》为题，刊发淄博市特教中心在特殊教育领域的创新探索与丰硕成果03月20日' target=_blank  style="line-height:26px;">《中国教育报》以《以教育科研为引擎 构建融合共育新...</a></td><td width="45" align="center" class="bt_time" style="line-height:26px; color:#767676;"><span readexclude>03-20</span></td><td width="13"></td></tr></table></td></tr>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="2" ></td><td align="left" class="aa"><a href='/art/2026/1/30/art_224_2983883.html' class='bt_link' title='山东省教育厅网站报道淄博高新区大中小学思政教育一体化工作01月30日' target=_blank  style="line-height:26px;">山东省教育厅网站报道淄博高新区大中小学思政教育一体...</a></td><td width="45" align="center" class="bt_time" style="line-height:26px; color:#767676;"><span readexclude>01-30</span></td><td width="13"></td></tr></table></td></tr>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="2" ></td><td align="left" class="aa"><a href='/art/2025/12/31/art_224_2978888.html' class='bt_link' title='高新区积极探索“以体育人”新路径12月31日' target=_blank  style="line-height:26px;">高新区积极探索“以体育人”新路径</a></td><td width="45" align="center" class="bt_time" style="line-height:26px; color:#767676;"><span readexclude>12-31</span></td><td width="13"></td></tr></table></td></tr>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="2" ></td><td align="left" class="aa"><a href='/art/2025/12/31/art_224_2978884.html' class='bt_link' title='全国高校思想政治工作网报道淄博高新区大中小学思政课一体化建设工作12月31日' target=_blank  style="line-height:26px;">全国高校思想政治工作网报道淄博高新区大中小学思政课...</a></td><td width="45" align="center" class="bt_time" style="line-height:26px; color:#767676;"><span readexclude>12-31</span></td><td width="13"></td></tr></table></td></tr>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="2" ></td><td align="left" class="aa"><a href='/art/2025/12/26/art_224_2978063.html' class='bt_link' title='《现代教育》以《齐风浩荡开桃李 古城新韵育栋梁》为题，刊发了介绍淄博市临淄区第三中学教育教学工作的文章12月26日' target=_blank  style="line-height:26px;">《现代教育》以《齐风浩荡开桃李 古城新韵育栋梁》为...</a></td><td width="45" align="center" class="bt_time" style="line-height:26px; color:#767676;"><span readexclude>12-26</span></td><td width="13"></td></tr></table></td></tr>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="2" ></td><td align="left" class="aa"><a href='/art/2025/12/25/art_224_2977844.html' class='bt_link' title='从“心”出发，用“爱”陪伴——临淄开放大学家庭教育指导师团队助力家长科学育儿12月25日' target=_blank  style="line-height:26px;">从“心”出发，用“爱”陪伴——临淄开放大学家庭教育...</a></td><td width="45" align="center" class="bt_time" style="line-height:26px; color:#767676;"><span readexclude>12-25</span></td><td width="13"></td></tr></table></td>
+</tr></table>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                                <div class="tab-list" id="con_tb_3" style="display:none">
+                                                    <table id="__01" width="373" height="281" border="0" cellpadding="0"
+                                                        cellspacing="0">
+                                                        <tr>
+                                                            <td width="373" height="94"
+                                                                background="/images/997/zb_02_02_03_01_01.jpg" valign="top">
+                                                                <table width='100%' cellspacing='0' cellpadding='0' border='0'>
+<tr>
+<td style=''><div class="aa"><a style='cursor:hand' href='/art/2026/3/25/art_3533_2992843.html' class='bt_link' title='临淄开放大学获评“山东省县级示范性基层开放大学”' target=_blank><p style='line-height:33px; color:#da0300;font-weight:bold; font-size:14px;'>临淄开放大学获评“山东省县级示范性基层开放大学...</p><p style='line-height:24px; font-size:12px;text-indent:2em; width:358px;'>春华秋实，弦歌不辍。近日，山东开放大学正式公布第二批示范性基层开放大学评选结果，临淄开放大...<font style="color:#ed4400;"> 详情</font></p></a></div></td>
+</tr></table>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td width="373" height="187" valign="top">
+                                                                <table width='100%' cellspacing='0' cellpadding='0' border='0'>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="2" ></td><td align="left" class="aa"><a href='/art/2026/3/24/art_3533_2992731.html' class='bt_link' title='临淄区全员培训：AI赋能项目式 研修聚力育良师03月24日' target=_blank  style="line-height:26px;">临淄区全员培训：AI赋能项目式 研修聚力育良师</a></td><td width="45" align="center" class="bt_time" style="line-height:26px; color:#767676;"><span readexclude>03-24</span></td><td width="13"></td></tr></table></td></tr>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="2" ></td><td align="left" class="aa"><a href='/art/2026/3/23/art_3533_2992561.html' class='bt_link' title='淄川区：深耕校本赋能成长 共探生物育人新路径——初中生物校本化实施路径交流会顺利召开03月23日' target=_blank  style="line-height:26px;">淄川区：深耕校本赋能成长 共探生物育人新路径——初...</a></td><td width="45" align="center" class="bt_time" style="line-height:26px; color:#767676;"><span readexclude>03-23</span></td><td width="13"></td></tr></table></td></tr>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="2" ></td><td align="left" class="aa"><a href='/art/2026/3/18/art_3533_2991791.html' class='bt_link' title='淄川区：高考备考打靶命题研讨会生物学科举行03月18日' target=_blank  style="line-height:26px;">淄川区：高考备考打靶命题研讨会生物学科举行</a></td><td width="45" align="center" class="bt_time" style="line-height:26px; color:#767676;"><span readexclude>03-18</span></td><td width="13"></td></tr></table></td></tr>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="2" ></td><td align="left" class="aa"><a href='/art/2026/3/17/art_3533_2991623.html' class='bt_link' title='高青县教体系统“实干突破年”集中学习活动举行03月17日' target=_blank  style="line-height:26px;">高青县教体系统“实干突破年”集中学习活动举行</a></td><td width="45" align="center" class="bt_time" style="line-height:26px; color:#767676;"><span readexclude>03-17</span></td><td width="13"></td></tr></table></td></tr>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="2" ></td><td align="left" class="aa"><a href='/art/2026/3/4/art_3533_2988826.html' class='bt_link' title='2026年周村区、文昌湖省级旅游度假区教育体育工作会议召开03月04日' target=_blank  style="line-height:26px;">2026年周村区、文昌湖省级旅游度假区教育体育工作...</a></td><td width="45" align="center" class="bt_time" style="line-height:26px; color:#767676;"><span readexclude>03-04</span></td><td width="13"></td></tr></table></td></tr>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="2" ></td><td align="left" class="aa"><a href='/art/2026/2/25/art_3533_2987752.html' class='bt_link' title='淄博高新区第二届中小学生体育节排球比赛圆满落幕02月25日' target=_blank  style="line-height:26px;">淄博高新区第二届中小学生体育节排球比赛圆满落幕</a></td><td width="45" align="center" class="bt_time" style="line-height:26px; color:#767676;"><span readexclude>02-25</span></td><td width="13"></td></tr></table></td></tr>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="2" ></td><td align="left" class="aa"><a href='/art/2026/2/25/art_3533_2987748.html' class='bt_link' title='聚焦互动，赋能课程 ——淄博高新区举办第七届幼儿园优秀教研成果展示活动02月25日' target=_blank  style="line-height:26px;">聚焦互动，赋能课程 ——淄博高新区举办第七届幼儿园...</a></td><td width="45" align="center" class="bt_time" style="line-height:26px; color:#767676;"><span readexclude>02-25</span></td><td width="13"></td></tr></table></td>
+</tr></table>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                                <div class="tab-list" id="con_tb_4" style="display:none">
+                                                    <table id="__01" width="373" height="281" border="0" cellpadding="0"
+                                                        cellspacing="0">
+                                                        <tr>
+                                                            <td width="373" height="94"
+                                                                background="/images/997/zb_02_02_03_01_01.jpg" valign="top">
+                                                                <table width='100%' cellspacing='0' cellpadding='0' border='0'>
+<tr>
+<td style=''><div class="aa"><a style='cursor:hand' href='/art/2026/3/27/art_225_2993368.html' class='bt_link' title='淄川区柳泉幼儿园：活力柳泉 健康成长——“一月一优课”健康领域体育活动' target=_blank><p style='line-height:33px; color:#da0300;font-weight:bold; font-size:14px;'>淄川区柳泉幼儿园：活力柳泉 健康成长——“一月...</p><p  style='line-height:24px; font-size:12px;text-indent:2em; width:358px;'>为深入贯彻教育部“健康第一”教育理念，扎实推进健康校园建设，近日，淄川区柳泉幼儿园如期开展...<font style="color:#ed4400;"> 详情</font></p></a></div></td>
+</tr></table>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td width="373" height="187" valign="top">
+                                                                <table width='100%' cellspacing='0' cellpadding='0' border='0'>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="2" ></td><td align="left" class="aa"><a href='/art/2026/3/27/art_225_2993305.html' class='bt_link' title='淄川区北关小学：科技引领未来 创新点亮梦想——第八届科技文化节开幕式03月27日' target=_blank  style="line-height:26px;">淄川区北关小学：科技引领未来 创新点亮梦想——第八...</a></td><td width="45" align="center" class="bt_time" style="line-height:26px; color:#767676;"><span readexclude>03-27</span></td><td width="13"></td></tr></table></td></tr>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="2" ></td><td align="left" class="aa"><a href='/art/2026/3/27/art_225_2993299.html' class='bt_link' title='淄川区实验小学：小手牵大手 节水伴我行——节约用水主题活动03月27日' target=_blank  style="line-height:26px;">淄川区实验小学：小手牵大手 节水伴我行——节约用水...</a></td><td width="45" align="center" class="bt_time" style="line-height:26px; color:#767676;"><span readexclude>03-27</span></td><td width="13"></td></tr></table></td></tr>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="2" ></td><td align="left" class="aa"><a href='/art/2026/3/27/art_225_2993298.html' class='bt_link' title='淄川区杜坡山幼儿园：安吉螺母搭建海盗船主题活动03月27日' target=_blank  style="line-height:26px;">淄川区杜坡山幼儿园：安吉螺母搭建海盗船主题活动</a></td><td width="45" align="center" class="bt_time" style="line-height:26px; color:#767676;"><span readexclude>03-27</span></td><td width="13"></td></tr></table></td></tr>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="2" ></td><td align="left" class="aa"><a href='/art/2026/3/27/art_225_2993297.html' class='bt_link' title='淄川区磁村中学“晨诵午读”乐音书声满校园03月27日' target=_blank  style="line-height:26px;">淄川区磁村中学“晨诵午读”乐音书声满校园</a></td><td width="45" align="center" class="bt_time" style="line-height:26px; color:#767676;"><span readexclude>03-27</span></td><td width="13"></td></tr></table></td></tr>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="2" ></td><td align="left" class="aa"><a href='/art/2026/3/27/art_225_2993296.html' class='bt_link' title='淄川区山水文园幼儿园：相约春天，播种希望——杏花春雨自然文化节之亲子播种活动03月27日' target=_blank  style="line-height:26px;">淄川区山水文园幼儿园：相约春天，播种希望——杏花春...</a></td><td width="45" align="center" class="bt_time" style="line-height:26px; color:#767676;"><span readexclude>03-27</span></td><td width="13"></td></tr></table></td></tr>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="2" ></td><td align="left" class="aa"><a href='/art/2026/3/27/art_225_2993294.html' class='bt_link' title='淄川区曜华小学：拒绝欺凌·守护成长 ——“070勇敢者行动”反校园欺凌宣传周03月27日' target=_blank  style="line-height:26px;">淄川区曜华小学：拒绝欺凌·守护成长 ——“070勇...</a></td><td width="45" align="center" class="bt_time" style="line-height:26px; color:#767676;"><span readexclude>03-27</span></td><td width="13"></td></tr></table></td></tr>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="2" ></td><td align="left" class="aa"><a href='/art/2026/3/27/art_225_2993291.html' class='bt_link' title='淄川区北关小学：法治宣讲进校园  护航少年助成长——法学会“百名法学家百场报告会”活动走进北小03月27日' target=_blank  style="line-height:26px;">淄川区北关小学：法治宣讲进校园  护航少年助成长—...</a></td><td width="45" align="center" class="bt_time" style="line-height:26px; color:#767676;"><span readexclude>03-27</span></td><td width="13"></td></tr></table></td>
+</tr></table>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+
+
+
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td width="373" height="8"></td>
+                                        </tr>
+                                    </table>
+
+                                </td>
+                                <td width="248" height="344" valign="top">
+
+                                    <div class="tab-div2">
+                                        <ul>
+                                            <li class="tb-on" id="tc1" style="background:none"
+                                                onmouseover="setTab('tc',1,2)">
+                                                <div><a style="font-size:15px; font-weight:bolder;" href="/col/col3539/index.html" target="_blank" class="white">文件通知</a></div>
+                                            </li>
+                                            <li class="tb-off" id="tc2" style="background:none"
+                                                onmouseover="setTab('tc',2,2)">
+                                                <div><a style="font-size:15px; font-weight:bolder;" href="/col/col3540/index.html" target="_blank" class="white">公示公告</a></div>
+                                            </li>
+                                        </ul>
+                                        <div class="tab-div-more02" id="more_tc_1">
+                                        </div>
+                                        <div class="tab-div-more02" id="more_tc_2" style="display:none;">
+                                        </div>
+                                    </div>
+                                    <div class="tab-list" id="con_tc_1">
+                                        <style type="text/css">
+.aa a:hover{ color:red;}
+</style>
+<div style="margin-top:8px;"><table width='100%' cellspacing='0' cellpadding='0' border='0'>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="18" readexclude><img src="/picture/0/931d72ed1fd546fa9c149795d0ca255a.jpg" readexclude></td><td align="left"  class="aa"><a href='/art/2026/3/23/art_3539_2992456.html' class='bt_link' title='关于印发《淄博市2026年初中学业水平考试实验操作会考工作实施方案》的通知03月23日' target=_blank style="line-height:27px;">关于印发《淄博市2026年初中学业水平考试实验操作...</a><SPAN style="font-size:12PX; color:#767676;line-height:27px; margin-left:5px; " readexclude>（03-23）</SPAN></td><td width="19"></td></tr></table></td></tr>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="18" readexclude><img src="/picture/0/931d72ed1fd546fa9c149795d0ca255a.jpg" readexclude></td><td align="left"  class="aa"><a href='/art/2026/3/17/art_3539_2991579.html' class='bt_link' title='关于申报2026年普通高中招收艺术体育科技特长生计划的通知03月17日' target=_blank style="line-height:27px;">关于申报2026年普通高中招收艺术体育科技特长生计...</a><SPAN style="font-size:12PX; color:#767676;line-height:27px; margin-left:5px; " readexclude>（03-17）</SPAN></td><td width="19"></td></tr></table></td></tr>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="18" readexclude><img src="/picture/0/931d72ed1fd546fa9c149795d0ca255a.jpg" readexclude></td><td align="left"  class="aa"><a href='/art/2026/3/17/art_3539_2991578.html' class='bt_link' title='关于举办淄博市第二十八届学生“百灵”艺术节活动的通知03月17日' target=_blank style="line-height:27px;">关于举办淄博市第二十八届学生“百灵”艺术节活动的通...</a><SPAN style="font-size:12PX; color:#767676;line-height:27px; margin-left:5px; " readexclude>（03-17）</SPAN></td><td width="19"></td></tr></table></td></tr>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="18" readexclude><img src="/picture/0/931d72ed1fd546fa9c149795d0ca255a.jpg" readexclude></td><td align="left"  class="aa"><a href='/art/2026/3/16/art_3539_2991307.html' class='bt_link' title='关于印发《淄博市2026年初中学业水平考试英语口语听力考试工作实施方案》的通知03月16日' target=_blank style="line-height:27px;">关于印发《淄博市2026年初中学业水平考试英语口语...</a><SPAN style="font-size:12PX; color:#767676;line-height:27px; margin-left:5px; " readexclude>（03-16）</SPAN></td><td width="19"></td></tr></table></td></tr>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="18" readexclude><img src="/picture/0/931d72ed1fd546fa9c149795d0ca255a.jpg" readexclude></td><td align="left"  class="aa"><a href='/art/2026/3/13/art_3539_2990956.html' class='bt_link' title='关于公布全市第十届优秀教科研成果奖评选结果的通知03月13日' target=_blank style="line-height:27px;">关于公布全市第十届优秀教科研成果奖评选结果的通知</a><SPAN style="font-size:12PX; color:#767676;line-height:27px; margin-left:5px; " readexclude>（03-13）</SPAN></td><td width="19"></td></tr></table></td>
+</tr></table></div>
+                                    </div>
+                                    <div class="tab-list" id="con_tc_2" style="display:none">
+                                        <style type="text/css">
+.aa a:hover{ color:red;}
+</style>
+<div style="margin-top:8px;"><table width='100%' cellspacing='0' cellpadding='0' border='0'>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="18" readexclude><img src="/picture/0/931d72ed1fd546fa9c149795d0ca255a.jpg" readexclude></td><td align="left"  class="aa"><a href='/art/2026/3/19/art_3540_2992022.html' class='bt_link' title='2026年度淄博市教育局所属事业单位急需紧缺人才引进（第二批）公告03月19日' target=_blank style="line-height:27px;">2026年度淄博市教育局所属事业单位急需紧缺人才引...</a><SPAN style="font-size:12PX; color:#767676;line-height:27px; margin-left:5px; " readexclude>（03-19）</SPAN></td><td width="19"></td></tr></table></td></tr>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="18" readexclude><img src="/picture/0/931d72ed1fd546fa9c149795d0ca255a.jpg" readexclude></td><td align="left"  class="aa"><a href='/art/2026/3/4/art_3540_2988848.html' class='bt_link' title='2026年淄博市教育局所属事业单位公开招聘工作人员总成绩和进入考察体检范围人员的公告03月04日' target=_blank style="line-height:27px;">2026年淄博市教育局所属事业单位公开招聘工作人员...</a><SPAN style="font-size:12PX; color:#767676;line-height:27px; margin-left:5px; " readexclude>（03-04）</SPAN></td><td width="19"></td></tr></table></td></tr>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="18" readexclude><img src="/picture/0/931d72ed1fd546fa9c149795d0ca255a.jpg" readexclude></td><td align="left"  class="aa"><a href='/art/2026/2/6/art_3540_2985587.html' class='bt_link' title='淄博市第十届优秀教科研成果奖（职业教育教学成果奖）评选结果公示02月06日' target=_blank style="line-height:27px;">淄博市第十届优秀教科研成果奖（职业教育教学成果奖）...</a><SPAN style="font-size:12PX; color:#767676;line-height:27px; margin-left:5px; " readexclude>（02-06）</SPAN></td><td width="19"></td></tr></table></td></tr>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="18" readexclude><img src="/picture/0/931d72ed1fd546fa9c149795d0ca255a.jpg" readexclude></td><td align="left"  class="aa"><a href='/art/2026/2/2/art_3540_2984580.html' class='bt_link' title='2026年淄博市教育局所属事业单位公开招聘工作人员笔试成绩查询的公告02月02日' target=_blank style="line-height:27px;">2026年淄博市教育局所属事业单位公开招聘工作人员...</a><SPAN style="font-size:12PX; color:#767676;line-height:27px; margin-left:5px; " readexclude>（02-02）</SPAN></td><td width="19"></td></tr></table></td></tr>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="18" readexclude><img src="/picture/0/931d72ed1fd546fa9c149795d0ca255a.jpg" readexclude></td><td align="left"  class="aa"><a href='/art/2026/1/27/art_3540_2983408.html' class='bt_link' title='淄博市第十届教育科学研究成果奖和基础教育教学成果奖评选结果公示01月27日' target=_blank style="line-height:27px;">淄博市第十届教育科学研究成果奖和基础教育教学成果奖...</a><SPAN style="font-size:12PX; color:#767676;line-height:27px; margin-left:5px; " readexclude>（01-27）</SPAN></td><td width="19"></td></tr></table></td>
+</tr></table></div>
+                                    </div>
+
+
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="1011">
+                        <a title="淄博市教育局所属事业单位招聘网上报名入口" target="_blank" href="https://qzpta39.chinasyks.org.cn/zb_szjy/index.html#/index">
+    <img title="" src="/picture/35/s_2503111521590538326.jpg" width="1011" height="80" alt="淄博市教育局所属事业单位招聘网上报名入口">
+</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="1011" height="14"></td>
+                </tr>
+                <tr>
+                    <td style="background:#fff;border:1px solid #ededed;">
+                        <table id="__01" width="1011" height="252" border="0" cellpadding="0" cellspacing="0">
+                            <tr>
+                                <td width="19"></td>
+                                <td valign="top">
+                                    <table width="231" height="81" border="0" align="left" cellpadding="0"
+                                        cellspacing="0" id="__01">
+                                        <tr>
+                                            <td width="231" height="10"></td>
+                                        </tr>
+                                        <tr>
+                                            <td width="231" height="242" valign="top" class="font1">
+                                                <table width='100%' cellspacing='0' cellpadding='0' border='0'>
+<tr>
+<td style=''>
+<table border='0' align="center" cellpadding='0' cellspacing='0' >
+  <tr>
+    <td ><a href='http://www.zibo.gov.cn/jact/front/main.do?sysid=54' target='_blank' title="局长信箱"><img  src='/picture/0/02a694a1b13849df90ee3f198d879a3b.jpg' border='0' style="margin-bottom: 10px;"></a></td>
+  </tr>
+</table>
+</td></tr>
+<tr>
+<td style=''>
+<table border='0' align="center" cellpadding='0' cellspacing='0' >
+  <tr>
+    <td ><a href='http://edu.zibo.gov.cn/col/col16429/index.html' target='_blank' title="咨询建议"><img  src='/picture/0/314d00284a8f466da6f8c77f697e0a1e.jpg' border='0' style="margin-bottom: 10px;"></a></td>
+  </tr>
+</table>
+</td></tr>
+<tr>
+<td style=''>
+<table border='0' align="center" cellpadding='0' cellspacing='0' >
+  <tr>
+    <td ><a href='http://edu.zibo.gov.cn/col/col16429/index.html' target='_blank' title="投诉举报"><img  src='/picture/0/5027759a42294c54b8aabc307dc6c2f2.jpg' border='0' style="margin-bottom: 10px;"></a></td>
+  </tr>
+</table>
+</td></tr>
+<tr>
+<td style=''>
+<table border='0' align="center" cellpadding='0' cellspacing='0' >
+  <tr>
+    <td ><a href='http://www.zibo.gov.cn/icity/department/hall?deptId=370300jyj' target='_blank' title="办事服务"><img  src='/picture/0/c12c0692d3ad4ffa9641aaae4e1a9838.png' border='0' style="margin-bottom: 10px;"></a></td>
+  </tr>
+</table>
+</td>
+</tr></table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td valign="top">
+                                    <table id="__01" width="760" height="252" border="0" cellpadding="0"
+                                        cellspacing="0">
+                                        <tr>
+                                            <td width="760" height="8"></td>
+                                        </tr>
+                                        <tr>
+                                            <td width="760" height="36" valign="top" background="/images/997/zzbg.jpg">
+                                                <div class="tab-div3">
+                                                    <ul>
+                                                        <li class="tb-on" id="td1" onmouseover="setTab('td',1,5)">
+                                                            <div><a style="font-size:10.5pt; font-weight:bolder;" href="/col/col229/index.html" target="_blank" class="white">党务公开</a></div>
+                                                        </li>
+                                                        <li class="tb-off" id="td2" onmouseover="setTab('td',2,5)">
+                                                            <div><a style="font-size:10.5pt; font-weight:bolder;" href="/col/col6829/index.html" target="_blank" class="white">人事工作</a></div>
+                                                        </li>
+                                                        <li class="tb-off" id="td3" onmouseover="setTab('td',3,5)">
+                                                            <div><a style="font-size:10.5pt; font-weight:bolder;" href="/col/col6830/index.html" target="_blank" class="white">教工之家</a></div>
+                                                        </li>
+                                                        <li class="tb-off" id="td4" onmouseover="setTab('td',4,5)">
+                                                            <div><a style="font-size:10.5pt; font-weight:bolder;" href="/col/col6841/index.html" target="_blank" class="white">校园安全</a></div>
+                                                        </li>
+                                                        <li class="tb-off" id="td5" onmouseover="setTab('td',5,5)">
+                                                            <div><a style="font-size:10.5pt; font-weight:bolder;" href="/col/col14240/index.html" target="_blank" class="white">心理健康</a></div>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="tab-div-more02" id="more_td_1" style="width:10px;">
+                                                        
+                                                    </div>
+                                                    <div class="tab-div-more02" id="more_td_2"
+                                                        style="display:none;width:10px;">
+                                                        
+                                                    </div>
+                                                    <div class="tab-div-more02" id="more_td_3"
+                                                        style="display:none;width:10px;">
+                                                        
+                                                    </div>
+                                                    <div class="tab-div-more02" id="more_td_4"
+                                                        style="display:none;width:10px;">
+                                                        
+                                                    </div>
+                                                    <div class="tab-div-more02" id="more_td_5"
+                                                        style="display:none;width:10px;">
+                                                        
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td width="760" height="201" valign="top">
+                                                <div class="tab-list" id="con_td_1">
+                                                    <table id="__01" width="760" height="201" border="0" cellpadding="0"
+                                                        cellspacing="0">
+                                                        <tr>
+                                                            <td valign="top">
+                                                                <table id="__01" width="740" height="117" border="0"
+                                                                    cellpadding="0" cellspacing="0">
+                                                                    <tr>
+                                                                        <td width="36" height="117"
+                                                                            background="/images/997/zb_02_05_03_02_01_01.jpg">
+                                                                        </td>
+                                                                        <td width="704" height="117" valign="top">
+                                                                            <table width='100%' cellspacing='0' cellpadding='0' border='0'>
+<tr>
+<td style=''><div class="aa"><a style='cursor:hand' href='/art/2026/1/30/art_229_2984169.html' class='bt_link' title='2025年度高校党委书记全面从严治党述责述廉和抓基层党建工作述职评议会议召开' target=_blank><p style='line-height:30px; color:#2da1f2;font-weight:bold; font-size:14px;'>2025年度高校党委书记全面从严治党述责述廉和抓基层党建工作述职评议会议召开</p><p style='line-height:26px;  text-indent:2em;'>1月29日下午，市委教育工委召开2025年度高校党委书记全面从严治党述责述廉和抓基层党建工作述职评议会议。市委常委、宣传部部长，市委教育工委书记林恒主持会议并作点评讲话。会上，淄博职业技术大学、淄博市技师学院、淄博师范高等专科学校、山东轻工职业学院4所高校的党委书记依次进行现场述职，齐鲁医药学院、山...</p></a></div></td>
+</tr></table>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td width="760" height="136" valign="top">
+                                                                <table width='100%' cellspacing='0' cellpadding='0' border='0'>
+<tr>
+<td style=''><div style="width:100%; height:34px; border-bottom:dashed 1px #d7d7d7; background:url(/picture/0/08cd46a66f0341a6a4ee40379ef55386.jpg) left top no-repeat;" class="aa"><a href='/art/2025/1/24/art_229_2889662.html' class='bt_link' title='2024年度市直教育系统党组织书记全面从严治党述责述廉和抓基层党建工作述职评议会议召开' target=_blank style="line-height:34px; padding-left:33px">2024年度市直教育系统党组织书记全面从严治党述责述廉和抓基层党建工作述职评议会议召开</a></div></td></tr>
+<tr>
+<td style=''><div style="width:100%; height:34px; border-bottom:dashed 1px #d7d7d7; background:url(/picture/0/08cd46a66f0341a6a4ee40379ef55386.jpg) left top no-repeat;" class="aa"><a href='/art/2025/1/24/art_229_2889656.html' class='bt_link' title='2024年度高校党委书记全面从严治党述责述廉和抓基层党建工作述职评议会议召开' target=_blank style="line-height:34px; padding-left:33px">2024年度高校党委书记全面从严治党述责述廉和抓基层党建工作述职评议会议召开</a></div></td></tr>
+<tr>
+<td style=''><div style="width:100%; height:34px; border-bottom:dashed 1px #d7d7d7; background:url(/picture/0/08cd46a66f0341a6a4ee40379ef55386.jpg) left top no-repeat;" class="aa"><a href='/art/2024/11/1/art_229_2870488.html' class='bt_link' title='淄博市齐文幼儿园与齐盛幼儿园联合开展党团主题教育活动' target=_blank style="line-height:34px; padding-left:33px">淄博市齐文幼儿园与齐盛幼儿园联合开展党团主题教育活动</a></div></td></tr>
+<tr>
+<td style=''><div style="width:100%; height:34px; border-bottom:dashed 1px #d7d7d7; background:url(/picture/0/08cd46a66f0341a6a4ee40379ef55386.jpg) left top no-repeat;" class="aa"><a href='/art/2024/10/31/art_229_2870487.html' class='bt_link' title='全市教育系统社会组织党建工作会议召开' target=_blank style="line-height:34px; padding-left:33px">全市教育系统社会组织党建工作会议召开</a></div></td>
+</tr></table>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td width="760" height="28"></td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                                <div class="tab-list" id="con_td_2" style="display:none">
+                                                    <table id="__01" width="760" height="201" border="0" cellpadding="0"
+                                                        cellspacing="0">
+                                                        <tr>
+                                                            <td valign="top">
+                                                                <table id="__01" width="740" height="117" border="0"
+                                                                    cellpadding="0" cellspacing="0">
+                                                                    <tr>
+                                                                        <td width="36" height="117"
+                                                                            background="/images/997/zb_02_05_03_02_01_01.jpg">
+                                                                        </td>
+                                                                        <td width="704" height="117" valign="top">
+                                                                            <table width='100%' cellspacing='0' cellpadding='0' border='0'>
+<tr>
+<td style=''><div class="aa"><a style='cursor:hand' href='/art/2019/10/12/art_6829_1769587.html' class='bt_link' title='淄博市高层次人才和企业家子女入学服务事项指南' target=_blank><p style='line-height:30px; color:#2da1f2;font-weight:bold; font-size:14px;'>淄博市高层次人才和企业家子女入学服务事项指南</p><p style='line-height:26px;  text-indent:2em;'>子女入学服务事项指南 服务内容：持有“山东惠才卡”“淄博精英卡”“淄博企业家服务卡”、高层次人才证明的高层次人才和企业家子女就读学前教育、义务教育、中等职业教育时，可根据本人意愿在全市范围统筹安排入学；参加初中学业水平考试的，可以在就读学校所在地区县或户籍所在地参加报名和招生录取；参加高考的可提供升...</p></a></div></td>
+</tr></table>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td width="760" height="136" valign="top">
+                                                                <table width='100%' cellspacing='0' cellpadding='0' border='0'>
+<tr>
+<td style=''><div style="width:100%; height:34px; border-bottom:dashed 1px #d7d7d7; background:url(/picture/0/08cd46a66f0341a6a4ee40379ef55386.jpg) left top no-repeat;" class="aa"><a href='/art/2025/12/19/art_6829_2978553.html' class='bt_link' title='2026年度淄博市教育局所属事业单位急需紧缺人才引进公告' target=_blank style="line-height:34px; padding-left:33px">2026年度淄博市教育局所属事业单位急需紧缺人才引进公告</a></div></td></tr>
+<tr>
+<td style=''><div style="width:100%; height:34px; border-bottom:dashed 1px #d7d7d7; background:url(/picture/0/08cd46a66f0341a6a4ee40379ef55386.jpg) left top no-repeat;" class="aa"><a href='/art/2024/6/14/art_6829_2822773.html' class='bt_link' title='2024年淄博市教育局所属事业单位公开招聘A类岗位面试公告' target=_blank style="line-height:34px; padding-left:33px">2024年淄博市教育局所属事业单位公开招聘A类岗位面试公告</a></div></td></tr>
+<tr>
+<td style=''><div style="width:100%; height:34px; border-bottom:dashed 1px #d7d7d7; background:url(/picture/0/08cd46a66f0341a6a4ee40379ef55386.jpg) left top no-repeat;" class="aa"><a href='/art/2023/3/14/art_6829_2690335.html' class='bt_link' title='淄博市教育局淄博市人力资源和社会保障局关于公布2022年度中小学高级教师职称评审结果的通知' target=_blank style="line-height:34px; padding-left:33px">淄博市教育局淄博市人力资源和社会保障局关于公布2022年度中小学高级教师职称评审结果的通知</a></div></td></tr>
+<tr>
+<td style=''><div style="width:100%; height:34px; border-bottom:dashed 1px #d7d7d7; background:url(/picture/0/08cd46a66f0341a6a4ee40379ef55386.jpg) left top no-repeat;" class="aa"><a href='/art/2023/3/14/art_6829_2690331.html' class='bt_link' title='淄博市教育局淄博市人力资源和社会保障局关于公布2022年度中小学正高级教师职称评审结果的通知' target=_blank style="line-height:34px; padding-left:33px">淄博市教育局淄博市人力资源和社会保障局关于公布2022年度中小学正高级教师职称评审结果的通知</a></div></td>
+</tr></table>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td width="760" height="28"></td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                                <div class="tab-list" id="con_td_3" style="display:none">
+                                                    <table id="__01" width="760" height="201" border="0" cellpadding="0"
+                                                        cellspacing="0">
+                                                        <tr>
+                                                            <td valign="top">
+                                                                <table id="__01" width="740" height="117" border="0"
+                                                                    cellpadding="0" cellspacing="0">
+                                                                    <tr>
+                                                                        <td width="36" height="117"
+                                                                            background="/images/997/zb_02_05_03_02_01_01.jpg">
+                                                                        </td>
+                                                                        <td width="704" height="117" valign="top">
+                                                                            <table width='100%' cellspacing='0' cellpadding='0' border='0'>
+<tr>
+<td style=''><div class="aa"><a style='cursor:hand' href='/art/2026/3/27/art_6830_2993243.html' class='bt_link' title='【2026年师德教育学习周专题】淄博四中：同心致远 实干争先 共谱高质量发展新篇章' target=_blank><p style='line-height:30px; color:#2da1f2;font-weight:bold; font-size:14px;'>【2026年师德教育学习周专题】淄博四中：同心致远 实干争先 共谱高质量发展新篇...</p><p style='line-height:26px;  text-indent:2em;'>为深入贯彻新时代教师队伍建设要求，进一步夯实教师队伍的思想政治根基，全面提升教师的职业道德素养，引导全体教师自觉践行立德树人根本任务，新学期伊始，淄博四中精心组织并扎实开展了“师德教育学习周”活动。本次活动旨在引导广大教师坚守教育初心，勇担育人使命，以高尚的师德和精湛的业务开启新学期教育教学工作的崭...</p></a></div></td>
+</tr></table>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td width="760" height="136" valign="top">
+                                                                <table width='100%' cellspacing='0' cellpadding='0' border='0'>
+<tr>
+<td style=''><div style="width:100%; height:34px; border-bottom:dashed 1px #d7d7d7; background:url(/picture/0/08cd46a66f0341a6a4ee40379ef55386.jpg) left top no-repeat;" class="aa"><a href='/art/2026/3/27/art_6830_2993240.html' class='bt_link' title='【2026年师德教育学习周专题】周村区教体系统：厚植师德根基 涵养育人清风' target=_blank style="line-height:34px; padding-left:33px">【2026年师德教育学习周专题】周村区教体系统：厚植师德根基 涵养育人清风</a></div></td></tr>
+<tr>
+<td style=''><div style="width:100%; height:34px; border-bottom:dashed 1px #d7d7d7; background:url(/picture/0/08cd46a66f0341a6a4ee40379ef55386.jpg) left top no-repeat;" class="aa"><a href='/art/2026/3/27/art_6830_2993212.html' class='bt_link' title='【2026年师德教育学习周专题】淄博齐盛幼儿园：润师心以立德 聚微光启新程' target=_blank style="line-height:34px; padding-left:33px">【2026年师德教育学习周专题】淄博齐盛幼儿园：润师心以立德 聚微光启新程</a></div></td></tr>
+<tr>
+<td style=''><div style="width:100%; height:34px; border-bottom:dashed 1px #d7d7d7; background:url(/picture/0/08cd46a66f0341a6a4ee40379ef55386.jpg) left top no-repeat;" class="aa"><a href='/art/2026/3/16/art_6830_2991471.html' class='bt_link' title='【2026年师德教育学习周专题】淄博七中：深学细悟守初心 厚植师德育桃李' target=_blank style="line-height:34px; padding-left:33px">【2026年师德教育学习周专题】淄博七中：深学细悟守初心 厚植师德育桃李</a></div></td></tr>
+<tr>
+<td style=''><div style="width:100%; height:34px; border-bottom:dashed 1px #d7d7d7; background:url(/picture/0/08cd46a66f0341a6a4ee40379ef55386.jpg) left top no-repeat;" class="aa"><a href='/art/2026/3/16/art_6830_2991467.html' class='bt_link' title='【2026年师德教育学习周专题】张店区教体系统：铸魂育人守初心 师德清风润校园' target=_blank style="line-height:34px; padding-left:33px">【2026年师德教育学习周专题】张店区教体系统：铸魂育人守初心 师德清风润校园</a></div></td>
+</tr></table>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td width="760" height="28"></td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                                <div class="tab-list" id="con_td_4" style="display:none">
+                                                    <table id="__01" width="760" height="201" border="0" cellpadding="0"
+                                                        cellspacing="0">
+                                                        <tr>
+                                                            <td valign="top">
+                                                                <table id="__01" width="740" height="117" border="0"
+                                                                    cellpadding="0" cellspacing="0">
+                                                                    <tr>
+                                                                        <td width="36" height="117"
+                                                                            background="/images/997/zb_02_05_03_02_01_01.jpg">
+                                                                        </td>
+                                                                        <td width="704" height="117" valign="top">
+                                                                            <table width='100%' cellspacing='0' cellpadding='0' border='0'>
+<tr>
+<td style=''><div class="aa"><a style='cursor:hand' href='/art/2025/6/27/art_6841_2928227.html' class='bt_link' title='党建联建强根基 安全护航促发展' target=_blank><p style='line-height:30px; color:#2da1f2;font-weight:bold; font-size:14px;'>党建联建强根基 安全护航促发展</p><p style='line-height:26px;  text-indent:2em;'>为深入贯彻落实新时代党的建设总要求，构建“资源共享、优势互补、互相促进、共同提高”的党建工作新格局，全面提升教育系统安全管理水平，切实保障师生安全和校园稳定，6月11日，山东省教育厅学校安全管理处党支部与沂源县教育和体育局党组联合举行党建共建活动。</p></a></div></td>
+</tr></table>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td width="760" height="136" valign="top">
+                                                                <table width='100%' cellspacing='0' cellpadding='0' border='0'>
+<tr>
+<td style=''><div style="width:100%; height:34px; border-bottom:dashed 1px #d7d7d7; background:url(/picture/0/08cd46a66f0341a6a4ee40379ef55386.jpg) left top no-repeat;" class="aa"><a href='/art/2024/4/30/art_6841_2810941.html' class='bt_link' title='全市预防未成年学生溺水暨学校安全工作视频会议召开' target=_blank style="line-height:34px; padding-left:33px">全市预防未成年学生溺水暨学校安全工作视频会议召开</a></div></td></tr>
+<tr>
+<td style=''><div style="width:100%; height:34px; border-bottom:dashed 1px #d7d7d7; background:url(/picture/0/08cd46a66f0341a6a4ee40379ef55386.jpg) left top no-repeat;" class="aa"><a href='/art/2024/1/23/art_6841_2786082.html' class='bt_link' title='关于启动重污染天气橙色预警应急预案的通知' target=_blank style="line-height:34px; padding-left:33px">关于启动重污染天气橙色预警应急预案的通知</a></div></td></tr>
+<tr>
+<td style=''><div style="width:100%; height:34px; border-bottom:dashed 1px #d7d7d7; background:url(/picture/0/08cd46a66f0341a6a4ee40379ef55386.jpg) left top no-repeat;" class="aa"><a href='/art/2023/11/9/art_6841_2761895.html' class='bt_link' title='全国消防宣传月' target=_blank style="line-height:34px; padding-left:33px">全国消防宣传月</a></div></td></tr>
+<tr>
+<td style=''><div style="width:100%; height:34px; border-bottom:dashed 1px #d7d7d7; background:url(/picture/0/08cd46a66f0341a6a4ee40379ef55386.jpg) left top no-repeat;" class="aa"><a href='/art/2023/10/27/art_6841_2757699.html' class='bt_link' title='周末安全提醒，家长做好监护！' target=_blank style="line-height:34px; padding-left:33px">周末安全提醒，家长做好监护！</a></div></td>
+</tr></table>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td width="760" height="28"></td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                                <div class="tab-list" id="con_td_5" style="display:none">
+                                                    <table id="__01" width="760" height="201" border="0" cellpadding="0"
+                                                        cellspacing="0">
+                                                        <tr>
+                                                            <td valign="top">
+                                                                <table id="__01" width="740" height="117" border="0"
+                                                                    cellpadding="0" cellspacing="0">
+                                                                    <tr>
+                                                                        <td width="36" height="117"
+                                                                            background="/images/997/zb_02_05_03_02_01_01.jpg">
+                                                                        </td>
+                                                                        <td width="704" height="117" valign="top">
+                                                                            <table width='100%' cellspacing='0' cellpadding='0' border='0'>
+<tr>
+<td style=''><div class="aa"><a style='cursor:hand' href='/art/2025/11/7/art_14240_2978543.html' class='bt_link' title='十堰市教育局来我市考察交流' target=_blank ><p style='line-height:30px; color:#2da1f2;font-weight:bold; font-size:14px;'>十堰市教育局来我市考察交流</p><p   style='line-height:26px;  text-indent:2em;'>11月4日，湖北省十堰市教育局党组成员、副局长刘满东率24人考察团来我市考察学生心理健康教育工作。近年来，我市以“一平台五体系”为核心架构，通过建设市域统一的启明心理云平台，系统构建课程教学、宣传普及、咨询干预、教师队伍建设及组织管理保障五大体系，形成了特色鲜明的心理健康教育模式。考察团先后走进淄博...</p></a></div></td>
+</tr></table>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td width="760" height="136" valign="top">
+                                                                <table width='100%' cellspacing='0' cellpadding='0' border='0'>
+<tr>
+<td style=''><div style="width:100%; height:34px; border-bottom:dashed 1px #d7d7d7; background:url(/picture/0/08cd46a66f0341a6a4ee40379ef55386.jpg) left top no-repeat;" class="aa"><a href='/art/2024/7/4/art_14240_2828444.html' class='bt_link' title='山东省司法厅 山东省教育厅开展“家校共育法治与安全教育”公益课展播活动' target=_blank style="line-height:34px; padding-left:33px">山东省司法厅 山东省教育厅开展“家校共育法治与安全教育”公益课展播活动</a></div></td></tr>
+<tr>
+<td style=''><div style="width:100%; height:34px; border-bottom:dashed 1px #d7d7d7; background:url(/picture/0/08cd46a66f0341a6a4ee40379ef55386.jpg) left top no-repeat;" class="aa"><a href='/art/2023/11/22/art_14240_2765226.html' class='bt_link' title='淄博市中小学心理健康研究会召开2023年会员大会' target=_blank style="line-height:34px; padding-left:33px">淄博市中小学心理健康研究会召开2023年会员大会</a></div></td></tr>
+<tr>
+<td style=''><div style="width:100%; height:34px; border-bottom:dashed 1px #d7d7d7; background:url(/picture/0/08cd46a66f0341a6a4ee40379ef55386.jpg) left top no-repeat;" class="aa"><a href='/art/2023/3/20/art_14240_2705558.html' class='bt_link' title='初霁彩虹 心向阳光' target=_blank style="line-height:34px; padding-left:33px">初霁彩虹 心向阳光</a></div></td></tr>
+<tr>
+<td style=''><div style="width:100%; height:34px; border-bottom:dashed 1px #d7d7d7; background:url(/picture/0/08cd46a66f0341a6a4ee40379ef55386.jpg) left top no-repeat;" class="aa"><a href='/art/2022/7/7/art_14240_2304430.html' class='bt_link' title='2022年淄博市关爱保护未成年人健康成长宣传活动举行' target=_blank style="line-height:34px; padding-left:33px">2022年淄博市关爱保护未成年人健康成长宣传活动举行</a></div></td>
+</tr></table>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td width="760" height="28"></td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td valign="top" style="display: none;">
+                                    <table id="__01" width="264" height="252" border="0" cellpadding="0"
+                                        cellspacing="0">
+                                        <tr>
+                                            <td width="264" height="16"></td>
+                                        </tr>
+                                        <tr>
+                                            <td width="264" height="34">
+
+                                                <table id="__01" width="264" height="34" border="0" cellpadding="0"
+                                                    cellspacing="0">
+                                                    <tr>
+                                                        <td width="45" height="34"></td>
+                                                        <td width="84" height="34" class="font3">
+                                                            
+                                                        </td>
+                                                        <td width="121" height="34">
+                                                            <ul class="news-tab01">
+                                                                <li onmouseover="change_news('z', 1);"
+                                                                    id="new_title_z_1" style="width:37px;">
+                                                                    
+                                                                </li>
+                                                                <li onmouseover="change_news('z', 2);"
+                                                                    id="new_title_z_2" style="width:37px;">
+                                                                    
+                                                                </li>
+                                                                <li onmouseover="change_news('z', 3);"
+                                                                    id="new_title_z_3" style="width:47px;">
+                                                                    
+                                                                </li>
+                                                            </ul>
+                                                        </td>
+                                                        <td width="14" height="34"></td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td width="264" height="242" valign="top">
+                                                <ul class="tab-about01" id="news_list_z_1" style="display:block;">
+                                                    
+
+                                                </ul>
+                                                <ul class="tab-about01" id="news_list_z_2" style="display:none;">
+                                                    
+
+                                                </ul>
+                                                <ul class="tab-about01" id="news_list_z_3" style="display:none;">
+                                                    
+                                                </ul>
+                                            </td>
+                                        </tr>
+
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="1011" height="12"></td>
+                </tr>
+                <tr style="display: none;">
+                    <td width="1011" height="120" style="border: 1px solid #ededed; background: #fff;">
+                        
+                    </td>
+                </tr>
+                <tr style="display: none;">
+                    <td width="1011" height="12"></td>
+                </tr>
+                <tr>
+                    <td width="1011" height="270" style="background:url(/images/997/zb_02_09.jpg) no-repeat">
+                        <table id="__01" width="1011" height="270" border="0" cellpadding="0" cellspacing="0"
+                            background="/images/997/zb_02_09.jpg">
+                            <tr>
+                                <td width="246" height="270" valign="top">
+                                    <table id="__" width="246" height="255" border="0" cellpadding="0" cellspacing="0">
+                                        <tr>
+                                            <td width="246" height="55">
+                                                <table id="__" width="246" height="55" border="0" cellpadding="0"
+                                                    cellspacing="0">
+                                                    <tr>
+                                                        <td height="18"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td width="190" height="35" class="font7"
+                                                            style=" padding-left:25px;">
+                                                            <div style=" margin-top: -4px;"><a style="font-size:17px; margin-left:10px;color: #4790d4; font-weight:bolder; " href="http://edu.zibo.gov.cn/gongkai/" target="_blank" class="white">政务公开</a></div>
+                                                        </td>
+                                                        <td width="54" height="35">
+                                                            
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td width="236" height="200" valign="top">
+                                                <style>
+	.zwgk{
+		    width: 220px;
+    height: 30px;
+    display: block;
+    line-height: 30px;
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+    font-size: 15px;
+    font-family: '微软雅黑';
+    margin: 0 auto;
+    margin-bottom: 10px;
+    padding-left: 10px;
+	}
+</style>
+<div style="margin-top: 10px;"> 
+	<a class="zwgk" style=" background:url(/picture/0/395a5009a6634db19290512a38001518.jpg) no-repeat;" href="http://edu.zibo.gov.cn/gongkai/?open=zfxxgkzn" target="_blank">政府信息公开指南</a> 
+	<a class="zwgk" style=" background:url(/picture/0/60c484241fa9442982eca9327d10bb48.jpg) no-repeat;" href="http://edu.zibo.gov.cn/gongkai/?open=zfxxgkzd" target="_blank">政府信息公开制度</a> 
+	<a class="zwgk" style=" background:url(/picture/0/c9770fd105c1474980c5a9565d0a4bdc.jpg) no-repeat;" href="http://edu.zibo.gov.cn/gongkai/?open=fdnrzdgk" target="_blank">法定主动公开内容</a> 
+	<a class="zwgk" style=" background:url(/picture/0/6f15f3dd6faf4fd8b1284b27f02e13f0.jpg) no-repeat;" href="http://edu.zibo.gov.cn/gongkai/?open=zfxxgknb" target="_blank">政府信息公开年度报告</a> 
+	<a class="zwgk" style=" background:url(/picture/0/646530cf056e455389ce545ee3b5da3e.jpg) no-repeat;" href="http://www.zibo.gov.cn/jact/front/mailwrite.do?sysid=2&groupid=8&userids=G8" target="_blank">政府信息依申请公开</a> 
+</div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td width="765" height="270">
+                                    <table id="__01" width="765" height="270" border="0" cellpadding="0"
+                                        cellspacing="0">
+                                        <tr>
+                                            <td width="765" height="17"></td>
+                                        </tr>
+                                        <tr>
+                                            <td width="765" height="36">
+                                                <table id="__01" width="765" height="36" border="0" cellpadding="0"
+                                                    cellspacing="0">
+                                                    <tr>
+                                                        <td width="36" height="36" class="font1" style="width: 3px;"></td>
+                                                        <td width="619" height="36">
+                                                            <div class="tab-div4">
+                                                                <ul>
+                                                                    <li class="nb-on" id="nb1"
+                                                                        onmouseover="setTab('nb',1,5)">
+                                                                        <div><a style="font-size:10.5pt; font-weight:bolder;" href="/col/col3556/index.html" target="_blank" class="white">学前教育</a></div>
+                                                                    </li>
+                                                                    <li class="nb-off" id="nb2"
+                                                                        onmouseover="setTab('nb',2,5)">
+                                                                        <div><a style="font-size:10.5pt; font-weight:bolder;" href="/col/col6834/index.html" target="_blank" class="white">义务教育</a></div>
+                                                                    </li>
+                                                                    <li class="nb-off" id="nb3"
+                                                                        onmouseover="setTab('nb',3,5)">
+                                                                        <div><a style="font-size:10.5pt; font-weight:bolder;" href="/col/col6835/index.html" target="_blank" class="white">普通高中教育</a></div>
+                                                                    </li>
+                                                                    <li class="nb-off" id="nb4"
+                                                                        onmouseover="setTab('nb',4,5)" style="width: 130px;background-size: 100% 100%;">
+                                                                        <div><a style="font-size:10.5pt; font-weight:bolder;" href="/col/col6836/index.html" target="_blank" class="white">职业教育与高等教育</a></div>
+                                                                    </li>
+                                                                    <li class="nb-off" id="nb5"
+                                                                        onmouseover="setTab('nb',5,5)">
+                                                                        <div><a style="font-size:10.5pt; font-weight:bolder;" href="/col/col6838/index.html" target="_blank" class="white">民办教育</a></div>
+                                                                    </li>
+                                                                </ul>
+                                                                <div class="tab-div-more02" id="more_nb_1"></div>
+                                                                <div class="tab-div-more02" id="more_nb_2"
+                                                                    style="display:none"></div>
+                                                                <div class="tab-div-more02" id="more_nb_3"
+                                                                    style="display:none"></div>
+                                                                <div class="tab-div-more02" id="more_nb_4"
+                                                                    style="display:none"></div>
+                                                                <div class="tab-div-more02" id="more_nb_5"
+                                                                    style="display:none"></div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td width="765" height="217" valign="top">
+                                                <div class="tab-list" id="con_nb_1">
+                                                    <table id="__01" width="765" height="217" border="0" cellpadding="0"
+                                                        cellspacing="0" style="background:url(/images/997/bv.jpg) no-repeat">
+                                                        <tr>
+                                                            <td valign="top">
+                                                                <div style="margin-top:0px; padding-top:12px;">
+<table width='100%' cellspacing='0' cellpadding='0' border='0'>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="20"></td><td width="10" height="23" align="left"><span style="padding-right:26px;" readexclude><img src="/picture/0/331f0d8b7bb64926b6227d822bce314c.png" readexclude></span></td><td align="left" class="aa"><a href='/art/2025/12/24/art_3556_2978541.html' style="  line-height:30px;" class='bt_link' title='市教育局“托幼一体”服务获评“淄博市为民服务十佳创新项目”12月24日' target=_blank >市教育局“托幼一体”服务获评“淄博市为民服务十佳创新项目”</a></td><td width="45" align="center" class="bt_time" style="color:#7c7c7c;"><span readexclude>12-24</span></td><td width="40"></td></tr></table></td></tr>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="20"></td><td width="10" height="23" align="left"><span style="padding-right:26px;" readexclude><img src="/picture/0/331f0d8b7bb64926b6227d822bce314c.png" readexclude></span></td><td align="left" class="aa"><a href='/art/2024/3/27/art_3556_2802229.html' style="  line-height:30px;" class='bt_link' title='2024年“学前教育质量提升年”工作部署会召开03月27日' target=_blank >2024年“学前教育质量提升年”工作部署会召开</a></td><td width="45" align="center" class="bt_time" style="color:#7c7c7c;"><span readexclude>03-27</span></td><td width="40"></td></tr></table></td></tr>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="20"></td><td width="10" height="23" align="left"><span style="padding-right:26px;" readexclude><img src="/picture/0/331f0d8b7bb64926b6227d822bce314c.png" readexclude></span></td><td align="left" class="aa"><a href='/art/2024/2/5/art_3556_2803496.html' style="  line-height:30px;" class='bt_link' title='优秀案例展播⑥丨去小学的路02月05日' target=_blank >优秀案例展播⑥丨去小学的路</a></td><td width="45" align="center" class="bt_time" style="color:#7c7c7c;"><span readexclude>02-05</span></td><td width="40"></td></tr></table></td></tr>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="20"></td><td width="10" height="23" align="left"><span style="padding-right:26px;" readexclude><img src="/picture/0/331f0d8b7bb64926b6227d822bce314c.png" readexclude></span></td><td align="left" class="aa"><a href='/art/2024/1/31/art_3556_2803355.html' style="  line-height:30px;" class='bt_link' title='优秀案例展播⑤丨做计划的那些事01月31日' target=_blank >优秀案例展播⑤丨做计划的那些事</a></td><td width="45" align="center" class="bt_time" style="color:#7c7c7c;"><span readexclude>01-31</span></td><td width="40"></td></tr></table></td></tr>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="20"></td><td width="10" height="23" align="left"><span style="padding-right:26px;" readexclude><img src="/picture/0/331f0d8b7bb64926b6227d822bce314c.png" readexclude></span></td><td align="left" class="aa"><a href='/art/2024/1/18/art_3556_2801810.html' style="  line-height:30px;" class='bt_link' title='优秀案例展播④丨整理跳绳有办法01月18日' target=_blank >优秀案例展播④丨整理跳绳有办法</a></td><td width="45" align="center" class="bt_time" style="color:#7c7c7c;"><span readexclude>01-18</span></td><td width="40"></td></tr></table></td></tr>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="20"></td><td width="10" height="23" align="left"><span style="padding-right:26px;" readexclude><img src="/picture/0/331f0d8b7bb64926b6227d822bce314c.png" readexclude></span></td><td align="left" class="aa"><a href='/art/2024/1/5/art_3556_2801803.html' style="  line-height:30px;" class='bt_link' title='优秀案例展播③丨基于“二四三三”策略，家园社协同助力幼小衔接01月05日' target=_blank >优秀案例展播③丨基于“二四三三”策略，家园社协同助力幼小衔接</a></td><td width="45" align="center" class="bt_time" style="color:#7c7c7c;"><span readexclude>01-05</span></td><td width="40"></td></tr></table></td>
+</tr></table></div>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                                <div class="tab-list" id="con_nb_2" style="display:none">
+                                                    <table id="__01" width="765" height="217" border="0" cellpadding="0"
+                                                        cellspacing="0" style="background:url(/images/997/bv.jpg) no-repeat">
+                                                        <tr>
+                                                            <td valign="top">
+                                                                <div style="margin-top:0px; padding-top:12px;">
+<table width='100%' cellspacing='0' cellpadding='0' border='0'>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="20"></td><td width="10" height="23" align="left"><span style="padding-right:26px;" readexclude><img src="/picture/0/331f0d8b7bb64926b6227d822bce314c.png" readexclude></span></td><td align="left" class="aa"><a href='/art/2025/3/17/art_6834_2900710.html' style="  line-height:30px;" class='bt_link' title='2025年中考招生政策解读（一）03月17日' target=_blank >2025年中考招生政策解读（一）</a></td><td width="45" align="center" class="bt_time" style="color:#7c7c7c;"><span readexclude>03-17</span></td><td width="40"></td></tr></table></td></tr>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="20"></td><td width="10" height="23" align="left"><span style="padding-right:26px;" readexclude><img src="/picture/0/331f0d8b7bb64926b6227d822bce314c.png" readexclude></span></td><td align="left" class="aa"><a href='/art/2024/3/6/art_6834_2795597.html' style="  line-height:30px;" class='bt_link' title='2024年中考招生政策解读（一）03月06日' target=_blank >2024年中考招生政策解读（一）</a></td><td width="45" align="center" class="bt_time" style="color:#7c7c7c;"><span readexclude>03-06</span></td><td width="40"></td></tr></table></td></tr>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="20"></td><td width="10" height="23" align="left"><span style="padding-right:26px;" readexclude><img src="/picture/0/331f0d8b7bb64926b6227d822bce314c.png" readexclude></span></td><td align="left" class="aa"><a href='/art/2023/5/26/art_6834_2708694.html' style="  line-height:30px;" class='bt_link' title='2023年中考热点解读（三）05月26日' target=_blank >2023年中考热点解读（三）</a></td><td width="45" align="center" class="bt_time" style="color:#7c7c7c;"><span readexclude>05-26</span></td><td width="40"></td></tr></table></td></tr>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="20"></td><td width="10" height="23" align="left"><span style="padding-right:26px;" readexclude><img src="/picture/0/331f0d8b7bb64926b6227d822bce314c.png" readexclude></span></td><td align="left" class="aa"><a href='/art/2023/5/26/art_6834_2708691.html' style="  line-height:30px;" class='bt_link' title='2023年中考热点解读（二）05月26日' target=_blank >2023年中考热点解读（二）</a></td><td width="45" align="center" class="bt_time" style="color:#7c7c7c;"><span readexclude>05-26</span></td><td width="40"></td></tr></table></td></tr>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="20"></td><td width="10" height="23" align="left"><span style="padding-right:26px;" readexclude><img src="/picture/0/331f0d8b7bb64926b6227d822bce314c.png" readexclude></span></td><td align="left" class="aa"><a href='/art/2023/3/22/art_6834_2705553.html' style="  line-height:30px;" class='bt_link' title='2023年中考招生政策解读（一）03月22日' target=_blank >2023年中考招生政策解读（一）</a></td><td width="45" align="center" class="bt_time" style="color:#7c7c7c;"><span readexclude>03-22</span></td><td width="40"></td></tr></table></td></tr>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="20"></td><td width="10" height="23" align="left"><span style="padding-right:26px;" readexclude><img src="/picture/0/331f0d8b7bb64926b6227d822bce314c.png" readexclude></span></td><td align="left" class="aa"><a href='/art/2022/7/1/art_6834_2303180.html' style="  line-height:30px;" class='bt_link' title='暑期没人带娃？——淄博启动暑期托管解民忧07月01日' target=_blank >暑期没人带娃？——淄博启动暑期托管解民忧</a></td><td width="45" align="center" class="bt_time" style="color:#7c7c7c;"><span readexclude>07-01</span></td><td width="40"></td></tr></table></td>
+</tr></table></div>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                                <div class="tab-list" id="con_nb_3" style="display:none">
+                                                    <table id="__01" width="765" height="217" border="0" cellpadding="0"
+                                                        cellspacing="0" style="background:url(/images/997/bv.jpg) no-repeat">
+                                                        <tr>
+                                                            <td valign="top">
+                                                                <div style="margin-top:0px; padding-top:12px;">
+<table width='100%' cellspacing='0' cellpadding='0' border='0'>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="20"></td><td width="10" height="23" align="left"><span style="padding-right:26px;" readexclude><img src="/picture/0/331f0d8b7bb64926b6227d822bce314c.png" readexclude></span></td><td align="left" class="aa"><a href='/art/2025/12/15/art_6835_2978552.html' style="  line-height:30px;" class='bt_link' title='关于公布2025——2026学年第二学期全市普通中小学教学时间及寒假安排的通知12月15日' target=_blank >关于公布2025——2026学年第二学期全市普通中小学教学时间及寒假安排...</a></td><td width="45" align="center" class="bt_time" style="color:#7c7c7c;"><span readexclude>12-15</span></td><td width="40"></td></tr></table></td></tr>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="20"></td><td width="10" height="23" align="left"><span style="padding-right:26px;" readexclude><img src="/picture/0/331f0d8b7bb64926b6227d822bce314c.png" readexclude></span></td><td align="left" class="aa"><a href='/art/2024/6/10/art_6835_2822754.html' style="  line-height:30px;" class='bt_link' title='我市2024年夏季高考顺利结束06月10日' target=_blank >我市2024年夏季高考顺利结束</a></td><td width="45" align="center" class="bt_time" style="color:#7c7c7c;"><span readexclude>06-10</span></td><td width="40"></td></tr></table></td></tr>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="20"></td><td width="10" height="23" align="left"><span style="padding-right:26px;" readexclude><img src="/picture/0/331f0d8b7bb64926b6227d822bce314c.png" readexclude></span></td><td align="left" class="aa"><a href='/art/2023/2/17/art_6835_2690230.html' style="  line-height:30px;" class='bt_link' title='关于组织全市普通高中高三模拟考试的通知02月17日' target=_blank >关于组织全市普通高中高三模拟考试的通知</a></td><td width="45" align="center" class="bt_time" style="color:#7c7c7c;"><span readexclude>02-17</span></td><td width="40"></td></tr></table></td></tr>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="20"></td><td width="10" height="23" align="left"><span style="padding-right:26px;" readexclude><img src="/picture/0/331f0d8b7bb64926b6227d822bce314c.png" readexclude></span></td><td align="left" class="aa"><a href='/art/2021/8/30/art_6835_2155788.html' style="  line-height:30px;" class='bt_link' title='全市高中高质量发展工作会召开08月30日' target=_blank >全市高中高质量发展工作会召开</a></td><td width="45" align="center" class="bt_time" style="color:#7c7c7c;"><span readexclude>08-30</span></td><td width="40"></td></tr></table></td></tr>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="20"></td><td width="10" height="23" align="left"><span style="padding-right:26px;" readexclude><img src="/picture/0/331f0d8b7bb64926b6227d822bce314c.png" readexclude></span></td><td align="left" class="aa"><a href='/art/2021/5/8/art_6835_2153015.html' style="  line-height:30px;" class='bt_link' title='全市普通高中高考备考工作调度会召开05月08日' target=_blank >全市普通高中高考备考工作调度会召开</a></td><td width="45" align="center" class="bt_time" style="color:#7c7c7c;"><span readexclude>05-08</span></td><td width="40"></td></tr></table></td></tr>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="20"></td><td width="10" height="23" align="left"><span style="padding-right:26px;" readexclude><img src="/picture/0/331f0d8b7bb64926b6227d822bce314c.png" readexclude></span></td><td align="left" class="aa"><a href='/art/2021/3/19/art_6835_2153014.html' style="  line-height:30px;" class='bt_link' title='全市普通高中高考备考分析会召开03月19日' target=_blank >全市普通高中高考备考分析会召开</a></td><td width="45" align="center" class="bt_time" style="color:#7c7c7c;"><span readexclude>03-19</span></td><td width="40"></td></tr></table></td>
+</tr></table></div>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                                <div class="tab-list" id="con_nb_4" style="display:none">
+                                                    <table id="__01" width="765" height="217" border="0" cellpadding="0"
+                                                        cellspacing="0" style="background:url(/images/997/bv.jpg) no-repeat">
+                                                        <tr>
+                                                            <td valign="top">
+                                                                <div style="margin-top:0px; padding-top:12px;">
+<table width='100%' cellspacing='0' cellpadding='0' border='0'>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="20"></td><td width="10" height="23" align="left"><span style="padding-right:26px;" readexclude><img src="/picture/0/331f0d8b7bb64926b6227d822bce314c.png" readexclude></span></td><td align="left" class="aa"><a href='/art/2026/3/12/art_6836_2990766.html' style="  line-height:30px;" class='bt_link' title='我市举办全市职业教育深化教学关键要素改革专题讲座03月12日' target=_blank >我市举办全市职业教育深化教学关键要素改革专题讲座</a></td><td width="45" align="center" class="bt_time" style="color:#7c7c7c;"><span readexclude>03-12</span></td><td width="40"></td></tr></table></td></tr>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="20"></td><td width="10" height="23" align="left"><span style="padding-right:26px;" readexclude><img src="/picture/0/331f0d8b7bb64926b6227d822bce314c.png" readexclude></span></td><td align="left" class="aa"><a href='/art/2026/1/29/art_6836_2985055.html' style="  line-height:30px;" class='bt_link' title='2025年度高校党委书记全面从严治党述责述廉和抓基层党建工作述职评议会议召开01月29日' target=_blank >2025年度高校党委书记全面从严治党述责述廉和抓基层党建工作述职评议会议...</a></td><td width="45" align="center" class="bt_time" style="color:#7c7c7c;"><span readexclude>01-29</span></td><td width="40"></td></tr></table></td></tr>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="20"></td><td width="10" height="23" align="left"><span style="padding-right:26px;" readexclude><img src="/picture/0/331f0d8b7bb64926b6227d822bce314c.png" readexclude></span></td><td align="left" class="aa"><a href='/art/2026/1/29/art_6836_2985054.html' style="  line-height:30px;" class='bt_link' title='全市教育领域全面从严治党暨思想政治工作会议召开01月29日' target=_blank >全市教育领域全面从严治党暨思想政治工作会议召开</a></td><td width="45" align="center" class="bt_time" style="color:#7c7c7c;"><span readexclude>01-29</span></td><td width="40"></td></tr></table></td></tr>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="20"></td><td width="10" height="23" align="left"><span style="padding-right:26px;" readexclude><img src="/picture/0/331f0d8b7bb64926b6227d822bce314c.png" readexclude></span></td><td align="left" class="aa"><a href='/art/2026/1/26/art_6836_2985053.html' style="  line-height:30px;" class='bt_link' title='淄博职业技术大学高青黄河学院揭牌01月26日' target=_blank >淄博职业技术大学高青黄河学院揭牌</a></td><td width="45" align="center" class="bt_time" style="color:#7c7c7c;"><span readexclude>01-26</span></td><td width="40"></td></tr></table></td></tr>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="20"></td><td width="10" height="23" align="left"><span style="padding-right:26px;" readexclude><img src="/picture/0/331f0d8b7bb64926b6227d822bce314c.png" readexclude></span></td><td align="left" class="aa"><a href='/art/2026/1/20/art_6836_2985052.html' style="  line-height:30px;" class='bt_link' title='我市12名教师入选山东省高等学校教学名师01月20日' target=_blank >我市12名教师入选山东省高等学校教学名师</a></td><td width="45" align="center" class="bt_time" style="color:#7c7c7c;"><span readexclude>01-20</span></td><td width="40"></td></tr></table></td></tr>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="20"></td><td width="10" height="23" align="left"><span style="padding-right:26px;" readexclude><img src="/picture/0/331f0d8b7bb64926b6227d822bce314c.png" readexclude></span></td><td align="left" class="aa"><a href='/art/2026/1/15/art_6836_2985050.html' style="  line-height:30px;" class='bt_link' title='山东轻工职业学院淄川学院揭牌01月15日' target=_blank >山东轻工职业学院淄川学院揭牌</a></td><td width="45" align="center" class="bt_time" style="color:#7c7c7c;"><span readexclude>01-15</span></td><td width="40"></td></tr></table></td>
+</tr></table></div>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                                <div class="tab-list" id="con_nb_5" style="display:none">
+                                                    <table id="__01" width="765" height="217" border="0" cellpadding="0"
+                                                        cellspacing="0" style="background:url(/images/997/bv.jpg) no-repeat">
+                                                        <tr>
+                                                            <td valign="top">
+                                                                <div style="margin-top:0px; padding-top:12px;">
+<table width='100%' cellspacing='0' cellpadding='0' border='0'>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="20"></td><td width="10" height="23" align="left"><span style="padding-right:26px;" readexclude><img src="/picture/0/331f0d8b7bb64926b6227d822bce314c.png" readexclude></span></td><td align="left" class="aa"><a href='/art/2025/11/4/art_6838_2969003.html' style="  line-height:30px;" class='bt_link' title='全市民办学校党建工作培训班成功举办11月04日' target=_blank >全市民办学校党建工作培训班成功举办</a></td><td width="45" align="center" class="bt_time" style="color:#7c7c7c;"><span readexclude>11-04</span></td><td width="40"></td></tr></table></td></tr>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="20"></td><td width="10" height="23" align="left"><span style="padding-right:26px;" readexclude><img src="/picture/0/331f0d8b7bb64926b6227d822bce314c.png" readexclude></span></td><td align="left" class="aa"><a href='/art/2025/11/4/art_6838_2969000.html' style="  line-height:30px;" class='bt_link' title='淄博市教育局市级行政许可事项中介服务项目清单11月04日' target=_blank >淄博市教育局市级行政许可事项中介服务项目清单</a></td><td width="45" align="center" class="bt_time" style="color:#7c7c7c;"><span readexclude>11-04</span></td><td width="40"></td></tr></table></td></tr>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="20"></td><td width="10" height="23" align="left"><span style="padding-right:26px;" readexclude><img src="/picture/0/331f0d8b7bb64926b6227d822bce314c.png" readexclude></span></td><td align="left" class="aa"><a href='/art/2025/7/8/art_6838_2931554.html' style="  line-height:30px;" class='bt_link' title='淄博市暑期校外培训监督举报渠道07月08日' target=_blank >淄博市暑期校外培训监督举报渠道</a></td><td width="45" align="center" class="bt_time" style="color:#7c7c7c;"><span readexclude>07-08</span></td><td width="40"></td></tr></table></td></tr>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="20"></td><td width="10" height="23" align="left"><span style="padding-right:26px;" readexclude><img src="/picture/0/331f0d8b7bb64926b6227d822bce314c.png" readexclude></span></td><td align="left" class="aa"><a href='/art/2025/4/30/art_6838_2911978.html' style="  line-height:30px;" class='bt_link' title='淄博市校外教育培训监督举报渠道04月30日' target=_blank >淄博市校外教育培训监督举报渠道</a></td><td width="45" align="center" class="bt_time" style="color:#7c7c7c;"><span readexclude>04-30</span></td><td width="40"></td></tr></table></td></tr>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="20"></td><td width="10" height="23" align="left"><span style="padding-right:26px;" readexclude><img src="/picture/0/331f0d8b7bb64926b6227d822bce314c.png" readexclude></span></td><td align="left" class="aa"><a href='/art/2024/11/4/art_6838_2870703.html' style="  line-height:30px;" class='bt_link' title='全市教育系统社会组织党建工作会议召开11月04日' target=_blank >全市教育系统社会组织党建工作会议召开</a></td><td width="45" align="center" class="bt_time" style="color:#7c7c7c;"><span readexclude>11-04</span></td><td width="40"></td></tr></table></td></tr>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="20"></td><td width="10" height="23" align="left"><span style="padding-right:26px;" readexclude><img src="/picture/0/331f0d8b7bb64926b6227d822bce314c.png" readexclude></span></td><td align="left" class="aa"><a href='/art/2024/3/21/art_6838_2800232.html' style="  line-height:30px;" class='bt_link' title='《校外培训行政处罚暂行办法》‍‍‍03月21日' target=_blank >《校外培训行政处罚暂行办法》‍‍‍</a></td><td width="45" align="center" class="bt_time" style="color:#7c7c7c;"><span readexclude>03-21</span></td><td width="40"></td></tr></table></td>
+</tr></table></div>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="1011" height="13"></td>
+                </tr>
+                <tr>
+                    <td width="1011" height="270" style="background:url(/images/997/zb_02_09.jpg) no-repeat">
+                        <table id="__01" width="1011" height="270" border="0" cellpadding="0" cellspacing="0"
+                            background="/images/997/zb_02_09.jpg">
+                            <tr>
+                                <td width="246" height="270" valign="top" style="display: none;">
+                                    <table id="__01" width="246" height="270" border="0" cellpadding="0"
+                                        cellspacing="0">
+                                        <tr>
+                                            <td width="246" height="18"></td>
+                                        </tr>
+                                        <tr>
+                                            <td width="246" height="35" valign="top">
+                                                <table width="246" height="35" border="0" cellpadding="0"
+                                                    cellspacing="0">
+                                                    <tr>
+                                                        <td width="190" height="35" class="font7"
+                                                            style=" padding-left:25px;">
+                                                            
+                                                        </td>
+                                                        <td width="56" height="35">
+                                                            
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td width="246" height="5"></td>
+                                        </tr>
+                                        <tr>
+                                            <td width="246" height="5" valign="top"></td>
+                                        </tr>
+                                        <tr>
+                                            <td width="246" height="85" valign="top">
+                                                
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td width="1011" height="270">
+                                    <table id="__01" width="1011" height="270" border="0" cellpadding="0"
+                                        cellspacing="0">
+                                        <tr>
+                                            <td width="1011" height="17"></td>
+                                        </tr>
+                                        <tr>
+                                            <td width="1011" height="36">
+                                                <table id="__01" width="1011" height="36" border="0" cellpadding="0"
+                                                    cellspacing="0">
+                                                    <tr>
+                                                        <td width="36" height="36" class="font1"></td>
+                                                        <td width="619" height="36">
+                                                            <div class="tab-div4" style="width: 960px;">
+                                                                <ul>
+                                                                    <li class="tb-on" id="te1"
+                                                                        onmouseover="setTab('te',1,7)">
+                                                                        <div><a style="font-size:10.5pt; font-weight:bolder;" href="/col/col227/index.html" target="_blank" class="white">法律法规</a></div>
+                                                                    </li>
+                                                                    <li class="tb-off" id="te2"
+                                                                        onmouseover="setTab('te',2,7)">
+                                                                        <div><a style="font-size:10.5pt; font-weight:bolder;" href="/col/col236/index.html" target="_blank"  class="white">政策解读</a></div>
+                                                                    </li>
+                                                                    <li class="tb-off" id="te3"
+                                                                        onmouseover="setTab('te',3,7)">
+                                                                        <div><a style="font-size:10.5pt; font-weight:bolder;" href="/col/col6845/index.html" target="_blank" class="white">教育督导</a></div>
+                                                                    </li>
+                                                                    <li class="tb-off" id="te4"
+                                                                        onmouseover="setTab('te',4,7)">
+                                                                        
+                                                                    </li>
+                                                                    <li class="tb-off" id="te5"
+                                                                        onmouseover="setTab('te',5,7)">
+                                                                        <div><a style="font-size:10.5pt; font-weight:bolder;" href="/col/col6833/index.html" target="_blank" class="white">财务规划</a></div>
+                                                                    </li>
+                                                                    <li class="tb-off" id="te6"
+                                                                        onmouseover="setTab('te',6,7)">
+                                                                        <div><a style="font-size:10.5pt; font-weight:bolder;" href="/col/col6837/index.html" target="_blank" class="white">美与健康</a></div>
+                                                                    </li>
+                                                                    <li class="tb-off" id="te7"
+                                                                        onmouseover="setTab('te',7,7)">
+                                                                        <div><a style="font-size:10.5pt; font-weight:bolder;" href="/col/col6839/index.html" target="_blank" class="white">社区教育</a></div>
+                                                                    </li>
+                                                                </ul>
+                                                                <div class="tab-div-more02" id="more_te_1"></div>
+                                                                <div class="tab-div-more02" id="more_te_2"
+                                                                    style="display:none"></div>
+                                                                <div class="tab-div-more02" id="more_te_3"
+                                                                    style="display:none"></div>
+                                                                <div class="tab-div-more02" id="more_te_4"
+                                                                    style="display:none"></div>
+                                                                <div class="tab-div-more02" id="more_te_5"
+                                                                    style="display:none"></div>
+																<div class="tab-div-more02" id="more_te_6"
+																	style="display:none"></div>
+																<div class="tab-div-more02" id="more_te_7"
+																	style="display:none"></div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td width="1011" height="217" valign="top">
+                                                <div class="tab-list" id="con_te_1">
+                                                    <table id="__01" width="1011" height="217" border="0" cellpadding="0"
+                                                        cellspacing="0" style="background:url(/images/997/bv.jpg)">
+                                                        <tr>
+                                                            <td valign="top">
+                                                                <div style="margin-top:0px; padding-top:12px;">
+<table width='100%' cellspacing='0' cellpadding='0' border='0'>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="20"></td><td width="10" height="23" align="left"><span style="padding-right:26px;" readexclude><img src="/picture/0/331f0d8b7bb64926b6227d822bce314c.png" readexclude></span></td><td align="left" class="aa"><a href='/art/2026/2/12/art_227_2986609.html' style="  line-height:30px;" class='bt_link' title='《行政执法监督条例》02月12日' target=_blank >《行政执法监督条例》</a></td><td width="45" align="center" class="bt_time" style="color:#7c7c7c;"><span readexclude>02-12</span></td><td width="40"></td></tr></table></td></tr>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="20"></td><td width="10" height="23" align="left"><span style="padding-right:26px;" readexclude><img src="/picture/0/331f0d8b7bb64926b6227d822bce314c.png" readexclude></span></td><td align="left" class="aa"><a href='/art/2026/1/27/art_227_2983403.html' style="  line-height:30px;" class='bt_link' title='《中华人民共和国民营经济促进法》01月27日' target=_blank >《中华人民共和国民营经济促进法》</a></td><td width="45" align="center" class="bt_time" style="color:#7c7c7c;"><span readexclude>01-27</span></td><td width="40"></td></tr></table></td></tr>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="20"></td><td width="10" height="23" align="left"><span style="padding-right:26px;" readexclude><img src="/picture/0/331f0d8b7bb64926b6227d822bce314c.png" readexclude></span></td><td align="left" class="aa"><a href='/art/2026/1/27/art_227_2983402.html' style="  line-height:30px;" class='bt_link' title='《山东省民营经济促进条例》01月27日' target=_blank >《山东省民营经济促进条例》</a></td><td width="45" align="center" class="bt_time" style="color:#7c7c7c;"><span readexclude>01-27</span></td><td width="40"></td></tr></table></td></tr>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="20"></td><td width="10" height="23" align="left"><span style="padding-right:26px;" readexclude><img src="/picture/0/331f0d8b7bb64926b6227d822bce314c.png" readexclude></span></td><td align="left" class="aa"><a href='/art/2025/3/24/art_227_2902644.html' style="  line-height:30px;" class='bt_link' title='中华人民共和国学前教育法03月24日' target=_blank >中华人民共和国学前教育法</a></td><td width="45" align="center" class="bt_time" style="color:#7c7c7c;"><span readexclude>03-24</span></td><td width="40"></td></tr></table></td></tr>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="20"></td><td width="10" height="23" align="left"><span style="padding-right:26px;" readexclude><img src="/picture/0/331f0d8b7bb64926b6227d822bce314c.png" readexclude></span></td><td align="left" class="aa"><a href='/art/2024/1/2/art_227_2778973.html' style="  line-height:30px;" class='bt_link' title='中华人民共和国爱国主义教育法01月02日' target=_blank >中华人民共和国爱国主义教育法</a></td><td width="45" align="center" class="bt_time" style="color:#7c7c7c;"><span readexclude>01-02</span></td><td width="40"></td></tr></table></td></tr>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="20"></td><td width="10" height="23" align="left"><span style="padding-right:26px;" readexclude><img src="/picture/0/331f0d8b7bb64926b6227d822bce314c.png" readexclude></span></td><td align="left" class="aa"><a href='/art/2024/1/2/art_227_2778972.html' style="  line-height:30px;" class='bt_link' title='未成年人网络保护条例01月02日' target=_blank >未成年人网络保护条例</a></td><td width="45" align="center" class="bt_time" style="color:#7c7c7c;"><span readexclude>01-02</span></td><td width="40"></td></tr></table></td>
+</tr></table></div>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                                <div class="tab-list" id="con_te_2" style="display:none">
+                                                    <table id="__01" width="1011" height="217" border="0" cellpadding="0"
+                                                        cellspacing="0" style="background:url(/images/997/bv.jpg)">
+                                                        <tr>
+                                                            <td valign="top">
+                                                                <div style="margin-top:0px; padding-top:12px;">
+<table width='100%' cellspacing='0' cellpadding='0' border='0'>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="20"></td><td width="10" height="23" align="left"><span style="padding-right:26px;" readexclude><img src="/picture/0/331f0d8b7bb64926b6227d822bce314c.png" readexclude></span></td><td align="left" class="aa"><a href='/art/2025/3/24/art_236_2902645.html' style="  line-height:30px;" class='bt_link' title='2025年中考招生政策解读（一）03月24日' target=_blank >2025年中考招生政策解读（一）</a></td><td width="45" align="center" class="bt_time" style="color:#7c7c7c;"><span readexclude>03-24</span></td><td width="40"></td></tr></table></td></tr>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="20"></td><td width="10" height="23" align="left"><span style="padding-right:26px;" readexclude><img src="/picture/0/331f0d8b7bb64926b6227d822bce314c.png" readexclude></span></td><td align="left" class="aa"><a href='/art/2023/9/13/art_236_2744144.html' style="  line-height:30px;" class='bt_link' title='【反垄断法护航全国统一大市场】新版公平竞争审查第三方评估实施指南09月13日' target=_blank >【反垄断法护航全国统一大市场】新版公平竞争审查第三方评估实施指南</a></td><td width="45" align="center" class="bt_time" style="color:#7c7c7c;"><span readexclude>09-13</span></td><td width="40"></td></tr></table></td></tr>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="20"></td><td width="10" height="23" align="left"><span style="padding-right:26px;" readexclude><img src="/picture/0/331f0d8b7bb64926b6227d822bce314c.png" readexclude></span></td><td align="left" class="aa"><a href='/art/2023/9/13/art_236_2744138.html' style="  line-height:30px;" class='bt_link' title='【公平竞争政策宣传周】带你了解公平竞争政策知识09月13日' target=_blank >【公平竞争政策宣传周】带你了解公平竞争政策知识</a></td><td width="45" align="center" class="bt_time" style="color:#7c7c7c;"><span readexclude>09-13</span></td><td width="40"></td></tr></table></td></tr>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="20"></td><td width="10" height="23" align="left"><span style="padding-right:26px;" readexclude><img src="/picture/0/331f0d8b7bb64926b6227d822bce314c.png" readexclude></span></td><td align="left" class="aa"><a href='/art/2023/3/22/art_236_2685696.html' style="  line-height:30px;" class='bt_link' title='2023年中考招生政策解读（一）03月22日' target=_blank >2023年中考招生政策解读（一）</a></td><td width="45" align="center" class="bt_time" style="color:#7c7c7c;"><span readexclude>03-22</span></td><td width="40"></td></tr></table></td></tr>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="20"></td><td width="10" height="23" align="left"><span style="padding-right:26px;" readexclude><img src="/picture/0/331f0d8b7bb64926b6227d822bce314c.png" readexclude></span></td><td align="left" class="aa"><a href='/art/2022/11/11/art_236_2342341.html' style="  line-height:30px;" class='bt_link' title='《淄博市教育局规范行政处罚裁量权办法》政策解读11月11日' target=_blank >《淄博市教育局规范行政处罚裁量权办法》政策解读</a></td><td width="45" align="center" class="bt_time" style="color:#7c7c7c;"><span readexclude>11-11</span></td><td width="40"></td></tr></table></td></tr>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="20"></td><td width="10" height="23" align="left"><span style="padding-right:26px;" readexclude><img src="/picture/0/331f0d8b7bb64926b6227d822bce314c.png" readexclude></span></td><td align="left" class="aa"><a href='/art/2022/6/8/art_236_2295671.html' style="  line-height:30px;" class='bt_link' title='2022年中考招生政策解读（四）——志愿填报及招生录取政策解读06月08日' target=_blank >2022年中考招生政策解读（四）——志愿填报及招生录取政策解读</a></td><td width="45" align="center" class="bt_time" style="color:#7c7c7c;"><span readexclude>06-08</span></td><td width="40"></td></tr></table></td>
+</tr></table></div>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                                <div class="tab-list" id="con_te_3" style="display:none">
+                                                    <table id="__01" width="1011" height="217" border="0" cellpadding="0"
+                                                        cellspacing="0" style="background:url(/images/997/bv.jpg)">
+                                                        <tr>
+                                                            <td valign="top">
+                                                                <div style="margin-top:0px; padding-top:12px;">
+<table width='100%' cellspacing='0' cellpadding='0' border='0'>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="20"></td><td width="10" height="23" align="left"><span style="padding-right:26px;" readexclude><img src="/picture/0/331f0d8b7bb64926b6227d822bce314c.png" readexclude></span></td><td align="left" class="aa"><a href='/art/2026/2/12/art_6845_2986687.html' style="  line-height:30px;" class='bt_link' title='淄博教育督导工作获奖案例取得新突破02月12日' target=_blank >淄博教育督导工作获奖案例取得新突破</a></td><td width="45" align="center" class="bt_time" style="color:#7c7c7c;"><span readexclude>02-12</span></td><td width="40"></td></tr></table></td></tr>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="20"></td><td width="10" height="23" align="left"><span style="padding-right:26px;" readexclude><img src="/picture/0/331f0d8b7bb64926b6227d822bce314c.png" readexclude></span></td><td align="left" class="aa"><a href='/art/2026/2/6/art_6845_2985681.html' style="  line-height:30px;" class='bt_link' title='新春潮动 聚力攻坚——淄博市聚焦整建制实现义务教育优质均衡发展开展系列活动02月06日' target=_blank >新春潮动 聚力攻坚——淄博市聚焦整建制实现义务教育优质均衡发展开展系列活动</a></td><td width="45" align="center" class="bt_time" style="color:#7c7c7c;"><span readexclude>02-06</span></td><td width="40"></td></tr></table></td></tr>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="20"></td><td width="10" height="23" align="left"><span style="padding-right:26px;" readexclude><img src="/picture/0/331f0d8b7bb64926b6227d822bce314c.png" readexclude></span></td><td align="left" class="aa"><a href='/art/2026/1/14/art_6845_2981039.html' style="  line-height:30px;" class='bt_link' title='国家认定新增5个区县！淄博市“两项创建”居全省第一方阵01月14日' target=_blank >国家认定新增5个区县！淄博市“两项创建”居全省第一方阵</a></td><td width="45" align="center" class="bt_time" style="color:#7c7c7c;"><span readexclude>01-14</span></td><td width="40"></td></tr></table></td></tr>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="20"></td><td width="10" height="23" align="left"><span style="padding-right:26px;" readexclude><img src="/picture/0/331f0d8b7bb64926b6227d822bce314c.png" readexclude></span></td><td align="left" class="aa"><a href='/art/2025/10/15/art_6845_2963608.html' style="  line-height:30px;" class='bt_link' title='聚力推动“两项创建” 持续锻强督学队伍——全市“两项创建”现场观摩暨责任督学培训活动成功举办10月15日' target=_blank >聚力推动“两项创建” 持续锻强督学队伍——全市“两项创建”现场观摩暨责任督学培训活动成功举办</a></td><td width="45" align="center" class="bt_time" style="color:#7c7c7c;"><span readexclude>10-15</span></td><td width="40"></td></tr></table></td></tr>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="20"></td><td width="10" height="23" align="left"><span style="padding-right:26px;" readexclude><img src="/picture/0/331f0d8b7bb64926b6227d822bce314c.png" readexclude></span></td><td align="left" class="aa"><a href='/art/2025/4/22/art_6845_2909717.html' style="  line-height:30px;" class='bt_link' title='共签教育督导行动公约，同绘联动共创春天画卷04月22日' target=_blank >共签教育督导行动公约，同绘联动共创春天画卷</a></td><td width="45" align="center" class="bt_time" style="color:#7c7c7c;"><span readexclude>04-22</span></td><td width="40"></td></tr></table></td></tr>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="20"></td><td width="10" height="23" align="left"><span style="padding-right:26px;" readexclude><img src="/picture/0/331f0d8b7bb64926b6227d822bce314c.png" readexclude></span></td><td align="left" class="aa"><a href='/art/2024/6/14/art_6845_2822763.html' style="  line-height:30px;" class='bt_link' title='同向同力共谱教育督导文化践行同心圆06月14日' target=_blank >同向同力共谱教育督导文化践行同心圆</a></td><td width="45" align="center" class="bt_time" style="color:#7c7c7c;"><span readexclude>06-14</span></td><td width="40"></td></tr></table></td>
+</tr></table></div>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                                <div class="tab-list" id="con_te_4" style="display:none">
+                                                    <table id="__01" width="1011" height="217" border="0" cellpadding="0"
+                                                        cellspacing="0" style="background:url(/images/997/bv.jpg)">
+                                                        <tr>
+                                                            <td valign="top">
+                                                                
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                                <div class="tab-list" id="con_te_5" style="display:none">
+                                                    <table id="__01" width="1011" height="217" border="0" cellpadding="0"
+                                                        cellspacing="0" style="background:url(/images/997/bv.jpg)">
+                                                        <tr>
+                                                            <td valign="top">
+                                                                <div style="margin-top:0px; padding-top:12px;">
+<table width='100%' cellspacing='0' cellpadding='0' border='0'>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="20"></td><td width="10" height="23" align="left"><span style="padding-right:26px;" readexclude><img src="/picture/0/331f0d8b7bb64926b6227d822bce314c.png" readexclude></span></td><td align="left" class="aa"><a href='/art/2021/2/26/art_6833_2087115.html' style="  line-height:30px;" class='bt_link' title='2021年淄博市教育局部门预算02月26日' target=_blank >2021年淄博市教育局部门预算</a></td><td width="45" align="center" class="bt_time" style="color:#7c7c7c;">02-26</td><td width="40"></td></tr></table></td></tr>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="20"></td><td width="10" height="23" align="left"><span style="padding-right:26px;" readexclude><img src="/picture/0/331f0d8b7bb64926b6227d822bce314c.png" readexclude></span></td><td align="left" class="aa"><a href='/art/2025/8/29/art_6833_2952056.html' style="  line-height:30px;" class='bt_link' title='教育收费政策提醒告诫书08月29日' target=_blank >教育收费政策提醒告诫书</a></td><td width="45" align="center" class="bt_time" style="color:#7c7c7c;">08-29</td><td width="40"></td></tr></table></td></tr>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="20"></td><td width="10" height="23" align="left"><span style="padding-right:26px;" readexclude><img src="/picture/0/331f0d8b7bb64926b6227d822bce314c.png" readexclude></span></td><td align="left" class="aa"><a href='/art/2025/7/14/art_6833_2933579.html' style="  line-height:30px;" class='bt_link' title='2024/2025学年淄博市教育事业发展简报07月14日' target=_blank >2024/2025学年淄博市教育事业发展简报</a></td><td width="45" align="center" class="bt_time" style="color:#7c7c7c;">07-14</td><td width="40"></td></tr></table></td></tr>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="20"></td><td width="10" height="23" align="left"><span style="padding-right:26px;" readexclude><img src="/picture/0/331f0d8b7bb64926b6227d822bce314c.png" readexclude></span></td><td align="left" class="aa"><a href='/art/2024/8/19/art_6833_2838256.html' style="  line-height:30px;" class='bt_link' title='趁热打铁再推进 争分夺秒抓落实08月19日' target=_blank >趁热打铁再推进 争分夺秒抓落实</a></td><td width="45" align="center" class="bt_time" style="color:#7c7c7c;">08-19</td><td width="40"></td></tr></table></td></tr>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="20"></td><td width="10" height="23" align="left"><span style="padding-right:26px;" readexclude><img src="/picture/0/331f0d8b7bb64926b6227d822bce314c.png" readexclude></span></td><td align="left" class="aa"><a href='/art/2024/4/9/art_6833_2804970.html' style="  line-height:30px;" class='bt_link' title='2023/2024学年淄博市教育事业发展简报04月09日' target=_blank >2023/2024学年淄博市教育事业发展简报</a></td><td width="45" align="center" class="bt_time" style="color:#7c7c7c;">04-09</td><td width="40"></td></tr></table></td></tr>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="20"></td><td width="10" height="23" align="left"><span style="padding-right:26px;" readexclude><img src="/picture/0/331f0d8b7bb64926b6227d822bce314c.png" readexclude></span></td><td align="left" class="aa"><a href='/art/2024/3/20/art_6833_2799828.html' style="  line-height:30px;" class='bt_link' title='淄博市教育局教育APP违规收费举报方式03月20日' target=_blank >淄博市教育局教育APP违规收费举报方式</a></td><td width="45" align="center" class="bt_time" style="color:#7c7c7c;">03-20</td><td width="40"></td></tr></table></td>
+</tr></table></div>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                                <div class="tab-list" id="con_te_6" style="display:none">
+                                                    <table id="__01" width="1011" height="217" border="0" cellpadding="0"
+                                                        cellspacing="0" style="background:url(/images/997/bv.jpg)">
+                                                        <tr>
+                                                            <td valign="top">
+                                                                <div style="margin-top:0px; padding-top:12px;">
+<table width='100%' cellspacing='0' cellpadding='0' border='0'>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="20"></td><td width="10" height="23" align="left"><span style="padding-right:26px;" readexclude><img src="/picture/0/331f0d8b7bb64926b6227d822bce314c.png" readexclude></span></td><td align="left" class="aa"><a href='/art/2025/12/30/art_6837_2978548.html' style="  line-height:30px;" class='bt_link' title='美育浸润·百花齐放——淄博市在2025年山东省中小学生校园艺术节展示活动中获佳绩12月30日' target=_blank >美育浸润·百花齐放——淄博市在2025年山东省中小学生校园艺术节展示活动中获佳绩</a></td><td width="45" align="center" class="bt_time" style="color:#7c7c7c;"><span readexclude> 12-30</span></td><td width="40"></td></tr></table></td></tr>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="20"></td><td width="10" height="23" align="left"><span style="padding-right:26px;" readexclude><img src="/picture/0/331f0d8b7bb64926b6227d822bce314c.png" readexclude></span></td><td align="left" class="aa"><a href='/art/2024/7/31/art_6837_2834776.html' style="  line-height:30px;" class='bt_link' title='淄博市第十八届中学生运动会踢毽子比赛成功举办07月31日' target=_blank >淄博市第十八届中学生运动会踢毽子比赛成功举办</a></td><td width="45" align="center" class="bt_time" style="color:#7c7c7c;"><span readexclude> 07-31</span></td><td width="40"></td></tr></table></td></tr>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="20"></td><td width="10" height="23" align="left"><span style="padding-right:26px;" readexclude><img src="/picture/0/331f0d8b7bb64926b6227d822bce314c.png" readexclude></span></td><td align="left" class="aa"><a href='/art/2024/7/31/art_6837_2834757.html' style="  line-height:30px;" class='bt_link' title='淄博市第十八届中学生运动会跳绳项目比赛顺利完赛07月31日' target=_blank >淄博市第十八届中学生运动会跳绳项目比赛顺利完赛</a></td><td width="45" align="center" class="bt_time" style="color:#7c7c7c;"><span readexclude> 07-31</span></td><td width="40"></td></tr></table></td></tr>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="20"></td><td width="10" height="23" align="left"><span style="padding-right:26px;" readexclude><img src="/picture/0/331f0d8b7bb64926b6227d822bce314c.png" readexclude></span></td><td align="left" class="aa"><a href='/art/2024/7/31/art_6837_2834740.html' style="  line-height:30px;" class='bt_link' title='淄博市第十八届中学生运动会四人制气排球项目顺利完赛07月31日' target=_blank >淄博市第十八届中学生运动会四人制气排球项目顺利完赛</a></td><td width="45" align="center" class="bt_time" style="color:#7c7c7c;"><span readexclude> 07-31</span></td><td width="40"></td></tr></table></td></tr>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="20"></td><td width="10" height="23" align="left"><span style="padding-right:26px;" readexclude><img src="/picture/0/331f0d8b7bb64926b6227d822bce314c.png" readexclude></span></td><td align="left" class="aa"><a href='/art/2024/7/26/art_6837_2833648.html' style="  line-height:30px;" class='bt_link' title='淄博市第十八届中学生运动会开幕07月26日' target=_blank >淄博市第十八届中学生运动会开幕</a></td><td width="45" align="center" class="bt_time" style="color:#7c7c7c;"><span readexclude> 07-26</span></td><td width="40"></td></tr></table></td></tr>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="20"></td><td width="10" height="23" align="left"><span style="padding-right:26px;" readexclude><img src="/picture/0/331f0d8b7bb64926b6227d822bce314c.png" readexclude></span></td><td align="left" class="aa"><a href='/art/2024/6/5/art_6837_2822766.html' style="  line-height:30px;" class='bt_link' title='关于公布淄博市首届中小学生“爱眼操”优秀作品征集活动评选结果的通知06月05日' target=_blank >关于公布淄博市首届中小学生“爱眼操”优秀作品征集活动评选结果的通知</a></td><td width="45" align="center" class="bt_time" style="color:#7c7c7c;"><span readexclude> 06-05</span></td><td width="40"></td></tr></table></td>
+</tr></table></div>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                                <div class="tab-list" id="con_te_7" style="display:none">
+                                                    <table id="__01" width="1011" height="217" border="0" cellpadding="0"
+                                                        cellspacing="0" style="background:url(/images/997/bv.jpg)">
+                                                        <tr>
+                                                            <td valign="top">
+                                                                <div style="margin-top:0px; padding-top:12px;">
+<table width='100%' cellspacing='0' cellpadding='0' border='0'>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="20"></td><td width="10" height="23" align="left"><span style="padding-right:26px;" readexclude><img src="/picture/0/331f0d8b7bb64926b6227d822bce314c.png" readexclude></span></td><td align="left" class="aa"><a href='http://www.zbqmxxw.com/default' style="  line-height:30px;" class='bt_link' title='淄博全民学习网01月11日' target=_blank >淄博全民学习网</a></td><td width="45" align="center" class="bt_time" style="color:#7c7c7c;"><span readexclude>01-11</span></td><td width="40"></td></tr></table></td></tr>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="20"></td><td width="10" height="23" align="left"><span style="padding-right:26px;" readexclude><img src="/picture/0/331f0d8b7bb64926b6227d822bce314c.png" readexclude></span></td><td align="left" class="aa"><a href='/art/2025/9/25/art_6839_2968290.html' style="  line-height:30px;" class='bt_link' title='2025年淄博市暨淄川区全民终身学习活动周启动仪式成功举办09月25日' target=_blank >2025年淄博市暨淄川区全民终身学习活动周启动仪式成功举办</a></td><td width="45" align="center" class="bt_time" style="color:#7c7c7c;"><span readexclude>09-25</span></td><td width="40"></td></tr></table></td></tr>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="20"></td><td width="10" height="23" align="left"><span style="padding-right:26px;" readexclude><img src="/picture/0/331f0d8b7bb64926b6227d822bce314c.png" readexclude></span></td><td align="left" class="aa"><a href='/art/2025/3/28/art_6839_2903702.html' style="  line-height:30px;" class='bt_link' title='国家开放大学到我市调研工作03月28日' target=_blank >国家开放大学到我市调研工作</a></td><td width="45" align="center" class="bt_time" style="color:#7c7c7c;"><span readexclude>03-28</span></td><td width="40"></td></tr></table></td></tr>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="20"></td><td width="10" height="23" align="left"><span style="padding-right:26px;" readexclude><img src="/picture/0/331f0d8b7bb64926b6227d822bce314c.png" readexclude></span></td><td align="left" class="aa"><a href='/art/2024/12/31/art_6839_2884294.html' style="  line-height:30px;" class='bt_link' title='我市51门课程入选2024年省社区教育优秀课程资源12月31日' target=_blank >我市51门课程入选2024年省社区教育优秀课程资源</a></td><td width="45" align="center" class="bt_time" style="color:#7c7c7c;"><span readexclude>12-31</span></td><td width="40"></td></tr></table></td></tr>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="20"></td><td width="10" height="23" align="left"><span style="padding-right:26px;" readexclude><img src="/picture/0/331f0d8b7bb64926b6227d822bce314c.png" readexclude></span></td><td align="left" class="aa"><a href='/art/2024/12/20/art_6839_2884291.html' style="  line-height:30px;" class='bt_link' title='我市在全省开放大学体系建设现场观摩活动作典型发言12月20日' target=_blank >我市在全省开放大学体系建设现场观摩活动作典型发言</a></td><td width="45" align="center" class="bt_time" style="color:#7c7c7c;"><span readexclude>12-20</span></td><td width="40"></td></tr></table></td></tr>
+<tr>
+<td style=''><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width="20"></td><td width="10" height="23" align="left"><span style="padding-right:26px;" readexclude><img src="/picture/0/331f0d8b7bb64926b6227d822bce314c.png" readexclude></span></td><td align="left" class="aa"><a href='/art/2024/12/19/art_6839_2884290.html' style="  line-height:30px;" class='bt_link' title='2024年度淄博市社区教育联盟年会在淄博教科产融合基地举办12月19日' target=_blank >2024年度淄博市社区教育联盟年会在淄博教科产融合基地举办</a></td><td width="45" align="center" class="bt_time" style="color:#7c7c7c;"><span readexclude>12-19</span></td><td width="40"></td></tr></table></td>
+</tr></table></div>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="1011" height="14"></td>
+                </tr>
+                <tr>
+                    <td width="1011" height="88" style="border: 1px solid #ededed; background: #fff;">
+                        <style>
+	.tvb{
+		width: 180px !important;
+		height: 60px;
+		font-size: 15px;
+		margin-right: 10px;
+		text-align: center;
+		color: #fff;
+		background: #2DA1F4;
+		border-radius: 4px 4px 4px 4px;
+        display: table-cell;
+        vertical-align: middle;
+        padding: 0px 10px;
+	}
+	.tvb:hover {
+		border: 1px solid #d3d3d3;
+		color: #000;
+		background: #fff;
+		border-radius: 4px 4px 4px 4px;
+	}
+</style>
+<div style="margin-left: 20px; margin-top: 5px;">
+<table width='100%' cellspacing='0' cellpadding='0' border='0'>
+<tr>
+<td style=''>
+<a href="http://edu.zibo.gov.cn/col/col15728/index.html" class="tvb" target="_blank">淄博市基础教育研究院</a>
+</td><td style=''>
+<a href="http://edu.zibo.gov.cn/zjy/" class="tvb" target="_blank">淄博市职业教育研究院</a>
+</td><td style=''>
+<a href="http://edu.zibo.gov.cn/col/col15370/index.html" class="tvb" target="_blank">淄博市教育招生考试院</a>
+</td><td style=''>
+<a href="http://edu.zibo.gov.cn/col/col18289/index.html" class="tvb" target="_blank">教育服务保障</a>
+</td><td style=''>
+<a href="http://edu.zibo.gov.cn/col/col6842/index.html" class="tvb" target="_blank">教育信息化</a>
+</td>
+</tr></table>
+</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="1011" height="14"></td>
+                </tr>
+                <tr>
+                    <td width="1011" height="134">
+                        <div id="playBox">
+                            <div class="pre"></div>
+                            <div class="next"></div>
+                            <div class="smalltitle">
+                                <ul>
+                                    <li class="thistitle">1</li>
+                                    <li>2</li>
+                                    <li>3</li>
+                                    <li>4</li>
+                                </ul>
+                            </div>
+                            <ul class="oUlplay">
+                                
+<li><a title="爱教育 有理想" href="http://edu.zibo.gov.cn/" >
+<img src='/picture/0/s_4007ab3668d44effb7dcdbc52cad4eb7.jpg' width='1011' height='134' align="absmiddle" /></a>
+</li>
+
+<li><a title="办人民满意的教育，建设让党中央放心、让人民群众满意的模范机关" href="http://edu.zibo.gov.cn/" >
+<img src='/picture/0/206d5ad977f04ffb83f9129076fde259.jpg' width='1011' height='134' align="absmiddle" /></a>
+</li>
+
+<li><a title="办人民满意的教育" href="http://edu.zibo.gov.cn/" >
+<img src='/picture/0/s1710190936521725383.jpg' width='1011' height='134' align="absmiddle" /></a>
+</li>
+
+<li><a title="讲文明树新风" href="http://zb.wenming.cn/" >
+<img src='/picture/0/s_65feb712818245b5a2a5c47a48055f4c.jpg' width='1011' height='134' align="absmiddle" /></a>
+</li>
+
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="subThird">
+                            <p style="height:10px" readexclude></p>
+<div style="overflow: hidden;">
+    <a href="https://www.gov.cn/zhengce/zczhjd/" target="_blank" title="重要政策举措及实施效果">
+        <img width="500" style="float: left;" class="tyzt" alt="重要政策举措及实施效果" src="https://www.zibo.gov.cn/picture/37/2312011647244181773.jpg">
+    </a>
+    <a href="/col/col19852/index.html" target="_blank" title="政府网站工作年度报表">
+        <img width="500" style="margin-left: 11px;float: left;" class="tyzt" alt="政府网站工作年度报表" src="https://www.zibo.gov.cn/picture/37/2312011647024768678.jpg">
+    </a>
+</div>
+<p style="height:10px;" tabindex="-1" readexclude ></p>
+<script src="https://www.zibo.gov.cn/script/0/2110071243448436.js"></script>
+<a title="全省教育系统'严真细实快'作风建设十条要求" target="_blank" href="https://edu.zibo.gov.cn/art/2022/3/31/art_229_2269113.html" style="display: block;margin-top: 10px;width: 100%; height: 100%;">
+    <img title="1100-88-2.jpg" src="/picture/0/2203311521151881890.png" style="width:1011px; ">
+</a>
+<style>
+    #tyhf{
+        width: 1011px;
+    }
+</style>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="1011" height="14"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <table id="__01" width="1011" height="142" border="0" cellpadding="0" cellspacing="0"
+                            background="/images/997/zb_02_112_01_01.jpg">
+                            <tr>
+                                <td>
+                                    <table id="__01" width="1011" height="43" border="0" cellpadding="0"
+                                        cellspacing="0">
+                                        <tr>
+                                            <td width="136" height="43" class="font1" style=" padding-left:59px;">
+                                                <span tabindex="0">域内链接</span>
+                                            </td>
+                                            <td width="875" height="43">
+                                                <ul class="news-tab7 ">
+                                                    <li onmouseover="change_news('h', 1);" id="new_title_h_1"
+                                                        class="menu_link" style="margin-left: 30px;">
+                                                        <div><span tabindex="0" style="font-size:15px;">政府和教育部门网站</span></div>
+                                                    </li>
+                                                    <li onmouseover="change_news('h', 2);" id="new_title_h_2">
+                                                        <div><span tabindex="0" style="font-size:15px;">教育资源网</span></div>
+                                                    </li>
+                                                    <li onmouseover="change_news('h', 3);" id="new_title_h_3">
+                                                        <div><span tabindex="0" style="font-size:15px;">区县教育部门网站</span></div>
+                                                    </li>
+                                                    <li onmouseover="change_news('h', 4);" id="new_title_h_4"
+                                                        class="menu_link">
+                                                        <div><span tabindex="0" style="font-size:15px;">局属学校网站</span></div>
+                                                    </li>
+                                                    <li style="padding-right: 0px;" onmouseover="change_news('h', 5);"
+                                                        id="new_title_h_5" class="menu_link">
+                                                        <div><span tabindex="0" style="font-size:15px; ">驻淄高校网站</span></div>
+                                                    </li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="1011" height="99">
+                                    <ul class="tab-about8" id="news_list_h_1" style="display:block;">
+                                        <div class="pd" style=" padding-left:15px; padding-right:15px;white-space: nowrap;"><li style='float:left;'><a href="http://www.zibo.gov.cn/" target="_blank">淄博市人民政府网</a></li><li style='float:left;'><a href="http://www.moe.gov.cn/" target="_blank">教育部</a></li><li style='float:left;'><a href="http://edu.shandong.gov.cn/" target="_blank">山东省教育厅</a></li></div>
+
+                                    </ul>
+                                    <ul class="tab-about8" id="news_list_h_2" style="display:none;">
+                                        <div class="pd" style=" padding-left:15px; padding-right:15px;white-space: nowrap;"><li style='float:left;'><a href="http://qspfw.moe.gov.cn/" target="_blank">全国青少年普法网</a></li><li style='float:left;'><a href="http://www.qlteacher.com/" target="_blank">山东省教师教育网</a></li><li style='float:left;'><a href="http://sdbe.sdei.edu.cn/zxxj/uc/login.htm" target="_blank">山东省基础教育管理信息化平台</a></li><li style='float:left;'><a href="http://zyjy.sdei.edu.cn/" target="_blank">山东省职业教育管理平台</a></li></div>
+
+                                    </ul>
+                                    <ul class="tab-about8" id="news_list_h_3" style="display:none;">
+                                        <div class="pd" style=" padding-left:15px; padding-right:15px;white-space: nowrap;"><li style='float:left;'><a href="http://www.zhangdian.gov.cn/col/col7083/index.html" target="_blank">张店</a></li><li style='float:left;'><a href="http://www.zichuan.gov.cn/col/col5108/index.html" target="_blank">淄川</a></li><li style='float:left;'><a href="http://www.boshan.gov.cn/col/col4323/index.html" target="_blank">博山</a></li><li style='float:left;'><a href="http://www.zhoucun.gov.cn/col/col5437/index.html" target="_blank">周村</a></li><li style='float:left;'><a href="http://www.linzi.gov.cn/col/col5538/index.html" target="_blank">临淄</a></li><li style='float:left;'><a href="http://www.huantai.gov.cn/col/col6795/index.html" target="_blank">桓台</a></li><li style='float:left;'><a href="http://www.gaoqing.gov.cn/col/col4717/index.html" target="_blank">高青</a></li><li style='float:left;'><a href="http://www.yiyuan.gov.cn/col/col5674/index.html" target="_blank">沂源</a></li><li style='float:left;'><a href="http://www.sdwenchanghu.gov.cn/" target="_blank">文昌湖区</a></li><li style='float:left;'><a href="http://www.zbjkq.gov.cn/" target="_blank">经开区</a></li></div>
+
+                                    </ul>
+                                    <ul class="tab-about8" id="news_list_h_4" style="display:none;">
+                                        <div class="pd" style=" padding-left:15px; padding-right:15px;white-space: nowrap;"><li style='float:left;'><a href="https://www.zbsyzx.cn/" target="_blank">淄博实验中学</a></li><li style='float:left;'><a href="http://www.zbyz.net/" target="_blank">淄博一中</a></li><li style='float:left;'><a href="http://www.zbsz.net/" target="_blank">淄博四中</a></li><li style='float:left;'><a href="http://www.zbwz.net/" target="_blank">淄博五中</a></li><li style='float:left;'><a href="https://www.zbdlzx.cn/" target="_blank">淄博六中</a></li><li style='float:left;'><a href="www.zb7z.cn " target="_blank">淄博七中</a></li><li style='float:left;'><a href="https://www.zb11.cn/" target="_blank">淄博十一中</a></li><li style='float:left;'><a href="http://www.zb17.cn/" target="_blank">淄博十七中</a></li><li style='float:left;'><a href="http://www.zb18.net/" target="_blank">淄博十八中</a></li><li style='float:left;'><a href="http://www.zibozhongxue.com/" target="_blank">淄博中学</a></li><li style='float:left;'><a href="http://zbqsgz.com/" target="_blank">淄博齐盛高级中学</a></li><li style='float:left;'><a href="https://www.zblqzx.cn/" target="_blank">淄博柳泉中学</a></li><li style='float:left;'><a href="https://www.zbtj.net.cn/" target="_blank">淄博市特教中心</a></li><li style='float:left;'><a href="https://www.zbchild.cn/" target="_blank">淄博市实验幼儿园</a></li></div>
+
+                                    </ul>
+                                    <ul class="tab-about8" id="news_list_h_5" style="display:none;">
+                                        <div class="pd" style=" padding-left:15px; padding-right:15px;white-space: nowrap;"><li style='float:left;'><a href="http://www.sdut.edu.cn/" target="_blank">山东理工大学</a></li><li style='float:left;'><a href="http://www.zbvc.edu.cn/" target="_blank">淄博职业技术大学</a></li><li style='float:left;'><a href="http://www.zbnc.edu.cn/" target="_blank">淄博师范高等专科学校</a></li><li style='float:left;'><a href="http://www.sdlivc.edu.cn/" target="_blank">山东轻工职业学院</a></li><li style='float:left;'><a href="http://www.zibotc.cn/" target="_blank">淄博市技师学院</a></li><li style='float:left;'><a href="http://www.qlmu.edu.cn/" target="_blank">齐鲁医药学院</a></li><li style='float:left;'><a href="http://sdlivc.edu.cn/?beianhao.com" target="_blank">山东工业职业学院</a></li><li style='float:left;'><a href="http://www.sdcw.net/" target="_blank">山东水利技师学院</a></li></div>
+
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+
+
+            <div id="added_block">
+
+                
+
+            </div>
+
+
+
+
+        </div>
+
+        <div class="footer" ergodic="serve">
+            <table id="__01" width="1011" height="139" border="0" cellpadding="0" cellspacing="0"
+                style="background:url(/images/997/bottom3_03_01.png) repeat-x;">
+
+                <tr>
+                    <td width="1011">
+                        <script src="/script/30/2207061003174368.js"></script>
+                    </td>
+
+                </tr>
+                </tr>
+            </table>
+
+        </div>
+    </div>
+
+    <!-- End Save for Web Slices -->
+    
+    <style>
+    .pap{margin:0; padding:0; text-align:center;}
+    .newalert7{
+          width:320px; 
+          position:fixed; 
+          left:0px;     /* 整体位置变动 */
+          bottom:0px; 
+          border-radius:5px 0 0 5px;
+          line-height:180%;
+          }
+    .close7{
+         color:#000;
+         text-decoration:none;
+         float:left;
+         display:block;
+         width:41px;
+    }
+    </style>
+    <script>
+    $(function (){
+    $('.newalert7').animate({left:'0px'},1000);
+    $('.newalert7 .close7').click(function(){
+       $('.newalert7').hide();
+    });
+    });
+    </script>
+    <div class="newalert7" style="z-index:999999;">
+    <a href="javascript:" class="close7" style="float:left;">关闭</a>
+    <div style="width:320px;">
+    <a title="规范办学举报咨询电话" target="_blank" href="/art/2023/11/2/art_18357_2760295.html">
+         <img src="/picture/0/2281c5c2c7fa4baf9b205ceadea18643.jpg" width="320" />
+    </a>
+    </div>
+    </div>
+    
+    
+    
+    <style>
+    .picScroll-left{
+        width: 320px;
+        height: 180px;
+        position: relative;
+    }
+    .picScroll-left .hd{
+        width: 320px;
+        height: 20px;
+        float: right;
+        position: absolute;
+        right: 0;
+        top: 160px;
+    }
+    .picScroll-left .hd ul{
+        margin-right: 10px;
+        float: right;
+        overflow: hidden;
+        position: relative;
+        zoom: 1;
+    }
+    .picScroll-left .hd ul li{
+        float: left;
+        width: 9px;
+        height: 9px;
+        overflow: hidden;
+        margin-right: 5px;
+        text-indent: -999px;
+        cursor: pointer;
+        background: #DDD;
+        border-radius: 50%;
+    }
+    .picScroll-left .hd ul li.on {
+        background: #390;
+    }
+    .picScroll-left .next {
+        height: 51px;
+        width: 31px;
+        background: url(../style/picnews/bt-jq-TX-010108.png) no-repeat 0 0px;
+        background-position: -31px 0px;
+        position: absolute;
+        right: 0px;
+        top: calc(50% - 25px);
+        cursor: pointer;
+        opacity: 0.2;
+    }
+    .picScroll-left .prev {
+        height: 51px;
+        width: 31px;
+        background: url(../style/picnews/bt-jq-TX-010108.png) no-repeat 0 0px;
+        position: absolute;
+        left: 0px;
+        top: calc(50% - 25px);
+        cursor: pointer;
+        opacity: 0.2;
+    }
+</style>
+<script>
+	$(function() {
+        $('.newalert88 .close88').click(function(){
+            $('.newalert88').hide();
+        });
+	});
+</script>
+<div class="bt-jq-TX-010108 newalert88"style="text-align:center;width:320px;height: 180px;margin:0 auto;position: fixed;right: 0px;bottom: 0px;">
+    <a href="javascript:" class="close88" style="position: absolute;right: 10px;top: 10px;z-index: 1;"><img src="/picture/0/2207011339594462610.png"></a>
+    
+	<div class="picScroll-left clearfix">
+        <div class="bd clearfix">
+            <ul class="picList clearfix">
+                
+                <li>
+                    <div readexclude class="ttxw clearfix" style="float: left;display:none;">
+                        <div class="bttit">
+                            <p  readexclude class="zy">
+                                
+                            </p>
+                            <p readexclude class="ckxq">
+                                <a readexclude  href="/art/2026/1/27/art_7845_2983413.html" target="_blank" title="查看详情">查看详情</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="pic" style="float: right;">
+                        <a href="/art/2026/1/27/art_7845_2983413.html" target="_blank" title="淄博市学生军训问题举报咨询电话">
+                            <img alt="淄博市学生军训问题举报咨询电话" src="/picture/0/c7451a9f70b34785b0a4f156161b4a33.jpg">
+                        </a>
+                    </div>
+                </li>
+                
+                <li>
+                    <div readexclude class="ttxw clearfix" style="float: left;display:none;">
+                        <div class="bttit">
+                            <p  readexclude class="zy">
+                                
+                            </p>
+                            <p readexclude class="ckxq">
+                                <a readexclude  href="/art/2022/11/8/art_7845_2340756.html" target="_blank" title="查看详情">查看详情</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="pic" style="float: right;">
+                        <a href="/art/2022/11/8/art_7845_2340756.html" target="_blank" title="淄博市教育局公平竞争审查举报咨询电话及邮箱">
+                            <img alt="淄博市教育局公平竞争审查举报咨询电话及邮箱" src="/picture/0/5eacbfa10b4e4dada945b36dba5f6231.jpg">
+                        </a>
+                    </div>
+                </li>
+                
+                <li>
+                    <div readexclude class="ttxw clearfix" style="float: left;display:none;">
+                        <div class="bttit">
+                            <p  readexclude class="zy">
+                                
+                            </p>
+                            <p readexclude class="ckxq">
+                                <a readexclude  href="http://edu.zibo.gov.cn/art/2021/1/12/art_3540_2073354.html" target="_blank" title="查看详情">查看详情</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="pic" style="float: right;">
+                        <a href="http://edu.zibo.gov.cn/art/2021/1/12/art_3540_2073354.html" target="_blank" title="淄博市幼儿园、小学、初中招生入学工作咨询电话">
+                            <img alt="淄博市幼儿园、小学、初中招生入学工作咨询电话" src="/picture/0/0c0e201b5a0a471b8cffe926179a33c8.jpg">
+                        </a>
+                    </div>
+                </li>
+                
+                <li>
+                    <div readexclude class="ttxw clearfix" style="float: left;display:none;">
+                        <div class="bttit">
+                            <p  readexclude class="zy">
+                                单位电话邮箱淄博市0533-3184086，0533-318...
+                            </p>
+                            <p readexclude class="ckxq">
+                                <a readexclude  href="/art/2025/9/1/art_7845_2958166.html" target="_blank" title="查看详情">查看详情</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="pic" style="float: right;">
+                        <a href="/art/2025/9/1/art_7845_2958166.html" target="_blank" title="淄博市中小学违规征订教辅材料举报电话及邮箱">
+                            <img alt="淄博市中小学违规征订教辅材料举报电话及邮箱" src="/picture/0/97fc144db9a341f7adf45741bcf626ef.png">
+                        </a>
+                    </div>
+                </li>
+                
+                <li>
+                    <div readexclude class="ttxw clearfix" style="float: left;display:none;">
+                        <div class="bttit">
+                            <p  readexclude class="zy">
+                                
+                            </p>
+                            <p readexclude class="ckxq">
+                                <a readexclude  href="/art/2022/5/18/art_7845_2289541.html" target="_blank" title="查看详情">查看详情</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="pic" style="float: right;">
+                        <a href="/art/2022/5/18/art_7845_2289541.html" target="_blank" title="淄博市中小学食堂管理问题举报咨询电话及邮箱">
+                            <img alt="淄博市中小学食堂管理问题举报咨询电话及邮箱" src="/picture/0/3b81efd5ed0f4f18a33e641d90a41a89.jpg">
+                        </a>
+                    </div>
+                </li>
+                
+                <li>
+                    <div readexclude class="ttxw clearfix" style="float: left;display:none;">
+                        <div class="bttit">
+                            <p  readexclude class="zy">
+                                
+                            </p>
+                            <p readexclude class="ckxq">
+                                <a readexclude  href="/art/2022/6/1/art_7845_2293726.html" target="_blank" title="查看详情">查看详情</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="pic" style="float: right;">
+                        <a href="/art/2022/6/1/art_7845_2293726.html" target="_blank" title="山东“双减”举报随手拍">
+                            <img alt="山东“双减”举报随手拍" src="/picture/0/b9715a454dee43dc881469de8a6c4cc1.jpg">
+                        </a>
+                    </div>
+                </li>
+                
+            </ul>
+        </div>
+        <a class="next"></a>
+        <a class="prev"></a>
+        <div class="hd" readexclude style="background: none;">
+            <ul readexclude >
+                <li class="on" readexclude >1</li>
+                <li readexclude >2</li>
+                <li readexclude >3</li>
+                <li readexclude >4</li>
+                <li readexclude >5</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script src="/script/30/2408050949386158.js"></script>
+<script type="text/javascript">
+	jQuery(".picScroll-left").slide({
+		titCell: ".hd ul",
+		mainCell: ".bd ul",
+		autoPage: true,
+		effect: "fold",
+		autoPlay: true,
+		vis: 1
+	});
+</script>
+    <style>
+    div.bayWindow {
+        position: fixed;
+        top: 145px;
+        right: 0;
+    }
+    div.bayWindow ul li {
+        width: 54px;
+        height: 54px;
+        margin-top: 1px;
+        position: relative;
+    }
+    div.bayWindow ul li img {
+        width: 54px;
+        height: 54px;
+    }
+</style>
+<div class="bayWindow" id="bay">
+    <ul>
+      <li>
+        <a href="/art/2022/6/28/art_16430_2300973.html" target="_blank">
+            <img src="/picture/0/2206301534495264386.png">
+        </a>
+      </li>
+    </ul>
+</div>
+    
+</div>
+<script>
+    $("#__01 div ul li a").focus(function(){
+        var idname = $(this).parent('div').parent('li').attr('id');
+		console.log(idname)
+		if(idname != undefined){
+			var idname = idname.substring(0,2);
+			$(this).parent('div').parent('li').addClass(idname+"-on");
+			$(this).parent('div').parent('li').siblings('li').removeClass(idname+"-on");
+			var num = $(this).parent('div').parent('li').index()+1;
+			$('#con_'+idname+'_'+num).show();
+			$('#con_'+idname+'_'+num).siblings('.tab-list').hide();
+		}
+    })
+    $('.news-tab7 li span').focus(function(){
+        var num = $(this).parent('div').parent('li').index();
+        $('.tab-about8').hide();
+        $('.tab-about8').eq(num).show();
+    })
+</script>
+<script type="text/javascript">
+    //取cookies
+    function getCookie(name) {
+        var arr = document.cookie.match(new RegExp("(^| )" + name + "=([^;]*)(;|$)"));
+        if (arr != null) return unescape(arr[2]);
+        return null;
+    }
+    var openFlag = getCookie("openFlag");
+    if (openFlag == 1) {
+        $("#floatAdd").hide()
+    }
+    function stopPropagation(e) {
+        e = window.event || e;
+        if (document.all) {
+            e.cancelBubble = true;
+        } else {
+            e.stopPropagation();
+        }
+    }
+    $(".wza_btn").click(function () {
+        stopPropagation();
+        $("#floatAdd").hide()
+    })
+</script>
+</div>
+<!-- visitcount Begin --><iframe src='./module/visitcount/visit.jsp?type=1&i_webid=4&i_columnid=213' name="vishidden" id="vishidden" frameborder="0" style="width:0; height:0; display:none"></iframe><!-- visitcount End -->
+<script language="javascript" src='/script/pagecontrol.js'></script><script language="javascript" src='/script/web_front.js'></script>
+</body>
+<style>
+    .tvb {
+        width: 227px;
+        letter-spacing: 5px;
+        /* text-align: center; */
+        font-size: 16px;
+    }
+</style>
+
+</html>

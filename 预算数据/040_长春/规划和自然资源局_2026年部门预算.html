@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="SiteName" content="长春市规划和自然资源局"/>
+<meta name="SiteDomain" content="http://gzj.changchun.gov.cn/"/>
+<meta name="SiteIDCode" content="2201000020"/>
+<meta name="ColumnName" content=""/>
+<meta name="ColumnType" content=""/>
+<meta name="ColumnDescription" content="">
+<meta name="ColumnKeywords" content="">
+<meta name="ArticleTitle" content=""/>
+<meta name="PubDate" content=""/>
+<meta name="ContentSource" content="" />
+<meta name="Url" content="http://gzj.changchun.gov.cn/"/>
+
+<link href="http://www.changchun.gov.cn/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+
+
+<title>长春市规划和自然资源局</title>
+
+<link rel="stylesheet" type="text/css" href="./images/common.css">
+<link rel="stylesheet" type="text/css" href="./images/column_home.css">
+<link rel="stylesheet" type="text/css" href="./images/index.css">
+<link href="./images/commonnew.css" rel="stylesheet">
+<link href="./images/main.css" rel="stylesheet">
+<style>
+.header_top{margin-top:14px;}
+.tab a {width:140px;}
+.fl_left {width:1200px;}
+
+.home_zxfw { float:left; width:1200px;}
+.home_zwgk_icon_hdjl li {float: left;width: 32%;margin: 0 2% 0 0%; }
+
+</style>
+
+<script src="./images/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="./images/jquery-1.9.1.min.js"></script>
+<script src="./images/scl.js"></script>
+<script type="text/javascript" src="./images/jquery.SuperSlide.2.1.1.js"></script>
+
+    <script>
+        $(function() {
+            $.ajax({
+                url: 'http://www.jl.gov.cn/kzgn/nrtj/demo1/qgyw/',
+                dataType: "jsonp",
+                contentType: "application/x-www-form-urlencoded; charset=gb2312",
+                jsonp: "pushInfoJsonpCallBack",
+                jsonpCallback: "qgywJsonpCallBack",
+                success: function(data) {
+                    i = 0;
+                    $.each(data, function(i, json) {
+                        i++;
+                        if(i == 12) {
+                            return false;
+                        }
+
+                        var str2 = json.title;
+                        str2 = str2.substr(0, 22);
+
+                        if(json.title.substr(22) != "") {
+                            str2 += "..."
+                        }
+                        $("#testUl").append("<li><a href='" + json.link + "' target=_blank >" + str2 + "</a><span class='data'>" + json.pubDate + "</span></li>")
+                    })
+
+                    $.ajax({
+                        url: 'http://www.jl.gov.cn/kzgn/nrtj/demo1/fbcs/pushinfo2015.html',
+                        dataType: "jsonp",
+                        contentType: "application/x-www-form-urlencoded; charset=gb2312",
+                        jsonp: "pushInfoJsonpCallBack",
+                        jsonpCallback: "pushInfoJsonpCallBack",
+                        success: function(data) {
+                            i = 0;
+                            $.each(data, function(i, json) {
+                                i++;
+                                if(i == 12) {
+                                    return false;
+                                }
+
+                                var str2 = json.title;
+                                str2 = str2.substr(0, 22);
+                                if(json.title.substr(22) != "") {
+                                    str2 += "..."
+                                }
+                                $("#testUl1").append("<li><a href='" + json.link + "' target=_blank >" + str2 + "</a><span class='data'>" + json.pubDate + "</span></li>")
+
+                            })
+                        },
+                        error: function() {
+
+                        }
+
+                    });
+
+                },
+                error: function() {}
+            });
+        })
+    </script>
+
+
+</head>
+<body>
+
+   <link rel="stylesheet" type="text/css" href="./images/barrier_free.css">
+<script type="text/javascript" src="./images/barrier_free.js"></script>
+<script type="text/javascript" src="./images/font.js"></script>
+
+<div class="head">
+    <div class="container">
+        <ul class="menu">
+            <li class="wza"><a href="http://www.changchun.gov.cn/"  class="bf_button"><span>长春市政府网</span></a></li>
+            <li><b>|</b></li>
+            <li class="cwzb"><a target="_blank" href="http://www.jl.gov.cn/" ><span>吉林省政府网</span></a></li>
+            <li><b>|</b></li>
+            <li class="ftb"><a href="http://www.gov.cn/" ><span>中国政府网</span></a></li>
+        </ul>
+<style>
+*{font-family: "微软雅黑";}
+.header_top a{border-right:1px solid #666;height:14px!important;line-height:14px!important;font-size:14px;color:#666;padding:0 10px;float: left;}
+.header_top{height:14px; }
+</style>
+<div class="header_top" style="float:right;">
+ <a href="javascript:void(0);" class="zc" id="zcBtn" >注册</a>
+ <a class="dl" href="javascript:void(0);" id="loginBtn" style="border:none;">登录</a>
+ <a href="javascript:void(0);"  id="tcBtn" style="display:none;margin-left:0px!important;border:none;">退出</a>
+ <script type="text/javascript" src="./images/07030userInfo_4.js"></script>
+ <div style="display: none;">
+ <iframe src="https://user.jl.gov.cn/v1/apigw/none/user/authentication/checklogin?appId=575ecd1d2d70450ea4c5a6b468c50c7f&amp;version=1.0.0&amp;format=json&amp;charset=utf-8&amp;timestamp=2019-08-10%2016:46:13&amp;backUrl=http://gzj.changchun.gov.cn/userInfo/login/"  id="gjdl"></iframe> 
+ </div>
+</div>	
+    </div>
+</div>
+<div class="header">
+    <div class="container">
+        <div class="logo"><img src="./images/logo.png" /></div>
+        <div class="search_box">
+            <script type="text/javascript">
+                function checkIP(){
+                    var text=document.getElementById("text").value;
+                    if(text=="" || text=="请输入搜索关键词"){
+                        alert("请输入检索词！");
+                        return false;
+                    }
+                    return true;
+                }
+            </script>
+            <form action="http://intellsearch.changchun.gov.cn/was5/web/search" method="get" target="_blank" onsubmit="return checkIP();" id="myForm">
+                <input class="jb-sstext" type="text" name="searchword" id="text" value="请输入搜索关键词" onfocus="if(this.value=='请输入搜索关键词'){this.value='';}" onblur="if(this.value==''){this.value='请输入搜索关键词';}" />
+                <input name="channelid" id="channelid" type="hidden" value="298083" />
+                <input type="submit" class="jb-ssbutton search_btn" value="" />
+            </form>
+        </div>
+    </div>
+    <div class="mainnav">
+        <div class="container">
+            <ul class="nav_ul clearfix">
+                <li class="nav nav0 on">
+                    <h3><a href="./" >网站首页</a></h3>
+                </li>
+                <li class="nav">
+                    <h3><a href="./zwdt/" >政务动态</a></h3>
+                    <div class="sub nav_zwgk">
+                        <ul class="con_sec">
+                            <li><a href="http://www.gov.cn/" >国务院</a>
+                                <a href="http://www.jl.gov.cn/" >省政府</a>
+                                <a href="./zwdt/bjdt/" >本局动态</a>
+                                <a href="./zwdt/tzgg/" >通知公告</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav">
+                    <h3><a href="http://zwgk.changchun.gov.cn/zcbm/fgw_98042/gkzn/"  target="_self">信息公开</a></h3>
+                </li>
+                <li class="nav">
+                    <h3><a href="http://zwfw.jl.gov.cn/jlszwfw/cksx/?deptId=11220100MB1620447H&area=220100"  target="_self">政务服务</a></h3>
+                </li>
+                <li class="nav">
+                    <h3><a href="./hdjl/"  target="_self">互动交流</a></h3>
+                    <div class="sub nav_zwgk">
+                        <ul class="con_sec">
+                            <li>
+                                <a href="./hdjl/zxts/" >咨询投诉</a>
+                                <a href="./hdjl/zjdc/" >征集调查</a>
+                                <a href="./hdjl/zcjd/" >政策解读</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav">
+                    <h3><a href="./ywpd/"  target="_self">业务频道</a></h3>
+                    <div class="sub nav_zwgk">
+                        <ul class="con_sec">
+                            <li>
+                                <a href="./ywpd/jgdj/" >机关党建</a>
+                                <a href="./ywpd/tdsc/gdjh/" >土地管理</a>
+                                <a href="./ywpd/dzkc/" >地质矿产</a>
+                                <a href="./ywpd/kjgh/ghcg_43345/" >空间规划</a>
+
+                                <a href="./ywpd/jgdj/" >专题专栏</a>
+                                
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>  
+
+  <div class="container">
+    <div class="home_tzgg mb30">
+      <h5><a href="./zwdt/tzgg/" target="_self">通知公告</a><i></i></h5>
+      <div class="bd">
+        <div class="tempWrap" style="overflow:hidden; position:relative; height:72px">
+          <div class="list" style="height: 216px; position: relative; padding: 0px; margin: 0px; top: -108px;">
+          
+            <ul class="common_newslist clearfix clone" style="height: 36px;">
+                
+                 <li> <i></i><a href="./zwdt/tzgg/202603/t20260317_3473979.html" target="_blank" title="关于注销《建设工程规划许可证》的公告"> 关于注销《建设工程规划许可证》的公告</a> </li>
+                
+                 <li> <i></i><a href="./zwdt/tzgg/202603/t20260316_3473773.html" target="_blank" title="关于注销亚泰集团长春建材有限公司建筑工业化制品产业园项目二期《建设工程规划许可证》的公告"> 关于注销亚泰集团长春建材有限公司建筑工业化制品产业园项目二期《建设工程规划许可证》的公告</a> </li>
+                 
+            </ul>
+         
+            <ul class="common_newslist clearfix clone" style="height: 36px;">
+                
+                 <li> <i></i><a href="./zwdt/tzgg/202603/t20260306_3471980.html" target="_blank" title="关于注销吉祥天城建设项目《建设用地规划许可证》的公告"> 关于注销吉祥天城建设项目《建设用地规划许可证》的公告</a> </li>
+                
+                 <li> <i></i><a href="./zwdt/tzgg/202602/t20260228_3470629.html" target="_blank" title="长春市规划和自然资源局关于长春市2026年土地储备领域申报地方政府专项债券项目用地收储价格的公示"> 长春市规划和自然资源局关于长春市2026年土地储备领域申报地方政府专项债券项目用地收储价格的公示</a> </li>
+                 
+            </ul>
+         
+            <ul class="common_newslist clearfix clone" style="height: 36px;">
+                
+                 <li> <i></i><a href="./zwdt/tzgg/202602/t20260206_3466615.html" target="_blank" title="长春市规划和自然资源局关于补充调整国土空间生态修复行业专家参与项目决策管理事项的公告"> 长春市规划和自然资源局关于补充调整国土空间生态修复行业专家参与项目决策管理事项的公告</a> </li>
+                
+                 <li> <i></i><a href="./zwdt/tzgg/202602/t20260205_3466159.html" target="_blank" title="关于撤销《建设用地规划许可证》的公告"> 关于撤销《建设用地规划许可证》的公告</a> </li>
+                 
+            </ul>
+         
+            <ul class="common_newslist clearfix clone" style="height: 36px;">
+                
+                 <li> <i></i><a href="./zwdt/tzgg/202602/t20260202_3465610.html" target="_blank" title="关于《吉林省公主岭经济开发区新凯河地热矿矿区生态修复报告表》评审结果的公示"> 关于《吉林省公主岭经济开发区新凯河地热矿矿区生态修复报告表》评审结果的公示</a> </li>
+                
+                 <li> <i></i><a href="./zwdt/tzgg/202602/t20260202_3465523.html" target="_blank" title="长春市规划和自然资源局2025年度法治政府建设情况报告"> 长春市规划和自然资源局2025年度法治政府建设情况报告</a> </li>
+                 
+            </ul>
+         
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row1 row">
+      <div class="news_box"> <img class="sclbtn_l" src="./images/sclbtn_l.png" /> <img class="sclbtn_r" src="./images/sclbtn_r.png" />
+        <div class="scl" style="width: 2130px; margin-left: -1420px;"> 
+          
+            <img src="./zwdt/tpxx/202402/W020240311372705446329.jpg" width="480" height="320" />
+            <div class="tip_box" style="display: none;"> 
+              <a href="https://www.gov.cn/hudong/" target="_blank"><p>@国务院 我来说</p></a> 
+            </div>
+         
+            <img src="./zwdt/tpxx/202601/W020260108392987485394.jpg" width="480" height="320" />
+            <div class="tip_box" style="display: none;"> 
+              <a href="./zwdt/tpxx/202601/t20260108_3459018.html" target="_blank"><p>2026年全国自然资源工作会议召开</p></a> 
+            </div>
+         
+            <img src="./zwdt/tpxx/202512/W020251228663097345112.jpg" width="480" height="320" />
+            <div class="tip_box" style="display: none;"> 
+              <a href="http://jl.people.com.cn/n2/2025/1207/c349771-41434950.html" target="_blank"><p>2025长春健博会启幕 国际展团携“豪华阵容”亮相</p></a> 
+            </div>
+         
+        </div>
+      </div>
+
+      <div class="zwdt">
+        <div class="zwdt_tit title">
+          <div class="title_l"> <img src="./images/zwdt.png" />
+            <div class="title_word">政务动态</div>
+          </div>
+          <a href="./zwdt/bjdt/" class="title_r"><img src="./images/more.png" /></a> </div>
+        <div class="tab"> <a href="http://www.gov.cn/" target="_blank" class="">国家要闻</a> 
+                          <a href="http://www.jl.gov.cn/" target="_blank" class="tab_now">吉林要闻</a>
+                          <a href="./zwdt/bjdt/" target="_blank" ;="" class="">本局动态</a>
+       </div>
+        <ul id="testUl" class="zwdt_cntbox cntbox" style="display: none;">
+          <li> </li>
+
+        </ul>
+        <ul id="testUl1" class="zwdt_cntbox cntbox" style="display: block;">
+          <li> </li>
+
+        </ul>
+        <ul class="zwdt_cntbox cntbox" style="display: none;">
+          <li>
+          
+              <p>
+                  <a href="./zwdt/bjdt/202603/t20260325_3476204.html" title="南关分局与辽源市自然资源局开展业务交流活动" TARGET = "_blank">南关分局与辽源市自然资源局开展业务交流活动</a>                  
+                  <span>2026-03-25</span>
+              </p>
+
+         
+              <p>
+                  <a href="./zwdt/bjdt/202603/t20260325_3476195.html" title="市规划和自然资源局召开2026年一季度安全生产工作领导小组全体会议" TARGET = "_blank">市规划和自然资源局召开2026年一季度安全生产工作领导小组全体会议</a>                  
+                  <span>2026-03-25</span>
+              </p>
+
+         
+              <p>
+                  <a href="./zwdt/bjdt/202603/t20260324_3475777.html" title="市规划和自然资源局现场办公指导汽开区闲置土地处置工作" TARGET = "_blank">市规划和自然资源局现场办公指导汽开区闲置土地处置工作</a>                  
+                  <span>2026-03-24</span>
+              </p>
+
+         
+              <p>
+                  <a href="./zwdt/bjdt/202603/t20260317_3473838.html" title="长春市规划和自然资源局召开重大项目联络员专题工作会议" TARGET = "_blank">长春市规划和自然资源局召开重大项目联络员专题工作会议</a>                  
+                  <span>2026-03-17</span>
+              </p>
+
+         
+              <p>
+                  <a href="./zwdt/bjdt/202603/t20260317_3473835.html" title="自然资源调查监测中心推进年度卫星遥感监测线索核查" TARGET = "_blank">自然资源调查监测中心推进年度卫星遥感监测线索核查</a>                  
+                  <span>2026-03-17</span>
+              </p>
+
+         
+              <p>
+                  <a href="./zwdt/bjdt/202603/t20260317_3473834.html" title="经开分局牵头召开重点项目推进会" TARGET = "_blank">经开分局牵头召开重点项目推进会</a>                  
+                  <span>2026-03-17</span>
+              </p>
+
+         
+              <p>
+                  <a href="./zwdt/bjdt/202603/t20260317_3473829.html" title="压实耕地保护责任 筑牢粮食安全底线——汽开区党工委书记李国辉带队开展巡田调研工作" TARGET = "_blank">压实耕地保护责任 筑牢粮食安全底线——汽开区党工委书记李国辉带队开展巡田调研工作</a>                  
+                  <span>2026-03-17</span>
+              </p>
+
+         
+              <p>
+                  <a href="./zwdt/bjdt/202603/t20260317_3473823.html" title="省自然资源厅赴莲花山区调研都市圈规划编制工作" TARGET = "_blank">省自然资源厅赴莲花山区调研都市圈规划编制工作</a>                  
+                  <span>2026-03-17</span>
+              </p>
+
+         
+
+          </li>
+        </ul>
+      </div>
+      
+    </div>
+
+  </div>
+  <div class=" container mt20">
+    <ul class="img_con_6">
+      <li><a href="http://www.ccwsp.com/" target="_blank"><img src="./images/slide5.jpg" alt="" /></a></li>
+      <li><a href="http://www.ccghzg.com/" target="_blank"><img src="./images/190-100_2.png" /></a></li>
+      <li><a href="http://zdxx.zrzy.jl.gov.cn/bi/message/publicMes/tzzxt.shtml?level=2&fullName=%E9%95%BF%E6%98%A5%E5%B8%82" target="_blank"><img src="./images/190-100_4.png" /></a></li>
+      <li><a href="http://gzj.changchun.gov.cn/ywpd/kjgh/ghgs_43345/xzsppqgs_56566/" target="_blank"><img src="./ywpd/ztzl/55966/images/P020210407748892520747.jpg" /></a></li>
+      <li><a href="./yhyshjjszl/" target="_blank"><img src='./yhyshjjszl/images/P020251228626443086326.jpg'/></a></li>
+      <li><a href="./ywpd/zcfg/" target="_blank"><img src="./images/zcfg_1.jpg" alt="" /></a></li>
+
+    </ul>
+  </div>
+  <div class="row row2"> 
+
+    <div class="xxgk">
+      <div class="xxgk_tit title">
+        <div class="title_l"> <img src="./images/xxgk.png" />
+          <div class="title_word">信息公开</div>
+        </div>
+        <a href="http://zwgk.changchun.gov.cn/zcbm/fgw_98042/gkzn/" target="_blank" ;="" class="title_r"><img src="./images/more.png" /></a> </div>
+      <ul class="xxgk_cntbox">
+        <li> <a href="http://zwgk.changchun.gov.cn/zcbm/fgw_98042/ghjxxgkml/202103/t20210305_2767663.html" target="_blank">机构职能</a> </li>
+        <li> <a href="http://zwgk.changchun.gov.cn/zcbm/fgw_98042/ghjxxgkml/202108/t20210813_2886618.html" target="_blank">权责事项</a> </li>
+        <li> <a href="http://zwgk.changchun.gov.cn/zcbm/fgw_98042/ghjxxgkml/202108/t20210806_2883791.html" target="_blank">领导信息</a> </li>
+        <li> <a href="http://zwgk.changchun.gov.cn/zcbm/fgw_98042/gkzn/" target="_blank">政府信息公开目录</a> </li>
+        <li> <a href="http://zwgk.changchun.gov.cn/zcbm/fgw_98042/gkzn/" target="_blank">政府信息公开指南</a> </li>
+        <li> <a href="http://zwgk.changchun.gov.cn/szf_3410/gkyj/" target="_blank">政府信息公开依据</a> </li>
+        <li> <a href="http://zwgk.changchun.gov.cn/zcbm/fgw_98042/ndbg/" target="_blank">政府信息公开年报</a> </li>
+        <li> <a href="http://zwgk.changchun.gov.cn/ysqgk/sqcl/" target="_blank">依申请公开</a> </li>
+        <li> <a href="http://zwgk.changchun.gov.cn/zcbm/fgw_98042/ghjxxgkml/?stit=1957&num=2" target="_blank">财政信息</a> </li>
+      </ul>
+    </div>
+
+    <div class="hdjl">
+      <div class="hdjl_tit title">
+        <div class="title_l"> <img src="./images/hdjl.png" />
+          <div class="title_word">业务频道</div>
+        </div>
+        <a href="./ywpd/" target="_blank" ;="" class="title_r"><img src="./images/more.png" /></a> </div>
+      <div class="hdjl_box1">
+        <div class="tab"> 
+                          <a class="tab_now" href="./ywpd/tdsc/gdjh/" target="_blank">土地管理</a> 
+                         <!-- <a href="./ywpd/tdsc/gdjh/" target="_blank">土地管理</a> -->
+                          <a href="./ywpd/dzkc/" target="_blank">地质矿产</a>
+                          <a href="./ywpd/bdcdj/bdcdj/" target="_blank">不动产登记</a> 
+                          <a href="./ywpd/zcfg/" target="_blank">政策法规</a>
+
+
+                         
+
+
+
+</div>
+        <ul class="hdjl_cntbox cntbox" style="display: block">
+          <li>
+          
+              <p>
+                  <a href="./ywpd/tdsc/gdjh/202603/t20260325_3476141.html" title="长春市区2026年度国有建设用地供应计划" TARGET = "_blank">长春市区2026年度国有建设用地供应计划</a>                  
+                  <span>2026-03-25</span>
+              </p>
+
+         
+              <p>
+                  <a href="./ywpd/tdsc/gdjh/202603/t20260324_3475624.html" title="长春市规划和自然资源局临时用地（涉及占用耕地）批准信息公开（2026年第一批）" TARGET = "_blank">长春市规划和自然资源局临时用地（涉及占用耕地）批准信息公开（2026年第一批）</a>                  
+                  <span>2026-03-24</span>
+              </p>
+
+         
+              <p>
+                  <a href="./ywpd/tdsc/gdjh/202512/t20251225_3454726.html" title="长春市规划和自然资源局临时用地（涉及占用耕地）批准信息公开（2025年第四批）" TARGET = "_blank">长春市规划和自然资源局临时用地（涉及占用耕地）批准信息公开（2025年第四批）</a>                  
+                  <span>2025-12-25</span>
+              </p>
+
+         
+              <p>
+                  <a href="./ywpd/tdsc/gdjh/202510/t20251030_3437174.html" title="长春市区2025年度国有建设用地供应计划 （中期调整）" TARGET = "_blank">长春市区2025年度国有建设用地供应计划 （中期调整）</a>                  
+                  <span>2025-10-30</span>
+              </p>
+
+         
+              <p>
+                  <a href="./ywpd/tdsc/gdjh/202509/t20250924_3429564.html" title="长春市规划和自然资源局临时用地（涉及占用耕地）批准信息公开（2025年第三批）" TARGET = "_blank">长春市规划和自然资源局临时用地（涉及占用耕地）批准信息公开（2025年第三批）</a>                  
+                  <span>2025-09-24</span>
+              </p>
+
+         
+              <p>
+                  <a href="./ywpd/tdsc/gdjh/202506/t20250625_3410846.html" title="长春市规划和自然资源局涉及占用耕地的临时用地审批信息公开（2025年第二批）" TARGET = "_blank">长春市规划和自然资源局涉及占用耕地的临时用地审批信息公开（2025年第二批）</a>                  
+                  <span>2025-06-25</span>
+              </p>
+
+         
+              <p>
+                  <a href="./ywpd/tdsc/gdjh/202505/t20250519_3400913.html" title="绿园区集体建设用地公示（红民未来村）" TARGET = "_blank">绿园区集体建设用地公示（红民未来村）</a>                  
+                  <span>2025-05-19</span>
+              </p>
+
+         
+              <p>
+                  <a href="./ywpd/tdsc/gdjh/202505/t20250514_3400009.html" title="哈达村种子包衣生产加工车间建设项目" TARGET = "_blank">哈达村种子包衣生产加工车间建设项目</a>                  
+                  <span>2025-05-14</span>
+              </p>
+
+         
+          </li>
+        </ul>
+
+
+       <!-- <ul class="hdjl_cntbox cntbox" style="display: none">
+          <li>
+          
+              <p>
+                  <a href="./ywpd/tdsc/gdjh/202603/t20260325_3476141.html" title="长春市区2026年度国有建设用地供应计划" TARGET = "_blank">长春市区2026年度国有建设用地供应计划</a>                  
+                  <span>2026-03-25</span>
+              </p>
+
+         
+              <p>
+                  <a href="./ywpd/tdsc/gdjh/202603/t20260324_3475624.html" title="长春市规划和自然资源局临时用地（涉及占用耕地）批准信息公开（2026年第一批）" TARGET = "_blank">长春市规划和自然资源局临时用地（涉及占用耕地）批准信息公开（2026年第一批）</a>                  
+                  <span>2026-03-24</span>
+              </p>
+
+         
+              <p>
+                  <a href="./ywpd/tdsc/gdjh/202512/t20251225_3454726.html" title="长春市规划和自然资源局临时用地（涉及占用耕地）批准信息公开（2025年第四批）" TARGET = "_blank">长春市规划和自然资源局临时用地（涉及占用耕地）批准信息公开（2025年第四批）</a>                  
+                  <span>2025-12-25</span>
+              </p>
+
+         
+              <p>
+                  <a href="./ywpd/tdsc/gdjh/202510/t20251030_3437174.html" title="长春市区2025年度国有建设用地供应计划 （中期调整）" TARGET = "_blank">长春市区2025年度国有建设用地供应计划 （中期调整）</a>                  
+                  <span>2025-10-30</span>
+              </p>
+
+         
+              <p>
+                  <a href="./ywpd/tdsc/gdjh/202509/t20250924_3429564.html" title="长春市规划和自然资源局临时用地（涉及占用耕地）批准信息公开（2025年第三批）" TARGET = "_blank">长春市规划和自然资源局临时用地（涉及占用耕地）批准信息公开（2025年第三批）</a>                  
+                  <span>2025-09-24</span>
+              </p>
+
+         
+              <p>
+                  <a href="./ywpd/tdsc/gdjh/202506/t20250625_3410846.html" title="长春市规划和自然资源局涉及占用耕地的临时用地审批信息公开（2025年第二批）" TARGET = "_blank">长春市规划和自然资源局涉及占用耕地的临时用地审批信息公开（2025年第二批）</a>                  
+                  <span>2025-06-25</span>
+              </p>
+
+         
+              <p>
+                  <a href="./ywpd/tdsc/gdjh/202505/t20250519_3400913.html" title="绿园区集体建设用地公示（红民未来村）" TARGET = "_blank">绿园区集体建设用地公示（红民未来村）</a>                  
+                  <span>2025-05-19</span>
+              </p>
+
+         
+              <p>
+                  <a href="./ywpd/tdsc/gdjh/202505/t20250514_3400009.html" title="哈达村种子包衣生产加工车间建设项目" TARGET = "_blank">哈达村种子包衣生产加工车间建设项目</a>                  
+                  <span>2025-05-14</span>
+              </p>
+
+         
+          </li>
+        </ul>-->
+
+
+        <ul class="hdjl_cntbox cntbox" style="display: none">
+          <li>
+          
+              <p>
+                  <a href="./ywpd/dzkc/202602/t20260228_3470660.html" title="关于《长春市人民政府2025年第95批次征地范围压覆重要矿产资源调查报告》审查结果公告" TARGET = "_blank">关于《长春市人民政府2025年第95批次征地范围压覆重要矿产资源调查报告》审查结果公告</a>                  
+                  <span>2026-02-28</span>
+              </p>
+
+         
+              <p>
+                  <a href="./ywpd/dzkc/202602/t20260228_3470659.html" title="关于《长春市人民政府2025年第102批次用地范围压覆重要矿产资源调查报告》审查结果公告" TARGET = "_blank">关于《长春市人民政府2025年第102批次用地范围压覆重要矿产资源调查报告》审查结果公告</a>                  
+                  <span>2026-02-28</span>
+              </p>
+
+         
+              <p>
+                  <a href="./ywpd/dzkc/202602/t20260228_3470657.html" title="关于《长春市人民政府2025年第45批次用地范围压覆重要矿产资源调查报告》审查结果公告" TARGET = "_blank">关于《长春市人民政府2025年第45批次用地范围压覆重要矿产资源调查报告》审查结果公告</a>                  
+                  <span>2026-02-28</span>
+              </p>
+
+         
+              <p>
+                  <a href="./ywpd/dzkc/202602/t20260228_3470656.html" title="关于《榆树市人民政府2024年第14批次建设用地项目压覆矿产资源调查报告》审查结果公告" TARGET = "_blank">关于《榆树市人民政府2024年第14批次建设用地项目压覆矿产资源调查报告》审查结果公告</a>                  
+                  <span>2026-02-28</span>
+              </p>
+
+         
+              <p>
+                  <a href="./ywpd/dzkc/202602/t20260228_3470655.html" title="关于《长春市人民政府2025年第43批次用地压覆重要矿产资源调查报告》审查结果公告" TARGET = "_blank">关于《长春市人民政府2025年第43批次用地压覆重要矿产资源调查报告》审查结果公告</a>                  
+                  <span>2026-02-28</span>
+              </p>
+
+         
+              <p>
+                  <a href="./ywpd/dzkc/202602/t20260228_3470652.html" title="关于《长春市人民政府2025年第90批次用地范围压覆重要矿产资源调查报告》审查结果公告" TARGET = "_blank">关于《长春市人民政府2025年第90批次用地范围压覆重要矿产资源调查报告》审查结果公告</a>                  
+                  <span>2026-02-28</span>
+              </p>
+
+         
+              <p>
+                  <a href="./ywpd/dzkc/202602/t20260228_3470650.html" title="关于《长春市人民政府2025年第85批次用地范围压覆矿产资源调查报告》审查结果公告" TARGET = "_blank">关于《长春市人民政府2025年第85批次用地范围压覆矿产资源调查报告》审查结果公告</a>                  
+                  <span>2026-02-28</span>
+              </p>
+
+         
+              <p>
+                  <a href="./ywpd/dzkc/202602/t20260228_3470647.html" title="关于《榆树市人民政府2025年第13批次建设用地项目压覆矿产资源调查报告》审查结果公告" TARGET = "_blank">关于《榆树市人民政府2025年第13批次建设用地项目压覆矿产资源调查报告》审查结果公告</a>                  
+                  <span>2026-02-28</span>
+              </p>
+
+         
+          </li>
+        </ul>
+        <ul class="hdjl_cntbox cntbox" style="display: none">
+          <li>
+          
+              <p>
+                  <a href="./ywpd/bdcdj/bdcdj/202401/t20240109_3269440.html" title="长春市优化营商环境条例" TARGET = "_blank">长春市优化营商环境条例</a>                  
+                  <span>2024-01-01</span>
+              </p>
+
+         
+              <p>
+                  <a href="./ywpd/bdcdj/bdcdj/202603/t20260327_3477033.html" title="继承（受遗赠）2026不动产景阳登记公告51号" TARGET = "_blank">继承（受遗赠）2026不动产景阳登记公告51号</a>                  
+                  <span>2026-03-27</span>
+              </p>
+
+         
+              <p>
+                  <a href="./ywpd/bdcdj/bdcdj/202603/t20260327_3477023.html" title="不动产权证书遗失声明【2026】景阳第385号" TARGET = "_blank">不动产权证书遗失声明【2026】景阳第385号</a>                  
+                  <span>2026-03-27</span>
+              </p>
+
+         
+              <p>
+                  <a href="./ywpd/bdcdj/bdcdj/202603/t20260327_3477015.html" title="不动产权证作废公告【2026】景阳第57号" TARGET = "_blank">不动产权证作废公告【2026】景阳第57号</a>                  
+                  <span>2026-03-27</span>
+              </p>
+
+         
+              <p>
+                  <a href="./ywpd/bdcdj/bdcdj/202603/t20260327_3477014.html" title="不动产权证书作废公告【2026】汽开第6号" TARGET = "_blank">不动产权证书作废公告【2026】汽开第6号</a>                  
+                  <span>2026-03-27</span>
+              </p>
+
+         
+              <p>
+                  <a href="./ywpd/bdcdj/bdcdj/202603/t20260327_3477007.html" title="长（2025）不动产（继承/受遗赠）汽开第（3）号" TARGET = "_blank">长（2025）不动产（继承/受遗赠）汽开第（3）号</a>                  
+                  <span>2026-03-27</span>
+              </p>
+
+         
+              <p>
+                  <a href="./ywpd/bdcdj/bdcdj/202603/t20260327_3476990.html" title="不动产权证书遗失声明【2026】新区第61号" TARGET = "_blank">不动产权证书遗失声明【2026】新区第61号</a>                  
+                  <span>2026-03-27</span>
+              </p>
+
+         
+              <p>
+                  <a href="./ywpd/bdcdj/bdcdj/202603/t20260327_3476972.html" title="不动产权证书作废公告【2025】经开法裁第21号" TARGET = "_blank">不动产权证书作废公告【2025】经开法裁第21号</a>                  
+                  <span>2026-03-27</span>
+              </p>
+
+         
+          </li>
+        </ul>
+        <ul class="hdjl_cntbox cntbox" style="display: none">
+          <li>
+          
+              <p>
+                  <a href="./ywpd/zcfg/202512/t20251225_3454711.html" title="低效用地再开发政策解读一张图" TARGET = "_blank">低效用地再开发政策解读一张图</a>                  
+                  <span>2025-12-25</span>
+              </p>
+
+         
+              <p>
+                  <a href="./ywpd/zcfg/202401/P020250430374901428339.docx" title="中华人民共和国城乡规划法" TARGET = "_blank">中华人民共和国城乡规划法</a>                  
+                  <span>2025-04-29</span>
+              </p>
+
+         
+              <p>
+                  <a href="./ywpd/zcfg/202401/P020250430374690415837.docx" title="中华人民共和国矿产资源法" TARGET = "_blank">中华人民共和国矿产资源法</a>                  
+                  <span>2025-04-29</span>
+              </p>
+
+         
+              <p>
+                  <a href="./ywpd/zcfg/202401/P020250430376641945019.doc" title="长春市城乡规划条例" TARGET = "_blank">长春市城乡规划条例</a>                  
+                  <span>2025-04-29</span>
+              </p>
+
+         
+              <p>
+                  <a href="./ywpd/zcfg/202401/P020250430375463978735.doc" title="不动产登记暂行条例" TARGET = "_blank">不动产登记暂行条例</a>                  
+                  <span>2025-04-29</span>
+              </p>
+
+         
+              <p>
+                  <a href="./ywpd/zcfg/202401/P020240102548948458772.docx" title="中华人民共和国土地管理法" TARGET = "_blank">中华人民共和国土地管理法</a>                  
+                  <span>2024-01-02</span>
+              </p>
+
+         
+              <p>
+                  <a href="./ywpd/zcfg/202401/P020240102544689812965.docx" title="中华人民共和国测绘法" TARGET = "_blank">中华人民共和国测绘法</a>                  
+                  <span>2024-01-02</span>
+              </p>
+
+         
+              <p>
+                  <a href="./ywpd/zcfg/202401/P020240102544429030608.docx" title="中华人民共和国行政诉讼法" TARGET = "_blank">中华人民共和国行政诉讼法</a>                  
+                  <span>2024-01-02</span>
+              </p>
+
+         
+          </li>
+        </ul>
+
+
+        
+      </div>
+    </div>
+ 
+  </div>
+  <div class="row row3">
+    <div class="fl_left"> 
+
+      <div class="bsdt">
+        <div class="bsdt_tit"><a href="https://zwfw.jl.gov.cn/jlszwfw/cksx/?deptId=11220100MB1620447H&area=220100">办事服务</a></div>
+        <ul class="home_hdjl_icon">
+          <li class="li0"><a href="./bsfw/zlxz/"><i></i><span>资料下载</span></a></li>
+          <li class="li1"><a href="http://zwfw.jl.gov.cn/jlszwfw/cksx/?deptId=11220100MB1620447H&area=220100"><i></i><span>办事指南</span></a></li>
+          <li class="li2"><a href="http://zwfw.jl.gov.cn/jlszwfw/cksx/?deptId=11220100MB1620447H&area=220100"><i></i><span>服务窗口</span></a></li>
+          <li class="li3"><a href="http://zwfw.jl.gov.cn/jlszwfw/cksx/?deptId=11220100MB1620447H&area=220100"><i></i><span>结果查询</span></a></li>
+         
+        </ul>
+      </div>
+
+     
+
+    </div>
+    <div class="home_zxfw clearfix">
+     
+      <div class="pic">
+        <ul class="home_zwgk_icon_hdjl">
+          <li class="li0"><a href="./hdjl/zjdc/"><i></i><span>征集调查</span></a></li>
+          <li class="li1"><a href="./hdjl/zxts/"><i></i><span>咨询投诉</span></a></li>
+          <li class="li2" style="margin:0;"><a href="./hdjl/zcjd/"><i></i><span>政策解读</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+  <div class="space30"></div>
+
+   <div class="footer_box">
+    <div class="footer1">
+      <div class="footer_img">
+      
+   <a href="https://bszs.conac.cn/sitename?method=show&amp;id=9AF8230E6664EB38E05310291AAC947A" target="_blank"><img id="imgConac" vspace="0" hspace="0" border="0" src="./images/red.png" data-bd-imgshare-binded="1" /></a>
+</div>
+      <div class="footer_text">
+        <p><span>主办单位：长春市规划和自然资源局</span><span>电话：88779208</span></p>
+        <p><span>地址：南环城路3066号 </span> <span>邮编：130022</span></p>
+        <p><span>网站标识码：2201000020</span><a href="https://beian.miit.gov.cn/" target="_blank"><span style="color:#FFF">吉ICP备 11002904号</span></a> <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=22010202000746"> <span class="footer_ico" style="color:#fff"> <img src="./images/beian.png" style="display:inherit;padding-right:10px;" />吉公网安备 22010202000746号</span></a></p>
+        <p><a href="http://gzj.changchun.gov.cn/gywm/" target="_blank" style="color:#fff;">关于我们</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://gzj.changchun.gov.cn/wzdt/" target="_blank" style="color:#fff;">网站地图</a>&nbsp;&nbsp;
+      </div>
+      <div class="footer_jc"> 
+      <script id="_jiucuo_" sitecode='2201000020' src='./images/jiucuo.js'></script>
+      </div>
+    </div>
+  </div>  
+
+</div>
+
+ 
+<script type="text/javascript">
+$(document).ready(function() {
+	$(".code").hide();
+	$(".rtop>a").mouseenter(function(){
+		var n = $(this).index();
+		$(".code_box").children(".code").eq(n).slideDown();
+	}).mouseleave(function(){
+		$(".code_box").children(".code").slideUp();
+	})
+});
+function closeRtop() {
+	jQuery(".rtop").hide();
+}
+
+
+$(".mainnav .nav0").addClass("on");
+jQuery(".home_tzgg").slide({mainCell:".bd .list",autoPage:true,effect:"topLoop",autoPlay:true,vis:2});
+
+jQuery(".home_tpxw").slide( {titCell:".hd ul", mainCell:".bd ul",effect:"fold",delayTime:800,interTime:4000,autoPlay:true,autoPage:true})
+			   		.find(".hd ul li").empty();
+jQuery(".common_slide").slide({delayTime:0,triggerTime:0, targetCell:".hd .more a"});
+
+jQuery(".home_scroll_layer").slide({mainCell:".bd .cont",autoPage:true,effect:"topLoop",autoPlay:true,vis:1});
+$(".home_ywzx_icon li").addClass(function(){return 'li' + $(this).index();}).find("a").wrapInner("<span></span>").prepend("<i></i>");
+
+$(".hdjl_zjdc_list").load("/sofpro/bmyyqt/gzlpc/myzj/myzj/myzj_home_list.jsp #myzjlist",function(){
+	$(this).find("li").prepend("<i></i>");
+});
+jQuery(".home_xtzq_scroll").slide( {titCell:".hd ul", mainCell:".bd ul",effect:"fold",delayTime:800,interTime:4000,autoPlay:true,autoPage:true})
+			   		.find(".hd ul li").empty();
+
+
+$(".home_ztzl .more").click(function () {
+    if( $(this).hasClass("cur") ){
+        $(this).removeClass("cur");
+        $(this).find("em").html('<b>专题专栏</b> · 展开查看更多');
+        $(this).parent().find("ul").animate({
+            height: "184px"
+        }, 500 );
+    }
+    else {
+        $(this).addClass("cur");
+        $(this).find("em").html('<b>专题专栏</b> · 收起查看部分');
+        $(this).parent().find("ul").animate({
+            height: "368px"
+        }, 500 );
+    }
+});
+
+$(".home_ywpd .bd .item").each(function(){
+	$(this).find("dl").addClass(function() { return 'dl' + $(this).index();});
+})
+
+$(".home_cxgh_pqgs").load("/sofpro/bmyyqt/gzlpc/gfgs/pqgs_second.jsp .common_newslist", function(){
+  $(this).find("ul li").slice(3).remove();
+});
+
+$(".home_chgl_kccgzl").load("/sofpro/bmyyqt/gzlpc/chcg/chcg_sy.jsp .common_newslist", function(){
+  $(this).find("ul li span").remove();
+  $(this).find("ul li").slice(3).remove();
+});
+
+
+
+
+</script>
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+</head>
+
+<body>
+
+<style type="text/css">
+*{margin:0;padding:0;list-style-type:none;}
+#move_port{
+      position: fixed;
+      width: 147px;
+      height: 116px;
+      left: 0;
+      top:0;
+      cursor: pointer;
+      z-index: 10000;
+    }
+</style>
+
+
+<div id="move_port">
+  <a href="http://gzj.changchun.gov.cn/ywpd/tdsc/zzydxxgk/" target="_blank"><img src="./images/1112323.png" alt="" /></a>
+</div>
+
+<script src="./images/move_port.js"></script>
+<script>
+
+   move_obj("#move_port");
+
+</script>
+
+</body>
+</html>
+
+</body>
+</html>

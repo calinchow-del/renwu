@@ -1,0 +1,605 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+
+
+
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="renderer" content="webkit">
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, width=device-width">
+	<meta name="pagetype" id="pagetype" content="2">
+	<META HTTP-EQUIV="pragma" CONTENT="no-cache">
+	<META HTTP-EQUIV="Cache-Control" CONTENT="no-store, must-revalidate">
+	<title>江西省政务服务网 部门窗口</title>
+	<link type="text/css" rel="stylesheet" href="/jxzw/ui/css/global.css"/>
+<script type="text/javascript" src="/jxzw/ui/lib/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="/jxzw/ui/lib/jquery/jquery-migrate-1.4.1.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="/jxzw/resources/jxzw/bscx/czbm/images/hanweb.css" />
+	<link rel="stylesheet" type="text/css" href="/jxzw/resources/jxzw/bscx/czbm/images/bumen.css" />
+	<link rel="stylesheet" type="text/css" href="/jxzw/resources/jxzw/bscx/czbm/images/xzsp_one.css" />
+	<script src="/jxzw/resources/jxzw/bscx/czbm/images/jquery-1.8.3.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script type="text/javascript" src="/jxzw/ui/lib/jquery/jquery.min.js"></script>
+	<script language="javascript">
+		function set_link(){
+			//窗口链接
+			$('#bm_list').attr('src','/jxzw/czbm/sqxczbm.do?webId='+local_webid);
+			//通用头部-检索form提交地址
+			$('#search-form').attr('action',$('#search-form').attr('action'));
+			$('#websiteid').val(local_webid2);
+			$('#tpl').val(local_webid1);
+		}
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$(".sj-slide a").each(function () {
+				if ($(".local_webname").attr("data") == $(this).attr("data")) {
+					$(".local_webname").attr("title", $(this).attr("title"));
+					$(".local_webname").text($(this).text());
+					var local_webhref = $(this).attr('href');
+				}
+			});
+		});
+
+		$(document).ready(function(){
+		  $(".department").hover(function(){
+			$(".bm-slide").show();
+			},function(){
+			$(".bm-slide").hide();
+		  });
+		  $(".bm-slide").hover(function(){
+			$(".bm-slide").show();
+			},function(){
+			$(".bm-slide").hide();
+		  });
+		});
+	</script>
+	<style type="text/css">
+			.bm {
+				margin-top: 38px;
+				position: absolute;
+				z-index: 9999;
+				margin-left: 36%;
+			}
+			
+			.bm .department {
+				display: inline-block;
+				width: 90px;
+				height: 29px;
+				background: url(//www.jxzwfww.gov.cn/images/1/jxzwfw_bm.png) 14px center no-repeat;
+				line-height: 29px;
+				color: #333;
+				font-size: 15px;
+				padding-left: 38px;
+			}
+			
+			.bm-slide {
+				width: 1014px;
+				height: auto;
+				padding-top: 25px;
+				padding-bottom: 15px;
+				position: absolute;
+				left: -456px;
+				top: 21px;
+				display: none;
+				z-index: 10000;
+				/* display: none; */
+			}
+			
+			.bm-slide-top {
+				width: 1014px;
+				height: 25px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				background: url(//www.jxzwfww.gov.cn/images/1/1.png) top no-repeat;
+			}
+			
+			.bm-slide-mid {
+				width: 1014px;
+				height: auto;
+				position: absolute;
+				top: 25px;
+				bottom: 10px;
+				background: url(//www.jxzwfww.gov.cn/images/1/mid-bg.png) top repeat-y;
+			}
+			
+			.bm-slide-bottom {
+				width: 1014px;
+				height: 10px;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				background: url(//www.jxzwfww.gov.cn/images/1/bottom-bg.png) bottom no-repeat;
+			}
+			
+			.sjx2 {
+				width: 32px;
+				height: 17px;
+				background: url(//www.jxzwfww.gov.cn/images/1/2.png) no-repeat;
+				position: absolute;
+				left: 490px;
+				top: 5px;
+			}
+			
+			.bm-slide-list {
+				width: 960px;
+				height: auto;
+				min-height: 45px;
+				margin: 0 auto;
+				padding: 10px 0px 10px 20px;
+				overflow: hidden;
+				position: relative;
+			}
+			
+			#content_search_btn {
+				border: none;
+				width: 35px;
+				height: 35px;
+				border-radius: 0px 4px 4px 0px;
+				background: url(//www.jxzwfww.gov.cn/jxzw/resources/jxzw/bscx/grbs/imagesjx/index/search.png) center center no-repeat #368FFE;
+				float: left;
+			}
+			
+			#bmlist li {
+				cursor: pointer;
+			}
+			#iframe2{
+				width: 100%; 
+				height: auto; 
+				min-height: 650px;
+				border:none;
+			}
+		</style>
+	
+</head>
+	<body>
+	<div id="barrierfree_container">
+		<!-- 头部开始 -->
+		<input id="wid" type="hidden" value="13"/>
+		<div class="local_webname" data="13" style="display:none;" title="宜春市政务服务网">宜春市政务服务网</div>
+		<div class="head">
+		     
+			
+			  
+			  
+			  
+			  
+			  
+			  
+			   
+			  
+			  
+			   
+			  
+			  
+			   
+			  
+			  
+			    
+			  
+			  
+			  
+			  
+			  
+			   
+			  
+			   
+			   
+			  
+					
+			   
+			  
+				
+			   
+			  
+			   
+			   
+			  
+			   
+			   
+			  
+			   
+			   
+			  
+			   
+			   
+			  
+			   
+			   
+			   
+			   
+			     
+			   
+			     
+			   
+			     
+			   
+			     
+			    
+					<script src="//yc.jxzwfww.gov.cn/script/1021/2105171431101172.js" type="text/javascript" charset="utf-8"></script>	 
+			  
+			    
+			   
+			  
+			   
+			   
+		    
+		</div>
+		<!-- 主体开始 -->
+		<div class="position_bg">
+			<h1 class="poistion">
+            	<span><a href="" class="shouye">首页</a></span>&nbsp;&nbsp;/&nbsp;&nbsp;<span><a href="" class="chuangkou">部门窗口</a></span>
+            </h1>
+		</div>
+		<div class='bm'>
+                <!--<span class='department'>部门</span>-->
+                <div class='bm-slide'>
+                    <div class='bm-slide-top'></div>
+                    <div class='bm-slide-mid'></div>
+                    <div class='bm-slide-bottom'></div>
+                    <div class='sjx2'></div>
+                    <div class='bm-slide-list'><iframe src='/jxzw/czbm/sqxczbm.do?webId=13' id='bm_list' data='' width='940' height='270' frameborder='0' scrolling='no'></iframe>
+                    </div>
+                </div>
+        </div>
+		<div class="main_bg">
+			<div class="main_box">
+				<div class="title_top">
+					<h1>宜春市工业和信息化局</h1>
+					<div class="button">
+						<div class="bjtj">
+							<a target="_Blank" href="/jxzw/newbusiness/getBusinessIndex.do?receiveNumber=&orgCode=360900000201005000&wid=13">办件统计</a>
+						</div>
+						
+						<div class="zx">
+							<a target="_Blank" href="/jxzw//yhzxjact/goToJact.do?webId=13&sysid=3&depid=360900000201005000">我要咨询</a>
+						</div>
+						<div class="ts">
+							<a target="_Blank" href="/jxzw//yhzxjact/goToJact.do?webId=13&sysid=4&depid=360900000201005000">我要投诉</a>
+						</div>
+						
+						
+						<div class="clearfix"></div>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				
+				<div  class="title_c">
+					<iframe id='iframe1' scrolling="no" frameborder="0" src="/jxzw/czbm/getDepartmentDtItem.do?webId=13&orgCode=360900000201005000"></iframe>
+				</div>
+				<div class="col_list">
+					<iframe  id="iframe2" scrolling="no" frameborder="0" src="/jxzw/czbm/getTypeSxList.do?webId=13&regionCode=360900000000&type=&orgCode=360900000201005000&reMark=0"></iframe>
+				</div>
+			
+			</div>
+		</div>
+
+		<!-- 主体结束 -->
+		<!-- 底部开始 -->
+		<!--<div class="footer">
+			<script src="//fz.jxzwfww.gov.cn/script/1244/2109100950543105.js"></script>
+		</div>-->
+		 
+		 
+		  
+		 
+		  
+		  
+		  
+		   
+		  
+		  
+		   
+		  
+		  
+		    
+		  
+		     
+		  
+		  
+		  
+		  
+		   
+		  
+		   
+		   
+		  
+		    
+		   
+		  
+		    
+		   
+		  
+		   
+		   
+		  
+		   
+		   
+		  
+		   
+		   
+		  
+		   
+		   
+		  
+		   
+		   
+		   
+		   
+		     
+		   
+		     
+		   
+		     
+		   
+		     
+		    
+				<script src="//yc.jxzwfww.gov.cn/script/1021/2105171431106320.js" type="text/javascript" charset="utf-8"></script>	
+		  
+		   
+		   
+		   
+		   
+		   
+		
+		<!-- 底部结束 -->
+	 </div>	
+	 <script>
+				! function(n, e) {
+					let t = n.documentElement;
+					let i = 'orientationchange' in window ? 'orientationchange' : 'resize';
+					let d = function() {
+						let n = t.clientWidth;
+						if(n) {
+							let e = 100 * (n / 375);
+							e > 200 && (e = 200),
+								t.style.fontSize = e + 'px';
+
+						}
+					};
+					n.addEventListener && (e.addEventListener(i, d, !1), n.addEventListener('DOMContentLoaded', d, !1));
+
+				}(document, window);
+			</script>
+			<style>
+				.title_c{
+					margin-bottom: 20px;
+				}
+				.yd_head{
+					display: none;
+				}
+				.yd_footer{
+					display: none;
+				}
+				#iframe1{
+					width: 100%; height: auto; min-height: 420px;
+				}
+				
+			@media screen and (max-width:1000px) {
+				.yd_head{
+					display: block;
+				}
+				.yd_footer{
+					display: block;
+				}
+				.title_top{
+					border: none;
+				}
+				.title_c{
+					margin-bottom: 0.12rem;
+				}
+				.poistion{
+					width:100%;
+					text-indent: 0.19rem;
+					height:0.36rem;
+					line-height:0.36rem;
+					padding-left:0.12rem;
+					font-size: 0.12rem;
+					background: url(//fz.jxzwfww.gov.cn/picture/2561/2206011153578434993.png) no-repeat 0.12rem center;
+					background-size: 0.13rem 0.16rem;
+				}
+				.main_box{
+					width: 100%;
+					background: #f5f5f5;
+				}
+				.main_bg{
+					padding-top: 0.12rem;
+					padding-bottom: 0;
+					margin-bottom: 0.12rem;
+					background: #f5f5f5;
+				}
+				.main_bg .main_box .title_top h1{
+					display: none;
+				}
+				.button{
+					width: 100%;
+					padding-left: 0.12rem;
+					margin-bottom: 0.12rem;
+				}
+				.button div a{
+					display: block;
+					padding-left: 0;
+					text-align: center;
+					font-size: 0.13rem;
+					line-height: 0.36rem;
+				}
+				.button div{
+					width: 1.09rem;
+					height: 0.36rem;
+					margin-right: 0.12rem;
+				}
+				.bjtj{
+					background: #06ACC7;
+					width: 1.09rem;
+					height: 0.36rem;
+				}
+				.zx{
+					background: #3EA2E1;
+				}
+				.ts{
+					background: #177CA2;
+				}
+				.button .clearfix{
+					display: none;
+				}
+				#iframe1{
+					min-height: 2.92rem;
+				}
+				#iframe2{
+					min-height: 2.25rem;
+				}
+				.col_list{
+					background: #fff;
+				}
+			}
+		</style>
+	</body>
+
+</html>
+
+<script>
+	//头部输入框
+	$(".import").focus(function() {
+		$(".user_box").css("width", "166px")
+		$(this).val("请输入关键词")
+	}).blur(function() {
+		$(".user_box").css("width", "108px")
+		$(this).val("")
+	})
+
+	$(".item_list").hide();
+
+	var isOff = []
+	for(var i = 0; i < $(".item_list").length; i++) {
+		isOff.push(true)
+	}
+	$('.bottom_item_right').click(function() {
+		var index = $('.bottom_item_right').index(this)
+		if(isOff[index]) {
+			$(this).text("收起")
+			$(this).removeClass("item_right_down")
+			$(this).addClass("item_right_up")
+			$(".bottom_item_left").eq(index).addClass("item_left_hover")
+			$(".item_list").eq(index).css("display", "block")
+			isOff[index] = false
+		} else {
+			$(this).text("展开")
+			$(this).addClass("item_right_down")
+			$(this).removeClass("item_right_up")
+			$(".bottom_item_left").eq(index).removeClass("item_left_hover")
+			$(".item_list").eq(index).css("display", "none")
+			isOff[index] = true
+		}
+
+	})
+
+	$(".banjian li").click(function() {
+		var index = $(".banjian li").index(this)
+		for(var i = 0; i < $(".banjian li").length; i++) {
+			$(".banjian li").eq(i).removeClass('active')
+		}
+		$(this).addClass('active')
+	})
+	function setIframeHeight(iframe) {
+			if (iframe) {
+				var iframeWin = iframe.contentWindow || iframe.contentDocument.parentWindow;
+				if (iframeWin.document.body) {
+					iframe.height = iframeWin.document.documentElement.scrollHeight || iframeWin.document.body.scrollHeight;
+				}
+			}
+		};
+
+		$(document).ready = function () {
+			console.log(11111);
+			setIframeHeight(document.getElementById('external-frame'));
+		};
+		
+	function selectByName() {
+			var aa = "/jxzw";
+			var webId = "360900000000";
+			var orgCode = "360900000201005000";
+			var wid = "13";
+			var type = "";
+			
+			var name = $("#shu-r-k").val();
+		
+			var pattern = new RegExp("[`~!@#$^&*()=|{}':;',\\[\\].<>/?~！@#￥……&*（）——|{}【】‘；：”“'。，、？%]");
+		
+			if(!isSql(name) || pattern.test(name))
+			{
+				name = name.replace(/[\'\"\\\/\b\f\n\r\t]/g, '');// 去掉转义字符 
+				name= name.replace(/[\-\_\,\!\|\~\`#$\%\^\&\*\{\}\:\;\"\L\<\>\?]/g, '');// 去掉特殊字符
+				name= name.replace(/[a-zA-Z_]/g, '');// 去掉英文
+			}
+			
+			var namelen=getStringLengthForChinese(name);
+			
+			if( namelen> 30){
+				name=name.substring(0,30)
+			}
+			name=$.trim(name);
+			name = encodeURIComponent(name);
+		
+			var url = aa + "/czbm/getSxList.do?regionCode=" + webId + "&orgCode="
+					+ orgCode + "&type=" + type + "&reMark=" + checkRemark ;
+					
+			$("#goto").attr("src",url); 
+		}
+		
+	function isSql(strPara) {
+			var bl = true;
+			if(strPara != null){
+				 strPara = strPara.toLowerCase();
+				 if (strPara.indexOf("%") >= 0 || strPara.indexOf("|") >= 0 || strPara.indexOf("&") >= 0
+						 || strPara.indexOf("+") >= 0 || strPara.indexOf("alert") >= 0
+						 || strPara.indexOf("script") >= 0 || strPara.indexOf("\"") >= 0
+						 || strPara.indexOf("\'") >= 0 || strPara.indexOf("<") >= 0
+						 || strPara.indexOf("set") >= 0 || strPara.indexOf("exec") >= 0
+						 || strPara.indexOf("delete") >= 0 || strPara.indexOf("update") >= 0
+						 || strPara.indexOf("declare") >= 0 || strPara.indexOf("cast") >= 0
+						 || strPara.indexOf("master") >= 0 || strPara.indexOf("or") >= 0
+						 || strPara.indexOf("and") >= 0 || strPara.indexOf("select") >= 0
+						 || strPara.indexOf("if") >= 0 || strPara.indexOf("sysdate") >= 0
+						 || strPara.indexOf("sleep") >= 0 || strPara.indexOf("truncate") >= 0
+						 || strPara.indexOf("insert") >= 0 || strPara.indexOf("waitfor") >= 0
+						 || strPara.indexOf("union") >= 0 || strPara.indexOf("delay") >= 0
+						 || strPara.indexOf("count") >= 0 || strPara.indexOf("_") >= 0
+						 || strPara.indexOf("onmouseover") >= 0 || strPara.indexOf("prompt") >= 0) { 
+					 bl = false;//有上述特殊字符出现
+				 }
+			}
+			return bl;
+		}
+
+		function getStringLengthForChinese(val) {  
+			var str = new String(val);  
+			var bytesCount = 0;  
+			for (var i = 0 ,n = str.length; i < n; i++) {  
+				var c = str.charCodeAt(i);  
+				if ((c >= 0x0001 && c <= 0x007e) || (0xff60<=c && c<=0xff9f)) {  
+					bytesCount += 1;  
+				} else {  
+					bytesCount += 2;  
+				}  
+			}  
+			return (bytesCount/2).toFixed(0);  
+		}  
+</script>
+<script type="text/javascript">
+	var juba_uuid = "";
+	(function() {
+		var juba = document.createElement("script");
+		juba.type = "text/javascript";
+		juba.async = true;
+		juba.src = "//www.jxzwfww.gov.cn/jubac/sync/detailcollect.do";
+		var s = document.getElementsByTagName("script")[0];
+		s.parentNode.insertBefore(juba, s);
+	})();
+</script>

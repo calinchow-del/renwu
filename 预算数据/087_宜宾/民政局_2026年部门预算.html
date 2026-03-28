@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="SiteName" content="宜宾市民政局">
+    <meta name="SiteDomain" content="http://mzj.yibin.gov.cn/">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>
+        宜宾市民政局
+    </title>
+    <script type="text/javascript" src="http://www.yibin.gov.cn/images/write.js"></script>
+    <link rel="stylesheet" href="./images/common.css">
+    <link rel="stylesheet" href="./images/tyh.css">
+    <link rel="stylesheet" href="./images/tk.css">
+    <link rel="stylesheet" href="/material/gwyszf.css">
+    <script src="./images/jquery.min.js"></script>
+    <script src="./images/common.js"></script>
+    <script src="./images/tool.js"></script>
+    <script src="./images/tyh.js"></script>
+    <script src="./images/tk.js"></script>
+    <script type="text/javascript" src="./images/floatadv.js"></script>
+</head>
+<style>
+    .mt28 {
+        margin-top: 0px;
+    }
+</style>
+<style>
+    .my_td {
+        width: 290px;
+        height: 58px;
+    }
+
+    .slider {
+        z-index: 999;
+        width: 21rem;
+        height: auto;
+        overflow: hidden;
+        position: fixed;
+        bottom: 0rem;
+        left: 0rem;
+
+    }
+
+
+    .slider img {
+        width: 90%;
+        height: auto;
+        display: none;
+    }
+
+    .slider img.active {
+        display: block;
+    }
+
+    .slider .prev,
+    .slider .next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+    }
+
+    .slider .prev {
+        left: 10px;
+    }
+
+    .slider .next {
+        right: 10px;
+    }
+
+    .slider .dots {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .slider .dots span {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #fff;
+        margin: 0 5px;
+        cursor: pointer;
+    }
+
+    .slider .dots span.active {
+        background: #333;
+    }
+
+    .btnStyle {
+
+        color: red;
+        font-size: 1rem;
+        background-color: white;
+        margin-left: 8rem;
+
+    }
+</style>
+<script>
+
+    function doclose() {
+        // document.getElementsById("slider").style.display = "none";
+        $("#slider").attr("style", "display:none;");
+    }
+    // $(window).scroll(function() {
+    //   $('#slider').stop().animate({
+    //     top: $(window).scrollTop() + 20
+    //   }, 500);
+    // });
+</script>
+
+
+<body>
+
+    <div id="windows_r" class="sy_show ftyg_show"
+        style="z-index: 9999; position: fixed;right: 0;bottom: 0px; width: 328px; height: 210px;">
+        <span
+            style="position: absolute; top: -20px; cursor: pointer;  right: 0px;font-weight: bold;color: red;font-size: 14px;"
+            id="productDetailDiv">关闭</span>
+        <iframe style="border: none;" src="//www.yibin.gov.cn/qt_297/test/test1/index.html" width="328"
+            height="210"></iframe>
+    </div>
+    <script type="text/javascript">
+        $('#productDetailDiv').click(function () {
+            $('#windows_r').hide();
+        });
+    </script>
+
+
+    <script type="text/javascript" src="http://mzj.yibin.gov.cn/images/layer.js"></script>
+<!--检索-->
+<script>
+    function SubsiteSearch(){
+        var SearchKey = $("#textfield").val();
+        SearchKey=$.trim(SearchKey);
+        var reg =/[`~!@#$%^&*_+<>{}\/'[\]]/im;
+        if(reg.test(SearchKey)){
+            layer.msg('您输入的信息包含非法字符!');
+            return false;
+        }
+        if(SearchKey=="" || SearchKey== null ){
+            layer.msg("请输入检索条件!");
+            return false;
+        }else{
+            SearchKey = SearchKey.replace("-","\-");
+            SearchKey = SearchKey.replace("(","\(");
+            SearchKey = SearchKey.replace(")","\)");
+        }
+        SearchKey = encodeURIComponent(SearchKey);
+        //window.open("/site/ybsmzj/search.html?searchWord=" + SearchKey + "&siteId=312&orderBy=time&timeOrder=desc")  ;
+        window.open("/irs-c-web/search.html?searchWord=" + SearchKey + "&tenantId=7090&code=18808a49804")  ;
+    }
+</script>
+
+<!-- header -->
+    <div class="header">
+        <div class="header1 clearfix" style="position: relative;">
+
+<!--政务新媒体矩阵-->
+<style>
+.top {
+    padding-top: 12px;
+    height: 27px;
+    line-height:27px;
+}
+.w-container {
+    width: 1200px;
+    margin: 0 auto;
+}
+.lf {
+    float: left;
+}
+.top a, .top span {
+    display: inline-block;
+    color: #666666;
+    font-size: 12px;
+}
+.rt {
+    float: right;
+}
+.top span {
+    padding-left: 8px;
+}
+.top a, .top span {
+    display: inline-block;
+    color: #666666;
+    font-size: 12px;
+}
+li{ list-style:none;}
+#xmt{ width:180px; font-size:12px; cursor:pointer; }
+.zwxmt{ border:solid 1px #FF9966; display:none;background:#FFFFFF; z-index:999; padding-left:10px;}
+</style>
+
+<script type="text/javascript">
+   
+        $(function () {
+            $("#zwxmt").hide();
+            $("#xmt").hover(function () {
+                $(".zwxmt").show();
+            }, function () {
+                $(".zwxmt").hide();
+            })
+         
+        });
+    
+    </script>
+
+<div class="top clearfix">
+            <div class="w-container clearfix">
+                <div class="top-l lf">
+
+                    <a target='_blank' href="http://www.yibin.gov.cn/">宜宾市政府网站集约化站群</a>
+                </div>
+                <div class="top-l rt" style="position:relative;">
+                    <a id="toolbarSwitch" href="javascript:void(0);">无障碍浏览</a>
+                    <span> | </span>
+                    <a  href="/zzzq">长者专区</a>
+                    <span> | </span>
+
+                    <a target='_blank' href="http://www.gov.cn/">中央人民政府</a>
+                    <span> | </span>
+                    <a target='_blank' href="http://www.sc.gov.cn/" class="xhy-hra">四川省人民政府 </a>
+                
+                   
+                   <div id="xmt" style=" position:absolute; margin-left:-200px; top:2px;    ">政务新媒体
+                    <div class="zwxmt">
+                      <ul>
+                    
+                      <li> <a href="javascript::">微信</a> <img src="http://www.yibin.gov.cn/ztzl/ybszwxmtjz/weixin/202006/W020200615581379371812.jpg" width="120" /></li>
+                      </ul>
+                    </div>
+                    
+                     </div>
+                    
+               
+
+<script>
+$(".ewmControl").hover(function(){
+    $(this).find(".ewmdspb").css("display","block");
+},function(){
+    $(this).find(".ewmdspb").css("display","none");
+});
+</script>
+                </div>
+            </div>
+        </div>
+        
+        <!--政务新媒体矩阵-->
+
+
+            <a href="http://mzj.yibin.gov.cn/" class="lf tyh_header_logo">
+                <img src="http://mzj.yibin.gov.cn/images/yydh-logo.png" alt="" class="img" />
+            </a>
+            <div class="tyh_header_search rt">
+                <input type="text" class="inp" placeholder="请输入搜索关键字" id="textfield" />
+                <a href="javascript:void(0)" class="db btn" onclick="SubsiteSearch()">
+                    <img src="http://mzj.yibin.gov.cn/images/yydh-search.png" alt="" class="img yydh-s" />
+                </a>
+            </div>
+        </div>
+        <div class="yydh_header_nav">
+            <ul class="centerWidth clearfix yydh_header_navList">
+                <li>
+                    <a href="http://mzj.yibin.gov.cn/" class="a cur">
+                        <img src="http://mzj.yibin.gov.cn/images/yydh-h1o.png" alt="" class="img" />
+                        <span class="tt">首页</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://mzj.yibin.gov.cn/zzjg_8710/" class="a">
+                        <span class="tt">组织机构</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://mzj.yibin.gov.cn/sy/ddjs/" class="a">
+                        <span class="tt">党的建设</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://mzj.yibin.gov.cn/sy/gzdt_8715/" class="a">
+                        <span class="tt">工作动态</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://mzj.yibin.gov.cn/sy/ckwk/" class="a">
+                        <span class="tt">参考文库</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://mzj.yibin.gov.cn/sy/hdjl/wmdc/index.html" class="a">
+                        <span class="tt">调查征集</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://mzj.yibin.gov.cn/bsfw/" class="a">
+                        <span class="tt">办事服务</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="slider" id="slider">
+        <button class="btnStyle" onclick="doclose()">
+            关--闭
+        </button>
+        <a href="https://www.ybsbyg.com/">
+
+            <img src="./images/v2025-bzfw.png" class="active" />
+        </a>
+        <!-- <div class="prev">
+            《 
+        </div>
+        <div class="next"> 
+            》 
+        </div>
+        <div class="dots">
+            <span class="active"></span>
+            <span></span>
+
+        </div> -->
+
+
+
+    </div>
+
+
+    <!-- main -->
+    <div class="tk-content clearfix">
+        <a style="display:block;width:1200px;height:80px;margin:0 auto;margin-top:0px;margin-bottom:30px;"
+            href="https://www.sc.gov.cn/" target="_blank"><img width="1200" src="http://www.yibin.gov.cn/images/szfpic.jpg" /></a>
+        <div class="tk-tm lf">
+            <div class="fLb">
+                
+                    <a href="./sy/gzdt_8715/202503/t20250306_2100230.html"><img src="./sy/gzdt_8715/202503/W020250306430030154183.png" /></a>
+                
+                    <a href="./sy/gzdt_8715/202411/t20241112_2040051.html"><img src="./sy/gzdt_8715/202411/W020241121613814827655.png" /></a>
+                
+                    <a href="./sy/gzdt_8715/202404/t20240410_1974920.html"><img src="./sy/gzdt_8715/202404/W020240410562903397017.png" /></a>
+                
+                    <a href="./sy/gzdt_8715/202309/t20230919_1906477.html"><img src="./sy/gzdt_8715/202309/W020230919800158681644.png" /></a>
+                
+                    <a href="./sy/gzdt_8715/202308/t20230803_1889422.html"><img src="./sy/gzdt_8715/202308/W020230817417056831679.jpg" /></a>
+                
+            </div>
+            <div class="titles">
+                
+                    
+                        <a href="./sy/gzdt_8715/202503/t20250306_2100230.html" style="display: block">
+                            2025年高县启动第二届养老机构老年人文体趣味活动
+                        </a>
+                    
+                    
+                        <a href="./sy/gzdt_8715/202411/t20241112_2040051.html" style="display: none">
+                            市民政局召开全市民政系统业务（安全）培训班
+                        </a>
+                    
+                        <a href="./sy/gzdt_8715/202404/t20240410_1974920.html" style="display: none">
+                            市康复医院：改善就医感受 社工温暖人心
+                        </a>
+                    
+                        <a href="./sy/gzdt_8715/202309/t20230919_1906477.html" style="display: none">
+                            市民政局学习贯彻习近平新时代中国特色社会主义思想主题教育...
+                        </a>
+                    
+                        <a href="./sy/gzdt_8715/202308/t20230803_1889422.html" style="display: none">
+                            宜宾市民政局召开党组理论学习中心组（扩大）会议传达学习习...
+                        </a>
+                    
+                
+            </div>
+            <div class="lbNums clearfix">
+                
+                    
+                        <span class="cur"></span>
+                    
+                    
+                        <span class=""></span>
+                    
+                        <span class=""></span>
+                    
+                        <span class=""></span>
+                    
+                        <span class=""></span>
+                    
+                
+            </div>
+        </div>
+        <div class="table-box rt ">
+            <a href="./zdlyxxgk/" class="tab1-box-more">
+                <span>更多>></span>
+            </a>
+            <div class="table-tit">
+                <!--
+                    <a class="tk-active" href=""></a>
+                      -->
+
+                <a href="http://www.yibin.gov.cn/xxgk/gsyw/gwyxx/" class="tit">党中央国务院信息</a>
+                <a href="https://www.sc.gov.cn/10462/c110462/list_ft.shtml" class="tit">省委省政府信息</a>
+                <a class="" href="./sy/gsgg/">
+                    公示公告
+                </a>
+
+            </div>
+            <div class="table-items">
+                <!--<div class="items-s" style="display:block">
+                    
+                    </div>-->
+
+
+                <div class="items-s" style="display:none">
+                    <ul class="index-item index-list1" id="gwyinfo">
+
+
+                    </ul>
+                    <ul class="wenjianku">
+                        <li class="gwylastli gwylastlishengzf">
+                            <a href="https://www.gov.cn/zhengce/xxgk/index.htm" target="_blank"
+                                style="display: inline;">
+                                <span
+                                    style="font-weight: bold; color: #cc272d; float: none; padding: 0;">国家政策文件库：</span></a>
+                            <div class="link-container" id="gwywjk"> </div>
+                        </li>
+                    </ul>
+
+                </div>
+
+
+                <div class="items-s" style="display: none;">
+                    <script src="https://www.sc.gov.cn/10462/szfxx/szfxx.js"> </script>
+                    <ul class="szfwenjianku">
+                        <li class="gwylastli gwylastlishengzf">
+                            <a class="red" href="https://www.sc.gov.cn/10462/scszcwjkss/scszcwjkss.shtml"
+                                target="_blank" style="display: inline;">省政府政策文件：</a>
+                            <div class="link-container" id="szfwjk"></div>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <div class="items-s" style="display:none">
+                    
+                        <div class="itop-list">
+                            
+                                <h1><a href="./sy/gsgg/202603/t20260324_2215021.html">
+                                        宜宾市民政局关于公开征集养老服务领域问题线索的公告
+                                    </a></h1>
+                                <p class="p1">
+                                    
+                                </p><a href="./sy/gsgg/202603/t20260324_2215021.html" class="a1">[详情]</a>
+                            
+                        </div>
+                        <ul>
+                            
+                                <li><a href="./sy/gsgg/202603/t20260318_2213678.html">
+                                        宜宾市民政局 关于公开征集困难群众救助不到位问题线索的公告
+                                    </a><span>
+                                        26-03-18
+                                    </span></li>
+                            
+                                <li><a href="./sy/gsgg/202603/t20260318_2213475.html">
+                                        宜宾市民政局关于征求《宜宾市特殊困难群众专项帮扶制度（征...
+                                    </a><span>
+                                        26-03-18
+                                    </span></li>
+                            
+                                <li><a href="./sy/gsgg/202603/t20260327_2215955.html">
+                                        宜宾市民政局2026年第一季度政务公开网络平台自查报告
+                                    </a><span>
+                                        26-03-06
+                                    </span></li>
+                            
+                                <li><a href="./sy/gsgg/202603/t20260309_2211090.html">
+                                        宜宾市民政局 关于2025年度法治政府建设工作情况的报告
+                                    </a><span>
+                                        26-02-27
+                                    </span></li>
+                            
+                                <li><a href="./sy/gsgg/202602/t20260205_2201887.html">
+                                        2026年春节文明祭祀倡议书
+                                    </a><span>
+                                        26-02-03
+                                    </span></li>
+                            
+                                <li><a href="./sy/gsgg/202601/t20260120_2197148.html">
+                                        宜宾市民政局 关于征集宜宾市向中度以上失能老年人发放 养老...
+                                    </a><span>
+                                        26-01-20
+                                    </span></li>
+                            
+                        </ul>
+                    
+                </div>
+            </div>
+
+            <script>
+                /*鼠标经过更改更多的链接地址*/
+                $(".table-tit a").mouseover(function () {
+                    var url = $(this).attr("href");
+                    $(".tab1-box-more").attr("href", url);
+                });
+            </script>
+            <div class="f2 lf">
+                <a href="./sy/zwgk/ldxx/">
+                    领导信箱
+                </a>
+            </div>
+            <div class="f2 rt">
+                <a href="./sy/ckwk/2021bmwj/">部门文件</a>
+            </div>
+            <!--div class="f2 rt">
+                    <a href="./sy/ckwk/zcfg/">政策法规</a>
+                </div-->
+        </div>
+        <div class="height10"></div>
+        <script type="text/javascript" src="http://rsj.yibin.gov.cn/images/jquery.SuperSlide.2.1.1.js"></script>
+        <style>
+            .zt-gr {
+                position: relative;
+                height: 100px;
+                margin-top: 10px;
+            }
+
+            .zt-gr {
+                width: 1200px;
+                height: 100px;
+                overflow: hidden;
+                position: relative;
+            }
+
+            .zt-gr .bd {
+                position: relative;
+                z-index: 0;
+                margin-top: 10px;
+            }
+
+            .zt-gr .bd li {
+                zoom: 1;
+                vertical-align: middle;
+                position: relative;
+            }
+
+            .zt-gr .bd img {
+                width: 1200px;
+                height: 100px;
+            }
+
+            .zt-gr .hd ul {
+                position: absolute;
+                right: 10px;
+                bottom: 10px;
+                overflow: hidden;
+                z-index: 10
+            }
+
+            .zt-gr .hd ul li {
+                float: left;
+                width: 30px;
+                height: 5px;
+                overflow: hidden;
+                margin-right: 10px;
+                cursor: pointer;
+                background: #D9D9D9
+            }
+
+            .zt-gr .hd ul li.on {
+                background: #0075c4;
+            }
+        </style>
+
+        <div id="zt-gr" class="zt-gr fl">
+            <div class="hd">
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+
+            <div class="bd">
+                <ul>
+                    <li><a target="_blank" href=""> <img src="./images/tk5.png" alt="" /></a></li>
+                    <li><a target="_blank" href=""> <img src="./images/gjaqrryz1.png" /></a></li>
+                    <li><a target="_blank" href=""><img src="./images/whgjaqgjhxsh2.png" /></a></li>
+                    <li><a target="_blank" href=""><img src="./images/jcddgjaqdjdld3.png" /></a></li>
+                    <li><a target="_blank" href=""><img src="./images/yxaqgjbzfzgj4.png" /></a></li>
+
+                </ul>
+            </div>
+        </div>
+        <script>
+            jQuery(".zt-gr").slide({ mainCell: ".bd ul", effect: "fold", autoPlay: true, delayTime: 1000 })
+            //banner 
+            !function () {
+                $('.zt-gr1 .bd > ul >li').hide().eq(0).show();
+                var Index = 1;
+                var lb = function () {
+                    if (Index > 1) {
+                        Index = 0;
+                    }
+                    $('.zt-gr1 .bd > ul >li').eq(Index).fadeIn().siblings("li").fadeOut(); //
+                    $('.zt-gr1 .hd > ul >li').eq(Index).addClass('on').siblings().removeClass('on'); //
+                    Index++;
+                };
+                var timer = setInterval(lb, 30000);
+                $('.banner').mouseenter(function () {
+                    clearInterval(timer)
+                }).mouseleave(function () {
+                    timer = setInterval(lb, 30000);
+                })
+                // banner
+                $('.zt-gr1 .hd > ul').on('mouseenter', 'li', function () {
+                    var subindex = $(this).index();
+                    $(this).addClass('on').siblings().removeClass('on');
+                    $('.zt-gr1 .bd > ul >li').eq(subindex).fadeIn().siblings("li").fadeOut();
+                })
+
+            }()
+            jQuery(".whTopSlide").slide({ mainCell: ".bd ul", effect: "leftLoop", autoPlay: true, vis: 5 }); //新闻
+            jQuery(".slideTxtBox").slide();
+            //头条
+            var subHotNum = $(".subhot > ul > li").length;
+            if (subHotNum > 1) {
+                $(".subhot > ul> li:last").addClass("on")
+            };
+            if (subHotNum > 2) {
+                $(".subhot > ul> li:last").prev("li").addClass("on")
+            };
+            if (subHotNum > 3) {
+                $(".subhot > ul> li:last").prev("li").prev("li").addClass("on")
+            };
+            if (subHotNum > 4) {
+                $(".subhot > ul> li:last").prev("li").prev("li").prev("li").addClass("on")
+            }
+            var linkList = $(".link-cont > ul")
+            $(".lk-nav > ul").on('click', "li", function () {
+                $(this).css("z-index", "100")
+                var Index = $(this).index();
+                if (Index == 0 || Index == 5) {
+                    linkList.slideUp(1000)
+                } else {
+                    linkList.eq(Index).stop().slideToggle(1000).siblings().slideUp(500)
+                }
+
+            })
+            $(".side1").on("click", function () {
+                $("#qt").focus();
+            })
+        </script>
+        <div class="ind-left lf">
+            <div class="list1 lf">
+                <a href="./sy/gzdt_8715/" class="t-more">
+                    <span>更多>></span>
+                </a>
+                <div class="t-tit">
+                    <a class="" href="./sy/gzdt_8715/">
+                        工作动态
+                    </a>
+                </div>
+                <div class="t-items">
+                    <div class="ite-s" style="display:block">
+                        <ul>
+                            
+                                <li><a href="./sy/gzdt_8715/202603/t20260318_2213730.html">
+                                        遇见元宵 新婚有礼！翠屏区举行中式婚仪 沉浸式体验活动
+                                    </a><span>
+                                        26-03-09
+                                    </span></li>
+                            
+                                <li><a href="./sy/gzdt_8715/202603/t20260302_2207276.html">
+                                        2026年全市民政工作会议召开
+                                    </a><span>
+                                        26-02-28
+                                    </span></li>
+                            
+                                <li><a href="./sy/gzdt_8715/202602/t20260211_2204119.html">
+                                        宜宾：社会组织齐行动 新春关爱暖人心
+                                    </a><span>
+                                        26-02-11
+                                    </span></li>
+                            
+                                <li><a href="./sy/gzdt_8715/202602/t20260211_2203766.html">
+                                        市康复医院：强化应急处置能力 保障春节平安有序
+                                    </a><span>
+                                        26-02-11
+                                    </span></li>
+                            
+                                <li><a href="./sy/gzdt_8715/202601/t20260127_2198953.html">
+                                        最高月补800元！宜宾养老服务消费补贴来了
+                                    </a><span>
+                                        26-01-27
+                                    </span></li>
+                            
+                                <li><a href="./sy/gzdt_8715/202601/t20260112_2194812.html">
+                                        “康辅工程”架起康复之桥 温情守护暖民心
+                                    </a><span>
+                                        26-01-12
+                                    </span></li>
+                            
+                                <li><a href="./sy/gzdt_8715/202512/t20251229_2183480.html">
+                                        宜宾市民政局开展2005年“康辅工程”项目评估筛查工作
+                                    </a><span>
+                                        25-12-29
+                                    </span></li>
+                            
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+            <div class="list1 rt mt28">
+                <a href="./zdlyxxgk/" class="t-more">
+                    <span>更多>></span>
+                </a>
+                <div class="t-tit">
+                    <a class="" href="./zdlyxxgk/">
+                        重点领域信息公开
+                    </a>
+                </div>
+                <div class="t-items">
+                    <div class="ite-s" style="display:block">
+                        <ul>
+                            
+                                <li><a href="./zdlyxxgk/xzql/202603/t20260304_2207856.html">
+                                        市民政局行政许可（2026年3月4日）
+                                    </a><span>
+                                        26-03-04
+                                    </span></li>
+                            
+                                <li><a href="./zdlyxxgk/shjz/202603/t20260304_2207801.html">
+                                        宜宾市2026年2月特殊困难群众专项帮扶信息
+                                    </a><span>
+                                        26-03-04
+                                    </span></li>
+                            
+                                <li><a href="./zdlyxxgk/shjz/202603/t20260304_2207800.html">
+                                        宜宾市2026年2月临时救助信息
+                                    </a><span>
+                                        26-03-04
+                                    </span></li>
+                            
+                                <li><a href="./zdlyxxgk/shjz/202603/t20260304_2207798.html">
+                                        宜宾市2026年2月城乡低保信息
+                                    </a><span>
+                                        26-03-04
+                                    </span></li>
+                            
+                                <li><a href="./zdlyxxgk/shjz/202603/t20260304_2207797.html">
+                                        宜宾市2026年1月城乡特殊困难群众救助帮扶信息
+                                    </a><span>
+                                        26-03-04
+                                    </span></li>
+                            
+                                <li><a href="./zdlyxxgk/shjz/202603/t20260304_2207796.html">
+                                        宜宾市2026年1月临时救助信息
+                                    </a><span>
+                                        26-03-04
+                                    </span></li>
+                            
+                                <li><a href="./zdlyxxgk/shjz/202603/t20260304_2207794.html">
+                                        宜宾市2026年1月城乡低保信息
+                                    </a><span>
+                                        26-03-04
+                                    </span></li>
+                            
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+        <div class="ind-right rt">
+            <div class="open rt">
+                <p class="op-t">
+                    <a href="./sy/zfxxgk/" class="a1">
+                        政府信息公开
+                    </a>
+                </p>
+                <ul class="u1 bor">
+                    <li><a href="./sy/zfxxgk/">政府信息公开指南</a></li>
+                    <li><a href="http://mzj.yibin.gov.cn/xxgkpt/zdlist.html?deptId=92337811">政府信息公开制度</a></li>
+                    <li><a href="https://mzj.yibin.gov.cn/xxgkpt/morelist.html?deptId=92337811&chnlId=1410&id=cd2a393a-77c5-4282-b61b-235e42cd62fd">
+                            法定主动公开内容
+                        </a></li>
+                    <li><a href="./sy/zwgk/zfxxgknb/">
+                            政府信息公开年报
+                        </a></li>
+
+                    <li><a href="./sy/zwgk/zfwzndgzbb/">
+                            政府网站工作年度报表
+                        </a></li>
+                    <!--<li><a href=""></a></li>-->
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <div class="tk-content clearfix newys">
+
+
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+
+                <td align="center"><a href="./sy/bsmzylwm/" class="pa">
+                        <img class="my_td" src="./images/v2025-ylwm.png" alt="" /></a></td>
+
+
+                <td align="center"><a href="./sy/zgybsjwpzsmzjjjz/" class="pa">
+                        <img class="my_td" src="./images/tk10.png" alt="" /></a></td>
+                <td align="center"><a href="./sy/ybscshzyfwxczl/" class="pa">
+                        <img class="my_td" src="./images/tk11.png" alt="" /></a></td>
+                <td align="center"><a href="http://mzj.yibin.gov.cn/sy/ybsdecqgdmpczl_20263/index.html" class="pa">
+                        <img class="my_td" src="http://mzj.yibin.gov.cn/material/惠民政策早知道.png" /></a></td>
+            </tr>
+        </table>
+
+
+
+
+    </div>
+
+
+    <script>
+        $.ajax({
+            url: 'http://www.yibin.gov.cn/qt_297/gwy_6722.json',
+            dataType: "jsonp",
+            jsonp: "gwyxx",
+            jsonpCallback: "gwyxx",
+            success: function (data) {
+                var data = data.datas;
+                $.each(data, function (i, json) {
+                    if (i == 6) {
+                        return false;
+                    }
+                    date = json.docreltime;
+                    var title = json.title;
+                    if (title.length > 24) {
+                        title = title.substring(0, 24) + "...";
+                    }
+                    $("#gwyinfo").append("<li><a href='" + json.url + "'>" + title + "</a><span>" + date + "</span></li>");
+
+
+
+                })
+            },
+            error: function () { }
+        });
+
+        $.ajax({
+            url: "http://www.yibin.gov.cn/qt_297/szf_6723.json",
+            dataType: "jsonp",
+            jsonp: "szfxx",
+            jsonpCallback: "szfxx",
+            success: function (data) {
+                var data = data.datas;
+                $.each(data, function (i, json) {
+                    if (i == 8) {
+                        return false;
+                    }
+                    var date = json.docreltime;
+                    var title = json.title;
+                    if (title.length > 24) {
+                        title = title.substring(0, 24) + "...";
+                    }
+                    $("#szfinfo").append("<li><a href='" + json.url + "'>" + title + "</a><span>" + date + "</span></li>");
+                })
+            },
+            error: function () {
+                console.log("获取失败");
+            }
+        });
+    </script>
+
+    <!-- footer -->
+    <div class="footer">
+
+        <div class="yydh-drop ">
+            <div class="drop-groups clearfix" style="margin:0 auto; display:block;">
+                <div class="drop-down" style="width:200px; height:32px; line-height:32px; background:#fff url('http://mzj.yibin.gov.cn/images/yydh-drop.png') no-repeat scroll 182px center; border:none;">
+                    <p class="tag">国家部委</p>
+                    <ul class="drop-lists">
+						
+							<li><a href="https://www.mca.gov.cn/">中华人民共和国民政部</a></li>
+						
+                    </ul>
+                </div>
+                <div class="drop-down" style="width:200px; height:32px; line-height:32px; background:#fff url('http://mzj.yibin.gov.cn/images/yydh-drop.png') no-repeat scroll 182px center; border:none;">
+                    <p class="tag">省市链接</p>
+                    <ul class="drop-lists">
+						
+							<li><a href="https://mzt.sc.gov.cn/">四川省民政厅</a></li>
+						
+							<li><a href="https://www.ybsbyg.com/">宜宾市殡仪馆</a></li>
+						
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <style>
+  #_span_jiucuo img{margin: 20px 10px 3px -0px !important;}
+
+</style>
+<div class="yydh-help">
+            <div class="yydh-w1200">
+                <script type="text/javascript">document.write(unescape("%3Cspan id='_ideConac' %3E%3C/span%3E%3Cscript src='http://dcs.conac.cn/js/23/344/0000/40622710/CA233440000406227100002.js' type='text/javascript'%3E%3C/script%3E"));</script>
+
+<span><script id='_jiucuo_' sitecode='5115000003' src='https://zfwzgl.www.gov.cn/exposure/jiucuo.js'></script></span>
+
+                <div class="yydh-t">
+                    <p>主办：宜宾市民政局</p>
+                    <p>建设维护单位：宜宾市政府信息服务保障中心  联系电话：0831-2328191  <a href="http://mzj.yibin.gov.cn/qt/sitemap/index.html" target="_blank">网站地图</a></p>
+                    <p> <a href="https://beian.miit.gov.cn" target="_blank">蜀ICP备2021017216号</a>&nbsp;网站标识码 5115000003&nbsp;&nbsp;<a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=51150202000254" target="_blank"><img src="http://mzj.yibin.gov.cn/images/20190428ga.png" />川公网安备&nbsp;51150202000254号</a></p>
+                </div>
+           
+            </div>
+        </div>
+<script src="https://auth.mangren.com/boots/mzj.yibin.gov.cn/esdToolsInit.js" charset="UTF-8"></script>
+<script type="text/javascript">document.write(unescape("%3Cspan id='cnzz_stat_icon_1279105200'%3E%3C/span%3E%3Cscript src='https://s4.cnzz.com/z_stat.php%3Fid%3D1279105200%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
+<script id="_trs_ta_js" src="//ta.trs.cn/c/js/ta.js?mpid=2910" async="async" defer="defer"></script>
+        <script type="text/javascript" src="/material/gwyszf.js"></script>
+    </div>
+</body>
+
+</html>

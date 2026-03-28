@@ -1,0 +1,1257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="SiteName" content="">
+    <meta name="SiteDomain" content="">
+    <meta name="SiteIDCode" content="">
+    <title>洛阳市商务局</title>
+    <script src="https://t.ly.gov.cn/file/4103000037/js/jquery-3.6.0.min.js"></script>
+    <link href="https://t.ly.gov.cn/file/4103000037/css/swjpublic.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://t.ly.gov.cn/file/4103000037/css/public.css">
+    <link rel="stylesheet" href="https://t.ly.gov.cn/file/4103000037/css/index.css">
+    <link rel="stylesheet" href="https://t.ly.gov.cn/file/4103000037/css/forTheOld.css">
+</head>
+
+<body style="padding: 0;margin:0;">
+    <div id="app shouye">
+        <div>
+            <!-- 头部 -->
+            <div data-visible="">
+    <div class="Header">
+        <script src="https://t.ly.gov.cn/file/4103000037/js/language.js"></script>
+        <div class="subNav">
+            <div class="mainLayout topFlex">
+                <p>欢迎访问洛阳市商务局！ <a href="https://my.henan.gov.cn/login" target="_blank">登录 |</a>
+                    <a href="javascript:;" onclick="zh_tran('s');" style="color: #000;">简 |</a>
+                    <a href="javascript:;" onclick="zh_tran('t');" style="color: #000;">繁</a>
+                </p>
+            </div>
+        </div>
+        <div class="bannerBj">
+            <div class="mainLayout bannerDIV" style="position: relative;">
+                <div class="baseinfo">
+                    <div class="wza-box">
+                        <a onclick="headTool.switchOld()" id="toolbarOldman" class="oldman" href="javascript:void(0);"
+                            title="进入适老模式">进入适老模式</a>
+                        <a href="javascript:void(0);" class="wza" id="toolbarSwitch" onclick="EsdInit.openClickFunc();"
+                            onkeydown="EsdInit.openKeydownFunc(event);">无障碍阅读</a>
+                    </div>
+                </div>
+                <div class="blueShade">
+                    <a href="/">
+                        <div class="logo" style="margin-bottom: 0;">
+                            洛阳市商务局
+                            <p>LUOYANG MUNICIPAL BUREAU OF COMMERCE</p>
+                        </div>
+                    </a>
+                    <a href="https://swj.ly.gov.cn/sy/lypq/" target="_blank">
+                        <div>
+                            <img src="https://t.ly.gov.cn/file/4103000037/img/lypq_logo.png" alt="" height="88px">
+                        </div>
+                    </a>
+                    <p class="time"><i class="iconfont icon-rili"><span id="date"></span></i>
+                    </p>
+                    <p class="time" style="float: right;">
+                        <a href="https://swj.ly.gov.cn/sy/lypq/" target="_blank"
+                        style="color: #fff;font-size: 16px;display: inline-block;height: 26px;line-height: 26px;text-align: center;width: 90px;">点击进入</a>
+                    </p>
+                    <script>
+                        function displayDateAndWeek() {
+                            let today = new Date();
+                            let year = today.getFullYear();
+                            let month = today.getMonth() + 1;
+                            let day = today.getDate();
+                            let weekDays = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
+                            let weekDay = weekDays[today.getDay()];
+                            month = (month < 10 ? '0' : '') + month;
+                            day = (day < 10 ? '0' : '') + day;
+
+                            return year + "年" + month + "月" + day + "日 " + weekDay;
+                        }
+                        document.getElementById('date').innerHTML = displayDateAndWeek();
+                    </script>
+                </div>
+            </div>
+        </div>
+        <div id="nav_keleyi_com"
+            style="background-color: rgb(23, 100, 206); position: relative; top: 0px; width: 100%;">
+            <div class="mainLayout meauDiv">
+                <div><i class="iconfont icon-caidan"></i></div>
+                <ul>
+                    <!-- <li><a href="/" class="cur">首页<i class="iconfont icon-jiantou"></i></a></li> -->
+                    <li><a href="/">首页<i class="iconfont icon-jiantou"></i></a></li>
+                    <li><a href="http://swj.ly.gov.cn/swdt">商务动态<i class="iconfont icon-jiantou"></i></a></li>
+                    <li><a href="https://swj.ly.gov.cn/zwgk/zfxxgkzn/" target="_blank">政府信息公开<i
+                                class="iconfont icon-jiantou"></i></a></li>
+                    <li><a href="http://swj.ly.gov.cn/hdpt">互动平台<i class="iconfont icon-jiantou"></i></a></li>
+                    <li><a href="https://www.hnzwfw.gov.cn/portal/department/001003013002019?region=410300000000&creditCode=114103007616542526"
+                            target="_blank">政务服务<i class="iconfont icon-jiantou"></i></a></li>
+                    <li class="nav_ztzl"><a href="http://swj.ly.gov.cn/ztzl">专题专栏<i
+                                class="iconfont icon-jiantou"></i></a>
+                        <div class="meauZT mainLayout" style="display: none;">
+                            <div class="hideZt">
+                                <a title="中国（洛阳）自由贸易试验区洛阳片区" href="http://swj.ly.gov.cn/sy/lypq"><img
+                                        src="https://t.ly.gov.cn/file/4103000037/img/lypq.png"></a>
+                                <a title="信用信息双公示" href="http://swj.ly.gov.cn/xyxxsgs"><img
+                                        src="https://t.ly.gov.cn/file/4103000037/img/zt1.jpg"></a><a
+                                    title="创建全国法治政府建设示范市" href="http://swj.ly.gov.cn/cjqgfzzfjssfs"><img
+                                        src="https://t.ly.gov.cn/file/4103000037/img/zt2.jpg"></a><a title="警示教育"
+                                    href="http://swj.ly.gov.cn/jsjy"><img
+                                        src="https://t.ly.gov.cn/file/4103000037/img/zt4.jpg"></a><a title="加油站建设相关事项"
+                                    href="http://swj.ly.gov.cn/jyzjsxgsx"><img
+                                        src="https://t.ly.gov.cn/file/4103000037/img/zt5.jpg"></a><a
+                                    title="对外劳务合作经企业相关事项" href="http://swj.ly.gov.cn/dwlwhzjqyxgsx"><img
+                                        src="https://t.ly.gov.cn/file/4103000037/img/zt6.jpg"></a><a title="涉外服务专区"
+                                    href="http://swj.ly.gov.cn/swfwzq"><img
+                                        src="https://t.ly.gov.cn/file/4103000037/img/zt7.jpg"></a><a title="消费品以旧换新"
+                                    href="http://swj.ly.gov.cn/xfpyjhx"><img
+                                        src="https://t.ly.gov.cn/file/4103000037/img/zt8.jpg"></a>
+                            </div>
+                        </div>
+                        <script>
+                            $('.nav_ztzl').hover(function () {
+                                $(this).children('.meauZT').css('display', 'block')
+                            }, function () {
+                                $(this).children('.meauZT').css('display', 'none')
+                            })
+                        </script>
+                    </li>
+                </ul>
+                <div class="search"><input type="text" name="search" id="searchInput" value="" placeholder="请输入关键字">
+                    <button onclick="theHeadSearch()"><i class="iconfont icon-sousuo"></i></button>
+                </div>
+                <script>
+                    function theHeadSearch() {
+                        var keywords = document.getElementById('searchInput').value;
+                        var url = '/search?foot_h=295&keywords=' + encodeURIComponent(keywords);
+                        window.open(url, '_blank');
+                    }
+                </script>
+            </div>
+        </div>
+        <!-- 导航栏结束 -->
+        <script>
+            let nowtop = document.querySelector('#nav_keleyi_com').offsetTop
+            $(window).scroll(function () {
+                if (window.pageYOffset >= nowtop) {
+                    $('#nav_keleyi_com').css({
+                        'position': 'fixed',
+                        'z-index': '300'
+                    })
+                } else {
+                    $('#nav_keleyi_com').css({
+                        'position': 'relative'
+                    })
+                }
+            })
+        </script>
+        <!--半窗开始 -->
+        <div role="presentation" class="el-dialog__wrapper" with-header="true" style="display: none;">
+            <div role="document" tabindex="-1" class="el-drawer__container">
+                <div aria-modal="true" aria-labelledby="el-drawer__title" role="presentation" class="el-drawer rtl"
+                    style="width: 45%;">
+                    <header id="el-drawer__title" class="el-drawer__header"><span role="heading">导航栏</span><button
+                            aria-label="close 导航栏" type="button" class="el-drawer__close-btn"><i
+                                class="el-dialog__close el-icon el-icon-close"></i></button></header>
+                </div>
+            </div>
+        </div>
+        <!-- 半窗结束 -->
+        <div class="kongdiv" style="height: 58px; display: none;"></div>
+        <!-- 高 -->
+    </div>
+</div>
+            <!-- 头部结束 -->
+            <!-- 内容开始 -->
+            <div data-v-41c51f9c="">
+                <!-- 右侧浮窗 -->
+                <div data-v-41c51f9c="" class="weiboFixed">
+                    <!-- 17647行 -->
+                    <a data-v-41c51f9c="" href="https://weibo.com/u/2620115501" target="_black" class="sina"></a>
+                    <!-- 17660行 -->
+                    <div data-v-41c51f9c="" class="qrCode">
+                        <p data-v-41c51f9c=""><img data-v-41c51f9c=""
+                                src="https://t.ly.gov.cn/file/4103000037/img/swj_qrCode.984b9ef.jpg" width="120"></p>
+                    </div>
+                    <script>
+                        $('.qrCode').click(function () {
+                            $(this).children('p').slideToggle()
+                        })
+                    </script>
+                </div>
+                <!-- 首-新闻 -->
+                <div data-v-41c51f9c="" style="background-color: rgb(238, 238, 238);">
+                    <div data-v-41c51f9c="" class="mainLayout topNews"><span data-v-41c51f9c=""><img data-v-41c51f9c=""
+                                src="https://t.ly.gov.cn/file/4103000037/img/tt.png"></span>
+                        <div data-v-41c51f9c="">
+                            <ul data-v-41c51f9c="">
+        <li data-v-41c51f9c=""><a data-v-41c51f9c="" href="http://swj.ly.gov.cn/2025/10-24/901212.html" class=""
+            target="_blank" title="党的二十届四中全会公报一图速览"> <a data-v-41c51f9c=""
+                href="http://swj.ly.gov.cn/2025/10-24/901212.html" target="_blank"
+                title="党的二十届四中全会公报一图速览">党的二十届四中全会公报一图速览</a></a></li>
+    </ul>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- 第一部分开始 -->
+                <div data-v-41c51f9c="" class="mainLayout hotNews">
+                    <!-- 轮播图开始 -->
+                    <div data-v-41c51f9c="" id="fsD1" class="focus">
+                            <div data-v-41c51f9c="" id="D1pic1" class="fPic">
+            <div data-v-41c51f9c="" class="fcon"> <a data-v-41c51f9c="" href="http://swj.ly.gov.cn/2026/03-12/1046836.html"
+                target="_blank" title="洛阳“首店效应”：激活城市消费潜力的“流量密码”" class="fconLink"><img data-v-41c51f9c=""
+                    src="https://oss.ly.gov.cn/upload-file/images/20260312/0ce1920348b348b3b510f3ed5bdaeb84.jpg?x-oss-process=image/crop,w_651,h_481,x_0,y_0,r_1" style="opacity: 1;"></a> <span
+                data-v-41c51f9c="" class="shadow"> <a data-v-41c51f9c=""
+                    href="http://swj.ly.gov.cn/2026/03-12/1046836.html" target="_blank"
+                    title="洛阳“首店效应”：激活城市消费潜力的“流量密码”">洛阳“首店效应”：激活城市消费潜力的...</a></span></div>
+            <div data-v-41c51f9c="" class="fcon"> <a data-v-41c51f9c="" href="http://swj.ly.gov.cn/2026/03-12/1046831.html"
+                target="_blank" title="今年前两个月，洛阳以旧换新带动消费13.4亿元" class="fconLink"><img data-v-41c51f9c=""
+                    src="https://oss.ly.gov.cn/upload-file/images/20260312/baf2872c09f54cf893da8c685f58af83.jpg?x-oss-process=image/crop,w_700,h_464,x_0,y_0,r_1" style="opacity: 1;"></a> <span
+                data-v-41c51f9c="" class="shadow"> <a data-v-41c51f9c=""
+                    href="http://swj.ly.gov.cn/2026/03-12/1046831.html" target="_blank"
+                    title="今年前两个月，洛阳以旧换新带动消费13.4亿元">今年前两个月，洛阳以旧换新带动消费1...</a></span></div>
+            <div data-v-41c51f9c="" class="fcon"> <a data-v-41c51f9c="" href="http://swj.ly.gov.cn/2026/03-10/1046482.html"
+                target="_blank" title="2026年全市商务工作会议召开" class="fconLink"><img data-v-41c51f9c=""
+                    src="https://oss.ly.gov.cn/upload-file/images/20260310/433f6a9f820845519011ca60a1d74340.jpg?x-oss-process=image/crop,w_1080,h_761,x_0,y_0,r_1" style="opacity: 1;"></a> <span
+                data-v-41c51f9c="" class="shadow"> <a data-v-41c51f9c=""
+                    href="http://swj.ly.gov.cn/2026/03-10/1046482.html" target="_blank"
+                    title="2026年全市商务工作会议召开">2026年全市商务工作会议召开</a></span></div>
+            <div data-v-41c51f9c="" class="fcon"> <a data-v-41c51f9c="" href="http://swj.ly.gov.cn/2026/03-10/1046481.html"
+                target="_blank" title="快看！这些内容写入《洛阳市政府工作报告》" class="fconLink"><img data-v-41c51f9c=""
+                    src="https://oss.ly.gov.cn/upload-file/images/20260211/1921a238c4094a6f94c7c6f922a78034.jpg?x-oss-process=image/crop,w_1080,h_1014,x_0,y_0,r_1" style="opacity: 1;"></a> <span
+                data-v-41c51f9c="" class="shadow"> <a data-v-41c51f9c=""
+                    href="http://swj.ly.gov.cn/2026/03-10/1046481.html" target="_blank"
+                    title="快看！这些内容写入《洛阳市政府工作报告》">快看！这些内容写入《洛阳市政府工作报...</a></span></div>
+            <div data-v-41c51f9c="" class="fcon"> <a data-v-41c51f9c="" href="http://swj.ly.gov.cn/2026/03-10/1046480.html"
+                target="_blank" title="跻身“亿级卖家俱乐部”！洛阳铁箱“跨”出加速度" class="fconLink"><img data-v-41c51f9c=""
+                    src="https://oss.ly.gov.cn/upload-file/images/20260310/87e994b3b5524c73a0841aecec8b49bb.jpg?x-oss-process=image/crop,w_697,h_362,x_0,y_0,r_1" style="opacity: 1;"></a> <span
+                data-v-41c51f9c="" class="shadow"> <a data-v-41c51f9c=""
+                    href="http://swj.ly.gov.cn/2026/03-10/1046480.html" target="_blank"
+                    title="跻身“亿级卖家俱乐部”！洛阳铁箱“跨”出加速度">跻身“亿级卖家俱乐部”！洛阳铁箱“跨...</a></span></div>
+    </div>
+
+                        <div data-v-41c51f9c="" class="fbg">
+                            <div data-v-41c51f9c="" id="D1fBt" class="D1fBt">
+                                <a data-v-41c51f9c="" href="javascript:void(0)" hidefocus="true" target="_self"
+                                    class=""><i data-v-41c51f9c=""></i></a>
+                                <a data-v-41c51f9c="" href="javascript:void(0)" hidefocus="true" target="_self"
+                                    class=""><i data-v-41c51f9c=""></i></a>
+                                <a data-v-41c51f9c="" href="javascript:void(0)" hidefocus="true" target="_self"
+                                    class=""><i data-v-41c51f9c=""></i></a>
+                                <a data-v-41c51f9c="" href="javascript:void(0)" hidefocus="true" target="_self"
+                                    class=""><i data-v-41c51f9c=""></i></a>
+                                <a data-v-41c51f9c="" href="javascript:void(0)" hidefocus="true" target="_self"
+                                    class=""><i data-v-41c51f9c=""></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 轮播图结束 -->
+                    <script>
+                        // 轮播开始
+                        let currentIndex = 0;
+                        let autoPlay;
+                        let items = $('#D1pic1 .fcon');
+                        let pointitems = $('#D1fBt>a')
+                        let intervalTime = 3000;
+                        // 初始化数据
+                        items.css('display', 'none');
+                        items.eq(0).css('display', 'block');
+                        pointitems.eq(0).addClass('current');
+                        function startAutoPlay() {
+                            autoPlay = setInterval(function () {
+                                currentIndex = (currentIndex + 1) % items.length;
+                                items.css('display', 'none');
+                                pointitems.removeClass('current')
+                                items.eq(currentIndex).css('display', 'block');
+                                pointitems.eq(currentIndex).addClass('current');
+                            }, intervalTime);
+                        }
+                        startAutoPlay()
+                        // 点击事件
+                        pointitems.on('click', function (e) {
+                            // const newIndex = $(this).data('slide-to');
+                            const newIndex = $(this).index();
+
+                            e.preventDefault();
+                            clearInterval(autoPlay);
+                            currentIndex = newIndex
+                            items.css('display', 'none');
+                            pointitems.removeClass('current')
+                            items.eq(currentIndex).css('display', 'block');
+                            pointitems.eq(currentIndex).addClass('current');
+                            startAutoPlay();
+                        });
+                    </script>
+                    <!-- 右侧列表 -->
+                    <div data-v-41c51f9c="" class="tabNews">
+                        <div data-v-41c51f9c="" class="tabTit">
+                            <ul data-v-41c51f9c="">
+                                <li data-v-41c51f9c="" id="2" class="new" data-tolink="/swdt/swxw"><a
+                                        href="/swdt/swxw">商务新闻</a></li>
+                                <li data-v-41c51f9c="" id="3" data-tolink="/swdt/gnxw"><a href="/swdt/gnxw">国内新闻</a>
+                                </li>
+                                <li data-v-41c51f9c="" id="4" data-tolink="/zwgk/fdzdgknr/tzgg"><a
+                                        href="/zwgk/fdzdgknr/tzgg">通知公告</a></li>
+                            </ul><a data-v-41c51f9c="" href="/swdt/swxw" class="more">更多</a>
+                        </div>
+                        <div data-v-41c51f9c="" class="newsList">
+                            <div data-v-41c51f9c="">
+                                    <ul data-v-41c51f9c="" class="ulList">
+            <li data-v-41c51f9c=""> <a data-v-41c51f9c="" href="http://swj.ly.gov.cn/2025/11-03/903061.html" target="_blank"
+                title="洛阳市中小微企业问卷调查">洛阳市中小微企业问卷调查</a><span data-v-41c51f9c="">2025-11-03</span></li>
+            <li data-v-41c51f9c=""> <a data-v-41c51f9c="" href="http://swj.ly.gov.cn/2025/09-05/793808.html" target="_blank"
+                title="我省“十五五”规划建言献策活动火热进行中 未来五年河南怎么干 请您继续出主意">我省“十五五”规划建言献策活动火热进行中 未来五年河南怎么干 请您继续出主意</a><span data-v-41c51f9c="">2025-09-05</span></li>
+            <li data-v-41c51f9c=""> <a data-v-41c51f9c="" href="http://swj.ly.gov.cn/2026/03-26/1049881.html" target="_blank"
+                title="我市6个一刻钟便民生活圈获省级财政奖补">我市6个一刻钟便民生活圈获省级财政奖补</a><span data-v-41c51f9c="">2026-03-14</span></li>
+            <li data-v-41c51f9c=""> <a data-v-41c51f9c="" href="http://swj.ly.gov.cn/2026/03-26/1049874.html" target="_blank"
+                title="“花城惠购”满减消费券4月1日起发放">“花城惠购”满减消费券4月1日起发放</a><span data-v-41c51f9c="">2026-03-25</span></li>
+            <li data-v-41c51f9c=""> <a data-v-41c51f9c="" href="http://swj.ly.gov.cn/2026/03-12/1046835.html" target="_blank"
+                title="洛阳“首店效应”：激活城市消费潜力的“流量密码”">洛阳“首店效应”：激活城市消费潜力的“流量密码”</a><span data-v-41c51f9c="">2026-03-12</span></li>
+            <li data-v-41c51f9c=""> <a data-v-41c51f9c="" href="http://swj.ly.gov.cn/2026/03-12/1046830.html" target="_blank"
+                title="今年前两个月，洛阳以旧换新带动消费13.4亿元">今年前两个月，洛阳以旧换新带动消费13.4亿元</a><span data-v-41c51f9c="">2026-03-12</span></li>
+            <li data-v-41c51f9c=""> <a data-v-41c51f9c="" href="http://swj.ly.gov.cn/2026/03-04/1044753.html" target="_blank"
+                title="市级补贴和满减活动拉动！洛阳新春消费季带动消费超7亿元">市级补贴和满减活动拉动！洛阳新春消费季带动消费超7亿元</a><span data-v-41c51f9c="">2026-03-04</span></li>
+    </ul>
+
+                            </div>
+                            <div data-v-41c51f9c="">
+                                    <ul data-v-41c51f9c="" class="ulList">
+            <li data-v-41c51f9c=""> <a data-v-41c51f9c="" href="http://swj.ly.gov.cn/2025/10-24/901212.html" target="_blank"
+                title="党的二十届四中全会公报一图速览">党的二十届四中全会公报一图速览</a><span data-v-41c51f9c="">2025-10-24</span></li>
+            <li data-v-41c51f9c=""> <a data-v-41c51f9c="" href="http://swj.ly.gov.cn/2026/03-26/1049878.html" target="_blank"
+                title="《政府工作报告》（全文）">《政府工作报告》（全文）</a><span data-v-41c51f9c="">2026-03-18</span></li>
+            <li data-v-41c51f9c=""> <a data-v-41c51f9c="" href="http://swj.ly.gov.cn/2026/02-11/1040783.html" target="_blank"
+                title="快看！这些内容写入《洛阳市政府工作报告》">快看！这些内容写入《洛阳市政府工作报告》</a><span data-v-41c51f9c="">2026-02-11</span></li>
+            <li data-v-41c51f9c=""> <a data-v-41c51f9c="" href="http://swj.ly.gov.cn/2026/02-03/1039329.html" target="_blank"
+                title="全文来了！河南省政府工作报告→">全文来了！河南省政府工作报告→</a><span data-v-41c51f9c="">2026-02-03</span></li>
+            <li data-v-41c51f9c=""> <a data-v-41c51f9c="" href="http://swj.ly.gov.cn/2025/12-19/1021222.html" target="_blank"
+                title="中共洛阳市委关于制定洛阳市国民经济和社会发展第十五个五年规划的建议">中共洛阳市委关于制定洛阳市国民经济和社会发展第十五个五年规划的...</a><span data-v-41c51f9c="">2025-12-16</span></li>
+            <li data-v-41c51f9c=""> <a data-v-41c51f9c="" href="http://swj.ly.gov.cn/2025/12-18/1020817.html" target="_blank"
+                title="中央财办有关负责同志详解2025年中央经济工作会议精神">中央财办有关负责同志详解2025年中央经济工作会议精神</a><span data-v-41c51f9c="">2025-12-18</span></li>
+            <li data-v-41c51f9c=""> <a data-v-41c51f9c="" href="http://swj.ly.gov.cn/2025/12-15/982916.html" target="_blank"
+                title="更大力度提振消费！三部门发文">更大力度提振消费！三部门发文</a><span data-v-41c51f9c="">2025-12-15</span></li>
+    </ul>
+
+                            </div>
+                            <div data-v-41c51f9c="">
+                                    <ul data-v-41c51f9c="" class="ulList">
+            <li data-v-41c51f9c=""> <a data-v-41c51f9c="" href="http://swj.ly.gov.cn/2026/03-25/1049661.html" target="_blank"
+                title="洛阳市商务局“以花为约 商聚洛阳”产业合作交流活动项目竞争性磋商结果公示">洛阳市商务局“以花为约 商聚洛阳”产业合作交流活动项目竞争性磋...</a><span data-v-41c51f9c="">2026-03-25</span></li>
+            <li data-v-41c51f9c=""> <a data-v-41c51f9c="" href="http://swj.ly.gov.cn/2026/03-25/1049487.html" target="_blank"
+                title="洛阳市生活必需品流通保供体系建设拟支持项目的公示">洛阳市生活必需品流通保供体系建设拟支持项目的公示</a><span data-v-41c51f9c="">2026-03-25</span></li>
+            <li data-v-41c51f9c=""> <a data-v-41c51f9c="" href="http://swj.ly.gov.cn/2026/03-24/1049361.html" target="_blank"
+                title="关于公开征求《洛阳市消费新业态新模式新场景试点项目及资金管理办法（征求意见稿）》意见的公告">关于公开征求《洛阳市消费新业态新模式新场景试点项目及资金管理办...</a><span data-v-41c51f9c="">2026-03-23</span></li>
+            <li data-v-41c51f9c=""> <a data-v-41c51f9c="" href="http://swj.ly.gov.cn/2026/03-23/1049136.html" target="_blank"
+                title="洛阳市2026年“花城惠购”满减消费券发放活动实施方案">洛阳市2026年“花城惠购”满减消费券发放活动实施方案</a><span data-v-41c51f9c="">2026-03-23</span></li>
+            <li data-v-41c51f9c=""> <a data-v-41c51f9c="" href="http://swj.ly.gov.cn/2026/03-18/1048338.html" target="_blank"
+                title="洛阳市商务局关于“花城焕新”消费品以旧换新暨“三新”首发生活节活动服务项目竞争性磋商公告">洛阳市商务局关于“花城焕新”消费品以旧换新暨“三新”首发生活节...</a><span data-v-41c51f9c="">2026-03-18</span></li>
+            <li data-v-41c51f9c=""> <a data-v-41c51f9c="" href="http://swj.ly.gov.cn/2026/03-12/1046838.html" target="_blank"
+                title="关于2026年河南省家电、数码智能产品以旧换新参与主体名单（洛阳市第三批）的公示">关于2026年河南省家电、数码智能产品以旧换新参与主体名单（洛...</a><span data-v-41c51f9c="">2026-03-12</span></li>
+            <li data-v-41c51f9c=""> <a data-v-41c51f9c="" href="http://swj.ly.gov.cn/2026/03-11/1046647.html" target="_blank"
+                title="洛阳市商务局关于2026“洛阳味道” 特色美食月活动服务项目竞争性磋商公告">洛阳市商务局关于2026“洛阳味道” 特色美食月活动服务项目竞...</a><span data-v-41c51f9c="">2026-03-11</span></li>
+    </ul>
+
+                            </div>
+                        </div>
+                    </div>
+                    <script>
+                        // 初始化样式
+                        $('.newsList>div').eq(0).addClass('new')
+                        $('.tabNews .tabTit ul li').hover(
+                            function () {
+                                let index = $(this).index();
+                                $('.tabTit ul li').removeClass('new')
+                                $(this).addClass('new')
+                                $('.newsList>div').removeClass('new')
+                                $('.newsList>div').eq(index).addClass('new')
+                                // more
+                                $(this).parent().siblings('.more').attr('href', $(this).data('tolink'));
+                            }, function () { })
+                    </script>
+                    <!-- 右侧列表结束 -->
+                </div>
+                <!-- 第一部分结束 -->
+                <div data-v-41c51f9c="" class="mainLayout"
+                    style="margin: 1rem auto; text-align: center; overflow: hidden;"></div>
+                <!-- 两张图开始 -->
+                <div data-v-41c51f9c="" class="mainLayout adDiv">
+                    <div data-v-41c51f9c=""><a data-v-41c51f9c="" id="imghnzwfw2021"
+                            href="https://www.gov.cn/zhengce/zczhjd/" target="_blank"><img data-v-41c51f9c=""
+                                src="https://t.ly.gov.cn/file/4103000037/img/ad02.07251f1.jpg" alt="" width="100%"></a>
+                    </div>
+                    <div data-v-41c51f9c=""><a data-v-41c51f9c="" id="imghnzwfw2021"
+                            href="https://www.hnzwfw.gov.cn/portal/department/001003013002019?region=410300000000&creditCode=114103007616542526"
+                            target="_blank"><img data-v-41c51f9c=""
+                                src="https://t.ly.gov.cn/file/4103000037/img/ad01.cbbd2f6.jpg" alt="" width="100%"></a>
+                    </div>
+                </div>
+                <!-- 两张图结束 -->
+                <!-- 第二部分开始 -->
+                <div data-v-41c51f9c="" class="mainLayout zwgkDiv">
+                    <div data-v-41c51f9c="" class="zwBigTitle">
+                        <div data-v-41c51f9c="">政务<span data-v-41c51f9c="">公开</span></div>
+                        <p data-v-41c51f9c=""></p>
+                    </div>
+                    <!-- 内容开始 -->
+                    <div data-v-41c51f9c="" class="zwgkTwo">
+                        <!-- 左侧基本信息 -->
+                        <div data-v-41c51f9c="" class="colLeft">
+                            <ul data-v-41c51f9c="" class="gkUl">
+                                <li data-v-41c51f9c=""><a data-v-41c51f9c=""
+                                        href="https://swj.ly.gov.cn/zwgk/zc/flfggz/" target="_blank"><img
+                                            data-v-41c51f9c="" src="https://t.ly.gov.cn/file/4103000037/img/zf1.png">
+                                        <p data-v-41c51f9c="">政策<br data-v-41c51f9c=""></p>
+                                    </a></li>
+                                <li data-v-41c51f9c=""><a data-v-41c51f9c="" href="http://swj.ly.gov.cn/zwgk/zfxxgknb"
+                                        target="_blank"><img data-v-41c51f9c=""
+                                            src="https://t.ly.gov.cn/file/4103000037/img/zf2.png">
+                                        <p data-v-41c51f9c="">政府信息<br data-v-41c51f9c="">公开年报</p>
+                                    </a></li>
+                                <li data-v-41c51f9c=""><a data-v-41c51f9c="" href="http://swj.ly.gov.cn/zwgk/zfxxgkzn"
+                                        target="_blank"><img data-v-41c51f9c=""
+                                            src="https://t.ly.gov.cn/file/4103000037/img/zf3.png">
+                                        <p data-v-41c51f9c="">政府信息<br data-v-41c51f9c="">公开指南</p>
+                                    </a></li>
+                                <li data-v-41c51f9c=""><a data-v-41c51f9c="" href="http://swj.ly.gov.cn/zwgk/zfxxgkml"
+                                        target="_blank"><img data-v-41c51f9c=""
+                                            src="https://t.ly.gov.cn/file/4103000037/img/zf4.png">
+                                        <p data-v-41c51f9c="">政府信息<br data-v-41c51f9c="">公开目录</p>
+                                    </a></li>
+                                <li data-v-41c51f9c=""><a data-v-41c51f9c="" href="http://swj.ly.gov.cn/zwgk/zfxxgkzd"
+                                        target="_blank"><img data-v-41c51f9c=""
+                                            src="https://t.ly.gov.cn/file/4103000037/img/zf5.png">
+                                        <p data-v-41c51f9c="">政府信息<br data-v-41c51f9c="">公开制度</p>
+                                    </a></li>
+                                <li data-v-41c51f9c=""><a data-v-41c51f9c=""
+                                        href="https://t.ly.gov.cn/openview/api/view/selectsiteopen?siteId=4103000037"
+                                        target="_blank"><img data-v-41c51f9c=""
+                                            src="https://t.ly.gov.cn/file/4103000037/img/zf6.png">
+                                        <p data-v-41c51f9c="">依申请<br data-v-41c51f9c="">公开</p>
+                                    </a></li>
+                            </ul>
+                            <div data-v-41c51f9c="" class="colorsqure"><a data-v-41c51f9c=""
+                                    href="/zwgk/fdzdgknr/swjzz"><i data-v-41c51f9c="" class="iconfont icon-zhize"></i>
+                                    <p data-v-41c51f9c="">商务局职责</p>
+                                </a> <a data-v-41c51f9c="" href="/zwgk/fdzdgknr/jldcyjfg"><i data-v-41c51f9c=""
+                                        class="iconfont icon-tuandui"></i>
+                                    <p data-v-41c51f9c="">局领导成员及分工</p>
+                                </a> <a data-v-41c51f9c="" href="/nsjg2"><i data-v-41c51f9c=""
+                                        class="iconfont icon-zuzhijigou"></i>
+                                    <p data-v-41c51f9c="">内设机构</p>
+                                </a></div>
+                            <div data-v-41c51f9c="" class="workTimeTitle">
+                                <div data-v-41c51f9c="" class="bjL"></div>
+                                <p data-v-41c51f9c="">办公时间及地点公示</p>
+                                <div data-v-41c51f9c="" class="bjR"></div>
+                            </div>
+                            <div data-v-41c51f9c="" class="workTimeText">
+                                <div data-v-41c51f9c="">
+                                    <p><strong class="ql-size-18px">办公地点：</strong></p>
+                                    <p><span class="ql-size-18px"></span>洛阳市洛龙区政和路16号院2号楼<span class="ql-size-18px"
+                                            style="color: rgb(136, 136, 136);"></span></p>
+                                    <p><strong class="ql-size-18px">办公时间：</strong><span class="ql-size-18px"> </span>
+                                    </p>
+                                    <p><strong class="ql-size-18px" style="color: rgb(23, 100, 206);">夏季</strong><span
+                                            class="ql-size-18px">  </span><span class="ql-size-18px"
+                                            style="color: rgb(136, 136, 136);">8:30-12:00, 15:00-18:30</span></p>
+                                    <p><strong class="ql-size-18px" style="color: rgb(246, 144, 11);">冬季</strong><span
+                                            class="ql-size-18px">  </span><span class="ql-size-18px"
+                                            style="color: rgb(136, 136, 136);">8:30-12:00, 14:30-18:00</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 右侧列表开始 -->
+                        <div data-v-41c51f9c="" class="colRight">
+                            <div data-v-41c51f9c="" class="tabTit1">
+                                <ul data-v-41c51f9c="">
+                                    <li data-tolink="/zwgk/fdzdgknr/bszn" data-v-41c51f9c="" click="" id="6"
+                                        class="new">
+                                        <a href="/zwgk/fdzdgknr/bszn">办事指南</a>
+                                    </li>
+                                    <li data-tolink="/zwgk/fdzdgknr/rsxx" data-v-41c51f9c="" id="9">
+                                        <a href="/zwgk/fdzdgknr/rsxx">人事信息</a>
+                                    </li>
+                                    <li data-tolink="/zwgk/fdzdgknr/rdjy" data-v-41c51f9c="" id="132">
+                                        <a href="/zwgk/fdzdgknr/rdjy">人大建议</a>
+                                    </li>
+                                    <li data-tolink="/zwgk/fdzdgknr/zxta" data-v-41c51f9c="" id="133">
+                                        <a href="/zwgk/fdzdgknr/zxta">政协提案</a>
+                                    </li>
+                                    <li data-tolink="/zwgk/fdzdgknr/yjsgk" data-v-41c51f9c="" id="11">
+                                        <a href="/zwgk/fdzdgknr/yjsgk">预决算公开</a>
+                                    </li>
+                                </ul> <a data-v-41c51f9c="" class="more" href="/zwgk/fdzdgknr/bszn">更多</a>
+                            </div>
+                            <div data-v-41c51f9c="" class="newsList1">
+                                <div data-v-41c51f9c="">
+                                    <!-- 办事指南 -->
+                                        <ul data-v-41c51f9c="" class="ulList">
+            <li data-v-41c51f9c=""> <a data-v-41c51f9c="" href="http://swj.ly.gov.cn/2024/11-04/427074.html" target="_blank"
+                title="出国务工提醒">出国务工提醒</a><span data-v-41c51f9c="">2024-07-09</span></li>
+            <li data-v-41c51f9c=""> <a data-v-41c51f9c="" href="http://swj.ly.gov.cn/2024/11-04/427052.html" target="_blank"
+                title="司法部发布关于开展涉及不平等对待企业法律法规政策清理工作的公告">司法部发布关于开展涉及不平等对待企业法律法规政策清...</a><span data-v-41c51f9c="">2024-06-13</span></li>
+            <li data-v-41c51f9c=""> <a data-v-41c51f9c="" href="http://swj.ly.gov.cn/2024/11-04/427049.html" target="_blank"
+                title="洛阳市2023年度对外劳务合作经营资格 年审结果公示">洛阳市2023年度对外劳务合作经营资格 年审结果公...</a><span data-v-41c51f9c="">2024-06-11</span></li>
+            <li data-v-41c51f9c=""> <a data-v-41c51f9c="" href="http://swj.ly.gov.cn/2024/11-04/426809.html" target="_blank"
+                title="洛阳市2022年度对外劳务合作经营资格年审结果公示">洛阳市2022年度对外劳务合作经营资格年审结果公示...</a><span data-v-41c51f9c="">2023-06-21</span></li>
+            <li data-v-41c51f9c=""> <a data-v-41c51f9c="" href="http://swj.ly.gov.cn/2024/11-04/426670.html" target="_blank"
+                title="洛阳市具备对外劳务合作经营资格企业名单（2023）">洛阳市具备对外劳务合作经营资格企业名单（2023）...</a><span data-v-41c51f9c="">2023-02-09</span></li>
+            <li data-v-41c51f9c=""> <a data-v-41c51f9c="" href="http://swj.ly.gov.cn/2024/11-04/426150.html" target="_blank"
+                title="对外承包工程项目备案流程">对外承包工程项目备案流程</a><span data-v-41c51f9c="">2021-11-25</span></li>
+            <li data-v-41c51f9c=""> <a data-v-41c51f9c="" href="http://swj.ly.gov.cn/2024/11-04/426149.html" target="_blank"
+                title="企业境外投资备案申报指南">企业境外投资备案申报指南</a><span data-v-41c51f9c="">2021-11-25</span></li>
+            <li data-v-41c51f9c=""> <a data-v-41c51f9c="" href="http://swj.ly.gov.cn/2024/11-04/426031.html" target="_blank"
+                title="对外直接投资备案（核准）申报流程">对外直接投资备案（核准）申报流程</a><span data-v-41c51f9c="">2021-09-02</span></li>
+            <li data-v-41c51f9c=""> <a data-v-41c51f9c="" href="http://swj.ly.gov.cn/2024/11-04/425694.html" target="_blank"
+                title="2020年从事拍卖业务许可事项办理公示">2020年从事拍卖业务许可事项办理公示</a><span data-v-41c51f9c="">2020-11-25</span></li>
+            <li data-v-41c51f9c=""> <a data-v-41c51f9c="" href="http://swj.ly.gov.cn/2024/11-04/425692.html" target="_blank"
+                title="2020年验收核发/变更换发批准证书加油站名单">2020年验收核发/变更换发批准证书加油站名单</a><span data-v-41c51f9c="">2020-11-24</span></li>
+            <li data-v-41c51f9c=""> <a data-v-41c51f9c="" href="http://swj.ly.gov.cn/2024/11-04/425616.html" target="_blank"
+                title="2020年验收核发/变更换发批准证书加油站名单">2020年验收核发/变更换发批准证书加油站名单</a><span data-v-41c51f9c="">2020-09-11</span></li>
+            <li data-v-41c51f9c=""> <a data-v-41c51f9c="" href="http://swj.ly.gov.cn/2024/11-04/425585.html" target="_blank"
+                title="洛阳市商务局行政执法权责清单、岗责体系">洛阳市商务局行政执法权责清单、岗责体系</a><span data-v-41c51f9c="">2020-07-28</span></li>
+            <li data-v-41c51f9c=""> <a data-v-41c51f9c="" href="http://swj.ly.gov.cn/2024/11-04/425575.html" target="_blank"
+                title="洛阳市5家取得对外劳务合作经营资格证书企业名单（2020年）">洛阳市5家取得对外劳务合作经营资格证书企业名单（2...</a><span data-v-41c51f9c="">2020-07-13</span></li>
+            <li data-v-41c51f9c=""> <a data-v-41c51f9c="" href="http://swj.ly.gov.cn/2024/11-04/425529.html" target="_blank"
+                title="2020年验收核发/变更换发批准证书加油站名单">2020年验收核发/变更换发批准证书加油站名单</a><span data-v-41c51f9c="">2020-05-20</span></li>
+    </ul>
+
+                                </div>
+                                <div data-v-41c51f9c="">
+                                    <!-- 人事信息 -->
+                                        <ul data-v-41c51f9c="" class="ulList">
+    </ul>
+
+                                </div>
+                                <div data-v-41c51f9c="">
+                                    <!-- 人大建议 -->
+                                        <ul data-v-41c51f9c="" class="ulList">
+            <li data-v-41c51f9c=""> <a data-v-41c51f9c="" href="http://swj.ly.gov.cn/2026/01-09/1034658.html" target="_blank"
+                title="洛阳市商务局关于市人大十六届三次会议总第484号建议办理的答复">洛阳市商务局关于市人大十六届三次会议总第484号建...</a><span data-v-41c51f9c="">2025-12-22</span></li>
+            <li data-v-41c51f9c=""> <a data-v-41c51f9c="" href="http://swj.ly.gov.cn/2026/01-09/1034657.html" target="_blank"
+                title="洛阳市商务局关于市人大十六届三次会议总第481号建议办理的答复">洛阳市商务局关于市人大十六届三次会议总第481号建...</a><span data-v-41c51f9c="">2025-12-22</span></li>
+            <li data-v-41c51f9c=""> <a data-v-41c51f9c="" href="http://swj.ly.gov.cn/2026/01-09/1034656.html" target="_blank"
+                title="洛阳市商务局关于市人大十六届三次会议总第480号建议办理的答复">洛阳市商务局关于市人大十六届三次会议总第480号建...</a><span data-v-41c51f9c="">2025-12-22</span></li>
+            <li data-v-41c51f9c=""> <a data-v-41c51f9c="" href="http://swj.ly.gov.cn/2026/01-09/1034655.html" target="_blank"
+                title="洛阳市商务局关于市人大十六届三次会议总第476号建议办理的答复">洛阳市商务局关于市人大十六届三次会议总第476号建...</a><span data-v-41c51f9c="">2025-12-22</span></li>
+            <li data-v-41c51f9c=""> <a data-v-41c51f9c="" href="http://swj.ly.gov.cn/2026/01-09/1034654.html" target="_blank"
+                title="洛阳市商务局关于市人大十六届三次会议总第261号建议办理的答复">洛阳市商务局关于市人大十六届三次会议总第261号建...</a><span data-v-41c51f9c="">2025-12-22</span></li>
+            <li data-v-41c51f9c=""> <a data-v-41c51f9c="" href="http://swj.ly.gov.cn/2026/01-09/1034653.html" target="_blank"
+                title="洛阳市商务局关于市人大十六届三次会议总第257号建议办理的答复">洛阳市商务局关于市人大十六届三次会议总第257号建...</a><span data-v-41c51f9c="">2025-12-22</span></li>
+            <li data-v-41c51f9c=""> <a data-v-41c51f9c="" href="http://swj.ly.gov.cn/2026/01-09/1034651.html" target="_blank"
+                title="洛阳市商务局关于市人大十六届三次会议总第157号建议办理的答复">洛阳市商务局关于市人大十六届三次会议总第157号建...</a><span data-v-41c51f9c="">2025-12-22</span></li>
+            <li data-v-41c51f9c=""> <a data-v-41c51f9c="" href="http://swj.ly.gov.cn/2026/01-09/1034647.html" target="_blank"
+                title="洛阳市商务局关于市人大十六届三次会议总第156号建议办理的答复">洛阳市商务局关于市人大十六届三次会议总第156号建...</a><span data-v-41c51f9c="">2025-12-22</span></li>
+            <li data-v-41c51f9c=""> <a data-v-41c51f9c="" href="http://swj.ly.gov.cn/2026/01-09/1034644.html" target="_blank"
+                title="洛阳市商务局关于市人大十六届三次会议总第155号建议办理的答复">洛阳市商务局关于市人大十六届三次会议总第155号建...</a><span data-v-41c51f9c="">2025-12-22</span></li>
+            <li data-v-41c51f9c=""> <a data-v-41c51f9c="" href="http://swj.ly.gov.cn/2026/01-09/1034641.html" target="_blank"
+                title="洛阳市商务局关于市人大十六届三次会议总第122号建议办理的答复">洛阳市商务局关于市人大十六届三次会议总第122号建...</a><span data-v-41c51f9c="">2025-12-22</span></li>
+            <li data-v-41c51f9c=""> <a data-v-41c51f9c="" href="http://swj.ly.gov.cn/2024/12-16/497205.html" target="_blank"
+                title="洛阳市商务局关于市人大十六届二次会议总第370号建议办理的答复">洛阳市商务局关于市人大十六届二次会议总第370号建...</a><span data-v-41c51f9c="">2024-12-16</span></li>
+            <li data-v-41c51f9c=""> <a data-v-41c51f9c="" href="http://swj.ly.gov.cn/2024/12-16/497204.html" target="_blank"
+                title="洛阳市商务局关于市人大十六届二次会议总第369号建议办理的答复">洛阳市商务局关于市人大十六届二次会议总第369号建...</a><span data-v-41c51f9c="">2024-12-16</span></li>
+            <li data-v-41c51f9c=""> <a data-v-41c51f9c="" href="http://swj.ly.gov.cn/2024/12-16/497203.html" target="_blank"
+                title="洛阳市商务局关于市人大十六届二次会议总第367号建议办理的答复">洛阳市商务局关于市人大十六届二次会议总第367号建...</a><span data-v-41c51f9c="">2024-12-16</span></li>
+            <li data-v-41c51f9c=""> <a data-v-41c51f9c="" href="http://swj.ly.gov.cn/2024/12-16/497201.html" target="_blank"
+                title="洛阳市商务局关于市人大十六届二次会议总第182号建议办理的答复">洛阳市商务局关于市人大十六届二次会议总第182号建...</a><span data-v-41c51f9c="">2024-12-16</span></li>
+    </ul>
+
+                                </div>
+                                <div data-v-41c51f9c="">
+                                    <!-- 政协提案 -->
+                                        <ul data-v-41c51f9c="" class="ulList">
+            <li data-v-41c51f9c=""> <a data-v-41c51f9c="" href="http://swj.ly.gov.cn/2026/01-09/1034640.html" target="_blank"
+                title="洛阳市商务局对市政协十四届三次会议第143390号提案的答复">洛阳市商务局对市政协十四届三次会议第143390号...</a><span data-v-41c51f9c="">2025-12-26</span></li>
+            <li data-v-41c51f9c=""> <a data-v-41c51f9c="" href="http://swj.ly.gov.cn/2026/01-09/1034637.html" target="_blank"
+                title="洛阳市商务局对市政协十四届三次会议第143374号提案的答复">洛阳市商务局对市政协十四届三次会议第143374号...</a><span data-v-41c51f9c="">2025-12-26</span></li>
+            <li data-v-41c51f9c=""> <a data-v-41c51f9c="" href="http://swj.ly.gov.cn/2026/01-09/1034634.html" target="_blank"
+                title="洛阳市商务局对市政协十四届三次会议第143311号提案的答复">洛阳市商务局对市政协十四届三次会议第143311号...</a><span data-v-41c51f9c="">2025-12-26</span></li>
+            <li data-v-41c51f9c=""> <a data-v-41c51f9c="" href="http://swj.ly.gov.cn/2026/01-09/1034632.html" target="_blank"
+                title="洛阳市商务局对市政协十四届三次会议第143146号提案的答复">洛阳市商务局对市政协十四届三次会议第143146号...</a><span data-v-41c51f9c="">2025-12-26</span></li>
+            <li data-v-41c51f9c=""> <a data-v-41c51f9c="" href="http://swj.ly.gov.cn/2026/01-09/1034631.html" target="_blank"
+                title="洛阳市商务局对市政协十四届三次会议第143104号提案的答复">洛阳市商务局对市政协十四届三次会议第143104号...</a><span data-v-41c51f9c="">2025-12-26</span></li>
+            <li data-v-41c51f9c=""> <a data-v-41c51f9c="" href="http://swj.ly.gov.cn/2026/01-09/1034630.html" target="_blank"
+                title="洛阳市商务局对市政协十四届三次会议第143104号提案的答复">洛阳市商务局对市政协十四届三次会议第143104号...</a><span data-v-41c51f9c="">2025-12-26</span></li>
+            <li data-v-41c51f9c=""> <a data-v-41c51f9c="" href="http://swj.ly.gov.cn/2026/01-09/1034629.html" target="_blank"
+                title="洛阳市商务局对市政协十四届三次会议第143103号提案的答复">洛阳市商务局对市政协十四届三次会议第143103号...</a><span data-v-41c51f9c="">2025-12-26</span></li>
+            <li data-v-41c51f9c=""> <a data-v-41c51f9c="" href="http://swj.ly.gov.cn/2026/01-09/1034627.html" target="_blank"
+                title="洛阳市商务局对市政协十四届三次会议第143086号提案的答复">洛阳市商务局对市政协十四届三次会议第143086号...</a><span data-v-41c51f9c="">2025-12-26</span></li>
+            <li data-v-41c51f9c=""> <a data-v-41c51f9c="" href="http://swj.ly.gov.cn/2026/01-09/1034626.html" target="_blank"
+                title="洛阳市商务局对市政协十四届三次会议第143081号提案的答复">洛阳市商务局对市政协十四届三次会议第143081号...</a><span data-v-41c51f9c="">2025-12-26</span></li>
+            <li data-v-41c51f9c=""> <a data-v-41c51f9c="" href="http://swj.ly.gov.cn/2026/01-09/1034624.html" target="_blank"
+                title="洛阳市商务局对市政协十四届三次会议第143075号提案的答复">洛阳市商务局对市政协十四届三次会议第143075号...</a><span data-v-41c51f9c="">2025-12-26</span></li>
+            <li data-v-41c51f9c=""> <a data-v-41c51f9c="" href="http://swj.ly.gov.cn/2026/01-09/1034618.html" target="_blank"
+                title="洛阳市商务局对市政协十四届三次会议第143071号提案的答复">洛阳市商务局对市政协十四届三次会议第143071号...</a><span data-v-41c51f9c="">2025-12-26</span></li>
+            <li data-v-41c51f9c=""> <a data-v-41c51f9c="" href="http://swj.ly.gov.cn/2026/01-09/1034616.html" target="_blank"
+                title="洛阳市商务局对市政协十四届三次会议第143069号提案的答复">洛阳市商务局对市政协十四届三次会议第143069号...</a><span data-v-41c51f9c="">2025-12-26</span></li>
+            <li data-v-41c51f9c=""> <a data-v-41c51f9c="" href="http://swj.ly.gov.cn/2026/01-09/1034615.html" target="_blank"
+                title="洛阳市商务局对市政协十四届三次会议第143064号提案的答复">洛阳市商务局对市政协十四届三次会议第143064号...</a><span data-v-41c51f9c="">2025-12-26</span></li>
+            <li data-v-41c51f9c=""> <a data-v-41c51f9c="" href="http://swj.ly.gov.cn/2026/01-09/1034614.html" target="_blank"
+                title="洛阳市商务局对市政协十四届三次会议第143062号提案的答复">洛阳市商务局对市政协十四届三次会议第143062号...</a><span data-v-41c51f9c="">2025-12-26</span></li>
+    </ul>
+
+                                </div>
+                                <div data-v-41c51f9c="">
+                                    <!-- 预决算公开 -->
+                                        <ul data-v-41c51f9c="" class="ulList">
+            <li data-v-41c51f9c=""> <a data-v-41c51f9c="" href="http://swj.ly.gov.cn/2026/03-16/1047434.html" target="_blank"
+                title="2026年洛阳市商务局本级及所属单位预算公开">2026年洛阳市商务局本级及所属单位预算公开</a><span data-v-41c51f9c="">2026-03-13</span></li>
+            <li data-v-41c51f9c=""> <a data-v-41c51f9c="" href="http://swj.ly.gov.cn/2026/03-16/1047432.html" target="_blank"
+                title="2026年洛阳市商务局部门预算公开">2026年洛阳市商务局部门预算公开</a><span data-v-41c51f9c="">2026-03-13</span></li>
+            <li data-v-41c51f9c=""> <a data-v-41c51f9c="" href="http://swj.ly.gov.cn/2025/10-29/902397.html" target="_blank"
+                title="2024年度洛阳市商务局本级及所属单位单位决算公开">2024年度洛阳市商务局本级及所属单位单位决算公开</a><span data-v-41c51f9c="">2025-10-29</span></li>
+            <li data-v-41c51f9c=""> <a data-v-41c51f9c="" href="http://swj.ly.gov.cn/2025/10-29/902395.html" target="_blank"
+                title="2024年度洛阳市商务局部门决算公开">2024年度洛阳市商务局部门决算公开</a><span data-v-41c51f9c="">2025-10-29</span></li>
+            <li data-v-41c51f9c=""> <a data-v-41c51f9c="" href="http://swj.ly.gov.cn/2025/03-14/530920.html" target="_blank"
+                title="2025年洛阳市商务局本级及所属单位预算公开">2025年洛阳市商务局本级及所属单位预算公开</a><span data-v-41c51f9c="">2025-03-14</span></li>
+            <li data-v-41c51f9c=""> <a data-v-41c51f9c="" href="http://swj.ly.gov.cn/2025/03-14/530775.html" target="_blank"
+                title="2025年洛阳市商务局部门预算公开">2025年洛阳市商务局部门预算公开</a><span data-v-41c51f9c="">2025-03-14</span></li>
+            <li data-v-41c51f9c=""> <a data-v-41c51f9c="" href="http://swj.ly.gov.cn/2024/11-04/465348.html" target="_blank"
+                title="2023年度洛阳市商务局本级及所属单位决算公开">2023年度洛阳市商务局本级及所属单位决算公开</a><span data-v-41c51f9c="">2024-09-13</span></li>
+            <li data-v-41c51f9c=""> <a data-v-41c51f9c="" href="http://swj.ly.gov.cn/2024/11-04/465347.html" target="_blank"
+                title="2023年度洛阳市商务局部门决算公开">2023年度洛阳市商务局部门决算公开</a><span data-v-41c51f9c="">2024-09-13</span></li>
+            <li data-v-41c51f9c=""> <a data-v-41c51f9c="" href="http://swj.ly.gov.cn/2024/11-04/427001.html" target="_blank"
+                title="2024年洛阳市商务局所属单位预算公开">2024年洛阳市商务局所属单位预算公开</a><span data-v-41c51f9c="">2024-03-12</span></li>
+            <li data-v-41c51f9c=""> <a data-v-41c51f9c="" href="http://swj.ly.gov.cn/2024/11-04/427000.html" target="_blank"
+                title="2024年洛阳市商务局部门预算公开">2024年洛阳市商务局部门预算公开</a><span data-v-41c51f9c="">2024-03-12</span></li>
+            <li data-v-41c51f9c=""> <a data-v-41c51f9c="" href="http://swj.ly.gov.cn/2024/11-04/426890.html" target="_blank"
+                title="2022年度洛阳市商务局本级及所属单位决算公开">2022年度洛阳市商务局本级及所属单位决算公开</a><span data-v-41c51f9c="">2023-10-10</span></li>
+            <li data-v-41c51f9c=""> <a data-v-41c51f9c="" href="http://swj.ly.gov.cn/2024/11-04/426889.html" target="_blank"
+                title="2022年度洛阳市商务局部门决算公开">2022年度洛阳市商务局部门决算公开</a><span data-v-41c51f9c="">2023-10-10</span></li>
+            <li data-v-41c51f9c=""> <a data-v-41c51f9c="" href="http://swj.ly.gov.cn/2024/11-04/426682.html" target="_blank"
+                title="2023年洛阳市商务局本级及所属单位预算公开">2023年洛阳市商务局本级及所属单位预算公开</a><span data-v-41c51f9c="">2023-02-21</span></li>
+            <li data-v-41c51f9c=""> <a data-v-41c51f9c="" href="http://swj.ly.gov.cn/2024/11-04/426668.html" target="_blank"
+                title="2023年洛阳市商务局部门预算公开">2023年洛阳市商务局部门预算公开</a><span data-v-41c51f9c="">2023-02-07</span></li>
+    </ul>
+
+                                </div>
+                            </div>
+                        </div>
+                        <script>
+                            // 初始化样式
+                            $('.newsList1>div').eq(0).addClass('new')
+                            $('.tabTit1 ul li').hover(
+                                function () {
+                                    let index = $(this).index();
+                                    $('.tabTit1 ul li').removeClass('new')
+                                    $(this).addClass('new')
+                                    $('.newsList1>div').removeClass('new')
+                                    $('.newsList1>div').eq(index).addClass('new')
+                                    $(this).parent().siblings('.more').attr('href', $(this).data('tolink'));
+                                }, function () { })
+                        </script>
+                        <!-- 右侧列表结束 -->
+                    </div>
+                </div>
+                <!-- 第二部分结束 -->
+
+                <div data-v-41c51f9c="" class="mainLayout adDiv2"><a data-v-41c51f9c=""
+                        href="http://news.lyd.com.cn/system/2013/03/18/010236657.shtml" target="_black"
+                        title="讲文明、树新风"><img data-v-41c51f9c=""
+                            src="https://t.ly.gov.cn/file/4103000037/img/jwmsxf.jpg"></a></div>
+                <!-- 第三部分开始 -->
+                <div data-v-41c51f9c="" class="mainLayout peopleDiv">
+                    <div data-v-41c51f9c="" class="peopleOne">
+                        <div data-v-41c51f9c="" class="indexT">
+                            <h3 data-v-41c51f9c="">民众互动</h3>
+                            <p data-v-41c51f9c=""></p>
+                        </div>
+                        <div data-v-41c51f9c="" class="mzhd">
+                            <ul data-v-41c51f9c="" class="gkUl mzhd_link">
+                                <li data-v-41c51f9c=""><a data-v-41c51f9c=""
+                                        href="https://t.ly.gov.cn/mailview/api/view/preaddmail/4103000037/1/2"
+                                        target="_blank"><img data-v-41c51f9c=""
+                                            src="https://t.ly.gov.cn/file/4103000037/img/hd1.png">
+                                        <p data-v-41c51f9c="">领导信箱</p>
+                                    </a></li>
+                                <li data-v-41c51f9c=""><a data-v-41c51f9c=""
+                                        href="https://t.ly.gov.cn/mailview/api/view/preaddmail/4103000037/1/3"
+                                        target="_blank"><img data-v-41c51f9c=""
+                                            src="https://t.ly.gov.cn/file/4103000037/img/hd2.png">
+                                        <p data-v-41c51f9c="">监督投诉</p>
+                                    </a></li>
+                                <li data-v-41c51f9c=""><a data-v-41c51f9c=""
+                                        href="https://www.ly.gov.cn/zwgk/zcwd/zcwdlist/?siteId=4103000037"
+                                        target="_blank"><img data-v-41c51f9c=""
+                                            src="https://t.ly.gov.cn/file/4103000037/img/hd3.png">
+                                        <p data-v-41c51f9c="">网上咨询</p>
+                                    </a></li>
+                                <li data-v-41c51f9c=""><a data-v-41c51f9c="" href="http://swj.ly.gov.cn/mydc"><img
+                                            data-v-41c51f9c="" src="https://t.ly.gov.cn/file/4103000037/img/hd4.png">
+                                        <p data-v-41c51f9c="">民意调查</p>
+                                    </a></li>
+                            </ul>
+                            <div data-v-41c51f9c="" class="jhft">
+                                <p data-v-41c51f9c=""><a data-v-41c51f9c=""
+                                        href="https://www.ly.gov.cn/zwgk/zcwd/zcwdlist/?siteId=4103000037"
+                                        target="_blank">网上咨询</a>
+                                </p>
+                                <ul data-v-41c51f9c="" class="ulList">
+                                                                                <li data-v-41c51f9c=""><a data-v-41c51f9c="" href="https://t.ly.gov.cn/consultview/api/view/preview/pc/BB4E585F9BCE2D0EA825D5397C52D748E304DD903842CA989E65D4DFB65FBFC6"
+                                                    class="router-link-exact-active router-link-active">
+                                                    汽车补贴
+                                                </a> <span data-v-41c51f9c="">2026-03-06</span></li>
+                                            <li data-v-41c51f9c=""><a data-v-41c51f9c="" href="https://t.ly.gov.cn/consultview/api/view/preview/pc/70DF801295C21D477DA80A3956B1330AE304DD903842CA989E65D4DFB65FBFC6"
+                                                    class="router-link-exact-active router-link-active">
+                                                    购车补贴
+                                                </a> <span data-v-41c51f9c="">2026-02-04</span></li>
+                                            <li data-v-41c51f9c=""><a data-v-41c51f9c="" href="https://t.ly.gov.cn/consultview/api/view/preview/pc/E75EF49C81CDFCAC5CE48B98C906A117E304DD903842CA989E65D4DFB65FBFC6"
+                                                    class="router-link-exact-active router-link-active">
+                                                    我于2025年10月20日申请的“洛享金秋嗨购神”都购车补贴...
+                                                </a> <span data-v-41c51f9c="">2026-01-29</span></li>
+                                            <li data-v-41c51f9c=""><a data-v-41c51f9c="" href="https://t.ly.gov.cn/consultview/api/view/preview/pc/17F117A67F1C8C8119D1961E9A8109B5E304DD903842CA989E65D4DFB65FBFC6"
+                                                    class="router-link-exact-active router-link-active">
+                                                    置换补贴
+                                                </a> <span data-v-41c51f9c="">2026-01-29</span></li>
+                                            <li data-v-41c51f9c=""><a data-v-41c51f9c="" href="https://t.ly.gov.cn/consultview/api/view/preview/pc/7C269BB86477C3CF1563EB57FD927BF2E304DD903842CA989E65D4DFB65FBFC6"
+                                                    class="router-link-exact-active router-link-active">
+                                                    汽车补贴
+                                                </a> <span data-v-41c51f9c="">2025-12-17</span></li>
+                                            <li data-v-41c51f9c=""><a data-v-41c51f9c="" href="https://t.ly.gov.cn/consultview/api/view/preview/pc/4BA76C4D24F9A2E06C1E82C6144BFB93E304DD903842CA989E65D4DFB65FBFC6"
+                                                    class="router-link-exact-active router-link-active">
+                                                    洛享金秋嗨购神都汽车补贴
+                                                </a> <span data-v-41c51f9c="">2025-12-11</span></li>
+                                            <li data-v-41c51f9c=""><a data-v-41c51f9c="" href="https://t.ly.gov.cn/consultview/api/view/preview/pc/3AE512DEF4A77C097DB570D3FC2B854220683BFFD3785CC791E9FEF7E9C309D5"
+                                                    class="router-link-exact-active router-link-active">
+                                                    “乐驾金秋”购车补贴活动，一直待初审，具体什么时候审核？
+                                                </a> <span data-v-41c51f9c="">2025-12-10</span></li>
+                                            <li data-v-41c51f9c=""><a data-v-41c51f9c="" href="https://t.ly.gov.cn/consultview/api/view/preview/pc/0246426E27B76E7B1BB80F68D8872C51E304DD903842CA989E65D4DFB65FBFC6"
+                                                    class="router-link-exact-active router-link-active">
+                                                    洛阳汽车国补
+                                                </a> <span data-v-41c51f9c="">2025-12-05</span></li>
+                                
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-v-41c51f9c="" class="peopleThree">
+                        <div data-v-41c51f9c="" class="indexT">
+                            <h3 data-v-41c51f9c="">百宝箱</h3> <a data-v-41c51f9c="" href="http://swj.ly.gov.cn/bbx"
+                                target="_blank" class="more">更多</a>
+                        </div>
+                        <div data-v-41c51f9c="" class="bbx">
+                            <ul data-v-41c51f9c="">
+                                <li data-v-41c51f9c=""><a data-v-41c51f9c="" href="https://luoyang.8684.cn/"
+                                        target="_blank" title="公交查询"> 公交 </a>
+                                    <p data-v-41c51f9c="">公交查询</p>
+                                </li>
+                                <li data-v-41c51f9c=""><a data-v-41c51f9c=""
+                                        href="https://you.ctrip.com/globalsearch/?keyword=%E6%B4%9B%E9%98%B3"
+                                        target="_blank" title="景点攻略"> 旅游 </a>
+                                    <p data-v-41c51f9c="">景点攻略</p>
+                                </li>
+                                <li data-v-41c51f9c=""><a data-v-41c51f9c=""
+                                        href="https://flights.ctrip.com/international/search/domestic" target="_blank"
+                                        title="机票查询"> 民航 </a>
+                                    <p data-v-41c51f9c="">机票查询</p>
+                                </li>
+                                <li data-v-41c51f9c=""><a data-v-41c51f9c=""
+                                        href="http://www.weather.com.cn/weather1d/101180901.shtml" target="_blank"
+                                        title="天气预报"> 天气 </a>
+                                    <p data-v-41c51f9c="">天气预报</p>
+                                </li>
+                                <li data-v-41c51f9c=""><a data-v-41c51f9c="" href="https://www.12306.cn/index/"
+                                        target="_blank" title="12306网站"> 铁路
+                                    </a>
+                                    <p data-v-41c51f9c="">12306网站</p>
+                                </li>
+                                <li data-v-41c51f9c=""><a data-v-41c51f9c=""
+                                        href="https://www.lysubway.com.cn/service.html#home2" target="_blank"
+                                        title="洛阳地铁查询"> 地铁 </a>
+                                    <p data-v-41c51f9c="">洛阳地铁查询</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- 第三部分结束 -->
+                <!-- 专题部分 -->
+                <div data-v-41c51f9c="" class="mainLayout specialTopic">
+                    <div data-v-41c51f9c="" class="indexT">
+                        <h3 data-v-41c51f9c="">专题专栏</h3> <a data-v-41c51f9c="" target="_blank"
+                            href="http://swj.ly.gov.cn/ztzl" class="more">更多</a>
+                    </div>
+                    <div data-v-41c51f9c="" id="zcScroll" style="overflow: hidden;">
+                        <table data-v-41c51f9c="" cellpadding="0" cellspacing="0">
+                            <tr data-v-41c51f9c="" style="position: relative;" id="scrollRow">
+                                <td data-v-41c51f9c="" id="zcScroll1">
+                                    <ul data-v-41c51f9c="" class="indexST">
+            <li data-v-41c51f9c=""><a href="http://swj.ly.gov.cn/sy/lypq" data-v-41c51f9c="" title="中国（洛阳）自由贸易试验区洛阳片区"><img
+                data-v-41c51f9c=""
+                src="https://oss.ly.gov.cn/upload-file/images/20250820/854daa8bd214472da2545d36f3167210.png"
+                width="340" height="140"></a></li>
+            <li data-v-41c51f9c=""><a href="http://swj.ly.gov.cn/sqxzjcgszl" data-v-41c51f9c="" title="涉企行政检查公示专栏"><img
+                data-v-41c51f9c=""
+                src="https://oss.ly.gov.cn/upload-file/images/20250630/e55bf114f45545d7b9235eaff20d2d32.png"
+                width="340" height="140"></a></li>
+            <li data-v-41c51f9c=""><a href="http://swj.ly.gov.cn/xyxxsgs" data-v-41c51f9c="" title="信用信息双公示"><img
+                data-v-41c51f9c=""
+                src="https://oss.ly.gov.cn/upload-file/images/20240920/7cc64a2f2e7b4ccf81348baa6e0cac69.jpg"
+                width="340" height="140"></a></li>
+            <li data-v-41c51f9c=""><a href="http://swj.ly.gov.cn/cjqgfzzfjssfs" data-v-41c51f9c="" title="创建全国法治政府建设示范市"><img
+                data-v-41c51f9c=""
+                src="https://oss.ly.gov.cn/upload-file/images/20240920/5310a10715c14e7d842ca5a69c52e631.jpg"
+                width="340" height="140"></a></li>
+            <li data-v-41c51f9c=""><a href="http://swj.ly.gov.cn/jsjy" data-v-41c51f9c="" title="警示教育"><img
+                data-v-41c51f9c=""
+                src="https://oss.ly.gov.cn/upload-file/images/20240920/e85e42d54b2f41e7942085724c43db16.jpg"
+                width="340" height="140"></a></li>
+            <li data-v-41c51f9c=""><a href="http://swj.ly.gov.cn/jyzjsxgsx" data-v-41c51f9c="" title="加油站建设相关事项"><img
+                data-v-41c51f9c=""
+                src="https://oss.ly.gov.cn/upload-file/images/20240920/eb52c64d2ef04e0db29c5816622aadad.jpg"
+                width="340" height="140"></a></li>
+            <li data-v-41c51f9c=""><a href="http://swj.ly.gov.cn/dwlwhzjqyxgsx" data-v-41c51f9c="" title="对外劳务合作经企业相关事项"><img
+                data-v-41c51f9c=""
+                src="https://oss.ly.gov.cn/upload-file/images/20240920/51f25c55cb584ab7b4eea9c8dfa5f796.jpg"
+                width="340" height="140"></a></li>
+            <li data-v-41c51f9c=""><a href="http://swj.ly.gov.cn/swfwzq" data-v-41c51f9c="" title="涉外服务专区"><img
+                data-v-41c51f9c=""
+                src="https://oss.ly.gov.cn/upload-file/images/20240920/287cd20a11344f41ac1f6586b6bc80b9.jpg"
+                width="340" height="140"></a></li>
+    </ul>
+
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <script>
+                        const scrollRow = document.getElementById('scrollRow');
+                        let isAnimating = true;
+                        let scrollInterval = null;
+                        let scrollPosition = 0;
+                        const scrollAmount = 2; // 每次滚动的像素数
+                        const itemWidth = 350; // 单个项目的宽度
+                        const itemsCount = 8; // 列表中的项目数量
+
+                        function animateScroll() {
+                            if (!isAnimating) return;
+                            const totalWidth = itemWidth * itemsCount;
+                            const containerWidth = document.getElementById('zcScroll').clientWidth;
+                            if (scrollPosition <= -totalWidth + containerWidth) {
+                                scrollPosition = 0;
+                            } else {
+                                scrollPosition -= scrollAmount;
+                            }
+
+                            scrollRow.style.transform = `translateX(` + scrollPosition + `px)`;
+                            scrollInterval = setTimeout(animateScroll, 50);
+                        }
+
+                        animateScroll();
+
+                        // 停止
+                        function stopAnimateScroll() {
+                            clearTimeout(scrollInterval);
+                            isAnimating = false;
+                        }
+                        // 开始
+                        function startAnimateScroll() {
+                            isAnimating = true;
+                            animateScroll();
+                        }
+                        scrollRow.addEventListener('mouseover', () => {
+                            stopAnimateScroll();
+                        });
+
+                        scrollRow.addEventListener('mouseout', () => {
+                            startAnimateScroll();
+                        });
+                    </script>
+                </div>
+                <!-- 专题部分结束 -->
+                <!-- 一些平台开始 -->
+                <div data-v-41c51f9c="" style="background-color: rgb(255, 255, 255);">
+                    <div data-v-41c51f9c="" id="frScroll" class="mainLayout frLink" style="overflow: hidden;">
+                        <ul data-v-41c51f9c="" class="indexST frLinkUL">
+                            <li data-v-41c51f9c=""><a data-v-41c51f9c="" href="https://www.hnzwfw.gov.cn/"
+                                    title="河南政务服务网" target="_blank"><img data-v-41c51f9c=""
+                                        src="https://t.ly.gov.cn/file/4103000037/img/other.png" width="156"
+                                        height="60"></a></li>
+                            <li data-v-41c51f9c=""><a data-v-41c51f9c="" href="https://piyao.lyd.com.cn/#/"
+                                    title="洛阳市互联网辟谣平台" target="_blank"><img data-v-41c51f9c=""
+                                        src="https://t.ly.gov.cn/file/4103000037/img/other2.png" width="156"
+                                        height="60"></a></li>
+                            <li data-v-41c51f9c=""><a data-v-41c51f9c="" href="http://12335.mofcom.gov.cn/"
+                                    title="12335中国外经贸企业服务网" target="_blank"><img data-v-41c51f9c=""
+                                        src="https://t.ly.gov.cn/file/4103000037/img/other3.png" width="156"
+                                        height="60"></a></li>
+                            <!-- 中国（洛阳）。。。链接有问题 -->
+                            <li data-v-41c51f9c=""><a data-v-41c51f9c="" href="http://www.ly-gec.com/"
+                                    title="中国（洛阳）跨境电子商务综合试验区" target="_blank"><img data-v-41c51f9c=""
+                                        src="https://t.ly.gov.cn/file/4103000037/img/other4.jpg" width="156"
+                                        height="60"></a></li>
+                            <li data-v-41c51f9c=""><a data-v-41c51f9c="" href="http://www.hninvest.org.cn/"
+                                    title="河南省投资促进网" target="_blank"><img data-v-41c51f9c=""
+                                        src="https://t.ly.gov.cn/file/4103000037/img/other5.jpg" width="156"
+                                        height="60"></a></li>
+                            <li data-v-41c51f9c=""><a data-v-41c51f9c="" href="http://fta.mofcom.gov.cn/"
+                                    title="中国自由贸易区服务网" target="_blank"><img data-v-41c51f9c=""
+                                        src="https://t.ly.gov.cn/file/4103000037/img/other6.png" width="156"
+                                        height="60"></a></li>
+                            <li data-v-41c51f9c=""><a data-v-41c51f9c="" href="https://www.ly.gov.cn/" title="洛阳市人民政府"
+                                    target="_blank"><img data-v-41c51f9c=""
+                                        src="https://t.ly.gov.cn/file/4103000037/img/other7.jpg" width="156"
+                                        height="60"></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 一些平台结束 -->
+                <!-- 右侧浮窗内容开始 -->
+                <div data-v-41c51f9c="" class="advert3">
+                    <div data-v-41c51f9c="" class="slide">
+                        <div data-v-41c51f9c="" class="slideshow">
+                            <ul data-v-41c51f9c="">
+                                <li data-v-41c51f9c=""><a data-v-41c51f9c="" href="/2024/09-15/427096.html"
+                                        target="_blank"><img data-v-41c51f9c=""
+                                            src="https://t.ly.gov.cn/file/4103000037/img/jubao.jpg"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div data-v-41c51f9c="" class="popClose">X</div>
+                </div>
+                <div data-v-41c51f9c="" class="advert2">
+                    <div data-v-41c51f9c="" class="slide">
+                        <div data-v-41c51f9c="" class="slideshow">
+                            <ul data-v-41c51f9c="">
+                                <li data-v-41c51f9c=""><a data-v-41c51f9c="" href="#" target="_blank"><img
+                                            data-v-41c51f9c=""
+                                            src="https://t.ly.gov.cn/file/4103000037/img/anquan.jpg"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div data-v-41c51f9c="" class="popClose">X</div>
+                </div>
+                <div data-v-41c51f9c="" class="advert1">
+                    <div data-v-41c51f9c="" class="slide">
+                        <div data-v-41c51f9c="" class="slideshow">
+                            <ul data-v-41c51f9c="">
+                                <li data-v-41c51f9c=""><a data-v-41c51f9c="" href="http://lys.pandagov.com:8080/"
+                                        target="_blank"><img data-v-41c51f9c=""
+                                            src="https://t.ly.gov.cn/file/4103000037/img/7.jpg"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div data-v-41c51f9c="" class="popClose">X</div>
+                </div>
+                <div data-v-41c51f9c="" class="advert">
+                    <div data-v-41c51f9c="" class="slide">
+                        <div data-v-41c51f9c="" class="slideshow fc">
+                            <ul data-v-41c51f9c="">
+                                <li data-v-41c51f9c="" style="display: none;"><a data-v-41c51f9c="" href="#"><img
+                                            data-v-41c51f9c="" src="https://t.ly.gov.cn/file/4103000037/img/1.jpg"></a>
+                                </li>
+                                <li data-v-41c51f9c="" style="display: none;"><a data-v-41c51f9c="" href="#"><img
+                                            data-v-41c51f9c="" src="https://t.ly.gov.cn/file/4103000037/img/2.jpg"></a>
+                                </li>
+                                <li data-v-41c51f9c="" style="display: none;"><a data-v-41c51f9c="" href="#"><img
+                                            data-v-41c51f9c="" src="https://t.ly.gov.cn/file/4103000037/img/3.jpg"></a>
+                                </li>
+                                <li data-v-41c51f9c="" style="display: none;"><a data-v-41c51f9c="" href="#"><img
+                                            data-v-41c51f9c="" src="https://t.ly.gov.cn/file/4103000037/img/4.jpg"></a>
+                                </li>
+                                <li data-v-41c51f9c="" style="display: none;"><a data-v-41c51f9c="" href="#"><img
+                                            data-v-41c51f9c="" src="https://t.ly.gov.cn/file/4103000037/img/5.jpg"></a>
+                                </li>
+                                <li data-v-41c51f9c="" style="display: none;"><a data-v-41c51f9c="" href="#"><img
+                                            data-v-41c51f9c="" src="https://t.ly.gov.cn/file/4103000037/img/6.jpg"></a>
+                                </li>
+                            </ul>
+                            <script>
+                                $('.slideshow.fc ul li').eq(0).css('display', 'block')
+                                let nowfuindex = 0;
+                                setInterval(function () {
+                                    $('.slideshow.fc ul li').css('display', 'none')
+                                    nowfuindex = nowfuindex % 6
+                                    $('.slideshow.fc ul li').eq(nowfuindex).css('display', 'block')
+                                    nowfuindex++
+                                }, 2000)
+                            </script>
+                        </div>
+                    </div>
+                    <div data-v-41c51f9c="" class="popClose">X</div>
+                </div>
+                <!-- 右侧浮窗内容结束 -->
+                <script>
+                    $('.popClose').click(function () {
+                        $(this).parent().hide()
+                    })
+                </script>
+            </div>
+            <!-- 内容结束 -->
+            <!-- 尾部开始 -->
+            <div data-visible="">
+  <div style="background-color: rgb(57, 60, 62);">
+      <div class="mainLayout footer">
+          <div class="selectDiv">
+              <div class="select_box"><span>国家部委
+                      <i class="iconfont icon-xialajiantouxiao"></i></span>
+                  <ul>
+                      <li><a href="http://www.mofcom.gov.cn/" target="_blank">商务部<i
+                                  class="iconfont icon-xialajiantouxiao"></i></a></li>
+                      <li><a href="http://www.stats.gov.cn/" target="_blank">统计局<i
+                                  class="iconfont icon-xialajiantouxiao"></i></a></li>
+                      <li><a href="http://www.samr.gov.cn/" target="_blank">国家市场监督管理总局<i
+                                  class="iconfont icon-xialajiantouxiao"></i></a></li>
+                      <li><a href="http://www.chinatax.gov.cn/" target="_blank">税务总局<i
+                                  class="iconfont icon-xialajiantouxiao"></i></a></li>
+                      <li><a href="http://www.customs.gov.cn/" target="_blank">海关总署<i
+                                  class="iconfont icon-xialajiantouxiao"></i></a></li>
+                      <li><a href="http://www.mof.gov.cn/index.htm" target="_blank">财政部<i
+                                  class="iconfont icon-xialajiantouxiao"></i></a></li>
+                      <li><a href="https://www.ndrc.gov.cn/" target="_blank">发展和改革委员会<i
+                                  class="iconfont icon-xialajiantouxiao"></i></a></li>
+                      <li><a href="http://www.mca.gov.cn/" target="_blank">民政部<i
+                                  class="iconfont icon-xialajiantouxiao"></i></a></li>
+                      <li><a href="https://www.miit.gov.cn/" target="_blank">工业和信息化部<i
+                                  class="iconfont icon-xialajiantouxiao"></i></a></li>
+                      <li><a href="http://www.most.gov.cn/index.html" target="_blank">科技部<i
+                                  class="iconfont icon-xialajiantouxiao"></i></a></li>
+                  </ul>
+              </div>
+              <div class="select_box"><span>各省商务厅
+                      <i class="iconfont icon-xialajiantouxiao"></i></span>
+                  <ul>
+                      <li><a href="http://sw.beijing.gov.cn/" target="_blank">北京市商务局<i
+                                  class="iconfont icon-xialajiantouxiao"></i></a></li>
+                      <li><a href="http://shangwuju.tj.gov.cn/" target="_blank">天津市商务局<i
+                                  class="iconfont icon-xialajiantouxiao"></i></a></li>
+                      <li><a href="http://swt.hebei.gov.cn/" target="_blank">河北省商务厅<i
+                                  class="iconfont icon-xialajiantouxiao"></i></a></li>
+                      <li><a href="http://swt.shanxi.gov.cn/" target="_blank">山西省商务厅<i
+                                  class="iconfont icon-xialajiantouxiao"></i></a></li>
+                      <li><a href="https://swt.nmg.gov.cn/" target="_blank">内蒙古自治区商务厅<i
+                                  class="iconfont icon-xialajiantouxiao"></i></a></li>
+                      <li><a href="http://swt.ln.gov.cn/" target="_blank">辽宁省商务厅<i
+                                  class="iconfont icon-xialajiantouxiao"></i></a></li>
+                      <li><a href="http://swt.jl.gov.cn/" target="_blank">吉林省商务厅<i
+                                  class="iconfont icon-xialajiantouxiao"></i></a></li>
+                      <li><a href="http://sswt.hlj.gov.cn/" target="_blank">黑龙江省商务厅<i
+                                  class="iconfont icon-xialajiantouxiao"></i></a></li>
+                      <li><a href="https://sww.sh.gov.cn/" target="_blank">上海市商务委员会<i
+                                  class="iconfont icon-xialajiantouxiao"></i></a></li>
+                      <li><a href="http://doc.jiangsu.gov.cn/" target="_blank">江苏省商务厅<i
+                                  class="iconfont icon-xialajiantouxiao"></i></a></li>
+                      <li><a href="http://zcom.zj.gov.cn/" target="_blank">浙江省商务厅<i
+                                  class="iconfont icon-xialajiantouxiao"></i></a></li>
+                      <li><a href="http://commerce.ah.gov.cn/" target="_blank">安徽省商务厅<i
+                                  class="iconfont icon-xialajiantouxiao"></i></a></li>
+                      <li><a href="https://swt.fujian.gov.cn/" target="_blank">福建省商务厅<i
+                                  class="iconfont icon-xialajiantouxiao"></i></a></li>
+                      <li><a href="http://swt.jiangxi.gov.cn/" target="_blank">江西省商务厅<i
+                                  class="iconfont icon-xialajiantouxiao"></i></a></li>
+                      <li><a href="http://commerce.shandong.gov.cn/" target="_blank">山东省商务厅<i
+                                  class="iconfont icon-xialajiantouxiao"></i></a></li>
+                      <li><a href="http://hnsswt.henan.gov.cn/" target="_blank">河南省商务厅<i
+                                  class="iconfont icon-xialajiantouxiao"></i></a></li>
+                      <li><a href="http://swt.hubei.gov.cn/" target="_blank">湖北省商务厅<i
+                                  class="iconfont icon-xialajiantouxiao"></i></a></li>
+                      <li><a href="http://swt.hunan.gov.cn/" target="_blank">湖南省商务厅<i
+                                  class="iconfont icon-xialajiantouxiao"></i></a></li>
+                      <li><a href="http://com.gd.gov.cn/" target="_blank">广东省商务厅<i
+                                  class="iconfont icon-xialajiantouxiao"></i></a></li>
+                      <li><a href="http://swt.gxzf.gov.cn/" target="_blank">广西壮族自治区商务厅<i
+                                  class="iconfont icon-xialajiantouxiao"></i></a></li>
+                      <li><a href="https://dofcom.hainan.gov.cn/" target="_blank">海南省商务厅<i
+                                  class="iconfont icon-xialajiantouxiao"></i></a></li>
+                      <li><a href="http://sww.cq.gov.cn/" target="_blank">重庆市商务委员会<i
+                                  class="iconfont icon-xialajiantouxiao"></i></a></li>
+                      <li><a href="http://swt.sc.gov.cn/" target="_blank">四川省商务厅<i
+                                  class="iconfont icon-xialajiantouxiao"></i></a></li>
+                      <li><a href="http://swt.guizhou.gov.cn/" target="_blank">贵州省商务厅<i
+                                  class="iconfont icon-xialajiantouxiao"></i></a></li>
+                      <li><a href="http://swt.yn.gov.cn/" target="_blank">云南省商务厅<i
+                                  class="iconfont icon-xialajiantouxiao"></i></a></li>
+                      <li><a href="http://swt.xizang.gov.cn/" target="_blank">西藏自治区商务厅<i
+                                  class="iconfont icon-xialajiantouxiao"></i></a></li>
+                      <li><a href="http://sxdofcom.shaanxi.gov.cn/" target="_blank">陕西省商务厅<i
+                                  class="iconfont icon-xialajiantouxiao"></i></a></li>
+                      <li><a href="http://swt.gansu.gov.cn/" target="_blank">甘肃省商务厅<i
+                                  class="iconfont icon-xialajiantouxiao"></i></a></li>
+                      <li><a href="http://swt.qinghai.gov.cn/" target="_blank">青海省商务厅<i
+                                  class="iconfont icon-xialajiantouxiao"></i></a></li>
+                      <li><a href="http://dofcom.nx.gov.cn/" target="_blank">宁夏回族自治区商务厅<i
+                                  class="iconfont icon-xialajiantouxiao"></i></a></li>
+                      <li><a href="http://swt.xinjiang.gov.cn/" target="_blank">新疆维吾尔自治区商务厅<i
+                                  class="iconfont icon-xialajiantouxiao"></i></a></li>
+                      <li><a href="http://swj.xjbt.gov.cn/" target="_blank">新疆生产建设兵团商务局<i
+                                  class="iconfont icon-xialajiantouxiao"></i></a></li>
+                      <li><a href="https://boc.dl.gov.cn/" target="_blank">大连市商务局<i
+                                  class="iconfont icon-xialajiantouxiao"></i></a></li>
+                      <li><a href="http://bofcom.qingdao.gov.cn/" target="_blank">青岛市商务局<i
+                                  class="iconfont icon-xialajiantouxiao"></i></a></li>
+                      <li><a href="http://swj.ningbo.gov.cn/" target="_blank">宁波市商务局<i
+                                  class="iconfont icon-xialajiantouxiao"></i></a></li>
+                      <li><a href="http://swj.xm.gov.cn/" target="_blank">厦门市商务局<i
+                                  class="iconfont icon-xialajiantouxiao"></i></a></li>
+                      <li><a href="http://commerce.sz.gov.cn/" target="_blank">深圳市商务局<i
+                                  class="iconfont icon-xialajiantouxiao"></i></a></li>
+                  </ul>
+              </div>
+              <div class="select_box"><span>市政府各部门
+                      <i class="iconfont icon-xialajiantouxiao"></i></span>
+                  <ul>
+                      <li><a href="http://www.ly.gov.cn/" target="_blank">洛阳市政府<i
+                                  class="iconfont icon-xialajiantouxiao"></i></a></li>
+                      <li><a href="http://gxj.ly.gov.cn/" target="_blank">工业和信息化局<i
+                                  class="iconfont icon-xialajiantouxiao"></i></a></li>
+                      <li><a href="http://cz.ly.gov.cn/" target="_blank">市财政局<i
+                                  class="iconfont icon-xialajiantouxiao"></i></a></li>
+                      <li><a href="http://kxjs.ly.gov.cn" target="_blank">市科技局<i
+                                  class="iconfont icon-xialajiantouxiao"></i></a></li>
+                      <li><a href="http://fgw.ly.gov.cn/" target="_blank">发展和改革委员会<i
+                                  class="iconfont icon-xialajiantouxiao"></i></a></li>
+                      <li><a href="http://amr.ly.gov.cn/" target="_blank">市场监督管理局<i
+                                  class="iconfont icon-xialajiantouxiao"></i></a></li>
+                  </ul>
+              </div>
+              <div class="select_box"><span>各地商务厅
+                      <i class="iconfont icon-xialajiantouxiao"></i></span>
+                  <ul>
+                      <li><a href="http://swj.zhengzhou.gov.cn/" target="_blank">郑州市商务局<i
+                                  class="iconfont icon-xialajiantouxiao"></i></a></li>
+                      <li><a href="http://swj.xuchang.gov.cn/" target="_blank">许昌市商务局<i
+                                  class="iconfont icon-xialajiantouxiao"></i></a></li>
+                      <li><a href="https://commerce.xinxiang.gov.cn/" target="_blank">新乡市商务局<i
+                                  class="iconfont icon-xialajiantouxiao"></i></a></li>
+                      <li><a href="http://swj.luohe.gov.cn/" target="_blank">漯河市商务局<i
+                                  class="iconfont icon-xialajiantouxiao"></i></a></li>
+                      <li><a href="http://swj.nanyang.gov.cn/" target="_blank">南阳市商务局<i
+                                  class="iconfont icon-xialajiantouxiao"></i></a></li>
+                  </ul>
+              </div>
+              <div class="select_box"><span>综合网站
+                      <i class="iconfont icon-xialajiantouxiao"></i></span>
+                  <ul>
+                      <li><a href="http://lyrb.lyd.com.cn/" target="_blank">洛阳日报<i
+                                  class="iconfont icon-xialajiantouxiao"></i></a></li>
+                      <li><a href="http://www.chinanews.com/" target="_blank">中国新闻网<i
+                                  class="iconfont icon-xialajiantouxiao"></i></a></li>
+                      <li><a href="http://www.people.com.cn/" target="_blank">人民网<i
+                                  class="iconfont icon-xialajiantouxiao"></i></a></li>
+                      <li><a href="http://www.xinhuanet.com/" target="_blank">新华网<i
+                                  class="iconfont icon-xialajiantouxiao"></i></a></li>
+                      <li><a href="https://www.dahe.cn/" target="_blank">大河网<i
+                                  class="iconfont icon-xialajiantouxiao"></i></a></li>
+                      <li><a href="http://www.lyd.com.cn/" target="_blank">洛阳网<i
+                                  class="iconfont icon-xialajiantouxiao"></i></a></li>
+                  </ul>
+              </div>
+              <script>
+                  $('.selectDiv .select_box').click(function () {
+                      console.log($(this).children('ul').css('display'));
+                      if ($(this).children('ul').css('display') === 'block') {
+                          $(this).children('ul').toggle()
+                          $('.selectDiv .select_box').css({ 'color': '#e5e5e5' })
+                      } else {
+                          $('.selectDiv .select_box ul').hide()
+                          $('.selectDiv .select_box').css({ 'color': '#e5e5e5' })
+                          $(this).children('ul').toggle()
+                          $(this).css({ 'color': '#1764ce' })
+                      }
+
+                  })
+              </script>
+          </div>
+          <div class="footText">
+              <div class="ft1"><a
+                      href="https://bszs.conac.cn/sitename?method=show&id=0A00086AB9B904B7E053022819ACE594"
+                      target="_blank"><img src="https://t.ly.gov.cn/file/4103000037/img/djg.png"></a>
+              </div>
+              <div class="ft2">
+                  <div>
+                      <p>Copyright ©2021 All Rights Reserved   版权所有：洛阳市商务局</p>
+                      <p>联系电话：0379-63935692 63935693  （工作日）</p>
+                      <p>值班电话：0379-63935693 （周末及节假日）</p>
+                      <p>地址：洛阳市洛龙区政和路16号院2号楼</p>
+                      <p><a href="http://beian.miit.gov.cn" rel="noopener noreferrer"
+                              target="_blank">豫ICP备2022003685号-1</a>   <a
+                              href="https://beian.miit.gov.cn/#/Integrated/index" rel="noopener noreferrer"
+                              target="_blank"><img
+                                  src="https://t.ly.gov.cn/file/4103000037/img/js.png">豫公网安备41031102000277号</a>
+                           网站标识码：4103000037</p>
+                  </div>
+                  <div title="PV:1135446,UV:89963"><img
+                          src="https://t.ly.gov.cn/file/4103000037/img/untitled.8163b64.png" id="uvpv_img">
+                  </div>
+              </div>
+              <div class="ft3"><a
+                      href="https://zfwzgl.www.gov.cn/exposure/jiucuo.html?site_code=4103000037&url=www.ly.gov.cn"
+                      target="_blank"><img src="https://t.ly.gov.cn/file/4103000037/img/zc.jpg"></a>
+              </div>
+          </div>
+          <script>
+              window.headTool = {
+                  init: function () {
+                      var mode = this.getCookie("mode");
+                      if (mode == 2) {
+                          $("#toolbarOldman").text("关闭适老模式")
+                          $("body").addClass("forTheOld");
+
+                      } else {
+                          $("#toolbarOldman").text("进入适老模式")
+                          $("body").removeClass("forTheOld");
+                      }
+                      return this;
+                  },
+                  switchOld: function () {
+                      var mode = this.getCookie("mode");
+                      if (mode == 2) {
+                          this.setCookie("mode", 1)
+                      } else {
+                          this.setCookie("mode", 2)
+                      }
+                      window.location.reload();
+                  },
+                  getCookie: function (name) {
+                      var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
+                      if (arr = document.cookie.match(reg)) {
+                          return String(arr[2]);
+                      } else {
+                          return null;
+                      }
+                  },
+                  setCookie: function (name, value) {
+                      var Days = 30;
+                      var exp = new Date();
+                      exp.setTime(exp.getTime() + Days * 24 * 60 * 60 * 1000);
+                      document.cookie = name + "=" + escape(value) + ";expires=" + exp.toGMTString();
+                  }
+              }.init();
+              // document.addEventListener("DOMContentLoaded", function () {
+              //     var links = document.querySelectorAll('a');
+              //     for (var i = 0; i < links.length; i++) {
+              //         var link = links[i];
+              //         var href = link.getAttribute('href');
+              //         if (href && href.indexOf('swj.ly.gov.cn') > -1) {
+              //             var newHref = href.replace('swj.ly.gov.cn', 'newswj.ly.gov.cn');
+              //             link.setAttribute('href', newHref);
+              //         }
+              //     }
+              // });
+          </script>
+      </div>
+      <script src='https://auth.mangren.com/boots/swj.ly.gov.cn/esdToolsInit.js' charset='UTF-8'></script>
+<script language="javascript">
+var _yfx_trackdata = _yfx_trackdata || [];		//事件采集
+var _yfx_website = "10000116";			//站点编号（不可更改）
+(function() {
+    var yfxjs = document.createElement("script");
+    yfxjs.charset = "utf-8";
+    yfxjs.src = "//js.dahe.cn/count/yeefxcount.js";
+    var yfxjs_t = document.getElementsByTagName("script")[0];
+    yfxjs_t.parentNode.insertBefore(yfxjs, yfxjs_t);
+})();
+</script>
+  </div>
+</div>
+            <!-- 尾部结束 -->
+        </div>
+    </div>
+</body>
+
+</html>

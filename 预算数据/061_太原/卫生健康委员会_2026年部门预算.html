@@ -1,0 +1,1128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <!--网站标签-->
+    <!--网站名称、网站域名、政府网站标识码、描述、关键字 -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="SiteName" content="太原市卫生健康委员会网站" />
+<meta name="SiteDomain" content="wjw.taiyuan.gov.cn" />
+<meta name="SiteIDCode" content="CA061130000406895880003" />
+<meta name="description" content="贯彻落实党和国家关于卫生和计划生育工作的法律、法规和方针、政策。拟订全市卫生和计划生育规划和政策措施，组织起草地方性法规、规章草案；制定各项卫生和计划生育行业技术标准和规范，提出全市人口发展战略和统筹解决人口问题的目标任务建议。" />
+<meta name="keywords" content="太原市卫生健康委员会" />
+    <meta name="ColumnName" content="首页" />
+    <meta name="ColumnDescription" content="太原市卫生健康委员会网站首页。" />
+    <meta name="ColumnKeywords" content="太原市卫生健康委员会" />
+    <meta name="ColumnType" content="网站首页" />
+    <title>太原市卫生健康委员会网站</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/r/cms/site67/default/tyswsjkwyh/static/css/index_ty.css"
+    />
+<script src="/r/cms/site67/default/tyswsjkwyh/static/js/jquery-1.7.1.min.js"></script>
+<script src="/r/cms/site67/default/tyswsjkwyh/static/js/common.js"></script>
+    <script
+      language="javascript"
+      type="text/javascript"
+      src="/r/cms/site67/default/tyswsjkwyh/static/js/jquery.tab.js"
+    ></script>
+    <script
+      language="javascript"
+      type="text/javascript"
+      src="/r/cms/site67/default/tyswsjkwyh/static/js/jquery.roll.js"
+    ></script>
+    <script
+      language="javascript"
+      type="text/javascript"
+      src="/r/cms/site67/default/tyswsjkwyh/static/js/jquery.SuperSlide.js"
+    ></script>
+  </head>
+  <body>
+    <!--<div><img src="/r/cms/site67/default/tyswsjkwyh/static/images/jd100znbm.jpg" style="width:100%;"/></div>-->
+    <!-- 国务院互联网+督查开始 -->
+    <!--        <script>
+        $(function (){
+        $('.right_float .close').click(function(){
+        $('.right_float').hide();
+        });
+        });
+        </script>
+        <div class="right_float" style="position: fixed;top:50%;left: 0px;width: 220px;border-radius:0 5px 5px 0;overflow: hidden;z-index:30;;margin-top:-190px;">
+            <a class="close" style="width: 30px;height: 18px;line-height: 22px;display: block;float: right;color: #000;">关闭</a>
+            <a href="https://tousu.www.gov.cn/dc/index.htm" target="_blank" target="_blank"><img src="/r/cms/site67/default/tyswsjkwyh/static/images/gwyhlwjdcpc.jpg"/></a>
+        </div>-->
+    <!-- 国务院互联网+督查结束 -->
+    <script type="text/javascript">
+/*accessible-read start*/
+	var close = localStorage.getItem("close");
+	var protocol = window.location.protocol
+	if(close=='true'){
+		show()
+	}
+
+	function show(){
+		let xml = window.XMLHttpRequest?new XMLHttpRequest():new ActiveXObject('Microsoft.XMLHttp');
+		xml.open('GET','https://api.jeecms.com/MODULE-ACCESSIBLE-READING/front/readings/checkAvailability?callingCode=4cU3e84wRBad3qyPeq4wU7if3aTD-m3bAkdd33zAtc39AQ1e3oEQBb3qQnxv4rPjd74rP8ym4lTz-j4mUz-b4nEPRv4oS7ek3qyPeq39y49e34A4t93qzkdg4aQjdh4pP7mk4cQl2932ETmS4zU49v39CRW=3fSEyu4XU4ar39TQio4WSBOC3qBjev4eQTig4VT7am3qT7mk4vQPd73eA7mu3fzQ593cy4lc3qzQB93YMh62');
+		xml.send();
+		xml.onreadystatechange=function(){
+			if($('#ABTInterface').length!=0){
+				return
+			}
+			if (xml.readyState==4 && xml.status==200){
+				let res = JSON.parse(xml.responseText);
+				if (res.code == 200) {
+					localStorage.setItem("close", true);
+					let script = document.createElement('script');
+					// script.src = res.data.abtJsUrl;
+					let host = window.location.protocol+"//"+window.location.host;
+					script.src = host+"/r/cms/site67/default/reading/abt.js";
+					//重写为本地js
+					res.data.abtJsUrl=host+"/r/cms/site67/default/reading/abt.js";
+					res.data.gbkJsUrl=host+"/r/cms/site67/default/reading/gbk.js";
+					res.data.helpHtmlUrl=host+"/r/cms/site67/default/reading/help.html";
+					res.data.pinyinJsUrl=host+"/r/cms/site67/default/reading/pinyin.js";
+					res.data.skinCssUrl=host+"/r/cms/site67/default/reading/skin.css";
+					document.body.appendChild(script);
+					console.log(window.location.host)
+					console.log(res.data)
+					script.onload = function(){ABTshow(res.data);}
+				} else if (res.code == 500){
+					alert(res.message);
+				}
+			}
+		}
+	}
+
+</script>
+<script type="text/javascript" language="javascript">
+  function outTime() {
+    var Datetimes = new Date();
+    var time = Datetimes.getHours();
+    if (time >= 7 && time < 12) {
+      $("#greet").html("上午好！");
+    } else if (time == 12) {
+      $("#greet").html("中午好！");
+    } else if (time >= 13 && time <= 18) {
+      $("#greet").html("下午好！");
+    } else {
+      $("#greet").html("晚上好！");
+    }
+  }
+  function collect() {
+    //加入 收藏
+    var ctrl =
+      navigator.userAgent.toLowerCase().indexOf("mac") != -1
+        ? "Command/Cmd"
+        : "CTRL";
+    try {
+      if (document.all) {
+        //IE类浏览器
+        try {
+          window.external.toString(); //360浏览器不支持window.external，无法收藏
+          window.alert(
+            "国内开发的360浏览器等不支持主动加入收藏。\n您可以尝试通过浏览器菜单栏 或快捷键 ctrl+D 试试。"
+          );
+        } catch (e) {
+          try {
+            window.external.addFavorite(window.location, document.title);
+          } catch (e) {
+            window.external.addToFavoritesBar(window.location, document.title); //IE8
+          }
+        }
+      } else if (window.sidebar) {
+        //firfox等浏览器
+        window.sidebar.addPanel(document.title, window.location, "");
+      } else {
+        alert("您可以尝试通过快捷键" + ctrl + " + D 加入到收藏夹~");
+      }
+    } catch (e) {
+      alert("您可以尝试通过快捷键" + ctrl + " + D 加入到收藏夹~");
+    }
+  }
+  //设为首页
+
+  function setHome() {
+    url = window.location.href;
+    if (document.all) {
+      document.body.style.behavior = "url(#default#homepage)";
+
+      document.body.setHomePage(url);
+    } else {
+      alert(
+        "您好,您的浏览器不支持自动设置页面为首页功能,请您手动在浏览器里设置该页面为首页!"
+      );
+    }
+  }
+</script>
+
+<div class="head_top">
+  <div class="head_top_con">
+    <ul class="fr clearfix">
+      <li><a href="javascript:void(0);" onclick="collect();">加入收藏</a></li>
+      <li><a href="javascript:void(0);" onclick="setHome();">设为首页</a></li>
+      <li><a href="javascript:void(0);" onclick="show();">无障碍通道</a></li>
+    </ul>
+  </div>
+</div>
+<div class="navbox clearfix">
+  <div class="navbox_con">
+    <ul class="nav_ul fl">
+      <li><a href="http://wjw.taiyuan.gov.cn/index.html">首&nbsp;&nbsp;页</a></li>
+      <li><a href="/jgjs.html">机构介绍</a> </li>
+      <li><a href="/xwzx.html">新闻中心</a> </li>
+      <li><a href="/ggfw.html">公共服务</a> </li>
+      <li><a href="/fdzdgknr.html" title="法定主动公开内容">信息公开</a></li>
+      <li><a href="/djgz.html">党建工作</a> </li>
+      <li><a href="http://ty.sxzwfw.gov.cn/icity/icity/departmental_matters?deptid=1401011500"target="_blank">政务服务</a></li>
+      <li><a href="https://www.taiyuan.gov.cn/hdjl.html">互动交流</a></li>
+    </ul>
+    <ul class="ser_ul fr clearfix">
+      <li class="srk">
+        <input type="text" name="" id="keyword" placeholder="请输入关键字" />
+      </li>
+      <li class="btn">
+        <input
+          type="button"
+          name=""
+          onclick="window.open('/search.htm?q='+$('#keyword').val())"
+        />
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="banner clearfix">
+  <h1 class="logo fl">
+    <a href="http://wjw.taiyuan.gov.cn/index.html" class="fix_bg">太原市卫生健康委员会</a>
+  </h1>
+</div>
+ <div class="f_right">
+  <table style="width: 100%; border: 0; text-align: center; height: 100%">
+    <tbody>
+      <tr>
+        <td>
+          <img
+            style="vertical-align: middle"
+            src="/r/cms/site67/default/tyswsjkwyh/static/images/right/zwfwwx.png"
+          />
+          <p style="font-size: 12px; color: #030000; margin-top: 5px">
+            政务服务投诉小程序
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <img
+            style="vertical-align: middle"
+            src="/r/cms/site67/default/tyswsjkwyh/static/images/right/weixin.png"
+          />
+          <p style="font-size: 12px; color: #030000; margin-top: 5px">
+            扫一扫<br />关注微信公众号
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <img
+            style="vertical-align: middle"
+            src="/r/cms/site67/default/tyswsjkwyh/static/images/right/weixinshipin.jpg"
+          />
+          <p style="font-size: 12px; color: #030000; margin-top: 5px">
+            扫一扫<br />关注微信视频号
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <img
+            style="vertical-align: middle"
+            src="/r/cms/site67/default/tyswsjkwyh/static/images/right/weibo.png"
+          />
+          <p style="font-size: 12px; color: #030000; margin-top: 5px">
+            扫一扫关注微博
+          </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<style type="text/css">
+  .f_right {
+    position: fixed;
+    right: 25px;
+    top: 25%;
+    width: 122px;
+    z-index: 100;
+    background: url(/r/cms/site67/default/tyswsjkwyh/static/images/right/SuspendBorder.png)
+      no-repeat;
+    background-size: 100% 100%;
+  }
+  .f_right img {
+    width: 96px;
+  }
+  .f_right td {
+    padding: 7px 2px;
+  }
+</style>
+
+<!-- 过滤掉图片的内容 -->
+ <div
+  id="float_div2"
+  class="float_div2"
+  style="position: fixed"
+  onMouseOver="stop()"
+  onMouseOut="start()"
+>
+  <div align="right"><a onclick="stopAd2()">关闭&nbsp;X</a></div>
+  <div class="cont" style="margin: 10px 0px 0px 10px; width: 320px">
+    <p><a href="/pc/20250509/30217091.html" target="_blank">关于公开征集全市卫生健康领域涉企行政执法突出问题线索的公告</a></p>
+    <p style="text-align: justify"></p>
+  </div>
+</div>
+ 
+<style type="text/css">
+  .float_div2 {
+    font-size: 14px;
+    z-index: 9999;
+  }
+  .float_div2 .cont {
+    background: #015293;
+    color: #ffffff;
+    border-radius: 15px;
+    padding: 10px;
+  }
+  .float_div2 .title {
+    font-weight: bold;
+    font-size: 16px;
+  }
+  .float_div2 p {
+    text-indent: 2em;
+  }
+  .float_div2 p a {
+    color: #ffffff;
+  }
+</style>
+<script>
+  var intervalX2 = 1,
+    intervalY2 = 1;
+  var posX2 = 100,
+    posY2 = 500;
+  var interval2 = 1;
+
+  window.setInterval("float2()", 40);
+  function float2() {
+    posX2 += interval2 * intervalX2;
+    posY2 += interval2 * intervalY2;
+
+    //演示js和jquery下获取class对象的方式
+    $("#float_div2").css("top", posY2);
+    $("#float_div2").css("left", posX2);
+    if (posX2 < 1 || posX2 + $("#float_div2").width() > $(window).width()) {
+      intervalX2 = -intervalX2;
+    }
+    if (
+      posY2 < 1 ||
+      posY2 + $("#float_div2").height() + 5 > $(window).height()
+    ) {
+      intervalY2 = -intervalY2;
+    }
+  }
+  var itl2 = setInterval("float2()", 1000);
+
+  function stopAd2() {
+    $("#float_div2").hide();
+    clearInterval(itl2);
+  }
+
+  objs.onmouseover = function () {
+    clearInterval(itl2);
+  };
+  objs.onmouseout = function () {
+    itl2 = setInterval("float2()", 40);
+  };
+</script>
+    <div class="container">
+      <div class="clearfix">
+        <link
+          href="/r/cms/site67/default/tyswsjkwyh/static/css/xiugai.css"
+          rel="stylesheet"
+          type="text/css"
+        />
+        <style>
+          .img_box {
+            height: 320px;
+          }
+          .img_box .title,
+          .slideTxtBox .title,
+          .right_title {
+            height: 50px;
+            line-height: 50px;
+            background-position: top center;
+            background-color: white;
+            font-size: 22px;
+          }
+        </style>
+
+        <div class="w755 fl">
+          <div id="slideBox" class="slideBox01_ty">
+            <div class="bd">
+              <ul>
+ 
+                <li>
+                  <a href="/wjyw/20260326/30289918.html" target="_blank" title="市第四人民医院联合上海中医药大学附属龙华医院开展"世界防治结核病日"线上科普公益讲座
+">
+                    <img src="/u/cms/site67/202603/26101532ng4n.jpg" />
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/wjyw/20260326/30289917.html" target="_blank" title="筑牢血液安全防线—太原市采供血应急管理与临床用血质控培训班正式开班">
+                    <img src="/u/cms/site67/202603/26101420w4o6.jpg" />
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/wjyw/20260326/30289916.html" target="_blank" title="山西省2026年“世界防治结核病日”主题宣传活动在太原举行">
+                    <img src="/u/cms/site67/202603/26101318bh5b.jpg" />
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/wjyw/20260325/30289658.html" target="_blank" title="太原市举办"热血为生命·奉献筑温情"主题宣传活动">
+                    <img src="/u/cms/site67/202603/2510052784jj.jpg" />
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/wjyw/20260323/30289166.html" target="_blank" title="市卫健委举办2026年度政府采购业务专题培训">
+                    <img src="/u/cms/site67/202603/231115234azi.jpg" />
+                  </a>
+                </li>
+                 
+              </ul>
+            </div>
+            <div class="slideBox">
+              <div class="hd">
+                <ul>
+                  <li class="on">1</li>
+                  <li>2</li>
+                  <li>3</li>
+                  <li>4</li>
+                  <li>5</li>
+                </ul>
+              </div>
+            </div>
+            <div class="hd1">
+              <ul>
+                <li>
+                  <p><a href="/wjyw/20260327/30290092.html" target="_blank">花粉季来袭！耳鼻喉科专家重要提醒</a></p>
+                </li>
+                                <li>
+                  <p><a href="/wjyw/20260327/30290090.html" target="_blank">北大医院太原医院，推出一项新服务→</a></p>
+                </li>
+                                <li>
+                  <p><a href="/wjyw/20260326/30289918.html" target="_blank">市第四人民医院联合上海中医药大学附属龙华医院开展"世界防治结核病日"线上科普公益讲座
+</a></p>
+                </li>
+                                <li>
+                  <p><a href="/wjyw/20260326/30289917.html" target="_blank">筑牢血液安全防线—太原市采供血应急管理与临床用血质控培训班正式开班</a></p>
+                </li>
+                                <li>
+                  <p><a href="/wjyw/20260326/30289916.html" target="_blank">山西省2026年“世界防治结核病日”主题宣传活动在太原举行</a></p>
+                </li>
+                 
+              </ul>
+            </div>
+          </div>
+          <script type="text/javascript">
+            jQuery(".slideBox01_ty").slide({
+              mainCell: ".bd ul",
+              effect: "fade",
+              interTime: 4000,
+              autoPlay: true,
+            });
+          </script>
+        </div>
+        <!--'''''-->
+        <div class="w315 gonggao fr">
+          <div class="right_title">
+            公示公告
+            <span class="more_02"><a href="/gsgg.html">更多>></a></span>
+          </div>
+          <div class="right_area hei_185">
+            <div class="uproll01">
+              <div class="div1">
+                <ul class="listTy01 font14">
+                  <li>
+                    <a href="/gsgg/20260309/30286668.html" title="关于《基本公共卫生服务管理办法》公开征求意见的公告" target="_blank"
+                      >关于《基本公共卫生服务管理办法...</a
+                    >
+                    <span class="grey fr"
+                      >03-09</span
+                    >
+                  </li>
+                                    <li>
+                    <a href="/gsgg/20260302/30285531.html" title="太原市卫生健康委员会《关于进一步促进医养结合发展的若干举措》公开征求意见建议活动的公告" target="_blank"
+                      >太原市卫生健康委员会《关于进一...</a
+                    >
+                    <span class="grey fr"
+                      >03-02</span
+                    >
+                  </li>
+                                    <li>
+                    <a href="/gsgg/20260302/30285493.html" title="太原市卫生健康委员会2025年法治政府建设年度报告" target="_blank"
+                      >太原市卫生健康委员会2025年法治...</a
+                    >
+                    <span class="grey fr"
+                      >03-02</span
+                    >
+                  </li>
+                                    <li>
+                    <a href="/gsgg/20260130/30281256.html" title="太原市卫生健康委员会招聘劳务派遣人员公告" target="_blank"
+                      >太原市卫生健康委员会招聘劳务派...</a
+                    >
+                    <span class="grey fr"
+                      >01-30</span
+                    >
+                  </li>
+                                    <li>
+                    <a href="/gsgg/20260130/30281152.html" title="2026年医师资格考试太原考点考试公告" target="_blank"
+                      >2026年医师资格考试太原考点考试...</a
+                    >
+                    <span class="grey fr"
+                      >01-30</span
+                    >
+                  </li>
+                                    <li>
+                    <a href="/gsgg/20260121/30278994.html" title="太原市2025年第四季度城六区水龙头水质监测结果公示" target="_blank"
+                      >太原市2025年第四季度城六区水龙...</a
+                    >
+                    <span class="grey fr"
+                      >01-21</span
+                    >
+                  </li>
+                                    <li>
+                    <a href="/gsgg/20260120/30278670.html" title="太原市卫生健康委员会直属事业单位2025年公开招聘拟聘用人员公示（三）" target="_blank"
+                      >太原市卫生健康委员会直属事业单...</a
+                    >
+                    <span class="grey fr"
+                      >01-20</span
+                    >
+                  </li>
+                                    <li>
+                    <a href="/gsgg/20260119/30278266.html" title="太原市大学生乡村医生专项计划2025年公开招聘拟聘用人员公示" target="_blank"
+                      >太原市大学生乡村医生专项计划20...</a
+                    >
+                    <span class="grey fr"
+                      >01-19</span
+                    >
+                  </li>
+                                    <li>
+                    <a href="/gsgg/20260114/30277425.html" title="关于征求《太原市卫生健康领域地方性法规行政处罚裁量基准（征求意见稿）》意见建议的公告" target="_blank"
+                      >关于征求《太原市卫生健康领域地...</a
+                    >
+                    <span class="grey fr"
+                      >01-14</span
+                    >
+                  </li>
+                   
+                </ul>
+              </div>
+              <div class="div2"></div>
+            </div>
+          </div>
+        </div>
+        <script>
+          jQuery(".slideBox").slide({
+            mainCell: ".bd ul",
+            effect: "leftLoop",
+            autoPlay: true,
+          });
+        </script>
+      </div>
+      <div class="clearfix mgt15">
+        <div id="slideBox2" class="slideBox222" style="margin-bottom: 15px">
+          <div class="bd">
+            <ul>
+              <li><a href="http://www.gov.cn/hudong/index.htm"><img src="/r/cms/site67/default/images/gwywls.jpg"style="width: 100%"/></a></li>
+            </ul>
+          </div>
+        </div>
+        <script type="text/javascript">
+          jQuery(".slideBox222").slide({
+            mainCell: ".bd ul",
+            autoPlay: true,
+            interTime: 2500,
+          });
+        </script>
+
+        <div class="w755 fl" style="border-top: #1b417d solid 2px">
+          <div class="clearfix">
+            <div class="w335 fl">
+              <h2 class="h2_sty01 blue">
+                <a href="/djgz.html">党建工作</a>
+              </h2>
+              <div class="boxTy02 mgt15 boxTy02_sty01">
+                <div class="boxTy02_con" style="padding-top: 0px">
+                  <ul class="listTy02 font14 lh28">
+                    <li>
+                      <span class="grey fr"
+                        >01-19</span
+                      >
+                      <a href="/djgz/20260119/30278269.html" title="市卫健委机关第一党支部与太原轨道集团机关第四党支部、置业党支部签约共建" target="_blank"
+                        >市卫健委机关第一党支部与太原轨...</a
+                      >
+                    </li>
+                                        <li>
+                      <span class="grey fr"
+                        >02-27</span
+                      >
+                      <a href="/djgz/20250227/30199169.html" title="市卫健委机关第一党支部安排部署2025年支部工作" target="_blank"
+                        >市卫健委机关第一党支部安排部署...</a
+                      >
+                    </li>
+                                        <li>
+                      <span class="grey fr"
+                        >02-20</span
+                      >
+                      <a href="/djgz/20250220/30197349.html" title="市卫健委机关召开2024年度基层党组织书记抓基层党建工作述职评议会" target="_blank"
+                        >市卫健委机关召开2024年度基层党...</a
+                      >
+                    </li>
+                                        <li>
+                      <span class="grey fr"
+                        >12-30</span
+                      >
+                      <a href="/djgz/20241230/30186944.html" title="市卫健委机关第一党支部深入学习《习近平关于健康中国论述摘编》" target="_blank"
+                        >市卫健委机关第一党支部深入学习...</a
+                      >
+                    </li>
+                                        <li>
+                      <span class="grey fr"
+                        >08-29</span
+                      >
+                      <a href="/djgz/20240829/30156317.html" title="市卫健委机关第一党支部传达学习习近平总书记在纪念邓小平同志诞辰120周年座谈会上的重要讲话精神" target="_blank"
+                        >市卫健委机关第一党支部传达学习...</a
+                      >
+                    </li>
+                                        <li>
+                      <span class="grey fr"
+                        >07-26</span
+                      >
+                      <a href="/djgz/20240726/30148399.html" title="市委卫健工委传达学习贯彻党的二十届三中全会精神" target="_blank"
+                        >市委卫健工委传达学习贯彻党的二...</a
+                      >
+                    </li>
+                                        <li>
+                      <span class="grey fr"
+                        >10-20</span
+                      >
+                      <a href="/djgz/20231020/30073270.html" title="市卫健委机关第三党支部召开党员大会" target="_blank"
+                        >市卫健委机关第三党支部召开党员...</a
+                      >
+                    </li>
+                                        <li>
+                      <span class="grey fr"
+                        >03-22</span
+                      >
+                      <a href="/djgz/20230322/30029240.html" title="张泽参加所在的市卫健委机关第三党支部2022年度组织生活会" target="_blank"
+                        >张泽参加所在的市卫健委机关第三...</a
+                      >
+                    </li>
+                                        <li>
+                      <span class="grey fr"
+                        >02-28</span
+                      >
+                      <a href="/djgz/20230228/30023876.html" title="厚植爱国情怀 激发干事热情——市卫健委开展志愿服务暨观影主题党日活动" target="_blank"
+                        >厚植爱国情怀 激发干事热情——...</a
+                      >
+                    </li>
+                                        <li>
+                      <span class="grey fr"
+                        >07-01</span
+                      >
+                      <a href="/djgz/20220701/1223260.html" title="太原市卫健委机关第二党支部为党员过集体政治生日" target="_blank"
+                        >太原市卫健委机关第二党支部为党...</a
+                      >
+                    </li>
+                                        <li>
+                      <span class="grey fr"
+                        >06-16</span
+                      >
+                      <a href="/djgz/20220616/1218686.html" title="市卫健委赴万柏林区玉泉山开展现场教学活动" target="_blank"
+                        >市卫健委赴万柏林区玉泉山开展现...</a
+                      >
+                    </li>
+                     
+                  </ul>
+                </div>
+              </div>
+              <!--修改0322服务指南-->
+              <style>
+                .tb01 {
+                  width: 100%;
+                }
+                .tb01 td {
+                  padding: 5px 0;
+                  text-align: center;
+                  border: 1px solid #dedede;
+                }
+                .tb01 thead td {
+                  background-color: #f4f4f4;
+                }
+              </style>
+              <div class="boxTy02 boxTy02_sty01" style="margin-top: 15px">
+                <h2 class="h2_sty01 blue">
+                  <a href="/wj.html">文件</a>
+                </h2>
+                <ul class="listTy02 font14 lh28" style="padding-top: 14px">
+                  <li>
+                    <span class="grey fr"
+                      >03-24</span
+                    >
+                    <a href="/wj/20260324/30289457.html" title="太原市卫生健康委员会
+关于印发《太原市卫生健康领域地方性法规
+行政处罚裁量基准》的通知" target="_blank"
+                      >太原市卫生健康委员会
+关于印发...</a
+                    >
+                  </li>
+                                    <li>
+                    <span class="grey fr"
+                      >12-31</span
+                    >
+                    <a href="/wj/20251231/30274949.html" title="太原市卫生健康委员会
+关于印发《2024年太原市卫生健康事业发展统计公报》的通知" target="_blank"
+                      >太原市卫生健康委员会
+关于印发...</a
+                    >
+                  </li>
+                                    <li>
+                    <span class="grey fr"
+                      >12-19</span
+                    >
+                    <a href="/wj/20251219/30273165.html" title="太原市卫生健康委员会办公室
+关于做好2026年传统医学师承和确有专长
+人员考核工作的通知" target="_blank"
+                      >太原市卫生健康委员会办公室
+关...</a
+                    >
+                  </li>
+                                    <li>
+                    <span class="grey fr"
+                      >11-12</span
+                    >
+                    <a href="/wj/20251112/30267034.html" title="太原市卫生健康委员会
+太原市人力资源和社会保障局
+关于开展2025年度全市基层医疗卫生
+高级职称评审工作的通知" target="_blank"
+                      >太原市卫生健康委员会
+太原市人...</a
+                    >
+                  </li>
+                                    <li>
+                    <span class="grey fr"
+                      >09-08</span
+                    >
+                    <a href="/wj/20250908/30252414.html" title="关于印发支持托育服务高质量发展
+若干措施的通知" target="_blank"
+                      >关于印发支持托育服务高质量发...</a
+                    >
+                  </li>
+                                    <li>
+                    <span class="grey fr"
+                      >07-29</span
+                    >
+                    <a href="/wj/20250729/30243702.html" title="太原市卫生健康委员会办公室
+关于开展“促进医养结合”主题论文
+征集活动的通知" target="_blank"
+                      >太原市卫生健康委员会办公室
+关...</a
+                    >
+                  </li>
+                                    <li>
+                    <span class="grey fr"
+                      >07-07</span
+                    >
+                    <a href="/wj/20250707/30238951.html" title="关于印发太原市卫生健康委员会2025年普法依法治理工作要点的通知" target="_blank"
+                      >关于印发太原市卫生健康委员会20...</a
+                    >
+                  </li>
+                                    <li>
+                    <span class="grey fr"
+                      >07-07</span
+                    >
+                    <a href="/wj/20250707/30238886.html" title="太原市卫生健康委员会
+关于进一步规范医疗机构样本外送临床检测
+行为的通知" target="_blank"
+                      >太原市卫生健康委员会
+关于进一...</a
+                    >
+                  </li>
+                                    <li>
+                    <span class="grey fr"
+                      >06-25</span
+                    >
+                    <a href="/wj/20250625/30228303.html" title="太原市卫生健康委员会
+太原市发展和改革委员会
+太原市医疗保障局
+关于印发进一步推进医疗机构间医学影像检查资料
+和医学检验结果互认工作实施方案的通知" target="_blank"
+                      >太原市卫生健康委员会
+太原市发...</a
+                    >
+                  </li>
+                                    <li>
+                    <span class="grey fr"
+                      >06-04</span
+                    >
+                    <a href="/wj/20250604/30223555.html" title="太原市卫生健康委员会
+关于印发《太原市卫生应急队伍管理办法》
+的通知" target="_blank"
+                      >太原市卫生健康委员会
+关于印发...</a
+                    >
+                  </li>
+                                    <li>
+                    <span class="grey fr"
+                      >04-25</span
+                    >
+                    <a href="/wj/20250425/30213711.html" title="太原市卫生健康委员会办公室
+关于做好2025年传统医学师承和确有专长
+人员考核工作的通知" target="_blank"
+                      >太原市卫生健康委员会办公室
+关...</a
+                    >
+                  </li>
+                   
+                </ul>
+              </div>
+            </div>
+            <!--修改0322服务指南-->
+
+            <div class="w378 fr">
+              <h2 class="h2_sty01 blue">
+                <a href="/gzdt.html">工作动态</a> 
+              </h2>
+              <ul class="listTy02 font14 lh28" style="padding-top: 14px">
+                <li>
+                  <span class="grey fr">03-25</span>
+                  <a href="/gzdt/20260325/30289710.html" title="范兆森调研督导汾河生态治理工作
+" target="_blank"
+                    >范兆森调研督导汾河生态治理工作
+</a
+                  >
+                </li>
+                                <li>
+                  <span class="grey fr">03-25</span>
+                  <a href="/gzdt/20260325/30289709.html" title="林红玉主持召开市委审计委员会会议
+" target="_blank"
+                    >林红玉主持召开市委审计委员会会...</a
+                  >
+                </li>
+                                <li>
+                  <span class="grey fr">03-20</span>
+                  <a href="/gzdt/20260320/30289040.html" title="林红玉调研督导中央生态环境保护督察反馈问题整改工作
+" target="_blank"
+                    >林红玉调研督导中央生态环境保护...</a
+                  >
+                </li>
+                                <li>
+                  <span class="grey fr">03-17</span>
+                  <a href="/gzdt/20260317/30288214.html" title="市政府党组召开会议 范兆森主持
+" target="_blank"
+                    >市政府党组召开会议 范兆森主持
+</a
+                  >
+                </li>
+                                <li>
+                  <span class="grey fr">03-13</span>
+                  <a href="/gzdt/20260313/30287647.html" title="林红玉督导检查全市信访工作
+" target="_blank"
+                    >林红玉督导检查全市信访工作
+</a
+                  >
+                </li>
+                                <li>
+                  <span class="grey fr">03-13</span>
+                  <a href="/gzdt/20260313/30287646.html" title="林红玉与华为公司副总裁蒋旺成举行工作会谈
+" target="_blank"
+                    >林红玉与华为公司副总裁蒋旺成举...</a
+                  >
+                </li>
+                                <li>
+                  <span class="grey fr">03-11</span>
+                  <a href="/gzdt/20260311/30287186.html" title="市委常委会召开会议 林红玉主持
+" target="_blank"
+                    >市委常委会召开会议 林红玉主持
+</a
+                  >
+                </li>
+                                <li>
+                  <span class="grey fr">03-04</span>
+                  <a href="/gzdt/20260304/30285829.html" title="范兆森赴重点企业开展入企服务
+" target="_blank"
+                    >范兆森赴重点企业开展入企服务
+</a
+                  >
+                </li>
+                                <li>
+                  <span class="grey fr">03-03</span>
+                  <a href="/gzdt/20260303/30285653.html" title="林红玉主持召开市委常委会会议
+" target="_blank"
+                    >林红玉主持召开市委常委会会议
+</a
+                  >
+                </li>
+                                <li>
+                  <span class="grey fr">02-24</span>
+                  <a href="/gzdt/20260224/30284644.html" title="市委常委会召开会议 林红玉主持" target="_blank"
+                    >市委常委会召开会议 林红玉主持</a
+                  >
+                </li>
+                                <li>
+                  <span class="grey fr">02-13</span>
+                  <a href="/gzdt/20260213/30283960.html" title="市政府召开廉政工作会议 范兆森出席并讲话
+" target="_blank"
+                    >市政府召开廉政工作会议 范兆森...</a
+                  >
+                </li>
+                 
+              </ul>
+              <!--商务统计-->
+              <style>
+                .lh32 li {
+                  margin-bottom: 14px;
+                }
+              </style>
+              <!-- test third start -->
+              <h2 class="h2_sty01 blue" style="margin-top: 15px">
+                <a href="/zcjd.html">政策解读</a>
+              </h2>
+              <ul class="listTy02 font14 lh28" style="padding-top: 14px">
+                <li>
+                  <span class="grey fr">03-19</span>
+                  <a href="/zcjd/20260319/30288661.html" title="【图解】太原市卫生健康委员会
+关于印发《太原市卫生健康领域地方性法规
+行政处罚裁量基准》的通知" target="_blank">【图解】太原市卫生健康委员会
+...</a>
+                </li>
+                                <li>
+                  <span class="grey fr">12-31</span>
+                  <a href="/zcjd/20251231/30274950.html" title="【图解】太原市卫生健康委员会
+关于印发《2024年太原市卫生健康事业发展统计公报》的通知" target="_blank">【图解】太原市卫生健康委员会
+...</a>
+                </li>
+                                <li>
+                  <span class="grey fr">07-07</span>
+                  <a href="/zcjd/20250707/30238957.html" title="【图解】太原市卫生健康委员会
+关于进一步规范医疗机构样本外送临床检测
+行为的通知" target="_blank">【图解】太原市卫生健康委员会
+...</a>
+                </li>
+                                <li>
+                  <span class="grey fr">07-07</span>
+                  <a href="/zcjd/20250707/30238946.html" title="【图解】《太原市卫生健康委员会2025年普法依法治理工作要点》解读" target="_blank">【图解】《太原市卫生健康委员会...</a>
+                </li>
+                                <li>
+                  <span class="grey fr">06-25</span>
+                  <a href="/zcjd/20250625/30228307.html" title="【图解】太原市卫生健康委员会
+太原市发展和改革委员会
+太原市医疗保障局
+关于印发进一步推进医疗机构间医学影像检查资料
+和医学检验结果互认工作实施方案的通知" target="_blank">【图解】太原市卫生健康委员会
+...</a>
+                </li>
+                                <li>
+                  <span class="grey fr">06-04</span>
+                  <a href="/zcjd/20250604/30223556.html" title="【图解】太原市卫生健康委员会
+关于印发《太原市卫生应急队伍管理办法》
+的通知" target="_blank">【图解】太原市卫生健康委员会
+...</a>
+                </li>
+                                <li>
+                  <span class="grey fr">03-07</span>
+                  <a href="/zcjd/20250307/30201495.html" title="【图解】《太原市疟疾等重点寄生虫病综合防治实施方案（2025-2030年）》" target="_blank">【图解】《太原市疟疾等重点寄生...</a>
+                </li>
+                                <li>
+                  <span class="grey fr">01-07</span>
+                  <a href="/zcjd/20250107/30188616.html" title="【图解】关于印发太原市“互联网+护理服务” 工作实施方案（试行）的通知" target="_blank">【图解】关于印发太原市“互联...</a>
+                </li>
+                                <li>
+                  <span class="grey fr">01-07</span>
+                  <a href="/zcjd/20250107/30188606.html" title="【图解】太原市卫生健康委员会
+关于印发《太原市大型医院巡查实施方案（2024-2026年度）》的通知" target="_blank">【图解】太原市卫生健康委员会
+...</a>
+                </li>
+                                <li>
+                  <span class="grey fr">12-27</span>
+                  <a href="/zcjd/20241227/30186509.html" title="【解读】《家庭病床管理服务办法》" target="_blank">【解读】《家庭病床管理服务办法》</a>
+                </li>
+                                <li>
+                  <span class="grey fr">12-24</span>
+                  <a href="/zcjd/20241224/30185597.html" title="【图解】2023年太原市卫生健康事业发展统计公报" target="_blank">【图解】2023年太原市卫生健康事...</a>
+                </li>
+                 
+              </ul>
+              <!-- test third end -->
+            </div>
+          </div>
+        </div>
+        <div class="w315 fr">
+          <h2 class="h2_sty01 blue">数据查询服务</h2>
+          <div class="boxTy02 mgt15 boxTy02_sty01">
+            <ul class="listTy02 font14 lh28 sjcxBtn">
+               
+              <li><a href="http://www.nhc.gov.cn/wjw/wsbzxx/wsbz.shtml" title="卫生标准" target="_blank">卫生标准</a></li>
+               
+            </ul>
+          </div>
+          <style>
+            .boxTy02 .tit b {
+              font-weight: normal;
+              margin-right: 13px;
+              cursor: pointer;
+            }
+            .boxTy02 .tit b.hover,
+            .boxTy02 .tit b:hover,
+            .boxTy02 .tit b.hover a,
+            .boxTy02 .tit b:hover a {
+              color: #015293;
+            }
+            .boxTy02_con {
+              padding: 10px 2px 0;
+            }
+          </style>
+          <script>
+            //tab
+            function setTab(name, cursel, n) {
+              for (i = 1; i <= n; i++) {
+                var menu = document.getElementById(name + i);
+                con = document.getElementById("con_" + name + "_" + i);
+                menu.className = i == cursel ? "hover" : "";
+                con.style.display = i == cursel ? "block" : "none";
+              }
+            }
+          </script>
+          <div class="boxTy02 boxTy02_sty01" style="margin-top: 25px">
+            <h2 class="h2_sty01 blue"><b> <a href="/ztzl.html">专题专栏</a></b></h2>
+            <div class="boxTy02_con">
+               
+              <a href="https://wjw.taiyuan.gov.cn/sy.html"><img src="/u/cms/site67/202303/080953108e5y.jpg" /></a>
+              <a href="https://wjw.taiyuan.gov.cn/pfzc.html"><img src="/uploadfiles/201912/16/2019121615073778380636.jpg" /></a>
+              <a href="https://wjw.taiyuan.gov.cn/jkjy.html"><img src="/uploadfiles/202111/05/2021110510352387059912.jpg" /></a> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <style>
+      .boxTy02 .boxTy02_con a img{width: 295px;margin: 10px 10px}
+      /*网站链接*/
+      .title {
+      line-height:30px;
+      position: relative;
+      }
+      .title_h {
+      	background:#377EC0;
+          font-size: 15px;
+          font-family: "Microsoft YaHei";
+          color: #fff;
+          height: 30px;
+          width: 119px;
+          display: inline-block;
+          text-align: center;
+          -moz-border-radius: 5px 5px 0 0;
+          -webkit-border-radius: 5px 5px 0 0;
+          border-radius: 5px 5px 0 0;
+          position: relative;
+      }
+      background:-moz-linear-gradient(top,#2C93EF,#1178D4);/*火狐*/
+      background:-webkit-gradient(linear, 0% 0%, 0% 100%,from(#2C93EF), to(#1178D4));/*谷歌*/
+      font-size:15px;font-family:"Microsoft YaHei"; color:#fff;}
+      .bg_white{ background-color:#ffffff;}
+      .link_area{ height:65px; border:solid #e3e3e3 1px; margin:0px auto;
+      filter:progid:DXImageTransform.microsoft.gradient(gradienttype=0,startColorStr=#FEFEFE,endColorStr=#F9F9F9); padding-left:8px;
+      background:-moz-linear-gradient(top,#FEFEFE,#F9F9F9);/*火狐*/
+      background:-webkit-gradient(linear, 0% 0%, 0% 100%,from(#FEFEFE), to(#F9F9F9));/*谷歌*/}
+      .link_area select{border:1px solid #CCCCCC;height:25px;width:200px;margin:0px 5px 0px 5px;color:#333;}
+      .mt_10{width:1090px;margin:10px auto}
+    </style>
+    <div class="index_row8 mt_10">
+      <div class="title">
+        <span class="title_h">链接专栏</span>
+      </div>
+      <div class="link_area" style="line-height: 50px; font-size: 14px; height: 50px" align="center" >
+        <!--国家卫计委-->
+        <select onChange="this.value!=''?window.open(this.value,'',''):'';">
+          <option value="">国家卫生健康委员会</option>
+          <option value="http://www.nhc.gov.cn/">国家卫生健康委员会</option>
+        </select>
+        <!--山西省卫生计生委-->
+        <select onChange="this.value!=''?window.open(this.value,'',''):'';">
+          <option value="">山西省卫生健康委员会</option>
+          <option value="http://wjw.shanxi.gov.cn/">
+            山西省卫生健康委员会
+          </option>
+        </select>
+        <!--太原市人民政府START-->
+        <select onChange="this.value!=''?window.open(this.value,'',''):'';">
+          <option value="">太原市人民政府</option>
+          <option value="http://www.taiyuan.gov.cn/">太原市人民政府</option>
+        </select>
+        <!--各县（市、区）卫生局START-->
+        <select onChange="this.value!=''?window.open(this.value,'',''):'';">
+          <option value="">各县（市、区）人民政府</option>
+          <option value="http://www.tyxd.gov.cn/">小店区人民政府</option>
+          <option value="http://www.yingze.gov.cn/">迎泽区人民政府</option>
+          <option value="http://www.sxtyxhl.gov.cn/">杏花岭区人民政府</option>
+          <option value="http://www.tyjcp.gov.cn/">尖草坪区人民政府</option>
+          <option value="http://www.sxtywbl.gov.cn/">万柏林区人民政府</option>
+          <option value="http://www.jinyuan.gov.cn/">晋源区人民政府</option>
+          <option value="http://www.sxgujiao.gov.cn/">古交市人民政府</option>
+          <option value="http://www.qx.gov.cn/">清徐县人民政府</option>
+          <option value="http://www.sxyangqu.gov.cn/">阳曲县人民政府</option>
+          <option value="http://www.sxlf.gov.cn/">娄烦县人民政府</option>
+        </select>
+        <!--委直医疗卫生单位START-->
+        <select onChange="this.value!=''?window.open(this.value,'',''):'';">
+          <option value="">委直医疗卫生单位</option>
+          <option value="http://www.tyszxyy.com/">太原市中心医院</option>
+          <!--<option value="http://wsjd.wjw.taiyuan.gov.cn/">太原卫生监督</option>-->
+          <option value="http://www.tysfybjy.cn">太原市妇幼保健院太原市儿童医院</option>
+          <option value="https://www.tycdc.cn/">太原市疾病预防控制中心</option>
+        </select>
+      </div>
+    </div>
+    <script type="text/javascript">
+      $(function () {
+        $(".uproll01").myScrollTop(50);
+        $(".uproll02").myScrollTop(50);
+      });
+    </script>
+<div id="foot" class="white">
+  <p>太原市卫生健康委员会&nbsp;&nbsp;版权所有&emsp;&emsp; <a href="/wzdt.html"> 网站地图</a></p>
+<!--
+  <p>地址：山西省太原市望景路5号&emsp;&emsp;电话：（0351）5625133&emsp;&emsp;传真：（0351）5625135</p>
+-->
+  <p>地址：山西省太原市望景路10号&emsp;&emsp;</p>
+  <p>
+    <a href="https://beian.miit.gov.cn">晋ICP备05003854号</a>
+    &nbsp;&nbsp;访问统计,网站总访问量：<em id="pvTotal"></em>
+    <script src="/r/cms/site67/default/js/front.js" type="text/javascript" charset="utf-8" ></script>
+    <script type="text/javascript">
+      $(function () {
+        Cms.siteFlow("");
+      });
+    </script>
+  </p>
+  <p>
+    <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=14010902000450">
+<span class="fix_bg"><img src="/r/cms/site67/default/tyswsjkwyh/static/images/jinghui.png" /></span>&nbsp;&nbsp;晋公网安备14010902000450号&emsp;&emsp;网站标识码：1401000039</a>
+  </p>
+  <p>
+    <a href="http://bszs.conac.cn/sitename?method=show&amp;id=53100909E3B52572E053022819AC51DD" class="fix_bg"><img src="/r/cms/site67/default/tyswsjkwyh/static/images/red.png"/></a>
+    <span><script id="_jiucuo_" sitecode="1401000039" src="/r/cms/site67/default/tyswsjkwyh/static/js/jiucuo.js" ></script></span>
+  </p>
+</div>
+  </body>
+</html>
