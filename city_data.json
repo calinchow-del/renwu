@@ -135,7 +135,7 @@
     "rank": 23,
     "city": "南通",
     "website": "http://www.nantong.gov.cn/",
-    "budget_url": null
+    "budget_url": "http://www.nantong.gov.cn/ntsrmzf/2026n_cz/2026n_cz.html"
   },
   {
     "rank": 24,
@@ -219,7 +219,7 @@
     "rank": 37,
     "city": "南昌",
     "website": "http://www.nc.gov.cn/",
-    "budget_url": null
+    "budget_url": "http://www.nc.gov.cn/ncszf/2026bmys/"
   },
   {
     "rank": 38,
@@ -231,13 +231,13 @@
     "rank": 39,
     "city": "盐城",
     "website": "http://www.yancheng.gov.cn/",
-    "budget_url": null
+    "budget_url": "http://www.yancheng.gov.cn/col/col23760/index.html"
   },
   {
     "rank": 40,
     "city": "长春",
     "website": "http://www.changchun.gov.cn/",
-    "budget_url": null
+    "budget_url": "http://www.changchun.gov.cn/ztlm/yjsxx/"
   },
   {
     "rank": 41,
@@ -297,13 +297,13 @@
     "rank": 50,
     "city": "哈尔滨",
     "website": "http://www.harbin.gov.cn/",
-    "budget_url": null
+    "budget_url": "http://www.harbin.gov.cn/col/col21404/index.html"
   },
   {
     "rank": 51,
     "city": "洛阳",
     "website": "http://www.ly.gov.cn/",
-    "budget_url": null
+    "budget_url": "http://cz.ly.gov.cn/sitesources/lyczj/page_pc/zfxxgk/czzjyjsgkpt/index.html"
   },
   {
     "rank": 52,
@@ -315,7 +315,7 @@
     "rank": 53,
     "city": "济宁",
     "website": "http://www.jining.gov.cn/",
-    "budget_url": null
+    "budget_url": "http://www.jining.gov.cn/col/col33415/index.html"
   },
   {
     "rank": 54,
@@ -363,13 +363,13 @@
     "rank": 61,
     "city": "太原",
     "website": "http://www.taiyuan.gov.cn/",
-    "budget_url": null
+    "budget_url": "http://www.taiyuan.gov.cn/zfbmczyjs.html"
   },
   {
     "rank": 62,
     "city": "赣州",
     "website": "http://www.ganzhou.gov.cn/",
-    "budget_url": null
+    "budget_url": "http://www.ganzhou.gov.cn/zfxxgk/bmyjs/"
   },
   {
     "rank": 63,
@@ -381,7 +381,7 @@
     "rank": 64,
     "city": "南阳",
     "website": "http://www.nanyang.gov.cn/",
-    "budget_url": null
+    "budget_url": "http://caizj.nanyang.gov.cn/ysgkpt/"
   },
   {
     "rank": 65,
@@ -399,13 +399,13 @@
     "rank": 67,
     "city": "保定",
     "website": "http://www.baoding.gov.cn/",
-    "budget_url": null
+    "budget_url": "http://www.baoding.gov.cn/zwgkdocnrForOld-888888711-538444.html"
   },
   {
     "rank": 68,
     "city": "菏泽",
     "website": "http://www.heze.gov.cn/",
-    "budget_url": null
+    "budget_url": "http://www.heze.gov.cn/czyjs/"
   },
   {
     "rank": 69,
@@ -417,7 +417,7 @@
     "rank": 70,
     "city": "邯郸",
     "website": "http://www.handan.gov.cn/",
-    "budget_url": null
+    "budget_url": "http://www.hd.gov.cn/ztzl/czyjs/"
   },
   {
     "rank": 71,
@@ -435,19 +435,19 @@
     "rank": 73,
     "city": "包头",
     "website": "http://www.baotou.gov.cn/",
-    "budget_url": null
+    "budget_url": "http://www.baotou.gov.cn/xzwhk/dynr.jsp?urltype=tree.TreeTempUrl&wbtreeid=5471"
   },
   {
     "rank": 74,
     "city": "衡阳",
     "website": "http://www.hengyang.gov.cn/",
-    "budget_url": null
+    "budget_url": "http://www.hengyang.gov.cn/czj/ztxx/czysjsgk/"
   },
   {
     "rank": 75,
     "city": "乌鲁木齐",
     "website": "http://www.wlmq.gov.cn/",
-    "budget_url": null
+    "budget_url": "http://www.wlmq.gov.cn/wlmqs/c119257/bm_com_list.shtml"
   },
   {
     "rank": 76,
@@ -471,25 +471,25 @@
     "rank": 79,
     "city": "湖州",
     "website": "http://www.huzhou.gov.cn/",
-    "budget_url": null
+    "budget_url": "http://www.huzhou.gov.cn/hzgov/front/yjsgk/index.do"
   },
   {
     "rank": 80,
     "city": "江门",
     "website": "http://www.jiangmen.gov.cn/",
-    "budget_url": null
+    "budget_url": "http://www.jiangmen.gov.cn/bmpd/jmsczj/zwgk/jmsjyjsgkpt/"
   },
   {
     "rank": 81,
     "city": "呼和浩特",
     "website": "http://www.hhht.gov.cn/",
-    "budget_url": null
+    "budget_url": "http://czj.huhhot.gov.cn/zwgk/czyjsgk/"
   },
   {
     "rank": 82,
     "city": "中山",
     "website": "http://www.zs.gov.cn/",
-    "budget_url": null
+    "budget_url": "http://czj.zs.gov.cn/sy/yjsgkpt/"
   },
   {
     "rank": 83,
@@ -501,7 +501,7 @@
     "rank": 84,
     "city": "九江",
     "website": "http://www.jiujiang.gov.cn/",
-    "budget_url": null
+    "budget_url": "http://www.jiujiang.gov.cn/xxgk/xzwgk/glgk/czxx/szbm/"
   },
   {
     "rank": 85,
@@ -537,13 +537,13 @@
     "rank": 90,
     "city": "廊坊",
     "website": "http://www.langfang.gov.cn/",
-    "budget_url": null
+    "budget_url": "http://zfxxgk.lf.gov.cn/"
   },
   {
     "rank": 91,
     "city": "湛江",
     "website": "http://www.zhanjiang.gov.cn/",
-    "budget_url": null
+    "budget_url": "http://www.zhanjiang.gov.cn/zdlyxxgk/czyjshsg/bmyjs/"
   },
   {
     "rank": 92,
@@ -567,7 +567,7 @@
     "rank": 95,
     "city": "威海",
     "website": "http://www.weihai.gov.cn/",
-    "budget_url": null
+    "budget_url": "http://czj.weihai.gov.cn/"
   },
   {
     "rank": 96,
@@ -579,7 +579,7 @@
     "rank": 97,
     "city": "泰安",
     "website": "http://www.taian.gov.cn/",
-    "budget_url": null
+    "budget_url": "http://czj.taian.gov.cn/col/col76961/index.html"
   },
   {
     "rank": 98,
