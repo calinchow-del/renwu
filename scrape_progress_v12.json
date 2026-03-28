@@ -215,20 +215,20 @@
       "depts": [],
       "downloaded": 0,
       "strategy": "paginated_list+search",
-      "time": "2026-03-28 17:14:09"
+      "time": "2026-03-28 18:08:51"
     },
     "008_杭州": {
       "found": 5,
       "depts": [
+        "司法局",
         "公安局",
         "政府办公厅",
-        "气象局",
-        "司法局",
-        "交通运输局"
+        "交通运输局",
+        "气象局"
       ],
       "downloaded": 0,
       "strategy": "paginated_list+search",
-      "time": "2026-03-28 17:21:52"
+      "time": "2026-03-28 18:13:07"
     },
     "009_武汉": {
       "found": 26,

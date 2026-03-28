@@ -46,7 +46,7 @@ USER_AGENTS = [
     'Mozilla/5.0 (Macintosh; Intel Mac OS X 14_5) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.5 Safari/605.1.15',
     'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36',
 ]
-TIMEOUT = 20
+TIMEOUT = 25
 RETRY = 3
 MAX_LIST_PAGES = 50       # 最多翻50页列表页
 MAX_DETAIL_PER_DEPT = 3   # 每个部门最多进3个详情页找PDF
@@ -196,7 +196,10 @@ def fetch(session, url, timeout=TIMEOUT):
                 break  # Try next URL (http/https switch)
             except requests.exceptions.ConnectionError:
                 if i < RETRY - 1:
-                    time.sleep(1 + i)
+                    time.sleep(2 + i * 2)
+            except (requests.exceptions.ReadTimeout, requests.exceptions.ChunkedEncodingError):
+                if i < RETRY - 1:
+                    time.sleep(2 + i)
             except Exception:
                 if i < RETRY - 1:
                     time.sleep(1)
@@ -301,6 +304,16 @@ def detect_pagination(soup, base_url):
                 total = int(m.group(1))
                 return total, 'index_N'
 
+    # 模式1a2: list_N.html (部分城市如淮安、连云港)
+    for a in soup.find_all('a', href=True):
+        href = a['href']
+        text = a.get_text(strip=True)
+        if text in ['尾页', '末页', '最后一页']:
+            m = re.search(r'list_(\d+)', href)
+            if m:
+                total = int(m.group(1))
+                return total, 'list_N'
+
     # 模式1b: column-index-N.shtml (成都等)
     for a in soup.find_all('a', href=True):
         href = a['href']
@@ -358,6 +371,16 @@ def detect_pagination(soup, base_url):
                 total = int(m.group(1))
                 return total, 'num_html'
 
+    # 模式2c: list_N.html 分页
+    for a in soup.find_all('a', href=True):
+        href = a['href']
+        text = a.get_text(strip=True)
+        if text in ['尾页', '末页', '最后一页', '下一页', '>>']:
+            m = re.search(r'list_(\d+)', href)
+            if m:
+                total = int(m.group(1))
+                return total, 'list_N'
+
     # 模式3: 从JS中提取总页数
     for script in soup.find_all('script'):
         if script.string:
@@ -368,6 +391,8 @@ def detect_pagination(soup, base_url):
                 # 判断URL模式
                 if 'column-index' in str(soup):
                     return min(total, 200), 'column_index_N'
+                if 'list_' in str(soup):
+                    return min(total, 200), 'list_N'
                 if 'index_' in str(soup):
                     return min(total, 200), 'index_N'
                 return min(total, 200), 'page_param'
@@ -396,6 +421,8 @@ def detect_pagination(soup, base_url):
                 href = a['href']
                 if 'column-index' in href:
                     return max_visible, 'column_index_N'
+                if 'list_' in href:
+                    return max_visible, 'list_N'
                 if 'index_' in href:
                     return max_visible, 'index_N'
                 if 'page=' in href:
@@ -414,6 +441,13 @@ def build_page_url(base_url, page_num, pattern):
         base = re.sub(r'index(_\d+)?\.(html|shtml)', f'index_{page_num}.\\2', base_url)
         if base == base_url and not re.search(r'\.(html|shtml)$', base_url):
             base = base_url.rstrip('/') + f'/index_{page_num}.html'
+        return base
+    elif pattern == 'list_N':
+        if page_num == 1:
+            return re.sub(r'list(_\d+)?\.(html|shtml)', r'list.\2', base_url)
+        base = re.sub(r'list(_\d+)?\.(html|shtml)', f'list_{page_num}.\\2', base_url)
+        if base == base_url and not re.search(r'\.(html|shtml)$', base_url):
+            base = base_url.rstrip('/') + f'/list_{page_num}.html'
         return base
     elif pattern == 'column_index_N':
         if page_num == 1:
@@ -488,6 +522,12 @@ def strategy_paginated_list(session, budget_url, city, needed_depts):
         if r:
             budget_url = alt
     if not r:
+        # 尝试list.html
+        alt = budget_url.rstrip('/') + '/list.html'
+        r = fetch(session, alt)
+        if r:
+            budget_url = alt
+    if not r:
         # 尝试去掉末尾路径层级
         parsed = urlparse(budget_url)
         parent = parsed.path.rstrip('/').rsplit('/', 1)[0] + '/'
@@ -513,6 +553,8 @@ def strategy_paginated_list(session, budget_url, city, needed_depts):
     # 确保base_url有index.html/shtml用于替换
     if pattern == 'index_N' and not re.search(r'\.(html|shtml)$', budget_url):
         budget_url = budget_url.rstrip('/') + '/index.html'
+    if pattern == 'list_N' and not re.search(r'list(_\d+)?\.(html|shtml)$', budget_url):
+        budget_url = budget_url.rstrip('/') + '/list.html'
     if pattern == 'column_index_N' and 'column-index' not in budget_url:
         budget_url = budget_url.rstrip('/') + '/column-index-1.shtml'
 
@@ -898,6 +940,12 @@ COMMON_BUDGET_PATHS = [
     "/zwgk/bmys/2026/",
     "/zwgk/ysjs/bmys/",
     "/zwgk/ysjs/bmys/2026/",
+    # list.html 变体
+    "/zwgk/zdly/czxx/bmczyjs/list.html",
+    "/zfxxgk/fdzdgknr/czxx/bmczyjs/list.html",
+    "/xxgk/czsj/list.html",
+    "/xxgk/fdzdgk/czxx/bmczyjs/list.html",
+    "/zwgk/czxx/bmczyjs/list.html",
     # 新增路径 - 基于常见政府网站结构
     "/zfxxgk/fdzdgknr/czyjshsg/bmczys/",
     "/zfxxgk/fdzdgknr/czyjshsg/bmczys/2026/",
