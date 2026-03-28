@@ -1829,3 +1829,17 @@ Already up to date.
 2026-03-28 13:10:02 任务标记running但进程已死，自动重启
 2026-03-28 13:10:02 自动重启爬取 PID: 1135231
 2026-03-28 13:10:02 统计: 4城市, 532个PDF, 爬取运行中 (PID: 1135231)
+From https://github.com/calinchow-del/renwu
+ * branch            main       -> FETCH_HEAD
+   76c76f1..3371ef3  main       -> origin/main
+Updating 76c76f1..3371ef3
+Fast-forward
+ .gitignore              |   1 +
+ city_data.json          |  84 +++++++++++-----------
+ scrape_budgets.py       | 187 ++++++++++++++++++++++++------------------------
+ tasks/current_task.json |  16 ++---
+ 4 files changed, 144 insertions(+), 144 deletions(-)
+ create mode 100644 .gitignore
+2026-03-28 13:35:09 执行任务 [task_010]: cd /root/renwu && python3 scrape_budgets.py --start 1 --end 100
+2026-03-28 13:35:09 任务已后台启动 PID: 1136852
+2026-03-28 13:35:09 统计: 4城市, 532个PDF, 爬取运行中 (PID: 1136852)
