@@ -4637,3 +4637,40 @@ Already up to date.
 2026-03-29 02:50:02 任务标记running但进程已死，自动重启
 2026-03-29 02:50:02 自动重启爬取 PID: 1539484
 2026-03-29 02:50:02 统计: 城市, 266个PDF, 爬取运行中 (PID: 1539484)
+<<<<<<< Updated upstream
+=======
+From https://github.com/calinchow-del/renwu
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+2026-03-29 03:05:02 任务标记running但进程已死，自动重启
+2026-03-29 03:05:02 自动重启爬取 PID: 1546920
+2026-03-29 03:05:03 统计: 城市, 266个PDF, 爬取运行中 (PID: 1546920)
+From https://github.com/calinchow-del/renwu
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+2026-03-29 03:20:02 任务标记running但进程已死，自动重启
+2026-03-29 03:20:02 自动重启爬取 PID: 1554678
+2026-03-29 03:20:02 统计: 城市, 266个PDF, 爬取运行中 (PID: 1554678)
+From https://github.com/calinchow-del/renwu
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+2026-03-29 03:35:02 任务标记running但进程已死，自动重启
+2026-03-29 03:35:02 自动重启爬取 PID: 1561906
+2026-03-29 03:35:02 统计: 城市, 266个PDF, 爬取运行中 (PID: 1561906)
+From https://github.com/calinchow-del/renwu
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+2026-03-29 03:50:02 任务标记running但进程已死，自动重启
+2026-03-29 03:50:02 自动重启爬取 PID: 1569666
+2026-03-29 03:50:02 统计: 城市, 266个PDF, 爬取运行中 (PID: 1569666)
+To https://github.com/calinchow-del/renwu.git
+   164efc3..bf97ae1  main -> main
+2026-03-29 03:50:04 推送成功
+2026-03-29 03:50:04 ===== Worker结束 =====
+Sun Mar 29 03:55:06 CST 2026 worker锁等待超时
+Sun Mar 29 04:00:06 CST 2026 worker锁等待超时
+2026-03-29 04:05:01 ===== Worker启动 =====
+>>>>>>> Stashed changes
+2026-03-29 04:05:04 任务标记running但进程已死，自动重启
+2026-03-29 04:05:04 自动重启爬取 PID: 1576996
+2026-03-29 04:05:04 统计: 69城市, 266个PDF, 爬取运行中 (PID: 1576996)
