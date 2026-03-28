@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-中国百强城市2026年部门预算爬取脚本 v12
-修复: SSL回退、分页检测、部门匹配增强、--retry-weak/--force支持
+中国百强城市2026年部门预算爬取脚本 v11
+修复: 移除https→http转换、html.parser替代lxml、减少超时、更好错误隔离
 """
 
 import json
@@ -68,23 +68,23 @@ MATCH_RULES = [
     (["公安局", "市公安局"], "公安局"),
     (["医疗保障局", "医保局"], "医疗保障局"),
     (["商务局", "商务委"], "商务局"),
-    (["文化广电旅游体育", "文化广电旅游", "文化和旅游", "文旅局", "文广旅体", "文化体育旅游", "文化旅游广电", "文广旅局", "文广新旅"], "文化广电旅游体育局"),
-    (["生态环境局", "环境保护局", "环保局", "生态环境厅"], "生态环境局"),
-    (["政务服务和数据管理", "政务服务数据管理", "政务服务局", "大数据管理局", "数据局", "行政审批局", "大数据发展", "政务服务中心", "政数局"], "政务服务和数据管理局"),
-    (["城市管理和综合执法", "城市管理综合执法", "城市管理局", "城管局", "城管执法", "综合行政执法", "城市管理委员会"], "城市管理和综合执法局"),
+    (["文化广电旅游体育", "文化广电旅游", "文化和旅游", "文旅局", "文广旅体", "文化体育旅游"], "文化广电旅游体育局"),
+    (["生态环境局", "环境保护局", "环保局"], "生态环境局"),
+    (["政务服务和数据管理", "政务服务数据管理", "政务服务局", "大数据管理局", "数据局", "行政审批局"], "政务服务和数据管理局"),
+    (["城市管理和综合执法", "城市管理综合执法", "城市管理局", "城管局", "城管执法", "综合行政执法"], "城市管理和综合执法局"),
     (["退役军人事务", "退役军人局"], "退役军人事务局"),
-    (["宣传部", "市委宣传部"], "宣传部"),
+    (["宣传部"], "宣传部"),
     (["司法局"], "司法局"),
-    (["住房和建设", "住房和城乡建设", "住建局", "住房建设", "住房城乡建设", "住房保障和房屋管理"], "住房和建设局"),
-    (["建筑工务署", "建筑工务中心", "建设工程事务", "建设工务"], "建筑工务署"),
+    (["住房和建设", "住房和城乡建设", "住建局", "住房建设", "住房城乡建设"], "住房和建设局"),
+    (["建筑工务署", "建筑工务中心", "建设工程事务"], "建筑工务署"),
     (["民政局"], "民政局"),
     (["财政局"], "财政局"),
     (["气象局", "气象台"], "气象局"),
-    (["应急管理局", "应急局", "安全生产监督", "应急管理委"], "应急管理局"),
+    (["应急管理局", "应急局", "安全生产监督"], "应急管理局"),
     (["审计局"], "审计局"),
-    (["政府办公厅", "政府办公室", "人民政府办公", "市政府办公"], "政府办公厅"),
+    (["政府办公厅", "政府办公室", "人民政府办公"], "政府办公厅"),
     (["统计局"], "统计局"),
-    (["信访局", "信访办", "群众来访接待"], "信访局"),
+    (["信访局", "信访办"], "信访局"),
 ]
 
 # ========== 日志 ==========
@@ -164,17 +164,6 @@ def fetch(session, url, timeout=TIMEOUT):
             r.encoding = r.apparent_encoding or 'utf-8'
             if r.status_code == 200:
                 return r
-        except requests.exceptions.SSLError:
-            # SSL失败 → 尝试http回退
-            if url.startswith('https://'):
-                http_url = url.replace('https://', 'http://', 1)
-                try:
-                    r = session.get(http_url, timeout=timeout, allow_redirects=True, verify=False)
-                    r.encoding = r.apparent_encoding or 'utf-8'
-                    if r.status_code == 200:
-                        return r
-                except Exception:
-                    pass
         except Exception:
             if i < RETRY - 1:
                 time.sleep(1)
@@ -228,23 +217,16 @@ def is_main_dept_budget(text, dept_name, city):
     return score > 0, score
 
 def download_pdf(session, url, path):
-    urls_to_try = [url]
-    if url.startswith('https://'):
-        urls_to_try.append(url.replace('https://', 'http://', 1))
-    for u in urls_to_try:
-        try:
-            r = session.get(u, timeout=60, stream=True, verify=False)
-            if r.status_code == 200:
-                os.makedirs(os.path.dirname(path), exist_ok=True)
-                with open(path, 'wb') as f:
-                    for chunk in r.iter_content(8192):
-                        f.write(chunk)
-                if os.path.getsize(path) > 1000:
-                    return True
-                else:
-                    os.remove(path)
-        except Exception:
-            pass
+    try:
+        r = session.get(url, timeout=60, stream=True, verify=False)
+        if r.status_code == 200:
+            os.makedirs(os.path.dirname(path), exist_ok=True)
+            with open(path, 'wb') as f:
+                for chunk in r.iter_content(8192):
+                    f.write(chunk)
+            return True
+    except:
+        pass
     return False
 
 def safe_filename(s, maxlen=80):
@@ -275,46 +257,6 @@ def extract_all_links(session, url, city):
         results.append((text, full, dept))
     return results, r.text
 
-def detect_pagination_urls(base_url, html):
-    """检测分页URL模式"""
-    pages = []
-    parsed = urlparse(base_url)
-
-    # 模式1: index_N.html / index_N.shtml
-    for ext in ['.html', '.shtml', '.htm']:
-        m = re.search(r'(index(?:_\d+)?)' + re.escape(ext), base_url)
-        if m:
-            prefix = base_url[:base_url.rfind(m.group(0))]
-            for i in range(2, 8):
-                pages.append(f"{prefix}index_{i}{ext}")
-            break
-
-    # 模式2: column-index-N.shtml
-    m = re.search(r'column-index-(\d+)\.shtml', base_url)
-    if m:
-        prefix = base_url[:base_url.rfind(m.group(0))]
-        for i in range(2, 8):
-            pages.append(f"{prefix}column-index-{i}.shtml")
-
-    # 模式3: /N.html (如 /1.html, /2.html)
-    m = re.search(r'/(\d+)\.(html|shtml)$', base_url)
-    if m:
-        prefix = base_url[:base_url.rfind(m.group(0)) + 1]
-        start = int(m.group(1))
-        for i in range(start + 1, start + 7):
-            pages.append(f"{prefix}{i}.{m.group(2)}")
-
-    # 模式4: ?page=N 或 &page=N (从HTML中提取)
-    if html:
-        page_links = re.findall(r'href=["\']([^"\']*(?:page|pageNum|pageIndex|p)=\d+[^"\']*)["\']', html)
-        for pl in page_links[:10]:
-            full = urljoin(base_url, pl)
-            if full not in pages:
-                pages.append(full)
-
-    return pages[:10]
-
-
 def find_dept_budgets(session, budget_url, city):
     found = {}
     visited = set()
@@ -340,17 +282,9 @@ def find_dept_budgets(session, budget_url, city):
                 if not any(u == link_url for _, u, _, _ in found[dept]):
                     found[dept].append((text, link_url, is_pdf, score))
             else:
-                if depth < 2 and any(kw in text for kw in ['部门预算', '预算公开', '2026', '下一页', '更多', '下页']):
+                if depth < 2 and any(kw in text for kw in ['部门预算', '预算公开', '2026', '下一页', '更多']):
                     sub_pages.append(link_url)
-
-        # 自动检测分页URL
-        if depth == 0 and html:
-            pagination_urls = detect_pagination_urls(url, html)
-            for pu in pagination_urls:
-                if pu not in visited:
-                    sub_pages.append(pu)
-
-        for sub_url in sub_pages[:15]:
+        for sub_url in sub_pages[:10]:
             time.sleep(DELAY_PAGE)
             scan_page(sub_url, depth + 1)
 
@@ -394,20 +328,6 @@ COMMON_BUDGET_PATHS = [
     "/ztzl/yjsgk/", "/ztzl/ysgk/",
     "/zfb/xxgk/ztxxgk/czzj/bmczyjs/",
     "/col/col_budget/index.html",
-    "/zwgk/zdly/czzj/bmyjshsgjf/ys/2026n/index.html",
-    "/zwgk/zdly/czzj/bmyjshsgjf/ys/2026n/",
-    "/zwgk/fdzdgknr/czxx/czyjs/bmczys/",
-    "/zdxxgk/czzjxx/szfbmczyjs/2026/",
-    "/zdxxgk/czzjxx/szfbmczyjs/",
-    "/zfxxgk/fdzdgknr/czxx/czyjs/",
-    "/zwgk/zdlyxxgk/czyjshsgjf/czyjs/",
-    "/xw/ztjj/zhszdlyxxgkzl/czysjshsgjfgk/czyjs/",
-    "/ztzl/yjsxx/", "/ztzl/czyjs/",
-    "/zwgk/zfxxgkzl/fdzdgknr/ysjs/bmczyjsbgjsgjf/bmysnew/2026nbmys/",
-    "/zwgk/zfxxgkzl/fdzdgknr/czxx/bmczyjs/",
-    "/szf/ztzl/ysgk/2026/",
-    "/zwgk/zdlygk/czzj_5858315/sjczyjsjsgjf/",
-    "/xxgk/xzwgk/glgk/czxx/szbm/",
 ]
 
 def probe_budget_page(session, website, city):
@@ -439,17 +359,27 @@ def process_city(city_info, progress):
     city_folder = str(BASE_DIR / city_key)
 
     result = {"found": 0, "downloaded": 0, "depts": [], "missing": []}
-    skip_threshold = city_info.get('_skip_threshold', 15)
 
     try:
         os.makedirs(city_folder, exist_ok=True)
 
-        # ===== 磁盘检测: 已达标就跳过 =====
+        # ===== 磁盘检测: 已有>=5个文件就跳过 =====
         existing_count = count_city_files(city_key)
-        if existing_count >= skip_threshold:
-            logger.info(f"[{city}] 磁盘已有{existing_count}个文件(>={skip_threshold})，跳过")
+        if existing_count >= 5:
+            logger.info(f"[{city}] 磁盘已有{existing_count}个文件，跳过")
             update_city_progress(progress, city_key, existing_count, existing_count)
             return {"found": existing_count, "downloaded": existing_count}
+
+        # 也检查progress文件(作为备用)
+        try:
+            completed = progress.get('completed', {})
+            if city_key in completed:
+                prev = completed[city_key]
+                if isinstance(prev, dict) and prev.get('found', 0) >= 5:
+                    logger.info(f"[{city}] 进度记录已完成({prev['found']}个部门)，跳过")
+                    return {"found": prev['found'], "downloaded": prev.get('downloaded', 0)}
+        except Exception as e:
+            logger.warning(f"[{city}] 读取进度异常: {e}")
 
         logger.info(f"{'='*50}")
         logger.info(f"[{rank}] {city} (已有{existing_count}个文件)")
@@ -503,45 +433,30 @@ def process_city(city_info, progress):
                         result['downloaded'] += 1
                 else:
                     time.sleep(DELAY_PAGE)
-                    detail_r = fetch(session, url)
-                    if detail_r:
-                        sub_links, _ = extract_all_links(session, url, city)
-                        pdf_candidates = []
+                    sub_links, _ = extract_all_links(session, url, city)
 
-                        # 方式1: 从链接中查找PDF
-                        for st, su, _ in sub_links:
-                            if su.lower().endswith('.pdf'):
-                                is_main, s = is_main_dept_budget(st, dept_name, city)
-                                pdf_candidates.append((st, su, s))
+                    pdf_candidates = []
+                    for st, su, _ in sub_links:
+                        if su.lower().endswith('.pdf'):
+                            is_main, s = is_main_dept_budget(st, dept_name, city)
+                            pdf_candidates.append((st, su, s))
 
-                        # 方式2: 从页面HTML中直接搜索PDF链接
-                        if not pdf_candidates:
-                            pdf_urls = re.findall(r'(?:href|src)=["\']([^"\']*\.pdf)["\']', detail_r.text, re.I)
-                            for pu in pdf_urls:
-                                full_pu = urljoin(url, pu)
-                                pdf_candidates.append(("", full_pu, 10))
-
-                        # 方式3: 搜索iframe/embed中的PDF
-                        if not pdf_candidates:
-                            iframe_srcs = re.findall(r'(?:iframe|embed|object)[^>]*src=["\']([^"\']*\.pdf[^"\']*)["\']', detail_r.text, re.I)
-                            for isrc in iframe_srcs:
-                                full_pu = urljoin(url, isrc)
-                                pdf_candidates.append(("", full_pu, 10))
-
-                        if pdf_candidates:
-                            pdf_candidates.sort(key=lambda x: x[2], reverse=True)
-                            best_pdf = pdf_candidates[0]
-                            save_path = os.path.join(city_folder, f"{clean_dept}_2026年部门预算.pdf")
-                            if not os.path.exists(save_path):
-                                if download_pdf(session, best_pdf[1], save_path):
-                                    result['downloaded'] += 1
-                                    logger.info(f"    下载: {os.path.basename(save_path)}")
-                            else:
+                    if pdf_candidates:
+                        pdf_candidates.sort(key=lambda x: x[2], reverse=True)
+                        best_pdf = pdf_candidates[0]
+                        save_path = os.path.join(city_folder, f"{clean_dept}_2026年部门预算.pdf")
+                        if not os.path.exists(save_path):
+                            if download_pdf(session, best_pdf[1], save_path):
                                 result['downloaded'] += 1
+                                logger.info(f"    下载: {os.path.basename(save_path)}")
                         else:
+                            result['downloaded'] += 1
+                    else:
+                        r = fetch(session, url)
+                        if r:
                             hpath = os.path.join(city_folder, f"{clean_dept}_2026年部门预算.html")
                             with open(hpath, 'w', encoding='utf-8') as f:
-                                f.write(detail_r.text)
+                                f.write(r.text)
                             result['downloaded'] += 1
 
                 time.sleep(DELAY_PAGE)
@@ -575,8 +490,6 @@ def process_city(city_info, progress):
         logger.error(traceback.format_exc())
 
     try:
-        if 'completed' not in progress:
-            progress['completed'] = {}
         update_city_progress(progress, city_key, result['found'], result['downloaded'])
     except Exception as e:
         logger.error(f"[{city}] 保存进度异常: {e}")
@@ -586,10 +499,7 @@ def process_city(city_info, progress):
 
 # ========== 主程序 ==========
 
-WEAK_THRESHOLD = 15  # 达标线
-
-
-def run(start=1, end=100, retry_weak=False, force=False):
+def run(start=1, end=100):
     with open(CITY_DATA_FILE, 'r', encoding='utf-8') as f:
         cities = json.load(f)
     cities = [c for c in cities if start <= c['rank'] <= end]
@@ -604,40 +514,23 @@ def run(start=1, end=100, retry_weak=False, force=False):
     for c in cities:
         ck = f"{c['rank']:03d}_{c['city']}"
         n = count_city_files(ck)
-        if n >= WEAK_THRESHOLD:
+        if n >= 5:
             disk_done += 1
             progress['completed'][ck] = {
                 "found": n, "downloaded": n,
                 "time": time.strftime('%Y-%m-%d %H:%M:%S')
             }
     save_progress(progress)
-    logger.info(f"磁盘已达标: {disk_done}个城市(>={WEAK_THRESHOLD}文件)")
+    logger.info(f"磁盘已完成: {disk_done}个城市")
 
-    # 过滤: --retry-weak 只处理弱城市
-    if retry_weak:
-        weak = []
-        for c in cities:
-            ck = f"{c['rank']:03d}_{c['city']}"
-            n = count_city_files(ck)
-            if n < WEAK_THRESHOLD:
-                c['_skip_threshold'] = WEAK_THRESHOLD
-                weak.append(c)
-        ordered = weak
-        logger.info(f"--retry-weak: 仅处理{len(weak)}个弱城市(<{WEAK_THRESHOLD}文件)")
-    elif force:
-        ordered = cities
-        for c in ordered:
-            c['_skip_threshold'] = 9999  # 强制不跳过
-        logger.info(f"--force: 强制处理全部{len(ordered)}个城市")
-    else:
-        # 有budget_url的优先处理
-        with_url = [c for c in cities if c.get('budget_url')]
-        without_url = [c for c in cities if not c.get('budget_url')]
-        ordered = with_url + without_url
+    # 有budget_url的优先处理
+    with_url = [c for c in cities if c.get('budget_url')]
+    without_url = [c for c in cities if not c.get('budget_url')]
+    ordered = with_url + without_url
 
-    logger.info(f"开始爬取 {len(ordered)} 个城市, 32个目标部门")
-    logger.info(f"已达标: {disk_done}个城市")
-    logger.info(f"v12: SSL回退+分页检测+部门匹配增强")
+    logger.info(f"开始爬取 {len(cities)} 个城市, 32个目标部门")
+    logger.info(f"已完成: {disk_done}个城市, 有URL: {len(with_url)}, 无URL需探测: {len(without_url)}")
+    logger.info(f"v11: 顺序处理模式(移除https转换、html.parser、减超时)")
 
     total_found = 0
     total_downloaded = 0
@@ -679,8 +572,6 @@ if __name__ == '__main__':
     p.add_argument('--end', type=int, default=100)
     p.add_argument('--city', type=str, default=None)
     p.add_argument('--workers', type=int, default=MAX_WORKERS)
-    p.add_argument('--retry-weak', action='store_true', help='仅重爬<15文件的弱城市')
-    p.add_argument('--force', action='store_true', help='强制重爬所有城市')
     args = p.parse_args()
 
     MAX_WORKERS = args.workers
@@ -695,4 +586,4 @@ if __name__ == '__main__':
         else:
             print(f"未找到: {args.city}")
     else:
-        run(args.start, args.end, retry_weak=args.retry_weak, force=args.force)
+        run(args.start, args.end)

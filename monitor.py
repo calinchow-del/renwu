@@ -1,15 +1,24 @@
 #!/usr/bin/env python3
-"""监控报告生成器 - 统计预算爬取进度"""
+"""
+监控+调优脚本
+功能:
+  1. 生成进度报告
+  2. 识别弱城市(覆盖率低)
+  3. 输出调优建议
+  4. 自动触发重试
+"""
 
 import json
 import os
+import sys
 from pathlib import Path
 from datetime import datetime
 
 BASE_DIR = Path(__file__).parent / "预算数据"
+PROGRESS_V12 = Path(__file__).parent / "scrape_progress_v12.json"
+PROGRESS_V11 = Path(__file__).parent / "scrape_progress.json"
 CITY_DATA_FILE = Path(__file__).parent / "city_data.json"
 REPORT_FILE = Path(__file__).parent / "logs" / "monitor_report.txt"
-STATUS_FILE = Path(__file__).parent / "STATUS.md"
 
 TARGET_DEPTS = [
     "卫生健康委员会", "教育局", "发展和改革局", "规划和自然资源局",
@@ -20,116 +29,185 @@ TARGET_DEPTS = [
     "城市管理和综合执法局", "退役军人事务局", "宣传部",
     "司法局", "住房和建设局", "建筑工务署", "民政局", "财政局",
     "气象局", "应急管理局", "审计局", "政府办公厅", "统计局", "信访局",
+    "口岸办公室",
 ]
 
-THRESHOLD = 15  # 达标线
+MIN_COVERAGE = 15
 
 
-def count_files(city_dir):
-    """统计城市目录中的有效文件数"""
-    if not city_dir.exists():
-        return 0
-    count = 0
-    for f in city_dir.iterdir():
-        if f.suffix in ('.pdf', '.html') and f.name != '.gitkeep':
-            if f.stat().st_size > 500:
-                count += 1
-    return count
+def count_files(city_key):
+    folder = BASE_DIR / city_key
+    if not folder.exists():
+        return 0, 0
+    pdfs = 0
+    htmls = 0
+    for f in folder.iterdir():
+        if f.name in ('.gitkeep', '爬取汇总.txt'):
+            continue
+        if f.stat().st_size < 500:
+            continue
+        if f.suffix == '.pdf':
+            pdfs += 1
+        elif f.suffix == '.html':
+            htmls += 1
+    return pdfs, htmls
 
 
-def identify_depts_from_files(city_dir):
-    """从文件名推断已覆盖的部门"""
-    found = set()
-    if not city_dir.exists():
-        return found
-    for f in city_dir.iterdir():
-        name = f.stem
-        for dept in TARGET_DEPTS:
-            if dept.replace("局", "").replace("委员会", "") in name:
-                found.add(dept)
-                break
-    return found
+def load_progress():
+    """合并v11和v12进度"""
+    merged = {}
+    for pf in [PROGRESS_V11, PROGRESS_V12]:
+        if pf.exists():
+            try:
+                with open(pf, 'r', encoding='utf-8') as f:
+                    data = json.load(f)
+                for k, v in data.get('completed', {}).items():
+                    if isinstance(v, dict):
+                        existing = merged.get(k, {})
+                        if v.get('found', 0) > existing.get('found', 0):
+                            merged[k] = v
+            except:
+                pass
+    return merged
 
 
 def generate_report():
-    os.makedirs(REPORT_FILE.parent, exist_ok=True)
-
     with open(CITY_DATA_FILE, 'r', encoding='utf-8') as f:
         cities = json.load(f)
 
-    results = []
-    total_files = 0
-    pass_count = 0
-    weak_cities = []
-    zero_cities = []
+    progress = load_progress()
+
+    report = []
+    report.append(f"=" * 70)
+    report.append(f"预算爬取监控报告 - {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    report.append(f"=" * 70)
+
+    # 统计
+    excellent = []   # >=25
+    good = []        # >=15
+    weak = []        # 1-14
+    empty = []       # 0
+    not_attempted = []
+
+    total_pdfs = 0
+    total_htmls = 0
 
     for c in cities:
-        rank = c['rank']
-        city = c['city']
-        city_key = f"{rank:03d}_{city}"
-        city_dir = BASE_DIR / city_key
-        n = count_files(city_dir)
-        total_files += n
-        passed = n >= THRESHOLD
-        if passed:
-            pass_count += 1
-        elif n == 0:
-            zero_cities.append((city_key, n))
+        ck = f"{c['rank']:03d}_{c['city']}"
+        pdfs, htmls = count_files(ck)
+        total_pdfs += pdfs
+        total_htmls += htmls
+
+        prev = progress.get(ck, {})
+        found = prev.get('found', 0) if isinstance(prev, dict) else 0
+        # 也用磁盘文件数作为参考
+        disk_count = pdfs + htmls
+        effective = max(found, disk_count)
+
+        entry = {
+            'rank': c['rank'],
+            'city': c['city'],
+            'found': found,
+            'disk_pdfs': pdfs,
+            'disk_htmls': htmls,
+            'effective': effective,
+            'strategy': prev.get('strategy', 'unknown') if isinstance(prev, dict) else 'unknown',
+            'depts': prev.get('depts', []) if isinstance(prev, dict) else [],
+        }
+
+        if effective == 0:
+            if ck in progress:
+                empty.append(entry)
+            else:
+                not_attempted.append(entry)
+        elif effective < MIN_COVERAGE:
+            weak.append(entry)
+        elif effective >= 25:
+            excellent.append(entry)
         else:
-            weak_cities.append((city_key, n))
-        results.append((city_key, n, passed))
+            good.append(entry)
 
-    # 按文件数排序(弱城市)
-    weak_cities.sort(key=lambda x: x[1])
+    report.append(f"\n总计: {len(cities)} 城市")
+    report.append(f"  优秀(>=25部门): {len(excellent)}")
+    report.append(f"  合格(>=15部门): {len(good)}")
+    report.append(f"  不足(<15部门):  {len(weak)}")
+    report.append(f"  空白(0):        {len(empty)}")
+    report.append(f"  未尝试:         {len(not_attempted)}")
+    report.append(f"  磁盘PDF总数:    {total_pdfs}")
+    report.append(f"  磁盘HTML总数:   {total_htmls}")
 
-    now = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-    lines = []
-    lines.append(f"# 预算爬取进度报告")
-    lines.append(f"生成时间: {now}")
-    lines.append(f"")
-    lines.append(f"## 总览")
-    lines.append(f"- 达标城市 (>={THRESHOLD}个文件): {pass_count}/100")
-    lines.append(f"- 弱城市 (1~{THRESHOLD-1}个文件): {len(weak_cities)}")
-    lines.append(f"- 零文件城市: {len(zero_cities)}")
-    lines.append(f"- 总文件数: {total_files}")
-    lines.append(f"")
+    # 需要行动的城市
+    action_needed = weak + empty + not_attempted
+    action_needed.sort(key=lambda x: x['rank'])
 
-    if zero_cities:
-        lines.append(f"## 零文件城市 ({len(zero_cities)})")
-        for ck, n in zero_cities:
-            lines.append(f"  {ck}: {n}")
-        lines.append("")
+    if action_needed:
+        report.append(f"\n{'='*70}")
+        report.append(f"需要行动的城市 ({len(action_needed)}个):")
+        report.append(f"{'='*70}")
+        for e in action_needed:
+            status = "未尝试" if e in not_attempted else f"找到{e['effective']}个"
+            report.append(f"  [{e['rank']:3d}] {e['city']:6s} - {status} (PDF:{e['disk_pdfs']} HTML:{e['disk_htmls']}) 策略:{e['strategy']}")
 
-    if weak_cities:
-        lines.append(f"## 弱城市 (1~{THRESHOLD-1}个文件, 共{len(weak_cities)})")
-        for ck, n in weak_cities:
-            lines.append(f"  {ck}: {n}")
-        lines.append("")
+    # 优秀城市列表
+    if excellent:
+        report.append(f"\n优秀城市 ({len(excellent)}个):")
+        for e in sorted(excellent, key=lambda x: x['effective'], reverse=True)[:10]:
+            report.append(f"  [{e['rank']:3d}] {e['city']:6s} - {e['effective']}个部门 (PDF:{e['disk_pdfs']})")
 
-    lines.append(f"## 全部城市文件数")
-    for ck, n, passed in results:
-        mark = "✓" if passed else "✗"
-        lines.append(f"  {mark} {ck}: {n}")
+    # 部门覆盖热力图 - 哪些部门最难找
+    dept_found_count = {d: 0 for d in TARGET_DEPTS}
+    for ck, v in progress.items():
+        if isinstance(v, dict) and 'depts' in v:
+            for d in v['depts']:
+                if d in dept_found_count:
+                    dept_found_count[d] += 1
 
-    report = "\n".join(lines)
+    report.append(f"\n{'='*70}")
+    report.append(f"部门覆盖率 (已尝试的城市中):")
+    report.append(f"{'='*70}")
+    attempted = len(progress)
+    for dept, count in sorted(dept_found_count.items(), key=lambda x: x[1]):
+        pct = count / max(attempted, 1) * 100
+        bar = "█" * int(pct / 5)
+        report.append(f"  {dept:20s} {count:3d}/{attempted:3d} ({pct:5.1f}%) {bar}")
 
+    # 调优建议
+    report.append(f"\n{'='*70}")
+    report.append(f"调优建议:")
+    report.append(f"{'='*70}")
+
+    if not_attempted:
+        report.append(f"  1. 有 {len(not_attempted)} 个城市未尝试, 建议先全量跑一轮")
+    if weak:
+        report.append(f"  2. 有 {len(weak)} 个城市覆盖率低, 建议用 --retry-weak --force 重试")
+    if empty:
+        report.append(f"  3. 有 {len(empty)} 个城市为空, 可能需要人工检查URL或网站结构")
+
+    # 最难找的5个部门
+    hard_depts = sorted(dept_found_count.items(), key=lambda x: x[1])[:5]
+    if hard_depts and attempted > 0:
+        report.append(f"  4. 最难覆盖的部门: {', '.join(d[0] for d in hard_depts)}")
+
+    report_text = "\n".join(report)
+
+    # 写文件
+    os.makedirs(REPORT_FILE.parent, exist_ok=True)
     with open(REPORT_FILE, 'w', encoding='utf-8') as f:
-        f.write(report)
+        f.write(report_text)
 
-    # 也写STATUS.md
-    status_lines = [
-        f"# 预算爬取状态",
-        f"更新: {now}",
-        f"",
-        f"达标: {pass_count}/100 城市 (>={THRESHOLD}个部门文件)",
-        f"弱: {len(weak_cities)} | 零: {len(zero_cities)} | 总文件: {total_files}",
-    ]
-    with open(STATUS_FILE, 'w', encoding='utf-8') as f:
-        f.write("\n".join(status_lines))
+    # 也输出到stdout
+    print(report_text)
 
-    print(report)
-    return pass_count, weak_cities, zero_cities
+    # 返回行动建议码
+    if not_attempted:
+        return "RUN_FULL"        # 需要全量运行
+    elif weak or empty:
+        return "RETRY_WEAK"      # 需要重试弱城市
+    else:
+        return "ALL_GOOD"        # 全部达标
 
 
 if __name__ == '__main__':
-    generate_report()
+    action = generate_report()
+    print(f"\n建议操作: {action}")
+    sys.exit(0 if action == "ALL_GOOD" else 1)
