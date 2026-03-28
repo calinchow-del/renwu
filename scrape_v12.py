@@ -89,13 +89,13 @@ MATCH_RULES = [
     (["政务服务和数据管理", "政务服务数据管理", "政务服务局", "大数据管理局", "数据局", "行政审批局", "政数局", "大数据发展局", "政务和大数据", "行政审批服务", "数据管理局", "政务服务管理"], "政务服务和数据管理局"),
     (["城市管理和综合执法", "城市管理综合执法", "城市管理局", "城管局", "城管执法", "综合行政执法", "城管和综合执法", "城市管理行政执法", "城市管理委员会", "综合执法局"], "城市管理和综合执法局"),
     (["退役军人事务", "退役军人局"], "退役军人事务局"),
-    (["宣传部", "市委宣传", "宣传部门", "中共.*宣传", "党委宣传", "委宣传部", "宣传部（", "宣传部门预算", "宣传部2026"], "宣传部"),
+    (["宣传部", "市委宣传", "宣传部门", "中共.*宣传", "党委宣传", "委宣传部", "宣传部（", "宣传部门预算", "宣传部2026", "中共.*市委宣传", "市委.*宣传部"], "宣传部"),
     (["司法局"], "司法局"),
     (["住房和建设", "住房和城乡建设", "住建局", "住房建设", "住房城乡建设", "住建委", "住房保障和房屋管理", "住房保障和房管"], "住房和建设局"),
     (["建筑工务署", "建筑工务中心", "建设工程事务", "工务署", "建筑工务", "建设工务署", "建设工务局", "建设工务中心"], "建筑工务署"),
     (["民政局"], "民政局"),
     (["财政局"], "财政局"),
-    (["气象局", "气象台", "气象部门", "气象服务", "气象中心", "气象事业"], "气象局"),
+    (["气象局", "气象台", "气象部门", "气象服务", "气象中心", "气象事业", "市气象局"], "气象局"),
     (["应急管理局", "应急局", "安全生产监督"], "应急管理局"),
     (["审计局"], "审计局"),
     (["政府办公厅", "政府办公室", "人民政府办公"], "政府办公厅"),
@@ -358,6 +358,16 @@ def detect_pagination(soup, base_url):
                 # 判断URL模式
                 if 'column-index' in str(soup):
                     return min(total, 200), 'column_index_N'
+                if 'index_' in str(soup):
+                    return min(total, 200), 'index_N'
+                return min(total, 200), 'page_param'
+
+    # 模式3b: 从JS中查找 var countPage 或 createPageHTML(N) 模式
+    for script in soup.find_all('script'):
+        if script.string:
+            m = re.search(r'createPageHTML\s*\(\s*(\d+)', script.string)
+            if m:
+                total = int(m.group(1))
                 if 'index_' in str(soup):
                     return min(total, 200), 'index_N'
                 return min(total, 200), 'page_param'
@@ -825,9 +835,26 @@ COMMON_BUDGET_PATHS = [
     "/zwgk/czxx/yjshsg/bmczys/",
     "/zwgk/czxx/yjshsg/bmczys/2026/",
     "/zwgk/zfxxgk/czxx/bmczyjs/2026/",
+    "/zwgk/zdly/czxx/bmczyjs/index_1.shtml",
+    "/zwgk/zdly/czgk/bmys/",
+    "/zwgk/zdly/czgk/bmys/2026/",
+    "/zfxxgk/fdzdgknr/czxx/bmczyjs/index.shtml",
+    "/col/col_bmys/",
+    "/col/col_czyjs/index.html",
+    "/zfxxgk/czxx/czyjs/bmczys/",
+    "/zfxxgk/czxx/czyjs/bmczys/2026/",
+    "/zwgk/czxx/yjshsg/bmczys/index.html",
+    "/zwgk/zdly/czzj/bmczyjs/2026n/",
+    "/xxgk/czgk/bmys/",
+    "/xxgk/czgk/bmys/2026/",
+    "/zfxxgk/fdzdgknr/czxx/czyjs/bmczys/index.html",
+    "/zwgk/bmys/2026/",
+    "/zwgk/ysjs/bmys/",
+    "/zwgk/ysjs/bmys/2026/",
 ]
 
 def probe_budget_page(session, website, city):
+    # Try standard paths on the main website
     for path in COMMON_BUDGET_PATHS[:50]:
         url = urljoin(website, path)
         try:
@@ -838,6 +865,26 @@ def probe_budget_page(session, website, city):
         except:
             pass
         time.sleep(0.2)
+
+    # Try financial bureau subdomain (czj.xxx.gov.cn or cz.xxx.gov.cn)
+    parsed = urlparse(website)
+    domain = parsed.netloc.replace('www.', '')
+    cz_domains = [f"czj.{domain}", f"cz.{domain}"]
+    cz_paths = ["/", "/zwgk/", "/xxgk/bmys/", "/ysjs/", "/ysgk/",
+                "/zwgk/czyjsgk/", "/xxgk/czsj/list.html",
+                "/zwgk_53713/yjsgktypt/ysgk/2026bmys/"]
+    for cz_domain in cz_domains:
+        for cz_path in cz_paths:
+            cz_url = f"http://{cz_domain}{cz_path}"
+            try:
+                r = fetch(session, cz_url, timeout=8)
+                if r and len(r.text) > 500 and '预算' in r.text:
+                    logger.info(f"  [{city}] 探测到财政局预算页: {cz_url}")
+                    return cz_url
+            except:
+                pass
+            time.sleep(0.2)
+
     return None
 
 # ========== 处理单个城市 ==========
