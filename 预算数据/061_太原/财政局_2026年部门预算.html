@@ -1,0 +1,606 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="siteName" content="太原市财政局网站" />
+  <meta name="siteDomain" content="czxx.taiyuan.gov.cn" />
+  <meta name="siteIDCode" content="CA061130000413463400002" />
+  <meta name="description" content="协助局办公室做好全市性财政工作会议的生活安排、会议报到等工作并根据需要，协助局属单位做好专业性会议的生活接待等工作。">
+  <meta name="keywords" content="">
+  <meta name="ColumnName" content="首页">
+  <meta name="ColumnDescription" content="太原市财政局网站首页。">
+  <meta name="ColumnKeywords" content="">
+  <meta name="ColumnType" content="网站首页">
+  <title>
+    太原市财政局网站
+  </title>
+  <link rel="stylesheet" type="text/css" href="/r/cms/site19/default/tysczj/static/css/index_ty.css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--网站名称、网站域名、政府网站标识码、描述、关键字 -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="SiteName" content="太原市财政局网站" />
+<meta name="SiteDomain" content="czxx.taiyuan.gov.cn" />
+<meta name="SiteIDCode" content="CA061130000413463400002" />
+<meta name="description" content="协助局办公室做好全市性财政工作会议的生活安排、会议报到等工作并根据需要，协助局属单位做好专业性会议的生活接待等工作。">
+<meta name="keywords" content="">
+
+<script src="/r/cms/site19/default/tysczj/static/js/jquery-1.7.1.min.js"></script>
+<script src="/r/cms/site19/default/tysczj/static/js/common.js"></script>
+  <script language="javascript" type="text/javascript" src="/r/cms/site19/default/tysczj/static/js/jquery.tab.js"></script>
+  <script language="javascript" type="text/javascript" src="/r/cms/site19/default/tysczj/static/js/jquery.roll.js"></script>
+  <script language="javascript" type="text/javascript" src="/r/cms/site19/default/tysczj/static/js/jquery.SuperSlide.js"></script>
+
+   
+</head>
+
+<body>
+<script type="text/javascript">
+/*accessible-read start*/
+	var close = localStorage.getItem("close");
+	var protocol = window.location.protocol
+	if(close=='true'){
+		show()
+	}
+
+	function show(){
+		let xml = window.XMLHttpRequest?new XMLHttpRequest():new ActiveXObject('Microsoft.XMLHttp');
+		xml.open('GET','https://api.jeecms.com/MODULE-ACCESSIBLE-READING/front/readings/checkAvailability?callingCode=4cU3e84wRBad3qyPeq4wU7if3aTD-m3bAkdd33zAtc39AQ1e3oEQBb3qQnxv4rPjd74rP8ym4lTz-j4mUz-b4nEPRv4oS7ek3qyPeq39y49e34A4t93qzkdg4aQjdh4pP7mk4cQl2932ETmS4zU49v39CRW=3fSEyu4XU4ar39TQio4WSBOC3qBjev4eQTig4VT7am3qT7mk4vQPd73eA7mu3fzQ593cy4lc3qzQB93YMh62');
+		xml.send();
+		xml.onreadystatechange=function(){
+			if($('#ABTInterface').length!=0){
+				return
+			}
+			if (xml.readyState==4 && xml.status==200){
+				let res = JSON.parse(xml.responseText);
+				if (res.code == 200) {
+					localStorage.setItem("close", true);
+					let script = document.createElement('script');
+					// script.src = res.data.abtJsUrl;
+					let host = window.location.protocol+"//"+window.location.host;
+					script.src = host+"/r/cms/site19/default/reading/abt.js";
+					//重写为本地js
+					res.data.abtJsUrl=host+"/r/cms/site19/default/reading/abt.js";
+					res.data.gbkJsUrl=host+"/r/cms/site19/default/reading/gbk.js";
+					res.data.helpHtmlUrl=host+"/r/cms/site19/default/reading/help.html";
+					res.data.pinyinJsUrl=host+"/r/cms/site19/default/reading/pinyin.js";
+					res.data.skinCssUrl=host+"/r/cms/site19/default/reading/skin.css";
+					document.body.appendChild(script);
+					console.log(window.location.host)
+					console.log(res.data)
+					script.onload = function(){ABTshow(res.data);}
+				} else if (res.code == 500){
+					alert(res.message);
+				}
+			}
+		}
+	}
+
+</script>
+<script type="text/javascript" language="javascript">
+    function collect() {
+        //加入收藏
+        var ctrl = (navigator.userAgent.toLowerCase()).indexOf('mac') != -1 ? 'Command/Cmd' : 'CTRL';
+        try {
+            if (document.all) { //IE类浏览器
+                try {
+                    window.external.toString(); //360浏览器不支持window.external，无法收藏
+                    window.alert("国内开发的360浏览器等不支持主动加入收藏。\n您可以尝试通过浏览器菜单栏 或快捷键 ctrl+D 试试。");
+                }
+                catch (e) {
+                    try {
+                        window.external.addFavorite(window.location, document.title);
+                    }
+                    catch (e) {
+                        window.external.addToFavoritesBar(window.location, document.title);  //IE8
+                    }
+                }
+            }
+            else if (window.sidebar) { //firfox等浏览器
+                window.sidebar.addPanel(document.title, window.location, "");
+            }
+            else {
+                alert('您可以尝试通过快捷键' + ctrl + ' + D 加入到收藏夹~');
+            }
+        }
+        catch (e) {
+            alert('您可以尝试通过快捷键' + ctrl + ' + D 加入到收藏夹~');
+        }
+    }
+
+    //设为首页
+
+    function setHome() {
+        url = window.location.href;
+        if (document.all) {
+
+            document.body.style.behavior = 'url(#default#homepage)';
+
+            document.body.setHomePage(url);
+
+        } else {
+            alert("您好,您的浏览器不支持自动设置页面为首页功能,请您手动在浏览器里设置该页面为首页!");
+        }
+    }
+</script>
+<div class="head_top">
+    <div class="head_top_con">
+        <ul class="fr clearfix">
+            <li><a href="javascript:void(0);" onclick="collect();">加入收藏</a></li>
+            <li><a href="javascript:void(0);" onclick="setHome();">设为首页</a></li>
+            <li><a href="javascript:void(0);" onclick="show();">无障碍通道</a></li>
+        </ul>
+    </div>
+</div>
+<div class="navbox clearfix">
+    <div class="navbox_con">
+        <ul class="nav_ul fl">
+            <li><a href="http://czxx.taiyuan.gov.cn/index.html">首&nbsp;&nbsp;页</a></li>
+            <li><a href="/gggs.html">通知公告</a></li>
+            <li><a href="/jgsz.html">机构设置</a></li>
+            <li><a href="/yjsgk.html">信息公开</a></li>
+            <li><a href="/czxw.html">财政新闻</a></li>
+            <li><a href="/czfg.html">财政法规</a></li>
+            <li><a href="https://taiyuan.gov.cn/hdjl.html">互动交流</a></li>
+            <li><a href="http://ty.sxzwfw.gov.cn/icity/icity/departmental_matters?deptid=1401000900" target="_blank">政务服务</a></li>
+            <li><a href="/ztzl.html">专题专栏</a></li>
+
+        </ul>
+        <ul class="ser_ul fr clearfix">
+            <li class="srk"><input type="text" name="" id="keyword" placeholder="请输入关键字" /></li>
+            <li class="btn"><input type="button" name=""
+                    onclick="window.open('/search.htm?q='+$('#keyword').val())" /></li>
+        </ul>
+    </div>
+</div>
+<div class="banner clearfix">
+    <h1 class="logo fl"><a href="http://czxx.taiyuan.gov.cn/index.html" class="fix_bg">太原市财政局</a></h1>
+</div>
+<!--<$[head]>end-->
+  <div class="container">
+    <div class="clearfix">
+      <div class="w755 fl">
+        <div id="slideBox" class="slideBox01_ty">
+          <div class="bd">
+            <ul>
+              <li><a href="https://www.sxrb.com/content/202603/09/c115636.html" target="_blank" title="山西代表团：审议生态环境法典草案">
+                  <img src="/u/cms/site19/202603/10170157z5b9.jpg" /></a>
+              </li>
+              <li><a href="https://mp.weixin.qq.com/s?__biz=MjM5NDgyOTEwOA==&mid=2448863469&idx=1&sn=db7ab606ed0b27e6559995d72ecfe836&chksm=b3e1d11aa04dcefa7abf184d370f4d515b1f39a348c56b4d464008895b610b44a5a62afcc69f&mpshare=1&scene=1&srcid=0123M0s8c8I9WnNJFumGlaTe&sharer_shareinfo=7ffac5f3221b3d64b274af881da5029e&sharer_shareinfo_first=7ffac5f3221b3d64b274af881da5029e&exportkey=n_ChQIAhIQliV9kROXPJckEdsrpxvCiBL5AQIE97dBBAEAAAAAAIU0Aw6V%2BWsAAAAOpnltbLcz9gKNyK89dVj0LFvoQZQq6Rc64fla7x%2F64sOjeC6paXWbSomyMficu2wtsCMmfNWeleXsDPnp2bkcT6X" target="_blank" title="市十五届人大六次会议闭幕">
+                  <img src="/u/cms/site19/202601/23114035js5y.jpg" /></a>
+              </li>
+              <li><a href="https://mp.weixin.qq.com/s?__biz=MjM5NDgyOTEwOA==&mid=2448863283&idx=1&sn=0e831d2b3cd43047d0f0d016920c6bb2&chksm=b33e709379b26ee5979da4ae47c9bb9d88c62cb2a6759e50f203bd363490c100d4b0a7bedc50&mpshare=1&scene=1&srcid=0120q5t3x7mQCN4g6GpH0awZ&sharer_shareinfo=85248adde2fcd9cce32be60b7d217148&sharer_shareinfo_first=85248adde2fcd9cce32be60b7d217148&exportkey=n_ChQIAhIQ3L6%2F%2B9MssyGAtx1%2FxkNWzBL5AQIE97dBBAEAAAAAAIXJI5inE2YAAAAOpnltbLcz9gKNyK89dVj0Oq2MHm3BmhOyPzFrUQiAuyWjbVtcxXqUalPeXht0gxVIlYk8XUYGnGvWGnezjDEBC" target="_blank" title="市十五届人大六次会议隆重开幕 林红玉出席 范兆森作政府工作报告 周计伟主持">
+                  <img src="/u/cms/site19/202601/201030557y9n.jpg" /></a>
+              </li>
+              <li><a href="https://mp.weixin.qq.com/s?__biz=MzA3NDExMzMwNA==&mid=2652835326&idx=1&sn=4fca5def8ec2ddb9e2d1c93b7bd90f44&chksm=855985b98b0e44bf22bb14f9a64c105210de0a54da15e20db47d602bdd264587a3950ca5490e&mpshare=1&scene=1&srcid=0119vNA0bqTgCZm61BhCzXuv&sharer_shareinfo=924e25ad891a5ae627d894b0f6d9a3e5&sharer_shareinfo_first=924e25ad891a5ae627d894b0f6d9a3e5&exportkey=n_ChQIAhIQlPb9Ovv7kqccr0Kbqr0JNBL5AQIE97dBBAEAAAAAAFCWBQUeBZsAAAAOpnltbLcz9gKNyK89dVj0rfF2%2B3qYSmIp9eu1LxTpRDEPkkN3WXodeh9eVVPWazw%2Ff2jqRsYb9dYSmYIbIUWNObK" target="_blank" title="市政协十四届五次会议隆重开幕">
+                  <img src="/u/cms/site19/202601/19111458j996.jpg" /></a>
+              </li>
+              <li><a href="/tpxw/20260108/30275567.html" target="_blank" title="浑源抽水蓄能电站核心设备成功验收">
+                  <img src="/u/cms/site19/202601/05111706aln1.jpg" /></a>
+              </li>
+            </ul>
+          </div>
+          <div class="hd">
+            <ul>
+              <li class="on">
+                <p>
+                  <a href="https://www.sxrb.com/content/202603/09/c115636.html" target="_blank">山西代表团：审议生态环境法典草案</a>
+                </p>
+              </li>
+              <li class="on">
+                <p>
+                  <a href="https://mp.weixin.qq.com/s?__biz=MjM5NDgyOTEwOA==&mid=2448863469&idx=1&sn=db7ab606ed0b27e6559995d72ecfe836&chksm=b3e1d11aa04dcefa7abf184d370f4d515b1f39a348c56b4d464008895b610b44a5a62afcc69f&mpshare=1&scene=1&srcid=0123M0s8c8I9WnNJFumGlaTe&sharer_shareinfo=7ffac5f3221b3d64b274af881da5029e&sharer_shareinfo_first=7ffac5f3221b3d64b274af881da5029e&exportkey=n_ChQIAhIQliV9kROXPJckEdsrpxvCiBL5AQIE97dBBAEAAAAAAIU0Aw6V%2BWsAAAAOpnltbLcz9gKNyK89dVj0LFvoQZQq6Rc64fla7x%2F64sOjeC6paXWbSomyMficu2wtsCMmfNWeleXsDPnp2bkcT6X" target="_blank">市十五届人大六次会议闭幕</a>
+                </p>
+              </li>
+              <li class="on">
+                <p>
+                  <a href="https://mp.weixin.qq.com/s?__biz=MjM5NDgyOTEwOA==&mid=2448863283&idx=1&sn=0e831d2b3cd43047d0f0d016920c6bb2&chksm=b33e709379b26ee5979da4ae47c9bb9d88c62cb2a6759e50f203bd363490c100d4b0a7bedc50&mpshare=1&scene=1&srcid=0120q5t3x7mQCN4g6GpH0awZ&sharer_shareinfo=85248adde2fcd9cce32be60b7d217148&sharer_shareinfo_first=85248adde2fcd9cce32be60b7d217148&exportkey=n_ChQIAhIQ3L6%2F%2B9MssyGAtx1%2FxkNWzBL5AQIE97dBBAEAAAAAAIXJI5inE2YAAAAOpnltbLcz9gKNyK89dVj0Oq2MHm3BmhOyPzFrUQiAuyWjbVtcxXqUalPeXht0gxVIlYk8XUYGnGvWGnezjDEBC" target="_blank">市十五届人大六次会议隆重开幕 林红玉出席 范...</a>
+                </p>
+              </li>
+              <li class="on">
+                <p>
+                  <a href="https://mp.weixin.qq.com/s?__biz=MzA3NDExMzMwNA==&mid=2652835326&idx=1&sn=4fca5def8ec2ddb9e2d1c93b7bd90f44&chksm=855985b98b0e44bf22bb14f9a64c105210de0a54da15e20db47d602bdd264587a3950ca5490e&mpshare=1&scene=1&srcid=0119vNA0bqTgCZm61BhCzXuv&sharer_shareinfo=924e25ad891a5ae627d894b0f6d9a3e5&sharer_shareinfo_first=924e25ad891a5ae627d894b0f6d9a3e5&exportkey=n_ChQIAhIQlPb9Ovv7kqccr0Kbqr0JNBL5AQIE97dBBAEAAAAAAFCWBQUeBZsAAAAOpnltbLcz9gKNyK89dVj0rfF2%2B3qYSmIp9eu1LxTpRDEPkkN3WXodeh9eVVPWazw%2Ff2jqRsYb9dYSmYIbIUWNObK" target="_blank">市政协十四届五次会议隆重开幕</a>
+                </p>
+              </li>
+              <li class="on">
+                <p>
+                  <a href="/tpxw/20260108/30275567.html" target="_blank">浑源抽水蓄能电站核心设备成功验收</a>
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <script
+          type="text/javascript">jQuery(".slideBox01_ty").slide({ mainCell: ".bd ul", effect: "fade", interTime: 4000, autoPlay: true });</script>
+      </div>
+      <div class="w315 fr">
+        <div class="boxTy01 gzdt_h">
+          <h2 class="clearfix"><span class="tit blue fl">
+              通知公告
+            </span><span class="more grey fr"><a
+                href="/gggs.html">更多>></a></span>
+          </h2>
+          <div class="boxTy01_con">
+            <div class="uproll01">
+              <div class="div1">
+                <ul class="listTy01 font14">
+                  <li>
+                    <a href="/gggs/20260318/30288400.html" title="太原市2025年彩票公益金筹集、分配和市级彩票公益金使用情况的公告" target="_blank">太原市2025年彩票公益金筹集、分配和市级彩票公益金使用情况的公告</a>
+                    <span>&emsp;03-18</span>
+                  </li>
+                  <li>
+                    <a href="/gggs/20260116/30277936.html" title="太原市财政局关于公开选聘太原市预算绩效管理专家的通知" target="_blank">太原市财政局关于公开选聘太原市预算绩效管理专家的通知</a>
+                    <span>&emsp;01-16</span>
+                  </li>
+                  <li>
+                    <a href="/gggs/20260107/30276207.html" title="政府网站工作年度报表（2025年度）" target="_blank">政府网站工作年度报表（2025年度）</a>
+                    <span>&emsp;01-07</span>
+                  </li>
+                  <li>
+                    <a href="/gggs/20251124/30268702.html" title="2025年太原市惠民惠农财政补贴资金“一卡通”市级以上补贴政策清单" target="_blank">2025年太原市惠民惠农财政补贴资金“一卡通”市级以上补贴政策清单</a>
+                    <span>&emsp;11-24</span>
+                  </li>
+                  <li>
+                    <a href="/gggs/20251119/30267942.html" title="山西省财政厅 国家税务总局山西省税务局山西省残疾人联合会关于做好 2025 年全省残疾人就业保障金征收工作的通知 " target="_blank">山西省财政厅 国家税务总局山西省税务局山西省残疾人联合会关于做好 2025 年全省残疾人就业保障金征收工作的通知 </a>
+                    <span>&emsp;11-19</span>
+                  </li>
+                  <li>
+                    <a href="/gggs/20251027/30263886.html" title="关于拟推荐山西省先进会计工作者的公示" target="_blank">关于拟推荐山西省先进会计工作者的公示</a>
+                    <span>&emsp;10-27</span>
+                  </li>
+                  <li>
+                    <a href="/gggs/20251015/30261597.html" title="2025年太原市惠民惠农财政补贴资金“一卡通”市级以上补贴政策清单" target="_blank">2025年太原市惠民惠农财政补贴资金“一卡通”市级以上补贴政策清单</a>
+                    <span>&emsp;10-15</span>
+                  </li>
+                  <li>
+                    <a href="/gggs/20251011/30260496.html" title="关于拟推荐山西省财政系统先进集体和先进工作者表彰对象的公示" target="_blank">关于拟推荐山西省财政系统先进集体和先进工作者表彰对象的公示</a>
+                    <span>&emsp;10-11</span>
+                  </li>
+                  <li>
+                    <a href="/gggs/20250826/30249902.html" title="山西省政府性基金目录清单" target="_blank">山西省政府性基金目录清单</a>
+                    <span>&emsp;08-26</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="div2">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="clearfix mgt15">
+
+      <div id="slideBox2" class="slideBox">
+        <div class="bd">
+          <ul>
+            <li><a href="http://www.gov.cn/hudong/index.htm" target="_blank">
+              <img src="/r/cms/site19/default/images/gwywls.jpg" style="width:100%" /></a></li>
+          </ul>
+        </div>
+      </div>
+      <script
+        type="text/javascript">jQuery(".slideBox").slide({ mainCell: ".bd ul", autoPlay: true, interTime: 2500 });</script>
+
+      <div class="w755 fl mgt15" style="border-top:#1b417d solid 2px;">
+        <div class="clearfix">
+          <div class="w335 fl">
+            <div class="boxTy02 mgt15 boxTy02_sty01">
+              <h3 class="clearfix"><span class="tit font16 fl">
+                  财政资讯
+                </span><span class="more grey font14 fr"><a
+                    href="/czzx.html"
+                    target="_blank">更多>></a></span></h3>
+              <div class="boxTy02_con">
+                <ul class="listTy02 font14 lh28">
+                  <li><span class="grey fr">
+                      03-26
+                    </span>
+                    <a href="https://mp.weixin.qq.com/s?__biz=MzA3NDExMzMwNA==&mid=2652837179&idx=1&sn=86637db5a3de3f3c3db7dc801c146de4&chksm=85676355f32b7765737196af7fcac440e57bf32f819d12a5aaa3ff0126487a1734fee78ea5b8&mpshare=1&scene=1&srcid=0325loXAISunxMFNSmxgQQrY&sharer_shareinfo=b948d9e0466e7701d09f09a21018a8e1&sharer_shareinfo_first=b948d9e0466e7701d09f09a21018a8e1&exportkey=n_ChQIAhIQBvM0BgUcUQR8QK5hMvrmuBL5AQIE97dBBAEAAAAAANkEGAcSFP4AAAAOpnltbLcz9gKNyK89dVj0i6m6EUKHIo7%2Fwm%2Fb50Roi9vnzcDxVhLgl96V51bB3ruNN8Yo86HRL0Lv8M1upW85OwC" target="_blank">范兆森调研督导汾河生态治理工作</a>
+                  </li>
+                  <li><span class="grey fr">
+                      03-26
+                    </span>
+                    <a href="https://mp.weixin.qq.com/s?__biz=MzA3NDExMzMwNA==&mid=2652837175&idx=1&sn=3a35942fe52d2093700191bc95c982f6&chksm=85246ca09697ba02540fe192a19fc2c1d752c1742a32dd305b63174947558348c7b7d4d36d10&mpshare=1&scene=1&srcid=03256A1O05zI4AkL4IlZ0EEK&sharer_shareinfo=c86dfa583c0c9b5f9fe1d1130ae870af&sharer_shareinfo_first=c86dfa583c0c9b5f9fe1d1130ae870af&exportkey=n_ChQIAhIQm0xt4zH6SfbjxtAzSLJaqhL5AQIE97dBBAEAAAAAAHJlF6j9M5cAAAAOpnltbLcz9gKNyK89dVj0ZdGE6FWCz7A%2Fo8JzNrA8%2FIdeCD1cj1qawU69C97odulVVyQv5DtTsLg30CrlukkXIO%" target="_blank">林红玉主持召开市委审计委员会会议
+</a>
+                  </li>
+                  <li><span class="grey fr">
+                      03-24
+                    </span>
+                    <a href="https://mp.weixin.qq.com/s?__biz=MjM5NDgyOTEwOA==&mid=2448866733&idx=1&sn=9155d4ea1d10b7e795387dbe44a8f5dd&chksm=b3ece2837e84d05837c4b3afd21f9041295433d77adec6562555b4ca92a11a9b6d8ed1762847&mpshare=1&scene=1&srcid=03241a22qMoMqBM6n7ehFuMm&sharer_shareinfo=caa0fb73b28b40e444fb10db563ca95a&sharer_shareinfo_first=caa0fb73b28b40e444fb10db563ca95a&exportkey=n_ChQIAhIQWXNr%2F%2FBQ1V2EcfUS0x6u6RL5AQIE97dBBAEAAAAAAN7mOeS9gI8AAAAOpnltbLcz9gKNyK89dVj0cZnZM8Mm0NwlgyWlJF1RsK0bsIOQoeFJoq7xmxcJLQQe4HbUcRIAFOaWsNzUsyDc1Kb" target="_blank">我市召开中央生态环境保护督察整改工作...</a>
+                  </li>
+                  <li><span class="grey fr">
+                      03-20
+                    </span>
+                    <a href="https://mp.weixin.qq.com/s?__biz=MjM5NDgyOTEwOA==&mid=2448866539&idx=1&sn=1763b66306a2a948ceae2815fc7e664b&chksm=b309b9c274fa44927b3f830faa7adfd6c8ce3bc886c1d9d4f3b3294aac7ba53cb471cb06616e&mpshare=1&scene=1&srcid=0319YjZG6nkixqRe7M4uqwPN&sharer_shareinfo=327d88454a6d18f9ae546954e1c751a4&sharer_shareinfo_first=327d88454a6d18f9ae546954e1c751a4&exportkey=n_ChQIAhIQFeonr8M%2Fl9tf6GZirGtryBL5AQIE97dBBAEAAAAAACL%2BETRHWUsAAAAOpnltbLcz9gKNyK89dVj0itTubv8jWIM2bMEsEP27sol%2B1oowbMCmgMVMd6MWn1sm90SDbWKj%2FeRTBrREqz0" target="_blank">林红玉调研督导中央生态环境保护督察反...</a>
+                  </li>
+                  <li><span class="grey fr">
+                      03-20
+                    </span>
+                    <a href="https://mp.weixin.qq.com/s?__biz=MjM5NDgyOTEwOA==&mid=2448866477&idx=1&sn=73d03c3aebf6c17898fd1d5271bd751d&chksm=b3aa2b727073c844c6657a75259a2396c8c36d4259b53f516baebc28e92477ad3eaa88a637c4&mpshare=1&scene=1&srcid=0318en7nfEr2Nc3XKUbsVpH3&sharer_shareinfo=954685b5c7608c8526dd23ff69796b50&sharer_shareinfo_first=954685b5c7608c8526dd23ff69796b50&exportkey=n_ChQIAhIQOQH1frHxPtEF5pbxeSgcHRL5AQIE97dBBAEAAAAAABo%2BCTUu6hEAAAAOpnltbLcz9gKNyK89dVj03siesa5SvlaW6%2FDV%2Fe3ZxNqLAJqVHVctIreWPaSl%2BJHGD34iNjilSA0STBrU%2B" target="_blank">市委常委会召开会议 林红玉主持</a>
+                  </li>
+                  <li><span class="grey fr">
+                      03-17
+                    </span>
+                    <a href="https://mp.weixin.qq.com/s?__biz=MzA3NDExMzMwNA==&mid=2652837028&idx=1&sn=122c2207afd545194f3d33568b433c79&chksm=8513b8946701812e719d4992f6a65057037bda577345afa4a47f4d62c959ec32ab856c657667&mpshare=1&scene=1&srcid=0317mleX51kHLcJWfZpoJPhm&sharer_shareinfo=a6e9165f6043ec10258477b6a8a40410&sharer_shareinfo_first=a6e9165f6043ec10258477b6a8a40410&exportkey=n_ChQIAhIQYSCw%2FtqH%2Be%2B%2Bw9wGLZvxmxL5AQIE97dBBAEAAAAAAPmVLHn%2FaDkAAAAOpnltbLcz9gKNyK89dVj0fxd4PB6IX2U4yHI%2BzvFxFsY%2BXX1utJftoC%2BGFc9Ac9Vy9hC%2Fh%2Fc" target="_blank">市政府党组召开会议 范兆森主持</a>
+                  </li>
+                  <li><span class="grey fr">
+                      03-17
+                    </span>
+                    <a href="https://mp.weixin.qq.com/s?__biz=MjM5NDgyOTEwOA==&mid=2448866441&idx=1&sn=4c0cc1b63b8ff7220420ebd2a6b2e14c&chksm=b349578ab4b07a4bee50036dc211e76532cc05498e65926b1a1dbe24d60c1841bc6c7213e3e7&mpshare=1&scene=1&srcid=0317mTZYgr52jzzkhylU6uqi&sharer_shareinfo=6718889e6163641d76219c5f1ea4dcf4&sharer_shareinfo_first=6718889e6163641d76219c5f1ea4dcf4&exportkey=n_ChQIAhIQvpxeD53UKsjGl%2Bb8VvZGBxL5AQIE97dBBAEAAAAAAB1YI7GVqNkAAAAOpnltbLcz9gKNyK89dVj0pmflmGMI4M%2Fnqha8csVo22ey94yrLt6MCYg5fu6W5VZfQ4H2A%2FHtUWP4s4MqxlDXm" target="_blank">市委常委会召开扩大会议 林红玉主持</a>
+                  </li>
+                  <li><span class="grey fr">
+                      03-17
+                    </span>
+                    <a href="https://h.xinhuaxmt.com/vh512/share/13005098?docid=13005098&newstype=1001&d=13525d9" target="_blank">李强主持召开国务院常务会议</a>
+                  </li>
+                  <li><span class="grey fr">
+                      03-13
+                    </span>
+                    <a href="https://mp.weixin.qq.com/s?__biz=MjM5NDgyOTEwOA==&mid=2448866268&idx=2&sn=b795bbeb88c00fc71be969fc70dd55d4&chksm=b31dfbdc140213e6e09a158bf2c4d692f27d559e1f2f5ac05059dffda4d3fe094815af5b333f&mpshare=1&scene=1&srcid=0313MceGddwMOY8WKykp5bIA&sharer_shareinfo=8f2db02fe66c72adfddb27b55d6dcb13&sharer_shareinfo_first=8f2db02fe66c72adfddb27b55d6dcb13&exportkey=n_ChQIAhIQPqgA5SRAAK5k4CQwsleiPBL5AQIE97dBBAEAAAAAAGEXCkPnqsAAAAAOpnltbLcz9gKNyK89dVj0HdkL48l1MEbc24twMQs79CpaONnY7NRo59u8tuoXnsQ3wu%2FASRTLgq%2FD93JQqPBpoGx" target="_blank">林红玉与华为公司副总裁蒋旺成举行工作...</a>
+                  </li>
+                  <li><span class="grey fr">
+                      03-13
+                    </span>
+                    <a href="https://mp.weixin.qq.com/s?__biz=MjM5NDgyOTEwOA==&mid=2448866268&idx=1&sn=a5ee35e7f14799fde13802374948c7f2&chksm=b3c31077c05cbb823b28e3e2017438fd93ac9ed17ee3202cc68ade5a637ca072b81cbddecb7c&mpshare=1&scene=1&srcid=0313r2Sf4Oa9GzFdF0X1EMxx&sharer_shareinfo=59e1b799745c445ed237542a20f72f69&sharer_shareinfo_first=59e1b799745c445ed237542a20f72f69&exportkey=n_ChQIAhIQ%2F3b7VQ9Op4Q6LrcrFhz%2FnhLrAQIE97dBBAEAAAAAACmeEwv%2FFp0AAAAOpnltbLcz9gKNyK89dVj0OmVqBs9a9tWXDqe4a6qpBSXRSKdrO4UBW6t03I1TmqV2VXLEIYY4kQ%2FUR7rkJ70" target="_blank">林红玉督导检查全市信访工作</a>
+                  </li>
+                  <li><span class="grey fr">
+                      03-13
+                    </span>
+                    <a href="https://mp.weixin.qq.com/s?__biz=MzA3NDExMzMwNA==&mid=2652836947&idx=1&sn=9ba92f374a723010671e9876dbca4350&chksm=858f30bfc43711807fb30342cb3ba2794fc54799a1a35f8334a7009ef10618a5f1ad7dbe36e0&mpshare=1&scene=1&srcid=0312Yapgc9NK2qRkUkUxrc8n&sharer_shareinfo=b49b0e0f7240acd26109b34a53196209&sharer_shareinfo_first=b49b0e0f7240acd26109b34a53196209&exportkey=n_ChQIAhIQ61QRAybNgK1bnD958kDG5hL5AQIE97dBBAEAAAAAAP5KGlj5F7YAAAAOpnltbLcz9gKNyK89dVj0ncxdtFZbd%2FjLwk6CGxnN69FiZpCkBtHseiXEZNLBm1zTlQgtJB2Bhe21vY1uW0wppPQW7" target="_blank">林红玉调研产学研融合发展</a>
+                  </li>
+                  <li><span class="grey fr">
+                      03-13
+                    </span>
+                    <a href="https://mp.weixin.qq.com/s?__biz=MjM5NDgyOTEwOA==&mid=2448866147&idx=1&sn=af879cdee9bc2a9ab5232cddd7ce2ef9&chksm=b353f0782eb88f127e3abe27bc05a25e8d5d241d6fb2e6a32adf01b7c93a6de5576acb1af3f2&mpshare=1&scene=1&srcid=0311GOUgmCdvDsFdUYnNzH8V&sharer_shareinfo=81448d0b7ee0c4241bfd7be46326347b&sharer_shareinfo_first=81448d0b7ee0c4241bfd7be46326347b&exportkey=n_ChQIAhIQfIkMfen2FPp7idchn2vMWhLsAQIE97dBBAEAAAAAAJIsAi7x3gsAAAAOpnltbLcz9gKNyK89dVj0Y7oABnFmHZuVfkmsq98zM7%2Fm6WpysgfbiSoigEkIGOJcKnBb0FZDffHvkpurKXlsDy8ZO" target="_blank">市委常委会召开会议 林红玉主持</a>
+                  </li>
+                  <li><span class="grey fr">
+                      03-10
+                    </span>
+                    <a href="https://content-static.cctvnews.cctv.com/snow-book/index.html?item_id=3791285225425095504&toc_style_id=feeds_default&share_to=wechat&track_id=c61b6a85-20bc-4ecf-a644-502987326643" target="_blank">世界看两会丨国际人士：中国高质量发展...</a>
+                  </li>
+                  <li><span class="grey fr">
+                      03-10
+                    </span>
+                    <a href="https://www.peopleapp.com/column/30051596913-500007385075" target="_blank">第二场部长通道 回应关切真抓实干（现...</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+          <div class="w378 fr">
+            <h2 class="h2_sty01 blue">财政数据<span class="more grey font14 fr" style="padding-top:6px;"><a
+                  href="/czsj.html"
+                  target="_blank">更多>></a></span></h2>
+            <div class="boxTy02_con">
+              <ul class="listTy02 font14 lh28" style="padding-top:12px;">
+
+                <li><span class="grey fr">
+                    11-21
+                  </span>
+                  <a href="/czsj/20251121/30268372.html" target="_blank">太原市2025年1-8月一般公共预算收支情况</a>
+                </li>
+                <li><span class="grey fr">
+                    09-03
+                  </span>
+                  <a href="/czsj/20250903/30258024.html" target="_blank">太原市2025年1-7月一般公共预算收支情况</a>
+                </li>
+                <li><span class="grey fr">
+                    08-20
+                  </span>
+                  <a href="/czsj/20250820/30258021.html" target="_blank">太原市2025年1-6月一般公共预算收支情况</a>
+                </li>
+                <li><span class="grey fr">
+                    07-23
+                  </span>
+                  <a href="/czsj/20250723/30258019.html" target="_blank">太原市2025年1-5月一般公共预算收支情况</a>
+                </li>
+                <li><span class="grey fr">
+                    06-18
+                  </span>
+                  <a href="/czsj/20250618/30226707.html" target="_blank">太原市2025年1-4月一般公共预算收支情况</a>
+                </li>
+                <li><span class="grey fr">
+                    05-22
+                  </span>
+                  <a href="/czsj/20250522/30226706.html" target="_blank">太原市2025年1-3月一般公共预算收支情况</a>
+                </li>
+
+
+              </ul>
+            </div>
+            <h2 class="h2_sty01 blue">
+              财政法规<span
+                class="more grey font14 fr" style="padding-top:6px;"><a
+                  href="/czfg.html"
+                  target="_blank">更多>></a></span>
+            </h2>
+            <div class="boxTy02_con">
+              <ul class="listTy02 font14 lh28" style="padding-top:12px;">
+
+                <li><span class="grey fr">
+                    11-21
+                  </span>
+                  <a href="http://kjs.mof.gov.cn/zhengcefabu/202511/t20251106_3975857.htm" target="_blank">关于印发《行政事业单位内部控制评价办...</a>
+                </li>
+                <li><span class="grey fr">
+                    11-21
+                  </span>
+                  <a href="http://kjs.mof.gov.cn/zhengcefabu/202511/t20251110_3976068.htm" target="_blank">关于进一步压实会计工作责任 加强会计...</a>
+                </li>
+                <li><span class="grey fr">
+                    09-25
+                  </span>
+                  <a href="http://zcgls.mof.gov.cn/zhengcefabu/202509/t20250918_3972658.htm" target="_blank">关于进一步规范知识产权资产评估若干问...</a>
+                </li>
+                <li><span class="grey fr">
+                    09-25
+                  </span>
+                  <a href="http://kjs.mof.gov.cn/zhengcefabu/202509/t20250915_3972275.htm" target="_blank">关于印发《会计师事务所反洗钱工作管理...</a>
+                </li>
+                <li><span class="grey fr">
+                    08-12
+                  </span>
+                  <a href="/czfg/20250812/30246858.html" target="_blank">太原市财政局
+太原市规划和自然资源局
+...</a>
+                </li>
+                <li><span class="grey fr">
+                    07-28
+                  </span>
+                  <a href="/czfg/20250728/30243556.html" target="_blank">山西省财政厅关于印发《山西省部门政府...</a>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w315 fr mgt15">
+        <div class="boxTy03">
+          <h2 class="blue">专题专栏</h2>
+          <div class="bd">
+            <ul class="picList">
+
+              <li>
+                <div class="pic"><a href="/hjgl.html" target="_blank"><img
+                      src="/r/cms/site19/default/tysczj/static/images/kjgl.png" /></a></div>
+              </li>
+              <li>
+                <div class="pic"><a href="/fpzjgl.html" target="_blank"><img
+                      src="/r/cms/site19/default/tysczj/static/images/fpzjgl.png" /></a></div>
+              </li>
+              <li>
+                <div class="pic"><a href="/jsjfzl.html" target="_blank"><img
+                      src="/r/cms/site19/default/tysczj/static/images/jsjfzl.png"></a></div>
+              </li>
+              <li>
+                <div class="pic"><a href="http://xzspglj.taiyuan.gov.cn/yhyshj.html" target="_blank"><img
+                      src="/r/cms/site19/default/tysczj/static/images/dzyshj.jpg"></a></div>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+        <div class="boxTy02">
+          <h2 class="h2_sty01 blue">
+            机构设置
+          </h2>
+
+          <div class="boxTy02_con">
+            <p class="pTy_sty01 font14 lh25" style="height:27px;">
+              <a href="/czjjj.html" title="财政局简介">财政局简介</a> <em>|</em>
+              <a href="/jldjj.html" title="局领导简介">局领导简介</a> <em>|</em>
+              <a href="/ksjj.html" title="科室简介">科室简介</a>
+            </p>
+
+            <p class="pTy_sty02 white mgt10 clearfix"><a
+                href="/xxgkgzndbg.html" title="
+              信息公开工作年度报告">
+                信息公开工作年度报告</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="boxTy04 mgt25" style="display:none;">
+        <h2 class="clearfix"><span class="tit fl">
+            专题专栏
+          </span></h2>
+        <div class="boxTy04_con clearfix">
+          <table class="tabTy02 font14 lh30 fl" width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td>
+                <a href="/hjgl.html">会计管理</a>
+              </td>
+              <td>
+                <a href="/fpzjgl.html">财政衔接推进 乡...</a>
+              </td>
+              <td>
+                <a href="/jsjfzl.html">减税降费专栏</a>
+              </td>
+
+            </tr>
+            <tr>
+
+              <td>
+                <a href="/hjgl.html">会计管理</a>
+              </td>
+              <td>
+                <a href="/fpzjgl.html">财政衔接推进 乡...</a>
+              </td>
+              <td>
+                <a href="/jsjfzl.html">减税降费专栏</a>
+              </td>
+
+            </tr>
+            <tr>
+
+              <td>
+                <a href="/hjgl.html">会计管理</a>
+              </td>
+              <td>
+                <a href="/fpzjgl.html">财政衔接推进 乡...</a>
+              </td>
+              <td>
+                <a href="/jsjfzl.html">减税降费专栏</a>
+              </td>
+
+            </tr>
+          </table>
+          <div class="leftLoop fl">
+            <div class="hd">
+              <a class="next"></a>
+              <a class="prev"></a>
+            </div>
+            <div class="bd">
+              <ul class="picList">
+
+
+              </ul>
+            </div>
+          </div>
+          <script
+            type="text/javascript">jQuery(".leftLoop").slide({ mainCell: ".bd ul", effect: "leftLoop", vis: 3, scroll: 3, autoPlay: true });</script>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+    $(function () {
+      $(".uproll01").myScrollTop(50);
+      $(".uproll02").myScrollTop(50);
+    })
+  </script>
+<div id="foot" class="white">
+  <p>太原市财政局&nbsp;&nbsp;版权所有&emsp;&emsp;<a href="/wzdt.html">
+      网站地图</a></p>
+  <p>地址：太原市新建路38号&nbsp;&nbsp;邮编：030002&nbsp;&nbsp;电话：(0351)4032275&nbsp;&nbsp;</p>
+  <p><a href="https://beian.miit.gov.cn">晋ICP备05003854号</a>&nbsp;&nbsp;访问统计,网站总访问量：<em id="pvTotal">1138176</em>
+    <script src="/r/cms/site19/default/js/front.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+      $(function () {
+        Cms.siteFlow("");
+      });
+    </script>
+  </p>
+  <p><span class="fix_bg"><img src="/r/cms/site19/default/tysczj/static/images/jinghui.png"></span>&nbsp;&nbsp;晋公网安备
+    14010702070007号&emsp;&emsp;网站标识码：1401000053</p>
+  <p><a href="//bszs.conac.cn/sitename?method=show&amp;id=34BB1D44F66A3206E053012819ACA9D8" class="fix_bg"><img
+        src="/r/cms/site19/default/tysczj/static/images/red.png"></a>
+    <span>
+      <script id="_jiucuo_" sitecode="1401000053" src="/r/cms/site19/default/tysczj/static/js/jiucuo.js"></script>
+    </span>
+  </p>
+</div>
+<!--[if IE 6]>
+<script type="text/javascript" src="/static/js/DD_belatedPNG_0.0.8a-min.js" ></script>
+<script type="text/javascript">
+DD_belatedPNG.fix('.fix_bg,.tabTy01 td .img,.tabTy01 td .word,background,img');
+</script>晋ICP备09001442号
+<![endif]-->
+</body>
+
+</html>

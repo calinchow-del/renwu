@@ -1,0 +1,806 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <!--网站标签-->
+    <!--网站名称、网站域名、政府网站标识码、描述、关键字 -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="SiteName" content="太原市退役军人事务局网站" />
+<meta name="SiteDomain" content="tytyjrswj.taiyuan.gov.cn" />
+<meta name="SiteIDCode" content="CA061130000406895850004" />
+<meta name="description" content="">
+<meta name="keywords" content="">    <!--栏目标签-->
+    <meta name="ColumnName" content="首页">
+    <meta name="ColumnDescription" content="网站首页">
+    <meta name="ColumnKeywords" content="">
+    <meta name="ColumnType" content="网站首页">
+    <title>太原市退役军人事务局网站</title>
+    <link rel="stylesheet" type="text/css" href="/r/cms/site95/default/static/css/index_ty.css" />
+<script src="/r/cms/site95/default/static/js/jquery-1.7.1.min.js"></script>
+<script src="/r/cms/site95/default/static/js/common.js"></script>     <script language="javascript" type="text/javascript" src="/r/cms/site95/default/static/js/jquery.tab.js"></script>
+    <script language="javascript" type="text/javascript" src="/r/cms/site95/default/static/js/jquery.roll.js"></script>
+    <script language="javascript" type="text/javascript" src="/r/cms/site95/default/static/js/jquery.SuperSlide.js"></script>
+  </head>
+  <body>
+  <!--<div><img src="/r/cms/site95/default/static/images/jd100znbm.jpg" style="width:100%;"/></div>--> 
+    
+<script type="text/javascript">
+/*accessible-read start*/
+	var close = localStorage.getItem("close");
+	var protocol = window.location.protocol
+	if(close=='true'){
+		show()
+	}
+
+	function show(){
+		let xml = window.XMLHttpRequest?new XMLHttpRequest():new ActiveXObject('Microsoft.XMLHttp');
+		xml.open('GET','https://api.jeecms.com/MODULE-ACCESSIBLE-READING/front/readings/checkAvailability?callingCode=4cU3e84wRBad3qyPeq4wU7if3aTD-m3bAkdd33zAtc39AQ1e3oEQBb3qQnxv4rPjd74rP8ym4lTz-j4mUz-b4nEPRv4oS7ek3qyPeq39y49e34A4t93qzkdg4aQjdh4pP7mk4cQl2932ETmS4zU49v39CRW=3fSEyu4XU4ar39TQio4WSBOC3qBjev4eQTig4VT7am3qT7mk4vQPd73eA7mu3fzQ593cy4lc3qzQB93YMh62');
+		xml.send();
+		xml.onreadystatechange=function(){
+			if($('#ABTInterface').length!=0){
+				return
+			}
+			if (xml.readyState==4 && xml.status==200){
+				let res = JSON.parse(xml.responseText);
+				if (res.code == 200) {
+					localStorage.setItem("close", true);
+					let script = document.createElement('script');
+					// script.src = res.data.abtJsUrl;
+					let host = window.location.protocol+"//"+window.location.host;
+					script.src = host+"/r/cms/site95/default/reading/abt.js";
+					//重写为本地js
+					res.data.abtJsUrl=host+"/r/cms/site95/default/reading/abt.js";
+					res.data.gbkJsUrl=host+"/r/cms/site95/default/reading/gbk.js";
+					res.data.helpHtmlUrl=host+"/r/cms/site95/default/reading/help.html";
+					res.data.pinyinJsUrl=host+"/r/cms/site95/default/reading/pinyin.js";
+					res.data.skinCssUrl=host+"/r/cms/site95/default/reading/skin.css";
+					document.body.appendChild(script);
+					console.log(window.location.host)
+					console.log(res.data)
+					script.onload = function(){ABTshow(res.data);}
+				} else if (res.code == 500){
+					alert(res.message);
+				}
+			}
+		}
+	}
+
+</script>
+<script type="text/javascript" language="javascript">
+function collect(){
+//加入收藏 
+      var ctrl = (navigator.userAgent.toLowerCase()).indexOf('mac') != -1 ? 'Command/Cmd': 'CTRL';
+      try{
+        if (document.all) { //IE类浏览器
+            try {
+                window.external.toString(); //360 浏览器不支持window.external，无法收藏
+                window.alert("国内开发的360浏览器等不支持主动加入收藏。\n您可以尝试通过浏览器菜单栏 或快捷键 ctrl+D 试试。");
+            }
+            catch (e){
+                try{  
+window.external.addFavorite(window.location, document.title);
+                }
+                catch (e){
+window.external.addToFavoritesBar(window.location, document.title);  //IE8
+                }
+            }
+        }
+        else if (window.sidebar) { //firfox等浏览器
+            window.sidebar.addPanel(document.title, window.location, "");
+        }
+        else {
+            alert('您可以尝试通过快捷键' + ctrl + ' + D 加入到收藏夹~');
+        }
+    }
+    catch (e){
+       alert('您可以尝试通过快捷键' + ctrl + ' + D 加入到收藏夹~');
+    }
+}
+ 
+    //设为首页
+ 
+    function setHome(){
+ url= window.location.href;  
+        if (document.all) {
+ 
+            document.body.style.behavior='url(#default#homepage)';
+ 
+               document.body.setHomePage(url);
+ 
+        }else{
+            alert("您好,您的浏览器不支持自动设置页面为首页功能,请您手动在浏览器里设置该页面为首页!");
+        }
+    }
+</script>
+<div class="head_top">
+	<div class="head_top_con">
+    	<ul class="fr clearfix">
+        <li><a href="javascript:void(0);" onclick="collect();">加入收藏</a></li>
+        <li><a href="javascript:void(0);" onclick="setHome();">设为首页</a></li>
+        <li><a href="javascript:void(0);" onclick="show();">无障碍通道</a></li>
+        </ul>
+    </div>
+</div>
+<div class="banner_box">
+  <div class="banner clearfix">
+      <h1 class="logo fl"><a href="http://tytyjrswj.taiyuan.gov.cn/index.html" class="fix_bg">太原市退役军人事务局</a></h1>
+  </div>
+</div>
+<div class="navbox clearfix">
+	<div class="navbox_con nav">
+        <ul class="nav_ul fl">
+        <li style="background: url(/r/cms/site95/default/static/images/iconfont/iconfont_sy.png)no-repeat 16px 14px/22px;"><a href="/">首&nbsp;&nbsp;页</a></li>
+        <li style="background: url(/r/cms/site95/default/static/images/iconfont/iconfont_xxgk.png)no-repeat 16px 14px/22px;"><a href="/xxgkzn.html">政务信息公开</a></li>
+        <li style="background: url(/r/cms/site95/default/static/images/iconfont/iconfont_ggfw.png)no-repeat 16px 14px/22px;"><a href="/ggfw.html">公共服务</a></li>
+        <li style="background: url(/r/cms/site95/default/static/images/iconfont/iconfont_djgz.png)no-repeat 16px 14px/22px;"><a href="/dflz.html">党风廉政</a></li>
+        <li style="background: url(/r/cms/site95/default/static/images/iconfont/iconfont_zwfw.png)no-repeat 16px 14px/22px;"><a href="http://ty.sxzwfw.gov.cn/icity/icity/departmental_matters?deptid=1401002200" target="_blank">政务服务</a></li>
+
+        </ul>
+        <ul class="ser_ul fr clearfix" style="float:left;margin-left:15px;">
+        <li class="srk"><input type="text" name="" id="keyword" placeholder="请输入关键字" /></li>
+        <li class="btn"><input type="button" name=""  onclick="window.open('/search.htm?q='+$('#keyword').val())" /></li>
+        </ul>
+    </div>
+</div>
+
+<!--<$[head]>end-->    <div class="container">
+	<!--------------------------------------图片新闻开始---------------------------------------> 
+      <div class="clearfix" style="background-color: white;padding: 10px;">
+        <div class="w535 fl">
+          <div id="slideBox" class="slideBox01_ty">
+            <div class="hd">
+              <ul>
+                
+                    <li class="on"></li>
+                    <li class="on"></li>
+                    <li class="on"></li>
+                    <li class="on"></li>
+                    <li class="on"></li>
+                    <li class="on"></li>
+
+              </ul>
+            </div>            
+            <div class="bd">
+              <ul>
+                  <li>
+                    <a href="https://www.gov.cn/zhuanti/2026nztj/2026qglh/yw/202603/content_7061365.htm" target="_blank" title="十四届全国人大四次会议举行民生主题记者会"><img src="/u/cms/site95/202603/09095644gp3j.jpg"/></a>
+                    <dl>
+                      <dt><p style="">十四届全国人大四次会议举行民生主题记者会</p></dt>
+                    </dl>
+                  </li>
+                  <li>
+                    <a href="https://www.gov.cn/yaowen/liebiao/202602/content_7057759.htm" target="_blank" title="习近平同党外人士共迎新春"><img src="/u/cms/site95/202602/13095741lqli.jpg"/></a>
+                    <dl>
+                      <dt><p style="">习近平同党外人士共迎新春</p></dt>
+                    </dl>
+                  </li>
+                  <li>
+                    <a href="https://www.gov.cn/yaowen/liebiao/202601/content_7056477.htm" target="_blank" title="习近平会见英国首相斯塔默"><img src="/u/cms/site95/202601/30104120ti0z.jpeg"/></a>
+                    <dl>
+                      <dt><p style="">习近平会见英国首相斯塔默</p></dt>
+                    </dl>
+                  </li>
+                  <li>
+                    <a href="https://www.gov.cn/yaowen/liebiao/202601/content_7054926.htm" target="_blank" title="习近平会见加拿大总理卡尼"><img src="/u/cms/site95/202601/19095612sh8g.jpeg"/></a>
+                    <dl>
+                      <dt><p style="">习近平会见加拿大总理卡尼</p></dt>
+                    </dl>
+                  </li>
+                  <li>
+                    <a href="https://www.gov.cn/yaowen/liebiao/202601/content_7053963.htm" target="_blank" title="习近平同韩国总统李在明举行会谈"><img src="/u/cms/site95/202601/07104357flil.jpg"/></a>
+                    <dl>
+                      <dt><p style="">习近平同韩国总统李在明举行会谈</p></dt>
+                    </dl>
+                  </li>
+                  <li>
+                    <a href="https://www.gov.cn/yaowen/liebiao/202512/content_7052406.htm" target="_blank" title="中央军委举行晋升上将军衔仪式 习近平颁发命令状并向晋衔的军官表示祝贺"><img src="/u/cms/site95/202512/26101254za1r.jpg"/></a>
+                    <dl>
+                      <dt><p style="">中央军委举行晋升上将军衔仪式 习近平颁发命令状并向晋衔的军...</p></dt>
+                    </dl>
+                  </li>
+
+
+              </ul>
+            </div>
+
+          </div>
+          <script type="text/javascript">jQuery(".slideBox01_ty").slide( { mainCell:".bd ul",effect:"fade",interTime:4000,autoPlay:true} );</script>
+        </div>
+        <!-- w535 fr start -->
+        <div class="w535 fr" id="gsdt" style="width:525px" >
+          <h2 class="clearfix" style="height: 36px">
+            <ol class="fl clearfix">
+              <li class="cur" style="padding-top: 7px;"> <a href="/xwdt.html">新闻动态</a> </li>
+              <li style="padding-top: 7px;" class=""> <a href="/sjdt.html">市局动态</a> </li>
+              <li style="padding-top: 7px;" class=""> <a href="/gsgg.html">公示公告</a> </li>
+            </ol>
+          </h2>
+          <div class="boxTy01 gzdt_h ztzl" style="border: none;background: none;">
+            <!-- first start -->
+            <div class="boxTy01_con">
+              <div class="div1">
+                <ul class="listTy02 lh28 font14">               
+
+                    <li><a href="https://www.gov.cn/yaowen/liebiao/202603/content_7063141.htm" target="_blank" title="习近平会见土库曼斯坦民族领袖、人民委员会主席别尔德穆哈梅多夫">习近平会见土库曼斯坦民族领袖、人民委员会主席别尔德穆哈梅多夫</a><span class="fr">&emsp;03-20</span></li>                    
+                    <li><a href="https://www.gov.cn/zhuanti/2026nztj/2026qglh/yw/202603/content_7061365.htm" target="_blank" title="十四届全国人大四次会议举行民生主题记者会">十四届全国人大四次会议举行民生主题记者会</a><span class="fr">&emsp;03-09</span></li>                    
+                    <li><a href="/xwdt/20260225/30284824.html" target="_blank" title="实干担当 为民造福——习近平总书记引领全党树立和践行正确政绩观">实干担当 为民造福——习近平总书记引领全党树立和践行正确政绩观</a><span class="fr">&emsp;02-25</span></li>                    
+                    <li><a href="https://www.gov.cn/yaowen/liebiao/202602/content_7057759.htm" target="_blank" title="习近平同党外人士共迎新春">习近平同党外人士共迎新春</a><span class="fr">&emsp;02-13</span></li>                    
+                    <li><a href="https://www.gov.cn/yaowen/liebiao/202601/content_7056477.htm" target="_blank" title="习近平会见英国首相斯塔默">习近平会见英国首相斯塔默</a><span class="fr">&emsp;01-30</span></li>                    
+                    <li><a href="https://www.gov.cn/yaowen/liebiao/202601/content_7054926.htm" target="_blank" title="习近平会见加拿大总理卡尼">习近平会见加拿大总理卡尼</a><span class="fr">&emsp;01-19</span></li>                    
+                    <li><a href="https://www.gov.cn/yaowen/liebiao/202601/content_7053963.htm" target="_blank" title="习近平同韩国总统李在明举行会谈">习近平同韩国总统李在明举行会谈</a><span class="fr">&emsp;01-07</span></li>                    
+                    <li><a href="https://www.gov.cn/yaowen/liebiao/202512/content_7052406.htm" target="_blank" title="中央军委举行晋升上将军衔仪式 习近平颁发命令状并向晋衔的军官表示祝贺">中央军委举行晋升上将军衔仪式 习近平颁发命令状并向晋衔的军...</a><span class="fr">&emsp;12-26</span></li>                    
+                    <li><a href="https://www.gov.cn/yaowen/liebiao/202512/content_7050963.htm" target="_blank" title="中央经济工作会议在北京举行 习近平发表重要讲话">中央经济工作会议在北京举行 习近平发表重要讲话</a><span class="fr">&emsp;12-15</span></li>                    
+
+                </ul>
+              </div>
+            </div>
+            <!-- first end -->
+            <!-- second end -->
+            <div class="boxTy01_con">
+              <div class="div1"> 
+                <ul class="listTy02 lh28 font14">
+                
+                    <li><a href="/sjdt/20260320/30288856.html" target="_blank" title="春风送岗促就业 真情相助暖民心——2026年太原市春风行动暨就业援助季·退役军人专场招聘会圆满落幕">春风送岗促就业 真情相助暖民心——2026年太原市春风行动暨就...</a><span class="fr">&emsp;03-20</span></li>                    
+                    <li><a href="/sjdt/20260309/30286589.html" target="_blank" title="太原市退役军人事务局组织收听收看十四届全国人大四次会议开幕会">太原市退役军人事务局组织收听收看十四届全国人大四次会议开幕会</a><span class="fr">&emsp;03-09</span></li>                    
+                    <li><a href="/sjdt/20260302/30285546.html" target="_blank" title="太原市退役军人事务局举办退役军人服务“一件事”工作培训会">太原市退役军人事务局举办退役军人服务“一件事”工作培训会</a><span class="fr">&emsp;03-02</span></li>                    
+                    <li><a href="/sjdt/20260225/30284827.html" target="_blank" title="暖意融融迎新春 军民情深谱新篇——太原市退役军人事务局开展新春走访慰问驻并部队活动">暖意融融迎新春 军民情深谱新篇——太原市退役军人事务局开展...</a><span class="fr">&emsp;02-25</span></li>                    
+                    <li><a href="/sjdt/20260213/30283921.html" target="_blank" title="太原市退役军人事务局长会议召开">太原市退役军人事务局长会议召开</a><span class="fr">&emsp;02-13</span></li>                    
+                    <li><a href="/sjdt/20260130/30281028.html" target="_blank" title="太原市退役军人事务局纵深推进“我为退役军人找工作”系列活动">太原市退役军人事务局纵深推进“我为退役军人找工作”系列活动</a><span class="fr">&emsp;01-30</span></li>                    
+                    <li><a href="/sjdt/20260119/30278104.html" target="_blank" title="太原市211名现役军人立功受奖">太原市211名现役军人立功受奖</a><span class="fr">&emsp;01-19</span></li>                    
+                    <li><a href="/sjdt/20260107/30275958.html" target="_blank" title="太原市退役军人事务局党组召开2026年工作谋划推进会">太原市退役军人事务局党组召开2026年工作谋划推进会</a><span class="fr">&emsp;01-07</span></li>                    
+                    <li><a href="/sjdt/20251226/30274265.html" target="_blank" title="持续加强烈士纪念设施规范管理系列宣传报道——太原市全面完成烈士纪念设施确权登记工作">持续加强烈士纪念设施规范管理系列宣传报道——太原市全面完成...</a><span class="fr">&emsp;12-26</span></li>                    
+
+                </ul>
+              </div>
+            </div>
+            <!-- second end -->                
+            <!-- fourth start -->
+            <div class="boxTy01_con">
+              <div class="div1"> 
+                <ul class="listTy02 lh28 font14">                
+                
+                  <li><a href="/gsgg/20260316/30287917.html" target="_blank" title="2026年太原市自主择业军队转业干部发放独生子女父母退休一次性奖励费公示人员名单（第一批）
+">2026年太原市自主择业军队转业干部发放独生子女父母退休一次性...</a><span class="fr">&emsp;03-16</span></li>                    
+                  <li><a href="/gsgg/20260114/30277511.html" target="_blank" title="太原市退役军人事务局关于公开招募退役军人就业创业导师的公告">太原市退役军人事务局关于公开招募退役军人就业创业导师的公告</a><span class="fr">&emsp;01-14</span></li>                    
+                  <li><a href="/gsgg/20260108/30275815.html" target="_blank" title="太原市退役军人事务局2025年度政府网站工作报表">太原市退役军人事务局2025年度政府网站工作报表</a><span class="fr">&emsp;01-08</span></li>                    
+                  <li><a href="/gsgg/20251114/30267335.html" target="_blank" title="2025年太原市自主择业军队转业干部发放独生子女父母退休一次性奖励费公示人员名单（第四批）">2025年太原市自主择业军队转业干部发放独生子女父母退休一次性...</a><span class="fr">&emsp;11-14</span></li>                    
+                  <li><a href="/gsgg/20250919/30254840.html" target="_blank" title="关于公开征集太原市“十五五”退役军人专项规划编制意见建议的公告">关于公开征集太原市“十五五”退役军人专项规划编制意见建议的...</a><span class="fr">&emsp;09-19</span></li>                    
+                  <li><a href="/gsgg/20250915/30253752.html" target="_blank" title="2025年太原市自主择业军队转业干部发放独生子女父母退休一次性奖励费公示人员名单（第三批）">2025年太原市自主择业军队转业干部发放独生子女父母退休一次性...</a><span class="fr">&emsp;09-15</span></li>                    
+                  <li><a href="/gsgg/20250512/30217721.html" target="_blank" title="关于开展2025年自主就业退役士兵职业技能培训工作的公告">关于开展2025年自主就业退役士兵职业技能培训工作的公告</a><span class="fr">&emsp;05-12</span></li>                    
+                  <li><a href="/gsgg/20250508/30219994.html" target="_blank" title="关于公开征集涉企行政执法突出问题线索的公告">关于公开征集涉企行政执法突出问题线索的公告</a><span class="fr">&emsp;05-08</span></li>                    
+                  <li><a href="/gsgg/20250102/30187704.html" target="_blank" title="太原市退役军人事务局2024年度政府网站工作报表">太原市退役军人事务局2024年度政府网站工作报表</a><span class="fr">&emsp;01-02</span></li>                    
+
+                </ul>
+              </div>
+            </div>
+            <!-- fourth end -->
+          </div>
+        </div>
+        <script type="text/javascript">
+          $("#gsdt").tab({tabs: ">h2 ol li",evtype: "mouseover",box: ">.ztzl .boxTy01_con"});
+        </script>
+        <!-- w535 fr start -->
+      </div>
+	  <!--------------------------------------图片新闻结束--------------------------------------->  
+      <!--------------------------------------滚动图片开始--------------------------------------->    
+      <style>
+        .slideBox1{ width:100%; height:109px; overflow:hidden; position:relative; border:1px solid #ddd;  }
+        .slideBox1 .hd{ height:15px; overflow:hidden; position:absolute; right:10px; bottom:10px; z-index:1; }
+        .slideBox1 .hd ul{ overflow:hidden; zoom:1; float:left;  }
+        .slideBox1 .hd ul li{ float:left; margin-right:5px;  width:15px; height:15px; line-height:14px; text-align:center; background:#fff; cursor:pointer; }
+        .slideBox1 .hd ul li.on{ background:#f00; color:#fff; }
+        .slideBox1 .bd{ position:relative; height:100%; z-index:0;   }
+        .slideBox1 .bd img{ width:1090px; height:109px; }
+      </style>    
+      <div class="mgt15">
+        <div id="slideBox1" class="slideBox1">
+          <div class="hd">
+            <ul><li>1</li><li>2</li><li>3</li></ul>
+          </div>
+          <div class="bd">
+            <ul>
+                <li><a href="http://www.gov.cn/hudong/index.htm"><img src="/r/cms/site95/default/images/gwywls.jpg" /></a></li>
+                <li><img src="/r/cms/site95/default/static/images/gdtup/gd4.jpg" /></li>
+            	<li><img src="/r/cms/site95/default/static/images/gdtup/gd2.png" /></li>
+                
+            </ul>
+          </div>   
+        </div>
+      </div>    
+      <script type="text/javascript">jQuery(".slideBox1").slide( { mainCell:".bd ul",autoPlay:true,interTime : 5000} );</script>
+      <!--------------------------------------滚动图片结束--------------------------------------->   
+      <!--------------------------------------党风廉政、双拥工作开始--------------------------------------->
+      <style>
+        .slideBox2{ width:100%; height:109px; overflow:hidden; position:relative; border:1px solid #ddd;  }
+        .slideBox2 .hd{ height:15px; overflow:hidden; position:absolute; right:10px; bottom:10px; z-index:1; }
+        .slideBox2 .hd ul{ overflow:hidden; zoom:1; float:left;  }
+        .slideBox2 .hd ul li{ float:left; margin-right:5px;  width:15px; height:15px; line-height:14px; text-align:center; background:#fff; cursor:pointer; }
+        .slideBox2 .hd ul li.on{ background:#f00; color:#fff; }
+        .slideBox2 .bd{ position:relative; height:100%; z-index:0;   }
+        .slideBox2 .bd img{ width:1090px; height:109px; }
+      </style>        
+      <style>
+        .w10 {width: 100%;border-top: #1b417d solid 2px;}
+        .w45 {width: 48%;overflow: hidden;}
+        .por {position: relative;}
+        .por>div{height: 236px;}/*11-320px*/
+        .por .more {position: absolute;top: 22px;right: 20px;color:#6e645f;}
+        .w45.por{background-color:white;padding:10px 16px;width:506px;}
+        .w45.por h2{border-bottom: #eeeeed solid 1px;}
+        .w45.por h2 span{padding: 8px 10px 8px 35px;margin-right: 10px;font-size:18px;color:#fff;font-weight:normal;}
+        .w45.por h2 ol li{float: left;height: 23px;padding: 5px 10px;font-weight: normal;text-align: center;}
+        .w45.por h2 ol li a{font-size:16px;}
+        .w45.por h2 ol li.cur {background: #ffffff;color: #1561af;border-bottom: solid 1px #1561af;}      
+      </style>
+      <div class="clearfix mgt15">
+        <div class="w45 fl por">
+          <h2 class="clearfix">
+            <span class="fl" style="background: #2c4480 url(/r/cms/site95/default/static/images/iconfont/iconfont_djgz.png)no-repeat 10px center/22px!important;">党风廉政</span>
+            <ol class="fl clearfix">
+              <li class="cur" style="padding-top: 7px;"> <a href="/djhd.html">党建活动</a> </li>
+              <li style="padding-top: 7px;" class=""> <a href="/wmcj.html">文明创建</a> </li>
+            </ol>                    
+          </h2>
+          <div class="boxTy01 gzdt_h ztzl" style="border: none;background: none;">
+            <div class="boxTy01_con" style="display: block;padding-top: 8px;">
+              <div class="div1">
+                <a class="more" href="/djhd.html">更多>></a>
+                <ul class="listTy02 font14 lh28">
+                  
+                    <li><span class="grey fr">03-20</span><a href="/djhd/20260320/30288925.html" target="_blank" title="党员进社区 创城我先行 ——太原市军休一所开展志愿服务活动 擦亮院区文明底色">党员进社区 创城我先行 ——太原市军休一所开展志愿服...</li>                    
+                    <li><span class="grey fr">03-09</span><a href="/djhd/20260309/30286593.html" target="_blank" title="太原市退役军人事务局部署开展树立和践行正确政绩观学习教育">太原市退役军人事务局部署开展树立和践行正确政绩观学...</li>                    
+                    <li><span class="grey fr">02-25</span><a href="/djhd/20260225/30284826.html" target="_blank" title="暖意融融迎新春 军民情深谱新篇——太原市退役军人事务局开展新春走访慰问驻并部队活动">暖意融融迎新春 军民情深谱新篇——太原市退役军人事...</li>                    
+                    <li><span class="grey fr">02-13</span><a href="/djhd/20260213/30283953.html" target="_blank" title="太原市退役军人事务局党组召开2025年度民主生活会">太原市退役军人事务局党组召开2025年度民主生活会</li>                    
+                    <li><span class="grey fr">02-13</span><a href="/djhd/20260213/30283924.html" target="_blank" title=" 太原市退役军人事务局联合市红十字会开展“红色宣讲暖人心 博爱送万家”
+春节慰问活动"> 太原市退役军人事务局联合市红十字会开展“红色宣讲...</li>                    
+                    <li><span class="grey fr">01-30</span><a href="/djhd/20260130/30281044.html" target="_blank" title="太原市军休三所召开2025年度支部书记抓基层党建工作述职评议会">太原市军休三所召开2025年度支部书记抓基层党建工作述...</li>                    
+                    <li><span class="grey fr">01-19</span><a href="/djhd/20260119/30278106.html" target="_blank" title="太原市退役军人事务局召开2025年度党组织书记抓基层党建工作述职评议会">太原市退役军人事务局召开2025年度党组织书记抓基层党...</li>                    
+                    <li><span class="grey fr">01-07</span><a href="/djhd/20260107/30275959.html" target="_blank" title="太原市退役军人事务局党组召开2026年工作谋划推进会">太原市退役军人事务局党组召开2026年工作谋划推进会</li>                    
+
+                </ul>                        
+              </div>
+            </div>
+            <div class="boxTy01_con" style="display: block;padding-top: 8px;">
+              <div class="div1">
+                <a class="more" href="/wmcj.html">更多>></a>
+                <ul class="listTy02 font14 lh28">
+                  
+                  <li><span class="grey fr">03-20</span><a href="/wmcj/20260320/30288942.html" target="_blank" title="党员进社区 创城我先行 ——太原市军休一所开展志愿服务活动 擦亮院区文明底色">党员进社区 创城我先行 ——太原市军休一所开展志愿服...</a></li>                    
+                  <li><span class="grey fr">03-09</span><a href="/wmcj/20260309/30286597.html" target="_blank" title="太原市军休二所：弘扬雷锋精神投身志愿服务">太原市军休二所：弘扬雷锋精神投身志愿服务</a></li>                    
+                  <li><span class="grey fr">02-25</span><a href="/wmcj/20260225/30284828.html" target="_blank" title="暖意融融迎新春 军民情深谱新篇——太原市退役军人事务局开展新春走访慰问驻并部队活动">暖意融融迎新春 军民情深谱新篇——太原市退役军人事...</a></li>                    
+                  <li><span class="grey fr">02-13</span><a href="/wmcj/20260213/30283925.html" target="_blank" title=" 太原市退役军人事务局联合市红十字会开展“红色宣讲暖人心 博爱送万家”
+春节慰问活动"> 太原市退役军人事务局联合市红十字会开展“红色宣讲...</a></li>                    
+                  <li><span class="grey fr">01-30</span><a href="/wmcj/20260130/30281141.html" target="_blank" title="太原市军休三所召开2025年度支部书记抓基层党建工作述职评议会">太原市军休三所召开2025年度支部书记抓基层党建工作述...</a></li>                    
+                  <li><span class="grey fr">01-19</span><a href="/wmcj/20260119/30278113.html" target="_blank" title="太原市退役军人事务局召开2025年度党组织书记抓基层党建工作述职评议会">太原市退役军人事务局召开2025年度党组织书记抓基层党...</a></li>                    
+                  <li><span class="grey fr">01-07</span><a href="/wmcj/20260107/30275965.html" target="_blank" title="军民同心庆元旦 双拥情深谱新篇">军民同心庆元旦 双拥情深谱新篇</a></li>                    
+                  <li><span class="grey fr">12-26</span><a href="/wmcj/20251226/30274272.html" target="_blank" title="军休二所为军休干部举办集体生日会">军休二所为军休干部举办集体生日会</a></li>                    
+
+                </ul>                        
+              </div>
+            </div>
+          </div>
+        </div>
+        <script>
+          $(".w45.por").tab({tabs: ">h2 ol li",evtype: "mouseover",box: ">.ztzl .boxTy01_con"});
+        </script>
+        <div class="w45 fr por">  
+          <h2 class="clearfix">
+            <span class="fl" style="background: #2c4480 url(/r/cms/site95/default/static/images/iconfont/iconfont_sygz.png)no-repeat 10px center/18px!important;">双拥工作</span>
+            <ol class="fl clearfix">
+              <li class="cur" style="padding-top: 7px;"> <a href="/syhd.html">双拥活动</a> </li>
+            </ol>                    
+          </h2>                
+          <div class="boxTy01 gzdt_h ztzl" style="border: none;background: none;">
+            <div class="boxTy01_con" style="display: block;padding-top: 8px;">
+              <div class="div1">
+                <a class="more" href="/syhd.html">更多>></a>
+                <ul class="listTy02 font14 lh28">
+                 
+                    <li><span class="grey fr">03-20</span><a href="/syhd/20260320/30288875.html" target="_blank" title="山西代表团传达学习贯彻习近平总书记在出席解放军和武警部队代表团全体会议时的重要讲话精神">山西代表团传达学习贯彻习近平总书记在出席解放军和武...</a></li>                    
+                    <li><span class="grey fr">03-09</span><a href="/syhd/20260309/30286621.html" target="_blank" title="太原市儿童福利院联合驻并某部队开展“军民一家亲”主题志愿服务活动
+">太原市儿童福利院联合驻并某部队开展“军民一家亲”主...</a></li>                    
+                    <li><span class="grey fr">02-25</span><a href="/syhd/20260225/30284829.html" target="_blank" title="暖意融融迎新春 军民情深谱新篇——太原市退役军人事务局开展新春走访慰问驻并部队活动">暖意融融迎新春 军民情深谱新篇——太原市退役军人事...</a></li>                    
+                    <li><span class="grey fr">02-13</span><a href="/syhd/20260213/30283932.html" target="_blank" title="锦旗载誉励前行 同心聚力谱新篇">锦旗载誉励前行 同心聚力谱新篇</a></li>                    
+                    <li><span class="grey fr">01-30</span><a href="/syhd/20260130/30281048.html" target="_blank" title="双拥情怀植于心 国防科普践于行">双拥情怀植于心 国防科普践于行</a></li>                    
+                    <li><span class="grey fr">01-19</span><a href="/syhd/20260119/30278126.html" target="_blank" title="太原市第五实验小学校开展双拥慰问活动">太原市第五实验小学校开展双拥慰问活动</a></li>                    
+                    <li><span class="grey fr">01-07</span><a href="/syhd/20260107/30276005.html" target="_blank" title="关于做好2026年元旦春节期间拥军优属 拥政爱民工作的通知
+">关于做好2026年元旦春节期间拥军优属 拥政爱民工作的...</a></li>                    
+                    <li><span class="grey fr">12-26</span><a href="/syhd/20251226/30274285.html" target="_blank" title="太原市体育局与驻并某部队联合开展“情系双拥 匠心筑梦”主题系列活动">太原市体育局与驻并某部队联合开展“情系双拥 匠心筑...</a></li>                    
+
+                </ul>                        
+              </div>
+            </div>
+          </div>                    
+        </div>
+        <script>
+          $(".w45.por").tab({tabs: ">h2 ol li",evtype: "mouseover",box: ">.ztzl .boxTy01_con"});
+        </script>
+      </div>
+	<!--------------------------------------党风廉政、双拥工作结束--------------------------------------->
+      <!--------------------------------------基层信息、信息公开开始--------------------------------------->
+      <div class="clearfix mgt15">
+        <div class="w45 fl por">
+          <h2 class="clearfix">
+            <span class="fl" style="background: #2c4480 url(/r/cms/site95/default/static/images/iconfont/iconfont_gzdt.png)no-repeat 10px center/24px!important;">基层信息</span>
+            <ol class="fl clearfix">
+              <li style="padding-top: 7px;" class=""> <a href="/qxdt.html">区县动态</a> </li>
+              <li class="cur" style="padding-top: 7px;"> <a href="/jzdt.html">局直动态</a> </li>
+            </ol>                    
+          </h2>
+          <div class="boxTy01 gzdt_h ztzl" style="border: none;background: none;">      
+            <div class="boxTy01_con" style="display: block;padding-top: 8px;">
+              <div class="div1">
+                <a class="more" href="/qxdt.html">更多>></a>
+                <ul class="listTy02 font14 lh28">
+                 
+                    <li><span class="grey fr">03-20</span><a href="/qxdt/20260320/30288892.html" target="_blank" title="古交市召开退役军人服务站站长工作会议">古交市召开退役军人服务站站长工作会议</li>                    
+                    <li><span class="grey fr">03-09</span><a href="/qxdt/20260309/30286614.html" target="_blank" title="万柏林区：政策宣讲进军营 精准服务助强军">万柏林区：政策宣讲进军营 精准服务助强军</li>                    
+                    <li><span class="grey fr">02-25</span><a href="/qxdt/20260225/30284832.html" target="_blank" title="尖草坪区：新春送喜报 尊崇暖军心">尖草坪区：新春送喜报 尊崇暖军心</li>                    
+                    <li><span class="grey fr">02-13</span><a href="/qxdt/20260213/30283955.html" target="_blank" title="清徐县开展“你为祖国守岁 我陪亲人过年”新春拥军优属主题活动">清徐县开展“你为祖国守岁 我陪亲人过年”新春拥军优...</li>                    
+                    <li><span class="grey fr">01-30</span><a href="/qxdt/20260130/30281071.html" target="_blank" title="万柏林区开展腊八节暖心慰问活动">万柏林区开展腊八节暖心慰问活动</li>                    
+                    <li><span class="grey fr">01-19</span><a href="/qxdt/20260119/30278131.html" target="_blank" title="万柏林区召开2025年退役士兵安置回访会议">万柏林区召开2025年退役士兵安置回访会议</li>                    
+                    <li><span class="grey fr">01-07</span><a href="/qxdt/20260107/30275997.html" target="_blank" title="邢家社乡举办退役军人政策法规宣传活动">邢家社乡举办退役军人政策法规宣传活动</li>                    
+                    <li><span class="grey fr">12-26</span><a href="/qxdt/20251226/30274286.html" target="_blank" title="浓浓饺子香 情暖老兵心——万柏林区开展退役军人冬至关爱活动  ">浓浓饺子香 情暖老兵心——万柏林区开展退役军人冬至...</li>                    
+
+                </ul>                        
+              </div>
+            </div>          
+            <div class="boxTy01_con" style="display: block;padding-top: 8px;">
+              <div class="div1">
+                <a class="more" href="/jzdt.html">更多>></a>
+                <ul class="listTy02 font14 lh28">
+               
+                    <li><span class="grey fr">03-20</span><a href="/jzdt/20260320/30288878.html" target="_blank" title="铭记英雄故事 点亮成长之路——太原解放纪念馆“开学第一课”">铭记英雄故事 点亮成长之路——太原解放纪念馆“开学...</li>                    
+                    <li><span class="grey fr">03-09</span><a href="/jzdt/20260309/30286600.html" target="_blank" title="太原市军休二所党委召开2025年度民主生活会">太原市军休二所党委召开2025年度民主生活会</li>                    
+                    <li><span class="grey fr">02-25</span><a href="/jzdt/20260225/30284831.html" target="_blank" title="新春送福至 慰问暖人心——春节走访慰问建国前老党员和生活困难党员">新春送福至 慰问暖人心——春节走访慰问建国前老党员...</li>                    
+                    <li><span class="grey fr">02-13</span><a href="/jzdt/20260213/30283939.html" target="_blank" title="军休一所携手双拥共建单位开展新春慰问军休干部活动">军休一所携手双拥共建单位开展新春慰问军休干部活动</li>                    
+                    <li><span class="grey fr">01-30</span><a href="/jzdt/20260130/30281052.html" target="_blank" title="太原解放纪念馆微视频斩获省级奖项">太原解放纪念馆微视频斩获省级奖项</li>                    
+                    <li><span class="grey fr">01-19</span><a href="/jzdt/20260119/30278128.html" target="_blank" title="太原市军休三所召开2026年度工作务虚务实融合推进会暨第一次党委（扩大）会
+
+">太原市军休三所召开2026年度工作务虚务实融合推进会暨...</li>                    
+                    <li><span class="grey fr">01-07</span><a href="/jzdt/20260107/30275964.html" target="_blank" title="军民同心庆元旦 双拥情深谱新篇">军民同心庆元旦 双拥情深谱新篇</li>                    
+                    <li><span class="grey fr">12-26</span><a href="/jzdt/20251226/30274292.html" target="_blank" title="军休二所为军休干部举办集体生日会">军休二所为军休干部举办集体生日会</li>                    
+
+                </ul>                        
+              </div>
+            </div>
+          </div>
+        </div>
+        <script>
+          $(".w45.por").tab({tabs: ">h2 ol li",evtype: "mouseover",box: ">.ztzl .boxTy01_con"});
+        </script>
+        <div class="w45 fr por">  
+          <h2 class="clearfix">
+            <span class="fl" style="background: #2c4480 url(/r/cms/site95/default/static/images/iconfont/iconfont_xxgk.png)no-repeat 10px center/19px!important;">信息公开</span>
+            <ol class="fl clearfix">
+              <li style="padding-top: 7px;" class=""> <a href="/zcjd.html">政策解读</a> </li>
+              <li class="cur" style="padding-top: 7px;"> <a href="/dwzz.html">单位职责</a> </li>
+              <li style="padding-top: 7px;" class=""> <a href="/nsjg.html">内设机构</a> </li>
+
+            </ol>                    
+          </h2>                
+          <div class="boxTy01 gzdt_h ztzl" style="border: none;background: none;height:176px;">
+            <div class="boxTy01_con" style="display: block;padding-top: 8px;">
+              <div class="div1">
+                <a class="more" href="/zcjd.html">更多>></a>
+                <ul class="listTy02 font14 lh28">
+                
+                    <li><span class="grey fr">03-10</span><a href="/zcjd/20260310/30286872.html" target="_blank" title="退役军人安置条例">退役军人安置条例</li>                    
+                    <li><span class="grey fr">12-23</span><a href="/zcjd/20251223/30273641.html" target="_blank" title="山西省军人抚恤优待实施办法">山西省军人抚恤优待实施办法</li>                    
+                    <li><span class="grey fr">08-19</span><a href="http://tyjrt.shanxi.gov.cn/gk_1166/xxgkml/zcfg_1180/202507/t20250721_9921727.html" target="_blank" title="关于扶持自主就业退役军人高质量充分就业创业的指导意见">关于扶持自主就业退役军人高质量充分就业创业的指导意见</li>                    
+                    <li><span class="grey fr">06-02</span><a href="/zcjd/20250602/30276509.html" target="_blank" title="山西省退役军人事务厅关于印发《退役军人 、其他优抚对象优待证管理实施办法》的通知">山西省退役军人事务厅关于印发《退役军人 、其他优抚...</li>                    
+                    <li><span class="grey fr">04-03</span><a href="/zcjd/20250403/30208505.html" target="_blank" title="《关于加快推进退役军人事务员职业技能等级认定的实施意见》政策解读">《关于加快推进退役军人事务员职业技能等级认定的实施...</li>                    
+                    <li><span class="grey fr">02-21</span><a href="/zcjd/20250221/30275807.html" target="_blank" title="山西省退役军人事务厅等4部门印发《关于促进优秀退役军人到中小学 任教的工作方案》的通知">山西省退役军人事务厅等4部门印发《关于促进优秀退役...</li>                    
+
+                </ul>                        
+              </div>
+            </div>           
+            <div class="boxTy01_con" style="display: block;padding-top: 8px;">
+              <div class="div1">
+                <a class="more" href="/dwzz.html">更多>></a>
+                <ul class="listTy02 font14 lh28">
+                  
+                    <li><span class="grey fr">09-16</span><a href="/dwzz/20250916/996840.html" target="_blank" title="单位职责">单位职责</li>                    
+
+                </ul>                        
+              </div>
+            </div>
+            <div class="boxTy01_con" style="display: block;padding-top: 8px;">
+              <div class="div1">
+                <a class="more" href="/nsjg.html">更多>></a>
+                <ul class="listTy02 font14 lh28">
+                 
+                    <li><span class="grey fr">09-16</span><a href="/nsjg/20250916/984696.html" target="_blank" title="内设机构">内设机构</a></li>                    
+
+                </ul>                        
+              </div>
+            </div> 
+          </div>  
+          <style>
+          	.gkbtn span{border:solid 1px #d4dcef;padding: 10px 15px 10px 34px;line-height: 60px;}
+          </style>
+          <div class="gkbtn" style="height:60px;"> 
+          	<span style="background: url(/r/cms/site95/default/static/images/zn.png)no-repeat 10px center/20px!important;"> <a href="/xxgkzn.html">信息公开指南</a> </span>
+            <span style="background: url(/r/cms/site95/default/static/images/zd.png)no-repeat 10px center/20px!important;"> <a href="/xxgkzd.html">信息公开制度</a> </span>
+            <span style="background: url(/r/cms/site95/default/static/images/nr.png)no-repeat 10px center/20px!important;"> <a href="/xxgkml.html">信息公开目录</a> </span>
+            <span style="background: url(/r/cms/site95/default/static/images/gb.png)no-repeat 10px center/20px!important;"> <a href="/ndbg.html">年度报告</a> </span>
+          </div>
+        </div>
+        <script>
+          $(".w45.por").tab({tabs: ">h2 ol li",evtype: "mouseover",box: ">.ztzl .boxTy01_con"});
+        </script>
+      </div>            
+	  <!--------------------------------------基层信息、信息公开结束--------------------------------------->    
+
+      <!-------------------------------------- 公共服务、交流互动开始---------------------------------------> 
+      <style>
+      	.div2>div{overflow: hidden;margin-bottom:10px;}
+      	.div2>div a{
+        	float:left;
+            padding:12px 81px 12px 81px;
+            margin-right:10px;
+            font-size:16px;
+            border:solid 1px #d4dcef;
+            color:#fff;
+            background:#5394cf;
+        }
+      </style>
+      <div class="clearfix mgt15">
+        <div class="w45 fl por">
+          <h2 class="clearfix">
+            <span class="fl" style="background: #2c4480 url(/r/cms/site95/default/static/images/iconfont/iconfont_zwfw.png)no-repeat 10px center/20px!important;">公共服务</span>
+          </h2>
+          <div class="boxTy01 gzdt_h ztzl" style="border: none;background: none;height:198px;">
+            <div class="boxTy01_con" style="display: block;padding-top: 8px;">
+              <div class="div1 div2 mgt15">
+                <a class="more" href="/ggfw.html">更多>></a>
+                <ul class="listTy02 font14 lh28">
+                 
+                    <li><span class="grey fr">03-20</span><a href="/jycy/20260320/30288895.html" target="_blank" title="铭记英雄故事 点亮成长之路——太原解放纪念馆“开学第一课”">铭记英雄故事 点亮成长之路——太原解放纪念馆“开学...</a></li>                    
+                    <li><span class="grey fr">03-09</span><a href="/jycy/20260309/30286616.html" target="_blank" title="万柏林区：政策宣讲进军营 精准服务助强军">万柏林区：政策宣讲进军营 精准服务助强军</a></li>                    
+                    <li><span class="grey fr">02-25</span><a href="/jycy/20260225/30284833.html" target="_blank" title="新春送福至 慰问暖人心——春节走访慰问建国前老党员和生活困难党员">新春送福至 慰问暖人心——春节走访慰问建国前老党员...</a></li>                    
+                    <li><span class="grey fr">02-13</span><a href="/jycy/20260213/30283956.html" target="_blank" title="军休一所携手双拥共建单位开展新春慰问军休干部活动">军休一所携手双拥共建单位开展新春慰问军休干部活动</a></li>                    
+                    <li><span class="grey fr">01-30</span><a href="/jycy/20260130/30281072.html" target="_blank" title="万柏林区开展腊八节暖心慰问活动">万柏林区开展腊八节暖心慰问活动</a></li>                    
+                    <li><span class="grey fr">01-28</span><a href="/jycy/20260128/30281370.html" target="_blank" title="太原市退役军人事务局召开“情暖老兵·健康守护”公益活动安排部署暨政策培训会">太原市退役军人事务局召开“情暖老兵·健康守护”公益...</a></li>                    
+
+                </ul>                
+              </div>
+            </div>
+          </div>
+        </div>    
+
+        <div class="w45 fr por">
+          <h2 class="clearfix">
+            <span class="fl" style="background: #2c4480 url(/r/cms/site95/default/static/images/iconfont/iconfont_hdjl.png)no-repeat 10px center/17px!important;">互动交流</span>                
+          </h2>                
+          <div class="boxTy01 gzdt_h ztzl" style="border: none;background: none;height:198px;">
+            <div class="boxTy01_con" style="display: block;padding-top: 8px;">
+				<div class="div1 div2 mgt15">
+					<a class="more" href="https://www.taiyuan.gov.cn/hdjl.html">更多>></a>
+					<div>
+						<a href="https://www.taiyuan.gov.cn/hdjl.html" >互动交流</a>
+						<a href="https://wsxf.mva.gov.cn:8090/letter_index/ " target="_blank">网上信访</a>
+					</div>
+				</div>
+            </div>  
+          </div>           
+        </div>     
+        <script>
+          $(".w45.por").tab({tabs: ">h2 ol li",evtype: "mouseover",box: ">.ztzl .boxTy01_con"});
+        </script>
+      </div>
+	  <!-------------------------------------- 公共服务、交流互动结束--------------------------------------->       
+      
+      <!--------------------------------------媒体动态开始---------------------------------------> 
+		<style type="text/css">
+          .slideBoxsp{ overflow:hidden; position:relative;  }
+          .slideBoxsp .bd{ }
+          .slideBoxsp .bd ul{ overflow:hidden; zoom:1;margin:0}
+          .slideBoxsp .bd ul li{float:left; display:inline; overflow:hidden; text-align:center;/*width:46.5%;*/margin:15px 15px auto auto;}
+          /*.slideBoxsp .bd ul li:nth-child(odd){margin-right:20px;}*/
+          .slideBoxsp .bd ul li:nth-child(4){margin-right:auto;}
+          .slideBoxsp .bd ul li .pic{ text-align:center; }
+          .slideBoxsp .bd ul li .pic video{ width:225px; height:auto; display:block; }
+          .slideBoxsp .bd ul li .pic a:hover img{ border-color:#999;  }
+          .slideBoxsp .bd ul li .title{ line-height:24px;   }
+		</style>      
+      <div class="clearfix mgt15">
+        <div class="w45 fl por" style="width: 97%;">
+          <h2 class="clearfix">
+            <span class="fl" style="background: #2c4480 url(/r/cms/site95/default/static/images/iconfont/iconfont_sp.png)no-repeat 10px center/18px!important;">媒体动态</span>               
+          </h2>
+          <div class="boxTy01 ztzl" style="border: none;background: none;height:174px;padding:0 10px;">
+            <div class="boxTy01_con" style="display: block;padding-bottom: 10px;">
+              <div class="div1">
+                <a class="more" href="/mtdt.html">更多>></a>
+                <div id="slideBox" class="slideBoxsp">
+                  <!--<div class="hd"></div>-->
+                  <div class="bd">
+                    <ul>
+                                       
+                      <li>
+                        <div class="pic">
+                                        <a href="/mtdt/20240407/30116484.html">
+                                            <img style="width:248px;height:142px;" src="/u/cms/site95/202404/0716101368so.jpg">
+                                        </a>
+                                      </div>
+                        <div class="title">
+                                        <a href="/mtdt/20240407/30116484.html">他的遗骸与树根缠在...</a>
+                                      </div>                    
+                                  </li>
+
+                      <li>
+                        <div class="pic">
+                                        <a href="http://www.mva.gov.cn/sy/shipin/202112/t20211230_54865.html">
+                                            <img style="width:248px;height:142px;" src="/uploadfiles/202201/13/2022011310592134231653.png">
+                                        </a>
+                                      </div>
+                        <div class="title">
+                                        <a href="http://www.mva.gov.cn/sy/shipin/202112/t20211230_54865.html">不凡之年的奋斗答卷...</a>
+                                      </div>                    
+                                  </li>
+
+                      <li>
+                        <div class="pic">
+                                        <a href="/mtdt/20211012/1142359.html">
+                                            <img style="width:248px;height:142px;" src="/uploadfiles/202110/12/2021101215443099908201.png">
+                                        </a>
+                                      </div>
+                        <div class="title">
+                                        <a href="/mtdt/20211012/1142359.html">退役军人普法工作怎...</a>
+                                      </div>                    
+                                  </li>
+
+                      <li>
+                        <div class="pic">
+                                        <a href="/mtdt/20210317/1032223.html">
+                                            <img style="width:248px;height:142px;" src="/uploadfiles/202104/12/2021041211262829894541.png">
+                                        </a>
+                                      </div>
+                        <div class="title">
+                                        <a href="/mtdt/20210317/1032223.html">退役军人事务部与全...</a>
+                                      </div>                    
+                                  </li>
+
+                      <li>
+                        <div class="pic">
+                                        <a href="/mtdt/20210304/1028796.html">
+                                            <img style="width:248px;height:142px;" src="/uploadfiles/202104/12/2021041211271982558464.png">
+                                        </a>
+                                      </div>
+                        <div class="title">
+                                        <a href="/mtdt/20210304/1028796.html">退役军人事务部组织...</a>
+                                      </div>                    
+                                  </li>
+
+
+                    </ul>
+                  </div>
+                </div>
+                <!--<script type="text/javascript">jQuery(".slideBoxsp").slide({mainCell:".bd ul",autoPlay:true,effect:"leftMarquee",vis:4,interTime:50,trigger:"click"});</script>-->
+              </div>
+            </div>
+          </div>
+        </div>         
+        
+      </div>
+	  <!--------------------------------------媒体动态结束--------------------------------------->     
+            <!--------------------------------------风采开始--------------------------------------->    
+      <div class="mgt20">
+        <h2 class="clearfix" style="font-size: 25px;font-family: '黑体';padding: 12px 0 0 10px;border-top: #1b417d solid 2px; color:#015293;">风采</h2>
+        <div class="boxTy04_con clearfix">
+
+          <div class="leftLoop fl fengcai" style="width:1070px;margin:10px 10px;color:#015293;position: relative;">
+            <div class="hd" style="display:none;">
+              <a class="next"></a>
+              <a class="prev"></a>   
+            </div>  
+            <div class="bd">
+              <ul class="picList">
+                <li>
+                  <div class="pic">
+                    <a href="http://www.chinamartyrs.gov.cn/" target="_blank">
+                      <img src="/r/cms/site95/default/static/images/gdtup/a1.png" />
+                      <span class="tips">烈士英名录</span>  
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="pic">
+                    <a href="http://www.chinamartyrs.gov.cn/" target="_blank">
+                      <img src="/r/cms/site95/default/static/images/gdtup/a2.png" />
+                      <span class="tips">华夏丰碑</span> 
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="pic">
+                    <a href="/mtdt.html" target="_blank">
+                      <img src="/r/cms/site95/default/static/images/gdtup/a3.png" />
+                      <span class="tips">退役军人风采</span>
+                    </a>
+                  </div>
+                </li>
+                <li style="margin:0;">
+                  <div class="pic">
+                    <a href="/sygz.html" target="_blank">
+                      <img src="/r/cms/site95/default/static/images/gdtup/a4.png" />
+                      <span class="tips">双拥文化</span>                                
+                    </a>
+                  </div>
+                </li>                        
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--------------------------------------风采结束---------------------------------------> 
+    </div>
+    <script type="text/javascript"> 
+      $(function(){
+        $(".uproll01").myScrollTop(50);
+        $(".uproll02").myScrollTop(50);
+      })
+    </script> 
+<div id="foot" class="white">
+  <p>太原市退役军人事务局&nbsp;&nbsp;版权所有&emsp;&emsp;<!--<a href="/wzdt.html">
+      网站地图--></p>
+  <p>地址：太原市迎泽区侯家巷19号&nbsp;&nbsp;电话：0351-8063052&nbsp;&nbsp;邮编：030012&nbsp;&nbsp;</p>
+  <p><a href="https://beian.miit.gov.cn/">晋ICP备05003854号</a> &nbsp;&nbsp;访问统计,网站总访问量：<em id="pvTotal"></em>
+    <script src="/r/cms/site95/default/js/front.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+      $(function () {
+        Cms.siteFlow("");
+      });
+    </script>
+  </p>
+  <p><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=14010002001529"><span class="fix_bg"><img
+          src="/r/cms/site95/default/static/images/jinghui.png" /></span>&nbsp;&nbsp;晋公网安备
+      14010002001529号</a>&emsp;&emsp;网站标识码：1401000069</p>
+  <p><a href="http://bszs.conac.cn/sitename?method=show&id=BACE4C9B327A841FE05310291AAC388A" class="fix_bg"><img
+        src="/r/cms/site95/default/static/images/red.png" /></a>
+    <span>
+      
+      <script id="_jiucuo_" sitecode='1401000069'></script>
+      <script>
+        //在页面增加一个放置图标的区块
+          if(!document.getElementById('_span_jiucuo'))
+            document.write("<span id='_span_jiucuo'></span>");
+
+          //获取放置图标的区块
+          var span_msg = document.getElementById("_span_jiucuo");
+
+          //获取站点标识码
+          var sitecode = document.getElementById("_jiucuo_").attributes["sitecode"].value;
+          //生成纠错图标及点击链接
+          span_msg.innerHTML = "<img onclick=\"Link('" + sitecode + "')\" style='margin-top:12px;border:0;cursor: pointer;' src='/r/cms/site95/default/static/images/jiucuo.png?v="+sitecode+"'/>";
+
+          //点击图标
+          function Link(site_code) {
+            //获取该站点需要纠错页面的url地址
+            var url = getCurrUrl();
+            //跳转至纠错系统填写页面 
+            window.open("http://121.43.68.40/exposure/jiucuo.html?site_code=" + site_code + "&url=" + encodeURIComponent(url));
+          }
+          //获取该站点需要纠错页面的url地址
+          function getCurrUrl() {
+            var url = "";
+            if (parent !== window) {
+              try {
+                url = window.top.location.href;
+              } catch (e) {
+                url = window.top.document.referrer;
+              }
+            }
+            if (url.length == 0)
+              url = document.location.href;
+
+            return url;
+          }
+
+      </script>
+    </span>
+  </p>
+</div>
+
+  </body>
+</html>

@@ -1,0 +1,1503 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    
+    <meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="stylesheet" type="text/css" href="/cms_files/webhuzhoushishichangjianduguanliju/pubtplobject/defaultSet/687452/images/css.css" />
+    <link rel="stylesheet" type="text/css" href="/cms_files/webhuzhoushishichangjianduguanliju/pubtplobject/defaultSet/687452/images/mo-css.css" />
+    <!--[if IE 8]> 
+<style>
+.swiper-slide{
+
+margin-left:12px
+}
+.c select{
+background:none
+}
+</style>
+<![endif]-->
+    <!--[if IE 7]> 
+<style>
+.w{
+width:1172px
+}
+.swiper-slide{
+
+margin-left:14px
+}
+.nav{
+width:1242px
+}
+.nav a{
+width:206px
+}
+.b{
+z-index:999
+}
+</style>
+<![endif]-->
+    <style>
+        /* banner */
+        .main-banner {
+            overflow: hidden;
+            position: relative;
+        }
+
+        .main-banner_box img {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* 轮播 */
+        .main-banner_warp {
+            overflow: hidden;
+            display: inline;
+        }
+
+        .main-banner_box {
+            overflow: hidden;
+        }
+
+        .main-banner_box li {
+            margin-right: 13px;
+            width: 270px;
+            height: 85px;
+        }
+
+        /* .next,
+.prev {display: inline-block;height:85px;line-height: 85px;position: absolute;top: 0px;width: 11px; cursor: pointer;}
+.next {left: 0px;background: url("") no-repeat center}
+.prev {right: 0;background: url("") no-repeat center}
+ */
+        .main1 a:hover {
+            color: #d42b2b
+        }
+
+        .main5 {
+            margin-bottom: 0px;
+        }
+
+        .swiper-container {
+            height: 100%
+        }
+
+        .swiper-slide,
+        .swiper-slide img {
+            width: 270px;
+            height: 85px;
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            display: none
+        }
+
+        .swiper-container:hover .swiper-button-next {
+            display: block
+        }
+
+        .swiper-container:hover .swiper-button-prev {
+            display: block
+        }
+    </style>
+    <style type="text/css">
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        ul,
+        li,
+        p {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        /* 横向过渡 type: 'x' */
+        .cxslide_x {
+            overflow: hidden;
+            position: relative;
+            width: 600px;
+            height: 360px
+        }
+
+        .cxslide_x a {
+            color: #eee;
+            text-decoration: none;
+        }
+
+        .cxslide_x .box {
+            overflow: hidden;
+            position: relative;
+            width: 600px;
+            height: 360px
+        }
+
+        .cxslide_x .list {
+            overflow: hidden;
+            width: 9999px;
+        }
+
+        .cxslide_x .list li {
+            float: left;
+            position: relative;
+            width: 600px;
+        }
+
+        .cxslide_x .list img {
+            vertical-align: top;
+            width: 600px;
+            height: 360px
+        }
+
+        .cxslide_x .list p {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50px;
+            color: #eee;
+            font: 16px/50px arial;
+            text-indent: 12px;
+            filter: progid:DXImageTransform.Microsoft.gradient(enabled='true', startColorstr='#99000000', endColorstr='#99000000');
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .cxslide_x .btn {
+            overflow: hidden;
+            position: absolute;
+            bottom: 16px;
+            right: 20px;
+        }
+
+        .cxslide_x .btn li {
+            float: left;
+            width: 10px;
+            height: 10px;
+            margin: 0 0 0 8px;
+            border-radius: 50%;
+            background: #868384;
+            color: #333;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .cxslide_x .btn li.selected {
+            background: #fff;
+            color: #fff;
+        }
+
+        .cxslide_x .minus,
+        .cxslide_x .plus {
+            position: absolute;
+            top: 110px;
+            width: 40px;
+            height: 50px;
+            background-repeat: no-repeat;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .cxslide_x .minus {
+            left: 0;
+            background-position: 0 0;
+        }
+
+        .cxslide_x .plus {
+            right: 0;
+            background-position: -40px 0;
+        }
+
+        .cxslide_x .minus:hover {
+            background-position: 0 -50px;
+        }
+
+        .cxslide_x .plus:hover {
+            background-position: -40px -50px;
+        }
+
+        .se {
+            height: 79px;
+            width: 100%;
+            background: #064e9f;
+            border-bottom: 1px solid #1362ba;
+            margin-top: 20px
+        }
+
+        .foot {
+            margin-top: 0px
+        }
+
+        .c {
+            padding: 20px
+        }
+
+        .yqlj {
+            float: left;
+            color: #a2d8fe;
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 39px;
+
+        }
+
+        .c .s {
+            float: left;
+            width: 310px;
+            height: 36px;
+            background: url("/cms_files/webhuzhoushishichangjianduguanliju/pubtplobject/defaultSet/687452/images/s-bg.png");
+            line-height: 36px;
+            text-indent: 1em;
+            cursor: pointer;
+        }
+
+        #l5:hover .wwx {
+            display: block
+        }
+
+        .tempWrap {
+            width: 1120px !important;
+            margin-right: 21px;
+        }
+
+        .cas {
+            float: left;
+            position: relative;
+            width: 310px;
+            height: 36px;
+            margin-right: 62px;
+        }
+
+        .b {
+            width: 310px;
+            height: 200px;
+            background: #fff;
+            position: absolute;
+            left: 0;
+            top: -200px;
+            overflow: auto;
+            padding: 5px;
+            display: none;
+            z-index: 999;
+        }
+
+        .b a {
+            text-indent: 0.5em;
+            float: left;
+            width: 100%
+        }
+
+        .cas:hover .b {
+            display: block
+        }
+
+        .hdjl {
+            width: 100px !important;
+        }
+
+        .hdjl div {
+            width: 100px !important;
+        }
+    </style>
+<script src="/cms_files/default/script/jslib/jquery.js"></script>
+ <script src="/cms_files/default/script/jslib/jquery.cookie.js"></script>
+ <script src="/cms_files/default/script/layui/layui.all.js"></script>
+ <script src="/cms_files/default/script/layui/layer/layer.js"></script>
+ <script src="/script/webglobal.js"></script>
+ <script src="/plugins/libs/require.js"></script>
+ <script src="/plugins/libs/load.js"></script>
+ <script src="/script/webgray.js"></script>
+ <script src="/script/webgray_W78cPWjrhDXU9Vs5KokGX.js"></script>
+ <link rel="stylesheet" href="/cms_files/default/css/iconfont.css" />
+<link rel="stylesheet" href="/cms_files/default/script/layui/css/layui.css" />
+<title>湖州市市场监督管理局</title>
+<meta name="ColId" content="W78cPWjrhDXU9Vs5KokGX">
+<meta name="SiteName" content="湖州市市场监督管理局">
+<meta name="SiteDomain" content="scjgj.huzhou.gov.cn">
+<meta name="SiteIDCode" content="3305000030">
+<meta name="server" content="scjgj.huzhou.gov.cn/index.html">
+<meta id="pagetype" content="0">
+</head>
+<script src="/cms_files/jcms1/web3654/site/script/1012/2007301151536322.js"></script>
+<script src="/cms_files/jcms1/web3654/site/script/1012/2007301151531904.js"></script>
+
+<body><div id='barrierfree_container' pageTimestamp= '1774429992748'>
+
+
+    <script src="/cms_files/jcms1/web3641/site/script/0/2106251826053975.js"></script>
+
+    <!--头部通用JS-->
+<script src="/cms_files/jcms1/web3654/site/script/1012/2007301147468427.js"></script> <style>
+  .elder .cxslide_x .btn li{width:40px !important;height:40px !important;line-height:40px;}
+  .elder .cxslide_x .btn .selected{color:#333}
+  .elder .l-ul li a img{height:145px !important;}
+</style>
+
+
+
+<script>
+var authorizedReadUnitId = "a056d33fadc348fa95dcaf85820b08b1";
+</script><script id="a056d33fadc348fa95dcaf85820b08b1" src="/cms_files/default/script/AuthorizedRead/unitbuild.js?v=4.5.12.1-ZJSJYH-U35" webId="3654" parseType="bulidstatic" url="/api-gateway/jpaas-publish-server/front/page/build/unit" queryData="{'parseType':'bulidstatic','webId':'3654','tplSetId':'wZhqqgu8VqUVyPREj9NYT','pageType':'channel','tagId':'省要闻','editType':'null','pageId':'W78cPWjrhDXU9Vs5KokGX'}"></script>
+
+
+    <div class="main w">
+        <div class="main2">
+            <!--轮播图-->
+            <div class="banner" style="background: #eee !important;">
+
+
+<div class="banner" style="background: #eee !important;">
+<div id="cxslide_id" class="cxslide_x">
+<div class="box">
+<ul class="list"> 
+
+
+<li>
+<a href="/col/col1229209808/art/2026/art_f3b6c8ae07fe43aba514e36d9edbb530.html" title="市委改革办来我局开展专题调研" target="_blank">
+<img src="/cms_files/filemanager/1572930/picture/20263/938d683c90674bd58def850985455668.jpeg" border="0" width="368" height="230">
+</a>
+<p title="市委改革办来我局开展专题调研">市委改革办来我局开展专题调研</p>
+</li>
+
+
+<li>
+<a href="/col/col1229209808/art/2026/art_871613e278b4490ba3648f145cc77871.html" title="全市市场监管工作座谈会暨品牌建设工作第一次例会召开" target="_blank">
+<img src="/cms_files/filemanager/1572930/picture/20263/00721a7e4e5b4ec8aff9483d713b8e5c.jpg" border="0" width="368" height="230">
+</a>
+<p title="全市市场监管工作座谈会暨品牌建设工作第一次例会召开">全市市场监管工作座谈会暨品牌建设工作第一次例会召开</p>
+</li>
+
+
+<li>
+<a href="/col/col1229209808/art/2026/art_f0722b7f732842dabdf5dc020acdb91d.html" title="湖州举行纪念“国际消费者权益日”现场发布会暨“3·15放心消费嘉年华”公益活动" target="_blank">
+<img src="/cms_files/filemanager/1572930/picture/20263/ebb79368c2df411ab33acd7d3ac04606.jpg" border="0" width="368" height="230">
+</a>
+<p title="湖州举行纪念“国际消费者权益日”现场发布会暨“3·15放心消费嘉年华”公益活动">湖州举行纪念“国际消费者权益日”现场发布会暨“3·15放心消...</p>
+</li>
+
+
+<li>
+<a href="/col/col1229209808/art/2026/art_79f6889c6bda4831a88dd6969188a9cd.html" title="市市场监管局赴安吉开展工作调研" target="_blank">
+<img src="/cms_files/filemanager/1572930/picture/20262/ae06db8f485343ffbdd2386a639fda24.jpg" border="0" width="368" height="230">
+</a>
+<p title="市市场监管局赴安吉开展工作调研">市市场监管局赴安吉开展工作调研</p>
+</li>
+
+
+</ul>
+</div>
+</div>
+
+</div>
+<script src="/cms_files/jcms1/web3654/site/script/1012/2007301536509787.js"></script>
+            </div>
+            <!--栏目切换-->
+            <div class="news">
+                <div class="news-top clearfix">
+                    <div class="line" id="news-top">
+<a href="/col/col1229209808/index.html" class="on">监管快讯</a>
+
+<a href="/col/col1229209809/index.html">区县动态</a>
+
+<a href="/col/col1229209810/index.html">媒体聚焦</a>
+
+
+                    </div>
+                    <div class="gd">
+<a href="/col/col1229209808/index.html" class="">更多 <span class="img"></span> </a>
+
+<a href="/col/col1229209809/index.html" class="hide">更多 <span class="img"></span> </a>
+
+<a href="/col/col1229209810/index.html" class="hide">更多 <span class="img"></span> </a>
+
+
+                    </div>
+                </div>
+                <div class="news-body" id="news-body">
+                    <ul>
+
+<li>
+  <a href="/col/col1229209808/art/2026/art_f3b6c8ae07fe43aba514e36d9edbb530.html" target="_blank" title="市委改革办来我局开展专题调研">
+  市委改革办来我局开展专题调研
+  <span>
+    03-25
+  </span>
+   </a>
+</li>
+
+
+<li>
+  <a href="/col/col1229209808/art/2026/art_5a615b56af7c49f9ac41bfcfa7d779cc.html" target="_blank" title="全市大气污染防治领域专项巡察工作动员会召开">
+  全市大气污染防治领域专项巡察工作动员会召开
+  <span>
+    03-23
+  </span>
+   </a>
+</li>
+
+
+<li>
+  <a href="/col/col1229209808/art/2026/art_871613e278b4490ba3648f145cc77871.html" target="_blank" title="全市市场监管工作座谈会暨品牌建设工作第一次例会召开">
+  全市市场监管工作座谈会暨品牌建设工作第一次例会召开
+  <span>
+    03-16
+  </span>
+   </a>
+</li>
+
+
+<li>
+  <a href="/col/col1229209808/art/2026/art_f0722b7f732842dabdf5dc020acdb91d.html" target="_blank" title="湖州举行纪念“国际消费者权益日”现场发布会暨“3·15放心消费嘉年华”公益活动">
+  湖州举行纪念“国际消费者权益日”现场发布会暨“3·...
+  <span>
+    03-16
+  </span>
+   </a>
+</li>
+
+
+<li>
+  <a href="/col/col1229209808/art/2026/art_79f6889c6bda4831a88dd6969188a9cd.html" target="_blank" title="市市场监管局赴安吉开展工作调研">
+  市市场监管局赴安吉开展工作调研
+  <span>
+    03-09
+  </span>
+   </a>
+</li>
+
+
+<li>
+  <a href="/col/col1229209808/art/2026/art_03a73348581e40a695a24bdbfdb262c8.html" target="_blank" title="我市深入推进标准化战略驱动产业提质升级">
+  我市深入推进标准化战略驱动产业提质升级
+  <span>
+    03-02
+  </span>
+   </a>
+</li>
+
+
+<li>
+  <a href="/col/col1229209808/art/2026/art_27ffd2d9a53c4e3181955d8e2e2780a4.html" target="_blank" title="湖州加强小餐饮环境卫生监督治理，守牢食品安全防线">
+  湖州加强小餐饮环境卫生监督治理，守牢食品安全防线
+  <span>
+    02-24
+  </span>
+   </a>
+</li>
+
+
+<li>
+  <a href="/col/col1229209808/art/2026/art_e757d9c050e04a38ad64ed8e6ae03616.html" target="_blank" title="湖州探索“小过快处”办案模式破解“小案件”办理难">
+  湖州探索“小过快处”办案模式破解“小案件”办理难
+  <span>
+    02-10
+  </span>
+   </a>
+</li>
+
+
+                    </ul>
+                    <ul class="hide">
+
+<li>
+  <a href="/col/col1229209809/art/2026/art_a0947bd5bf0146f4bc6105c86c910f32.html" target="_blank" title="安吉全链条治理助推电商产业健康发展">
+  安吉全链条治理助推电商产业健康发展
+  <span>
+    03-23
+  </span>
+   </a>
+</li>
+
+
+<li>
+  <a href="/col/col1229209809/art/2026/art_c9fb9951e99b430aace457fec7ff1c70.html" target="_blank" title="南浔探索湖笔产业化新路径打破“内卷式”竞争">
+  南浔探索湖笔产业化新路径打破“内卷式”竞争
+  <span>
+    03-16
+  </span>
+   </a>
+</li>
+
+
+<li>
+  <a href="/col/col1229209809/art/2026/art_acd1ae67084843b1ba65d53091924588.html" target="_blank" title="吴兴启动民生实事培考并举筑牢校园食安防线">
+  吴兴启动民生实事培考并举筑牢校园食安防线
+  <span>
+    03-06
+  </span>
+   </a>
+</li>
+
+
+<li>
+  <a href="/col/col1229209809/art/2026/art_1338a4d18ea84c349cb9fa6727ab4b55.html" target="_blank" title="德清稳步开展长期未经营或停止经营企业“出清”工作">
+  德清稳步开展长期未经营或停止经营企业“出清”工作
+  <span>
+    03-02
+  </span>
+   </a>
+</li>
+
+
+<li>
+  <a href="/col/col1229209809/art/2026/art_f7543935040045c09482bbf2727940b0.html" target="_blank" title="长兴高质量完成2025年市县政府民生实事项目">
+  长兴高质量完成2025年市县政府民生实事项目
+  <span>
+    02-24
+  </span>
+   </a>
+</li>
+
+
+<li>
+  <a href="/col/col1229209809/art/2026/art_0ed452532c81468fa4e7e7989c32211f.html" target="_blank" title="南浔以食品安全快检守护民生“大幸福”">
+  南浔以食品安全快检守护民生“大幸福”
+  <span>
+    02-10
+  </span>
+   </a>
+</li>
+
+
+<li>
+  <a href="/col/col1229209809/art/2026/art_2c8de0c6ffe74cfba42f76a0fe21f3cf.html" target="_blank" title="德清创新“公证继承+股权变更”一件事联办入选省发改委营商环境“微改革”案例">
+  德清创新“公证继承+股权变更”一件事联办入选省发改...
+  <span>
+    02-02
+  </span>
+   </a>
+</li>
+
+
+<li>
+  <a href="/col/col1229209809/art/2026/art_565cf82f472744378cbbbc697ebf9389.html" target="_blank" title="安吉“百姓点检”走进水果种植基地">
+  安吉“百姓点检”走进水果种植基地
+  <span>
+    01-26
+  </span>
+   </a>
+</li>
+
+
+                    </ul>
+                    <ul class="hide">
+
+<li>
+  <a href="/col/col1229209810/art/2026/art_c4dbb4e5f1f14b8bb97f9a6f9bd90d2f.html" target="_blank" title="为“小过失”找到“最优解”浙江湖州实施“小过快处”传递执法温度">
+  为“小过失”找到“最优解”浙江湖州实施“小过快处”...
+  <span>
+    03-23
+  </span>
+   </a>
+</li>
+
+
+<li>
+  <a href="/col/col1229209810/art/2026/art_ec83ea6c83d340978ce8a151d317d224.html" target="_blank" title="16家企业创建国家知识产权示范企业">
+  16家企业创建国家知识产权示范企业
+  <span>
+    03-16
+  </span>
+   </a>
+</li>
+
+
+<li>
+  <a href="/col/col1229209810/art/2026/art_69d85ce34d4f4254b51739a0a82bb328.html" target="_blank" title="湖州质检院“技术巡诊”破解地板企业痛点">
+  湖州质检院“技术巡诊”破解地板企业痛点
+  <span>
+    03-05
+  </span>
+   </a>
+</li>
+
+
+<li>
+  <a href="/col/col1229209810/art/2026/art_efabdaafc003470aa191db74c00e6200.html" target="_blank" title="立“竹”优势  “碳”索转型
+浙江湖州竹木制品产业推进碳足迹认证试点显成效">
+  立“竹”优势  “碳”索转型
+浙江湖州竹木制品产业...
+  <span>
+    03-02
+  </span>
+   </a>
+</li>
+
+
+<li>
+  <a href="/col/col1229209810/art/2026/art_27b8dbf72615447281f100e32bee86d6.html" target="_blank" title="药品监管守安全护民生  公众满意度连续三年稳居全省第二">
+  药品监管守安全护民生  公众满意度连续三年稳居全省...
+  <span>
+    02-24
+  </span>
+   </a>
+</li>
+
+
+<li>
+  <a href="/col/col1229209810/art/2026/art_4401486e244544b1ad690bd12629f05f.html" target="_blank" title="下线即检验合格即发车
+湖州特检院上门检验助力企业降本增效">
+  下线即检验合格即发车
+湖州特检院上门检验助力企业降...
+  <span>
+    02-10
+  </span>
+   </a>
+</li>
+
+
+<li>
+  <a href="/col/col1229209810/art/2026/art_d9b97cafcf0a44069b3d7984e217758c.html" target="_blank" title="青梅果香飘万里 品牌赋能产业兴">
+  青梅果香飘万里 品牌赋能产业兴
+  <span>
+    02-02
+  </span>
+   </a>
+</li>
+
+
+<li>
+  <a href="/col/col1229209810/art/2026/art_d8e8f56a015545b39bce6b3577d3f19b.html" target="_blank" title="湖州创新打造“食安险+金融”模式    一百余亿元保额筑起风险防控“堤坝”">
+  湖州创新打造“食安险+金融”模式    一百余亿元...
+  <span>
+    01-26
+  </span>
+   </a>
+</li>
+
+
+                    </ul>
+                    <ul class="hide">
+
+
+                    </ul>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="main1">
+  
+  <img width="100%" height="75" src="/cms_files/jcms1/web3654/site/picture/0/2309111719093475607.jpg">
+  
+   
+        </div>
+        <!--公告公示-->
+        <div class="main3">
+            <div class="gggs tab2">
+                <div class="news-top clearfix">
+                    <div class="line" id="gggs-top">
+<a href="/col/col1229209813/index.html" class="oon">公示公告</a>
+
+<a href="http://scjgj.huzhou.gov.cn/col/col1229512929/index.html?number=%E9%83%A8%E9%97%A8%E6%96%87%E4%BB%B6" class="title-bmwj">部门文件</a>
+
+                    </div>
+                    <div class="gd gdd ">
+<a href="/col/col1229209813/index.html" class="">更多 <span class="img"></span> </a>
+
+<a href="http://scjgj.huzhou.gov.cn/col/col1229512929/index.html?number=%E9%83%A8%E9%97%A8%E6%96%87%E4%BB%B6" class="hide more-bmwj">更多 <span class="img "></span> </a>
+
+                    </div>
+                </div>
+                <div class="news-body" id="gggs-body">
+                    <ul>
+
+<li>
+  <a href="/col/col1229209813/art/2026/art_b64623c58daf4ee789d83c9064fc3b98.html" target="_blank" title="湖州市市场监督管理局湖州南太湖新区分局关于拟对湖州城区王记水果批发部等1075户个体工商户另册管理的公告（第二批）">
+  湖州市市场监督管理局湖州南太湖新区分...
+  <span>
+    03-23
+  </span>
+   </a>
+</li>
+
+
+<li>
+  <a href="/col/col1229209813/art/2026/art_a4451177de754dd89dd0808413b20a9a.html" target="_blank" title="湖州市市场监督管理局湖州南太湖新区分局关于拟对湖州凤凰御清堂副食品店等637户个体工商户另册管理的公告（第一批）">
+  湖州市市场监督管理局湖州南太湖新区分...
+  <span>
+    03-17
+  </span>
+   </a>
+</li>
+
+
+<li>
+  <a href="/col/col1229209813/art/2026/art_033ae06e7d3d4205a2a9acf70dff48b9.html" target="_blank" title="关于公开征集湖州市质量与标准化协会标准化专家的通知">
+  关于公开征集湖州市质量与标准化协会标...
+  <span>
+    03-10
+  </span>
+   </a>
+</li>
+
+
+<li>
+  <a href="/col/col1229209813/art/2026/art_76b2c65a9b384c419a1fd4e817adc85e.html" target="_blank" title="湖州市市场监督管理局行政处罚听证公告">
+  湖州市市场监督管理局行政处罚听证公告
+  <span>
+    03-09
+  </span>
+   </a>
+</li>
+
+
+<li>
+  <a href="/col/col1229209813/art/2026/art_ad2be9051b684dfb884c32739ad4553c.html" target="_blank" title="事业单位拟注销公告">
+  事业单位拟注销公告
+  <span>
+    01-27
+  </span>
+   </a>
+</li>
+
+
+                    </ul>
+                    <ul class="hide list-bmwj">
+
+<li>
+  <a href="/col/col1229515948/art/2026/art_c7b94e5a343242faa6b0e6577840ce7f.html" target="_blank" title="湖州市食品药品安全委员会关于印发2026年湖州市食品药品安全工作要点的通知">
+  湖州市食品药品安全委员会关于印发20...
+  <span>
+    03-23
+  </span>
+   </a>
+</li>
+
+
+<li>
+  <a href="/col/col1229515948/art/2026/art_3e05bb55a5bb4c379203c3bb81c3ef98.html" target="_blank" title="湖州市市场监督管理局关于2025年度全市电梯维保单位综合量化记分评定结果的通报">
+  湖州市市场监督管理局关于2025年度...
+  <span>
+    02-13
+  </span>
+   </a>
+</li>
+
+
+<li>
+  <a href="/col/col1229515948/art/2025/art_580f8edc2ce84903a1e05c9c233f936a.html" target="_blank" title="湖州市市场监督管理局关于2025年度第二次电梯维保质量监督抽查结果的通报">
+  湖州市市场监督管理局关于2025年度...
+  <span>
+    12-25
+  </span>
+   </a>
+</li>
+
+
+<li>
+  <a href="/col/col1229515948/art/2025/art_23c19ec6486646159ef1216448ffba44.html" target="_blank" title="关于公布《质量专利助企成长服务手册》涉及政策的通知">
+  关于公布《质量专利助企成长服务手册》...
+  <span>
+    06-24
+  </span>
+   </a>
+</li>
+
+
+<li>
+  <a href="/col/col1229515948/art/2025/art_501608683.html" target="_blank" title="湖州市市场监督管理局关于2025年度首次电梯维保质量监督抽查结果的通报">
+  湖州市市场监督管理局关于2025年度...
+  <span>
+    06-13
+  </span>
+   </a>
+</li>
+
+
+                    </ul>
+                </div>
+            </div>
+            <!--抽检信息-->
+            <div class="gggs tab3">
+                <div class="news-top clearfix">
+                    <div class="line" id="jdcc">
+<a href="/col/col1229209814/index.html" class="oon">监督抽检</a>
+
+<a href="http://scjgj.huzhou.gov.cn/col/col1229512929/index.html?number=%E6%84%8F%E8%A7%81%E5%BE%81%E9%9B%86" class="title-yjzj">意见征集</a>
+
+                    </div>
+                    <div class="gd jdgd" id="jd-gd">
+<a href="/col/col1229209814/index.html" class="">更多 <span class="img"></span> </a>
+
+<a href="http://scjgj.huzhou.gov.cn/col/col1229512929/index.html?number=%E6%84%8F%E8%A7%81%E5%BE%81%E9%9B%86" class="hide more-yjzj">更多 <span class="img"></span> </a>
+                    </div>
+                </div>
+                <div class="news-body" id="yjzj">
+                    <ul>
+
+<li>
+  <a href="/col/col1229209814/art/2026/art_ec30749d41bd4cfd96c2e0f8e2f0dd49.html" target="_blank" title="湖州市市场监督管理局食品安全监督抽检信息通告（2025年第28期）">
+  湖州市市场监督管理局食品安全监督抽检...
+  <span>
+    02-09
+  </span>
+   </a>
+</li>
+
+
+<li>
+  <a href="/col/col1229209814/art/2026/art_b21239b2ccad4fc78ea95d5a128199f2.html" target="_blank" title="湖州市市场监督管理局2025年第四批产品质量抽查结果的通告">
+  湖州市市场监督管理局2025年第四批...
+  <span>
+    02-06
+  </span>
+   </a>
+</li>
+
+
+<li>
+  <a href="/col/col1229209814/art/2026/art_45ec9c61c4474985ac58a9157080fc50.html" target="_blank" title="湖州市市场监督管理局2025年第三批产品质量抽查结果的通告">
+  湖州市市场监督管理局2025年第三批...
+  <span>
+    01-28
+  </span>
+   </a>
+</li>
+
+
+<li>
+  <a href="/col/col1229209814/art/2026/art_4d743126f2484bc68ca345ad59fd228d.html" target="_blank" title="湖州市市场监督管理局食品安全监督抽检（你点我检）信息通告（2025年第27期）">
+  湖州市市场监督管理局食品安全监督抽检...
+  <span>
+    01-07
+  </span>
+   </a>
+</li>
+
+
+<li>
+  <a href="/col/col1229209814/art/2026/art_fbf3f7c0482c4ea7ab9fca0c80a25b65.html" target="_blank" title="湖州市市场监督管理局食品安全监督抽检信息通告（2025年第26期）">
+  湖州市市场监督管理局食品安全监督抽检...
+  <span>
+    01-07
+  </span>
+   </a>
+</li>
+
+
+                    </ul>
+                    <ul class="hide list-yjzj">
+
+<li>
+  <a href="/col/col1229515950/art/2026/art_092e1bc7f578489a8a2bdac15ca2108c.html" target="_blank" title="关于征求《关于进一步强化食品安全全链条监管和治理能力现代化的意见（征求意见稿）》有关意见建议的函">
+  关于征求《关于进一步强化食品安全全链...
+  <span>
+    02-24
+  </span>
+   </a>
+</li>
+
+
+<li>
+  <a href="/col/col1229515950/art/2025/art_090a0355859649a2ba0dd2292a61f6a2.html" target="_blank" title="关于征求《湖州市知识产权专家库管理办法（征求意见稿）》意见的通知">
+  关于征求《湖州市知识产权专家库管理办...
+  <span>
+    12-18
+  </span>
+   </a>
+</li>
+
+
+<li>
+  <a href="/col/col1229515950/art/2025/art_60028fe5afb54a48a15baa38663b0b12.html" target="_blank" title="关于征求《湖州市运动营养食品生产许可审查方案（征求意见稿）》意见的通知">
+  关于征求《湖州市运动营养食品生产许可...
+  <span>
+    10-23
+  </span>
+   </a>
+</li>
+
+
+<li>
+  <a href="/col/col1229515950/art/2025/art_2e25336cc1664a76b425be349f5a0aaa.html" target="_blank" title="关于公开征求《湖州市经营主体信用建设十大举措实施方案（征求意见稿）》意见的通知">
+  关于公开征求《湖州市经营主体信用建设...
+  <span>
+    09-10
+  </span>
+   </a>
+</li>
+
+
+<li>
+  <a href="/col/col1229515950/art/2025/art_e69bbf91d3da4cc28615869cb49274b2.html" target="_blank" title="关于公开征求《湖州市知识产权强企培育管理办法（试行）（征求意见稿）》意见的通知">
+  关于公开征求《湖州市知识产权强企培育...
+  <span>
+    07-15
+  </span>
+   </a>
+</li>
+
+
+                    </ul>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <!--信息公开-->
+            <div class="xxgk">
+<a href="http://scjgj.huzhou.gov.cn/col/col1229512929/index.html" target="_blank">
+<img src="/cms_files/jcms1/web3654/site/picture/1242/2007301750443054759.png">政府信息公开目录</a>
+
+<a href="http://scjgj.huzhou.gov.cn/col/col1229512929/index.html" target="_blank">
+<img src="/cms_files/jcms1/web3654/site/picture/1242/2007301750443418631.png">政府信息公开指南</a>
+
+
+<a href="http://scjgj.huzhou.gov.cn/col/col1229512929/index.html?gktz=xxgknb" target="_blank">
+<img src="/cms_files/jcms1/web3654/site/picture/1242/2007301750443746825.png">政府信息公开年报</a>
+
+<a href="https://mapi.zjzwfw.gov.cn/web/mgop/gov-open/zj/2002446329/reserved/index.html#/?areaCode=330500" target="_blank"><img src="/cms_files/jcms1/web3654/site/images/44346/m4.png">依申请公开</a>
+
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <!--领导信箱-->
+        <div class="main4 clearfix">
+
+    <a href="https://zxts.zjzwfw.gov.cn/zwmhww/#/home/index/leader?areacode=330500&lybj=pc_cgm_GO_d92dc7041d1448c39d766ee58c72773d_699499_04&orgName=湖州市市场监管局&orgId=1534957242271420418" target="_blank" id="l1" class="hdjl">
+    <div class="l1"></div>
+    领导信箱
+</a>
+
+
+
+    <a href="https://zxts.zjzwfw.gov.cn/zwmhww/#/advice?areacode=330500&lybj=pc_cgm_GO_d92dc7041d1448c39d766ee58c72773d_699499_02&orgName=湖州市市场监管局&orgId=1534957242271420418" target="_blank" id="l2" class="hdjl">
+    <div class="l2"></div>
+    我要咨询
+</a>
+
+
+<a href="https://zxts.zjzwfw.gov.cn/zwmhww/#/home/index/appeal?areacode=330500&lybj=pc_cgm_GO_d92dc7041d1448c39d766ee58c72773d_699499_01&orgName=湖州市市场监管局&orgId=1534957242271420418" target="_blank" id="l3" class="hdjl">
+    <div class="l3"></div>
+    我要反映
+</a>
+
+<a href="https://zxts.zjzwfw.gov.cn/zwmhww/index.html#/home/index/public?areacode=330500" target="_blank" id="l9" class="hdjl">
+    <div class="l9"></div>
+    办理公开
+</a>
+<style>
+  .l9 {
+    background: url(/cms_files/filemanager/1572930/picture/20258/fe4a882d149e481ea7285fff0dfa3919.png) center no-repeat;
+}
+  #l9:hover .l9{
+	background: url(/cms_files/filemanager/1572930/picture/20258/fe4a882d149e481ea7285fff0dfa3919.png) center no-repeat;
+}
+</style>
+
+<a href="/col/col1229209817/index.html" target="_blank" id="l4" class="hdjl">
+    <div class="l4"></div>
+    调查征集
+</a>
+
+<a href="http://scjgj.huzhou.gov.cn/col/col1229512929/index.html?number=%E5%BB%BA%E8%AE%AE%E6%8F%90%E6%A1%88%E5%8A%9E%E7%90%86" target="_blank" id="l7" class="hdjl">
+    <div class="l7"></div>
+    建议提案
+</a>
+
+<a href="/col/col1229209823/index.html" target="_blank" id="l8" class="hdjl">
+    <div class="l8"></div>
+    标准查询
+</a>
+
+<a href="/col/col1229209824/index.html" target="_blank" id="l5" class="hdjl">
+    <div class="l5"></div>
+    官方微信
+</a>
+
+
+
+        </div>
+        <style>
+            .picMarquee-left {
+                overflow: hidden;
+                overflow: hidden;
+                position: relative;
+            }
+
+            .picMarquee-left .hd {
+                overflow: hidden;
+                height: 30px;
+                background: #f4f4f4;
+                padding: 0 10px;
+                display: none;
+            }
+
+            .picMarquee-left .hd .prev,
+            .picMarquee-left .hd .next {
+                display: block;
+                width: 5px;
+                height: 9px;
+                float: right;
+                margin-right: 5px;
+                margin-top: 10px;
+                overflow: hidden;
+                cursor: pointer;
+            }
+
+            .picMarquee-left .hd .next {
+                background-position: 0 -50px;
+            }
+
+            .picMarquee-left .hd .prevStop {
+                background-position: -60px 0;
+            }
+
+            .picMarquee-left .hd .nextStop {
+                background-position: -60px -50px;
+            }
+
+            .picMarquee-left .tempWrap {
+                width: 1160px !important;
+            }
+
+            .picMarquee-left .bd ul {
+                overflow: hidden;
+                zoom: 1;
+                margin-top: 0px;
+            }
+
+            .picMarquee-left .bd ul li {
+                width: 270px;
+                margin: 0 10px;
+                float: left;
+                _display: inline;
+                overflow: hidden;
+                text-align: center;
+            }
+        </style>
+        <div class="main5 picMarquee-left">
+            <div class="hd">
+                <a class="next"></a>
+                <a class="prev"></a>
+            </div>
+            <div class="swiper-container bd">
+                <ul class="swiper-wrapper picList">
+
+<li>
+    <a href="http://scjgj.huzhou.gov.cn/col/col1229512953/sjwzndbb/index.html" target="_blank" class="swiper-slide"> <img src="/cms_files/images/DFS//file/2024/03/22/20240322112257782y7zyvp.png?iid=631251"> </a>
+</li>
+
+
+<li>
+    <a href="https://hfjs.samr.gov.cn/" target="_blank" class="swiper-slide"> <img src="/cms_files/images/DFS//file/2023/11/08/202311081657121034nhhn7.jpg?iid=596771"> </a>
+</li>
+
+
+<li>
+    <a href="https://www.zj.gov.cn/col/col1229577560/index.html" target="_blank" class="swiper-slide"> <img src="/cms_files/filemanager/1572930/picture/20257/E1FBBA7F5F6BBD97ECC4CD0C9FFDF853.png"> </a>
+</li>
+
+
+<li>
+    <a href="http://www.zjhzbz.cn/" target="_blank" class="swiper-slide"> <img src="/cms_files/images/DFS//file/2021/04/01/202104011629242189i1sqv.png?iid=283130"> </a>
+</li>
+
+
+<li>
+    <a href="http://www.gsxt.gov.cn/index.html" target="_blank" class="swiper-slide"> <img src="/cms_files/jcms1/web3654/site/picture/0/2309111519457975858.jpg"> </a>
+</li>
+
+
+<li>
+    <a href="https://www.zjzwfw.gov.cn/zjservice-fe/#/HomeSubset?siteCode=330501000000&deptCode=001008005007013&deptName=%E5%B8%82%E5%B8%82%E5%9C%BA%E7%9B%91%E7%AE%A1%E5%B1%80%EF%BC%88%E5%B8%82%E7%9F%A5%E8%AF%86%E4%BA%A7%E6%9D%83%E5%B1%80%EF%BC%89" target="_blank" class="swiper-slide"> <img src="/cms_files/images/DFS//file/2019/11/07/20191107163914553x48j2w.png?iid=105627"> </a>
+</li>
+
+
+<li>
+    <a href="https://spjb.samr.gov.cn/" target="_blank" class="swiper-slide"> <img src="/cms_files/filemanager/1572930/picture/20256/757d9286c43f4ffeb40592c8a9a888ed.png"> </a>
+</li>
+
+
+<li>
+    <a href="https://zjjcmspublic.oss-cn-hangzhou-zwynet-d01-a.internet.cloud.zj.gov.cn/jcms_files/jcms1/web3179/site/media/0/5465f0bd95fb4b11b0bf3cd9a927a0dd.mp4" target="_blank" class="swiper-slide"> <img src="/cms_files/jcms1/web3654/site/picture/-1/221102175723573582.png?iid=450790"> </a>
+</li>
+
+
+<li>
+    <a href="https://zscqyjs.zjamr.zj.gov.cn/" target="_blank" class="swiper-slide"> <img src="/cms_files/jcms1/web3654/site/picture/-1/220316111256081633.png?iid=416303"> </a>
+</li>
+
+
+<li>
+    <a href="https://tousu.www.gov.cn/zwfw/index.htm" target="_blank" class="swiper-slide"> <img src="/cms_files/jcms1/web3654/site/picture/0/2309111517370493117.png"> </a>
+</li>
+
+
+<li>
+    <a href="http://www.zjzwfw.gov.cn/zjzw/zj/zw_pc_download/" target="_blank" class="swiper-slide"> <img src="http://app.huzhou.gov.cn/DFS//file/2019/11/07/20191107163857004c124sb.png?iid=105626"> </a>
+</li>
+
+
+
+                </ul>
+
+            </div>
+            <script type="text/javascript">
+                jQuery(".picMarquee-left").slide({ mainCell: ".bd ul", autoPlay: true, effect: "leftMarquee", vis: 3, interTime: 50 });
+            </script>
+        </div>
+      	<style>
+      .l-ul {
+          width:1160px;margin: 30px auto 0;
+          height: 60px;
+          margin-top: 20px;padding-bottom: 20px;
+      }
+      
+      .l-ul li {
+          width: 10%;
+          height: auto;
+          line-height: 60px;
+          text-align: center;
+          background: #ebf4ff;
+   border-radius: 5px;float: left;list-style-type:none;
+          margin-left: 2.857%;
+      }
+      .l-ul li a{
+  font-size:16px;color:#333333;text-decoration:none;
+          line-height: 60px;
+      }
+      .l-ul li a img{
+          width: 100%;
+          height: 60px;
+      }
+     .elder .l-ul li a img{
+          height: 90px;
+      }
+      .ss8 {
+         clear: both;
+      }
+      .l-ul .li1 {
+          margin-left: 0;
+      }
+  </style> 
+  <ul class="l-ul">
+		<li class="li1">
+			<a href="https://www.zjzwfw.gov.cn/jfaqfront_robot/index.html?webid=48" target="_blank">
+			<img title="智能问答" src="/cms_files/jcms1/web3615/site/picture/1930/2409251105584103196.png" /> 
+			</a> 
+		</li> 
+		<li class="li2">
+		<a href=" https://zxts.zjzwfw.gov.cn/zwmhww/#/advice?areacode=330500&lybj=pc_cgm_GO_d92dc7041d1448c39d766ee58c72773d_699499_02&orgName=湖州市市场监管局&orgId=1534957242271420418" target="_blank">
+		<img title="我要咨询" src="/cms_files/jcms1/web3615/site/picture/1930/2409251105583682717.png" /> 
+		</a> 
+		</li> 
+		<li class="li3">
+		<a href=" https://zxts.zjzwfw.gov.cn/zwmhww/#/home/index/appeal?areacode=330500&lybj=pc_cgm_GO_d92dc7041d1448c39d766ee58c72773d_699499_01&orgName=湖州市市场监管局&orgId=1534957242271420418" target="_blank">
+		<img title="我要反映" src="/cms_files/jcms1/web3615/site/picture/1930/2409251105582917659.png" /> 
+		</a> 
+		</li> 
+		<li class="li4">
+		<a href=" https://zxts.zjzwfw.gov.cn/zwmhww/#/home/index/suggest?areacode=330500&lybj=pc_cgm_GO_d92dc7041d1448c39d766ee58c72773d_699499_03&orgName=湖州市市场监管局&orgId=1534957242271420418" target="_blank">
+		<img title="我要建议" src="/cms_files/jcms1/web3615/site/picture/1930/2409251105583273937.png" /> 
+		</a> 
+		</li> 
+		<li class="li5">
+		<a href=" https://zxts.zjzwfw.gov.cn/zwmhww/#/home/index/search?areacode=330500&lybj=pc_cgm_GO_d92dc7041d1448c39d766ee58c72773d_699499_05&orgName=湖州市市场监管局&orgId=1534957242271420418" target="_blank">
+		<img title="查询评价" src="/cms_files/jcms1/web3615/site/picture/1930/2409251105581629703.png" /> 
+		</a> 
+		</li>
+		<li class="li6">
+		<a href=" https://zxts.zjzwfw.gov.cn/zwmhww/index.html#/home/index/public?areacode=330500" target="_blank">
+		<img title="办理公开" src="/cms_files/jcms1/web3615/site/picture/1930/2409251105581164540.png" /> 
+		</a> 
+		</li>
+		<li class="li7">
+		<a href=" http://www.zj.gov.cn/col/col1229159405/index.html?webId=48" target="_blank">
+		<img title="办件统计" src="/cms_files/jcms1/web3615/site/picture/1930/2409251105582071678.png" />
+		</a> 
+		</li>
+		<li class="li8" style="line-height: 25px; font-size: 12px">
+		<a href="http://scjgj.huzhou.gov.cn/col/col1229512953/sjwzndbb/index.html" target="_blank" style="font-size: 12px; line-height: 30px">
+		<img src="/cms_files/jcms1/web3654/site/picture/0/2409251651193175537.png" alt="" />
+		</a> 
+		</li>
+		<div class="ss8"></div> 
+		</ul>
+
+    </div>
+    <div class="se">
+        <div class="w c clearfix">
+            <a class="yqlj"> 友情链接：</a>
+            <div class="cas">
+                <div class="s">
+                     -----省内市场监管局网站-----
+                </div>
+                <div class="b">
+<a target="_blank" href="https://www.samr.gov.cn/">国家市场监督管理总局</a>
+<a target="_blank" href="https://zjamr.zj.gov.cn/">浙江省市场监督管理局</a>
+<a target="_blank" href="http://scjgj.ningbo.gov.cn/">宁波市市场监督管理局</a>
+<a target="_blank" href="http://scjgj.huzhou.gov.cn/">湖州市市场监督管理局</a>
+<a target="_blank" href="http://scjg.hangzhou.gov.cn/">杭州市市场监督管理局</a>
+<a target="_blank" href="http://wzmsa.wenzhou.gov.cn/">温州市市场监督管理局</a>
+<a target="_blank" href="http://scjg.sx.gov.cn/">绍兴市市场监督管理局</a>
+<a target="_blank" href="http://scjgj.jiaxing.gov.cn/">嘉兴市市场监督管理局</a>
+<a target="_blank" href="http://www.qz.gov.cn/col/col1229040968/index.html">衢州市市场监督管理局</a>
+<a target="_blank" href="http://scjgj.jinhua.gov.cn/">金华市市场监督管理局</a>
+<a target="_blank" href="http://zsscjg.zhoushan.gov.cn/">舟山市市场监督管理局</a>
+<a target="_blank" href="http://scjgj.zjtz.gov.cn/">台州市市场监督管理局</a>
+<a target="_blank" href="http://gsj.lishui.gov.cn/">丽水市市场监督管理局</a>
+
+                </div>
+                       
+            </div>
+            <div class="cas">
+                <div class="s">
+                     -----市政府及部门网站-----
+                </div>
+                <div class="b">
+<a target="_blank" href="http://www.huzhou.gov.cn/">湖州市人民政府</a>
+<a target="_blank" href="http://jtysj.huzhou.gov.cn/">市交通运输局</a>
+<a target="_blank" href="http://www.huzhou.jcy.gov.cn/">市检察院</a>
+<a target="_blank" href="http://zj.cma.gov.cn/dsqx/huzsqxj/">市气象局</a>
+<a target="_blank" href="http://taihu.huzhou.gov.cn">太湖度假区管委会</a>
+<a target="_blank" href="http://huzgt.huzhou.gov.cn/">市自然资源和规划局（市林业局）</a>
+<a target="_blank" href="http://slj.huzhou.gov.cn/">市水利局</a>
+<a target="_blank" href="http://nync.huzhou.gov.cn/">市农业局</a>
+<a target="_blank" href="http://huedu.huzhou.gov.cn/">市教育局</a>
+<a target="_blank" href="http://whgdlyj.huzhou.gov.cn/">市文化广电旅游局（市文物局）</a>
+<a target="_blank" href="http://wjw.huzhou.gov.cn/">市卫生健康委</a>
+<a target="_blank" href="http://sfj.huzhou.gov.cn/">市司法局</a>
+<a target="_blank" href="http://gaj.huzhou.gov.cn/">市公安局</a>
+<a target="_blank" href="http://kjj.huzhou.gov.cn/">市科技局</a>
+<a target="_blank" href="http://husports.huzhou.gov.cn/">市体育局</a>
+<a target="_blank" href="http://hzgjj.huzhou.gov.cn/">市公积金管理中心</a>
+<a target="_blank" href="http://gxs.huzhou.gov.cn/">市供销社</a>
+<a target="_blank" href="http://hurf.huzhou.gov.cn/">市人防办（民防局）</a>
+<a target="_blank" href="http://wqb.huzhou.gov.cn/">市外办（市港澳办）</a>
+<a target="_blank" href="http://jgswj.huzhou.gov.cn/">市机关事务局</a>
+<a target="_blank" href="http://hzzfj.huzhou.gov.cn/">市行政执法局</a>
+<a target="_blank" href="http://yjglj.huzhou.gov.cn/">市应急管理局</a>
+<a target="_blank" href="http://hbj.huzhou.gov.cn/">市生态环境局</a>
+<a target="_blank" href="http://hzssjj.huzhou.gov.cn/">市审计局</a>
+<a target="_blank" href="http://hrss.huzhou.gov.cn/">市人力社保局</a>
+<a target="_blank" href="http://mz.huzhou.gov.cn/">市民政局</a>
+<a target="_blank" href="http://zjhzgzw.huzhou.gov.cn/">市国资委</a>
+<a target="_blank" href="http://swj.huzhou.gov.cn/">市商务局</a>
+<a target="_blank" href="http://czj.huzhou.gov.cn">市财政局</a>
+<a target="_blank" href="http://hzjx.huzhou.gov.cn/">市经信局</a>
+<a target="_blank" href="http://fgw.huzhou.gov.cn/">市发改委</a>
+
+                </div>
+                       
+            </div>
+            <div class="cas" style="margin-right:0px">
+                <div class="s">
+                     -----下属单位网站-----
+                </div>
+                <div class="b">
+<a target="_blank" href="http://www.huzjy.cn/">湖州市质量技术监督检测研究院</a>
+<a target="_blank" href="http://www.hzsyjs.org.cn/">湖州市食品药品检测研究院</a>
+<a target="_blank" href="http://www.hztjzx.cn/">湖州市特种设备检测研究院</a>
+
+                </div>
+                       
+            </div>
+        </div>
+    </div>
+<style>
+  .l1 {
+    background: url(/cms_files/jcms1/web3654/site/picture/0/2409261105343188275.png)
+      center no-repeat;
+  }
+  #l1:hover .l1 {
+    background: url(/cms_files/jcms1/web3654/site/picture/0/2409261105343188275.png) center no-repeat;
+  }
+  .l2 {
+    background: url(/cms_files/jcms1/web3654/site/picture/0/2409261105342764450.png)
+      center no-repeat;
+  }
+  #l2:hover .l2 {
+    background: url(/cms_files/jcms1/web3654/site/picture/0/2409261105342764450.png)
+      center no-repeat;
+  }
+  .l3 {
+    background: url(/cms_files/jcms1/web3654/site/picture/0/2409261105342398840.png)
+      center no-repeat;
+  }
+  #l3:hover .l3 {
+    background: url(/cms_files/jcms1/web3654/site/picture/0/2409261105342398840.png)
+      center no-repeat;
+  }
+</style>
+
+    <!--尾部通用JS-->
+<script src="/cms_files/jcms1/web3654/site/script/1012/2007301147465590.js"></script>
+<script src="/cms_files/jcms1/web3615/site/script/1006/2008281045472795.js"></script>
+    <script src="/cms_files/webhuzhoushishichangjianduguanliju/pubtplobject/defaultSet/687452/images/js.js"></script>
+    <script src="/cms_files/webhuzhoushishichangjianduguanliju/pubtplobject/defaultSet/687452/images/swiper.min.js"></script>
+    <!-- <script src="/front/ui/cxslide/js/jquery.cxslide.min.js"></script> -->
+    <script type="text/javascript">
+        $(function () {
+            $('#cxslide_id').cxSlide({ btn: true, time: 4000, auto: true });
+        })
+    </script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 4,
+            spaceBetween: 30,
+            slidesPerGroup: 4,
+            loop: true,
+            loopFillGroupWithBlank: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+    <script>
+        function mbar(sobj) {
+            var docurl = sobj.options[sobj.selectedIndex].value;
+            if (docurl != "") {
+                open(docurl, '_blank');
+                sobj.selectedIndex = 0;
+                sobj.blur();
+            }
+        }
+    </script>
+
+
+    <!--左对联-->
+<script language="JavaScript" type="text/javascript">	function close_float_left(){
+        lovexin12.style.visibility='hidden';
+        lovexin121.style.visibility='hidden';
+}
+</script>
+<div id="lovexin12" style="left:30px;POSITION:fixed;TOP:100px;">
+
+</div>
+
+<div id="lovexin121" style="left:30px;POSITION:fixed;TOP:250px;">    
+
+</div>
+
+<script language="JavaScript" type="text/javascript">	function close_float_right(){
+        lovexin14.style.visibility='hidden';
+}
+</script>
+<div id="lovexin14" style="right:30px;POSITION:fixed;TOP:100px;">
+
+</div>
+
+<div id="lovexin14" style="right:30px;POSITION:fixed;TOP:250px;">    
+
+</div>
+
+    <!--对联移动-->
+    <script language="javascript">
+        var leftdl = document.getElementById("left01");
+        var rightdl = document.getElementByCLA("right01");
+        window.onscroll = function () {
+            if (leftdl) {
+                leftdl.style.top = "200px";
+                setInterval(leftadd, "50");
+            }
+            if (rightdl) {
+                rightdl.style.top = "200px";
+                setInterval(rightadd, "50");
+            }
+
+        }
+        function leftadd() {
+            if (parseInt(leftdl.style.top) > 100) { leftdl.style.top = parseInt(leftdl.style.top) - 1 + "px"; }
+        }
+        function rightadd() {
+            if (parseInt(rightdl.style.top) > 100) { rightdl.style.top = parseInt(rightdl.style.top) - 1 + "px"; }
+        }
+    </script>
+    <!--左下对联-->
+    <script language="javascript">
+        function close_float_leftbottom() {
+            myleftbottom.style.visibility = 'hidden';
+        }
+    </script>
+    <!--右下对联-->
+    <script language="javascript">
+        function close_float_rightbottom() {
+            myrightbottom.style.visibility = 'hidden';
+        }
+    </script>
+
+    <style>
+
+.jiucuo {right: 181px !important;}
+
+        @media screen and (max-width: 600px) {
+
+            .l-ul {
+                width: 100% !important;
+                height: auto !important;
+            }
+
+            .l-ul .li1 {
+                margin-left: 10px !important;
+                width: 45% !important;
+                margin-top: 10px;
+            }
+
+            .l-ul li {
+                width: 45% !important;
+                margin-top: 10px;
+            }
+
+        }
+    </style>
+
+
+    
+<!-- 无障碍 start -->
+
+<style>
+    .ariabodytopfiexed #lovexin12,
+    .ariabodytopfiexed #lovexin14 {
+    	display: none;
+    }
+</style>
+
+<script src="/cms_files/jcms1/web3615/site/script/1782/2307051448487663.js"></script>
+
+<script type="text/javascript">
+    resolveAccessibility([
+        ".top?顶部内容&4",
+        ".select?搜索&3",
+        ".nav?导航栏&2",
+        ".syw?要闻&1",
+        ".banner?轮播图&1",
+        ".news?监管快讯,区县动态,媒体聚焦,政声传递&1",
+        ".tab2?公告公示,部门文件&1",
+        ".tab3?监督抽检,意见征集&1",
+        ".xxgk?政府信息公开&1",
+        ".main-4?互动交流&1",
+        ".main-5?专题栏目&1",
+        ".l-ul?政民互动&1",
+        ".se?友情链接&1",
+        ".foot?网页底部&4",
+        "#lovexin12?&左侧飘窗1",
+        "#lovexin14?&右侧飘窗1",
+    ]);
+    flotWindow([
+        "#news-top>a&#news-body>ul",
+        "#gggs-top>a&#gggs-body>ul",
+        "#jdcc>a&#yjzj>ul",
+        ".se>.w>.cas&.se>.w>.cas>.b",
+    ]);
+</script>
+
+<!-- 无障碍 end -->
+
+
+
+
+
+<script src="/cms_files/filemanager/1572930/script/juba/jubascript.js?v=4.5.12.1-ZJSJYH-U35"></script>
+ </div></body>
+
+</html>

@@ -1,0 +1,1825 @@
+<!DOCTYPE html>
+<html ms-controller="windowRoot" ms-class-1="SLB:isSlb" ms-class-2="slb:isSlb">
+
+<head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="x-UA-Compatible" content="IE=Edge">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="SiteName" content="宁德市水利局">
+    <meta name="SiteDomain" content="slj.ningde.gov.cn">
+    <meta name="SiteIDCode" content="3509000035">
+    <title>
+        宁德市水利局
+    </title>
+    <link rel="stylesheet" type="text/css" href="./images/trt_iconfont_v2.css">
+    <link rel="stylesheet" type="text/css" href="./images/trt_ui_v2.css">
+    <link rel="stylesheet" type="text/css" href="./images/trt_component_v2.css">
+    <link rel="stylesheet" type="text/css" href="./images/trt_media_v2.css">
+    <!--以上四个样式不必修改-->
+    <link rel="stylesheet" type="text/css" href="./images/ndslj_iconfont.css">
+    <link rel="stylesheet" type="text/css" href="./images/221215_ndslj_header.css">
+    <link rel="stylesheet" type="text/css" href="./images/221215_ndslj_footer.css">
+    <link rel="stylesheet" type="text/css" href="./images/221215_ndslj_style.css">
+    <link rel="stylesheet" href="./images/ndsslj_22gb.css" />
+    <style>
+            /* 政府信息公开目录 */
+    .xxgkml_div{margin-top: 30px;}
+    .xxgkml_div a{display: block; text-align: center; padding: 16px 20px; line-height: 30px; background: #D1E8FF center; background-size: cover;}
+    .xxgkml_div a h1{font-size: 26px; font-weight: bold; color: #1658A0;}
+    .SLB .xxgkml_div a h1{font-size:32px;}
+    .SLB .xxgkml_div a{line-height: 50px;}
+		
+ /* 飘窗样式 */
+ .float_img{
+            Z-INDEX: 1001; left: 2px; WIDTH: 300px; POSITION: fixed; TOP: 160px; HEIGHT: 150px; visibility: visible;
+        }
+        @media screen and (max-width: 750px){
+		    .float_img{
+                width: 200px;
+                height: 100px;
+            }
+		}
+		.jg_ul li {
+				margin-top: 30px;
+				width: 25%;
+				text-align: center;
+				float: left;
+				font-size: 16px;
+			}
+.announcement_02 p a{top: 0rem;}
+    </style>
+</head>
+
+<body>
+
+<!-- 飘窗 -->
+
+  <div id="img_float" class="float_img">
+      <div align="right" onclick="document.getElementById('img_float').style.display='none'"
+          style="color:red;font-size:12px;margin-bottom:0px;text-decoration:none;position:relative;cursor: pointer;">
+          [关闭]
+      </div>
+      <div align="center">
+          <a href="javascript:void(0)" ms-if="'./inc/pc/202412/W020251205521280931533.jpg'!=''">
+              <img src='./inc/pc/202412/W020251205521280931533.jpg' thumb="" alt="深入学习贯彻习近平生态文明思想  拓展提升"长汀经验"" />
+          </a>
+      </div>
+  </div>
+
+<!-- 飘窗结束 -->
+
+    <div class="warp">
+        <!-- 头部嵌套_22gb -->
+        <div class="header menu_hov" role="navigation" des="头部信息">
+    <div class="row">
+        <div class="logo trt-col-8 trt-col-sm-24"><a href="/"><img src="/images/221215_ndslj_logo.png" /></a></div>
+        <div class="header_line clearflx">
+            <div class="header_link_01">
+                <a href="http://www.gov.cn/" target="_blank" class="btn_base btn_outline btn_outline_primary btn_small" title="国务院">国务院</a>
+                <a href="http://www.mwr.gov.cn/" target="_blank" class="btn_base btn_outline btn_outline_primary btn_small" title="水利部">水利部</a>
+                <a href="https://www.fujian.gov.cn/"  target="_blank"class="btn_base btn_outline btn_outline_primary btn_small" title="省政府">省政府</a>
+                <a href="https://www.ningde.gov.cn/"  target="_blank"class="btn_base btn_outline btn_outline_primary btn_small" title="市政府">市政府</a>
+            </div>
+            <div class="header_link_02">
+                <a href="javascript:;" title="闽政通">闽政通</a>
+                <div class="mzt_ewm"><img src="/images/221213lc_lylc_ewm.png" /></div>
+            </div>
+            <span>网站支持IPV6</span>
+        </div>
+        <div class="menu_base menu_right menu_hd">
+            <ul class="clearflx">
+                <!--有下拉菜单的li加上parentNode-->
+                <li ms-class="li:currPath===''"><a href="/"  title="首页">首页</a></li>
+                <li class="parentNode" ms-class="li:currPath==='zwgk'&& paths[4]!='zcjd'"><a href="/zwgk/" title="政务公开">政务公开</a>
+                    
+                </li>
+                <li class="parentNode"  ms-class="li:currPath=='jdhy'"><a href="/jdhy/" title="解读回应">解读回应</a></li>
+                <li ><a  href="http://zwfw.fujian.gov.cn/person-todo/detail?userType=3&amp;curStatus=dept&amp;deptId=416FAFADB3E90E42ADC67B246421FF51&amp;bsfwCount=28&amp;xzjgCount=158&amp;siteUnid=FF6F84404BCF4EE6B68434FC69668ED3" title="办事服务">办事服务</a></li>
+                <li  class="parentNode" ms-class="li:currPath==='gzcy'"><a href="/gzcy/" title="互动交流">互动交流</a></li>
+                <li ms-class="li:currPath==='slzt'"><a href="/slzt/" title="专题专栏">专题专栏</a></li>
+            </ul>
+        </div>
+        <div class="search_fixed">
+            <form method="get" action="https://www.ningde.gov.cn/aisp/2c9c77366e7c9278016e7c94a85b0025/search/index.html" target="_blank" ms-if="!avalon.vmodels.windowRoot.isStatic">
+                <input type="hidden" value="2c9c77366ec5fc40016eca5f827e04a9" name="levelSiteId" />
+                <input type="hidden" value="2c9c77366e7c9278016e7c94a85b0025" name="siteId" />
+                <input type="text" placeholder="请输入搜索内容" name="key" class="form-control" />
+                <button  type="submit"  class="btn_base"><i class="trt-iconfont trt-icon-sousuo"></i></button>
+            </form>
+            <form ms-if="avalon.vmodels.windowRoot.isStatic" action="https://www.fujian.gov.cn/ssp/main/index.html" target="_blank">
+                <input type="hidden" value="ff808081624641aa0162476c0e0e0055" name="siteId" />
+                <input type="hidden" value="1" name="isMain" />
+                <input type="text" placeholder="请输入搜索内容" name="key" class="form-control" />
+                <button  type="submit"  class="btn_base"><i class="trt-iconfont trt-icon-sousuo"></i></button>
+            </form>
+        </div>
+    </div>
+    <div class="submenu menu_bd">
+        <div class="row"></div>
+        <!-- <div class="row">
+            <div class="trt-row">
+                <div class="trt-col-16 text_align_left">
+                    <p><span>职位</span><a href="#">姓名</a></p>
+                    <p><span>职位</span><a href="#">姓名</a><a href="#">姓名</a><a href="#">姓名</a><a href="#">姓名</a></p>
+                </div>
+                <div class="trt-col-8">
+                    <a href="#">栏目名称</a>
+                    <a href="#">栏目名称</a>
+                    <a href="#">栏目名称</a>
+                    <a href="#">栏目名称</a>
+                    <a href="#">栏目名称</a>
+                    <a href="#">栏目名称</a>
+                </div>
+            </div>
+        </div> -->
+        <!--政务公开-->
+        <div class="row">		
+            <a href="http://slj.ningde.gov.cn/zwgk/zfxxgk/"  target="_blank" title="政府信息公开">政府信息公开</a>
+            <a href="http://slj.ningde.gov.cn/zwgk/ndss/"  target="_blank" title="宁德水事">宁德水事</a>
+            <a href="http://slj.ningde.gov.cn/zwgk/czyjs/"  target="_blank" title="财政预决算">财政预决算</a>
+            <a href="http://slj.ningde.gov.cn/zwgk/tzgg/"  target="_blank" title="通知公告">通知公告</a>
+            <a href="http://slj.ningde.gov.cn/zwgk/zcwj/"  target="_blank" title="政策文件">政策文件</a>
+            <a href="http://slj.ningde.gov.cn/zwgk/jyta/"  target="_blank" title="建议提案">建议提案</a>
+        </div>
+        <!--解读回应-->
+        <div class="row">
+            <a href="http://slj.ningde.gov.cn/jdhy/zcjd/"  target="_blank" title="政策解读">政策解读</a>
+            <a href="http://slj.ningde.gov.cn/jdhy/hygq/"  target="_blank" title="回应关切">回应关切</a>
+        </div>
+        <!--办事服务-->
+        <div class="row">
+        </div>
+        <!--互动交流-->
+        <div class="row">
+            <a href="http://slj.ningde.gov.cn/gzcy/jzxx/" target="_blank" title="局长信箱">局长信箱</a>
+            <!--a href="http://slj.ningde.gov.cn/gzcy/wszx/" target="_blank" title="网上咨询">网上咨询</a-->
+            <a href="http://slj.ningde.gov.cn/gzcy/zxft/" target="_blank" title="在线访谈">在线访谈</a>
+            <a href="http://slj.ningde.gov.cn/gzcy/yjzj/" target="_blank" title="意见征集">意见征集</a>
+            <a href="http://slj.ningde.gov.cn/gzcy/wsdc/" target="_blank" title="网上调查">网上调查</a> 
+        </div>
+        <!--专题专栏-->
+        <div class="row"></div>
+    </div>
+</div>
+<div class="banner_header" role="interaction" des="搜索">
+    <div class="row">
+        <div class="trt-row">
+            <div class="trt-col-9 trt-col-sm-0">
+                <div class="area_weather mar_t_01">
+                    <p>欢迎访问宁德市水利局网站  <i ms-text="now|date('yyyy年MM月dd日')"></i>  <i ms-text="now|date('EEEE')"></i></p>
+                </div>
+            </div>
+            <div class="trt-col-9 trt-col-sm-24">
+                <div class="search_area">
+
+                <form id="form" ms-attr-method="searchMethod"  ms-attr-action="searchAction" target="_blank" ms-if="!avalon.vmodels.windowRoot.isStatic">					
+                    <div class="input_select input_base input_group input_group_append input_group_prepend">
+                        <div class="input_group_prepend_01" >
+                            <div class="select_group" >								
+                                <div class="input_base input_suffix picker_2021" ms-click="$searchChange()">
+                                    <input type="hidden" ms-duplex="levelSiteId" name="levelSiteId" />
+                                    <input type="hidden" ms-duplex="searchSiteId" name="siteId" />
+                                    <input type="hidden" ms-duplex="isMain" name="isMain" />
+                                    <input type="text" ms-duplex="searchSite" class="input_inner" readonly />
+                                    <a class="upDown_2021">
+                                        <i class="trt-iconfont trt-icon-shangxiajiantou"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="text" placeholder="请输入您要搜索的内容" name="key" required="required" class="input_inner" />
+                        <div class="input_group_append_01"><button type="submit" class="btn_base btn_default"><i class="trt-iconfont trt-icon-sousuo"></i></button></div>
+                    </div>
+                </form>
+                <form ms-if="avalon.vmodels.windowRoot.isStatic" style="display: none" ms-visible="avalon.vmodels.windowRoot.isStatic" action="https://www.fujian.gov.cn/ssp/main/index.html" target="_blank">	
+                    <div class="input_select input_base input_group input_group_append input_group_prepend">
+                        <div class="input_group_prepend_01" >
+                            <div class="select_group" >								
+                                <div class="input_base input_suffix picker_2021">
+                                    <input type="hidden" value="ff808081624641aa0162476c0e0e0055" name="siteId" />
+                                    <input type="hidden" value="1" name="isMain" />
+                                    <input type="text" value="全省" class="input_inner" readonly />
+                                    <a class="upDown_2021">
+                                        <i class="trt-iconfont trt-icon-shangxiajiantou"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="text" placeholder="请输入您要搜索的内容" name="key" required="required" class="input_inner" />
+                        <div class="input_group_append_01"><button type="submit" class="btn_base btn_default"><i class="trt-iconfont trt-icon-sousuo"></i></button></div>
+                    </div>
+                </form>
+                <div class="search_content shadow_base">
+                    <!-- <div class="search_history">
+                        <span>历史搜索：</span>
+                        <a href="#"><i class="trt-iconfont trt-icon-dacha"></i></a>
+                    </div> -->
+                    <div class="search_top">
+                        <span>热门搜索：</span>
+                        <em ms-repeat="hotWords">
+                            <a ms-attr-href="el.url" ms-text="el.title" target="_blank"></a>
+                        </em>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="trt-col-6 trt-col-sm-6 slb-trt-col-sm-24 text_align_right none">
+                <div class="aged_link">
+                    <!-- <a href="#" class="aged_link_01 none">长者模式</a>
+                    <a href="#" class="aged_link_01 none">退出长者模式</a>
+                    <a id="barrierFreeBtn" href="javascript:;" class="wza" class="aged_link_02" style="background: url(/images/20210526-sz-bg2.png) no-repeat center;">无障碍浏览</a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <!-- 头部嵌套_22gb end-->
+        <div class="main">
+            <div class="content content_bg1">
+                <div class="row">
+                    <!--横幅-->
+                    <!-- <div class="pad_t_large pad_t_base_sm"><a href="#"><img src="./images/221213slj_img8.jpg" /></a></div> -->
+                    
+                        <div class="pad_t_large pad_t_base_sm" role="viewlist" des="学习贯彻党的二十大精神">
+                            <a href="http://www.gov.cn/zhuanti/zggcddescqgdbdh/index.htm" target="_blank"
+                                title="学习贯彻党的二十大精神 ">
+                                <img src="./inc/syhf/202212/W020221227422987387802.jpg" />
+                            </a>
+                        </div>
+                    
+                    <!--横幅-end-->
+                    <!--第一条置顶-->
+                    <div class="announcement announcement_02" role="viewlist" des="时政要闻">
+                        
+                            <h3>
+                                <a href="./sylm/szyw/202603/t20260327_2449236.htm" target="_blank"
+                                    title="总书记两会后首次考察指引“十五五”开局起步 ">
+                                    总书记两会后首次考察指引“十五五”开局起步
+                                </a>
+                            </h3>
+                            <p><span>
+                              定了就要落实，一步一步朝前走 | 锚定发展主题，打造高质量发展样板 | 始终聚焦于人，发展与民生相统一
+                                </span><a href="./sylm/szyw/202603/t20260327_2449236.htm" target="_blank" title="详细">[详细]</a></p>
+                        
+                    </div>
+                    <!--第一条置顶-end-->
+                    <div class="mar_t_01 mar_t_base0_sm">
+                        <div class="trt-row trt-row-large">
+                            <!--轮播图-->
+                            <div class="trt-col-12 trt-col-sm-24 slb-trt-col-24 mar_t_01 mar_t_base0_sm" role="viewlist"
+                                des="宁德水事">
+                                <div id="slideBox_01" class="slideBox_01">
+                                    <span class="prev"><i class="trt-iconfont trt-icon-arrow-left"></i></span>
+                                    <span class="next"><i class="trt-iconfont trt-icon-arrow"></i></span>
+                                    <ul class="pic">
+                                        
+                                            <li>
+                                                <a href="https://tousu.www.gov.cn/dc/2024zhdc/index.htm" target="_blank"
+                                                    title="关于2024年度国务院推动高质量发展综合督查征集问题线索的公告 ">
+                                                    <i class="picture_fixed"
+                                                        style="background-image: url('./zwgk/ndss/202410/W020241017354812537467.jpg');"></i>
+                                                    <div class="txt-bg"></div>
+                                                    <p>
+                                                        关于2024年度国务院推动高质量发展综合督查征集问题线索的公告
+                                                    </p>
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="https://mp.weixin.qq.com/s/32HcQ-3GUPveZwXuLosGAA" target="_blank"
+                                                    title="国务院“互联网+督查”平台公开征集阻碍民营经济发展壮大问题线索 ">
+                                                    <i class="picture_fixed"
+                                                        style="background-image: url('./zwgk/ndss/202307/W020240511612745821096.jpg');"></i>
+                                                    <div class="txt-bg"></div>
+                                                    <p>
+                                                        国务院“互联网+督查”平台公开征集阻碍民营经济发展壮大问题线索
+                                                    </p>
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="https://liuyan.www.gov.cn/2025wwzfgzbgtjy/bmdf.html?q=fj" target="_blank"
+                                                    title="@国务院 我来说 ">
+                                                    <i class="picture_fixed"
+                                                        style="background-image: url('./zwgk/ndss/202303/W020250311309831534713.jpg');"></i>
+                                                    <div class="txt-bg"></div>
+                                                    <p>
+                                                        @国务院 我来说
+                                                    </p>
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="./zwgk/ndss/202603/t20260323_2448272.htm" target="_blank"
+                                                    title="国家水网绘蓝图 山哈河长护清波——宁德市2026年“世界水日”“中国水周”主题宣传活动正式启动！ ">
+                                                    <i class="picture_fixed"
+                                                        style="background-image: url('./zwgk/ndss/202603/W020260323579010122240.jpg');"></i>
+                                                    <div class="txt-bg"></div>
+                                                    <p>
+                                                        国家水网绘蓝图 山哈河长护清波——宁德市2026年“世界水日”“中国水周”主题宣传活动正式启动！
+                                                    </p>
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="./zwgk/ndss/202603/t20260320_2448094.htm" target="_blank"
+                                                    title="按下“加速键”！福建上白石水利枢纽工程移民实物指标调查复核正式启动 ">
+                                                    <i class="picture_fixed"
+                                                        style="background-image: url('./zwgk/ndss/202603/W020260320622959407586.jpg');"></i>
+                                                    <div class="txt-bg"></div>
+                                                    <p>
+                                                        按下“加速键”！福建上白石水利枢纽工程移民实物指标调查复核正式启动
+                                                    </p>
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                    <ul class="num">
+                                        <li class=""></li>
+                                        <li class="on"></li>
+                                        <li class=""></li>
+                                        <li class=""></li>
+                                        <li class=""></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!--轮播图-end-->
+                            <div class="trt-col-12 trt-col-sm-24 slb-trt-col-24 mar_t_base_sm slb_mar_t_base">
+                                <div class="tabs tabs_01" role="viewlist" des="宁德水事" id="tabNdss">
+                                    <div class="tabs_header hd">
+                                        <ul>
+                                            <li><a href="http://www.gov.cn/" target="_blank" title="国务院信息">国务院信息</a>
+                                            </li>
+                                            <li><a href="https://www.fujian.gov.cn/" target="_blank"
+                                                    title="福建要闻">福建要闻</a></li>
+                                            <li><a href="http://www.ningde.gov.cn/zwgk/gzdt/jryw/"
+                                                target="_blank" title="宁德要闻">宁德要闻</a></li>
+                                            <li class="on"><a
+                                                    href="./zwgk/ndss/"
+                                                    target="_blank"
+                                                    title="宁德水事">宁德水事</a>
+                                            </li>
+                                        </ul>
+                                        <span class="more">
+                                            <a class="gendd" href="http://www.gov.cn/" target="_blank" title="更多">更多&gt;</a>
+                                            <a class="gendd" href="https://www.fujian.gov.cn/" target="_blank" title="更多">更多&gt;</a>
+                                            <a class="gendd" href="http://www.ningde.gov.cn/zwgk/gzdt/jryw/" target="_blank"  title="更多">更多&gt;</a>
+                                            <a class="gendd" href="./zwgk/ndss/"
+                                                target="_blank" title="更多">更多&gt;</a>
+                                        </span>
+                                    </div>
+                                    <div class="tabs_content bd">
+                                        <!--国务院信息-->
+                                        <div class="list_base list_base_date_01 wza-list">
+                                            <ul ms-controller="gwyxx" ms-visible="list.length>0">
+                                                <li ms-repeat="list" ms-if-loop="$index < 8">
+                                                    <a ms-attr-href="el.link" target="_blank" ms-attr-title="el.title"
+                                                        ms-text="el.title"></a>
+                                                    <span class="bf-pass" ms-text="el.pubDate | date('MM-dd')"></span>
+                                                </li>
+
+                                            </ul>
+                                            <span class="more">
+                                                <a href="http://www.gov.cn/" target="_blank" title="更多">更多&gt;</a>
+                                            </span>
+                                        </div>
+                                        <!--国务院信息-end-->
+                                        <!--福建要闻-->
+                                        <div class="list_base list_base_date_01 wza-list">
+                                            <ul ms-controller="szfxx" ms-visible="list.length>0">
+                                                <li ms-repeat="list" ms-if-loop="$index < 8">
+                                                    <a ms-attr-href="el.url" target="_blank" ms-attr-title="el.title"
+                                                        ms-text="el.title"></a>
+                                                    <span class="bf-pass" ms-text="el.time | date('MM-dd')"></span>
+                                                </li>
+
+                                            </ul>
+                                            <span class="more">
+                                                <a href="https://www.fujian.gov.cn/" target="_blank"
+                                                    title="更多">更多&gt;</a>
+                                            </span>
+                                        </div>
+                                        <!--福建要闻-end-->
+                                        <!--宁德要闻-->
+                                        <div class="list_base list_base_date_01 wza-list">
+                                            <ul>
+                                                
+                                                    <li>
+                                                        <a href="http://www.ningde.gov.cn/zwgk/gzdt/jryw/202603/t20260327_2449289.htm" target="_blank" title="核电汽轮机控制系统国产化改造在宁德核电成功应用">核电汽轮机控制系统国产化改造在宁德核电成功应用</a>
+                                                        <span class="bf-pass">
+                                                            2026-03-27
+                                                        </span>
+                                                    </li>
+                                                
+                                                    <li>
+                                                        <a href="http://www.ningde.gov.cn/zwgk/gzdt/jryw/202603/t20260327_2449287.htm" target="_blank" title="当好市委的“坚强前哨”“巩固后院” 努力为宁德高质量发展作出更大贡献">当好市委的“坚强前哨”“巩固后院” 努力为宁德高质量发展作出更大贡献</a>
+                                                        <span class="bf-pass">
+                                                            2026-03-27
+                                                        </span>
+                                                    </li>
+                                                
+                                                    <li>
+                                                        <a href="http://www.ningde.gov.cn/zwgk/gzdt/jryw/202603/t20260326_2449018.htm" target="_blank" title="打造“家门口”的“幸福地标”——宁德市探索“嵌入式”养老新路径">打造“家门口”的“幸福地标”——宁德市探索“嵌入式”养老新路径</a>
+                                                        <span class="bf-pass">
+                                                            2026-03-26
+                                                        </span>
+                                                    </li>
+                                                
+                                                    <li>
+                                                        <a href="http://www.ningde.gov.cn/zwgk/gzdt/jryw/202603/t20260326_2449014.htm" target="_blank" title="宁德市2026年首批市本级公租房摇号30日启动">宁德市2026年首批市本级公租房摇号30日启动</a>
+                                                        <span class="bf-pass">
+                                                            2026-03-26
+                                                        </span>
+                                                    </li>
+                                                
+                                                    <li>
+                                                        <a href="http://www.ningde.gov.cn/zwgk/gzdt/jryw/202603/t20260324_2448416.htm" target="_blank" title="我市4家企业获评国家级绿色工厂">我市4家企业获评国家级绿色工厂</a>
+                                                        <span class="bf-pass">
+                                                            2026-03-24
+                                                        </span>
+                                                    </li>
+                                                
+                                                    <li>
+                                                        <a href="http://www.ningde.gov.cn/zwgk/gzdt/jryw/202603/t20260323_2448181.htm" target="_blank" title="宁德市首条“线上公交”上金贝专线正式运营">宁德市首条“线上公交”上金贝专线正式运营</a>
+                                                        <span class="bf-pass">
+                                                            2026-03-23
+                                                        </span>
+                                                    </li>
+                                                
+                                                    <li>
+                                                        <a href="http://www.ningde.gov.cn/zwgk/gzdt/jryw/202603/t20260319_2447666.htm" target="_blank" title="我市连续14年未发生任何级别食品安全事故">我市连续14年未发生任何级别食品安全事故</a>
+                                                        <span class="bf-pass">
+                                                            2026-03-19
+                                                        </span>
+                                                    </li>
+                                                
+                                                    <li>
+                                                        <a href="http://www.ningde.gov.cn/zwgk/gzdt/jryw/202603/t20260318_2447436.htm" target="_blank" title="我市全面排查“漂白鸡爪” 下架封存3552件">我市全面排查“漂白鸡爪” 下架封存3552件</a>
+                                                        <span class="bf-pass">
+                                                            2026-03-18
+                                                        </span>
+                                                    </li>
+                                                
+                                            </ul>
+                                        <span class="more">
+                                            <a href="http://www.ningde.gov.cn/zwgk/gzdt/jryw/" target="_blank"
+                                                title="更多">更多&gt;</a>
+                                        </span>
+                                    </div>
+                                    <!--宁德要闻-end-->
+                                        <!--宁德水事-->
+                                        <div class="list_base list_base_date_01 wza-list">
+                                          <ul>
+                                              
+                                                  <li>
+                                                      <a href="https://tousu.www.gov.cn/dc/2024zhdc/index.htm" target="_blank" title="关于2024年度国务院推动高质量发展综合督查征集问题线索的公告">关于2024年度国务院推动高质量发展综合督查征集问题线索的公告</a>
+                                                      <span class="bf-pass">
+                                                          2024-10-17
+                                                      </span>
+                                                  </li>
+                                              
+                                                  <li>
+                                                      <a href="https://mp.weixin.qq.com/s/32HcQ-3GUPveZwXuLosGAA" target="_blank" title="国务院“互联网+督查”平台公开征集阻碍民营经济发展壮大问题线索">国务院“互联网+督查”平台公开征集阻碍民营经济发展壮大问题线索</a>
+                                                      <span class="bf-pass">
+                                                          2024-05-13
+                                                      </span>
+                                                  </li>
+                                              
+                                                  <li>
+                                                      <a href="https://liuyan.www.gov.cn/2025wwzfgzbgtjy/bmdf.html?q=fj" target="_blank" title="@国务院 我来说">@国务院 我来说</a>
+                                                      <span class="bf-pass">
+                                                          2024-05-13
+                                                      </span>
+                                                  </li>
+                                              
+                                                  <li>
+                                                      <a href="./zwgk/ndss/202603/t20260323_2448272.htm" target="_blank" title="国家水网绘蓝图 山哈河长护清波——宁德市2026年“世界水日”“中国水周”主题宣传活动正式启动！">国家水网绘蓝图 山哈河长护清波——宁德市2026年“世界水日”“中国水周”主题宣传活动正式启动！</a>
+                                                      <span class="bf-pass">
+                                                          2026-03-23
+                                                      </span>
+                                                  </li>
+                                              
+                                                  <li>
+                                                      <a href="./zwgk/ndss/202603/t20260320_2448094.htm" target="_blank" title="按下“加速键”！福建上白石水利枢纽工程移民实物指标调查复核正式启动">按下“加速键”！福建上白石水利枢纽工程移民实物指标调查复核正式启动</a>
+                                                      <span class="bf-pass">
+                                                          2026-03-20
+                                                      </span>
+                                                  </li>
+                                              
+                                                  <li>
+                                                      <a href="./zwgk/ndss/202603/t20260313_2446691.htm" target="_blank" title="宁德市上白石水利枢纽工程建设指挥部办公室开展建设征地和移民安置补偿工作业务培训">宁德市上白石水利枢纽工程建设指挥部办公室开展建设征地和移民安置补偿工作业务培训</a>
+                                                      <span class="bf-pass">
+                                                          2026-03-13
+                                                      </span>
+                                                  </li>
+                                              
+                                                  <li>
+                                                      <a href="./zwgk/ndss/202603/t20260313_2446679.htm" target="_blank" title="霞浦大坪水库除险加固工程顺利通过蓄水验收">霞浦大坪水库除险加固工程顺利通过蓄水验收</a>
+                                                      <span class="bf-pass">
+                                                          2026-03-13
+                                                      </span>
+                                                  </li>
+                                              
+                                                  <li>
+                                                      <a href="./zwgk/ndss/202603/t20260311_2445939.htm" target="_blank" title="宁德市试点推行水利工程领域人工智能场景应用">宁德市试点推行水利工程领域人工智能场景应用</a>
+                                                      <span class="bf-pass">
+                                                          2026-03-11
+                                                      </span>
+                                                  </li>
+                                              
+                                          </ul>
+                                          <span class="more">
+                                              <a href="./zwgk/ndss/"
+                                                  target="_blank" title="更多">更多&gt;</a>
+                                          </span>
+                                      </div>
+                                      <!--宁德水事-end-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="xxgkml_div">
+                        <a title="政务公开任务清单" href="./zwgkqd/" target="_blank"><h1>政务公开任务清单</h1></a>
+                      </div>
+                    <!--防汛抗旱-->
+                    <!--div class="mar_t_large mar_t_base_sm ind_con" role="viewlist" des="防汛抗旱">
+                        <div class="ind_tit">水旱灾害防御</div>
+                        <div class="ind_list">
+                            <ul class="trt-row">
+                                <li
+                                    class="trt-col-4 trt-col-sm-8 slb-trt-col-8 trt-col-md-24 slb-trt-col-sm-12 slb-trt-col-md-24 mar_t_base">
+                                    <a href="http://27.156.118.74:18800/web/html/index.html?module=qxld" title="气象雷达"
+                                        target="_blank">
+                                        <span><i class="ndsl_iconfont ndsl_base-signal"></i><em>气象雷达</em></span>
+                                    </a>
+                                </li>
+                                <li
+                                    class="trt-col-4 trt-col-sm-8 slb-trt-col-8  trt-col-md-24 slb-trt-col-sm-12 slb-trt-col-md-24  mar_t_base">
+                                    <a href="http://27.156.118.74:18800/web/html/index.html?module=wxyt" title="卫星云图"
+                                        target="_blank">
+                                        <span><i class="ndsl_iconfont ndsl_astronomical"></i><em>卫星云图</em></span>
+                                    </a>
+                                </li>
+                                <li
+                                    class="trt-col-4 trt-col-sm-8 slb-trt-col-8  trt-col-md-24 slb-trt-col-sm-12 slb-trt-col-md-24  mar_t_base">
+                                    <a href="http://27.156.118.74:18800/web/html/index.html?module=fqxx" title="风情信息"
+                                        target="_blank">
+                                        <span><i class="ndsl_iconfont ndsl_dafeng"></i><em>风情信息</em></span>
+                                    </a>
+                                </li>
+                                <li
+                                    class="trt-col-4 trt-col-sm-8 slb-trt-col-8  trt-col-md-24 slb-trt-col-sm-12 slb-trt-col-md-24  mar_t_base">
+                                    <a href="http://27.156.118.74:18800/web/html/index.html?module=sqxx" title="水情信息"
+                                        target="_blank">
+                                        <span><i class="ndsl_iconfont ndsl_shuiqingxinxi"></i><em>水情信息</em></span>
+                                    </a>
+                                </li>
+                                <li
+                                    class="trt-col-4 trt-col-sm-8 slb-trt-col-8  trt-col-md-24 slb-trt-col-sm-12 slb-trt-col-md-24  mar_t_base">
+                                    <a href="http://27.156.118.74:18800/web/html/index.html?module=yqxx" title="雨情信息"
+                                        target="_blank">
+                                        <span><i class="ndsl_iconfont ndsl_tianqiyutiandayu"></i><em>雨情信息</em></span>
+                                    </a>
+                                </li>
+                                <li
+                                    class="trt-col-4 trt-col-sm-8 slb-trt-col-8  trt-col-md-24 slb-trt-col-sm-12 slb-trt-col-md-24  mar_t_base">
+                                    <a href="http://27.156.118.74:18800/web/html/index.html?module=tflj" title="台风路径"
+                                        target="_blank">
+                                        <span><i class="ndsl_iconfont ndsl_a-ziyuan1"></i><em>台风路径</em></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div-->
+                    <!--防汛抗旱-end-->
+                    <div class="mar_t_large mar_t_base_sm ind_tabs">
+                        <div class="tabs_w_hd">
+                            <ul>
+                                <li><a href="javascript:;" title="政务公开"><i
+                                            class="ndsl_iconfont ndsl_zhengwugongkai"></i>政务公开</a></li>
+                                <li><a href="javascript:;" title="解读回应"><i
+                                            class="ndsl_iconfont ndsl_changjianwenti"></i>解读回应</a></li>
+                                <li><a href="javascript:;" title="互动交流"><i
+                                            class="ndsl_iconfont ndsl_hudongjiaoliu"></i>互动交流</a></li>
+                            </ul>
+                        </div>
+                        <div class="tabs_w_bd content_bg_02 pad_large pad_t_small pad_base_sm">
+                            <!--********************政务公开**************************-->
+                            <div role="viewlist" des="政务公开">
+                                <div class="ind_list1">
+                                    <ul class="trt-row trt-row-large">
+                                        <li
+                                            class="trt-col-ave-5 trt-col-sm-12 trt-col-md-24 slb-trt-col-12 slb-trt-col-md-24 mar_t_base">
+                                            <a href="./zwgk/zfxxgk/xxgkzn/"
+                                                title="政府信息公开指南" target="_blank"><span><img src="./images/221213slj_icon1.png" /></span>
+                                                <p>政府信息公开指南</p>
+                                            </a>
+                                        </li>
+                                        <li
+                                            class="trt-col-ave-5 trt-col-sm-12 trt-col-md-24 slb-trt-col-12 slb-trt-col-md-24 mar_t_base">
+                                            <a href="./zwgk/zfxxgk/xxgkzd/"
+                                                title="政府信息公开制度" target="_blank"><span><img src="./images/221213slj_icon2.png" /></span>
+                                                <p>政府信息公开制度</p>
+                                            </a>
+                                        </li>
+                                        <li
+                                            class="trt-col-ave-5 trt-col-sm-12 trt-col-md-24 slb-trt-col-12 slb-trt-col-md-24 mar_t_base">
+                                            <a href="./zwgk/zfxxgk/xxgkml/"
+                                                title="法定主动公开内容" target="_blank"><span><img src="./images/221213slj_icon3.png" /></span>
+                                                <p>法定主动公开内容</p>
+                                            </a>
+                                        </li>
+                                        <li
+                                            class="trt-col-ave-5 trt-col-sm-12 trt-col-md-24 slb-trt-col-12 slb-trt-col-md-24 mar_t_base">
+                                            <a href="./zwgk/zfxxgk/xxgkndbg/"
+                                                title="政府信息公开年报" target="_blank"><span><img src="./images/221213slj_icon4.png" /></span>
+                                                <p>政府信息公开年报</p>
+                                            </a>
+                                        </li>
+                                        <li
+                                            class="trt-col-ave-5 trt-col-sm-12 trt-col-md-24 slb-trt-col-12 slb-trt-col-md-24 mar_t_base">
+                                            <a href="./zwgk/zfxxgk/ysqgk/"
+                                                title="政府信息公开申请" target="_blank"><span><img src="./images/221213slj_icon5.png" /></span>
+                                                <p>政府信息公开申请</p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="mar_t_01 mar_t_base_sm">
+                                    <div class="trt-row trt-row-large">
+                                        <div class="trt-col-9 trt-col-sm-24 slb-trt-col-24" id="tabTzgg">
+                                            <div class="tabs tabs_01">
+                                                <div class="tabs_header hd">
+                                                    <ul>
+                                                        <li class="on"><a
+                                                                href="./zwgk/tzgg/"
+                                                                title="通知公告"
+                                                                target="_blank">通知公告</a></li>
+                                                        <li><a href="./zwgk/czyjs/"
+                                                                title="财政预决算"
+                                                                target="_blank">财政预决算</a></li>
+                                                        
+                                                    </ul>
+                                                    <span class="more">
+                                                        <a class="gendd" href="./zwgk/tzgg/"
+                                                            target="_blank" title="更多">更多&gt;</a>
+                                                        <a class="gendd" href="./zwgk/czyjs/"
+                                                            target="_blank" title="更多">更多&gt;</a>
+                                                     
+                                                    </span>
+                                                </div>
+                                                <div class="tabs_content bd">
+                                                    <div class="list_base list_base_date_01 wza-list">
+                                                        <ul>
+                                                            
+                                                                <li>
+                                                                    <a href="./zwgk/tzgg/202603/t20260326_2448952.htm" target="_blank" title="宁德市重点河段、敏感水域采砂管理责任人名单（2026.03）">宁德市重点河段、敏感水域采砂管理责任人名单（2026.03）</a>
+                                                                    <span class="bf-pass">
+                                                                        2026-03-26
+                                                                    </span>
+                                                                </li>
+                                                            
+                                                                <li>
+                                                                    <a href="./zwgk/tzgg/202603/t20260320_2448021.htm" target="_blank" title="2024-2025年省级以上转下达资金公示（二）">2024-2025年省级以上转下达资金公示（二）</a>
+                                                                    <span class="bf-pass">
+                                                                        2026-03-20
+                                                                    </span>
+                                                                </li>
+                                                            
+                                                                <li>
+                                                                    <a href="./zwgk/tzgg/202603/t20260320_2448013.htm" target="_blank" title="2024-2025年省级以上转下达资金公示（一）">2024-2025年省级以上转下达资金公示（一）</a>
+                                                                    <span class="bf-pass">
+                                                                        2026-03-20
+                                                                    </span>
+                                                                </li>
+                                                            
+                                                                <li>
+                                                                    <a href="./zwgk/tzgg/202603/t20260311_2445936.htm" target="_blank" title="宁德市水利局关于网站适老版改造及主动公开事项目录编制服务项目比选采购结果的公示">宁德市水利局关于网站适老版改造及主动公开事项目录编制服务项目比选采购结果的公示</a>
+                                                                    <span class="bf-pass">
+                                                                        2026-03-11
+                                                                    </span>
+                                                                </li>
+                                                            
+                                                                <li>
+                                                                    <a href="./zwgk/tzgg/202603/t20260302_2444043.htm" target="_blank" title="宁德市水利局网站适老版改造及主动公开事项目录编制服务项目比选采购公告">宁德市水利局网站适老版改造及主动公开事项目录编制服务项目比选采购公告</a>
+                                                                    <span class="bf-pass">
+                                                                        2026-03-02
+                                                                    </span>
+                                                                </li>
+                                                            
+                                                                <li>
+                                                                    <a href="./zwgk/tzgg/202601/t20260130_2439392.htm" target="_blank" title="水土保持设施自主验收报备公示">水土保持设施自主验收报备公示</a>
+                                                                    <span class="bf-pass">
+                                                                        2026-01-30
+                                                                    </span>
+                                                                </li>
+                                                            
+                                                                <li>
+                                                                    <a href="./zwgk/tzgg/202601/t20260105_2431447.htm" target="_blank" title="2025年度宁德市水利局政府网站年度工作报表">2025年度宁德市水利局政府网站年度工作报表</a>
+                                                                    <span class="bf-pass">
+                                                                        2026-01-05
+                                                                    </span>
+                                                                </li>
+                                                            
+                                                                <li>
+                                                                    <a href="./zwgk/tzgg/202512/t20251231_2430322.htm" target="_blank" title="宁德市水利局2025年第四季度政府网站与政务新媒体自查情况">宁德市水利局2025年第四季度政府网站与政务新媒体自查情况</a>
+                                                                    <span class="bf-pass">
+                                                                        2025-12-31
+                                                                    </span>
+                                                                </li>
+                                                            
+
+                                                        </ul>
+                                                        <span class="more">
+                                                            <a href="./zwgk/tzgg/"
+                                                                target="_blank" title="更多">更多&gt;</a>
+                                                        </span>
+                                                    </div>
+                                                    <div class="list_base list_base_date_01 wza-list">
+                                                        <ul>
+                                                            
+                                                                <li>
+                                                                    <a href="./zwgk/czyjs/202509/t20250925_2260417.htm" target="_blank" title="2025年度宁德市水利局单位预算">2025年度宁德市水利局单位预算</a>
+                                                                    <span class="bf-pass">
+                                                                        2025-09-25
+                                                                    </span>
+                                                                </li>
+                                                            
+                                                                <li>
+                                                                    <a href="./zwgk/czyjs/202509/t20250925_2260414.htm" target="_blank" title="2025年度宁德市水利局部门预算">2025年度宁德市水利局部门预算</a>
+                                                                    <span class="bf-pass">
+                                                                        2025-09-25
+                                                                    </span>
+                                                                </li>
+                                                            
+                                                                <li>
+                                                                    <a href="./zwgk/czyjs/202509/t20250925_2260410.htm" target="_blank" title="2025年度宁德市水资源与河务中心单位预算">2025年度宁德市水资源与河务中心单位预算</a>
+                                                                    <span class="bf-pass">
+                                                                        2025-09-25
+                                                                    </span>
+                                                                </li>
+                                                            
+                                                                <li>
+                                                                    <a href="./zwgk/czyjs/202509/t20250925_2260407.htm" target="_blank" title="2025年度宁德市水利水电经济发展中心单位预算">2025年度宁德市水利水电经济发展中心单位预算</a>
+                                                                    <span class="bf-pass">
+                                                                        2025-09-25
+                                                                    </span>
+                                                                </li>
+                                                            
+                                                                <li>
+                                                                    <a href="./zwgk/czyjs/202509/t20250925_2260402.htm" target="_blank" title="2025年度宁德市水利水电工程质量技术站单位预算">2025年度宁德市水利水电工程质量技术站单位预算</a>
+                                                                    <span class="bf-pass">
+                                                                        2025-09-25
+                                                                    </span>
+                                                                </li>
+                                                            
+                                                                <li>
+                                                                    <a href="./zwgk/czyjs/202509/t20250925_2260396.htm" target="_blank" title="2025年度宁德市水利水电工程移民发展中心单位预算">2025年度宁德市水利水电工程移民发展中心单位预算</a>
+                                                                    <span class="bf-pass">
+                                                                        2025-09-25
+                                                                    </span>
+                                                                </li>
+                                                            
+                                                                <li>
+                                                                    <a href="./zwgk/czyjs/202509/t20250925_2260392.htm" target="_blank" title="2025年度宁德市水利技术队单位预算">2025年度宁德市水利技术队单位预算</a>
+                                                                    <span class="bf-pass">
+                                                                        2025-09-25
+                                                                    </span>
+                                                                </li>
+                                                            
+                                                                <li>
+                                                                    <a href="./zwgk/czyjs/202509/t20250925_2260388.htm" target="_blank" title="2025年度宁德市水利规划研究室单位预算">2025年度宁德市水利规划研究室单位预算</a>
+                                                                    <span class="bf-pass">
+                                                                        2025-09-25
+                                                                    </span>
+                                                                </li>
+                                                            
+                                                        </ul>
+                                                        <span class="more">
+                                                            <a href="./zwgk/czyjs/"
+                                                                target="_blank" title="更多">更多&gt;</a>
+                                                        </span>
+                                                    </div>
+                                                  
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="trt-col-10 trt-col-sm-24 slb-trt-col-24 mar_t_base_sm slb_mar_t_base"
+                                            id="tabZcwj">
+                                            <div class="tabs tabs_01">
+                                                <div class="tabs_header hd">
+                                                    <ul>
+                                                        <li class="on"><a
+                                                                href="./zwgk/zcwj/"
+                                                                title="政策文件"
+                                                                target="_blank">政策文件</a></li>
+                                                        <li><a href="./zwgk/jyta/"
+                                                                title="建议提案"
+                                                                target="_blank">建议提案</a></li>
+                                                        <li><a href="./zwgk/sjgk/"
+                                                                title="双随机、一公开"
+                                                                target="_blank">双随机、一公开</a></li>
+                                                    </ul>
+                                                    <span class="more">
+                                                        <a class="gendd" href="./zwgk/zcwj/"
+                                                            target="_blank" title="更多">更多&gt;</a>
+                                                        <a class="gendd" href="./zwgk/jyta/"
+                                                            target="_blank" title="更多">更多&gt;</a>
+                                                        <a class="gendd" href="./zwgk/sjgk/"
+                                                            target="_blank" title="更多">更多&gt;</a>
+                                                    </span>
+                                                </div>
+                                                <div class="tabs_content bd">
+                                                    <div class="list_base list_base_date_01 wza-list">
+                                                        <ul>
+                                                            
+                                                                <li>
+                                                                    <a href="./zwgk/zcwj/202506/t20250610_2042634.htm" target="_blank" title="福建省水利厅关于修订《福建省水库除险加固常态化项目管理规定》的通知">福建省水利厅关于修订《福建省水库除险加固常态化项目管理规定》的通知</a>
+                                                                    <span class="bf-pass">
+                                                                        2025-06-10
+                                                                    </span>
+                                                                </li>
+                                                            
+                                                                <li>
+                                                                    <a href="./zwgk/zfxxgk/zc/gfxwj/202412/t20241230_2004711.htm" target="_blank" title="宁德市水利局  宁德市财政局关于印发《宁德市市级水利专项资金管理办法》的通知">宁德市水利局  宁德市财政局关于印发《宁德市市级水利专项资金管理办法》的通知</a>
+                                                                    <span class="bf-pass">
+                                                                        2024-12-30
+                                                                    </span>
+                                                                </li>
+                                                            
+                                                                <li>
+                                                                    <a href="./zwgk/zcwj/202408/t20240830_1967998.htm" target="_blank" title="关于印发实施强化工程项目招标投标监管若干措施的通知">关于印发实施强化工程项目招标投标监管若干措施的通知</a>
+                                                                    <span class="bf-pass">
+                                                                        2024-08-30
+                                                                    </span>
+                                                                </li>
+                                                            
+                                                                <li>
+                                                                    <a href="./zwgk/zcwj/202406/t20240611_1943734.htm" target="_blank" title="《福建省一体化大融合行政执法平台管理暂行办法》2024年6月1日起施行">《福建省一体化大融合行政执法平台管理暂行办法》2024年6月1日起施行</a>
+                                                                    <span class="bf-pass">
+                                                                        2024-06-11
+                                                                    </span>
+                                                                </li>
+                                                            
+                                                                <li>
+                                                                    <a href="./zwgk/zcwj/202405/t20240511_1935794.htm" target="_blank" title="构建水利安全生产风险管控“六项机制” 工作指导手册（2023 年版）">构建水利安全生产风险管控“六项机制” 工作指导手册（2023 年版）</a>
+                                                                    <span class="bf-pass">
+                                                                        2024-05-11
+                                                                    </span>
+                                                                </li>
+                                                            
+                                                                <li>
+                                                                    <a href="./zwgk/zcwj/202403/t20240304_1919101.htm" target="_blank" title="福建省水利工程管理条例">福建省水利工程管理条例</a>
+                                                                    <span class="bf-pass">
+                                                                        2024-03-04
+                                                                    </span>
+                                                                </li>
+                                                            
+                                                                <li>
+                                                                    <a href="http://www.ningde.gov.cn/zfxxgkzl/zfxxgkml/fggzhgf/nlsy/202308/t20230821_1789836.htm" target="_blank" title="宁德市人民政府关于印发《宁德市主城区防洪防潮排涝规划（修编）》（2021—2035）的通知">宁德市人民政府关于印发《宁德市主城区防洪防潮排涝规划（修编）》（2021—2035）的通知</a>
+                                                                    <span class="bf-pass">
+                                                                        2023-08-25
+                                                                    </span>
+                                                                </li>
+                                                            
+                                                                <li>
+                                                                    <a href="http://slt.fujian.gov.cn/xxgk/fggw/gfxwj/202303/t20230328_6139258.htm" target="_blank" title="福建省水利厅关于水利工程质量检测单位乙级资质认定实行告知承诺制的公告">福建省水利厅关于水利工程质量检测单位乙级资质认定实行告知承诺制的公告</a>
+                                                                    <span class="bf-pass">
+                                                                        2023-06-29
+                                                                    </span>
+                                                                </li>
+                                                            
+                                                        </ul>
+                                                        <span class="more">
+                                                            <a href="./zwgk/zcwj/"
+                                                                target="_blank" title="更多">更多&gt;</a>
+                                                        </span>
+                                                    </div>
+                                                    <div class="list_base list_base_date_01 wza-list">
+                                                        <ul>
+                                                            
+                                                                <li>
+                                                                    <a href="./zwgk/zfxxgk/zc/qtzdgkwj/202603/t20260326_2448995.htm" target="_blank" title="关于市五届人大六次会议第1432号建议的协办意见">关于市五届人大六次会议第1432号建议的协办意见</a>
+                                                                    <span class="bf-pass">
+                                                                        2026-03-26
+                                                                    </span>
+                                                                </li>
+                                                            
+                                                                <li>
+                                                                    <a href="./zwgk/zfxxgk/zc/qtzdgkwj/202603/t20260323_2448173.htm" target="_blank" title="关于市五届人大六次会议第1299号建议的协办意见">关于市五届人大六次会议第1299号建议的协办意见</a>
+                                                                    <span class="bf-pass">
+                                                                        2026-03-23
+                                                                    </span>
+                                                                </li>
+                                                            
+                                                                <li>
+                                                                    <a href="./zwgk/zfxxgk/zc/qtzdgkwj/202603/t20260323_2448149.htm" target="_blank" title="关于市五届人大六次会议第1422号建议的协办意见">关于市五届人大六次会议第1422号建议的协办意见</a>
+                                                                    <span class="bf-pass">
+                                                                        2026-03-23
+                                                                    </span>
+                                                                </li>
+                                                            
+                                                                <li>
+                                                                    <a href="./zwgk/zfxxgk/zc/qtzdgkwj/202603/t20260323_2448132.htm" target="_blank" title="关于市五届人大六次会议第1320号建议的答复">关于市五届人大六次会议第1320号建议的答复</a>
+                                                                    <span class="bf-pass">
+                                                                        2026-03-23
+                                                                    </span>
+                                                                </li>
+                                                            
+                                                                <li>
+                                                                    <a href="./zwgk/zfxxgk/zc/qtzdgkwj/202603/t20260311_2445924.htm" target="_blank" title="关于市五届人大六次会议第1270号建议的协办意见">关于市五届人大六次会议第1270号建议的协办意见</a>
+                                                                    <span class="bf-pass">
+                                                                        2026-03-11
+                                                                    </span>
+                                                                </li>
+                                                            
+                                                                <li>
+                                                                    <a href="./zwgk/zfxxgk/zc/qtzdgkwj/202508/t20250814_2143387.htm" target="_blank" title="关于市五届人大四次会议第1325号建议的答复">关于市五届人大四次会议第1325号建议的答复</a>
+                                                                    <span class="bf-pass">
+                                                                        2025-08-14
+                                                                    </span>
+                                                                </li>
+                                                            
+                                                                <li>
+                                                                    <a href="./zwgk/zfxxgk/zc/qtzdgkwj/202507/t20250715_2051402.htm" target="_blank" title="关于市政协五届四次会议第20253071号提案的答复">关于市政协五届四次会议第20253071号提案的答复</a>
+                                                                    <span class="bf-pass">
+                                                                        2025-07-15
+                                                                    </span>
+                                                                </li>
+                                                            
+                                                                <li>
+                                                                    <a href="./zwgk/zfxxgk/zc/qtzdgkwj/202507/t20250707_2049135.htm" target="_blank" title="关于市政协五届四次会议第20253144号提案的答复">关于市政协五届四次会议第20253144号提案的答复</a>
+                                                                    <span class="bf-pass">
+                                                                        2025-07-07
+                                                                    </span>
+                                                                </li>
+                                                            
+                                                        </ul>
+                                                        <span class="more">
+                                                            <a href="./zwgk/jyta/"
+                                                                target="_blank" title="更多">更多&gt;</a>
+                                                        </span>
+                                                    </div>
+                                                    <div class="list_base list_base_date_01 wza-list">
+                                                        <ul>
+                                                            
+                                                                <li>
+                                                                    <a href="./zwgk/sjgk/202507/t20250709_2049916.htm" target="_blank" title="宁德市水利局关于2025年“双随机、一公开”抽查结果公示">宁德市水利局关于2025年“双随机、一公开”抽查结果公示</a>
+                                                                    <span class="bf-pass">
+                                                                        2025-07-09
+                                                                    </span>
+                                                                </li>
+                                                            
+                                                                <li>
+                                                                    <a href="./zwgk/sjgk/202506/t20250623_2045716.htm" target="_blank" title="宁德市水利局关于市级2025年“双随机、一公开”水利工程招投标检查结果的公示">宁德市水利局关于市级2025年“双随机、一公开”水利工程招投标检查结果的公示</a>
+                                                                    <span class="bf-pass">
+                                                                        2025-06-23
+                                                                    </span>
+                                                                </li>
+                                                            
+                                                                <li>
+                                                                    <a href="./zwgk/sjgk/202506/t20250617_2044502.htm" target="_blank" title="宁德市水利局关于开展2025 年全市水利工程建设招投标“双随机、一公开”检查的通知">宁德市水利局关于开展2025 年全市水利工程建设招投标“双随机、一公开”检查的通知</a>
+                                                                    <span class="bf-pass">
+                                                                        2025-06-17
+                                                                    </span>
+                                                                </li>
+                                                            
+                                                                <li>
+                                                                    <a href="./zwgk/sjgk/202504/t20250417_2030807.htm" target="_blank" title="宁德市水利局关于开展2025年全市水利工程建设招投标“双随机、一公开”检查的通知">宁德市水利局关于开展2025年全市水利工程建设招投标“双随机、一公开”检查的通知</a>
+                                                                    <span class="bf-pass">
+                                                                        2025-04-17
+                                                                    </span>
+                                                                </li>
+                                                            
+                                                                <li>
+                                                                    <a href="./zwgk/sjgk/202412/t20241213_2000416.htm" target="_blank" title="宁德市水利局关于开展市级2024年“双随机、一公开”水土保持监督检查结果的公示">宁德市水利局关于开展市级2024年“双随机、一公开”水土保持监督检查结果的公示</a>
+                                                                    <span class="bf-pass">
+                                                                        2024-12-13
+                                                                    </span>
+                                                                </li>
+                                                            
+                                                                <li>
+                                                                    <a href="./zwgk/tzgg/202408/t20240807_1962141.htm" target="_blank" title="宁德市水利局关于开展市级2024年“双随机、一公开”水利工程质量监督检查结果的公示">宁德市水利局关于开展市级2024年“双随机、一公开”水利工程质量监督检查结果的公示</a>
+                                                                    <span class="bf-pass">
+                                                                        2024-08-07
+                                                                    </span>
+                                                                </li>
+                                                            
+                                                                <li>
+                                                                    <a href="./zwgk/zfxxgk/zc/qtzdgkwj/202407/t20240731_1960372.htm" target="_blank" title="宁德市水利局关于开展2024年市级水利工程质量监督对象“双随机、一公开”检查的通知">宁德市水利局关于开展2024年市级水利工程质量监督对象“双随机、一公开”检查的通知</a>
+                                                                    <span class="bf-pass">
+                                                                        2024-07-31
+                                                                    </span>
+                                                                </li>
+                                                            
+                                                                <li>
+                                                                    <a href="./zwgk/zfxxgk/zc/qtzdgkwj/202404/t20240410_1928468.htm" target="_blank" title="宁德市水利局关于开展2024年市级取水许可管理对象“双随机、一公开”检查的通知">宁德市水利局关于开展2024年市级取水许可管理对象“双随机、一公开”检查的通知</a>
+                                                                    <span class="bf-pass">
+                                                                        2024-04-10
+                                                                    </span>
+                                                                </li>
+                                                            
+                                                        </ul>
+                                                        <span class="more">
+                                                            <a href="./zwgk/sjgk/"
+                                                                target="_blank" title="更多">更多&gt;</a>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="trt-col-5 trt-col-sm-24 slb-trt-col-24">
+                                            <div class="jggk_div mar_t_small_sm slb_mar_t_base">
+                                                <div class="jggk_top">
+                                                    <h1>机构概况</h1>
+                                                </div>
+                                                <div class="jggk_ul">
+                                                    <ul>
+
+                                                        <li><a href="./jggk/ldjs/"
+                                                                title="领导介绍" target="_blank"><span><i
+                                                                        class="ndsl_iconfont ndsl_icon_xinyong_xianxing_jijin-"></i></span>领导介绍</a>
+                                                        </li>
+                                                        <li><a href="./jggk/jgzn/"
+                                                                title="机构职能" target="_blank"><span><i
+                                                                        class="ndsl_iconfont ndsl_gezhinengchushikaohefudaoyuan"></i></span>机构职能</a>
+                                                        </li>
+                                                        <li><a href="./jggk/nsks/"
+                                                                title="内设科室" target="_blank"><span><i
+                                                                        class="ndsl_iconfont ndsl_keshiguanli"></i></span>内设科室</a>
+                                                        </li>
+                                                        <li><a href="./jggk/zsdw/"
+                                                                title="直属单位" target="_blank"><span><i
+                                                                        class="ndsl_iconfont ndsl_zuzhijigou"></i></span>直属单位</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--****************************政务公开-end********************************-->
+
+                            <!--***********************************解读回应***********************************-->
+                            <div role="viewlist" des="解读回应">
+                                <div class="tabs tabs_01">
+                                    <div class="tabs_header">
+                                        <ul>
+                                            <li class="on"><a
+                                                    href="./jdhy/zcjd/"
+                                                    title="政策解读"
+                                                    target="_blank">政策解读</a></li>
+                                        </ul>
+                                        <span class="more">
+                                            <a href="./jdhy/zcjd/"
+                                                target="_blank" title="更多">更多&gt;</a>
+                                        </span>
+                                    </div>
+                                    <div class="tabs_content">
+                                        <div class="trt-row trt-row-large">
+                                            <!--图解-->
+                                            <div class="trt-col-12 trt-col-sm-24 slb-trt-col-24">
+                                                <div class="picture_group">
+                                                    <ul class="trt-row">
+                                                        
+                                                            <li class="trt-col-12 trt-col-md-24 mar_t_03 mar_t_base_sm">
+                                                                <div class="picture_item">
+                                                                    <div class="picture">
+                                                                        <a href="http://www.ningde.gov.cn/jdhy/szfzcjd/tj/202304/t20230414_1750631.htm"
+                                                                            target="_blank"
+                                                                            title="图解：《宁德市入河入海排污口整治工作实施方案》"
+                                                                            class="picture_fixed"
+                                                                            style="background-image: url('http://www.ningde.gov.cn/jdhy/szfzcjd/tj/202304/W020230414571721874382.png');"></a>
+                                                                    </div>
+                                                                    <div class="picture_title_01">
+                                                                        <h3>
+                                                                            <a href="http://www.ningde.gov.cn/jdhy/szfzcjd/tj/202304/t20230414_1750631.htm" target="_blank" title="图解：《宁德市入河入海排污口整治工作实施方案》">图解：《宁德市入河入海排污口整治工作实施方案》</a>
+                                                                        </h3>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                        
+                                                            <li class="trt-col-12 trt-col-md-24 mar_t_03 mar_t_base_sm">
+                                                                <div class="picture_item">
+                                                                    <div class="picture">
+                                                                        <a href="./jdhy/zcjd/202211/t20221104_1674950.htm"
+                                                                            target="_blank"
+                                                                            title="宁德市水利局关于进一步深化“放管服”工作的图解"
+                                                                            class="picture_fixed"
+                                                                            style="background-image: url('./jdhy/zcjd/202211/W020221227506989125128.png');"></a>
+                                                                    </div>
+                                                                    <div class="picture_title_01">
+                                                                        <h3>
+                                                                            <a href="./jdhy/zcjd/202211/t20221104_1674950.htm" target="_blank" title="宁德市水利局关于进一步深化“放管服”工作的图解">宁德市水利局关于进一步深化“放管服”工作的图解</a>
+                                                                        </h3>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                        
+
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <!--图解-end-->
+                                            <div
+                                                class="trt-col-12 trt-col-sm-24 slb-trt-col-24 mar_t_base_sm slb_mar_t_base">
+                                                <div class="list_base list_base_date_01">
+                                                    <ul>
+                                                        
+                                                            <li>
+                                                                <a href="./jdhy/zcjd/202412/t20241230_2004771.htm" target="_blank" title="《宁德市市级水利专项资金管理办法》 政策解读（图解）">《宁德市市级水利专项资金管理办法》 政策解读（图解）</a>
+                                                                <span class="bf-pass">
+                                                                    2024-12-30
+                                                                </span>
+                                                            </li>
+                                                        
+                                                            <li>
+                                                                <a href="./jdhy/zcjd/202412/t20241230_2004721.htm" target="_blank" title="《宁德市市级水利专项资金管理办法》政策解读（文字解读）">《宁德市市级水利专项资金管理办法》政策解读（文字解读）</a>
+                                                                <span class="bf-pass">
+                                                                    2024-12-30
+                                                                </span>
+                                                            </li>
+                                                        
+                                                            <li>
+                                                                <a href="./jdhy/zcjd/202408/t20240830_1968008.htm" target="_blank" title="《关于强化工程项目招标投标监管的若干措施》图片解读">《关于强化工程项目招标投标监管的若干措施》图片解读</a>
+                                                                <span class="bf-pass">
+                                                                    2024-08-30
+                                                                </span>
+                                                            </li>
+                                                        
+                                                            <li>
+                                                                <a href="./jdhy/zcjd/202408/t20240830_1968002.htm" target="_blank" title="《关于强化工程项目招标投标监管的若干措施》政策解读">《关于强化工程项目招标投标监管的若干措施》政策解读</a>
+                                                                <span class="bf-pass">
+                                                                    2024-08-30
+                                                                </span>
+                                                            </li>
+                                                        
+                                                            <li>
+                                                                <a href="./jdhy/zcjd/202406/t20240611_1943739.htm" target="_blank" title="政策解读丨《福建省一体化大融合行政执法平台管理暂行办法》">政策解读丨《福建省一体化大融合行政执法平台管理暂行办法》</a>
+                                                                <span class="bf-pass">
+                                                                    2024-06-11
+                                                                </span>
+                                                            </li>
+                                                        
+                                                            <li>
+                                                                <a href="./jdhy/zcjd/202405/t20240511_1935810.htm" target="_blank" title="全民安全素质提升行动：人人讲安全、个个会应急 一文读懂！水利安全生产风险管控“六项机制”是什么？(1)">全民安全素质提升行动：人人讲安全、个个会应急 一文读懂！水利安全生产风险管控“六项机制”是什么？(1)</a>
+                                                                <span class="bf-pass">
+                                                                    2024-05-11
+                                                                </span>
+                                                            </li>
+                                                        
+                                                            <li>
+                                                                <a href="./jdhy/zcjd/202403/t20240304_1919105.htm" target="_blank" title="《福建省水利工程管理条例》政策解读">《福建省水利工程管理条例》政策解读</a>
+                                                                <span class="bf-pass">
+                                                                    2024-03-04
+                                                                </span>
+                                                            </li>
+                                                        
+                                                            <li>
+                                                                <a href="http://www.ningde.gov.cn/jdhy/szfzcjd/tj/202307/t20230731_1783150.htm" target="_blank" title="图解：《宁德市主城区防洪防潮排涝规划（修编）》（2021-2035） 政策解读">图解：《宁德市主城区防洪防潮排涝规划（修编）》（2021-2035） 政策解读</a>
+                                                                <span class="bf-pass">
+                                                                    2023-08-25
+                                                                </span>
+                                                            </li>
+                                                        
+                                                    </ul>
+                                                    <span class="more">
+                                                        <a href="./jdhy/zcjd/"
+                                                            target="_blank" title="更多">更多&gt;</a>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="trt-row trt-row-large">
+                                            <div class="trt-col-12 trt-col-sm-24 slb-trt-col-24">
+                                                <div class="jdhy_div">
+                                                    <a href="http://www.gov.cn/zhengce/jiedu/" title="国家政策解读"
+                                                        target="_blank"><img src="./images/221213slj_img10.jpg" /></a>
+                                                </div>
+                                            </div>
+                                            <div class="trt-col-12 trt-col-sm-24 slb-trt-col-24">
+                                                <div class="jdhy_div">
+                                                    <a href="https://www.fujian.gov.cn/jdhy/zcjd/" title="省内政策解读"
+                                                        target="_blank"><img src="./images/221213slj_img11.jpg" /></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--*********************************解读回应-end**************************-->
+
+                            <!--*****************************************互动交流************************************-->
+                            <div role="viewlist" des="互动交流">
+                                <div class="trt-row trt-row-large">
+                                    <div class="trt-col-12 trt-col-sm-24 slb-trt-col-24">
+                                        <div class="tabs tabs_01">
+                                            <div class="tabs_header">
+                                                <ul>
+                                                    <li class="on"><a
+                                                            href="./gzcy/zxft/"
+                                                            title="在线访谈"
+                                                            target="_blank">在线访谈</a></li>
+                                                </ul>
+                                                <span class="more">
+                                                    <a href="./gzcy/zxft/"
+                                                        target="_blank" title="更多">更多&gt;</a>
+                                                </span>
+                                            </div>
+                                            <div class="tabs_content">
+
+                                                
+                                                    <div class="trt-row">
+                                                        <div class="trt-col-12 trt-col-sm-24">
+                                                            <div>
+                                                                <a href="./gzcy/zxft/202512/t20251230_2429964.htm "
+                                                                    title="关于“提升审批服务效能 不断优化营商环境”在线访谈"
+                                                                    target="_blank">
+                                                                    <i ms-visible="'./gzcy/zxft/202512/W020251230583874184749.jpg'==''"
+                                                                        class="picture_fixed picture_scale_169"
+                                                                        style="background-image: url(/images/221213slj_img9.jpg);"></i>
+                                                                    <i ms-visible="'./gzcy/zxft/202512/W020251230583874184749.jpg'!=''"
+                                                                        class="picture_fixed picture_scale_169"
+                                                                        style="background-image: url('./gzcy/zxft/202512/W020251230583874184749.jpg');"></i>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="trt-col-12 trt-col-sm-24">
+                                                            <div class="text_align_justify">
+                                                                <b class="line_h_base w_space_np">
+                                                                    <a href="./gzcy/zxft/202512/t20251230_2429964.htm" target="_blank" title="关于“提升审批服务效能 不断优化营商环境”在线访谈">关于“提升审批服务效能 不断优化营商环境”在线访谈</a>
+                                                                </b>
+                                                                <ul class="line_h_large gray_light_05 mar_t_small">
+                                                                    <li class="w_space_np mar_t_xs">时间： 2025-12-30 16:00
+                                                                    </li>
+                                                                    <li class="w_space_np mar_t_xs">嘉宾：
+                                                                        行政审批与水资源管理科负责人
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <p class="mar_t_01 ind_zxft">
+                                                                <a href="./gzcy/zxft/202512/t20251230_2429964.htm?type=0"
+                                                                    target="_blank" title="文字直播">文字直播</a><em>|</em>
+                                                                <a href="./gzcy/zxft/202512/t20251230_2429964.htm?type=1"
+                                                                    title="图片直播" target="_blank">图片直播</a><em>|</em>
+                                                                <a href="./gzcy/zxft/202512/t20251230_2429964.htm?type=3"
+                                                                    title="在线提问" target="_blank">在线提问</a>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                
+
+                                                <div class="list_base list_base_date_01 mar_t_base">
+                                                    <ul>
+                                                        
+                                                            <li>
+                                                                <a href="./gzcy/zxft/202509/t20250926_2260804.htm" target="_blank" title="推进水利水电工程移民安置工作 高质量发展">推进水利水电工程移民安置工作 高质量发展</a>
+                                                                <span class="bf-pass">
+                                                                    2025-09-25
+                                                                </span>
+                                                            </li>
+                                                        
+                                                            <li>
+                                                                <a href="./gzcy/zxft/202507/t20250730_2140323.htm" target="_blank" title="关于“规范水利项目资金申报 加强项目全生命周期管理”的在线访谈">关于“规范水利项目资金申报 加强项目全生命周期管理”的在线访谈</a>
+                                                                <span class="bf-pass">
+                                                                    2025-07-30
+                                                                </span>
+                                                            </li>
+                                                        
+                                                            <li>
+                                                                <a href="./gzcy/zxft/202503/t20250307_2021663.htm" target="_blank" title="宁德市2024年水毁修复工程进展情况文字访谈">宁德市2024年水毁修复工程进展情况文字访谈</a>
+                                                                <span class="bf-pass">
+                                                                    2025-03-07
+                                                                </span>
+                                                            </li>
+                                                        
+
+                                                    </ul>
+                                                    <span class="more">
+                                                        <a href="./gzcy/zxft/"
+                                                            target="_blank" title="更多">更多&gt;</a>
+                                                    </span>
+                                                </div>
+
+                                                <div class="ind_list2">
+                                                    <ul class="trt-row trt-row-large">
+                                                        <li class="trt-col-8 trt-col-md-24 mar_t_base"><a
+                                                                href="./gzcy/zxft/xqyg/"
+                                                                title="下期预告" target="_blank"><i
+                                                                    class="ndsl_iconfont ndsl_yuyuejilu"></i>
+                                                                <p>下期预告</p>
+                                                            </a></li>
+                                                        <li class="trt-col-8 trt-col-md-24 mar_t_base"><a
+                                                                href="./gzcy/zxft/zqyg/"
+                                                                title="长期预告" target="_blank"><i
+                                                                    class="ndsl_iconfont ndsl_rili-tianchong"></i>
+                                                                <p>长期预告</p>
+                                                            </a></li>
+                                                        <li class="trt-col-8 trt-col-md-24 mar_t_base"><a
+                                                                href="./gzcy/zxft/"
+                                                                title="往期访谈" target="_blank"><i
+                                                                    class="ndsl_iconfont ndsl_jiemushoulu"></i>
+                                                                <p>往期访谈</p>
+                                                            </a></li>
+                                                    </ul>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="trt-col-12 trt-col-sm-24 slb-trt-col-24 mar_t_base_sm slb_mar_t_base">
+                                        <div class="tabs tabs_01" id="tabYjzj">
+                                            <div class="tabs_header tabs_hd">
+                                                <ul>
+                                                    <li class="on"><a
+                                                            href="./gzcy/yjzj/"
+                                                            title="意见征集"
+                                                            target="_blank">意见征集</a></li>
+                                                    <li><a href="./gzcy/wsdc/"
+                                                            title="网上调查"
+                                                            target="_blank">网上调查</a></li>
+                                                </ul>
+                                                <span class="more">
+                                                    <a class="gendd" href="./gzcy/yjzj/"
+                                                        target="_blank" title="更多">更多&gt;</a>
+                                                    <a class="gendd" href="./gzcy/wsdc/"
+                                                        target="_blank" title="更多">更多&gt;</a>
+                                                </span>
+                                            </div>
+                                            <div class="tabs_content tabs_bd">
+                                                <div class="list_base list_base_no_dot list_base_date_01 list_base_state wza-list"
+                                                    ms-controller="myzj">
+                                                    <ul>
+                                                        <li ms-class="on:el.status=='进行中'" ms-repeat="list">
+                                                            <em ms-text="el.status">进行中</em>
+                                                            <a ms-visible="!el.outerUrl" ms-attr-href="'http://slj.ningde.gov.cn/gzcy/yjzj/detail.htm?id='+el.id"
+                                                                ms-attr-title="el.title" target="_blank"
+                                                                ms-text="el.title | html"></a>
+                                                            <a ms-visible="el.outerUrl" ms-attr-href="el.outerUrl" ms-attr-title="el.title" target="_blank" ms-text="el.title|html"></a>
+                                                            <span class="bf-pass"
+                                                                ms-text='el.startDate | date("MM-dd")'></span>
+                                                        </li>
+
+                                                    </ul>
+                                                    <span class="more">
+                                                        <a href="./gzcy/yjzj/"
+                                                            target="_blank" title="更多">更多&gt;</a>
+                                                    </span>
+                                                </div>
+
+
+                                                <div class="list_base list_base_no_dot list_base_date_01 list_base_state wza-list"
+                                                    ms-controller="wsdc">
+                                                    <ul>
+                                                        <li class="on" ms-class="on:isRuning(el.endTime)== true"
+                                                            ms-repeat="list">
+                                                            <em ms-visible="isRuning(el.endTime)">进行中</em>
+                                                            <em ms-visible="!isRuning(el.endTime)">已结束</em>
+                                                            <a ms-visible="!el.outerUrl" ms-attr-href="'http://slj.ningde.gov.cn/gzcy/wsdc/detail.htm?id='+el.id"
+                                                                target="_blank" ms-text="el.theme | html"
+                                                                ms-attr-title="el.theme"></a>
+                                                            <a ms-visible="el.outerUrl" ms-attr-href="el.outerUrl" ms-attr-title="el.theme" target="_blank" ms-text="el.theme|html"></a>
+                                                            <span class="bf-pass"
+                                                                ms-text='el.startTime | date("MM-dd")'></span>
+                                                        </li>
+
+                                                    </ul>
+                                                    <span class="more">
+                                                        <a href="./gzcy/wsdc/"
+                                                            target="_blank" title="更多">更多&gt;</a>
+                                                    </span>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="ind_list3">
+                                            <ul class="trt-row trt-row-large">
+                                                <li class="trt-col-24 trt-col-md-24 mar_t_base"><a
+                                                        href="./gzcy/jzxx/"
+                                                        title="局长信箱"
+                                                        target="_blank">
+                                                        <h3>局长信箱</h3><span>点击进入></span>
+                                                    </a></li>
+                                                <!--li class="trt-col-12 trt-col-md-24 mar_t_base"><a
+                                                        href="./gzcy/wszx/"
+                                                        title="网上咨询"
+                                                        target="_blank">
+                                                        <h3>网上咨询</h3><span>点击进入></span>
+                                                    </a></li-->
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--*************************************互动交流-end****************************************-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content content_bg2" role="viewlist" des="专题专栏">
+                <div class="row">
+                    <div class="ind_tit1">
+                        <em><img src="./images/221215_ndslj_tit_l.png" /></em>
+                        <span>
+                            <a href="./slzt/" title="专题专栏"
+                                target="_blank">专题专栏</a>
+                        </span>
+                        <em><img src="./images/221215_ndslj_tit_r.png" /></em>
+
+                    </div>
+                    <div class="piclink_group piclink_group_07 mar_t_xl mar_t_base_sm">
+                        <span class="prev"><i class="trt-iconfont trt-icon-arrow-left"></i></span>
+                        <span class="next"><i class="trt-iconfont trt-icon-arrow"></i></span>
+                        <div class="bd piclink_list">
+                            <ul class="trt-row">
+                                
+                                    <li class="trt-col-6 trt-col-sm-12 trt-col-md-24 slb-trt-col-12 slb-trt-col-md-24">
+                                        <a class="piclink_conent" href="http://slj.ningde.gov.cn/slzt/xxgcddesjsizqhjs/" target="_blank"
+                                            title="学习贯彻党的二十届四中全会精神">
+                                            <div class="piclink_text"
+                                                style="background-image: url('./slzt/202603/W020260319348526145676.png');">
+                                            </div>
+                                            <!-- <p><span><em><i class="w_space_np_02">
+                                                            
+                                                        </i></em></span></p> -->
+                                        </a>
+                                    </li>
+                                
+                                    <li class="trt-col-6 trt-col-sm-12 trt-col-md-24 slb-trt-col-12 slb-trt-col-md-24">
+                                        <a class="piclink_conent" href="http://slj.ningde.gov.cn/slzt/esd/" target="_blank"
+                                            title="中国共产党第二十次全国代表大会">
+                                            <div class="piclink_text"
+                                                style="background-image: url('./slzt/202210/W020221228333504953005.png');">
+                                            </div>
+                                            <!-- <p><span><em><i class="w_space_np_02">
+                                                            
+                                                        </i></em></span></p> -->
+                                        </a>
+                                    </li>
+                                
+                                    <li class="trt-col-6 trt-col-sm-12 trt-col-md-24 slb-trt-col-12 slb-trt-col-md-24">
+                                        <a class="piclink_conent" href="http://slj.ningde.gov.cn/slzt/xxgcxjpxsdzgtsshzysx/" target="_blank"
+                                            title="学习贯彻习近平新时代中国特色社会主义思想">
+                                            <div class="piclink_text"
+                                                style="background-image: url('./slzt/202009/W020240711412912651673.png');">
+                                            </div>
+                                            <!-- <p><span><em><i class="w_space_np_02">
+                                                            
+                                                        </i></em></span></p> -->
+                                        </a>
+                                    </li>
+                                
+                                    <li class="trt-col-6 trt-col-sm-12 trt-col-md-24 slb-trt-col-12 slb-trt-col-md-24">
+                                        <a class="piclink_conent" href="http://slj.ningde.gov.cn/slzt/djxxjy/" target="_blank"
+                                            title="党纪学习教育">
+                                            <div class="piclink_text"
+                                                style="background-image: url('./slzt/202407/W020240709589989264192.png');">
+                                            </div>
+                                            <!-- <p><span><em><i class="w_space_np_02">
+                                                            
+                                                        </i></em></span></p> -->
+                                        </a>
+                                    </li>
+                                
+                                    <li class="trt-col-6 trt-col-sm-12 trt-col-md-24 slb-trt-col-12 slb-trt-col-md-24">
+                                        <a class="piclink_conent" href="http://slj.ningde.gov.cn/slzt/xxgcddesjszqhjs/" target="_blank"
+                                            title="学习贯彻党的二十届三中全会精神">
+                                            <div class="piclink_text"
+                                                style="background-image: url('./slzt/202407/W020240731682561059585.png');">
+                                            </div>
+                                            <!-- <p><span><em><i class="w_space_np_02">
+                                                            
+                                                        </i></em></span></p> -->
+                                        </a>
+                                    </li>
+                                
+                                    <li class="trt-col-6 trt-col-sm-12 trt-col-md-24 slb-trt-col-12 slb-trt-col-md-24">
+                                        <a class="piclink_conent" href="http://slj.ningde.gov.cn/slzt/jktjzdslxm/" target="_blank"
+                                            title="加快推进重大水利项目">
+                                            <div class="piclink_text"
+                                                style="background-image: url('./slzt/202312/W020240711420099795697.png');">
+                                            </div>
+                                            <!-- <p><span><em><i class="w_space_np_02">
+                                                            
+                                                        </i></em></span></p> -->
+                                        </a>
+                                    </li>
+                                
+                                    <li class="trt-col-6 trt-col-sm-12 trt-col-md-24 slb-trt-col-12 slb-trt-col-md-24">
+                                        <a class="piclink_conent" href="http://slj.ningde.gov.cn/slzt/dwgk/" target="_blank"
+                                            title="党务公开">
+                                            <div class="piclink_text"
+                                                style="background-image: url('./slzt/202012/W020221228333950663474.png');">
+                                            </div>
+                                            <!-- <p><span><em><i class="w_space_np_02">
+                                                            
+                                                        </i></em></span></p> -->
+                                        </a>
+                                    </li>
+                                
+                                    <li class="trt-col-6 trt-col-sm-12 trt-col-md-24 slb-trt-col-12 slb-trt-col-md-24">
+                                        <a class="piclink_conent" href="http://slj.ningde.gov.cn/slzt/hzz/" target="_blank"
+                                            title="河长制">
+                                            <div class="piclink_text"
+                                                style="background-image: url('./slzt/201901/W020221228334362749897.png');">
+                                            </div>
+                                            <!-- <p><span><em><i class="w_space_np_02">
+                                                            
+                                                        </i></em></span></p> -->
+                                        </a>
+                                    </li>
+                                
+                            </ul>
+                        </div>
+                        <div class="num mar_t_base">
+                            <ul>
+                                <li class="on"></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 底部嵌套_22gb -->
+        <div class="footer">
+	<div class="border_t_solid_01"></div>
+	<div class="row" role="navigation" des="网站链接">
+		<div class="out_links">
+			<ul class="trt-row">
+				<li class="trt-col-6">
+					<p>省级水利网站</p>
+					<div class="shadow_base">
+						<ul class="trt-row">
+							
+								<li class="trt-col-ave-7 trt-col-sm-24">
+									<a href="http://slt.fujian.gov.cn/" target="_blank" title="福建省水利厅">福建省水利厅</a>
+								</li>
+							
+						</ul>
+					</div>
+				</li>
+			</ul>
+			<div class="out_links_close shadow_base"><i class="trt-iconfont trt-icon-dacha"></i></div>
+		</div>
+	</div>
+	<div class="border_b_solid_01"></div>
+	<div class="row mar_t_base mar_t_small_sm" role="serve" des="底部信息">
+		<div class="trt-row clearflx">
+			<div class="trt-col-12 trt-col-sm-24 website_info">
+				<p><a href="http://slj.ningde.gov.cn/zddt/" target="_blank" title="站点地图">站点地图</a><em>|</em>
+<a href="http://slj.ningde.gov.cn/ysbh/" target="_blank" title="隐私保护">隐私保护</a><em>|</em>
+					<a  href="javascript:;" title="设为首页" ms-click="setHome(window.location)">设为首页</a><em>|</em>					
+					<a  href="javascript:;" ms-if="!isFirefox" title="收藏本站" ms-click="addFavorite()" >收藏本站</a>
+					<a href="javascript:;" ms-if="isFirefox" title="收藏本站" ms-click="addFavorite()">收藏本站</a>
+				<p><span>网站标识码：3509000035</span>
+					<span><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=35090202000241"
+					target="_blank" title="闽公网安备：35090202000241号"><span><img style="margin-right: 5px;" src="/images/babs.png" />闽公网安备：35090202000241号</span></a>	
+					</span>
+					<span><a href="https://beian.miit.gov.cn/" target="_blank" title="闽公网安备：35090202000241号">闽ICP备07025461号-2</a></span>
+				</p>
+				<p><span>地址：宁德市富春西路5号</span><span>水利工程质量及其他举报投诉电话：0593-2861785</span></p>
+				<p><span>邮编：352100</span><span>邮箱：ndsl666@sina.com</span><span>您是第 {{siteCount}} 位访问者</span></p>
+			</div>
+			<div class="trt-col-8 trt-col-sm-24 media_info">
+				<h3>新媒体矩阵</h3>
+                <ul class="trt-row">
+                    <li class="trt-col-12">
+                        <div><a><h3>宁德市河长办微信公众号</h3></a></div>
+                        <div class="codebox_2021"><img src="/images/221215_ndslj_ewm.png" /></div>
+                    </li>
+                    <li class="trt-col-12">
+                        <div><a><h3>闽政通APP</h3></a></div>
+                        <div class="codebox_2021 lgewm-codebox_2021">
+                            <img src="/images/221213lc_lylc_ewm.png" />
+                        </div>
+                    </li>
+                </ul>
+			</div>
+			<div class="trt-col-4 trt-col-sm-24 error_img">
+				  <!--党政机关图标-->
+				<span id="_ideConac" class="foot-icon02 pho-none">
+					<script type="text/javascript">document.write(unescape("%3Cspan id='_ideConac' %3E%3C/span%3E%3Cscript src='https://dcs.conac.cn/js/14/222/0000/41576525/CA142220000415765250002.js' type='text/javascript'%3E%3C/script%3E"));</script>
+						
+				</span>
+				  <!--党政机关图标-->
+				<span id="_span_jiucuo">
+					<script id="_jiucuo_" sitecode='3509000035' src='https://zfwzgl.www.gov.cn/exposure/jiucuo.js'></script>
+				</span>
+			</div>
+		</div>
+	</div>
+	<div class="copyright_info">
+		<div class="row">
+			<p><span>主办：宁德市水利局办公室</span><span>承办：宁德市洪水预警报中心</span></p>
+		</div>
+	</div>
+</div>
+        <!-- 底部嵌套_22gb end-->
+    </div>
+    <!-- 全站嵌套 -->
+    <!--语音 新加js 开始 -->
+<script src="/images/RecordRTC.js"></script>
+<script src="/images/lame.all.js"></script>
+<script src="/images/voiceUtil.js"></script>
+<script src="/images/recorder.wav.min.js"></script>
+<script src="/images/recorder-core.js"></script>
+<script src="/images/waveview.js"></script>
+<script src="/images/wav.js"></script>
+<!--语音 新加js 结束 -->
+<script>
+    var SiteInfo = {
+       was4doc: 273378
+        , itp4apply: 1193
+        , itpSiteId: 561
+        , itp4advice: 1196
+        , itp4poll: 1988
+        , searchId : 203123     //默认的文档检索频道的ID
+        , defaultPgTemp : "pgBar_nd.html"   //本站点默认的分页模板名
+        , defaultPgTempMobile : "pgBar_nd.html"   //本站点默认的分页模板名，移动端
+        , siteMsgType: "govSite"  //非政府网站提醒规则   currSite 非本站提醒 、govSite  非政府网站提醒
+        , siteWriteList: ['27.156.118.74']     //站点白名单
+        , initWindowRoot : false   //引入model.js时，不自动生成windowRoot
+        , initPageview : true   //执行windowRoot 时自动执行pageview
+        , defaultHotWords : '河长制;公示;水资源公报;水资源费'  //通过嵌套栏目的替换内容，热搜词，设置默认的热搜词
+        ,levelSiteId : '2c9c77366ec5fc40016eca5f827e04a9'  //智能搜索站点编号
+    };
+</script>
+<script src="https://www.ningde.gov.cn/images/barrier.free.min.js" id="barrierFree" sn="4089082764273975"></script>
+<script src='https://www.ningde.gov.cn/images/model.min.js'></script>
+<script src='https://www.ningde.gov.cn/images/ndsbm_21bz.js'></script>
+<script src='/images/js_rem.min.js'></script>
+    <!-- 全站嵌套 end-->
+      <script src='./images/221215_ndslj_js.js'></script>
+    		<script>
+            require(["tools", "jquery"], function (tools, $) {
+            //选项卡切换
+            $('#tabNdss').slide({
+                titCell: ".hd li",
+                mainCell: ".bd ",
+                effect: "left",
+                titOnClassName: "on",
+                startFun: function (i) {
+                    $("#tabNdss .gendd").eq(i).show().siblings("#tabNdss .gendd").hide();
+                }
+            });
+
+            $('#tabTzgg').slide({
+                titCell: ".hd li",
+                mainCell: ".bd ",
+                effect: "left",
+                titOnClassName: "on",
+                startFun: function (i) {
+                    $("#tabTzgg .gendd").eq(i).show().siblings("#tabTzgg .gendd").hide();
+                }
+            });
+
+            $('#tabZcwj').slide({
+                titCell: ".hd li",
+                mainCell: ".bd",
+                effect: "left",
+                titOnClassName: "on",
+                startFun: function (i) {
+                    $("#tabZcwj .gendd").eq(i).show().siblings("#tabZcwj .gendd").hide();
+                }
+            });
+            
+            })
+            setTimeout(function () {
+                tabWza("#tabNdss");
+                tabWza("#tabTzgg");
+                tabWza("#tabZcwj");
+                tabWza("#tabYjzj");
+            }, 1000)
+		  </script>
+
+    <script>
+        require(['shangjizhuanzai', 'jquery', "tools", "list2.model", "list2.advice", "list2.poll"], function (shangjizhuanzai, $, tools, listModel, adviceList, pollList) {
+            // 国务院信息、省政府信息
+            shangjizhuanzai({
+                gwyxx: true,
+                gwyxxNum: 8,
+                szfxx: true,
+                szfxxNum: 8
+            });
+
+            //征集
+            adviceList({
+                objId: 'myzj',
+                listUrl: "/staticitp/ndsslj/myzj/1.json",
+                listApi: {
+                    type: 'get',
+
+                },
+                pagebar: {
+                    prepage: 8
+                }
+            });
+            //调查
+            pollList({
+                objId: 'wsdc',
+                listUrl: "/staticitp/ndsslj/wsdc/1.json",
+                listApi: {
+                    rsName: "polls",
+                    type: 'get'
+
+
+                },
+                pagebar: {
+                    prepage: 8
+                },
+                vmArgsExt: {
+                    isRuning: function (time) {
+                        return tools.getStatus(time);
+                    }
+                }
+            });
+        })
+    </script>
+
+<!-- 飘窗 -->
+<script>
+  require(['jquery'], function ($) {
+          // 飘窗
+          (function ($) {
+              jQuery.fn.imgFloat = function (options) {
+                  var own = this;
+                  var xD = 0;
+                  var yD = 0;
+                  var i = 1;
+                  var settings = {
+                      speed: 10,
+                      xPos: 0,
+                      yPos: 0
+                  };
+                  jQuery.extend(settings, options);
+                  var ownTop = settings.xPos;
+                  var ownLeft = settings.yPos;
+                  own.css({
+                      position: "absolute",
+                      cursor: "pointer"
+                  });
+
+                  function imgPosition() {
+                      var winWidth = $(window).width() - own.width();
+                      var winHeight = $(window).height() - own.height();
+                      if (xD == 0) {
+                          ownLeft += i;
+                          own.css({
+                              left: ownLeft
+                          });
+                          if (ownLeft >= winWidth) {
+                              ownLeft = winWidth;
+                              xD = 1;
+                          }
+                      }
+                      if (xD == 1) {
+                          ownLeft -= i;
+                          own.css({
+                              left: ownLeft
+                          });
+                          if (ownLeft <= 0) xD = 0;
+                      }
+                      if (yD == 0) {
+                          ownTop += i;
+                          own.css({
+                              top: ownTop
+                          });
+                          if (ownTop >= winHeight) {
+                              ownTop = winHeight;
+                              yD = 1;
+                          }
+                      }
+                      if (yD == 1) {
+                          ownTop -= i;
+                          own.css({
+                              top: ownTop
+                          });
+                          if (ownTop <= 0) yD = 0;
+                      }
+                  }
+                  var imgHover = setInterval(imgPosition, settings.speed);
+                  own.hover(function () {
+                      clearInterval(imgHover);
+                  },
+                      function () {
+                          imgHover = setInterval(imgPosition, settings.speed);
+                      });
+              }
+          })(jQuery);
+
+          $('#img_float').imgFloat({ speed: 30, xPos: 110, yPos: 10 });
+      })
+</script>
+<!-- 飘窗end -->
+
+</body>
+
+</html>

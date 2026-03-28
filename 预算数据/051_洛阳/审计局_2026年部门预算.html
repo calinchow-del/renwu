@@ -1,0 +1,652 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+	<meta name="format-detection" content="telephone=no" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="SiteName" content="市审计局">
+	<meta name="SiteDomain" content="https://shenji.ly.gov.cn">
+	<meta name="SiteIDCode" content="4103000001">
+	<title>洛阳市审计局</title>
+	<link rel="stylesheet" href="https://t.ly.gov.cn/file/4103000001/css/base.css">
+	<link rel="stylesheet" href="https://t.ly.gov.cn/file/4103000001/css/common.css">
+	<link rel="stylesheet" href="https://t.ly.gov.cn/file/4103000001/css/index.css">
+  <link rel="stylesheet" href="https://t.ly.gov.cn/file/4103000001/css/forTheOld.css">
+	<!--网站无障碍-->
+	<script src="https://t.ly.gov.cn/file/4103000001/js/jquery-3.7.1.min.js"></script>
+	<!-- <script id="rrbayJs" src="https://t.ly.gov.cn/file/4103000001/js/wza.min.js" referrerpolicy="origin"
+	type="text/javascript"></script> -->
+	<!--网站无障碍end-->
+	<script src="https://t.ly.gov.cn/file/4103000001/js/jquery.min.js"></script>
+	<script src="https://t.ly.gov.cn/file/4103000001/js/SuperSlide.js"></script>
+    <script src="https://t.ly.gov.cn/file/4103000001/bay-window/bay-window.js"></script>
+
+
+	<script>
+		function fnSearchVal() {
+			var textVal = $("#searchText").val();
+			if (textVal != "") {
+				window.location.href = "/ListSearch/0/0/" + encodeURI(encodeURI(textVal)) + "/Index.shtml";
+			}
+		}
+		$(function () {
+			$("#searchText").keydown(function (e) {
+				if (e.keyCode == 13) {
+					fnSearchVal();
+				}
+			});
+		})
+	</script>
+	<script>
+		var code;
+		function createCode() {
+			code = "";
+			var codeLength = 4; //验证码的长度
+			var checkCode = document.getElementById("checkCode");
+			var codeChars = new Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A',
+				'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'); //所有候选组成验证码的字符，当然也可以用中文的
+			for (var i = 0; i < codeLength; i++) {
+				var charNum = Math.floor(Math.random() * 52);
+				code += codeChars[charNum];
+			}
+
+			if (checkCode) {
+				checkCode.className = "validate";
+				checkCode.innerHTML = code;
+			}
+		}
+	</script>
+</head>
+<!-- 头部开始 -->
+<div data-visible=""><div class="body-top" style="width:1400px; margin:0 auto;">
+    <div class="head w-1200">
+      <div class="logo_serch">
+        <div class="logo">
+          <img src="https://t.ly.gov.cn/file/4103000001/img/m-logo.png">
+        </div>
+        <div class="top_ul cl">
+          <ul class="cl">
+            <li><a href="javascript:void(0);" onclick="SetHome(this,'http://shenji.ly.gov.cn');">设为首页</a></li>
+            <li class="shu">|</li>
+            <li><a onclick="fnindex()">加入收藏</a></li>
+            <li class="shu">|</li>
+            <li><a href="#">联系我们</a></li>
+          </ul>
+        </div>
+        <div class="barrier-free wza-box">
+          <a onclick="headTool.switchOld()" id="toolbarOldman" class="oldman" href="javascript:void(0);"
+                title="进入适老模式">进入适老模式</a>
+          <a href="javascript:void(0);" id="toolbarSwitch" onclick="EsdInit.openClickFunc();" onkeydown="EsdInit.openKeydownFunc(event);" class="wza">无障碍阅读</a>
+        </div>
+        <div class="serch">
+          <div action="#" class="cl" target="_blank">
+            <form action="https://shenji.ly.gov.cn/search" target="_blank">
+              <input type="hidden" value="220" name="foot_h">
+              <input type="text" id="searchText" class="serch_in" name="keywords" placeholder="请输入关键字">
+              <input type="submit" class="serch_btn">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="width: 100%; background: #cc0000;">
+      <!-- 宽度1320 权责清单删除，最后一个加上style -->
+      <div class="nav head w-1200" style="width:1500px;">
+        <ul class="cl">
+          <li><a href="/">首页</a></li>
+          <li><a href="https://shenji.ly.gov.cn/dwgk">单位概况</a></li>
+          <li><a href="https://shenji.ly.gov.cn/sjdt">审计动态</a></li>
+          <li><a href="https://shenji.ly.gov.cn/jgdj">机关党建</a></li>
+          <li><a href="https://shenji.ly.gov.cn/tzgg">通知公告</a></li>
+          <li><a href="https://shenji.ly.gov.cn/zfxxgk/zc/zcwj">政府信息公开</a></li>
+          <li><a href="https://shenji.ly.gov.cn/fzzf">法治政府</a></li>
+          <li><a href="https://www.hnzwfw.gov.cn/410300000000/?region=410300000000" target="_blank">政务服务</a></li>
+          <li><a style="border-right: none;" href="http://lys.pandagov.com:8089/">权责清单</a></li>
+        </ul>
+      </div>
+    </div>
+  </div></div>
+<!-- 头部结束 -->
+
+<body>
+	<div class="main mt-20 w-1200">
+		<div class="news_banner_l mt-30 cl">
+			<div class="slideBox1 fl">
+				<div class="bd">
+					<ul>
+						<!-- 轮播开始 -->
+														<li>
+									<a href="https://h.xinhuaxmt.com/vh512/share/12398509?d=134fe5f&channel=weixin" target="_blank"	title="习近平和彭丽媛为出席哈尔滨第九届亚洲冬季运动会开幕式的国际贵宾举行欢迎宴会"> 
+										<img alt="习近平和彭丽媛为出席哈尔滨第九届亚洲冬季运动会开幕式的国际贵宾举行欢迎宴会" src="https://oss.ly.gov.cn/upload-file/images/20250208/e69e8782280a4ae88f4754859c22c2c5.jpg">
+									</a>
+									<p>
+										<a href="https://h.xinhuaxmt.com/vh512/share/12398509?d=134fe5f&channel=weixin" target="_blank"	title="习近平和彭丽媛为出席哈尔滨第九届亚洲冬季运动会开幕式的国际贵宾举行欢迎宴会">习近平和彭丽媛为出席哈尔滨第九届亚洲冬季运动会开幕式的国际贵宾举行欢迎宴会</a>
+									</p>
+								</li>
+								<li>
+									<a href="https://h.xinhuaxmt.com/vh512/share/12396288?d=134fe5d&channel=weixin" target="_blank"	title="李强主持召开国务院第七次全体会议 讨论《政府工作报告》稿并对开年工作进行动员"> 
+										<img alt="李强主持召开国务院第七次全体会议 讨论《政府工作报告》稿并对开年工作进行动员" src="https://oss.ly.gov.cn/upload-file/images/20250206/cd12a0cf3fa84f059d153225f6d66693.jpg">
+									</a>
+									<p>
+										<a href="https://h.xinhuaxmt.com/vh512/share/12396288?d=134fe5d&channel=weixin" target="_blank"	title="李强主持召开国务院第七次全体会议 讨论《政府工作报告》稿并对开年工作进行动员">李强主持召开国务院第七次全体会议 讨论《政府工作报告》稿并对开年工作进行动员</a>
+									</p>
+								</li>
+								<li>
+									<a href="https://h.xinhuaxmt.com/vh512/share/12386376?d=134fe0f&channel=weixin" target="_blank"	title="中共中央国务院举行春节团拜会 习近平发表讲话"> 
+										<img alt="中共中央国务院举行春节团拜会 习近平发表讲话" src="https://oss.ly.gov.cn/upload-file/images/20250205/c6c3a3f741ae4500aba6318f97054852.jpg">
+									</a>
+									<p>
+										<a href="https://h.xinhuaxmt.com/vh512/share/12386376?d=134fe0f&channel=weixin" target="_blank"	title="中共中央国务院举行春节团拜会 习近平发表讲话">中共中央国务院举行春节团拜会 习近平发表讲话</a>
+									</p>
+								</li>
+								<li>
+									<a href="https://www.news.cn/fortune/20250126/bb0fc6ab83aa4fd49d707e919c8e1fb6/c.html" target="_blank"	title="新华全媒+丨“人流”“客流”“投资流”，冰雪经济“节节高”"> 
+										<img alt="新华全媒+丨“人流”“客流”“投资流”，冰雪经济“节节高”" src="https://oss.ly.gov.cn/upload-file/images/20250205/8044d521d1784027a9e47497e86f5c21.jpg">
+									</a>
+									<p>
+										<a href="https://www.news.cn/fortune/20250126/bb0fc6ab83aa4fd49d707e919c8e1fb6/c.html" target="_blank"	title="新华全媒+丨“人流”“客流”“投资流”，冰雪经济“节节高”">新华全媒+丨“人流”“客流”“投资流”，冰雪经济“节节高”</a>
+									</p>
+								</li>
+								<li>
+									<a href="https://h.xinhuaxmt.com/vh512/share/12382418?d=134fe0c&channel=weixin" target="_blank"	title="习近平春节前夕赴辽宁看望慰问基层干部群众"> 
+										<img alt="习近平春节前夕赴辽宁看望慰问基层干部群众" src="https://oss.ly.gov.cn/upload-file/images/20250205/54afec00ae134c7fb18cad875ba15601.jpg">
+									</a>
+									<p>
+										<a href="https://h.xinhuaxmt.com/vh512/share/12382418?d=134fe0c&channel=weixin" target="_blank"	title="习近平春节前夕赴辽宁看望慰问基层干部群众">习近平春节前夕赴辽宁看望慰问基层干部群众</a>
+									</p>
+								</li>
+								<li>
+									<a href="https://shenji.ly.gov.cn/2025/01-20/502978.html" target="_blank"	title="“巡审联动聚合力 支部共建促发展” 洛阳市审计局与市委第四巡察组联合开展 主题党日活动"> 
+										<img alt="“巡审联动聚合力 支部共建促发展” 洛阳市审计局与市委第四巡察组联合开展 主题党日活动" src="https://oss.ly.gov.cn/upload-file/images/20250120/09cc0fb58e1f4ca0aca2f1badc43a67e.png">
+									</a>
+									<p>
+										<a href="https://shenji.ly.gov.cn/2025/01-20/502978.html" target="_blank"	title="“巡审联动聚合力 支部共建促发展” 洛阳市审计局与市委第四巡察组联合开展 主题党日活动">“巡审联动聚合力 支部共建促发展” 洛阳市审计局与市委第四巡察组联合开展 主题党日活动</a>
+									</p>
+								</li>
+
+						<!-- 轮播结束 -->
+					</ul>
+				</div>
+				<span class="prev"><</span> <span class="next">></span>
+			</div>
+			<div class="bannerright fr">
+				<div class="hd">
+					<ul class="bannerrightul">
+						<li class="on"><a href="https://shenji.ly.gov.cn/zwdt" target="_blank" class="first-a" title="政务动态">政务动态</a>
+						</li>
+						<li class=""><a href="https://shenji.ly.gov.cn/xqdt" target="_blank" title="县区动态">县区动态</a></li>
+					</ul>
+				</div>
+				<div class="bd">
+					<div>
+						<!-- 政务动态 -->
+														<p class="yw_top">
+									<a href="https://shenji.ly.gov.cn/2026/03-27/1049956.html" target="_blank">
+										洛阳市审计局驻村工作队： 情系留守老人，解决“头上大事”
+									</a>
+								</p>
+								<p class="yw_detail">
+									近日，洛阳市审计局驻赵庄工作队聚焦村内留守老人实际需求，创新开展便民服务活动，聘请村里专业理发师为留守老人免费理发，并针对行动不便老人提供上门服务，用暖心举措解决群众“头上大事”，赢得村民广泛赞誉。...
+									<a href="https://shenji.ly.gov.cn/2026/03-27/1049956.html" target="_blank">【详情】</a>
+								</p>
+								<ul class="czul cl">
+								<li>
+									<a href="https://shenji.ly.gov.cn/2026/03-13/1047038.html" target="_blank" title="洛阳市审计局召开树立和践行正确政绩观学习教育动员部署会">· 洛阳市审计局召开树立和践行正确政绩观学习...</a>
+									<span>2026-03-13</span>
+								</li>
+								<li>
+									<a href="https://content-static.cctvnews.cctv.com/snow-book/index.html?item_id=3791285225425095504&toc_style_id=feeds_default&share_to=wechat&track_id=c61b6a85-20bc-4ecf-a644-502987326643" target="_blank" title="世界看两会丨国际人士：中国高质量发展为全球经济注入稳定性">· 世界看两会丨国际人士：中国高质量发展为全...</a>
+									<span>2026-03-10</span>
+								</li>
+								<li>
+									<a href="https://www.peopleapp.com/column/30051596913-500007385075" target="_blank" title="第二场部长通道 回应关切真抓实干（现场·部长通道）">· 第二场部长通道 回应关切真抓实干（现场·...</a>
+									<span>2026-03-10</span>
+								</li>
+								<li>
+									<a href="https://content-static.cctvnews.cctv.com/snow-book/index.html?item_id=17989700629994020473&toc_style_id=feeds_default&share_to=wechat&track_id=493e0b0e-a078-4056-b7df-35d0487b8e28" target="_blank" title="视频丨代表委员积极建言献策 有关部门全面记录梳理高效转办回应">· 视频丨代表委员积极建言献策 有关部门全面...</a>
+									<span>2026-03-10</span>
+								</li>
+								<li>
+									<a href="https://h.xinhuaxmt.com/vh512/share/12998093?docid=12998093&newstype=1001&d=13525d4&channel=weixin&time=1772985258837" target="_blank" title="听民意 汇民智|“今天的反馈很全面也很务实”——全国人大代表张雨霏与国家体育总局工作人员面对面">· 听民意 汇民智|“今天的反馈很全面也很务...</a>
+									<span>2026-03-09</span>
+								</li>
+								<li>
+									<a href="https://content-static.cctvnews.cctv.com/snow-book/index.html?item_id=5546596795561239646&toc_style_id=feeds_default&share_to=wechat&track_id=5c826241-1db6-4947-a248-1823997d4994" target="_blank" title="中国经济信心说丨读懂“十五五”主要指标的深意">· 中国经济信心说丨读懂“十五五”主要指标的...</a>
+									<span>2026-03-09</span>
+								</li>
+							</ul>
+
+						<!-- 政务动态结束 -->
+					</div>
+					<div style="display: none;">
+						<!-- 县区动态 -->
+														<p class="yw_top">
+									<a href="https://shenji.ly.gov.cn/2026/03-26/1049812.html" target="_blank">
+										牢固树立正确政绩观 奋力推动高...
+									</a>
+								</p>
+								<p class="yw_detail">
+									为深入学习贯彻习近平总书记关于树立和践行正确政绩观的重要论述，全面落实上级党委和审计机关工作部署，3月5日下午，新安审计局召开树立和践行正确政绩观学习教育动员部署会，对学习教育工作进行全面安排部署，...
+									<a href="https://shenji.ly.gov.cn/2026/03-26/1049812.html" target="_blank">【详情】</a>
+								</p>
+								<ul class="czul cl">
+								<li>
+									<a href="https://shenji.ly.gov.cn/2026/03-13/1047040.html" target="_blank" title="洛阳市孟津区审计局深化研究型审计实践">· 洛阳市孟津区审计局深化研究型审计实践</a>
+									<span>2026-03-13</span>
+								</li>
+								<li>
+									<a href="https://shenji.ly.gov.cn/2026/02-24/1041492.html" target="_blank" title="孟津区审计局开局谋篇定方向  实干笃行启新程">· 孟津区审计局开局谋篇定方向  实干笃行启...</a>
+									<span>2026-02-24</span>
+								</li>
+								<li>
+									<a href="https://shenji.ly.gov.cn/2026/02-13/1041240.html" target="_blank" title="西工区审计局党组节前走访慰问社区困难党员">· 西工区审计局党组节前走访慰问社区困难党员</a>
+									<span>2026-02-13</span>
+								</li>
+								<li>
+									<a href="https://shenji.ly.gov.cn/2026/02-13/1041237.html" target="_blank" title="结对共建促发展，党建引领谱新篇 ——洛龙区审计局与河口社区共同开展2月主题党日">· 结对共建促发展，党建引领谱新篇 ——洛龙...</a>
+									<span>2026-02-13</span>
+								</li>
+								<li>
+									<a href="https://shenji.ly.gov.cn/2026/02-13/1041236.html" target="_blank" title="奋进审计人  建功新时代 ——嵩县审计局举行迎新春才艺展示活动">· 奋进审计人  建功新时代 ——嵩县审计局...</a>
+									<span>2026-02-13</span>
+								</li>
+								<li>
+									<a href="https://shenji.ly.gov.cn/2026/02-13/1041233.html" target="_blank" title="孟津区审计局组织观看专题节目《榜样10》">· 孟津区审计局组织观看专题节目《榜样10》</a>
+									<span>2026-02-13</span>
+								</li>
+							</ul>
+
+						<!-- 县区动态结束 -->
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="zt_list mt-20">
+			<!--  -->
+			<ul class="cl">
+				<li><a href="http://www.gov.cn/zhuanti/zggcddescqgdbdh/index.htm" target="_blank"><img
+							src="https://t.ly.gov.cn/file/4103000001/img/20d.png"></a></li>
+				<li><a href="https://www.hnzwfw.gov.cn/410300000000/?region=410300000000" target="_blank"><img
+							src="https://static.hnzwfw.gov.cn/lib/images/header-logo.png" alt="洛阳市权责清单公示平台"></a></li>
+			</ul>
+		</div>
+		<div class="cl mt-30 oldMt30">
+			<div class="fl cl tab_all">
+				<div class="bannerright" style="width: 740px;">
+					<div class="hd">
+						<ul class="bannerrightul">
+							<li class="on"><a href="https://shenji.ly.gov.cn/tzgg" target="_blank" class="first-a" title="通知公告">通知公告</a>
+							</li>
+							<li class=""><a href="https://shenji.ly.gov.cn/djzc" target="_blank" title="党建之窗">党建之窗</a></li>
+						</ul>
+					</div>
+					<div class="bd">
+						<div>
+							<ul class="czul cl">
+								<!-- 通知公告 -->
+																		<li><a style="width:580px;" href="https://shenji.ly.gov.cn/2026/01-13/1035224.html" target="_blank"
+											title="洛阳市审计局政府网站工作2025年度报表">· 洛阳市审计局政府网站工作2025年度报表</a>
+										<span>2026-01-13 </span>
+									</li>
+										<li><a style="width:580px;" href="https://shenji.ly.gov.cn/2025/10-28/901583.html" target="_blank"
+											title="洛阳市审计局及下属单位综合性涉企收费目录清单">· 洛阳市审计局及下属单位综合性涉企收费目录清单</a>
+										<span>2025-10-28 </span>
+									</li>
+										<li><a style="width:580px;" href="https://mp.weixin.qq.com/s/mb7J2GKmSy6-G228-_fkwg" target="_blank"
+											title="省委第二巡视组巡视省审计厅党组工作动员会议召开">· 省委第二巡视组巡视省审计厅党组工作动员会议召开</a>
+										<span>2025-03-03 </span>
+									</li>
+										<li><a style="width:580px;" href="https://mp.weixin.qq.com/s/td5awCUbCOyXlLN1uGs2mw" target="_blank"
+											title="巡视公告">· 巡视公告</a>
+										<span>2025-03-03 </span>
+									</li>
+										<li><a style="width:580px;" href="https://shenji.ly.gov.cn/2025/01-17/502661.html" target="_blank"
+											title="2024年政府网站工作年度报表">· 2024年政府网站工作年度报表</a>
+										<span>2025-01-17 </span>
+									</li>
+										<li><a style="width:580px;" href="https://shenji.ly.gov.cn/2024/09-14/422394.html" target="_blank"
+											title="洛阳市审计局 关于报废处置国有资产的公示">· 洛阳市审计局 关于报废处置国有资产的公示</a>
+										<span>2024-09-14 </span>
+									</li>
+										<li><a style="width:580px;" href="https://shenji.ly.gov.cn/2024/08-15/325946.html" target="_blank"
+											title="洛阳市审计局 关于报废处置国有资产的公示">· 洛阳市审计局 关于报废处置国有资产的公示</a>
+										<span>2024-08-15 </span>
+									</li>
+										<li><a style="width:580px;" href="https://shenji.ly.gov.cn/2024/04-16/153555.html" target="_blank"
+											title="关于领取2023年度审计专业技术资格证书的公告">· 关于领取2023年度审计专业技术资格证书的公告</a>
+										<span>2024-04-16 </span>
+									</li>
+										<li><a style="width:580px;" href="https://shenji.ly.gov.cn/2024/01-16/153554.html" target="_blank"
+											title="洛阳市审计局政府网站工作2023年度报表">· 洛阳市审计局政府网站工作2023年度报表</a>
+										<span>2024-01-16 </span>
+									</li>
+										<li><a style="width:580px;" href="https://shenji.ly.gov.cn/2023/12-25/153553.html" target="_blank"
+											title="洛阳市审计局关于办公地址变更的公告">· 洛阳市审计局关于办公地址变更的公告</a>
+										<span>2023-12-25 </span>
+									</li>
+
+								<!-- 通知公告结束 -->
+							</ul>
+						</div>
+						<div style="display: none;">
+							<ul class="czul cl">
+								<!-- 党建之窗 -->
+																		<li><a style="width:580px;" href="https://shenji.ly.gov.cn/2025/12-05/943772.html" target="_blank"
+											title="洛阳市审计局赴沈丘县审计组开展“缅怀革命先烈 赓续红色血脉”主题党日活动">· 洛阳市审计局赴沈丘县审计组开展“缅怀革命先烈 赓续红色血脉”主题党日活...</a>
+										<span>2025-12-05 </span>
+									</li>
+										<li><a style="width:580px;" href="https://shenji.ly.gov.cn/2025/12-03/943193.html" target="_blank"
+											title="“全景式”直面庭审“零距离”警示教育 洛阳市审计局开展沉浸式警示教育活动">· “全景式”直面庭审“零距离”警示教育 洛阳市审计局开展沉浸式警示教育活...</a>
+										<span>2025-08-22 </span>
+									</li>
+										<li><a style="width:580px;" href="https://shenji.ly.gov.cn/2025/07-18/624819.html" target="_blank"
+											title="追寻红色印记 赓续精神血脉  洛阳市审计局开展迎七一主题党日活动">· 追寻红色印记 赓续精神血脉  洛阳市审计局开展迎七一主题党日活动</a>
+										<span>2025-07-01 </span>
+									</li>
+										<li><a style="width:580px;" href="https://shenji.ly.gov.cn/2025/07-18/624812.html" target="_blank"
+											title="清风护航 审心向党  洛阳市审计局开展迎七一青年干部宣讲活动">· 清风护航 审心向党  洛阳市审计局开展迎七一青年干部宣讲活动</a>
+										<span>2025-07-01 </span>
+									</li>
+										<li><a style="width:580px;" href="https://shenji.ly.gov.cn/2025/07-14/617046.html" target="_blank"
+											title="档案铭史强信念 联建赋能践使命 ——洛阳市审计局机关第二党支部与工控集团 开展“五联五促”结对共建活动">· 档案铭史强信念 联建赋能践使命 ——洛阳市审计局机关第二党支部与工控集...</a>
+										<span>2025-06-18 </span>
+									</li>
+										<li><a style="width:580px;" href="https://shenji.ly.gov.cn/2025/05-12/566400.html" target="_blank"
+											title="观摩学习拓思路 砥砺奋进再突破 洛阳市审计局赴定鼎门社区参观学习">· 观摩学习拓思路 砥砺奋进再突破 洛阳市审计局赴定鼎门社区参观学习</a>
+										<span>2025-04-25 </span>
+									</li>
+										<li><a style="width:580px;" href="https://shenji.ly.gov.cn/2025/03-31/533825.html" target="_blank"
+											title="审计一线党旗红——洛阳市审计局赴开封审计组临时党支部开展主题党日活动">· 审计一线党旗红——洛阳市审计局赴开封审计组临时党支部开展主题党日活动</a>
+										<span>2025-03-31 </span>
+									</li>
+										<li><a style="width:580px;" href="https://shenji.ly.gov.cn/2024/10-21/451910.html" target="_blank"
+											title="洛阳市审计局开展党的二十届三中全会精神 专题宣讲">· 洛阳市审计局开展党的二十届三中全会精神 专题宣讲</a>
+										<span>2024-10-15 </span>
+									</li>
+										<li><a style="width:580px;" href="https://shenji.ly.gov.cn/2024/09-10/405701.html" target="_blank"
+											title="洛阳市审计局 学习宣传贯彻党的二十届三中全会精神">· 洛阳市审计局 学习宣传贯彻党的二十届三中全会精神</a>
+										<span>2024-07-22 </span>
+									</li>
+										<li><a style="width:580px;" href="https://shenji.ly.gov.cn/2024/08-15/325891.html" target="_blank"
+											title="传承红色基因 赓续红色血脉">· 传承红色基因 赓续红色血脉</a>
+										<span>2024-06-26 </span>
+									</li>
+
+								<!-- 党建之窗结束 -->
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="fr hdjl">
+				<div class="hdjl_main">
+					<div class="hdjl_title">互动交流</div>
+					<ul class="hdjl_list cl mt-10">
+						<li><a href="https://www.ly.gov.cn/zwgk/zcwd/zcwdlist/?siteId=4103000001" target="_blank"> <img	src="https://t.ly.gov.cn/file/4103000001/img/zx.png" al/t="">
+								<p class="font-size">网上咨询</p>
+							</a></li>
+						<li>
+							<a href="https://www.ly.gov.cn/zwgk/zcwd/" target="_blank"> 
+								<img src="https://t.ly.gov.cn/file/4103000001/img/zcwd.png" alt="">
+								<p class="font-size">政策问答</p>
+							</a>
+						</li>
+						<li>
+							<a href="https://m.ly.gov.cn/zmhd/yjzj/" target="_blank"> 
+								<img src="https://t.ly.gov.cn/file/4103000001/img/yjzj.png" alt="">
+								<p class="font-size">意见征集</p>
+							</a>
+						</li>
+						<li><a href="https://t.ly.gov.cn/openview/api/view/selectsiteopen?siteId=4103000001" target="_blank"> <img
+									src="https://t.ly.gov.cn/file/4103000001/img/ysqgk.png" alt="">
+								<p class="font-size">依申请公开</p>
+							</a></li>
+								<li>
+									<a href="https://shenji.ly.gov.cn/2024/03-13/77298.html" target="_blank"> <img
+											src="https://t.ly.gov.cn/file/4103000001/img/log_jiancha.png" alt="">
+										<p class="font-size">纪检监察举报</p>
+									</a>
+								</li>
+					</ul>
+					<div class="bstj mt-15">报送统计</div>
+					<div class="tj_tab mt-15">
+						<div class='hd'>
+							<ul class="cl">
+								<li class="on">局本级</li>
+								<li>县</li>
+							</ul>
+						</div>
+						<div class="tbbt cl">
+							<span>单位名称</span> <span>采用量</span>
+						</div>
+						<div class="bd">
+							<ul class="tbj">
+						
+							</ul>
+							<ul class="zgx" style="display: none;">
+					
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!--友情链接-->
+	<div class="clear"></div>
+	<!-- 底部开始 -->
+	<div data-visible=""><div class="footer mt-20">
+    <div class="friendcon">
+      <div class="copy">
+        <div class="slt">
+          <select onchange="javascript:window.open(this.options[this.selectedIndex].value);this.selectedIndex=0">
+            <option>省政府部门</option>
+  
+            <option value="http://gxt.henan.gov.cn/">河南省工业和信息化厅</option>
+  
+            <option value="http://hnga.henan.gov.cn/">河南省公安厅</option>
+  
+            <option value="http://sft.henan.gov.cn/">河南省司法厅</option>
+  
+            <option value="https://sjt.henan.gov.cn/">河南省审计厅</option>
+  
+          </select>
+          <select onchange="javascript:window.open(this.options[this.selectedIndex].value);this.selectedIndex=0">
+            <option>市直政府部门</option>
+  
+            <option value="http://www.ly.gov.cn/">市人民政府</option>
+  
+            <option value="http://fgw.ly.gov.cn/Index.shtml">市发展和改革委员会</option>
+  
+            <option value="http://police.ly.gov.cn/lypolice/index.htm">市公安局</option>
+  
+            <option value="https://sf.ly.gov.cn/">市司法局</option>
+  
+            <option value="http://smzj.ly.gov.cn/">洛阳市政务服务中心</option>
+  
+            <option value="http://lyggzyjy.ly.gov.cn/TPFront/">市公共资源交易中心</option>
+  
+          </select>
+          <select onchange="javascript:window.open(this.options[this.selectedIndex].value);this.selectedIndex=0">
+            <option>省市审计部门</option>
+  
+            <option value="http://zzsj.zhengzhou.gov.cn">郑州市审计局</option>
+  
+            <option value="http://www.pds.gov.cn/channels/1772.html">平顶山市审计局</option>
+  
+            <option value="https://sjj.anyang.gov.cn/">安阳市审计局</option>
+  
+            <option value="http://sjj.nanyang.gov.cn/">南阳市审计局</option>
+  
+            <option value="https://sjj.kaifeng.gov.cn/">开封市审计局</option>
+  
+          </select>
+        </div>
+        本网站信息未经授权禁止转载 洛阳市审计局版权所有 网站标识码：4103000001 <a href="https://beian.miit.gov.cn" target="_blank">豫ICP备10006251号-2</a>
+  
+        <img src="https://t.ly.gov.cn/file/4103000001/img/index_90.png"
+          style="display:inline; position: absolute; ">    
+        <a href="https://www.beian.gov.cn/portal/register'Info?recordcode=41030202000047"
+          target="_blank">豫公网安备41030202000047号</a><br>
+        地址：洛阳市洛龙区通衢路207号 邮编：47100 联系电话：0379－63485009 版权所有 2008-2013 All Rights Reserved<br>
+        <div style="margin-left:500px;"><span style="float:left; width:120px; position:relative; top:15px;">
+            <script id="_jiucuo_" sitecode='4103000001' src='https://zfwzgl.www.gov.cn/exposure/jiucuo.js'></script>
+          </span><span style="float:left"><a
+              href="http://bszs.conac.cn/sitename?method=show&id=09B1818656923CEEE053022819ACC4D0" target="_blank"><img
+                src="https://t.ly.gov.cn/file/4103000001/img/red.png" width="80" height="80" /></a></span></div>
+      </div>
+    </div>
+  </div>
+  <!-- 适老化相关js -->
+  <script src="https://t.ly.gov.cn/file/4103000055/js/common.js"></script> </div>
+  <script src='https://auth.mangren.com/boots/shenji.ly.gov.cn/esdToolsInit.js' charset='UTF-8'></script>
+<script language="javascript">
+var _yfx_trackdata = _yfx_trackdata || [];		//事件采集
+var _yfx_website = "10000116";			//站点编号（不可更改）
+(function() {
+    var yfxjs = document.createElement("script");
+    yfxjs.charset = "utf-8";
+    yfxjs.src = "//js.dahe.cn/count/yeefxcount.js";
+    var yfxjs_t = document.getElementsByTagName("script")[0];
+    yfxjs_t.parentNode.insertBefore(yfxjs, yfxjs_t);
+})();
+</script>
+	<!-- 底部结束 -->
+
+
+</body>
+<script type="text/javascript">
+	$(function () {
+		$(".slideBox1").slide({
+			mainCell: ".bd ul",
+			autoPlay: true,
+			effect: "fade",
+			interTime: 5000,
+			trigger: "click"
+		});
+		$(".sjlb").slide({
+			mainCell: ".bd ul",
+			autoPlay: true,
+			effect: "fade",
+			interTime: 5000,
+			trigger: "click"
+		});
+		$(".bannerright").slide();
+		$(".sjtz").slide();
+		$(".sjal").slide();
+		$(".tj_tab").slide();
+		$(".links .select-menu").mouseenter(function () {
+			$(this).animate({
+				left: 0
+			}, "fast", function () {
+				$(this).children("ul").show();
+				$(this).find("i").addClass("select-menu-i");
+			});
+		});
+		$(".links .select-menu").mouseleave(function () {
+			$(this).animate({
+				left: 0
+			}, "fast", function () {
+				$(this).children("ul").hide();
+				$(this).find("i").removeClass("select-menu-i");
+			});
+		});
+		$(".ewmbox").mouseover(function () {
+			$(".wxewm").show();
+		}).mouseout(function () {
+			$(".wxewm").hide();
+		});
+		$(".ebmbox").mouseover(function () {
+			$(".wbewm").show();
+		}).mouseout(function () {
+			$(".wbewm").hide();
+		});
+		$(window).scroll(function () {
+			if ($(window).scrollTop() > 100) {
+				$(".backtop").fadeIn(100);
+			} else {
+				$(".backtop").fadeOut(100);
+			}
+		});
+		$(".backtop").on("click", function () {
+			$('body,html').animate({
+				scrollTop: 0
+			}, 1000);
+			return false;
+		});
+	})
+	function fnindex() {
+		// '("加入收藏失败，请使用Ctrl+D进行添加");
+	}
+
+	function SetHome(obj, url) {
+		try {
+			obj.style.behavior = 'url(#default#homepage)';
+			obj.setHomePage(url);
+		} catch (e) {
+			if (window.netscape) {
+				try {
+					netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+				} catch (e) {
+					// '("抱歉，此操作被浏览器拒绝！\n\n请在浏览器地址栏输入“about:config”并回车然后将[signed.applets.codebase_principal_support]设置为'true'");
+				}
+			} else {
+				// '("抱歉，您所使用的浏览器无法完成此操作。\n\n您需要手动将【" + url + "】设置为首页。");
+			}
+		}
+	}
+</script>
+
+<script>
+	function fnLoadModule() {
+		if ("" != "") {
+			window.location.href = "/Message/962CAA1DF188FE57/Index.shtml"
+		} else {
+			window.location.href = "/login.shtml"
+		}
+	}
+
+	function fnLoadModule2() {
+		if ("" != "") {
+			window.location.href = "/public.shtml"
+		} else {
+			window.location.href = "/login.shtml"
+		}
+	}
+	function fnLoadModule3() {
+		if ("" != "") {
+			window.location.href = "/DIReport/Index.shtml"
+		} else {
+			window.location.href = "/login.shtml"
+		}
+	}
+	//获取审计局报送统计数据
+	$.ajax({
+		type: 'post',
+		url: 'https://t.ly.gov.cn/page/count/label-news-list',
+		data: { siteId: '4103000001'},
+		success: function (data) {
+			console.log('获取审计局报送统计数据', data);
+      // $('#pageView').text(data.count)
+			let tbjHtml = ''
+			let zgxHtml = ''
+			if(data.obj != ''){
+				data.obj[2].forEach(function(item){
+					tbjHtml += '<li class="cl"><span>'+item.labelName+'</span><span>'+ item.num +'</span></li>'
+				})
+				data.obj[3].forEach(function(item){
+					zgxHtml += '<li class="cl"><span>'+item.labelName+'</span><span>'+ item.num +'</span></li>'
+				})
+			}	
+			
+			$(".tbj").html(tbjHtml)
+			$(".zgx").html(zgxHtml)
+
+		},
+    });
+</script>
+
+</html>

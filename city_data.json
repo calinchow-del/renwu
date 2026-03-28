@@ -1,0 +1,602 @@
+[
+  {
+    "rank": 1,
+    "city": "上海",
+    "website": "http://www.shanghai.gov.cn/",
+    "budget_url": "http://www.shanghai.gov.cn/bmys-26-002/index.html"
+  },
+  {
+    "rank": 2,
+    "city": "北京",
+    "website": "http://www.beijing.gov.cn/",
+    "budget_url": "http://www.beijing.gov.cn/gongkai/caizheng/czzt/2026ys/index.html"
+  },
+  {
+    "rank": 3,
+    "city": "深圳",
+    "website": "http://www.sz.gov.cn/",
+    "budget_url": "http://www.sz.gov.cn/cn/xxgk/zfxxgj/zjxx/gbmczyjs/"
+  },
+  {
+    "rank": 4,
+    "city": "重庆",
+    "website": "http://www.cq.gov.cn/",
+    "budget_url": "http://www.cq.gov.cn/zwgk/zfxxgkzl/fdzdgknr/ysjs/szfbgtjszfbmyjsqk/ys/"
+  },
+  {
+    "rank": 5,
+    "city": "广州",
+    "website": "http://www.gz.gov.cn/",
+    "budget_url": "http://www.gz.gov.cn/zwgk/zdly/czzj/bmyjshsgjf/ys/2026n/index.html"
+  },
+  {
+    "rank": 6,
+    "city": "苏州",
+    "website": "http://www.suzhou.gov.cn/",
+    "budget_url": "http://www.suzhou.gov.cn/szsrmzf/sjzfbmczyjs/xxgkzdly.shtml"
+  },
+  {
+    "rank": 7,
+    "city": "成都",
+    "website": "http://www.chengdu.gov.cn/",
+    "budget_url": "http://www.chengdu.gov.cn/gkml/czyjs/column-index-1.shtml"
+  },
+  {
+    "rank": 8,
+    "city": "杭州",
+    "website": "http://www.hangzhou.gov.cn/",
+    "budget_url": "http://www.hangzhou.gov.cn/col/col1229063412/index.html"
+  },
+  {
+    "rank": 9,
+    "city": "武汉",
+    "website": "http://www.wuhan.gov.cn/",
+    "budget_url": "http://www.wuhan.gov.cn/ztzl/yjs/2026/"
+  },
+  {
+    "rank": 10,
+    "city": "南京",
+    "website": "http://www.nanjing.gov.cn/",
+    "budget_url": "http://www.nanjing.gov.cn/site/zgnj/search.html?searchWord=2026%20%E9%A2%84%E7%AE%97&siteId=10&pageSize=10&searchWord2=2026%20%E9%A2%84%E7%AE%97"
+  },
+  {
+    "rank": 11,
+    "city": "宁波",
+    "website": "http://www.ningbo.gov.cn/",
+    "budget_url": "http://yjs.czj.ningbo.gov.cn/gkxxzl/nbcs/budget/main"
+  },
+  {
+    "rank": 12,
+    "city": "天津",
+    "website": "http://www.tj.gov.cn/",
+    "budget_url": "http://cz.tj.gov.cn/zwgk_53713/yjsgktypt/ysgk/2026bmys/"
+  },
+  {
+    "rank": 13,
+    "city": "青岛",
+    "website": "http://www.qingdao.gov.cn/",
+    "budget_url": "http://www.qingdao.gov.cn/zwgk/search.shtml?searchWord=2026%20%E9%A2%84%E7%AE%97"
+  },
+  {
+    "rank": 14,
+    "city": "无锡",
+    "website": "http://www.wuxi.gov.cn/",
+    "budget_url": "http://www.wuxi.gov.cn/zfxxgk/szfxxgkml/czxx/zfbmczyjs/index.shtml"
+  },
+  {
+    "rank": 15,
+    "city": "长沙",
+    "website": "http://www.changsha.gov.cn/",
+    "budget_url": "http://www.changsha.gov.cn/szf/ztzl/ysgk/"
+  },
+  {
+    "rank": 16,
+    "city": "郑州",
+    "website": "http://www.zhengzhou.gov.cn/",
+    "budget_url": "http://public.zhengzhou.gov.cn/?a=dir&h=1&p=D1901&c=177950&f=177991"
+  },
+  {
+    "rank": 17,
+    "city": "福州",
+    "website": "http://www.fuzhou.gov.cn/",
+    "budget_url": "http://www.fuzhou.gov.cn/zgfzzt/czzj/bmndyjs/bmysgk/"
+  },
+  {
+    "rank": 18,
+    "city": "济南",
+    "website": "http://www.jinan.gov.cn/",
+    "budget_url": "http://www.jinan.gov.cn/col/col55590/index.html?jh=263"
+  },
+  {
+    "rank": 19,
+    "city": "合肥",
+    "website": "http://www.hefei.gov.cn/",
+    "budget_url": "http://www.hefei.gov.cn/zwgk/site/tpl/1541"
+  },
+  {
+    "rank": 20,
+    "city": "西安",
+    "website": "http://www.xa.gov.cn/",
+    "budget_url": "http://www.xa.gov.cn/gk/czzj/bmczyjs/2026nbmczys/1.html"
+  },
+  {
+    "rank": 21,
+    "city": "泉州",
+    "website": "http://www.quanzhou.gov.cn/",
+    "budget_url": "http://www.quanzhou.gov.cn/zfb/xxgk/ztxxgk/czzj/bmczyjs/"
+  },
+  {
+    "rank": 22,
+    "city": "佛山",
+    "website": "http://www.foshan.gov.cn/",
+    "budget_url": "http://www.foshan.gov.cn/zwgk/zdly/czxx/czxxgk/czjjbm/index.html"
+  },
+  {
+    "rank": 23,
+    "city": "南通",
+    "website": "http://www.nantong.gov.cn/",
+    "budget_url": "http://www.nantong.gov.cn/ntsrmzf/2026n_cz/2026n_cz.html"
+  },
+  {
+    "rank": 24,
+    "city": "东莞",
+    "website": "http://www.dg.gov.cn/",
+    "budget_url": "http://www.dg.gov.cn/zwgk/czxx/index.html"
+  },
+  {
+    "rank": 25,
+    "city": "烟台",
+    "website": "http://www.yantai.gov.cn/",
+    "budget_url": "http://www.yantai.gov.cn/col/col55145/2026n/index.html"
+  },
+  {
+    "rank": 26,
+    "city": "常州",
+    "website": "http://www.changzhou.gov.cn/",
+    "budget_url": "http://www.changzhou.gov.cn/gi_class/zwgk_05?furl=zdgk&cache=no&test=bbb"
+  },
+  {
+    "rank": 27,
+    "city": "唐山",
+    "website": "http://www.tangshan.gov.cn/",
+    "budget_url": "http://www.tangshan.gov.cn/columns/zhuzhan/tsczxx/index.html"
+  },
+  {
+    "rank": 28,
+    "city": "温州",
+    "website": "http://www.wenzhou.gov.cn/",
+    "budget_url": "http://www.wenzhou.gov.cn/col/col1229249208/index.html"
+  },
+  {
+    "rank": 29,
+    "city": "大连",
+    "website": "http://www.dl.gov.cn/",
+    "budget_url": "http://www.dl.gov.cn/col/col2352/index.html"
+  },
+  {
+    "rank": 30,
+    "city": "徐州",
+    "website": "http://www.xz.gov.cn/",
+    "budget_url": "http://www.xz.gov.cn/002/002020/ysjs.html"
+  },
+  {
+    "rank": 31,
+    "city": "沈阳",
+    "website": "http://www.shenyang.gov.cn/",
+    "budget_url": "http://www.shenyang.gov.cn/zwgk/fdzdgknr/ysjs/bmczyjsbgjsgjf/bmysnew/2026nbmys/"
+  },
+  {
+    "rank": 32,
+    "city": "厦门",
+    "website": "http://www.xm.gov.cn/",
+    "budget_url": "http://www.xm.gov.cn/zdxxgk/czzjxx/szfbmczyjs/2026/"
+  },
+  {
+    "rank": 33,
+    "city": "绍兴",
+    "website": "http://www.shaoxing.gov.cn/",
+    "budget_url": "http://www.sx.gov.cn/col/col1229724451/index.html"
+  },
+  {
+    "rank": 34,
+    "city": "石家庄",
+    "website": "http://www.sjz.gov.cn/",
+    "budget_url": "http://www.sjz.gov.cn/yjsgk/"
+  },
+  {
+    "rank": 35,
+    "city": "昆明",
+    "website": "http://www.km.gov.cn/",
+    "budget_url": "http://www.km.gov.cn/zfxxgk/fdzdgknr/zdlyxxgk/sjczyjs/bmsgjf/"
+  },
+  {
+    "rank": 36,
+    "city": "潍坊",
+    "website": "http://www.weifang.gov.cn/",
+    "budget_url": "http://www.weifang.gov.cn/xxgk/fdzdgk2020new.html"
+  },
+  {
+    "rank": 37,
+    "city": "南昌",
+    "website": "http://www.nc.gov.cn/",
+    "budget_url": "http://www.nc.gov.cn/ncszf/2026bmys/"
+  },
+  {
+    "rank": 38,
+    "city": "扬州",
+    "website": "http://www.yangzhou.gov.cn/",
+    "budget_url": "http://yjsgk.jsczt.cn/"
+  },
+  {
+    "rank": 39,
+    "city": "盐城",
+    "website": "http://www.yancheng.gov.cn/",
+    "budget_url": "http://www.yancheng.gov.cn/col/col23760/index.html"
+  },
+  {
+    "rank": 40,
+    "city": "长春",
+    "website": "http://www.changchun.gov.cn/",
+    "budget_url": "http://www.changchun.gov.cn/ztlm/yjsxx/"
+  },
+  {
+    "rank": 41,
+    "city": "嘉兴",
+    "website": "http://www.jiaxing.gov.cn/",
+    "budget_url": "http://www.jiaxing.gov.cn/col/col1229663786/index.html"
+  },
+  {
+    "rank": 42,
+    "city": "榆林",
+    "website": "http://www.yl.gov.cn/",
+    "budget_url": "http://www.yl.gov.cn/zwgk/fdzdgknr/czxx/czyjs/bmczys/"
+  },
+  {
+    "rank": 43,
+    "city": "金华",
+    "website": "http://www.jinhua.gov.cn/",
+    "budget_url": "http://www.jinhua.gov.cn/col/col1229160421/index.html"
+  },
+  {
+    "rank": 44,
+    "city": "泰州",
+    "website": "http://www.taizhou.gov.cn/",
+    "budget_url": "http://yjsgk.jsczt.cn/"
+  },
+  {
+    "rank": 45,
+    "city": "台州",
+    "website": "http://www.zjtz.gov.cn/",
+    "budget_url": "http://www.zjtz.gov.cn/col/col1229205171/index.html"
+  },
+  {
+    "rank": 46,
+    "city": "临沂",
+    "website": "http://www.linyi.gov.cn/",
+    "budget_url": "http://czj.linyi.gov.cn/zfxxgk/czxx/czyjs.htm"
+  },
+  {
+    "rank": 47,
+    "city": "宜昌",
+    "website": "http://www.yichang.gov.cn/",
+    "budget_url": "http://xxgk.yichang.gov.cn/"
+  },
+  {
+    "rank": 48,
+    "city": "惠州",
+    "website": "http://www.huizhou.gov.cn/",
+    "budget_url": "http://www.huizhou.gov.cn/zdlyxxgk/czyjshsgjf/czyjs/"
+  },
+  {
+    "rank": 49,
+    "city": "南宁",
+    "website": "http://www.nanning.gov.cn/",
+    "budget_url": "http://www.nanning.gov.cn/zwgk/fdzdgknr/czxx/sbjyjs/"
+  },
+  {
+    "rank": 50,
+    "city": "哈尔滨",
+    "website": "http://www.harbin.gov.cn/",
+    "budget_url": "http://www.harbin.gov.cn/col/col21404/index.html"
+  },
+  {
+    "rank": 51,
+    "city": "洛阳",
+    "website": "http://www.ly.gov.cn/",
+    "budget_url": "http://cz.ly.gov.cn/sitesources/lyczj/page_pc/zfxxgk/czzjyjsgkpt/index.html"
+  },
+  {
+    "rank": 52,
+    "city": "漳州",
+    "website": "http://www.zhangzhou.gov.cn/",
+    "budget_url": "http://www.zhangzhou.gov.cn/cms/html/zzsrmzf/zwgk/index.html"
+  },
+  {
+    "rank": 53,
+    "city": "济宁",
+    "website": "http://www.jining.gov.cn/",
+    "budget_url": "http://www.jining.gov.cn/col/col33415/index.html"
+  },
+  {
+    "rank": 54,
+    "city": "鄂尔多斯",
+    "website": "http://www.ordos.gov.cn/",
+    "budget_url": "http://czj.ordos.gov.cn/xxgk/fdzdgk/ysgk/"
+  },
+  {
+    "rank": 55,
+    "city": "襄阳",
+    "website": "http://www.xiangyang.gov.cn/",
+    "budget_url": "http://czj.xiangyang.gov.cn/"
+  },
+  {
+    "rank": 56,
+    "city": "贵阳",
+    "website": "http://www.guiyang.gov.cn/",
+    "budget_url": "http://www.guiyang.gov.cn/zwgk/zdlyxxgk2024/czsj/czyjsjsgjf/sbjyjsjsgjf_1/"
+  },
+  {
+    "rank": 57,
+    "city": "镇江",
+    "website": "http://www.zhenjiang.gov.cn/",
+    "budget_url": "http://yjsgk.jsczt.cn/"
+  },
+  {
+    "rank": 58,
+    "city": "淮安",
+    "website": "http://www.huaian.gov.cn/",
+    "budget_url": "http://czj.huaian.gov.cn/xxgk/czsj/list.html"
+  },
+  {
+    "rank": 59,
+    "city": "芜湖",
+    "website": "http://www.wuhu.gov.cn/",
+    "budget_url": "http://czgz.wuhu.gov.cn/"
+  },
+  {
+    "rank": 60,
+    "city": "岳阳",
+    "website": "http://www.yueyang.gov.cn/",
+    "budget_url": "http://yueyang.gov.cn/zwgk/62389/62390/index.htm"
+  },
+  {
+    "rank": 61,
+    "city": "太原",
+    "website": "http://www.taiyuan.gov.cn/",
+    "budget_url": "http://www.taiyuan.gov.cn/zfbmczyjs.html"
+  },
+  {
+    "rank": 62,
+    "city": "赣州",
+    "website": "http://www.ganzhou.gov.cn/",
+    "budget_url": "http://www.ganzhou.gov.cn/zfxxgk/bmyjs/"
+  },
+  {
+    "rank": 63,
+    "city": "遵义",
+    "website": "http://www.zunyi.gov.cn/",
+    "budget_url": "http://www.zunyi.gov.cn/zwgk/zdlygk/czzj_5858315/sjczyjsjsgjf/"
+  },
+  {
+    "rank": 64,
+    "city": "南阳",
+    "website": "http://www.nanyang.gov.cn/",
+    "budget_url": "http://caizj.nanyang.gov.cn/ysgkpt/"
+  },
+  {
+    "rank": 65,
+    "city": "淄博",
+    "website": "http://www.zibo.gov.cn/",
+    "budget_url": "http://sczj.zibo.gov.cn/col/col2743/index.html"
+  },
+  {
+    "rank": 66,
+    "city": "宿迁",
+    "website": "http://www.suqian.gov.cn/",
+    "budget_url": "http://www.suqian.gov.cn/cnsq/czsj/xxgk_list.shtml"
+  },
+  {
+    "rank": 67,
+    "city": "保定",
+    "website": "http://www.baoding.gov.cn/",
+    "budget_url": "http://www.baoding.gov.cn/zwgkdocnrForOld-888888711-538444.html"
+  },
+  {
+    "rank": 68,
+    "city": "菏泽",
+    "website": "http://www.heze.gov.cn/",
+    "budget_url": "http://www.heze.gov.cn/czyjs/"
+  },
+  {
+    "rank": 69,
+    "city": "沧州",
+    "website": "http://www.cangzhou.gov.cn/",
+    "budget_url": "http://www.cangzhou.gov.cn/zwgk/fdzdgknr/czxx/"
+  },
+  {
+    "rank": 70,
+    "city": "邯郸",
+    "website": "http://www.handan.gov.cn/",
+    "budget_url": "http://www.hd.gov.cn/ztzl/czyjs/"
+  },
+  {
+    "rank": 71,
+    "city": "连云港",
+    "website": "http://www.lyg.gov.cn/",
+    "budget_url": "http://czj.lyg.gov.cn/lygsczj/czxx/czxx.html"
+  },
+  {
+    "rank": 72,
+    "city": "常德",
+    "website": "http://www.changde.gov.cn/",
+    "budget_url": "http://czj.changde.gov.cn/"
+  },
+  {
+    "rank": 73,
+    "city": "包头",
+    "website": "http://www.baotou.gov.cn/",
+    "budget_url": "http://www.baotou.gov.cn/xzwhk/dynr.jsp?urltype=tree.TreeTempUrl&wbtreeid=5471"
+  },
+  {
+    "rank": 74,
+    "city": "衡阳",
+    "website": "http://www.hengyang.gov.cn/",
+    "budget_url": "http://www.hengyang.gov.cn/czj/ztxx/czysjsgk/"
+  },
+  {
+    "rank": 75,
+    "city": "乌鲁木齐",
+    "website": "http://www.wlmq.gov.cn/",
+    "budget_url": "http://www.wlmq.gov.cn/wlmqs/c119257/bm_com_list.shtml"
+  },
+  {
+    "rank": 76,
+    "city": "绵阳",
+    "website": "http://www.my.gov.cn/",
+    "budget_url": "http://www.my.gov.cn/mysrmzf/c100033/zwgk.shtml"
+  },
+  {
+    "rank": 77,
+    "city": "珠海",
+    "website": "http://www.zhuhai.gov.cn/",
+    "budget_url": "http://www.zhuhai.gov.cn/xw/ztjj/zhszdlyxxgkzl/czysjshsgjfgk/czyjs/"
+  },
+  {
+    "rank": 78,
+    "city": "东营",
+    "website": "http://www.dongying.gov.cn/",
+    "budget_url": "http://dyczj.dongying.gov.cn/"
+  },
+  {
+    "rank": 79,
+    "city": "湖州",
+    "website": "http://www.huzhou.gov.cn/",
+    "budget_url": "http://www.huzhou.gov.cn/hzgov/front/yjsgk/index.do"
+  },
+  {
+    "rank": 80,
+    "city": "江门",
+    "website": "http://www.jiangmen.gov.cn/",
+    "budget_url": "http://www.jiangmen.gov.cn/bmpd/jmsczj/zwgk/jmsjyjsgkpt/"
+  },
+  {
+    "rank": 81,
+    "city": "呼和浩特",
+    "website": "http://www.hhht.gov.cn/",
+    "budget_url": "http://czj.huhhot.gov.cn/zwgk/czyjsgk/"
+  },
+  {
+    "rank": 82,
+    "city": "中山",
+    "website": "http://www.zs.gov.cn/",
+    "budget_url": "http://czj.zs.gov.cn/sy/yjsgkpt/"
+  },
+  {
+    "rank": 83,
+    "city": "宁德",
+    "website": "http://www.ningde.gov.cn/",
+    "budget_url": "http://www.ningde.gov.cn/zwgk/ghjh/"
+  },
+  {
+    "rank": 84,
+    "city": "九江",
+    "website": "http://www.jiujiang.gov.cn/",
+    "budget_url": "http://www.jiujiang.gov.cn/xxgk/xzwgk/glgk/czxx/szbm/"
+  },
+  {
+    "rank": 85,
+    "city": "滁州",
+    "website": "http://www.chuzhou.gov.cn/",
+    "budget_url": "http://czj.chuzhou.gov.cn/"
+  },
+  {
+    "rank": 86,
+    "city": "德州",
+    "website": "http://www.dezhou.gov.cn/",
+    "budget_url": "http://www.dezhou.gov.cn/n1403/n38999498/n38999551/n38999706/n38999718/n38999720/index.html"
+  },
+  {
+    "rank": 87,
+    "city": "宜宾",
+    "website": "http://www.yibin.gov.cn/",
+    "budget_url": "http://czj.yibin.gov.cn/"
+  },
+  {
+    "rank": 88,
+    "city": "茂名",
+    "website": "http://www.maoming.gov.cn/",
+    "budget_url": "http://czj.maoming.gov.cn/"
+  },
+  {
+    "rank": 89,
+    "city": "株洲",
+    "website": "http://www.zhuzhou.gov.cn/",
+    "budget_url": "http://czyjs.zhuzhou.gov.cn/"
+  },
+  {
+    "rank": 90,
+    "city": "廊坊",
+    "website": "http://www.langfang.gov.cn/",
+    "budget_url": "http://zfxxgk.lf.gov.cn/"
+  },
+  {
+    "rank": 91,
+    "city": "湛江",
+    "website": "http://www.zhanjiang.gov.cn/",
+    "budget_url": "http://www.zhanjiang.gov.cn/zdlyxxgk/czyjshsg/bmyjs/"
+  },
+  {
+    "rank": 92,
+    "city": "上饶",
+    "website": "http://www.shangrao.gov.cn/",
+    "budget_url": "http://www.zgsr.gov.cn/czj/czyjs/"
+  },
+  {
+    "rank": 93,
+    "city": "宜春",
+    "website": "http://www.yichun.gov.cn/",
+    "budget_url": "http://www.yichun.gov.cn/ycsrmzf/zwgk/zwgk.shtml"
+  },
+  {
+    "rank": 94,
+    "city": "兰州",
+    "website": "http://www.lanzhou.gov.cn/",
+    "budget_url": "http://www.lanzhou.gov.cn/"
+  },
+  {
+    "rank": 95,
+    "city": "威海",
+    "website": "http://www.weihai.gov.cn/",
+    "budget_url": "http://czj.weihai.gov.cn/"
+  },
+  {
+    "rank": 96,
+    "city": "周口",
+    "website": "http://www.zhoukou.gov.cn/",
+    "budget_url": "http://czj.zhoukou.gov.cn/"
+  },
+  {
+    "rank": 97,
+    "city": "泰安",
+    "website": "http://www.taian.gov.cn/",
+    "budget_url": "http://czj.taian.gov.cn/col/col76961/index.html"
+  },
+  {
+    "rank": 98,
+    "city": "曲靖",
+    "website": "http://www.qj.gov.cn/",
+    "budget_url": "http://czj.qj.gov.cn/gov/info/list/yszxgk.html"
+  },
+  {
+    "rank": 99,
+    "city": "阜阳",
+    "website": "http://www.fy.gov.cn/",
+    "budget_url": "http://m.fy.gov.cn/openness/"
+  },
+  {
+    "rank": 100,
+    "city": "荆州",
+    "website": "http://www.jingzhou.gov.cn/",
+    "budget_url": "http://czj.jingzhou.gov.cn/"
+  }
+]

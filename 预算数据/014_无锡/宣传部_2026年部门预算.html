@@ -1,0 +1,1040 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>中共无锡市委宣传部-首页</title> 
+
+
+<link rel="stylesheet" type="text/css" href="/static/css/index.css" />
+<link rel="stylesheet" type="text/css" href="https://www.wuxi.gov.cn/static2016/css/ws_extend.css" />
+<script language="javascript" type="text/javascript" src="/static/js/jquery.js"></script>
+<script language="javascript" type="text/javascript" src="/static/js/jquery.tab.js"></script>
+<script language="javascript" type="text/javascript" src="/static/js/jquery.roll.js"></script>
+<script language="javascript" type="text/javascript" src="/static/js/jquery.tree.js"></script>
+<script language="javascript" type="text/javascript" src="/static/js/global.js"></script>
+<script language="javascript" type="text/javascript" src="/static/js/jquery.SuperSlide.2.1.1.js"></script>
+<script language="javascript" type="text/javascript" src="//www.wuxi.gov.cn/static2016/js/checkLogin_t.js"></script>
+<!-- 新检索JS -->
+<script src="//www.wuxi.gov.cn/static_common/js/wzq_search_common.js"></script>
+
+
+
+
+<style>
+/**黑白*/
+/*html,body{ filter: grayscale(100%);filter: gray; -webkit-filter: grayscale(100%); -moz-filter: grayscale(100%); -ms-filter: grayscale(100%); -o-filter: grayscale(100%); filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1); -webkit-filter: grayscale(1);} 
+img{filter:Gray;}*/
+</style>
+<style type="text/css">
+  .sty_xctp{ height:143px; border-top:#cb0000 solid 3px;}
+  .sty_xctp h3{ width:20px; height:100px; display:inline; margin:12px 0 0 10px; padding:20px 0 0 5px; font-size:14px; line-height:20px; background-color:#cb0000}
+  .leftLoop{ overflow:hidden; position:relative; } 
+  .leftLoop .hd{ display:none; }  
+  .leftLoop .bd{ padding:17px 10px 0;   } 
+  .leftLoop .bd ul{ overflow:hidden; zoom:1; } 
+  .leftLoop .bd ul li{ margin:0 14px 0 0; float:left; _display:inline; position:relative; width:155px; height:110px;} 
+  .leftLoop .bd ul li a{ cursor:pointer;}
+  .leftLoop .bd ul li img{ width:155px; height:110px;}
+</style>
+<script text="text/javascript">
+  function subString(str,len)
+  {
+    var newLength = 0;
+        var newStr = "";
+        var chineseRegex = /[^\x00-\xff]/g;
+        var singleChar = "";
+        var strLength = str.replace(chineseRegex,"**").length;
+    //alert(strLength);
+        for(var i = 0;i < strLength;i++) {
+                singleChar = str.charAt(i).toString();
+                if(singleChar.match(chineseRegex) != null) {
+                        newLength += 2;
+                }else {
+                        newLength++;
+                }
+                if(newLength > len) {
+                        break;
+                }
+                        newStr += singleChar;
+        }
+        if(strLength > len) {
+                newStr += "...";
+        }
+    document.write(newStr);
+    return newStr; 
+  }
+</script>
+
+
+</head>
+<body >
+<script language="javascript" type="text/javascript">
+ $.getUrlParam = function(name) {
+    		var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+   	var r = window.location.search.substr(1).match(reg);
+   	if (r != null)
+   	return unescape(r[2]);
+   	return null;
+    } 
+
+    
+var prePage = document.referrer;
+ 
+String.prototype.Trim = function() 
+{ 
+	return this.replace(/(^\s*)|(\s*$)/g, ""); 
+}
+
+String.prototype.LTrim = function() 
+{ 
+	return this.replace(/(^\s*)/g, ""); 
+} 
+
+String.prototype.Rtrim = function() 
+{ 
+	return this.replace(/(\s*$)/g, ""); 
+}   
+
+function isNull(str) { 
+	if (str == ""){ 
+		return true;
+	} 
+	var regu = "^[ ]+$"; 
+	var re = new RegExp(regu); 
+	return re.test(str); 
+}
+
+//处理头部的登录
+function dealHeaderHtml() {
+  
+ var str = "";
+ if(checkLogin()) {
+   var loginUser = getLoginUser();
+   str += "<em>欢迎您："+loginUser+"</em>";
+              str += "<dl>";
+              str += "<dd><a href='/fwyhd/lxblpt/wdhx/index.shtml'>我的12345信件</a></dd>";
+             
+              str += "<dd ><a target=\"_blank\" href='https://www.jszwfw.gov.cn/jsjis/front/modify/permodify_show.do'>修改个人信息</dd>";
+              str += "<dd ><a target=\"_blank\" href='https://www.jszwfw.gov.cn/jsjis/front/login/modifypwd_step1.do'>修改密码</dd>";
+              str += "<dd style=\"border:none\"><a href=\"javascript:loginOut();\">退出</a></dd>";
+              str += "</dl>";
+ }else{
+   var localurl = window.location.href;
+            str += '<a href="https://sso.wuxi.gov.cn/auth-center2/login.html?gotoUrl='+localurl+'" class="login">用户登录</a>';
+ }
+ 
+ $("#loginHead").empty();
+ $("#loginHead").append(str);
+ 
+}
+
+$(document).ready(function(){
+  dealHeaderHtml();
+});
+  
+//登录
+//验证失败，直接返回
+//退出登录
+
+
+//验证码
+
+function selectFrom(iFirstValue, iLastValue) {
+    var iChoces = Math.abs(iLastValue - iFirstValue) + 1;
+    return Math.floor(Math.random() * iChoces + iFirstValue);
+}
+
+
+</script>
+
+
+<div id="header">
+		<div class="head_top ">
+          <p class="wel_date fl"><span style="display:inline-block; padding:2px 10px; border-radius:3px;background:#e33030; color:#fff;">网站支持IPv6</span>欢迎访问无锡市中共无锡市委宣传部网站&nbsp;&nbsp;&nbsp;&nbsp;今天是：<script language="javascript" type="text/javascript" src="/static/js/date.js"></script></p>
+        <ul class="Back fr">
+          <li class="user_info" id="loginHead">
+
+          </li>
+          <!--<li><a href="#">网站无障碍浏览</a></li>-->
+        
+          <li ><a href="https://www.wuxi.gov.cn/">中国无锡主站</a></li>
+          <li style="background:none;"><a href="http://wza.wuxi.gov.cn/.m/xcb_wuxi_wza/index.html" target="_blank">无障碍浏览</a></li>
+          
+          </ul>
+          
+	</div>
+<script>
+  $(".user_info").hover(function(){
+	  if($(this).find("em").is(":visible")>0){
+		  $(this).addClass("on").find("dl").slideDown()
+		  }else{
+			  
+			  }  
+	  },function(){
+		  $(this).removeClass("on").find("dl").hide()
+		  })
+</script>
+  	<div class="banner clearfix">
+    	
+    	<p class="fr"><a href="https://www.wuxi.gov.cn/"><img src="/static/images/WuXi.png" alt="中国无锡" /></a></p>
+    </div>
+	<div id="nav">
+  	<div class="nav_t pie clearfix">
+		<ul class="fl nav_ul clearfix">
+          <li><a href="/index.shtml"><span class="cat_tit">网站首页</span></a></li>
+		  <li><a href="/xxgk/dtxx/index.shtml"><span class="cat_tit">信息公开</span></a></li>
+		  <li><a href="/fwyhd/index.shtml"><span class="cat_tit">服务与互动</span></a></li>
+		  <li><a href="/xcyd/sxll/index.shtml"><span class="cat_tit">宣传园地</span></a></li>
+         
+		</ul>
+      
+      
+      
+ 
+      
+      
+      
+        <ul class="search fr clearfix">
+        <li><span class="ser_icon"></span></li>
+        <li style="*margin-top:-1px;"><input class="ipt01" style="font-size: 12px;" name="" type="text" onFocus="return refocus();"  onkeydown="EnterSub(event);" onBlur="return reblur();" id="query" value="请输入搜索关键字"/></li>
+        <li><input class="btn01" name="" type="button" onclick="javascript:sub();return false;" /></li>
+        </ul>
+      
+      
+      
+           
+    
+<script type="text/javascript">
+  function refocus(){     
+     var getquery=document.getElementById("query");
+     getquery.value="";
+	 getquery.autocomplete="off";
+	 getquery.focus(); 
+	 
+  }  
+  function reblur(){
+     var getquery=document.getElementById("query");
+	 if (getquery.value==""){
+        getquery.value="请输入搜索关键字";	 
+	 }
+  }   
+String.prototype.trim=function(){
+	return this.replace(/(^\s*)|(\s*$)/g,"");
+}
+
+//站内提交方法
+function sub(){
+	//必需，先将文本转换为utf-8
+	document.charset = "utf-8";	
+	var fixvalue = document.getElementById("query").value;
+	fixvalue = fixvalue.replace(/\~|\!|\*|\?|\^|\\|\(|\)|\[|\]|\+|\-|\:|\{|\}|\"/g,"");
+    var dst = "中共无锡市委宣传部";
+	if(fixvalue.trim()=="" || fixvalue.trim()=="请输入搜索关键字"){
+		document.getElementById("query").value = "";
+		alert("关键字不能为空！");
+        document.getElementById("query").focus();
+		return false;
+	}
+	else{
+      search_2024_wzq(encodeURIComponent(dst),encodeURIComponent(fixvalue),'');
+	}
+	//必需，最后将文本转换为gb2312
+	document.charset="gb2312"
+	return false;
+}
+
+
+//站内回车提交方法
+function EnterSub(){
+		var len=arguments.length;
+		var event;
+		if(len==1){
+			event = arguments[0];
+		}
+		var evt = event ? event : (window.event ? window.event : null);
+		if (evt.keyCode == 13)    {
+        	//必需，先将文本转换为utf-8
+			document.charset = "utf-8";	
+			var fixvalue = document.getElementById("query").value;
+			fixvalue = fixvalue.replace(/\~|\!|\*|\?|\^|\\|\(|\)|\[|\]|\+|\-|\:|\{|\}|\"/g,"");
+            var dst = "中共无锡市委宣传部";
+			if(fixvalue.trim()=="" || fixvalue.trim()=="请输入搜索关键字"){
+				document.getElementById("query").value = "";
+				alert("关键字不能为空！");
+              document.getElementById("query").focus();
+				return false;
+			}
+			else{
+                search_2024_wzq(encodeURIComponent(dst),encodeURIComponent(fixvalue),'');
+			}
+			document.charset="gb2312"
+			return false;
+    	}
+	}
+
+</script>
+  
+      
+      
+      
+      
+      
+	</div>
+      <div class="case subnav1" style="display:none">
+      <!--<div class="New_news clearfix">
+	  	<h2 class="fl font12">天气预报：</h2>
+        <div id="demot">
+<iframe width="500" scrolling="no" height="15" frameborder="0" allowtransparency="true" src="http://i.tianqi.com/index.php?c=code&id=11&icon=1&site=12&py=wuxi1"></iframe>
+        </div>
+      </div>-->
+    </div>
+    <div class="case  subnav2" style="display:none">
+      <p><a href="/xxgk/dtxx/index.shtml">动态信息</a><span>|</span>
+        <a href="/xxgk/gggs/index.shtml">公告公示</a><span>|</span>
+        <a href="/xxgk/jggk1/index.shtml">机构概况</a><span>|</span>
+        <a href="/xxgk/zcfg/index.shtml">政策法规</a><span>|</span>
+        <a href="/xxgk/czxx/index.shtml">财政信息</a><span>|</span>
+        <a href="/zfxxgk/index.shtml">新闻出版</a>
+      </p>
+    </div>
+    <div class="case subnav3" style="display:none">
+     <p><a href="/fwyhd/lxblpt/index.shtml">来信办理平台</a><span></p>
+    </div>
+     <div class="case  subnav2" style="display:none">
+    <p><a href="/xcyd/sxll/index.shtml">思想理论</a><span>|</span>
+        <a href="/xcyd/xcyl/index.shtml">宣传舆论</a><span>|</span>
+        <a href="/xcyd/whwx/index.shtml">文化名城</a><span>|</span>
+        <a href="/xcyd/wmwx/index.shtml">文明之窗</a><span>|</span>
+        <a href="/xcyd/dwxc/csjj/index.shtml">对外传播</a><span>|</span>
+        <a href="/xcyd/jcyd/index.shtml">基层园地</a><span>|</span>
+        <a href="/xcyd/xxyd/index.shtml">学习园地</a><span>|</span>
+        <a href="/xcyd/xctp/index.shtml">无锡映像</a><span>|</span>
+        <a href="/xcyd/dzqk/index.shtml">电子期刊</a><span>|</span>
+        <a href="/xcyd/zxxz/index.shtml">在线下载</a>
+      </p>
+    </div>
+      
+      
+   
+    </div>
+   
+<script type="text/javascript">
+//头部导航高亮  
+$(function(){
+  jQuery.fn.topNav_light= function(){
+	var ch_catname = $(this).text();
+	var catindex = 0;
+	switch (ch_catname)
+	  {
+	  case '信息公开':
+		catindex = 1
+		break;
+	  case '权利运行':
+		catindex = 1
+		break;
+	  case '服务与互动':
+		catindex = 2
+		break;
+	  case '宣传园地':
+		catindex = 3
+		break;
+	  }
+	$("#nav").tab({
+		tabs: ">.nav_t .nav_ul li",
+		evtype: "mouseover",
+		box: ">.case",
+		index:catindex
+	});
+  }
+  if($(".container").has(".LeftSide").length>0){
+	  $(".LeftSide h2").topNav_light();
+	  }else{
+		  $(".Pos a").eq(1).topNav_light();
+		  }  
+
+})	
+</script>
+</div>
+
+
+<div class="container">
+	<div class="clearfix">
+    	<div class="w737 fl">
+        	<div class="clearfix">
+       	    <div class="focus fl" id="focus">
+       	      <ul>
+       	        <li> <a href="/doc/2026/02/24/4735756.shtml" target="_blank"> <img src="/uploadfiles/202602/24/2026022416590130623895.jpg" alt="大剧院片区焕新亮相" /></a>
+       	          <p class="yh"><a href="/doc/2026/02/24/4735756.shtml" target="_blank" title="大剧院片区焕新亮相">大剧院片区焕新亮相</a></p>
+   	            </li>
+       	        <li> <a href="/doc/2026/02/17/4735755.shtml" target="_blank"> <img src="/uploadfiles/202602/24/2026022417004979195650.jpg" alt="机器人春晚“竞演”，无锡助力" /></a>
+       	          <p class="yh"><a href="/doc/2026/02/17/4735755.shtml" target="_blank" title="机器人春晚“竞演”，无锡助力">机器人春晚“竞演”，无锡助力</a></p>
+   	            </li>
+       	        <li> <a href="/doc/2025/11/29/4691967.shtml" target="_blank"> <img src="/uploadfiles/202512/02/2025120217543235139698.jpg" alt="无锡交响音乐厅旁“光影音符”亮了" /></a>
+       	          <p class="yh"><a href="/doc/2025/11/29/4691967.shtml" target="_blank" title="无锡交响音乐厅旁“光影音符”亮了">无锡交响音乐厅旁“光影音符”亮了</a></p>
+   	            </li>
+       	        <li> <a href="/doc/2025/10/23/4670055.shtml" target="_blank"> <img src="/uploadfiles/202510/23/2025102310254383598382.jpg" alt="锡剧《珍珠塔》精彩亮相维也纳" /></a>
+       	          <p class="yh"><a href="/doc/2025/10/23/4670055.shtml" target="_blank" title="锡剧《珍珠塔》精彩亮相维也纳">锡剧《珍珠塔》精彩亮相维也纳</a></p>
+   	            </li>
+       	        <li> <a href="/doc/2025/10/11/4662951.shtml" target="_blank"> <img src="/uploadfiles/202510/11/2025101109074737084895.jpg" alt="“小戏大作”，用舞台精品礼赞新时代" /></a>
+       	          <p class="yh"><a href="/doc/2025/10/11/4662951.shtml" target="_blank" title="“小戏大作”，用舞台精品礼赞新时代">“小戏大作”，用舞台精品礼赞新时代</a></p>
+   	            </li>
+
+                          </ul>
+     	      </div>
+              <script type="text/javascript" src="/static/js/index.js"></script>
+                <div class="box01 sty01 fr">
+                	<h2 class="clearfix">
+                      
+                      <span class="tit fl">动态信息</span><span class="more font12 font_n fr"><a href="/xxgk/dtxx/index.shtml">更多>></a></span>
+                  
+                  </h2>
+                    <div class="box01_con">
+                    	<div class="gzdt_t">
+                        	<h1><a href="/doc/2023/10/09/4078449.shtml" target="_blank" title="不断提升国家文化软实力和中华文化影响力">不断提升国家文化软实力和中华文化影响力</a></h1>
+                          <!--  <p class="lh20">习近平对宣传思想文化工作作出重要指示强调，坚定文化自信秉持开放包容坚持守正创新 不断提升国家文化软实力和中华文...</p>-->
+                        </div>
+                        <ul class="gzdt_ul lh24">
+                        <li><span class="grey fr">03-26</span><em>·</em><a href="/doc/2026/03/26/4750790.shtml" target="_blank" title="无锡高新区：让理论“活”起来，让奋斗“燃”起来！">无锡高新区：让理论“活”起来，让奋斗“燃”起来！</a></li>
+                        <li><span class="grey fr">03-26</span><em>·</em><a href="/doc/2026/03/26/4750789.shtml" target="_blank" title="多国领事走进无锡 共赴春日之约">多国领事走进无锡 共赴春日之约</a></li>
+                        <li><span class="grey fr">03-26</span><em>·</em><a href="/doc/2026/03/26/4750785.shtml" target="_blank" title="一步入江南，“秀”在山水间">一步入江南，“秀”在山水间</a></li>
+                        <li><span class="grey fr">03-26</span><em>·</em><a href="/doc/2026/03/26/4750782.shtml" target="_blank" title="无锡推出春假文旅大礼包">无锡推出春假文旅大礼包</a></li>
+                        <li><span class="grey fr">03-26</span><em>·</em><a href="/doc/2026/03/26/4750780.shtml" target="_blank" title="2026无锡“国际月”暨国际赏樱周活动启幕">2026无锡“国际月”暨国际赏樱周活动启幕</a></li>
+                        <li><span class="grey fr">03-25</span><em>·</em><a href="/doc/2026/03/25/4750043.shtml" target="_blank" title="“无锡之夜”，声动世界">“无锡之夜”，声动世界</a></li>
+                        <li><span class="grey fr">03-24</span><em>·</em><a href="/doc/2026/03/24/4749872.shtml" target="_blank" title="古韵江南邂逅新潮短剧 荡口古镇成热门取景地">古韵江南邂逅新潮短剧 荡口古镇成热门取景地</a></li>
+                        <li><span class="grey fr">03-24</span><em>·</em><a href="/doc/2026/03/24/4749871.shtml" target="_blank" title="无锡交响音乐厅“奏响世界”">无锡交响音乐厅“奏响世界”</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+ <div class="box02 sty02 mgt10">
+   <h2 class="clearfix">
+     <span class="tit fl"><a href="/xxgk/dtxx/index.shtml">信息公开</a></span>
+     <ul class="fr clearfix">
+       <li><a href="/xxgk/jggk1/index.shtml">机构概况</a></li>
+     </ul>
+   </h2>
+   <div class="clearfix" style="padding:10px">
+     <div class="zxgkxx fl" id="change02" style="width:350px">
+       <h3 class="clearfix"><ol class="fl clearfix">
+         <li class="cur"><a href="/xxgk/gggs/index.shtml">公告公示</a></li>
+         <li><a href="/xxgk/zcfg/index.shtml">政策法规</a></li>
+         </ol>
+       </h3> 
+       
+       <div class="zxgkxx_con">
+         <ul class="lh24"> 
+             <li>
+               <span class="grey fr">2026-03-04</span>
+               ·<em><a href="/doc/2026/03/04/4740806.shtml"></a></em>
+<a href="/doc/2026/03/04/4740806.shtml" target="_blank" title="2026无锡星期广播音乐会演出项目征集公告">2026无锡星期广播音乐会演出项目征集公告</a>             </li>  
+             <li>
+               <span class="grey fr">2025-09-25</span>
+               ·<em><a href="/doc/2025/09/25/4654621.shtml"></a></em>
+<a href="/doc/2025/09/25/4654621.shtml" target="_blank" title="2025年无锡市思想政治工作人员中级专业技术资格评审委员会评审结果公示">2025年无锡市思想政治工作人员中级专业技术...</a>             </li>  
+             <li>
+               <span class="grey fr">2025-09-25</span>
+               ·<em><a href="/doc/2025/09/25/4654608.shtml"></a></em>
+<a href="/doc/2025/09/25/4654608.shtml" target="_blank" title="2025年无锡市新闻专业中级资格评审委员会评审结果公示">2025年无锡市新闻专业中级资格评审委员会评...</a>             </li>  
+             <li>
+               <span class="grey fr">2025-08-12</span>
+               ·<em><a href="/doc/2025/08/12/4628072.shtml"></a></em>
+<a href="/doc/2025/08/12/4628072.shtml" target="_blank" title="2025年无锡市新闻专业中初级职称评前公示">2025年无锡市新闻专业中初级职称评前公示</a>             </li>  
+             <li>
+               <span class="grey fr">2025-08-12</span>
+               ·<em><a href="/doc/2025/08/12/4628068.shtml"></a></em>
+<a href="/doc/2025/08/12/4628068.shtml" target="_blank" title="2025年无锡市思想政治工作人员中初级职称评前公示">2025年无锡市思想政治工作人员中初级职称评...</a>             </li>  
+             <li>
+               <span class="grey fr">2025-07-25</span>
+               ·<em><a href="/doc/2025/07/25/4619485.shtml"></a></em>
+<a href="/doc/2025/07/25/4619485.shtml" target="_blank" title="2025年度无锡艺术基金申报补充公告">2025年度无锡艺术基金申报补充公告</a>             </li>  
+             <li>
+               <span class="grey fr">2025-07-14</span>
+               ·<em><a href="/doc/2025/07/14/4611848.shtml"></a></em>
+<a href="/doc/2025/07/14/4611848.shtml" target="_blank" title="关于征集2025太湖文化艺术季“社会文化场馆展示”活动项目的公告">关于征集2025太湖文化艺术季“社会文化场馆...</a>             </li>  
+             <li>
+               <span class="grey fr">2025-05-30</span>
+               ·<em><a href="/doc/2025/05/30/4583924.shtml"></a></em>
+<a href="/doc/2025/05/30/4583924.shtml" target="_blank" title="2025年度无锡艺术基金启动申报">2025年度无锡艺术基金启动申报</a>             </li>  
+         </ul>
+       </div>
+       
+       <div class="zxgkxx_con" style="display:none;">
+         <ul class="lh24">
+             <li>
+               <span class="grey fr">2025-10-23</span>
+               ·<em><a href="/doc/2025/10/23/4670068.shtml"></a></em>
+<a href="/doc/2025/10/23/4670068.shtml" target="_blank" title="无锡市锡剧保护传承条例">无锡市锡剧保护传承条例</a>             </li>  
+             <li>
+               <span class="grey fr">2023-08-03</span>
+               ·<em><a href="/doc/2023/08/03/4030784.shtml"></a></em>
+<a href="/doc/2023/08/03/4030784.shtml" target="_blank" title="中共无锡市委宣传部关于组织申报2023年无锡市宣传文化引进人才的通知">中共无锡市委宣传部关于组织申报2023年无锡...</a>             </li>  
+             <li>
+               <span class="grey fr">2023-08-03</span>
+               ·<em><a href="/doc/2023/08/03/4030781.shtml"></a></em>
+<a href="/doc/2023/08/03/4030781.shtml" target="_blank" title="中共无锡市委宣传部关于组织申报2023年无锡市宣传文化引进人才项目的通知">中共无锡市委宣传部关于组织申报2023年无锡...</a>             </li>  
+             <li>
+               <span class="grey fr">2022-04-28</span>
+               ·<em><a href="/doc/2022/04/28/3710108.shtml"></a></em>
+<a href="/doc/2022/04/28/3710108.shtml" target="_blank" title="转发省出版专业职称办关于报送2022年度省出版专业高级职称评审材料的通知">转发省出版专业职称办关于报送2022年度省出...</a>             </li>  
+             <li>
+               <span class="grey fr">2021-04-22</span>
+               ·<em><a href="/doc/2021/04/22/3710103.shtml"></a></em>
+<a href="/doc/2021/04/22/3710103.shtml" target="_blank" title="关于报送2021年出版专业高级职称评审申报材料的通知">关于报送2021年出版专业高级职称评审申报材...</a>             </li>  
+             <li>
+               <span class="grey fr">2018-02-28</span>
+               ·<em><a href="/doc/2018/02/28/1754311.shtml"></a></em>
+<a href="/doc/2018/02/28/1754311.shtml" target="_blank" title="关于2018年无锡市社科研究课题公开招标的通知">关于2018年无锡市社科研究课题公开招标的通...</a>             </li>  
+             <li>
+               <span class="grey fr">2018-01-11</span>
+               ·<em><a href="/doc/2018/01/11/1716413.shtml"></a></em>
+<a href="/doc/2018/01/11/1716413.shtml" target="_blank" title="关于印发《无锡市市属国有文化集团（企业）负责人综合绩效考核办法》的通知">关于印发《无锡市市属国有文化集团（企业）...</a>             </li>  
+             <li>
+               <span class="grey fr">2017-11-07</span>
+               ·<em><a href="/doc/2017/11/07/1582810.shtml"></a></em>
+<a href="/doc/2017/11/07/1582810.shtml" target="_blank" title="共创中华民族伟大复兴的美好未来">共创中华民族伟大复兴的美好未来</a>             </li>  
+         </ul>
+       </div>
+       
+      
+       
+     </div>
+     <div class="zxgkxx fr" id="change01" style="width:350px">
+       <h3 class="clearfix"><ol class="clearfix">
+         <li class="cur"><a href="/xxgk/czxx/index.shtml">财政信息</a></li>
+         <li><a href="/xxgk/sgs/index.shtml">双公示</a></li>
+         </ol>
+       </h3>
+                          
+       <div class="zxgkxx_con">
+         <ul class="lh24">
+             <li>
+               <span class="grey fr">2026-02-14</span>
+               ·<em><a href="/doc/2026/02/14/4734781.shtml"></a></em>
+<a href="/doc/2026/02/14/4734781.shtml" target="_blank" title="中共无锡市委宣传部2026年度部门预算公开">中共无锡市委宣传部2026年度部门预算公开</a>             </li>  
+             <li>
+               <span class="grey fr">2026-02-14</span>
+               ·<em><a href="/doc/2026/02/14/4734780.shtml"></a></em>
+<a href="/doc/2026/02/14/4734780.shtml" target="_blank" title="中共无锡市委宣传部（本级）2026年度单位预算公开">中共无锡市委宣传部（本级）2026年度单位预...</a>             </li>  
+             <li>
+               <span class="grey fr">2026-02-14</span>
+               ·<em><a href="/doc/2026/02/14/4734769.shtml"></a></em>
+<a href="/doc/2026/02/14/4734769.shtml" target="_blank" title="中共无锡市委宣传部（本级）项目预算绩效目标表">中共无锡市委宣传部（本级）项目预算绩效目...</a>             </li>  
+             <li>
+               <span class="grey fr">2026-02-14</span>
+               ·<em><a href="/doc/2026/02/14/4734748.shtml"></a></em>
+<a href="/doc/2026/02/14/4734748.shtml" target="_blank" title="中共无锡市委宣传部（本级）整体预算绩效目标表">中共无锡市委宣传部（本级）整体预算绩效目...</a>             </li>  
+             <li>
+               <span class="grey fr">2025-09-29</span>
+               ·<em><a href="/doc/2025/09/29/4660164.shtml"></a></em>
+<a href="/doc/2025/09/29/4660164.shtml" target="_blank" title="中共无锡市委宣传部2024年度部门决算公开">中共无锡市委宣传部2024年度部门决算公开</a>             </li>  
+             <li>
+               <span class="grey fr">2025-09-29</span>
+               ·<em><a href="/doc/2025/09/29/4660158.shtml"></a></em>
+<a href="/doc/2025/09/29/4660158.shtml" target="_blank" title="中共无锡市委宣传部（本级）2024年度单位决算公开">中共无锡市委宣传部（本级）2024年度单位决...</a>             </li>  
+             <li>
+               <span class="grey fr">2025-07-03</span>
+               ·<em><a href="/doc/2025/07/03/4660194.shtml"></a></em>
+<a href="/doc/2025/07/03/4660194.shtml" target="_blank" title="中共无锡市委宣传部（本级）2024年度项目绩效自评">中共无锡市委宣传部（本级）2024年度项目绩...</a>             </li>  
+             <li>
+               <span class="grey fr">2025-07-03</span>
+               ·<em><a href="/doc/2025/07/03/4660175.shtml"></a></em>
+<a href="/doc/2025/07/03/4660175.shtml" target="_blank" title="中共无锡市委宣传部（本级）2024年度部门整体绩效自评">中共无锡市委宣传部（本级）2024年度部门整...</a>             </li>  
+         </ul>
+       </div>
+       
+        <div class="zxgkxx_con" style="display:none;">
+         <ul class="lh24">
+             <li>
+               <span class="grey fr">2025-05-26</span>
+               ·<em><a href="/doc/2025/05/26/4582775.shtml"></a></em>
+<a href="/doc/2025/05/26/4582775.shtml" target="_blank" title="注销《出版物经营许可证》-江苏贝贝熊母婴用品有限公司">注销《出版物经营许可证》-江苏贝贝熊母婴...</a>             </li>  
+             <li>
+               <span class="grey fr">2024-08-02</span>
+               ·<em><a href="/doc/2024/08/02/4582773.shtml"></a></em>
+<a href="/doc/2024/08/02/4582773.shtml" target="_blank" title="连续性内部资料出版物《江阴党员之友》准印证核发">连续性内部资料出版物《江阴党员之友》准印...</a>             </li>  
+             <li>
+               <span class="grey fr">2024-07-16</span>
+               ·<em><a href="/doc/2024/07/16/4582769.shtml"></a></em>
+<a href="/doc/2024/07/16/4582769.shtml" target="_blank" title="连续性内部资料出版物《康复园地》准印证注销">连续性内部资料出版物《康复园地》准印证注...</a>             </li>  
+             <li>
+               <span class="grey fr">2023-12-12</span>
+               ·<em><a href="/doc/2023/12/12/4582767.shtml"></a></em>
+<a href="/doc/2023/12/12/4582767.shtml" target="_blank" title="连续性内部资料出版物《无锡审判》准印证核发">连续性内部资料出版物《无锡审判》准印证核...</a>             </li>  
+             <li>
+               <span class="grey fr">2023-03-20</span>
+               ·<em><a href="/doc/2023/03/20/4582766.shtml"></a></em>
+<a href="/doc/2023/03/20/4582766.shtml" target="_blank" title="连续性内部资料出版物《无锡市场监管》准印证核发">连续性内部资料出版物《无锡市场监管》准印...</a>             </li>  
+             <li>
+               <span class="grey fr">2022-12-05</span>
+               ·<em><a href="/doc/2022/12/05/4582763.shtml"></a></em>
+<a href="/doc/2022/12/05/4582763.shtml" target="_blank" title="外商投资印刷企业法人变更">外商投资印刷企业法人变更</a>             </li>  
+             <li>
+               <span class="grey fr">2022-04-07</span>
+               ·<em><a href="/doc/2022/04/07/4582760.shtml"></a></em>
+<a href="/doc/2022/04/07/4582760.shtml" target="_blank" title="外商投资印刷企业法人变更">外商投资印刷企业法人变更</a>             </li>  
+             <li>
+               <span class="grey fr">2021-01-18</span>
+               ·<em><a href="/doc/2021/01/18/4582759.shtml"></a></em>
+<a href="/doc/2021/01/18/4582759.shtml" target="_blank" title="外商投资印刷企业法人变更">外商投资印刷企业法人变更</a>             </li>  
+         </ul>
+       </div>
+       
+     </div>
+   </div>
+   <script type="text/javascript">
+     //<![CDATA[
+     $("#change01").tab({
+       tabs: ">h3 ol li",
+       evtype: "mouseover",
+       box: ">.zxgkxx_con"
+     });
+     $("#change02").tab({
+       tabs: ">h3 ol li",
+       evtype: "mouseover",
+       box: ">.zxgkxx_con"
+     });
+     //]]>
+   </script>
+  </div>
+  
+  <div class="box01 mgt10 sty_xctp clearfix">
+    <h3 class="fl white">无锡映像</h3>
+    <div id="leftMarquee" class="leftLoop fl">
+      <div class="hd">
+        <a class="next"></a> 
+        <a class="prev"></a>
+      </div>
+      <div class="bd">
+        <ul class="clearfix">
+            <li>
+              <a target="_blank" href="/doc/2025/11/24/4686994.shtml"><img src="/uploadfiles/202511/24/2025112415045640070734.jpg" alt="扬帆青春 百舸争流"/></a>
+            </li>
+            <li>
+              <a target="_blank" href="/doc/2025/11/23/4686992.shtml"><img src="/uploadfiles/202511/24/2025112415032293897851.jpg" alt="霞客故里"/></a>
+            </li>
+            <li>
+              <a target="_blank" href="/doc/2024/09/23/4398291.shtml"><img src="/uploadfiles/202409/23/2024092319333998369635.jpg" alt="霞映锡城"/></a>
+            </li>
+            <li>
+              <a target="_blank" href="/doc/2024/09/14/4396646.shtml"><img src="/uploadfiles/202409/20/2024092014293780796189.jpg" alt="梅梁霞映"/></a>
+            </li>
+            <li>
+              <a target="_blank" href="/doc/2024/08/21/4377625.shtml"><img src="/uploadfiles/202408/21/2024082115093599511320.jpg" alt="金色运河 生机流动"/></a>
+            </li>
+            <li>
+              <a target="_blank" href="/doc/2024/08/07/4368487.shtml"><img src="/uploadfiles/202408/07/202408071654324610490.jpg" alt="稻田画缓出乡村振兴新图景"/></a>
+            </li>
+        </ul>
+      </div>
+    </div>
+    <script type="text/javascript">jQuery("#leftMarquee").slide({ mainCell:".bd ul",effect:"leftMarquee",vis:4,interTime:40,autoPlay:true });</script>
+   </div>
+  
+  
+   <div class="clearfix">
+     <div class="box01 sty06 mgt10" style="height:233px;width:362px;float:left">
+       <h2 class="clearfix"><span class="tit fl">思想理论</span><span class="more font12 font_n fr"><a href="/xcyd/sxll/index.shtml">更多>></a></span></h2>
+       <ul class="gzdt_ul lh24">
+           <li>
+             <span class="grey fr">2026-01-09</span><em>·</em>
+<a href="/doc/2026/01/09/4728138.shtml" target="_blank" title="完整准确全面领会党的二十届四中全会精神 推动中国式现代化无锡新实践取得决定性进展">完整准确全面领会党的二十届四中全会精神 ...</a>           </li>
+           <li>
+             <span class="grey fr">2025-12-29</span><em>·</em>
+<a href="/doc/2025/12/29/4728101.shtml" target="_blank" title="市委讲师团探究以“青年视角+新媒体技术”助推理论宣讲入脑入心">市委讲师团探究以“青年视角+新媒体技术”...</a>           </li>
+           <li>
+             <span class="grey fr">2025-12-29</span><em>·</em>
+<a href="/doc/2025/12/29/4728100.shtml" target="_blank" title="市委宣讲团党的二十届四中全会精神集中宣讲顺利完成">市委宣讲团党的二十届四中全会精神集中宣讲...</a>           </li>
+           <li>
+             <span class="grey fr">2025-12-27</span><em>·</em>
+<a href="/doc/2025/12/27/4728099.shtml" target="_blank" title="学习贯彻党的二十届四中全会精神市委宣讲团走进江溪街道">学习贯彻党的二十届四中全会精神市委宣讲团...</a>           </li>
+           <li>
+             <span class="grey fr">2025-12-18</span><em>·</em>
+<a href="/doc/2025/12/18/4703547.shtml" target="_blank" title="进一步提升法治无锡建设水平 以高水平法治保障高质量发展">进一步提升法治无锡建设水平 以高水平法治...</a>           </li>
+           <li>
+             <span class="grey fr">2025-12-17</span><em>·</em>
+<a href="/doc/2025/12/17/4703546.shtml" target="_blank" title="学习贯彻党的二十届四中全会精神市委宣讲团走进江阴职业技术学院">学习贯彻党的二十届四中全会精神市委宣讲团...</a>           </li>
+           <li>
+             <span class="grey fr">2025-12-17</span><em>·</em>
+<a href="/doc/2025/12/17/4703545.shtml" target="_blank" title="学习贯彻党的二十届四中全会精神市委宣讲团走进市工业和信息化局">学习贯彻党的二十届四中全会精神市委宣讲团...</a>           </li>
+           <li>
+             <span class="grey fr">2025-12-16</span><em>·</em>
+<a href="/doc/2025/12/16/4703544.shtml" target="_blank" title="学习贯彻党的二十届四中全会精神市委宣讲团共青团和青联专场报告会举行">学习贯彻党的二十届四中全会精神市委宣讲团...</a>           </li>
+       </ul>              
+     </div>
+     <div class="box01 sty06 mgt10" style="height:233px;width:363px;float:right;margin-top:10px">
+       <h2 class="clearfix"><span class="tit fl">宣传舆论</span><span class="more font12 font_n fr"><a href="/xcyd/xcyl/index.shtml">更多>></a></span></h2>
+       <ul class="gzdt_ul lh24">
+           <li>
+             <span class="grey fr">2026-02-03</span><em>·</em>
+<a href="/doc/2026/02/03/4728167.shtml" target="_blank" title="以文化为魂，树立品牌思维长效思维">以文化为魂，树立品牌思维长效思维</a>           </li>
+           <li>
+             <span class="grey fr">2026-01-29</span><em>·</em>
+<a href="/doc/2026/01/29/4728166.shtml" target="_blank" title="“百城百店”计划启动">“百城百店”计划启动</a>           </li>
+           <li>
+             <span class="grey fr">2026-01-27</span><em>·</em>
+<a href="/doc/2026/01/27/4728165.shtml" target="_blank" title="“正版护航全省行”在锡启动">“正版护航全省行”在锡启动</a>           </li>
+           <li>
+             <span class="grey fr">2026-01-22</span><em>·</em>
+<a href="/doc/2026/01/22/4728164.shtml" target="_blank" title="让阅读更有效连接你我他">让阅读更有效连接你我他</a>           </li>
+           <li>
+             <span class="grey fr">2026-01-22</span><em>·</em>
+<a href="/doc/2026/01/22/4728163.shtml" target="_blank" title="两会现场书香满溢">两会现场书香满溢</a>           </li>
+           <li>
+             <span class="grey fr">2026-01-22</span><em>·</em>
+<a href="/doc/2026/01/22/4728162.shtml" target="_blank" title="省级立法守护“宜兴陶瓷”金招牌">省级立法守护“宜兴陶瓷”金招牌</a>           </li>
+           <li>
+             <span class="grey fr">2026-01-16</span><em>·</em>
+<a href="/doc/2026/01/16/4728143.shtml" target="_blank" title="“永锡CP”合体亮相 两地文旅双向奔赴">“永锡CP”合体亮相 两地文旅双向奔赴</a>           </li>
+           <li>
+             <span class="grey fr">2026-01-13</span><em>·</em>
+<a href="/doc/2026/01/13/4728142.shtml" target="_blank" title="春节旅游热情高涨">春节旅游热情高涨</a>           </li>
+       </ul>                 
+     </div>
+   </div> 
+ </div>
+    
+      <div class="w254 fr">
+        <div class="box01 sty04">
+          <h2 class="clearfix"><span class="tit fl">学习园地</span><span class="more font12 font_n fr"><a href="/xcyd/xxyd/index.shtml">更多>></a></span></h2>
+          <div class="box01_con" id="gonggao">
+            <div class="uproll01 subtab">
+              <div class="div1">
+                <ul class="list03 lh18">
+                    <li>
+<a href="/doc/2026/03/16/4746098.shtml" target="_blank" title="推动海洋经济高质量发展">推动海洋经济高质量发展</a>                      <span>03-16</span>
+                    </li>
+                    <li>
+<a href="/doc/2026/03/14/4746096.shtml" target="_blank" title="政府工作报告">政府工作报告</a>                      <span>03-14</span>
+                    </li>
+                    <li>
+<a href="/doc/2026/03/06/4741527.shtml" target="_blank" title="习近平总书记为经济大省“划重点”">习近平总书记为经济大省“划重点</a>                      <span>03-06</span>
+                    </li>
+                    <li>
+<a href="/doc/2026/03/06/4741520.shtml" target="_blank" title="奋进“十五五” 勇于挑大梁">奋进“十五五” 勇于挑大梁</a>                      <span>03-06</span>
+                    </li>
+                    <li>
+<a href="/doc/2026/03/06/4741518.shtml" target="_blank" title="经济大省要在研究新情况解决新问题上下功夫出经验">经济大省要在研究新情况解决新问</a>                      <span>03-06</span>
+                    </li>
+                    <li>
+<a href="/doc/2026/03/01/4739305.shtml" target="_blank" title="殷切的嘱托 前行的力量">殷切的嘱托 前行的力量</a>                      <span>03-01</span>
+                    </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+                         
+                      
+        <div class="box01 sty05 mgt10">
+          <h2 class="clearfix"><span class="tit fl">文明之窗</span><span class="more font12 font_n fr"><a href="/xcyd/wmwx/index.shtml">更多>></a></span></h2>
+          <ul class="gzdt_ul lh24">
+              <li>
+                <span class="grey fr">2026-01-20</span>
+                <em>·</em><a href="/doc/2026/01/20/4728161.shtml" target="_blank" title="无锡备好精彩新春文化菜单">无锡备好精彩新春文化菜单</a>
+              </li>
+              <li>
+                <span class="grey fr">2026-01-20</span>
+                <em>·</em><a href="/doc/2026/01/20/4728160.shtml" target="_blank" title="寒冬里，文明实践“热气腾腾”">寒冬里，文明实践“热气腾...</a>
+              </li>
+              <li>
+                <span class="grey fr">2026-01-20</span>
+                <em>·</em><a href="/doc/2026/01/20/4728159.shtml" target="_blank" title="3分钟极速行动，救起落水老人">3分钟极速行动，救起落水...</a>
+              </li>
+              <li>
+                <span class="grey fr">2026-01-16</span>
+                <em>·</em><a href="/doc/2026/01/16/4728156.shtml" target="_blank" title="南大专家走进宜兴千年古村">南大专家走进宜兴千年古村</a>
+              </li>
+              <li>
+                <span class="grey fr">2026-01-15</span>
+                <em>·</em><a href="/doc/2026/01/15/4728155.shtml" target="_blank" title="美丽农居铺展江南水乡“新画卷”">美丽农居铺展江南水乡“新...</a>
+              </li>
+              <li>
+                <span class="grey fr">2026-01-09</span>
+                <em>·</em><a href="/doc/2026/01/09/4728127.shtml" target="_blank" title="小区闲置空间成“幸福综合体”">小区闲置空间成“幸福综合...</a>
+              </li>
+              <li>
+                <span class="grey fr">2026-01-09</span>
+                <em>·</em><a href="/doc/2026/01/09/4728126.shtml" target="_blank" title="一城园脉通古今 半城风雅半城诗">一城园脉通古今 半城风雅...</a>
+              </li>
+              <li>
+                <span class="grey fr">2026-01-06</span>
+                <em>·</em><a href="/doc/2026/01/06/4728124.shtml" target="_blank" title="古运河上榜国家级“幸福河湖”">古运河上榜国家级“幸福河...</a>
+              </li>
+              <li>
+                <span class="grey fr">2026-01-05</span>
+                <em>·</em><a href="/doc/2026/01/05/4728123.shtml" target="_blank" title="宜兴龙背山再添“人文厚度”">宜兴龙背山再添“人文厚度...</a>
+              </li>
+              <li>
+                <span class="grey fr">2026-01-05</span>
+                <em>·</em><a href="/doc/2026/01/05/4728122.shtml" target="_blank" title="“美哉梅里”如约奏响">“美哉梅里”如约奏响</a>
+              </li>
+          </ul>
+        </div>
+           
+                          
+        <div class="box01 sty06 mgt10">        
+          <h2 class="clearfix"><span class="tit fl">文化名城</span><span class="more font12 font_n fr"><a href="/xcyd/whwx/index.shtml">更多>></a></span></h2>
+          <ul class="gzdt_ul lh24">
+              <li>
+                <span class="grey fr">2026-02-03</span>
+                <em>·</em><a href="/doc/2026/02/03/4728176.shtml" target="_blank" title="“春在梅里·年货集市”热闹开市">“春在梅里·年货集市”热...</a>
+              </li>
+              <li>
+                <span class="grey fr">2026-02-03</span>
+                <em>·</em><a href="/doc/2026/02/03/4728175.shtml" target="_blank" title="非遗老字号闯出新路子">非遗老字号闯出新路子</a>
+              </li>
+              <li>
+                <span class="grey fr">2026-02-02</span>
+                <em>·</em><a href="/doc/2026/02/02/4728174.shtml" target="_blank" title="无锡百余位书法家车站“送福进万家”">无锡百余位书法家车站“送...</a>
+              </li>
+              <li>
+                <span class="grey fr">2026-01-26</span>
+                <em>·</em><a href="/doc/2026/01/26/4728173.shtml" target="_blank" title="小剧场锡剧《西子颦》无锡首演">小剧场锡剧《西子颦》无锡...</a>
+              </li>
+              <li>
+                <span class="grey fr">2026-01-23</span>
+                <em>·</em><a href="/doc/2026/01/23/4728172.shtml" target="_blank" title="匠心雅韵织就江南锦绣图">匠心雅韵织就江南锦绣图</a>
+              </li>
+              <li>
+                <span class="grey fr">2026-01-22</span>
+                <em>·</em><a href="/doc/2026/01/22/4728171.shtml" target="_blank" title="虚拟歌手将在锡开唱，“火”得出人意料">虚拟歌手将在锡开唱，“火...</a>
+              </li>
+          </ul>
+        </div>  
+                             
+        <div class="box01 sty06 mgt10" >
+          <h2 class="clearfix"><span class="tit fl">对外传播</span><span class="more font12 font_n fr"><a href="/xcyd/dwxc/csjj/index.shtml">更多>></a></span></h2>
+          <ul class="gzdt_ul lh24">
+              <li>
+                <span class="grey fr">2026-02-16</span>
+                <em>·</em><a href="/doc/2026/02/16/4736017.shtml" target="_blank" title="无锡民乐惊艳欧洲">无锡民乐惊艳欧洲</a>
+              </li>
+              <li>
+                <span class="grey fr">2026-02-15</span>
+                <em>·</em><a href="/doc/2026/02/15/4736016.shtml" target="_blank" title="外籍友人寻味吴地 沉浸式体验中国年味">外籍友人寻味吴地 沉浸式...</a>
+              </li>
+              <li>
+                <span class="grey fr">2026-02-15</span>
+                <em>·</em><a href="/doc/2026/02/15/4736015.shtml" target="_blank" title="“声” 动布鲁塞尔，无锡民乐遇见“丁丁”">“声” 动布鲁塞尔，无锡...</a>
+              </li>
+              <li>
+                <span class="grey fr">2026-01-09</span>
+                <em>·</em><a href="/doc/2026/01/09/4728137.shtml" target="_blank" title="从外籍学子到吴文化海外传播的积极推动者">从外籍学子到吴文化海外传...</a>
+              </li>
+              <li>
+                <span class="grey fr">2025-12-16</span>
+                <em>·</em><a href="/doc/2025/12/16/4703548.shtml" target="_blank" title="音乐为媒，国际友人“组团”来摆摊">音乐为媒，国际友人“组团...</a>
+              </li>
+              <li>
+                <span class="grey fr">2025-11-17</span>
+                <em>·</em><a href="/doc/2025/11/17/4703459.shtml" target="_blank" title="音乐为桥，让无锡与世界深情相拥">音乐为桥，让无锡与世界深...</a>
+              </li>
+          </ul>
+        </div>
+        
+      </div>
+    </div>
+    <div id="change05" class="ztzl mgt10">
+      <h2 class="clearfix">
+        <ol class="fl clearfix">
+          <li class="cur"><span>专题专栏</span></li>
+          <li><span>市委市政府各部门网站</span></li>
+          <li><span>市(县)区政府网站</span></li>
+          <li><span>门户网无锡频道</span></li>
+          <li><span>新闻媒体网站</span></li>
+        </ol>
+      </h2>
+        <div class="ztzl_con">
+            <table width="100%" border="0" cellpadding="0" cellspacing="0">
+              <tr>
+                <td><em>·</em><a href="/ztzl/wxcsxcp/index.shtml" target="_blank" title="无锡城市宣传片">无锡城市宣传片</a></td>
+                <td><em>·</em><a href="/ztzl/lxdjt/index.shtml" target="_blank" title="大讲堂">大讲堂</a></td>
+                <td><em>·</em><a href="/ztzl/qglhkwx/index.shtml" target="_blank" title="全国两会看无锡">全国两会看无锡</a></td>
+                <td><em>·</em><a href="/ztzl/sxwzxzzg/index.shtml" target="_blank" title="市新闻战线走转改">市新闻战线走转改</a></td>
+                <td><em>·</em><a href="/ztzl/dxfc/index.shtml" target="_blank" title="典型风采">典型风采</a></td>
+  </tr><tr>
+                <td><em>·</em><a href="/ztzl/jwmsxfgygg/index.shtml" target="_blank" title="讲文明树新风公益广告">讲文明树新风公益广告</a></td>
+                <td><em>·</em><a href="http://58.215.18.221:88" target="_blank" title="党委中心组学习">党委中心组学习</a></td>
+                <td><em>·</em><a href="http://szw.wuxi.gov.cn/ztzl/zggcdzwxjnjd95zntpz/index.shtml" target="_blank" title="中国共产党在无锡">中国共产党在无锡</a></td>
+                <td><em>·</em><a href="/fzlm/xzzl/index.shtml?code=014006331" target="_blank" title="市委宣传部行政许可“双公示”专栏">市委宣传部行政许可“双公示”专栏</a></td>
+              </tr>
+            </table>
+        </div>
+        <div class="ztzl_con" style="display:none;">
+            <table width="100%" border="0" cellpadding="0" cellspacing="0">
+
+              <tr>
+                <td><em>·</em><a href="http://www.wuxi.gov.cn" target="_blank" title="中国无锡">中国无锡</a></td>
+                <td><em>·</em><a href="//crtt.wuxi.gov.cn/" target="_blank" title="无锡市文化广电和旅游局">无锡市文化广电和旅游局</a></td>
+                <td><em>·</em><a href="http://wmw.wuxi.gov.cn" target="_blank" title="无锡市文明办">无锡市文明办</a></td>
+                <td><em>·</em><a href="http://wuxijw.wuxi.gov.cn/" target="_blank" title="市纪律检查委员会">市纪律检查委员会</a></td>
+              </tr>
+            </table>
+        </div>
+        <div class="ztzl_con" style="display:none;">
+            <table width="100%" border="0" cellpadding="0" cellspacing="0">
+
+              <tr>
+                <td><em>·</em><a href="http://www.yixing.gov.cn" target="_blank" title="宜兴市人民政府">宜兴市人民政府</a></td>
+                <td><em>·</em><a href="http://www.jiangyin.gov.cn" target="_blank" title="江阴市人民政府">江阴市人民政府</a></td>
+                <td><em>·</em><a href="http://www.jsxishan.gov.cn" target="_blank" title="锡山区人民政府">锡山区人民政府</a></td>
+                <td><em>·</em><a href="http://www.huishan.gov.cn" target="_blank" title="惠山区人民政府">惠山区人民政府</a></td>
+                <td><em>·</em><a href="http://www.wxbh.gov.cn" target="_blank" title="滨湖区人民政府">滨湖区人民政府</a></td>
+  </tr><tr>
+                <td><em>·</em><a href="http://www.wnd.gov.cn" target="_blank" title="无锡新区管委会">无锡新区管委会</a></td>
+              </tr>
+            </table>
+        </div>
+          
+                <div class="ztzl_con" style="display:none;">
+            <table width="100%" border="0" cellpadding="0" cellspacing="0">
+
+              <tr>
+                <td><em>·</em><a href="https://js.xuexi.cn/wuxi" target="_blank" title="无锡学习平台">无锡学习平台</a></td>
+                <td><em>·</em><a href="http://en.wuxi.gov.cn/" target="_blank" title="魅力无锡英文版">魅力无锡英文版</a></td>
+                <td><em>·</em><a href="http://wuxi.people.com.cn/" target="_blank" title="人民网无锡视窗">人民网无锡视窗</a></td>
+                <td><em>·</em><a href="http://wx.xinhuanet.com/" target="_blank" title="新华网无锡频道">新华网无锡频道</a></td>
+              </tr>
+            </table>
+        </div>
+        <div class="ztzl_con" style="display:none;">
+            <table width="100%" border="0" cellpadding="0" cellspacing="0">
+
+              <tr>
+                <td><em>·</em><a href="http://www.people.com.cn/" target="_blank" title="人民网">人民网</a></td>
+                <td><em>·</em><a href="http://www.xinhuanet.com/" target="_blank" title="新华网">新华网</a></td>
+                <td><em>·</em><a href="http://www.163.com" target="_blank" title="网易">网易</a></td>
+                <td><em>·</em><a href="http://www.sina.com.cn" target="_blank" title="新浪">新浪</a></td>
+                <td><em>·</em><a href="http://www.thmz.com" target="_blank" title="太湖明珠网">太湖明珠网</a></td>
+  </tr><tr>
+                <td><em>·</em><a href="http://www.wxrb.com" target="_blank" title="无锡新传媒">无锡新传媒</a></td>
+              </tr>
+            </table>
+        </div>
+    </div>
+	<script type="text/javascript">
+function myroll(){
+	var upOne_heigth= $(".uproll01 ul").height();
+    var upOne_heigth011= $(".uproll011 ul").height();
+	var upOne_heigth012= $(".uproll012 ul").height();
+	if(upOne_heigth>200){
+		$(".uproll01").myScrollTop(40);
+		}
+	if(upOne_heigth011>200){
+		$(".uproll011").myScrollTop(40);
+		}
+	if(upOne_heigth012>200){
+		$(".uproll012").myScrollTop(40);
+		}
+};
+          $("#change05").tab({
+              tabs: "h2 ol li",
+              evtype: "mouseover",
+              box: ".ztzl_con"
+          });
+		
+      </script>
+</div>
+<script type="text/javascript"> 
+//右侧通知、来信办理超出自动滚动
+$(function(){
+    myroll();
+	var upTwo_heigth= $(".uproll02 ul").height();
+    if(upTwo_heigth>208){
+		$(".uproll02").myScrollTop(40);
+		}
+	})
+
+</script>
+<script src="/static/artDialog/artDialog.js?skin=idialog"></script>
+<script src="/static/artDialog/plugins/iframeTools.js"></script>
+<div id="foot">
+<h4 class="l"><a href="#" class="sitemap_t">站点地图</a>  | <a href="mailto:wxxcbbgs@126.com">联系我们</a> <!--| <a href="#" class="Correction_t">我要纠错</a>--></h4>
+<p>中共无锡市委宣传部版权所有   中共无锡市委宣传部主办</p>
+<p><a href="http://beian.miit.gov.cn" target="_blank">苏ICP备09024546号</a>&nbsp;&nbsp;<a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32021102000707" target="_blank">公安备案号：32021102000707</a></p>
+<p><script type="text/javascript">document.write(unescape("%3Cspan id='_ideConac' %3E%3C/span%3E%3Cscript src='https://dcs.conac.cn/js/11/178/0000/60408859/CA111780000604088590001.js' type='text/javascript'%3E%3C/script%3E"));</script></p>
+
+<div class="sitemap_c" style="display:none">
+  <iframe src="/fzlm/zddt/index.shtml" width="680" height="500" frameborder="0" scrolling="auto"></iframe>
+</div>
+</div>
+
+
+<script>
+  /*$("#foot .Correction_t").bind("click",function(event){
+    art.dialog.open('/fzlm/hdjlgny/wyjc/index.shtml', {title: '我要纠错', width: 550, height: 450});
+    return false
+  });*/
+  $("#foot .sitemap_t").bind("click",function(event){
+    art.dialog({
+      title: "站点地图",
+      content: $(".sitemap_c").html()
+    });
+    return false
+  });
+</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?898735c3bae800fc952e5adc54ef4363";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<!--[if IE 6]>
+<script type="text/javascript" src="/static/js/DD_belatedPNG_0.0.8a-min.js" ></script>
+<script type="text/javascript">
+DD_belatedPNG.fix('.banner p,.btn01,background,img');
+</script>
+<![endif]-->
+<script type="text/javascript" src="/static/js/piaofu.js"></script>
+<div id="mydiv">
+  <link rel="stylesheet" type="text/css" href="//www.wuxi.gov.cn/static_common/css/ts.css" />
+  <div class="pushad">
+    <a href="http://zzxszy.people.cn/GB/458759/index.html" target="blank">
+      <img src="//www.wuxi.gov.cn/static_2023/images/zyzzxszy.jpg" style="width:100%;display:block;margin-top:5px">
+    </a> 
+  </div>
+  <div class="tnew" style="padding:0;">
+    <span class="closeAd closeAd1">
+      <img src="//www.wuxi.gov.cn/static_2023/images/i35.gif" alt="关闭">
+    </span>
+  </div>
+</div>
+<script>
+  $('.closeAd1').each(function(){
+    $(this).click(function(){
+      $(this).parent().hide();$(this).parent().parent().find('.pushad').hide();
+    })
+  })
+  
+  $(function(){
+    wza2.subscribe('after', 'TOGGLE', function(action, state) {
+      if (state.enable === true) {
+        $("#mydiv").css("display","none");
+      }else{
+        $("#mydiv").css("display","");
+      }
+    });
+    wza2.subscribe('after', 'INITIAL_FROM_STORAGE', function(action, state) {
+      if (state.enable === true) {
+        $("#mydiv").css("display","none");
+      }else{
+        $("#mydiv").css("display","");
+      }
+    });
+    /*长者版隐藏*/
+    if($("body").hasClass("web_older")){
+      $("#mydiv").css("display","none");
+    }else{
+      $("#mydiv").css("display","");
+    }
+  })
+  
+</script>
+</body>
+</html>

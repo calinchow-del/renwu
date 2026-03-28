@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="SiteName" content="包头市科学技术局" />
+<meta name="SiteDomain" content="kjj.baotou.gov.cn" />
+<meta name="SiteIDCode" content="1502000054" />
+<title>包头市科学技术局</title>
+<meta name="ColumnName" content="首页">
+<meta name="ColumnDescription" content="首页">
+<meta name="ColumnKeywords" content="首页">
+<meta name="ColumnType" content="首页">
+<link href="./material/images/favicon.gif" rel="shortcut icon" type="image/x-icon">
+  <link rel="stylesheet" href="./material/css/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./material/css/initialize.css" />
+  <link rel="stylesheet" href="./material/css/header_footer.css" />
+  <link rel="stylesheet" href="./material/css/header_footer_h5.css" media="screen and (max-width:750px)" />
+  <link rel="stylesheet" href="./material/css/index.css" />
+  <link rel="stylesheet" href="./material/css/index_h5.css" media="screen and (max-width:750px)" />
+  <script src="./material/js/jquery.min.js"></script>
+  <script src="./material/js/swiper-bundle.min.js"></script>
+  <script src="./material/js/jquery.SuperSlide.2.1.3.js"></script>
+  <script src="./material/js/resize.js"></script>
+  <script src="./material/js/h5.js"></script>
+  <style>
+    .wsbg a {
+      display: block;
+    }
+
+    .wsbg img {
+      width: 100%;
+    }
+
+    .wsbg_item {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+    }
+
+    .wsbg_item a {
+      width: 48%;
+    }
+.run_small {
+      position: fixed;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 9999999;
+    }
+
+     .run_small img {
+      width: 300px;
+    }
+
+    .run_small .close { 
+    position: absolute;
+    top: -15px;
+    right: 0;
+    cursor: pointer;
+    }
+
+  </style>
+</head>
+
+<body>
+  <!-- 上线公告 -->
+<div class="run_small" style="display:none;">
+    <img src="./material/images/run_img_small.png" alt="" />
+    <div class="close" id="gb">关闭</div>
+  </div>
+  <script>
+    $('#gb').click(function(){
+      $('.run_small').hide()
+    })
+  </script>
+  <!-- 上线公告 -->
+
+  <!-- 头部 -->
+  <div class="header">
+  <div class="w">
+    <div class="shortcut">
+      <a href="./" ><img class="logo" src="./material/images/logo.png" alt="" /></a>
+      <div class="shortcut_r">
+        <ul class="shortcut_nav">
+          <li>
+            <a>
+              <img src="./material/images/icon_wza.png" alt="" />
+              <span id="wza_id" style="cursor: pointer;">无障碍</span>
+            </a>
+          </li>
+          <li>|</li>
+          <li>
+              <a href="javascript:void(0);" id="zoomIn">
+                  <span>关怀版</span>
+               </a>
+               <a href="javascript:void(0);" id="resetZoom" style="display:none;">
+                  <span>关闭关怀版</span>
+               </a>
+          </li>
+          <li>|</li>
+          <li style="position: relative;">
+            <a href="#" >
+              <span>微信</span>
+            </a>
+              <div class="panel">
+              <img src="./material/images/kjjwxewm.png" alt="" />
+            </div>
+          </li>
+
+          <li>|</li>
+          <li>
+            <a class="userInfo1" href="javascript:void(0)" onclick="goLogin()">登录/注册</a>
+            <a class="userInfo2" href="https://zwfw.nmg.gov.cn/personal_center_profile" target="_blank"  style="display: none;">用户中心</a>
+          </li>
+        </ul>
+        <div class="search">
+          <div class="search_box">
+            <input id="searchInput" class="text" placeholder="请输入关键字" type="text" onfocus="this.placeholder=''" onblur="this.placeholder='请输入关键字'" />
+            <button class="btn" id="searchBtn">
+              <img src="./material/images/icon_fdj.png" alt="" />
+            </button>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    <ul class="nav" id="nav_item">
+      <li class="active">
+        <a href="./" >网站首页</a>
+      </li>
+      <li>
+        <a href="./dtyw/" >动态要闻</a>
+      </li>
+      <li>
+        <a href="./zfxxgk/" >政府信息公开</a>
+      </li>
+      <li>
+        <a href="https://zwfw.nmg.gov.cn/OrgItem_index?regionCode=150200000000&orgCode=111502000115360460&record=istrue" >政务服务</a>
+      </li>
+      <li>
+        <a href="./hdjl/" >互动交流</a>
+      </li>
+    </ul>
+  </div>
+</div>
+    <script>
+        $(function() {
+            var href = window.location.href;
+            var index = 0;
+            if (href.indexOf("/dtyw/") != -1) index = 1;
+            if (href.indexOf("/zfxxgk/") != -1) index = 2;
+            if (href.indexOf("/hdjl/") != -1) index = 4;
+            $(".header .nav li").each(function(i){
+                $("#nav_item li").removeClass("active").eq(index).addClass("active");
+            });
+        })
+    </script>
+    <!-- 搜索 -->
+<script>
+      document.getElementById("searchBtn").addEventListener("click", function () {
+        var keyword = document.getElementById("searchInput").value;
+          if (keyword) {
+            window.location.href = "/searchweb-dept/#/Door?siteTag=1&siteid=7&keywords=" + keyword;
+          } else {
+            alert("请输入关键字");
+          }
+        });
+</script>
+  <!-- 头条 -->
+  <div class="headlines">
+    <div class="w">
+    <div style="display:flex;justify-content: center;align-items: center;">
+      <a href="./dtyw/tt/" target="_blank" style="margin-right:20px;">
+         <img src="./material/images/icon_headlines.png" />
+      </a>
+<div>
+      
+      <div class="title">
+            <a href="./dtyw/tt/202603/t20260327_847533.html" target="_blank" style="color:#016bb5;">京津冀协同发展的关键落子 </a></div>
+      <div class="desc">
+        新华社北京3月24日电 题：京津冀协同发展的关键落子新华社记者 王雨萧、严赋憬、岳文婷雄安新区，北京非首都功能疏解集中承... 
+      </div>
+      
+    </div>
+    </div>
+    </div>
+  </div>
+  <!-- 新闻 -->
+  <div class="news w">
+    <div class="news_l">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          
+          <div class="swiper-slide">
+            <a href="./dtyw/yxyw/202603/t20260323_842908.html" target="_blank">
+              <img src="./dtyw/yxyw/202603/W020260323820273950024_ORIGIN.jpg" />
+            </a>
+            <div class="mask">包头市科技局喊你报名：“创赢未来”2026创业大赛包头市初赛！</div>
+          </div>
+          
+          <div class="swiper-slide">
+            <a href="./dtyw/yxyw/202603/t20260320_842274.html" target="_blank">
+              <img src="./dtyw/yxyw/202603/W020260320597454076499.jpg" />
+            </a>
+            <div class="mask">包头市科技局举办树立和践行正确政绩观学习教育读书班</div>
+          </div>
+          
+          <div class="swiper-slide">
+            <a href="./dtyw/yxyw/202603/t20260319_841374.html" target="_blank">
+              <img src="./dtyw/yxyw/202603/W020260319601202790070_ORIGIN.jpg" />
+            </a>
+            <div class="mask">喜报！包头市4家孵化器跻身全国首批工信部标准级孵化器名单  ...</div>
+          </div>
+          
+          <div class="swiper-slide">
+            <a href="./dtyw/yxyw/202603/t20260317_835584.html" target="_blank">
+              <img src="./dtyw/yxyw/202603/W020260317608674902244.JPG" />
+            </a>
+            <div class="mask">科技创新赋能乡村振兴新业态：19项农牧领域科技成果发布！3项...</div>
+          </div>
+          
+          <div class="swiper-slide">
+            <a href="./dtyw/yxyw/202603/t20260312_819862.html" target="_blank">
+              <img src="./dtyw/yxyw/202603/W020260312633270583187_ORIGIN.png" />
+            </a>
+            <div class="mask">包头市科技局召开党组（扩大）会议 研究部署树立和践行正确政...</div>
+          </div>
+          
+        
+        </div>
+        <div class="swiper-pagination swiper-news-pagination"></div>
+      </div>
+    </div>
+    <div class="news_r newsSlide">
+      <div class="head hd">
+        <ul class="head_nav">
+          <li class="on">
+            <a href="./dtyw/zwyw/"  target="_blank">政务要闻</a>
+          </li>
+         
+        </ul>
+      </div>
+      <div class="bd">
+        <ul class="list">
+          <div class="first">
+          
+            <div class="title">
+              <a href="./dtyw/zwyw/202603/t20260323_842909.html" target="_blank">包头市科技局喊你报名：“创赢未来”2026创业大赛包...</a>
+            </div>
+            <div class="desc">
+              
+            </div>
+            <div class="date">2026-03-23</div>
+          
+          </div>
+          
+          <li>
+            <a href="./dtyw/zwyw/202603/t20260320_842275.html" target="_blank">
+              <span>包头市科技局举办树立和践行正确政绩观...</span>
+              <span class="date">2026-03-20</span>
+            </a>
+          </li>
+          
+          <li>
+            <a href="./dtyw/zwyw/202603/t20260319_841375.html" target="_blank">
+              <span>喜报！包头市4家孵化器跻身全国首批工信...</span>
+              <span class="date">2026-03-19</span>
+            </a>
+          </li>
+          
+          <li>
+            <a href="./dtyw/zwyw/202603/t20260317_835585.html" target="_blank">
+              <span>科技创新赋能乡村振兴新业态：19项农牧...</span>
+              <span class="date">2026-03-17</span>
+            </a>
+          </li>
+          
+          <li>
+            <a href="./dtyw/zwyw/202603/t20260312_819883.html" target="_blank">
+              <span>包头市科技局召开党组（扩大）会议 研究...</span>
+              <span class="date">2026-03-12</span>
+            </a>
+          </li>
+          
+          <li>
+            <a href="./dtyw/zwyw/202603/t20260311_817642.html" target="_blank">
+              <span>包头带着“产业雄心”在上海找到了“最...</span>
+              <span class="date">2026-03-11</span>
+            </a>
+          </li>
+          
+          <li>
+            <a href="./dtyw/zwyw/202603/t20260311_817562.html" target="_blank">
+              <span>包头市科技局深入利民社区开展学雷锋志...</span>
+              <span class="date">2026-03-11</span>
+            </a>
+          </li>
+          
+          
+        </ul>
+       
+      </div>
+    </div>
+  </div>
+  <!-- 通知公告 -->
+  <div class="tzgg w">
+    <div class="tzgg_wrap">
+      <a href="./dtyw/tzgg/" class="tzgg_logo">
+        <img src="./material/images/sy_tzgg.png" alt="" />
+      </a>
+      <div class="tzgg_box">
+        <ul>
+          
+          <li>
+            <a href="./dtyw/tzgg/202603/t20260319_841369.html" target="_blank">
+              <span class="tzgg_title">关于转发内蒙古自治区科学技术厅组织申报“脑科学与类脑研究”国家科技重大专项2026年度项目的通知</span>
+              <span class="tzgg_time">2026-03-19</span>
+            </a>
+          </li>
+          
+          <li>
+            <a href="./dtyw/tzgg/202603/t20260318_841094.html" target="_blank">
+              <span class="tzgg_title">2026年度第一批拟立项项目补充公示</span>
+              <span class="tzgg_time">2026-03-16</span>
+            </a>
+          </li>
+          
+          <li>
+            <a href="./dtyw/tzgg/202603/t20260317_837677.html" target="_blank">
+              <span class="tzgg_title">关于转发《2026年内蒙古自治区科技重大专项氢能、低空经济、人工智能+领域（第一批）项目申报指南》的通知</span>
+              <span class="tzgg_time">2026-03-16</span>
+            </a>
+          </li>
+          
+          <li>
+            <a href="./dtyw/tzgg/202603/t20260312_817755.html" target="_blank">
+              <span class="tzgg_title">2026年度第一批拟立项项目公示</span>
+              <span class="tzgg_time">2026-03-12</span>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- 政策文件 -->
+  <div class="policy w">
+    <div class="policy_l policySlide">
+      <div class="hd">
+        <ul class="head">
+          <li>
+            <a href="./zfxxgk/fdzdgknr/zcfg/" target="_blank">
+              <div class="icon"></div>
+              <span>政策文件</span>
+            </a>
+          </li>
+          <li>
+            <a href="./zfxxgk/fdzdgknr/zcjd/" target="_blank">
+              <div class="icon"></div>
+              <span>政策解读</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="bd">
+        <ul class="list">
+          
+          <li>
+            <a href="./zfxxgk/fdzdgknr/zcfg/gj/202603/t20260310_806176.html" target="_blank">
+              <span>国务院办公厅关于加强基层消防工作的意见</span>
+              <span class="date">03-09</span>
+            </a>
+          </li>
+          
+          <li>
+            <a href="./zfxxgk/fdzdgknr/zcfg/bw/202603/t20260303_803252.html" target="_blank">
+              <span>科技部 金融监管总局 工业和信息化部国家知识产权局印发《关...</span>
+              <span class="date">03-03</span>
+            </a>
+          </li>
+          
+          <li>
+            <a href="./zfxxgk/fdzdgknr/zcfg/bw/202602/t20260212_799229.html" target="_blank">
+              <span>科学技术部令第24号 科学技术活动违规行为调查处理规定</span>
+              <span class="date">02-12</span>
+            </a>
+          </li>
+          
+          <li>
+            <a href="./zfxxgk/fdzdgknr/zcfg/bw/202602/t20260210_789486.html" target="_blank">
+              <span>工业和信息化部关于印发《技术合同认定登记管理办法》的通知</span>
+              <span class="date">02-10</span>
+            </a>
+          </li>
+          
+          <li>
+            <a href="./zfxxgk/fdzdgknr/zcfg/bts/202601/t20260123_743342.html" target="_blank">
+              <span>包头市人民政府办公室关于公布行政规范性文件清理结果的通知</span>
+              <span class="date">01-23</span>
+            </a>
+          </li>
+          
+        </ul>
+        <ul class="list">
+          
+          <li>
+            <a href="./zfxxgk/fdzdgknr/zcjd/202603/t20260303_803254.html" target="_blank">
+              <span>科技部、金融监管总局、工业和信息化部、国家知识产权局 《关...</span>
+              <span class="date">03-03</span>
+            </a>
+          </li>
+          
+          <li>
+            <a href="./zfxxgk/fdzdgknr/zcjd/202602/t20260212_799237.html" target="_blank">
+              <span>《科学技术活动违规行为调查处理规定》政策解读</span>
+              <span class="date">02-12</span>
+            </a>
+          </li>
+          
+          <li>
+            <a href="./zfxxgk/fdzdgknr/zcjd/202602/t20260202_764958.html" target="_blank">
+              <span>一图读懂 | 《内蒙古自治区重大科技创新平台“里程碑”管理实...</span>
+              <span class="date">02-02</span>
+            </a>
+          </li>
+          
+          <li>
+            <a href="./zfxxgk/fdzdgknr/zcjd/202601/t20260122_738928.html" target="_blank">
+              <span>一图读懂 | 《内蒙古自治区促进科技成果转化行动方案（2026-2...</span>
+              <span class="date">01-22</span>
+            </a>
+          </li>
+          
+          <li>
+            <a href="./zfxxgk/fdzdgknr/zcjd/202601/t20260107_724009.html" target="_blank">
+              <span>司法部负责人就《行政执法监督条例》答记者问</span>
+              <span class="date">12-25</span>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+    <div class="policy_r">
+      <div class="top"><a style="color:#fff;" href="./zfxxgk/zfxxgkzn/" target="_blank">政府信息公开</a></div>
+      <ul class="nav">
+        <li>
+          <a href="./zfxxgk/zfxxgkzn/" target="_blank">
+            <div class="icon">
+              <img src="./material/images/icon_public_1.png" alt="" />
+            </div>
+            <div>政府信息公开指南</div>
+          </a>
+        </li>
+        <li>
+          <a href="./zfxxgk/zfxxgkzd/" target="_blank">
+            <div class="icon">
+              <img src="./material/images/icon_public_2.png" alt="" />
+            </div>
+            <div>政府信息公开制度</div>
+          </a>
+        </li>
+        <li>
+          <a href="./zfxxgk/fdzdgknr/" target="_blank">
+            <div class="icon">
+              <img src="./material/images/icon_public_3.png" alt="" />
+            </div>
+            <div>法定主动公开内容</div>
+          </a>
+        </li>
+        <li>
+          <a href="./zfxxgk/wzndgzbb/" target="_blank">
+            <div class="icon">
+              <img src="./material/images/icon_public_4.png" alt="" />
+            </div>
+            <div>网站年度工作报表</div>
+          </a>
+        </li>
+        <li>
+          <a href="./zfxxgk/zfxxgknb/" target="_blank">
+            <div class="icon">
+              <img src="./material/images/icon_public_5.png" alt="" />
+            </div>
+            <div>政府信息公开年报</div>
+          </a>
+        </li>
+        <li>
+          <a href="http://www.nmg.gov.cn/zwgk/zfxxgk/ysqgk/index_351.html?deptId=719" target="_blank">
+            <div class="icon">
+              <img src="./material/images/icon_public_6.png" alt="" />
+            </div>
+            <div>依申请公开</div>
+          </a>
+        </li>
+      </ul>
+      <div class="other">
+        <div class="item">
+          <a href="https://zwfw.nmg.gov.cn/baselist/accrual_list?regionCode=150200000000&flag=权责清单&record=istru&orgCode=111502000115360460&orgName=市科学技术局" target="_blank">
+            <img src="./material/images/icon_sjgk.png" alt="" />
+            <span>权责清单</span>
+          </a>
+        </div>
+        <div class="item">
+          <a href="./zfxxgk/fdzdgknr/yjsgk/" target="_blank">
+            <img src="./material/images/icon_yjsgk.png" alt="" />
+            <span>预决算公开</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 专题 -->
+  <div class="special w">
+    <div class="swiper-container specialSwiper" style="position: relative;">
+      <div class="swiper-wrapper">
+       
+        <div class="swiper-slide">
+          <a href="./ztzl/kycx/" target="_blank">
+            <img src='./ztzl/kycx/images/P020250825538462932849.png'/>
+          </a>
+        </div>
+      
+        <div class="swiper-slide">
+          <a href="./ztzl/kjaqkjbm/" target="_blank">
+            <img src='./ztzl/kjaqkjbm/images/P020250825542360635616.png'/>
+          </a>
+        </div>
+      
+        <div class="swiper-slide">
+          <a href="./ztzl/kjhqzc/" target="_blank">
+            <img src='./ztzl/kjhqzc/images/P020250825542433051529.png'/>
+          </a>
+        </div>
+      
+        <div class="swiper-slide">
+          <a href="https://mw.nmg.gov.cn/zt/zlzhmzgttys/" target="_blank">
+            <img src='./ztzl/118/images/P020250825542868414397.png'/>
+          </a>
+        </div>
+      
+        <div class="swiper-slide">
+          <a href="http://20th.cpcnews.cn" target="_blank">
+            <img src='./ztzl/119/images/P020250825542989188020.png'/>
+          </a>
+        </div>
+      
+        <div class="swiper-slide">
+          <a href="https://www.gov.cn/hudong/" target="_blank">
+            <img src='./ztzl/120/images/P020250825543238804805.jpg'/>
+          </a>
+        </div>
+      
+        <div class="swiper-slide">
+          <a href="https://www.gov.cn/zhengce/zczhjd/" target="_blank">
+            <img src='./ztzl/121/images/P020250825543327404606.png'/>
+          </a>
+        </div>
+      
+        <div class="swiper-slide">
+          <a href="https://www.neac.gov.cn/seac/c103391/common_list.shtml" target="_blank">
+            <img src='./ztzl/122/images/P020250825543438679907.png'/>
+          </a>
+        </div>
+      
+        <div class="swiper-slide">
+          <a href="https://special.northnews.cn/220701/index.shtml" target="_blank">
+            <img src='./ztzl/123/images/P020250825543543699292.png'/>
+          </a>
+        </div>
+      
+        <div class="swiper-slide">
+          <a href="https://www.baotou.gov.cn/ztzl/yhyshj/" target="_blank">
+            <img src='./ztzl/7155/images/P020251031422832719155.jpg'/>
+          </a>
+        </div>
+      
+      </div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+    </div>
+  </div>
+
+  <!-- 网上办公 -->
+  <div class="investigate w">
+    <div class="investigate_l">
+      <div class="head">
+        <div class="title">网上办公</div>
+       
+      </div>
+      <div class="wsbg">
+        <a href="http://www.btjfz.com/" rel="noopener noreferrer"><img src='./wsbg/5583/images/P020260105345238647968.png'/></a>
+        <div class="wsbg_item">
+          <a href="https://www.ykst.com/sys/login" rel="noopener noreferrer"><img src='./wsbg/133/images/P020260105345517447557.png'/></a>
+          <a href="https://bt.kjcxgl.cn/#/" rel="noopener noreferrer"><img src='./wsbg/132/images/P020260105345865030725.png'/></a>
+        </div>
+        <div class="wsbg_item">
+          <a href="https://yq.kjcxgl.cn" rel="noopener noreferrer"><img src='./wsbg/135/images/P020260105346163104942.png'/></a>
+          <a href="https://cgdj.tech110.net/yhgl/login.jsp" rel="noopener noreferrer"><img src='./wsbg/134/images/P020260105346452486445.png'/></a>
+        </div>
+      </div>
+    </div>
+    <div class="investigate_r" style="margin-top:36px;">
+      <div class="title">互动交流</div>
+      <div class="mail">
+        <div class="mail_item">
+          <div>已收到</div>
+          <div class="num" id="bjzj"></div>
+        </div>
+        <div class="line"></div>
+        <div class="mail_item">
+          <div>已回复</div>
+          <div class="num" id="blwc"></div>
+        </div>
+      </div>
+      <ul class="nav">
+        <li>
+          <a href="./hdjl/wyly/wyxx/" target="_blank">
+            <img src="./material/images/icon_hudong_1.png" alt="" />
+            <span>网友留言</span>
+          </a>
+        </li>
+        <li>
+          <a href="./hdjl/zqyj/" target="_blank">
+            <img src="./material/images/icon_hudong_2.png" alt="" />
+            <span>征求意见</span>
+          </a>
+        </li>
+        <li>
+          <a href="./hdjl/wyly/" target="_blank">
+            <img src="./material/images/icon_hudong_3.png" alt="" />
+            <span>来信选登</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 底部 -->
+  <div class="footer">
+  <div class="w">
+    <ul class="footer_nav">
+      <li class="links">
+        <a>
+          <span>政府</span>
+          <img src="./material/images/arrow_down.png" alt="" />
+        </a>
+        <div class="panel_box">
+          <div class="panel">
+            
+              <div class="panel_item">
+                  <a href="https://www.gov.cn" class="link">国务院</a>
+              </div>
+            
+              <div class="panel_item">
+                  <a href="https://www.nmg.gov.cn/index.html" class="link">内蒙古自治区人民政府</a>
+              </div>
+            
+              <div class="panel_item">
+                  <a href="https://www.baotou.gov.cn" class="link">包头市人民政府</a>
+              </div>
+            
+          </div>
+        </div>
+      </li>
+         <li class="links">
+        <a>
+          <span>部门</span>
+          <img src="./material/images/arrow_down.png" alt="" />
+        </a>
+        <div class="panel_box">
+          <div class="panel">
+            
+              <div class="panel_item">
+            <a href="http://fgw.baotou.gov.cn" class="link">市发改委</a>
+              </div>
+            
+              <div class="panel_item">
+            <a href="http://jyj.baotou.gov.cn" class="link">市教育局</a>
+              </div>
+            
+              <div class="panel_item">
+            <a href="http://kjj.baotou.gov.cn" class="link">市科技局</a>
+              </div>
+            
+              <div class="panel_item">
+            <a href="http://gxj.baotou.gov.cn" class="link">市工信局</a>
+              </div>
+            
+              <div class="panel_item">
+            <a href="http://mw.baotou.gov.cn" class="link">市民委</a>
+              </div>
+            
+              <div class="panel_item">
+            <a href="https://gaj.baotou.gov.cn" class="link">市公安局</a>
+              </div>
+            
+              <div class="panel_item">
+            <a href="http://mzj.baotou.gov.cn" class="link">市民政局</a>
+              </div>
+            
+              <div class="panel_item">
+            <a href="http://sfj.baotou.gov.cn" class="link">市司法局</a>
+              </div>
+            
+              <div class="panel_item">
+            <a href="https://czj.baotou.gov.cn" class="link">市财政局</a>
+              </div>
+            
+              <div class="panel_item">
+            <a href="http://rsj.baotou.gov.cn" class="link">市人社局</a>
+              </div>
+            
+              <div class="panel_item">
+            <a href="http://zrzyj.baotou.gov.cn" class="link">市自然资源局</a>
+              </div>
+            
+              <div class="panel_item">
+            <a href="http://sthjj.baotou.gov.cn" class="link">市生态环境局</a>
+              </div>
+            
+              <div class="panel_item">
+            <a href="http://zfhcxjsj.baotou.gov.cn" class="link">市住建局</a>
+              </div>
+            
+              <div class="panel_item">
+            <a href="http://cgj.baotou.gov.cn" class="link">市城管局</a>
+              </div>
+            
+              <div class="panel_item">
+            <a href="http://jtj.baotou.gov.cn" class="link">市交通局</a>
+              </div>
+            
+              <div class="panel_item">
+            <a href="http://swj.baotou.gov.cn" class="link">市水务局</a>
+              </div>
+            
+              <div class="panel_item">
+            <a href="http://nmj.baotou.gov.cn" class="link">市农牧局</a>
+              </div>
+            
+              <div class="panel_item">
+            <a href="http://btswj.baotou.gov.cn" class="link">市商务局</a>
+              </div>
+            
+              <div class="panel_item">
+            <a href="http://wlgd.baotou.gov.cn" class="link">市文旅广电局</a>
+              </div>
+            
+              <div class="panel_item">
+            <a href="http://wjw.baotou.gov.cn" class="link">市卫健委</a>
+              </div>
+            
+              <div class="panel_item">
+            <a href="http://tyjr.baotou.gov.cn" class="link">市退役军人事务局</a>
+              </div>
+            
+              <div class="panel_item">
+            <a href="http://yjglj.baotou.gov.cn" class="link">市应急管理局</a>
+              </div>
+            
+              <div class="panel_item">
+            <a href="http://sjj.baotou.gov.cn" class="link">市审计局</a>
+              </div>
+            
+              <div class="panel_item">
+            <a href="http://gzw.baotou.gov.cn" class="link">市国资委</a>
+              </div>
+            
+              <div class="panel_item">
+            <a href="http://scjg.baotou.gov.cn" class="link">市市场监管局</a>
+              </div>
+            
+              <div class="panel_item">
+            <a href="http://tyj.baotou.gov.cn" class="link">市体育局</a>
+              </div>
+            
+              <div class="panel_item">
+            <a href="http://tjj.baotou.gov.cn" class="link">市统计局</a>
+              </div>
+            
+              <div class="panel_item">
+            <a href="http://lyhcyj.baotou.gov.cn" class="link">市林草局</a>
+              </div>
+            
+              <div class="panel_item">
+            <a href="http://gdb.baotou.gov.cn" class="link">市国动办</a>
+              </div>
+            
+              <div class="panel_item">
+            <a href="http://ybj.baotou.gov.cn" class="link">市医保局</a>
+              </div>
+            
+              <div class="panel_item">
+            <a href="http://xfj.baotou.gov.cn" class="link">市信访局</a>
+              </div>
+            
+              <div class="panel_item">
+            <a href="https://zwfwj.baotou.gov.cn/icity/public/index?record=istrue" class="link">市政数局</a>
+              </div>
+            
+          </div>
+        </div>
+      </li>
+      <li class="links">
+        <a>
+          <span>科技系统</span>
+          <img src="./material/images/arrow_down.png" alt="" />
+        </a>
+        <div class="panel_box">
+          <div class="panel">
+            
+              <div class="panel_item">
+            <a href="https://www.most.gov.cn/index.html" class="link">中华人民共和国科学技术部</a>
+              </div>
+            
+              <div class="panel_item">
+            <a href="https://www.stdaily.com" class="link">科技日报</a>
+              </div>
+            
+              <div class="panel_item">
+            <a href="https://kjt.nmg.gov.cn" class="link">内蒙古自治区科技厅</a>
+              </div>
+            
+          </div>
+        </div>
+      </li>
+      <li class="links">
+        <a>
+          <span>高校、科研院所门户网站</span>
+          <img src="./material/images/arrow_down.png" alt="" />
+        </a>
+        <div class="panel_box">
+          <div class="panel">
+            
+              <div class="panel_item">
+            <a href="https://www.tsinghua.edu.cn" class="link">清华大学</a>
+              </div>
+            
+              <div class="panel_item">
+            <a href="https://www.cas.cn" class="link">中国科学院</a>
+              </div>
+            
+              <div class="panel_item">
+            <a href="https://www.cau.edu.cn" class="link">中国农业大学</a>
+              </div>
+            
+          </div>
+        </div>
+      </li>
+    </ul>
+    <div class="footer_main">
+      <div class="item pic">
+<script type="text/javascript">document.write(unescape("%3Cspan id='_ideConac' %3E%3C/span%3E%3Cscript src='https://dcs.conac.cn/js/07/128/0000/60460296/CA071280000604602960015.js' type='text/javascript'%3E%3C/script%3E"));</script>
+       <script id="_jiucuo_" sitecode='1502000085' src='https://zfwzgl.www.gov.cn/exposure/jiucuo.js'></script>
+      </div>
+      <div class="item word">
+        <div class="block">
+          <div>
+            <a href="./wzdt/" >网站地图</a>
+          </div>
+         
+        </div>
+        <div class="block">
+          <div>主办单位：包头市科学技术局</div>
+          <div>联系电话：0472-6668492</div>
+          <div><a target="_blank" href="https://beian.miit.gov.cn" style="">蒙ICP备19004585号</a></div>
+        </div>
+      </div>
+      <div class="item word">
+        <div class="block">
+          <div>政府网站标识码：1502000054</div>
+          <div><a href="https://beian.mps.gov.cn/#/query/webSearch?code=15020702000325" >蒙公网安备15020702000325</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script id="toolbarjs" src="./material/toolbar_init.js"></script>
+<script id="_trs_ta_js" src="//ta.trs.cn/c/js/ta.js?mpid=6556" async="async" defer="defer"></script>
+<script src="./material/js/trs_report_sdk.js"></script>
+ <script>
+$(function() {
+    const zoomFactor = 1.25;
+
+    function getTargetElements() {
+        return $('p, span, a, h1, h2, h3, h4, h5, h6, li, td, th, label, div:not(:has(*))');
+    }
+
+    // --- 开启长者模式 ---
+    $('#zoomIn').on('click', function() {
+        if ($('body').hasClass('senior-mode-active')) {
+            return;
+        }
+
+        const currentElements = getTargetElements();
+        // ... (字体放大的两步走逻辑，此处省略以保持简洁) ...
+        currentElements.each(function() { /* 保存原始大小 */
+             const currentSizeStr = $(this).css('font-size');
+             $(this).data('original-font-size', currentSizeStr);
+        });
+        currentElements.each(function() { /* 计算并应用新大小 */
+             const originalSizeStr = $(this).data('original-font-size');
+             if (originalSizeStr) {
+                 const originalSizeNum = parseFloat(originalSizeStr);
+                 if (!isNaN(originalSizeNum) && originalSizeNum > 0) {
+                    $(this).css('font-size', (originalSizeNum * zoomFactor) + 'px');
+                 }
+             }
+        });
+
+        $('body').addClass('senior-mode-active'); // 仍然建议保留class用于状态判断
+
+        // --- 切换按钮显示 ---
+        $(this).hide(); // 隐藏自己（“开启”按钮）
+        $('#resetZoom').show(); // 查找并显示“关闭”按钮
+    });
+
+    // --- 关闭长者模式 ---
+    $('#resetZoom').on('click', function() {
+        const currentElements = getTargetElements();
+        // ... (字体恢复的逻辑) ...
+        currentElements.each(function() {
+            const originalSize = $(this).data('original-font-size');
+            if (originalSize) {
+                $(this).css('font-size', originalSize);
+                $(this).removeData('original-font-size');
+            }
+        });
+        
+        $('body').removeClass('senior-mode-active');
+
+        // --- 切换按钮显示 ---
+        $(this).hide(); // 隐藏自己（“关闭”按钮）
+        $('#zoomIn').show(); // 查找并显示“开启”按钮
+    });
+})
+</script>
+<!-- 用户一号登录，各网站更换client_id和域名地址 -->
+<script>
+function goLogin(){
+       window.open("/personal/validate/gotoLogin.do?client_id=OGD5IQ197&goto="+decodeURIComponent("http://kjj.baotou.gov.cn"));
+}
+var ovUserInfo;
+var ovData;
+// 获取用户登录状态
+function getUserObj() {
+    $.ajax({
+        url: '/personal/usrlogin/getUserInfo',
+        type: 'get',
+        dataType: 'json',
+        success: function(data) {
+            if(!data.success){ 
+                $(".userInfo2").hide();
+                $(".userInfo1").show();
+            }else{
+                ovUserInfo = data.data;
+                $(".userInfo1").hide();
+                $(".userInfo2").show();
+                $('.userInfo2').html("欢迎："+ovUserInfo.USER_NAME);
+            }
+        },
+        error: function (err) {
+            console.log('不好意思，您请求的接口出错了！')
+        }
+    })
+    return ovData;
+}
+
+$(function () {
+    $(".userInfo2").hide();
+    $(".userInfo1").show();
+     getUserObj();
+ })
+</script>
+
+<script type="text/javascript">
+	//上传点击数据
+    let eventReport = new EventReport("/hx-api/receive/receiveData")
+    let siteName = "包头市科技局"
+    let chnlRelation = "包头市科技局"
+    chnlRelation = chnlRelation.replace(siteName+">","")
+    let docid = ""
+    let doc_id = 0
+    if(docid.length > 0){
+        doc_id = parseInt(docid)
+    }
+    let url = "####"
+    let title ='';
+    var reg =/<[^<>]+>/g;
+    title = title.replace(reg, "");
+    let docpubtime = ""
+    
+    if (doc_id== 0) {
+    doc_id = 0;
+    url = document.URL
+    title = document.title
+    docpubtime = ""
+    }
+    let doc_channel = ""
+    let siteid = parseInt("")
+    if (siteid.length == 0) {
+    siteid = 0
+    }
+    
+    let channel_id = parseInt("")
+    
+    if(channel_id.length == 0){
+    channel_id = 0
+    }
+    //appkey
+    let appKey = "dda1bee997e29182febbe848dd3b313a"
+    
+    let myParam = {
+		title: title,
+		url: url,
+		doc_id: doc_id,
+		siteid: siteid,
+		site_name: siteName,
+		doc_channel: doc_channel,
+		channel_relation: chnlRelation,
+		channel_id: channel_id,
+		doc_pub_time: docpubtime,
+		app_key: appKey
+    }
+    //统计外链
+    InitExternalLinks("/hx-api/receive/receiveLink",myParam,"trs.nmsuny.com")
+    eventReport.trackUserData(myParam)
+    // 点击量埋点结束
+</script>
+
+  <script>
+      var siteId = 7; // 网站ID
+      var appId = 974;
+    // 图片新闻轮播
+    var swiper1 = new Swiper(".mySwiper", {
+         autoplay: true,
+        
+         pagination: {
+            el: ".swiper-news-pagination",
+            clickable: true,
+         },
+    });
+
+    // 要闻动态Slide
+    $(".newsSlide").slide({});
+
+    // 政策文件Slide
+    $(".policySlide").slide({});
+
+    var swiper2 = new Swiper(".specialSwiper", {
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      slidesPerView: 3,
+      spaceBetween: 30,
+      slidesPerGroup: 1,
+      loop: true,
+      loopFillGroupWithBlank: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        750: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        1200: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
+      },
+    });
+
+    $.ajax({
+      url: "/IGI/nbhd/openGovmsgbox.do",
+      type: "GET",
+      contentType: "application/json;charset=UTF-8",
+
+      data: {
+        "method": "countGovmsgboxs",
+        "appId": appId,
+        "siteId": siteId
+      },
+
+      success: function (res) {
+        if (res.statusCode == 200) {
+
+          $("#bjzj").html(res.datas.totalCount);
+          $("#blwc").html(res.datas.finishCount);
+
+        }
+      },
+    });
+
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>包头市财政局</title>
+	<meta name="SiteIDCode" content="1502000008">
+	<meta name="SiteName" content="包头市财政局">
+	<meta name="SiteDomain" content="https://czj.baotou.gov.cn/">
+	<link rel="stylesheet" href="/static/css/czj2022.css">
+	<link rel="stylesheet" href="/static/css/style.css">
+	<link type="text/css" rel="stylesheet" href="/static/css/index.css">
+	<link type="text/css" rel="stylesheet" href="/static/css/page.css">
+	<script type="text/javascript" src="/static/js/jquery-3.6.4.min.js"></script>
+	<script type="text/javascript" src="/static/jsindex/jQuery.blockUI.js"></script>
+	<script type="text/javascript" src="/static/jsindex/jquery.SuperSlide.js"></script>
+	<link href="/static/jsindex/default.css" rel="stylesheet" type="text/css">
+	<link href="/static/jsindex/demo.css" rel="stylesheet" type="text/css">
+	<script src="/static/jsindex/jquery.KinSlideshow-1.2.1.min.js" type="text/javascript"></script>
+
+	<script type="text/javascript">
+		$(function () {
+			$("#KinSlideshow").KinSlideshow();
+		})
+	</script>
+	<script src="/static/js/scroll.js"></script>
+	<script type="text/javascript">
+		$(function () {
+
+			$('.myscroll').myScroll({
+				speed: 40, //数值越大，速度越慢
+				rowHeight: 38 //li的高度
+			});
+
+		});
+	</script>
+	<style>
+		.scrollDiv {
+			height: 100px;
+			/* 必要元素 */
+			line-height: 100px;
+
+			overflow: hidden;
+			/* 必要元素 */
+		}
+
+		.scrollDiv li {
+			height: 100px;
+			padding-left: 10px;
+		}
+
+		.scrollDiv li a {
+			font-size: 25px;
+			color: #fff;
+		}
+
+		.scrollDiv li a:hover {
+
+			color: #ff2000;
+		}
+	</style>
+</head>
+
+<body>
+	<div>
+		<!-- <a href="http://czj.baotou.gov.cn/index/xxgcxjpxsdsxztjy/index"><img src="/static/images/ztjy.jpg" style="width:100%; height:auto;" /></a> -->
+	</div>
+	<div style="background: url(/static/images/czj2022_bg.jpg) no-repeat top center;width:100%;">
+		<!--<body  style="background: url('/static/images/czj2022_bga.jpg') no-repeat top center">-->
+		<div>
+			<div class="float-nav-box">
+				<!-- 微信 -->
+				<div class="item wechat">
+					<span></span>
+					<div class="show-item">
+						<img src="/static/images/ewm.jpg" alt="">
+					</div>
+				</div>
+				<!-- app -->
+				<div class="item app">
+					<a href="/mobile_index/index/index.html">
+						<span></span>
+						<div class="show-item">
+							<!-- <img src="images/APP_ma.png" alt=""> -->
+						</div>
+					</a>
+				</div>
+				<!-- 残障通道 -->
+				<div class="item handicapped">
+					<span></span>
+					<a href="/wca.html" target="_blank"></a>
+				</div>
+				<!-- 残障通道 -->
+				<div class="item elder">
+					<span></span>
+					<a href="/elder.html" target="_blank"></a>
+				</div>
+
+			</div>
+			<div class="float-nav-box mobil">
+				<!-- 返回 -->
+				<div class="item backup" style="display: none;">
+					<a><span></span></a>
+				</div>
+				<!-- 微信 -->
+				<div class="item wechat" style="display: none;">
+					<a href="#" target="_blank"><span></span></a>
+				</div>
+
+				<!-- app -->
+				<div class="item app" style="display: none;">
+					<a href="#" target="_blank"><span></span></a>
+				</div>
+				<!-- 残障通道 -->
+				<div class="item handicapped" style="display: none;">
+					<a href="#" target="_blank"><span></span></a>
+				</div>
+			</div>
+			<script>
+				$('.goTop').on('click', function () {
+					(function smoothscroll() {
+						var currentScroll =
+							document.documentElement.scrollTop || document.body.scrollTop;
+						if (currentScroll > 0) {
+							window.requestAnimationFrame(smoothscroll);
+							window.scrollTo(0, currentScroll - currentScroll / 5);
+							$(this).removeClass('opa');
+						} else {
+							$(this).addClass('opa');
+						}
+					})();
+				});
+				if ($(window).scrollTop() < 50) {
+					$('.goTop').removeClass('opa');
+				}
+				$(window).on('scroll', function () {
+					var scrollTop = $(this).scrollTop();
+					if (scrollTop > 50) {
+						$('.goTop').addClass('opa');
+					} else {
+						$('.goTop').removeClass('opa');
+					}
+				});
+			//隐藏残障模式入口
+			// $(".handicapped").hide()
+			</script>
+
+			<!--<div style="height: 235px;width: 1400px;margin:0 auto">
+			<a href="/index/xcesdjs/index.html" target="_blank"><img src="/static/images/jrzt.png" style="float: right;margin-top: 200px;"/></a>
+		</div>-->
+
+			<div class="czj2022_head">
+
+				<div class="czj2022_heada">
+					<div class="czj2022_logo"></div>
+					<form action="/index/index/search.html" target="_blank" id="searchForm">
+						<div class="czj2022_sousuo">
+							<div class="czj2022_sousuoa">
+								<input type="text" placeholder="请输入要查询的内容" name="q" value="">
+							</div>
+							<div class="czj2022_sousuob">
+								<input type="submit" value="搜索">
+							</div>
+						</div>
+					</form>
+					<div class="clear"></div>
+				</div>
+				<div class="czj2022_nav">
+					<div class="czj2022_nava">
+						<ul>
+							<li class="current"><a href="/index/index/index.html"><img
+										src="/static/images/czj2022_pica.png" />首页</a></li>
+							<li><a
+									href="http://zwfw.nmg.gov.cn/OrgItem_index?regionCode=150200000000&orgCode=11150200011536062M&record=istrue"><img
+										src="/static/images/czj2022_picb.png" />政务服务</a></li>
+							<li class=""><a href="/index/zwgk/index.html"><img
+										src="/static/images/czj2022_picc.png" />政务公开</a></li>
+							<li class=""><a href="/index/hdjl/index.html"><img
+										src="/static/images/czj2022_picd.png" />互动交流</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+<!--<div id="FlAD" style="position:absolute;z-index:9999;left:100px;top:100px"  >
+    <p style="color:#333;float:right;font-size:12px;cursor:pointer;" onClick="img.style.visibility = 'hidden'">关闭</p>
+  <div style="clear: both;"></div>
+ 
+    <a target="_blank" title=""><img src="/static/images/yxhj2024.jpg" width="200"  alt=""/></a>
+	
+</div>
+    
+<script type="text/javascript">
+    var img = document.getElementById('FlAD');
+    var xPos = 200;
+    var yPos = 200;
+    var step = 1;
+    var delay = 40;
+    var height = 0;
+    var Hoffset = 0;
+    var Woffset = 0;
+    var yon = 0;
+    var xon = 0;
+    var pause = true;
+    var interval;
+    img.style.top = yPos;
+    function changePos() {
+        width = document.documentElement.clientWidth || document.body.clientWidth;
+        height = document.documentElement.clientHeight || document.body.clientHeight;
+        scrollLeft = document.documentElement.scrollLeft || document.body.scrollLeft;
+        scrollTop = document.documentElement.scrollLeft || document.body.scrollTop;
+        Hoffset = img.offsetHeight;
+        Woffset = img.offsetWidth;
+        img.style.left = xPos + scrollLeft +'px';
+        img.style.top = yPos + scrollTop +'px';
+        if (yon) {
+            yPos = yPos + step;
+        } else {
+            yPos = yPos - step;
+        }
+        if (yPos < 0) {
+            yon = 1;
+            yPos = 0;
+        }
+        if (yPos >= (height - Hoffset)) {
+            yon = 0;
+            yPos = (height - Hoffset);
+        }
+        if (xon) {
+            xPos = xPos + step;
+        } else {
+            xPos = xPos - step;
+        }
+        if (xPos < 0) {
+            xon = 1;
+            xPos = 0;
+        }
+        if (xPos >= (width - Woffset)) {
+            xon = 0;
+            xPos = (width - Woffset);
+        }
+    }
+    function start() {
+        img.visibility = "visible";
+        interval = setInterval('changePos()', delay);
+    }
+    start();
+</script>-->
+<div class="czj2022_content">
+	<div class="czj2022_contenta">
+		<div class="czj2022_nnews">
+			<div class="czj2022_nnews_k">
+				<div class="czj2022_nnews_ad">
+					<div class="czj2022_toutiao"></div>
+					<div class="czj2022_more"><a href="/index/ttxw/index.html">查看更多</a></div>
+					<div class="czj2022_title">
+						<div class="scrollDiv" id="s1">
+							<ul>
+																<li><a href="/index/ttxw/25693.html" target="_blank"
+										title="中共中央办公厅 国务院办公厅关于加快建立长期护理保险制度的意见"
+										target="_top">中共中央办公厅 国务院办公厅关于加快建立长期护理保险制度的意见</a></li>
+																<li><a href="/index/ttxw/25670.html" target="_blank"
+										title="十四届全国人大四次会议在京开幕 习近平等在主席台就座"
+										target="_top">十四届全国人大四次会议在京开幕 习近平等在主席台就座</a></li>
+																<li><a href="/index/ttxw/25653.html" target="_blank"
+										title="《习近平关于树立和践行正确政绩观论述摘编》出版发行"
+										target="_top">《习近平关于树立和践行正确政绩观论述摘编》出版发行</a></li>
+																<li><a href="https://czt.nmg.gov.cn/czdt/ttxw/202601/t20260127_2854750.html" target="_blank"
+										title="习近平会见芬兰总理奥尔波"
+										target="_top">习近平会见芬兰总理奥尔波</a></li>
+															</ul>
+						</div>
+						<!--scrollDiv end-->
+						<script type="text/javascript">
+							function AutoScroll(obj) {
+								$(obj).find("ul:first").animate({
+									marginTop: "-100px"
+								}, 500, function() {
+									$(this).css({
+										marginTop: "0px"
+									}).find("li:first").appendTo(this);
+								});
+							}
+							$(document).ready(function() {
+								setInterval('AutoScroll("#s1")', 3000);
+							});
+						</script>
+					</div>
+				</div>
+				<div class="czj2022_focus">
+					<div style="position:relative; z-index:0;">
+						<div id="KinSlideshow" style="visibility:hidden;">
+														<a href="/index/tpxw/25686.html" target="_blank"><img
+									src="http://czj.baotou.gov.cn/uploads/10001/20260323/20260323/0db879306b22218f5b5119189da0e3be.jpg" alt="廖岷会见惠誉全球金融机构、国家主权与公共融资团队负责人劳拉&middot;波特" width="577"
+									height="390"></a>
+
+														<a href="/index/tpxw/25666.html" target="_blank"><img
+									src="http://czj.baotou.gov.cn/uploads/10001/20260309/20260309/3348810f2daacaac8de76b68a27942a0.jpg" alt="财政部部长蓝佛安出席十四届全国人大四次会议经济主题记者会" width="577"
+									height="390"></a>
+
+														<a href="/index/tpxw/25657.html" target="_blank"><img
+									src="http://czj.baotou.gov.cn/uploads/10001/20260226/20260226/d5abc3574f51198955ac664e58f5681c.jpg" alt="廖岷视频出席二十国集团财政和央行副手会议" width="577"
+									height="390"></a>
+
+														<a href="/index/tpxw/25614.html" target="_blank"><img
+									src="http://czj.baotou.gov.cn/uploads/10001/20260130/20260130/f0cb16d7d57d6b682a718992d8938342.jpg" alt="廖岷会见渣打集团行政总裁温拓思" width="577"
+									height="390"></a>
+
+														<a href="/index/tpxw/25583.html" target="_blank"><img
+									src="http://czj.baotou.gov.cn/uploads/10001/20260116/20260116/61baf4aab1982216b8ada2b236603901.jpg" alt="全区 财政工作会议在呼和浩特召开" width="577"
+									height="390"></a>
+
+													</div>
+					</div>
+				</div>
+				<div class="czj2022_news">
+					<ul class="czj2022_newsa">
+						<li id=visabest01stat1 onmouseMove="javascript:Show('visabest01',1,3)"><a
+								href="/index/czyw/index.html">财政要闻</a>
+						</li>
+						<li id=visabest01stat2 onmouseMove="javascript:Show('visabest01',2,3)"><a
+								href="/index/sxdt/index.html">市县动态</a>
+						</li>
+						<li id=visabest01stat3 onmouseMove="javascript:Show('visabest01',3,3)"><a
+								href="/index/tzgg/index.html">通知公告</a>
+						</li>
+					</ul>
+					<div class="clear"></div>
+					<div class="wl_liste myscroll" id=visabest01_1 style="height:305px;">
+						<ul>
+														<li><span class="data">·<a href="/index/czyw/25687.html"
+										target="_blank">内蒙古出台中央竞争性评审项目配套办法聚焦五大战略定位和使命任务强化引导激励</a></span><span
+									class="date">2026-03-23</span>
+								<div class="clear"></div>
+							</li>
+														<li><span class="data">·<a href="/index/czyw/25673.html"
+										target="_blank">内蒙古自治区科技专项资金投入翻番</a></span><span
+									class="date">2026-03-12</span>
+								<div class="clear"></div>
+							</li>
+														<li><span class="data">·<a href="/index/czyw/25667.html"
+										target="_blank">政府工作报告里的变与不变</a></span><span
+									class="date">2026-03-07</span>
+								<div class="clear"></div>
+							</li>
+														<li><span class="data">·<a href="/index/czyw/25654.html"
+										target="_blank">&ldquo;新规&rdquo;出台，管住资产&ldquo;家底&rdquo;！</a></span><span
+									class="date">2026-02-24</span>
+								<div class="clear"></div>
+							</li>
+														<li><span class="data">·<a href="/index/czyw/25648.html"
+										target="_blank">自治区财政厅举办2026年领导干部报告个人有关事项工作部署及培训会</a></span><span
+									class="date">2026-02-12</span>
+								<div class="clear"></div>
+							</li>
+														<li><span class="data">·<a href="/index/czyw/25632.html"
+										target="_blank">自治区财政厅举办2026年第2期财政干部大讲堂&mdash;&mdash;数字赋能强本领 智绘财政新蓝图</a></span><span
+									class="date">2026-02-06</span>
+								<div class="clear"></div>
+							</li>
+														<li><span class="data">·<a href="/index/czyw/25615.html"
+										target="_blank">2025年内蒙古发放惠民惠农财政补贴493亿元 惠及群众超6100万人次</a></span><span
+									class="date">2026-01-30</span>
+								<div class="clear"></div>
+							</li>
+														<li><span class="data">·<a href="/index/czyw/25594.html"
+										target="_blank">自治区财政厅多维发力 助推小微企业与个体工商户三年成长</a></span><span
+									class="date">2026-01-23</span>
+								<div class="clear"></div>
+							</li>
+														<li><span class="data">·<a href="/index/czyw/25584.html"
+										target="_blank">自治区全面启动养老服务消费补贴项目 惠及中度以上失能老年人</a></span><span
+									class="date">2026-01-16</span>
+								<div class="clear"></div>
+							</li>
+														<li><span class="data">·<a href="/index/czyw/25577.html"
+										target="_blank">构建&ldquo;建、育、用&rdquo;全链条机制 自治区财政厅夯实财会监督人才硬支撑</a></span><span
+									class="date">2026-01-09</span>
+								<div class="clear"></div>
+							</li>
+													</ul>
+					</div>
+
+
+					<div class="wl_liste" id=visabest01_2 style="display: none;">
+						<ul>
+														<li><span class="data">·<a href="/index/sxdt/25688.html"
+										target="_blank">2026年全市财政工作会召开</a></span><span
+									class="date">2026-03-23</span>
+								<div class="clear"></div>
+							</li>
+														<li><span class="data">·<a href="/index/sxdt/25682.html"
+										target="_blank">公物仓共享再落地 高效调配惠一线</a></span><span
+									class="date">2026-03-18</span>
+								<div class="clear"></div>
+							</li>
+														<li><span class="data">·<a href="/index/sxdt/25681.html"
+										target="_blank">资产共享优保障 厉行节约促运营 &mdash;&mdash;包头市公交运输集团从市政府公物仓 调剂资产助力高质量发展</a></span><span
+									class="date">2026-03-18</span>
+								<div class="clear"></div>
+							</li>
+														<li><span class="data">·<a href="/index/sxdt/25680.html"
+										target="_blank">严考细评强安保 筑牢防线保资产 &mdash;&mdash;包头市政府公物仓安保服务季度考核圆满完成</a></span><span
+									class="date">2026-03-18</span>
+								<div class="clear"></div>
+							</li>
+														<li><span class="data">·<a href="/index/sxdt/25676.html"
+										target="_blank">强化会计法治建设 提升内控管理水平 &mdash;&mdash;包头市财政局举办&ldquo;内控评价与编报&rdquo;专题培训</a></span><span
+									class="date">2026-03-12</span>
+								<div class="clear"></div>
+							</li>
+														<li><span class="data">·<a href="/index/sxdt/25675.html"
+										target="_blank">包头 ：  1000万元精准滴灌，从源头守护草原&ldquo;底色&rdquo;！</a></span><span
+									class="date">2026-03-12</span>
+								<div class="clear"></div>
+							</li>
+														<li><span class="data">·<a href="/index/sxdt/25668.html"
+										target="_blank">230万元！包头市获2025年度高标准农田建设奖励</a></span><span
+									class="date">2026-03-07</span>
+								<div class="clear"></div>
+							</li>
+														<li><span class="data">·<a href="/index/sxdt/25665.html"
+										target="_blank">强化工资审核    严控绩效总量</a></span><span
+									class="date">2026-02-28</span>
+								<div class="clear"></div>
+							</li>
+														<li><span class="data">·<a href="/index/sxdt/25663.html"
+										target="_blank">包头市财政局有序开展2025年度行政事业单位内控评价和内控编报工作</a></span><span
+									class="date">2026-02-28</span>
+								<div class="clear"></div>
+							</li>
+														<li><span class="data">·<a href="/index/sxdt/25659.html"
+										target="_blank">严格重点绩效评价整改 做实绩效管理&ldquo;后半篇文章&rdquo;</a></span><span
+									class="date">2026-02-27</span>
+								<div class="clear"></div>
+							</li>
+													</ul>
+					</div>
+
+					<div class="wl_liste" id=visabest01_3 style="display: none;">
+						<ul>
+														<li><span class="data">·<a href="/index/tzgg/25579.html"
+										target="_blank">2025年度包头市财政局政府网站工作年度报表</a></span><span
+									class="date">2026-01-12</span>
+								<div class="clear"></div>
+							</li>
+														<li><span class="data">·<a href="/index/tzgg/25694.html"
+										target="_blank">2024年度包头市直属国有企业负责人薪酬信息公开披露表</a></span><span
+									class="date">2026-03-27</span>
+								<div class="clear"></div>
+							</li>
+														<li><span class="data">·<a href="/index/tzgg/25671.html"
+										target="_blank">包头市财政局关于印发 《包头市为中小微企业购买代理记账服务 实施细则（试行）》征求意见的通知</a></span><span
+									class="date">2026-03-10</span>
+								<div class="clear"></div>
+							</li>
+														<li><span class="data">·<a href="/index/tzgg/25662.html"
+										target="_blank">包头市关于领取2025年度会计专业技术中级资格证书的通知</a></span><span
+									class="date">2026-02-28</span>
+								<div class="clear"></div>
+							</li>
+														<li><span class="data">·<a href="/index/tzgg/25588.html"
+										target="_blank">包头市财政局关于《包头市本级行政事业单位通用资产配置标准的规定》征求意见的函</a></span><span
+									class="date">2026-01-16</span>
+								<div class="clear"></div>
+							</li>
+														<li><span class="data">·<a href="/index/tzgg/25581.html"
+										target="_blank">包头市财政局关于公布行政规范性文件清理结果的通知</a></span><span
+									class="date">2026-01-13</span>
+								<div class="clear"></div>
+							</li>
+														<li><span class="data">·<a href="/index/tzgg/25574.html"
+										target="_blank">关于确定2026-2027年度市本级预算单位代理记账服务入围供应商的通知</a></span><span
+									class="date">2026-01-04</span>
+								<div class="clear"></div>
+							</li>
+														<li><span class="data">·<a href="/index/tzgg/25549.html"
+										target="_blank">包头市财政局关于相关企业尽快变更名称和经营范围的公告</a></span><span
+									class="date">2025-12-16</span>
+								<div class="clear"></div>
+							</li>
+														<li><span class="data">·<a href="/index/tzgg/25529.html"
+										target="_blank">内蒙古和誉建设项目管理有限责任公司关于包头市本级预算单位代理记账服务封闭式框架协议征集项目需求标准征求意见的通知</a></span><span
+									class="date">2025-12-01</span>
+								<div class="clear"></div>
+							</li>
+														<li><span class="data">·<a href="/index/tzgg/25502.html"
+										target="_blank">包头市财政局关于包头市金谷典当有限责任 公司《典当经营许可证》有效期届满的公告</a></span><span
+									class="date">2025-11-18</span>
+								<div class="clear"></div>
+							</li>
+													</ul>
+					</div>
+
+
+					<SCRIPT type=text/javascript>
+						function Show(ele, sn, size) {
+							for (var i = 1; i <= size; i++) {
+								//alert(ele+"_"+i);
+								if (sn == i) {
+									document.getElementById(ele + "_" + sn).style.display = "block";
+									document.getElementById(ele + "stat" + i).className = "current";
+								} else {
+									document.getElementById(ele + "_" + i).style.display = "none";
+									document.getElementById(ele + "stat" + i).className = "";
+								}
+							}
+
+						}
+						Show('visabest01', 1, 3);
+					</SCRIPT>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="czj2022_ad">
+		<div style="margin:8px 0px">
+			<div class="boxa">
+				<div class="box_imga">
+					<ul>
+						<li><a><img src="/static/picture/yhhj.jpg" width="1400" height="140"></a></li>
+						<li><a><img src="/static/picture/41225.jpg" width="1400" height="140"></a></li>
+						<li><a><img src="/static/picture/banner_0517_0531.jpg" width="1400" height="140"></a></li>
+						<li><a><img src="/static/picture/hf.jpg" width="1400" height="140"></a></li>
+						<li><a><img src="/static/picture/12339.jpg" width="1400" height="140"></a></li>
+						<li><a><img src="/static/picture/gzhy.jpg" width="1400" height="140"></a>
+						</li>
+					</ul>
+				</div>
+
+			</div>
+		</div>
+
+		<div class="czj2022_zhcz">
+			<h2>智慧财政</h2>
+			<div class="czj2022_zhcza">
+				<a href="https://czj.baotou.gov.cn/bthqlm/#/index" target="_blank"><img src="/static/images/zhcz_pica.png" width="246" height="63"/></a>
+			</div>
+			<div class="czj2022_zhcza">
+				<a href="https://amp.btszcjypt.com/" target="_blank"><img src="/static/images/zhcz_picb.png" width="246" height="63"/></a>
+			</div>
+			<div class="czj2022_zhcza">
+				<a href="https://czj.baotou.gov.cn:3000/#/systemBaoTou/home" target="_blank"><img
+						src="/static/images/zhcz_picc.png" width="246" height="63"/></a>
+			</div>
+			<div class="czj2022_zhcza" >
+				<a href="http://fgk.mof.gov.cn/ui/start/#/outerHomePage/outerHome" target="_blank"><img
+						src="/static/images/zhcz_picd.png" width="246" height="63"/></a>
+			</div>
+			<div class="czj2022_zhcza" style="float: right;margin-right: 0;">
+				<a href="https://czj.baotou.gov.cn:8077/" target="_blank"><img
+						src="/static/images/ysdw.jpg" width="246" height="63"/></a>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="czj2022_zhcz">
+			<h2>优化营商环境</h2>
+			<div class="czj2022_zhczb">
+				<a href="/index/zcqyzc/index.html"><img src="/static/images/yhys_pica.jpg" /></a>
+			</div>
+			<!--<div class="czj2022_zhczb">
+				<a href="/index/zdcytzjj/index.html"><img src="/static/images/yhys_picb.jpg" /></a>
+			</div>-->
+			<div class="czj2022_zhczb">
+				<a href="/index/zfcg1/index.html"><img src="/static/images/yhys_picc.jpg" /></a>
+			</div>
+			<!--<div class="czj2022_zhczb">
+						<a href="/index/zfyshzbhz/index.html"><img src="/static/images/yhys_picd.jpg" /></a>
+					</div>-->
+			<div class="czj2022_zhczb" style="float: right;margin-right: 0;">
+				<a href="/index/jsjfzc/index.html"><img src="/static/images/yhys_pice.jpg" /></a>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="czj2022_mscz">
+			<h2>民生财政</h2>
+			<a href="/index/jykjwh/index.html">
+				<div class="czj2022_mscza">
+					<img src="/static/images/mscz_pica.jpg" />
+					<p>教育科技文化</p>
+				</div>
+			</a>
+			<a href="/index/sbjy/index.html">
+				<div class="czj2022_mscza">
+					<img src="/static/images/mscz_picb.jpg" />
+					<p>社保就业</p>
+				</div>
+			</a>
+			<a href="/index/ylws/index.html">
+				<div class="czj2022_mscza">
+					<img src="/static/images/mscz_picc.jpg" />
+					<p>医疗卫生</p>
+				</div>
+			</a>
+			<a href="/index/sthj/index.html">
+				<div class="czj2022_mscza">
+					<img src="/static/images/mscz_picd.jpg" />
+					<p>生态环境</p>
+				</div>
+			</a>
+			<a href="/index/cxjs/index.html">
+				<div class="czj2022_mscza" style="border: none;">
+					<img src="/static/images/mscz_pice.jpg" />
+					<p>城乡建设</p>
+				</div>
+			</a>
+		</div>
+
+		<div style="margin:15px 0px">
+			<div class="box">
+				<div class="box_img">
+					<ul>
+						<li><a href="http://czj.baotou.gov.cn/index/member/liuyan?ctg_id=6"><img src="/static/picture/wyjy.jpg" width="1400"
+									height="120" alt=""></a></li>
+						<!--<li><a href="http://www.baotou.gov.cn/ztzl/asnmg/asnmg.htm"><img
+									src="/static/picture/czj2020_07.jpg" width="1400" height="120" alt=""></a></li>-->
+						<li><a href="/index/fczs/index.html"><img src="/static/picture/czj2020_06a.jpg" width="1400"
+									height="120" alt=""></a></li>
+						<li><a href="/index/czdj/index.html"><img src="/static/picture/czj2020_06.jpg" width="1400"
+									height="120" alt=""></a></li>
+					</ul>
+				</div>
+
+			</div>
+		</div>
+
+
+
+	</div>
+	<div class="czj2022_zt">
+		<div class="czj2022_zta">
+			<h2>专题专栏</h2>
+		</div>
+		<div class="slideContainer">
+
+			<a class="next"></a> <a class="prev"></a>
+			<div class="bd">
+
+				<div class="tempWrap">
+					<ul>
+												<li><a target="_blank" href="/index/djxxjy/index.html"><img title="党纪学习教育"
+									src="/uploads/10001/20240506/20240506/889b5b14d976c4c38b0afa84ccea1ced.jpg"></a></li>
+												<li><a target="_blank" href="/index/fzcz/index.html"><img title="法制财政"
+									src="/uploads/10001/20220627/20220627/c2d6111327ff28dbd23f74a0c311420e.jpg"></a></li>
+												<li><a target="_blank" href="/index/xcesdjs/index.html"><img title="学习贯彻党的二十届三中全会精神"
+									src="/uploads/10001/20240924/20240924/f16ef8335e5b37942f063fefc5da648e.jpg"></a></li>
+												<li><a target="_blank" href="/index/xzzfgs/index.html"><img title="行政执法公示"
+									src="/uploads/10001/20220627/20220627/392521e70439f22cf5cd5a6eca38010e.jpg"></a></li>
+												<li><a target="_blank" href="/index/cztpgj/index.html"><img title="乡村振兴"
+									src="/uploads/10001/20220627/20220627/b3421984e55b9cbc630d594982fb0c13.jpg"></a></li>
+												<li><a target="_blank" href="/index/kxyj/index.html"><img title="科学研究"
+									src="/uploads/10001/20220627/20220627/34c02ed8a64a7d55bec6cf6fa5af1dc0.jpg"></a></li>
+												<li><a target="_blank" href="/member/channel_list?channel_id=698"><img title="资金直达"
+									src="http://czj.baotou.gov.cn/uploads/10001/20251222/20251222/342c3b858ae88c18e2cb9bc328fff61e.jpg"></a></li>
+												<li><a target="_blank" href="/index/mzzcxc/index.html"><img title="民族政策宣传"
+									src="/uploads/10001/20230516/20230516/7095eb2979f8e03111a9786a303b42e3.jpg"></a></li>
+												<li><a target="_blank" href="https://www.gov.cn/zhengce/zczhjd/"><img title="重要政策举措"
+									src="http://czj.baotou.gov.cn/uploads/10001/20230801/20230801/a47b64f065875ab4b3ef68c60e62f291.jpg"></a></li>
+												<li><a target="_blank" href="/index/xxgcxjpxsdsxztjy/index.html"><img title="学习贯彻习近平新时代中国特色社会主义思想主题教育"
+									src="/uploads/10001/20231016/20231016/ad6d492dbe79183cd4af4efd42b8b4d4.jpg"></a></li>
+												<li><a target="_blank" href="/index/bjwh/index.html"><img title="包头E韵"
+									src="http://czj.baotou.gov.cn/uploads/10001/20250414/20250414/a62057794541e85ef6eea42cf3785c08.jpg"></a></li>
+												<li><a target="_blank" href="/index/bthh/index.html"><img title="弘扬三个精神，再创包头辉煌"
+									src="http://czj.baotou.gov.cn/uploads/10001/20250514/20250514/d5285e946380880a5d2a5ea16b40992a.jpg"></a></li>
+												<li><a target="_blank" href="/index/ldzs/index.html"><img title="劳动者说"
+									src="http://czj.baotou.gov.cn/uploads/10001/20250514/20250514/4e63cd6a7c31434af6fe36b607ae6ed7.jpg"></a></li>
+												<li><a target="_blank" href="/index/xfrxcz/index.html"><img title="宪法日宣传周"
+									src="http://czj.baotou.gov.cn/uploads/10001/20241209/20241209/eda7235f4554102dbd07504d1468f10e.jpeg"></a></li>
+												<li><a target="_blank" href="/index/member/xxgkml.html?channel_id=598"><img
+									src="/static/images/czj2020_30.jpg"></a>
+						</li>
+
+					</ul>
+				</div>
+
+			</div>
+		</div>
+
+
+	</div>
+	<div class="czj2022_other">
+		<div class="czj2022_othera">
+			<a href="/index/zfcg/index.html"><img src="/static/images/other_pica.jpg" /></a>
+		</div>
+		<div class="czj2022_othera">
+			<a href="https://czj.baotou.gov.cn:3000/#/systemBaoTou/home"><img src="/static/images/other_picb.jpg" /></a>
+		</div>
+		<div class="czj2022_othera">
+			<a href="http://www.nmgacc.cn/bt/"><img src="/static/images/other_picc.jpg" /></a>
+		</div>
+		<div class="czj2022_othera">
+			<a href="/index/zlxz/index.html"><img src="/static/images/other_picd.jpg" /></a>
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>
+<script type="text/javascript">
+	$(document).ready(function() {
+		var timejg = 5000; //轮播间隔时间
+		var size = $('.box_img ul li').size();
+		for (var i = 1; i <= size; i++) {
+			$('.box_tab').append('<a href="javascript:(void)">' + i + '</a>')
+		}
+
+		$('.box_img ul li').eq(0).show();
+		$('.box_tab a').eq(0).addClass('active')
+		$('.box_tab a').mouseover(function() {
+			$(this).addClass('active').siblings().removeClass('active');
+			var index = $(this).index();
+			i = index;
+			$('.box_img ul li').eq(index).stop().fadeIn(800).siblings().stop().fadeOut(800);
+		});
+
+		var i = 0;
+		var time = setInterval(move, timejg);
+
+		function move() {
+			i++;
+			if (i == size) {
+				i = 0;
+			}
+
+			$('.box_tab a').eq(i).addClass('active').siblings().removeClass('active');
+			$('.box_img ul li').eq(i).fadeIn(300).siblings().fadeOut(300);
+		}
+
+		$('.boxa').hover(function() {
+			clearInterval(time);
+		}, function() {
+			time = setInterval(move, timejg);
+		});
+	});
+</script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		var timejg = 4000; //轮播间隔时间
+		var size = $('.box_imga ul li').size();
+		for (var i = 1; i <= size; i++) {
+			$('.box_taba').append('<a href="javascript:(void)">' + i + '</a>')
+		}
+
+		$('.box_imga ul li').eq(0).show();
+		$('.box_taba a').eq(0).addClass('active')
+		$('.box_taba a').mouseover(function() {
+			$(this).addClass('active').siblings().removeClass('active');
+			var index = $(this).index();
+			i = index;
+			$('.box_imga ul li').eq(index).stop().fadeIn(800).siblings().stop().fadeOut(800);
+		});
+
+		var i = 0;
+		var time = setInterval(move, timejg);
+
+		function move() {
+			i++;
+			if (i == size) {
+				i = 0;
+			}
+
+			$('.box_taba a').eq(i).addClass('active').siblings().removeClass('active');
+			$('.box_imga ul li').eq(i).fadeIn(300).siblings().fadeOut(300);
+		}
+
+		$('.boxa').hover(function() {
+			clearInterval(time);
+		}, function() {
+			time = setInterval(move, timejg);
+		});
+	});
+</script>
+<script>
+	jQuery(".slideTxtBox").slide({
+		pnLoop: false,
+		effect: "left",
+		titCell: ".nav li",
+		mainCell: ".box",
+		prevCell: ".prev_1",
+		nextCell: ".next_1"
+	});
+	jQuery(".slideText1").slide({
+		titCell: ".hd li",
+		mainCell: ".bd",
+		targetCell: ".more",
+		delayTime: 0,
+		triggerTime: 0
+	});
+	jQuery(".slideText2").slide({
+		titCell: ".hd li",
+		mainCell: ".bd",
+		targetCell: ".more",
+		delayTime: 0,
+		triggerTime: 0
+	});
+	jQuery(".slideText3").slide({
+		titCell: ".hd li",
+		mainCell: ".bd",
+		targetCell: ".more",
+		delayTime: 0,
+		triggerTime: 0
+	});
+	jQuery(".slideBox").slide({
+		titCell: ".shd ul",
+		mainCell: ".sbd ul",
+		autoPlay: true,
+		effect: "leftLoop",
+		interTime: 5000,
+		autoPage: true,
+		delayTime: 700
+	});
+	jQuery(".slideContainer").slide({
+		titCell: ".hd ul",
+		mainCell: ".bd ul",
+		autoPage: true,
+		effect: "leftLoop",
+		interTime: 3000,
+		autoPlay: true,
+		vis: 4
+	});
+</script>
+<div class="czj2022_footer">
+	<div class="czj2022_footera">
+		<div class="czj2022_footerb">
+			<ul>
+				<li>友情链接：</li>
+				<!--<li><a href="http://www.mof.gov.cn/index.htm">中华人民共和国财政部</a></li>-->
+				<li><a href="http://czt.nmg.gov.cn/" target="_blank">财政厅</a></li>
+				<li><a href="https://www.12377.cn/" target="_blank">违法和不良信息举报中心</a></li>
+				<!--<li><a href="http://tjj.baotou.gov.cn/">包头市统计局</a></li>-->
+				<li><a href="/index/wzdt/index.html"><svg style="vertical-align: middle;margin-right: 5px;"
+							t="1654503807691" class="icon" viewBox="0 0 1024 1024" version="1.1"
+							xmlns="http://www.w3.org/2000/svg" p-id="7662" width="32" height="32">
+							<path
+								d="M312.32 460.8c71.68 130.56 194.56 279.04 194.56 279.04s128-148.48 202.24-279.04h130.56c30.72 0 53.76 23.04 53.76 51.2v358.4c0 28.16-25.6 51.2-53.76 51.2H207.36C179.2 921.6 153.6 898.56 153.6 870.4V512c0-28.16 25.6-51.2 53.76-51.2h104.96z"
+								fill="#C0DCFF" p-id="7663"></path>
+							<path
+								d="M509.44 128c107.52 0 204.8 87.04 204.8 197.12 0 104.96-204.8 340.48-204.8 340.48S307.2 424.96 307.2 325.12C307.2 215.04 401.92 128 509.44 128zM435.2 335.36c0 43.52 35.84 76.8 76.8 76.8 43.52 0 76.8-35.84 76.8-76.8 0-43.52-35.84-76.8-76.8-76.8-40.96-2.56-76.8 33.28-76.8 76.8zM189.44 739.84l15.36-20.48c20.48 15.36 43.52 28.16 64 40.96l-12.8 20.48c-23.04-10.24-43.52-25.6-66.56-40.96z m112.64 66.56l10.24-23.04c23.04 10.24 46.08 20.48 69.12 25.6l-7.68 25.6c-23.04-10.24-46.08-17.92-71.68-28.16z m125.44 38.4l5.12-25.6c10.24 2.56 23.04 2.56 33.28 5.12 12.8 2.56 25.6 0 38.4 0l2.56 25.6c-15.36 2.56-30.72 2.56-46.08 0-10.24 0-20.48-2.56-33.28-5.12z m133.12-7.68l-7.68-23.04c20.48-7.68 40.96-15.36 69.12-30.72l10.24 23.04c-28.16 12.8-51.2 23.04-71.68 30.72z m117.76-56.32l-10.24-23.04c28.16-12.8 48.64-23.04 71.68-33.28l10.24 23.04c-23.04 10.24-43.52 20.48-71.68 33.28z m115.2-46.08l-7.68-25.6c25.6-7.68 53.76-10.24 79.36-12.8v25.6c-23.04 2.56-46.08 5.12-71.68 12.8z"
+								fill="#2589FF" p-id="7664"></path>
+						</svg>网站地图</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="czj2022_footerc">
+		<script src="/static/js/front.js" type="text/javascript"></script>
+		<div class="czj2022_footerb" style="position: relative;">
+			<div class="czj2022_zf">
+				<!-- <script type="text/javascript">document.write(unescape("%3Cspan id='_ideConac' %3E%3C/span%3E%3Cscript src='https://dcs.conac.cn/js/07/128/0000/40683226/CA071280000406832260013.js' type='text/javascript'%3E%3C/script%3E"));</script>-->
+				<script
+					type="text/javascript">document.write(unescape("%3Cspan id='_ideConac' %3E%3C/span%3E%3Cscript src='https://dcs.conac.cn/js/07/128/0000/60441727/CA071280000604417270006.js' type='text/javascript'%3E%3C/script%3E"));</script>
+				<script id="_jiucuo_" sitecode='1502000008' src='https://zfwzgl.www.gov.cn/exposure/jiucuo.js'></script>
+			</div>
+			<p>版权所有：包头市财政局 承办单位：内蒙古亨达海天网络技术有限责任公司  办公电话：0472-5228541 会计科电话：0472-5228582 <a href="https://beian.miit.gov.cn" title="工信部网站备案"
+					target="_blank"><br>蒙ICP备19004897号-1</a> 访问人数： <font color="#ff2000"><span id="pv"></span></font>
+				政府网站标识码：1502000008 <a href="https://beian.mps.gov.cn/#/query/webSearch" rel="noreferrer"
+					target="_blank">蒙公网安备：15020402000624</a>  建议分辨率：1920*1080   网站支持IPv6</p>
+		</div>
+	</div>
+</div>
+
+</body>
+<script>
+	var page = location.href;
+	var referer = document.referrer;
+	$.getJSON("/index/index/flowStatistic.html", {
+		page: page,
+		referer: referer
+	}, function (data) {
+		data = data.data;
+		$("#pv").text(data['pv']);
+	});
+</script>
+
+</html>

@@ -1,0 +1,1440 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+        <title>泉州市生态环境局</title>
+        <meta name="SiteName" content="泉州市生态环境局">
+<meta name="SiteDomain" content="sthjj.quanzhou.gov.cn">
+<meta name="SiteIDCode" content="3505000024">
+        <link rel="stylesheet" type="text/css" href="/comps/images/trt_iconfont_v2.css">
+		<link rel="stylesheet" type="text/css" href="/comps/images/trt_ui_v2.css">
+		<link rel="stylesheet" type="text/css" href="/comps/images/trt_component_v2.css">
+		<link rel="stylesheet" type="text/css" href="/comps/images/trt_media_v2.css">
+		<link rel="stylesheet" type="text/css" href="/images/221130_qzmz_header.css">
+		<link rel="stylesheet" type="text/css" href="/images/221130_qzmz_footer.css">
+		<link rel="stylesheet" type="text/css" href="/images/221130_qzmz_style.css">
+                <link rel="stylesheet" type="text/css" href="/comps/images/2022_qz_site_uc.css">
+		<style>.topnewsbox,.topnewsbox a {text-align: center;color:#1658a0;}
+			.topnewsbox h2 {font-size: 27px;font-weight: bold;margin-bottom: 14px;}
+			.topnewsbox>a {font-size: 18px;display: inline-block;margin: 0 4px;}
+			.topnewsbox p { font-size: 18px; }</style>
+	</head>
+	<body>
+		<!-- 头部统一宣传横幅 -->
+<!--<div>
+	<img src="/comps/banner/2023_banner_gqj.png" style="max-width: 100%;" alt="热烈庆祝中华人民共和国成立74周年" />
+</div>-->
+		<div class="warp">
+			<div class="header menu_hov">
+    <div class="row">
+        <div class="logo trt-col-9"><a href="/"><img src="/images/221118qzstj_logo.png" /></a></div>
+        <div class="header_line clearflx" role="serve" des="头部信息">
+            <div class="header_link_01">
+                <a href="http://www.gov.cn/" target="_blank" class="btn_base btn_outline btn_outline_primary btn_small">国务院</a>
+                <a href="http://www.fujian.gov.cn/" target="_blank" class="btn_base btn_outline btn_outline_primary btn_small">省政府</a>
+                <a href="http://www.quanzhou.gov.cn" target="_blank" class="btn_base btn_outline btn_outline_primary btn_small">市政府</a>
+            </div>
+            <div class="header_link_02">
+                <a href="javascript:void(0)" onclick="zh_tran('s');">简体版</a>
+                <a href="javascript:void(0)" onclick="zh_tran('t');">繁体版</a>
+            </div>
+            <!-- <div class="header_link_02 none_sm">
+                <a href="#">登录</a>
+            </div> -->
+            <span>网站支持IPV6</span>
+        </div>
+        <div class="menu_base menu_right menu_hd" role="navigation" des="站点主目录">
+            <ul class="clearflx" id="topMenu_xmb">
+                <li><a href="/">首页</a></li>
+                <li><a href="/xxgk">政务公开</a></li>
+                <li><a href="/wsbs">办事服务</a></li>
+                <li><a href="/gzcy">互动交流</a></li>
+                <li><a href="/xxgk/ztzl/">专题专栏</a></li>
+                <li><a href="/hjgl/">环境管理</a></li>
+            </ul>
+        </div>
+        <div class="search_fixed">
+            <form method="get" action="/js/" target="_blank">
+                <input type="text" placeholder="请输入搜索内容" name="key" value="" class="form-control" />
+                <button type="submit" class="btn_base"><i class="trt-iconfont trt-icon-sousuo"></i></button>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="banner_header">
+    <div class="row">
+        <div class="trt-row">
+            <div class="trt-col-7 trt-col-sm-0">
+                <div class="area_weather" id="todayHeader">
+                    <p>&ensp;</p><p>&ensp;</p>
+                </div>
+            </div>
+            <div class="trt-col-10 trt-col-sm-24" role= "interaction" des="搜索">
+                <form method="get" action="/js/" id="searchForm" target="_blank">
+                    <div class="search_area">
+                        <div class="input_select input_base input_group input_group_append input_group_prepend">
+
+                            <div class="input_group_prepend_01">
+                                <div class="select_group">
+                                    <div class="input_base input_suffix">
+                                        <input type="text" readonly="readonly" placeholder="本站" value="本站" class="input_inner" id="siteSearchTypeRes" />
+                                        <span class="input_icon"><i class="trt-iconfont trt-icon-shangxiajiantou"></i></span>
+                                        <div class="select_dropdown shadow_base" id="siteSearchType">
+                                            <ul>
+                                                <li data-value="本站" class="selected">本站</li>
+                                                <li data-value="站群">站群</li>
+                                                <li data-value="全省">全省</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <input type="hidden" id="isMain" name="isMain" value="" />
+                            <input type="hidden" id="siteId1" name="" value="" />
+                            <input type="text" placeholder="请输入您要搜索的内容" name="keyWord" value="" id="keyWord" class="input_inner" />
+                            <div class="input_group_append_01"><button type="submit" class="btn_base btn_default"><i class="trt-iconfont trt-icon-sousuo"></i></button></div>
+
+
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div   class="trt-col-7 trt-col-sm-24 text_align_right " >
+                <div class="aged_link"  >
+                    <a href="javascript:void(0)" id="Elderly" class="aged_link_01">长者模式</a>
+                    <a href="javascript:void(0)" id="barrierFreeBtn" class="aged_link_02 " >无障碍浏览</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+			<div class="main">
+				<div class="content">
+
+					<div class="row mar_t_large mar_t_base_sm">
+
+						<div class="topnewsbox mar_b_base">
+			
+							<h2>
+									                                
+								<a target="_blank" href="./xxgk/gzdt/szyw/202603/t20260316_3274423.htm">李强主持召开国务院常务会议</a>
+								
+							</h2>
+								                                
+								<a target="_blank" href="./xxgk/gzdt/szyw/202603/t20260309_3272875.htm">《政府工作报告》上的二维码</a>
+								                                
+								<a target="_blank" href="./xxgk/gzdt/szyw/202603/t20260309_3272874.htm">十四届全国人大四次会议在京开幕 习近平等在主席台就座</a>
+								                                
+								<a target="_blank" href="./xxgk/gzdt/szyw/202602/t20260225_3269132.htm">李强主持召开国务院常务会议 对抓紧做好春节假期后政府工作作出部署</a>
+							
+							
+						</div>
+
+					        <!-- 统一宣传横幅 -->
+<div class="el-row mar_b20 mar_b_large"  id="happy_banner">
+  
+</div>
+
+
+    <script>
+        var domainArr=[
+          /*{domain:'www.quanzhou.gov.cn',SiteIDCode:'3505000002',imgSrc:'/comps/banner/2025_banner_gqhf1.jpg'},
+          {domain:'fgw.quanzhou.gov.cn',SiteIDCode:'3505000049',imgSrc:'/comps/banner/2025_banner_gqhf1.jpg'},
+          {domain:'jyj.quanzhou.gov.cn',SiteIDCode:'3505000044',imgSrc:'/comps/banner/2025_banner_gqhf4.jpg'},
+          {domain:'kj.quanzhou.gov.cn',SiteIDCode:'3505000050',imgSrc:''},
+          {domain:'gxj.quanzhou.gov.cn',SiteIDCode:'3505000022',imgSrc:'/comps/banner/2025_banner_gqhf3.jpg'},
+          {domain:'mzzj.quanzhou.gov.cn',SiteIDCode:'3505000032',imgSrc:'/comps/banner/2025_banner_gqhf3.jpg'},
+          {domain:'gaj.quanzhou.gov.cn',SiteIDCode:'3505000045',imgSrc:'/comps/banner/2025_banner_gqhf3.jpg'},
+          {domain:'mzj.quanzhou.gov.cn',SiteIDCode:'3505000013',imgSrc:'/comps/banner/2025_banner_gqhf4.jpg'},
+          {domain:'sfj.quanzhou.gov.cn',SiteIDCode:'3505000027',imgSrc:'/comps/banner/2025_banner_gqhf3.jpg'},
+          {domain:'czj.quanzhou.gov.cn',SiteIDCode:'3505000015',imgSrc:'/comps/banner/2025_banner_gqhf4.jpg'},
+          {domain:'rsj.quanzhou.gov.cn',SiteIDCode:'3505000048',imgSrc:'/comps/banner/2025_banner_gqhf1.jpg'},
+          {domain:'zyghj.quanzhou.gov.cn',SiteIDCode:'3505000087',imgSrc:'/comps/banner/2025_banner_gqhf1.jpg'},
+          {domain:'sthjj.quanzhou.gov.cn',SiteIDCode:'3505000024',imgSrc:'/comps/banner/2025_banner_gqhf3.jpg'},
+          {domain:'zfjsj.quanzhou.gov.cn',SiteIDCode:'3505000011',imgSrc:'/comps/banner/2025_banner_gqhf3.jpg'},
+          {domain:'jtj.quanzhou.gov.cn',SiteIDCode:'3505000035',imgSrc:''},
+          {domain:'slj.quanzhou.gov.cn',SiteIDCode:'3505000055',imgSrc:''},
+          {domain:'nyncj.quanzhou.gov.cn',SiteIDCode:'3505000042',imgSrc:''},
+          {domain:'qzbofcom.quanzhou.gov.cn',SiteIDCode:'3505000005',imgSrc:'/comps/banner/2025_banner_gqhf4.jpg'},
+          {domain:'cbtb.quanzhou.gov.cn',SiteIDCode:'3505000001',imgSrc:'/comps/banner/2025_banner_gqhf1.jpg'},
+          {domain:'health.quanzhou.gov.cn',SiteIDCode:'3505000052',imgSrc:'/comps/banner/2025_banner_gqhf4.jpg'},
+          {domain:'yjj.quanzhou.gov.cn',SiteIDCode:'3505000040',imgSrc:'/comps/banner/2025_banner_gqhf3.jpg'},
+          {domain:'gzw.quanzhou.gov.cn',SiteIDCode:'3505000021',imgSrc:'/comps/banner/2025_banner_gqhf3.jpg'},
+          {domain:'lyj.quanzhou.gov.cn',SiteIDCode:'3505000036',imgSrc:'/comps/banner/2025_banner_gqhf1.jpg'},
+          {domain:'hyj.quanzhou.gov.cn',SiteIDCode:'3505000037',imgSrc:'/comps/banner/2025_banner_gqhf1.jpg'},
+          {domain:'scjgj.quanzhou.gov.cn',SiteIDCode:'3505000046',imgSrc:'/comps/banner/2025_banner_gqhf4.jpg'},
+          {domain:'tyj.quanzhou.gov.cn',SiteIDCode:'3505000034',imgSrc:'/comps/banner/2025_banner_gqhf4.jpg'},
+          {domain:'tjj.quanzhou.gov.cn',SiteIDCode:'3505000018',imgSrc:'/comps/banner/2025_banner_gqhf2.jpg'},
+          {domain:'qzybj.quanzhou.gov.cn',SiteIDCode:'3505000066',imgSrc:'/comps/banner/2025_banner_gqhf3.jpg'},
+          {domain:'qzjrb.gov.cn',SiteIDCode:'3505000029',imgSrc:'/comps/banner/2025_banner_gqhf4.jpg'},
+          {domain:'csglj.quanzhou.gov.cn',SiteIDCode:'3505000047',imgSrc:'/comps/banner/2025_banner_gqhf3.jpg'},
+          {domain:'xzfwzx.quanzhou.gov.cn',SiteIDCode:'3505000085',imgSrc:'/comps/banner/2025_banner_gqhf1.jpg'},
+          {domain:'qzgjj.quanzhou.gov.cn',SiteIDCode:'3505000064',imgSrc:'/comps/banner/2025_banner_gqhf3.jpg'},
+          {domain:'jjzd.quanzhou.gov.cn',SiteIDCode:'3505000053',imgSrc:'/comps/banner/2025_banner_gqhf3.jpg'},
+          {domain:'www.qzlc.gov.cn',SiteIDCode:'3505020002',imgSrc:'/comps/banner/2025_banner_gqhf4.jpg'},
+          {domain:'www.qzfz.gov.cn',SiteIDCode:'3505030001',imgSrc:'/comps/banner/2025_banner_gqhf1.jpg'},
+          {domain:'www.qzlj.gov.cn',SiteIDCode:'3505040001',imgSrc:'/comps/banner/2025_banner_gqhf4.jpg'},
+          {domain:'www.qg.gov.cn',SiteIDCode:'3505050001',imgSrc:'/comps/banner/2025_banner_gqhf3.jpg'},
+          {domain:'www.shishi.gov.cn',SiteIDCode:'3505810001',imgSrc:'/comps/banner/2025_banner_gqhf1.jpg'},
+          {domain:'www.jinjiang.gov.cn',SiteIDCode:'3505820021',imgSrc:'/comps/banner/2025_banner_gqhf1.jpg'},
+          {domain:'www.nanan.gov.cn',SiteIDCode:'3505830011',imgSrc:'/comps/banner/2025_banner_gqhf3.jpg'},
+          {domain:'www.huian.gov.cn',SiteIDCode:'3505210001',imgSrc:''},
+          {domain:'www.fjax.gov.cn',SiteIDCode:'3505240010',imgSrc:'/comps/banner/2025_banner_gqhf4.jpg'},
+          {domain:'www.fjyc.gov.cn',SiteIDCode:'3505250001',imgSrc:'/comps/banner/2025_banner_gqhf1.jpg'},
+          {domain:'www.dehua.gov.cn',SiteIDCode:'3505260020',imgSrc:'/comps/banner/2025_banner_gqhf1.jpg'},
+          {domain:'www.qzkfq.gov.cn',SiteIDCode:'3505000026',imgSrc:'/comps/banner/2025_banner_gqhf4.jpg'},
+          {domain:'www.qzts.gov.cn',SiteIDCode:'3505000061',imgSrc:'/comps/banner/2025_banner_gqhf1.jpg'}*/
+        ]
+
+		var siteIdMeta = document.querySelector('meta[name="SiteIDCode"]');
+
+        for (var index = 0; index < domainArr.length; index++) {
+            if(domainArr[index]['SiteIDCode']==siteIdMeta.content){
+              document.getElementById("happy_banner").innerHTML='\
+              <div>\
+                  <img src="'+domainArr[index]['imgSrc']+'" style="max-width: 100%;" />\
+              </div>';
+            }
+        }
+
+		document.getElementById("happy_banner").style.display="none";
+    </script>
+
+						<div class="">
+							<div class="trt-row trt-row-large">
+								<div class="trt-col-12 trt-col-sm-24 slb-trt-col-24" role="viewlist" des="图片轮播">
+									<div id="slideBox_01" class="slideBox_01" >
+										<span class="prev"><i class="trt-iconfont trt-icon-arrow-left"></i></span>
+										<span class="next"><i class="trt-iconfont trt-icon-arrow"></i></span>
+									 	<ul class="pic">
+											
+												<li>
+													<a href="./xxgk/gzdt/tpxw/202603/t20260327_3278462.htm" title="2026年全市生态环境保护工作暨督察整改等区域突出生态环境问题调度会召开" target="_blank">
+													<i class="picture_fixed" style="background-image: url(./xxgk/gzdt/tpxw/202603/W020260327458454173628.jpg);"></i>
+													<div class="txt-bg"></div><p>2026年全市生态环境保护工作暨督察整改等区...</p></a>
+												</li>
+											
+												<li>
+													<a href="./xxgk/gzdt/tpxw/202603/t20260317_3275003.htm" title="市生态环境局召开全市生态环境系统树立和践行正确政绩观学习教育动员部署会" target="_blank">
+													<i class="picture_fixed" style="background-image: url(./xxgk/gzdt/tpxw/202603/W020260323710356480218.jpg);"></i>
+													<div class="txt-bg"></div><p>市生态环境局召开全市生态环境系统树立和践...</p></a>
+												</li>
+											
+												<li>
+													<a href="./xxgk/gzdt/tpxw/202603/t20260313_3274301.htm" title="方寸微景，洞见生态——记单位春日小盆景制作比拼活动" target="_blank">
+													<i class="picture_fixed" style="background-image: url(./xxgk/gzdt/tpxw/202603/W020260313639621459352.jpg);"></i>
+													<div class="txt-bg"></div><p>方寸微景，洞见生态——记单位春日小盆景制...</p></a>
+												</li>
+											
+												<li>
+													<a href="./xxgk/gzdt/tpxw/202603/t20260302_3271086.htm" title="泉州市生态环境系统全面从严治党暨党风廉政建设专题分析会、意识形态和机关党建工作视频会议召开" target="_blank">
+													<i class="picture_fixed" style="background-image: url(./xxgk/gzdt/tpxw/202603/W020260302767303736115.jpg);"></i>
+													<div class="txt-bg"></div><p>泉州市生态环境系统全面从严治党暨党风廉政...</p></a>
+												</li>
+											
+												<li>
+													<a href="./xxgk/gzdt/tpxw/202602/t20260224_3269030.htm" title="市生态环境局召开年初重点工作调度推进会" target="_blank">
+													<i class="picture_fixed" style="background-image: url(./xxgk/gzdt/tpxw/202602/W020260225318550444360.jpg);"></i>
+													<div class="txt-bg"></div><p>市生态环境局召开年初重点工作调度推进会</p></a>
+												</li>
+											
+									 	</ul>
+									 	<ul class="num">
+											
+												<li class=""></li>
+											
+												<li class=""></li>
+											
+												<li class=""></li>
+											
+												<li class=""></li>
+											
+												<li class=""></li>
+											
+									 	</ul>
+									</div>
+								</div>
+								<div class="trt-col-12 trt-col-sm-24 slb-trt-col-24 mar_t_base_sm slb_mar_t_base"  role="viewlist" des="要闻信息">
+									<div class="tabs tabs_yw">
+										<div class="tabs_header tabs_hd">
+											<ul>
+												<li class="on"><a href="http://www.gov.cn/" target="_blank" title="国务院信息">国务院信息</a></li>
+												<li><a href="https://www.fujian.gov.cn/" target="_blank" title="福建要闻">福建要闻</a></li>
+												<li><a href="./xxgk/gzdt/qxdt/" title="工作动态">工作动态</a></li>
+											</ul>
+											<span class="more">
+												<a href="http://www.gov.cn/" target="_blank" title="国务院信息">更多&gt;</a>
+												<a href="https://www.fujian.gov.cn/" target="_blank" title="福建要闻">更多&gt;</a>
+												<a href="./xxgk/gzdt/qxdt/" title="工作动态">更多&gt;</a>
+											</span>
+										</div>
+										<div class="tabs_content tabs_bd">
+											<div class="list_base list_base_date_01">
+												<ul id="pushInfoUI">
+
+												</ul>
+												<span class="more">
+													<a href="https://www.gov.cn/" target="_blank" target="_blank" title="国务院信息">更多&gt;</a>
+												</span>
+											</div>
+											<div class="list_base list_base_date_01">
+												<ul id="rmrzInfoUI">
+												</ul>
+												<span class="more">
+													<a href="https://www.fujian.gov.cn/" target="_blank" title="福建要闻">更多&gt;</a>
+												</span>
+											</div>
+											<div class="list_base list_base_date_01">
+												<ul>
+													
+														<li><a href="./xxgk/gzdt/qxdt/202603/t20260327_3278498.htm" target="_blank" title="生态“城”绩，县域有“颜值”——安溪篇">生态“城”绩，县域有“颜值”——安溪篇</a><span>2026-03-27</span></li>
+													
+														<li><a href="./xxgk/gzdt/qxdt/202603/t20260327_3278497.htm" target="_blank" title="生态“城”绩，县域有“颜值”——惠安篇">生态“城”绩，县域有“颜值”——惠安篇</a><span>2026-03-27</span></li>
+													
+														<li><a href="./xxgk/gzdt/qxdt/202603/t20260327_3278462.htm" target="_blank" title="2026年全市生态环境保护工作暨督察整改等区域突出生态环境问题调度会召开">2026年全市生态环境保护工作暨督察整改等区域突出生态环境问题调度会召开</a><span>2026-03-27</span></li>
+													
+														<li><a href="./xxgk/gzdt/qxdt/202603/t20260326_3278270.htm" target="_blank" title="生态“城”绩，县域有“颜值”——南安篇">生态“城”绩，县域有“颜值”——南安篇</a><span>2026-03-26</span></li>
+													
+														<li><a href="./xxgk/gzdt/qxdt/202603/t20260326_3278269.htm" target="_blank" title="生态“城”绩，县域有“颜值”——晋江篇">生态“城”绩，县域有“颜值”——晋江篇</a><span>2026-03-26</span></li>
+													
+														<li><a href="./xxgk/gzdt/qxdt/202603/t20260325_3277936.htm" target="_blank" title="生态“城”绩，县域有“颜值”——石狮篇">生态“城”绩，县域有“颜值”——石狮篇</a><span>2026-03-25</span></li>
+													
+														<li><a href="./xxgk/gzdt/qxdt/202603/t20260325_3277935.htm" target="_blank" title="生态“城”绩，县域有“颜值”——泉港篇">生态“城”绩，县域有“颜值”——泉港篇</a><span>2026-03-25</span></li>
+													
+												</ul>
+												<span class="more">
+													<a href="./xxgk/gzdt/qxdt/" title="工作动态">更多&gt;</a>
+												</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="mar_t_base"  role="viewlist" des="宣传横幅">
+							<div class="pic_base">
+    <div class="bd">
+        <ul>
+            
+                <li>
+                    <a href="https://sthjj.quanzhou.gov.cn/xxgk/ztzl/xxxjpxsdts/" title="学习宣传贯彻习近平新时代中国特色社会主义思想" target="_blank">
+                    <i class="picture_fixed" style="background-image: url(./gnmk/xchf/202505/W020250519566813162260.png);"></i>
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="http://qz.wenming.cn/gygg/202107/t20210721_7225351.shtml" title="文明创建" target="_blank">
+                    <i class="picture_fixed" style="background-image: url(./gnmk/xchf/202107/W020221129562739732661.jpg);"></i>
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="./gnmk/xchf/202005/t20200513_2279122.htm" title="同护碧水蓝天共建美丽泉州" target="_blank">
+                    <i class="picture_fixed" style="background-image: url(./gnmk/xchf/202005/W020221219364084733876.png);"></i>
+                    </a>
+                </li>
+            
+        </ul>
+    </div>
+    <div class="num">
+        <ul>
+            
+                <li></li>
+            
+                <li></li>
+            
+                <li></li>
+            										
+        </ul>
+    </div>
+</div>
+						</div>
+						<div class="mar_t_base border_solid_01 pad_base pad_t_xs">
+							<div class="trt-row">
+								<div class="trt-col-8 trt-col-sm-24 slb-trt-col-24" role="viewlist" des="政府信息公开">
+									<div class="tabs">
+										<div class="tabs_header">
+											<ul>
+												<li class="on"><a href="./xxgk/zfxxgkzl/" target="_blank" title="政府信息公开">政府信息公开</a></li>
+											</ul>
+											<span class="more">
+												<a href="./xxgk/zfxxgkzl/" target="_blank" title="政府信息公开">进入专栏>></a>
+											</span>
+										</div>
+										<div class="icon_list_group icon_list_group_14">
+											<ul class="trt-row">
+												<li class="mar_b_small trt-col-12 trt-col-sm-24"><a href="./xxgk/zfxxgkzl/zfxxgkzn/" target="_blank" title="政府信息公开指南">政府信息公开指南</a></li>
+												<li class="mar_b_small trt-col-12 trt-col-sm-24"><a href="./xxgk/zfxxgkzl/zfxxgkgd/" target="_blank" title="政府信息公开制度">政府信息公开制度</a></li>
+												<li class="mar_b_small trt-col-12 trt-col-sm-24"><a href="./xxgk/zfxxgkzl/zfxxgkml/" target="_blank" title="法定主动公开内容">法定主动公开内容</a></li>
+												<li class="mar_b_small trt-col-12 trt-col-sm-24"><a href="./xxgk/zfxxgkzl/zfxxgkndbg/" target="_blank" title="政府信息公开年报">政府信息公开年报</a></li>
+												<li class="mar_b_small trt-col-12 trt-col-sm-24"><a href="./xxgk/zfxxgkzl/ysqgk/" target="_blank" title="政府信息公开申请">政府信息公开申请</a></li>
+												<li class="mar_b_small trt-col-12 trt-col-sm-24"><a href="./xxgk/zfxxgkzl/fjzfxxgk/" target="_blank" title="派驻分局政府信息公开">派驻分局政府信息公开</a></li>
+											</ul>
+										</div>
+										<div class="icon_list_group icon_list_group_05">
+											<ul class="trt-row">
+												<li class="trt-col-8">
+													<a href="./xxgk/jggk/jgsz/" target="_blank" title="机构设置"><span><i class="trt-iconfont trt-icon-jigouyinhang"></i></span><p>机构设置</p></a>
+												</li>
+												<li class="trt-col-8">
+													<a href="./xxgk/jggk/znjs/" target="_blank" title="机构职能"><span><i class="trt-iconfont trt-icon-bumenfuwu"></i></span><p>机构职能</p></a>
+												</li>
+												<li class="trt-col-8">
+													<a href="./xxgk/jggk/ldjs/" target="_blank" title="领导信息"><span><i class="trt-iconfont trt-icon-shengzhengfulingdao"></i></span><p>领导信息</p></a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="trt-col-16 trt-col-sm-24 slb-trt-col-24 mar_t_base_sm slb_mar_t_base" role="viewlist" des="政务公开">
+									<div class="tabs">
+										<div class="tabs_header tabs_hd mar_b_01">
+											<ul>
+												<li class="on"><a href="./xxgk/tzgg/" target="_blank" title="通知公告">通知公告</a></li>
+												<li class="on"><a href="./hjgl/hbsp/" target="_blank" title="行政许可">行政许可</a></li>
+												<li><a href="./xxgk/fgwj/" target="_blank" title="法规文件">法规文件</a></li>
+												<li><a href="./xxgk/zcfgjdjzf/" title="政策解读">政策解读</a></li>
+												<li><a href="./xxgk/ghjh/" title="规划计划">规划计划</a></li>
+												<li><a href="./xxgk/czzj/" title="财政资金">财政资金</a></li>
+												<li><a href="./xxgk/tjxx/" title="统计信息">统计信息</a></li>
+											</ul>
+											<span class="more">
+												<a href="./xxgk/tzgg/" target="_blank" title="通知公告">更多&gt;</a>
+												<a href="./hjgl/hbsp/" target="_blank" title="行政许可">更多&gt;</a>
+												<a href="./xxgk/fgwj/" target="_blank" title="法规文件">更多&gt;</a>
+												<a href="./xxgk/zcfgjdjzf/" target="_blank" title="政策解读">更多&gt;</a>
+												<a href="./xxgk/ghjh/" target="_blank" title="规划计划">更多&gt;</a>
+												<a href="./xxgk/czzj/" target="_blank" title="财政资金">更多&gt;</a>
+												<a href="./xxgk/tjxx/" target="_blank" title="财政资金">更多&gt;</a>
+											</span>
+										</div>
+										<div class="tabs_content tabs_bd">
+											<div class="list_base list_base_date_01 list_base_line_02">
+												<ul>
+													
+														<li><a href="./xxgk/tzgg/202603/t20260327_3278577.htm" target="_blank" title="泉州市生态环境局关于公开征集行政执法领域突出问题线索的公告">泉州市生态环境局关于公开征集行政执法领域突出问题线索的公告</a><span>2026-03-27</span></li>
+													
+														<li><a href="./xxgk/tzgg/202603/t20260327_3278507.htm" target="_blank" title="泉州市生态环境局关于信息系统商用密码应用服务项目控制价的询价公告">泉州市生态环境局关于信息系统商用密码应用服务项目控制价的询价公告</a><span>2026-03-27</span></li>
+													
+														<li><a href="./xxgk/zfxxgkzl/zfxxgkml/wryjdgl/202603/t20260327_3278505.htm" target="_blank" title="泉州市生态环境局关于福厦高速公路晋江至石狮支线（彭田连接线）地面配套工程（石永路至石锦路段）环境影响报告书的批复">泉州市生态环境局关于福厦高速公路晋江至石狮支线（彭田连接线）地面配套工程（石永路至石锦路段）环境影响报告书的批复</a><span>2026-03-27</span></li>
+													
+														<li><a href="./xxgk/zfxxgkzl/zfxxgkml/wryjdgl/202603/t20260327_3278503.htm" target="_blank" title="泉州市生态环境局关于晋江市永兴船舶制造有限公司钢质渔船建设项目环境影响报告书的批复">泉州市生态环境局关于晋江市永兴船舶制造有限公司钢质渔船建设项目环境影响报告书的批复</a><span>2026-03-27</span></li>
+													
+														<li><a href="./xxgk/zfxxgkzl/zfxxgkml/wryjdgl/202603/t20260327_3278501.htm" target="_blank" title="泉州市生态环境局关于永成新型墙体技改项目环境影响报告表的批复">泉州市生态环境局关于永成新型墙体技改项目环境影响报告表的批复</a><span>2026-03-27</span></li>
+													
+														<li><a href="./xxgk/zfxxgkzl/zfxxgkml/wryjdgl/202603/t20260327_3278499.htm" target="_blank" title="泉州市生态环境局关于94单元-燃料油等3个单元增设乙烯焦油长输管线至化工园区项目环境影响报告表的批复">泉州市生态环境局关于94单元-燃料油等3个单元增设乙烯焦油长输管线至化工园区项目环境影响报告表的批复</a><span>2026-03-27</span></li>
+													
+												</ul>
+												<span class="more">
+													<a href="./xxgk/tzgg/">更多&gt;&gt;</a>
+												</span>
+											</div>
+												<div class="list_base list_base_date_01 list_base_line_02">
+												<ul>
+													
+														<li><a href="./xxgk/zfxxgkzl/zfxxgkml/wryjdgl/202603/t20260327_3278505.htm" target="_blank" title="泉州市生态环境局关于福厦高速公路晋江至石狮支线（彭田连接线）地面配套工程（石永路至石锦路段）环境影响报告书的批复">泉州市生态环境局关于福厦高速公路晋江至石狮支线（彭田连接线）地面配套工程（石永路至石锦路段）环境影响报告书的批复</a><span>2026-03-27</span></li>
+													
+														<li><a href="./xxgk/zfxxgkzl/zfxxgkml/wryjdgl/202603/t20260327_3278503.htm" target="_blank" title="泉州市生态环境局关于晋江市永兴船舶制造有限公司钢质渔船建设项目环境影响报告书的批复">泉州市生态环境局关于晋江市永兴船舶制造有限公司钢质渔船建设项目环境影响报告书的批复</a><span>2026-03-27</span></li>
+													
+														<li><a href="./xxgk/zfxxgkzl/zfxxgkml/wryjdgl/202603/t20260327_3278501.htm" target="_blank" title="泉州市生态环境局关于永成新型墙体技改项目环境影响报告表的批复">泉州市生态环境局关于永成新型墙体技改项目环境影响报告表的批复</a><span>2026-03-27</span></li>
+													
+														<li><a href="./xxgk/zfxxgkzl/zfxxgkml/wryjdgl/202603/t20260327_3278499.htm" target="_blank" title="泉州市生态环境局关于94单元-燃料油等3个单元增设乙烯焦油长输管线至化工园区项目环境影响报告表的批复">泉州市生态环境局关于94单元-燃料油等3个单元增设乙烯焦油长输管线至化工园区项目环境影响报告表的批复</a><span>2026-03-27</span></li>
+													
+														<li><a href="./hjgl/hbsp/hpslqkgk/202603/t20260326_3278268.htm" target="_blank" title="泉州市生态环境局已受理建设项目环境影响报告书公示（国道G324线南安官桥泗溪至水头新营段公路工程）">泉州市生态环境局已受理建设项目环境影响报告书公示（国道G324线南安官桥泗溪至水头新营段公路工程）</a><span>2026-03-26</span></li>
+													
+														<li><a href="./hjgl/hbsp/hpslqkgk/202603/t20260326_3278253.htm" target="_blank" title="泉州市生态环境局已受理建设项目环境影响报告表公示（泉州安溪坑墘～安桥、坑墘～古山110千伏线路工程）">泉州市生态环境局已受理建设项目环境影响报告表公示（泉州安溪坑墘～安桥、坑墘～古山110千伏线路工程）</a><span>2026-03-26</span></li>
+													
+												</ul>
+												<span class="more">
+													<a href="./hjgl/hbsp/">更多&gt;&gt;</a>
+												</span>
+											</div>
+											<div class="list_base list_base_date_01 list_base_line_02">
+												<ul>
+													
+														<li><a href="./xxgk/fgwj/gjhbfl/202603/t20260313_3273941.htm" target="_blank" title="中华人民共和国生态环境法典">中华人民共和国生态环境法典</a><span>2026-03-13</span></li>
+													
+														<li><a href="./xxgk/fgwj/gjhbfl/202602/t20260210_3266454.htm" target="_blank" title="中华人民共和国自然保护区条例">中华人民共和国自然保护区条例</a><span>2026-02-10</span></li>
+													
+														<li><a href="./xxgk/fgwj/gjhbfl/202602/t20260210_3266453.htm" target="_blank" title="行政执法监督条例">行政执法监督条例</a><span>2026-02-10</span></li>
+													
+														<li><a href="./xxgk/fgwj/gjhbfl/202511/t20251128_3235876.htm" target="_blank" title="生态环境监测条例（中华人民共和国国务院令  第820号）">生态环境监测条例（中华人民共和国国务院令  第820号）</a><span>2025-11-28</span></li>
+													
+														<li><a href="./xxgk/fgwj/dffg/202601/t20260107_3251234.htm" target="_blank" title="福建省平安建设条例">福建省平安建设条例</a><span>2025-10-15</span></li>
+													
+														<li><a href="./xxgk/fgwj/dffg/202510/t20251010_3216616.htm" target="_blank" title="泉州市社会信用条例">泉州市社会信用条例</a><span>2025-10-10</span></li>
+													
+												</ul>
+												<span class="more">
+													<a href="./xxgk/fgwj/">更多&gt;&gt;</a>
+												</span>
+											</div>
+										
+											<div class="list_base list_base_date_01 list_base_line_02">
+												<ul>
+													
+														<li><a href="./xxgk/zcfgjdjzf/202603/t20260304_3271554.htm" target="_blank" title="一图读懂 | 关于做好污染地块环境修复与开发建设衔接的指导意见">一图读懂 | 关于做好污染地块环境修复与开发建设衔接的指导意见</a><span>2026-03-04</span></li>
+													
+														<li><a href="./xxgk/zcfgjdjzf/202512/t20251229_3247473.htm" target="_blank" title="《泉州市排污权储备和出让管理规定（2025年修订）》政策解读">《泉州市排污权储备和出让管理规定（2025年修订）》政策解读</a><span>2025-07-08</span></li>
+													
+														<li><a href="./xxgk/zcfgjdjzf/202506/t20250605_3177091.htm" target="_blank" title="一图读懂 | 2024年泉州市生态环境状况公报">一图读懂 | 2024年泉州市生态环境状况公报</a><span>2025-06-05</span></li>
+													
+														<li><a href="./xxgk/zcfgjdjzf/202501/t20250124_3135550.htm" target="_blank" title="一图读懂丨泉州市生态环境局服务和促进民营经济发展若干措施">一图读懂丨泉州市生态环境局服务和促进民营经济发展若干措施</a><span>2025-01-24</span></li>
+													
+														<li><a href="./xxgk/zcfgjdjzf/202501/t20250117_3131737.htm" target="_blank" title="图解：泉州市人民政府关于印发晋江洛阳江上游水资源保护补偿专项资金管理规定（2024年修订）的通知">图解：泉州市人民政府关于印发晋江洛阳江上游水资源保护补偿专项资金管理规定（2024年修订）的通知</a><span>2025-01-17</span></li>
+													
+														<li><a href="./xxgk/zcfgjdjzf/202501/t20250117_3131735.htm" target="_blank" title="《泉州市人民政府关于印发晋江洛阳江上游水资源保护补偿专项资金管理规定（2024年修订）的通知》政策解读">《泉州市人民政府关于印发晋江洛阳江上游水资源保护补偿专项资金管理规定（2024年修订）的通知》政策解读</a><span>2025-01-17</span></li>
+													
+												</ul>
+												<span class="more">
+													<a href="./xxgk/zcfgjdjzf/">更多&gt;&gt;</a>
+												</span>
+											</div>
+											<div class="list_base list_base_date_01 list_base_line_02">
+												<ul>
+													
+														<li><a href="./xxgk/zfxxgkzl/zfxxgkml/ghjh/202603/t20260321_3276473.htm" target="_blank" title="泉州市生态环境局关于印发2026年泉州市生态环境局涉企行政检查计划的通知">泉州市生态环境局关于印发2026年泉州市生态环境局涉企行政检查计划的通知</a><span>2026-03-21</span></li>
+													
+														<li><a href="./xxgk/ghjh/202601/t20260114_3255987.htm" target="_blank" title="泉州市生态环境局2025年法治政府建设情况">泉州市生态环境局2025年法治政府建设情况</a><span>2026-01-14</span></li>
+													
+														<li><a href="./xxgk/zfxxgkzl/zfxxgkml/ghjh/202508/t20250818_3201188.htm" target="_blank" title="泉州市生态环境局关于2025年涉企生态环境保护行政检查计划的通知">泉州市生态环境局关于2025年涉企生态环境保护行政检查计划的通知</a><span>2025-08-18</span></li>
+													
+														<li><a href="./xxgk/zfxxgkzl/zfxxgkml/ghjh/202507/t20250716_3190441.htm" target="_blank" title="泉州市生态环境局关于印发2025年度绩效评估工作方案的通知">泉州市生态环境局关于印发2025年度绩效评估工作方案的通知</a><span>2025-07-16</span></li>
+													
+														<li><a href="./xxgk/ghjh/202503/t20250307_3146547.htm" target="_blank" title="泉州市生态环境局2024年法治政府建设年度报告">泉州市生态环境局2024年法治政府建设年度报告</a><span>2025-03-07</span></li>
+													
+														<li><a href="./xxgk/zfxxgkzl/zfxxgkml/ghjh/202412/t20241209_3114578.htm" target="_blank" title="泉州市生态环境局关于印发泉州市生态文明建设示范区规划（2024-2035年）的通知">泉州市生态环境局关于印发泉州市生态文明建设示范区规划（2024-2035年）的通知</a><span>2024-12-09</span></li>
+													
+												</ul>
+												<span class="more">
+													<a href="./xxgk/ghjh/">更多&gt;&gt;</a>
+												</span>
+											</div>
+											<div class="list_base list_base_date_01 list_base_line_02">
+												<ul>
+													
+														<li><a href="./xxgk/czzj/202602/t20260210_3266402.htm" target="_blank" title="2026年度泉州市生态环境局部门预算">2026年度泉州市生态环境局部门预算</a><span>2026-02-10</span></li>
+													
+														<li><a href="./xxgk/czzj/202602/t20260210_3266393.htm" target="_blank" title="2026年度泉州市生态环境局（本级）单位预算">2026年度泉州市生态环境局（本级）单位预算</a><span>2026-02-10</span></li>
+													
+														<li><a href="./xxgk/czzj/202602/t20260210_3266384.htm" target="_blank" title="2026年度泉州市生态环境保护综合执法支队单位预算">2026年度泉州市生态环境保护综合执法支队单位预算</a><span>2026-02-10</span></li>
+													
+														<li><a href="./xxgk/czzj/202602/t20260210_3266382.htm" target="_blank" title="2026年度泉州市惠安生态环境局单位预算">2026年度泉州市惠安生态环境局单位预算</a><span>2026-02-10</span></li>
+													
+														<li><a href="./xxgk/czzj/202602/t20260210_3266379.htm" target="_blank" title="2026年度泉州市安溪生态环境局单位预算">2026年度泉州市安溪生态环境局单位预算</a><span>2026-02-10</span></li>
+													
+														<li><a href="./xxgk/czzj/202602/t20260210_3266367.htm" target="_blank" title="2026年度泉州市德化生态环境局单位预算">2026年度泉州市德化生态环境局单位预算</a><span>2026-02-10</span></li>
+													
+												</ul>
+												<span class="more">
+													<a href="./xxgk/czzj/">更多&gt;&gt;</a>
+												</span>
+											</div>
+											<div class="list_base list_base_date_01 list_base_line_02">
+												<ul>
+													
+														<li><a href="./xxgk/tjxx/202603/t20260325_3277937.htm" target="_blank" title="图解 | 2026年2月份泉州市水环境质量、环境空气质量月报">图解 | 2026年2月份泉州市水环境质量、环境空气质量月报</a><span>2026-03-25</span></li>
+													
+														<li><a href="./xxgk/tjxx/202603/t20260320_3276426.htm" target="_blank" title="泉州市环境空气质量月报（2026年2月）">泉州市环境空气质量月报（2026年2月）</a><span>2026-03-20</span></li>
+													
+														<li><a href="./xxgk/tjxx/202603/t20260320_3276424.htm" target="_blank" title="泉州市水环境质量月报（2026年2月）">泉州市水环境质量月报（2026年2月）</a><span>2026-03-20</span></li>
+													
+														<li><a href="./xxgk/tjxx/202602/t20260227_3269851.htm" target="_blank" title="图解 | 2026年1月份泉州市水环境质量、环境空气质量月报">图解 | 2026年1月份泉州市水环境质量、环境空气质量月报</a><span>2026-02-27</span></li>
+													
+														<li><a href="./xxgk/tjxx/202602/t20260225_3269256.htm" target="_blank" title="泉州市水环境质量月报（2026年1月）">泉州市水环境质量月报（2026年1月）</a><span>2026-02-25</span></li>
+													
+														<li><a href="./xxgk/tjxx/202602/t20260213_3268061.htm" target="_blank" title="泉州市环境空气质量月报（2026年1月）">泉州市环境空气质量月报（2026年1月）</a><span>2026-02-13</span></li>
+													
+												</ul>
+												<span class="more">
+													<a href="./xxgk/tjxx/">更多&gt;&gt;</a>
+												</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="mar_t_base">
+							<div class="trt-row">
+								<div class="trt-col-16 trt-col-sm-24 slb-trt-col-24">
+									<div class="border_solid_01 h_350 pad_base pad_t_xs">
+										<div class="trt-row">
+											<div class="trt-col-12 slb-trt-col-24 trt-col-sm-24" role="viewlist" des="办事服务">
+												<div class="tabs">
+													<div class="tabs_header">
+														<ul>
+															<li class="on"><a href="./wsbs/" target="_blank" title="办事服务">办事服务</a></li>
+														</ul>
+														<span class="more">
+															<a href="./wsbs/">更多>></a>
+														</span>
+													</div>
+													<div class="pic_base mar_t_base">
+														<a href="https://zwfw.fujian.gov.cn/person-todo/detail?userType=3&curStatus=dept&deptId=31CB511CD3939B142985031FE87166C8&siteUnid=9E2A2325D6AF32B44D58D611A0191F10&bsfwCount=3&xzjgCount=0" target="_blank" title="福建省网上办事大厅"><img src="/images/221130_qzmz_tu2.jpg" /></a>
+													</div>
+													<div class="icon_list_group icon_list_group_05 mar_t_base">
+														<ul class="trt-row">
+															<li class="trt-col-8">
+																<a href="https://zwfw.fujian.gov.cn/person-todo/detail?userType=3&curStatus=dept&deptId=31CB511CD3939B142985031FE87166C8&siteUnid=9E2A2325D6AF32B44D58D611A0191F10&bsfwCount=3&xzjgCount=0" target="_blank" title="办事指南"><span><i class="trt-iconfont trt-icon-zhinan"></i></span><p>办事指南</p></a>
+															</li>
+															<li class="trt-col-8">
+																<a href="https://zwfw.fujian.gov.cn/listopen/power-list/index?paramsType=qzqd&siteUnid=9E2A2325D6AF32B44D58D611A0191F10" target="_blank" title="权责清单"><span><i class="trt-iconfont trt-icon-chaxunbiaoguanli"></i></span><p>权责清单</p></a>
+															</li>
+															<li class="trt-col-8">
+																<a href="./wsbs/bsfwzy/bmfw/" target="_blank" title="便民服务"><span><i class="trt-iconfont trt-icon-changjing"></i></span><p>便民服务</p></a>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+											<div class="trt-col-12 slb-trt-col-24 trt-col-sm-24 mar_t_base_sm" role="viewlist" des="环境质量月报">
+												<div class="tabs">
+													<div class="tabs_header tabs_hd mar_b_01">
+														<ul>
+															<li class="on"><a href="./hjgl/hjzl/shjzlyb/" target="_blank" title="水环境质量月报">水环境质量月报</a></li>
+															<li><a href="./wsbs/bsfwzy/bmfw/qhjzlyb/" target="_blank" title="气环境质量月报">气环境质量月报</a></li>
+														</ul>
+														<span class="more">
+															<a href="./hjgl/hjzl/shjzlyb/" target="_blank" title="水环境质量月报">更多&gt;</a>
+															<a href="./wsbs/bsfwzy/bmfw/qhjzlyb/" target="_blank" title="气环境质量月报">更多&gt;</a>
+														</span>
+													</div>
+													<div class="tabs_content tabs_bd">
+														<div class="list_base list_base_date_01">
+															<ul>
+																
+																	<li><a href="./hjgl/hjzl/shjzlyb/202603/t20260320_3276424.htm" target="_blank" title="泉州市水环境质量月报（2026年2月）">泉州市水环境质量月报（2026年2月）</a><span>2026-03-20</span></li>
+																
+																	<li><a href="./hjgl/hjzl/shjzlyb/202602/t20260225_3269256.htm" target="_blank" title="泉州市水环境质量月报（2026年1月）">泉州市水环境质量月报（2026年1月）</a><span>2026-02-25</span></li>
+																
+																	<li><a href="./hjgl/hjzl/shjzlyb/202601/t20260121_3259328.htm" target="_blank" title="泉州市水环境质量月报（2025年12月）">泉州市水环境质量月报（2025年12月）</a><span>2026-01-21</span></li>
+																
+																	<li><a href="./hjgl/hjzl/shjzlyb/202512/t20251216_3242116.htm" target="_blank" title="泉州市水环境质量月报（2025年11月）">泉州市水环境质量月报（2025年11月）</a><span>2025-12-16</span></li>
+																
+																	<li><a href="./hjgl/hjzl/shjzlyb/202511/t20251120_3232924.htm" target="_blank" title="泉州市水环境质量月报（2025年10月）">泉州市水环境质量月报（2025年10月）</a><span>2025-11-20</span></li>
+																
+																	<li><a href="./hjgl/hjzl/shjzlyb/202510/t20251021_3220110.htm" target="_blank" title="泉州市水环境质量月报（2025年9月）">泉州市水环境质量月报（2025年9月）</a><span>2025-10-21</span></li>
+																
+															</ul>
+															<span class="more">
+																<a href="./hjgl/hjzl/shjzlyb/">更多&gt;</a>
+															</span>
+														</div>
+														<div class="list_base list_base_date_01">
+															<ul>
+																
+																	<li><a href="./wsbs/bsfwzy/bmfw/qhjzlyb/202603/t20260320_3276426.htm" target="_blank" title="泉州市环境空气质量月报（2026年2月）">泉州市环境空气质量月报（2026年2月）</a><span>2026-03-20</span></li>
+																
+																	<li><a href="./wsbs/bsfwzy/bmfw/qhjzlyb/202602/t20260213_3268061.htm" target="_blank" title="泉州市环境空气质量月报（2026年1月）">泉州市环境空气质量月报（2026年1月）</a><span>2026-02-13</span></li>
+																
+																	<li><a href="./wsbs/bsfwzy/bmfw/qhjzlyb/202601/t20260127_3261742.htm" target="_blank" title="泉州市环境空气质量月报（2025年12月）">泉州市环境空气质量月报（2025年12月）</a><span>2026-01-27</span></li>
+																
+																	<li><a href="./wsbs/bsfwzy/bmfw/qhjzlyb/202512/t20251226_3246626.htm" target="_blank" title="泉州市环境空气质量月报（2025年11月）">泉州市环境空气质量月报（2025年11月）</a><span>2025-12-26</span></li>
+																
+																	<li><a href="./wsbs/bsfwzy/bmfw/qhjzlyb/202511/t20251119_3232548.htm" target="_blank" title="泉州市环境空气质量月报（2025年10月）">泉州市环境空气质量月报（2025年10月）</a><span>2025-11-19</span></li>
+																
+																	<li><a href="./wsbs/bsfwzy/bmfw/qhjzlyb/202510/t20251017_3219571.htm" target="_blank" title="泉州市环境空气质量月报（2025年9月）">泉州市环境空气质量月报（2025年9月）</a><span>2025-10-17</span></li>
+																
+															</ul>
+															<span class="more">
+																<a href="./wsbs/bsfwzy/bmfw/qhjzlyb/">更多&gt;</a>
+															</span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="trt-col-8 trt-col-sm-24 mar_t_base_sm slb-trt-col-24" role="viewlist" des="在线访谈">
+									<div class="border_solid_01 h_350 pad_base pad_t_xs">
+										<div class="tabs">
+											<div class="tabs_header">
+												<ul>
+													<li class="on"><a href="./gzcy/zxft/"  target="_blank" title="在线访谈">在线访谈</a></li>
+												</ul>
+												<span class="more">
+													<a href="./gzcy/zxft/"  target="_blank" title="在线访谈">更多>></a>
+												</span>
+											</div>
+											<div class="trt-row" ms-controller="firstList" ms-if-loop="$index<1" ms-repeat="list" >
+												
+													<div class="trt-col-13 trt-col-sm-24">
+														<div ms-html="el|getDocImg|html">
+															
+														</div>
+													</div>
+													<div class="trt-col-11 trt-col-sm-24 mar_t_01">
+														<div class="text_align_justify">
+															<b class="line_h_base">
+																<a ms-visible="el.interviewtype==1"  ms-attr-href="'./gzcy/zxft/index_15561.htm?id='+el.interviewid"    title="el.name" target="_blank" ms-html="el.name"></a>
+																<a ms-visible="el.interviewtype==3"  ms-attr-href="el.outerUrl"    title="el.name" target="_blank" ms-html="el.name"></a>
+																														
+															</b>
+														</div>
+													</div>
+												
+											</div>
+											<div class="icon_list_group icon_list_group_04 mar_t_base">
+												<ul class="trt-row">
+													<li class="trt-col-8">
+														<a href="./gzcy/ldxx/" target="_blank" title="领导信箱"><i class="trt-iconfont trt-icon-xinxiang-01"></i><p>领导信箱</p></a>
+													</li>
+													<li class="trt-col-8">
+														<a href="./gzcy/myzj/" target="_blank" title="民意征集"><i class="trt-iconfont trt-icon-send-sms"></i><p>民意征集</p></a>
+													</li>
+													<li class="trt-col-8">
+														<a href="./gzcy/wsdc/" target="_blank" title="网上调查"><i class="trt-iconfont trt-icon-shenqing"></i><p>网上调查</p></a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="mar_t_base">
+							<div class="piclink_group piclink_group_01" role="viewlist" des="系统平台">
+								<div class="bd piclink_list">
+									<ul class="trt-row">
+										
+											<li class="trt-col-6 trt-col-sm-12 trt-col-md-24 slb-trt-col-12 slb-trt-col-md-24">
+												<div class="piclink_conent">
+													<a  rel="noreferrer" href="https://sthjj.quanzhou.gov.cn/gzcy/zqzx/" title="助企咨询" target="_blank">
+														<i><img src="./qt/ptxt/202509/W020250904597784168763.png" alt="read_image.png"/></i>
+														<p><span>助企咨询</span></p>
+													</a>
+												</div>
+											</li>
+										
+											<li class="trt-col-6 trt-col-sm-12 trt-col-md-24 slb-trt-col-12 slb-trt-col-md-24">
+												<div class="piclink_conent">
+													<a  rel="noreferrer" href="http://1.202.247.200/netreport/netreport/index/" title="全国生态环境信访投诉举报平台" target="_blank">
+														<i><img src="./qt/ptxt/202005/W020221124533060099090.png" alt="221027qznyj_icon16.png"/></i>
+														<p><span>全国生态环境信访投诉举报平台</span></p>
+													</a>
+												</div>
+											</li>
+										
+											<li class="trt-col-6 trt-col-sm-12 trt-col-md-24 slb-trt-col-12 slb-trt-col-md-24">
+												<div class="piclink_conent">
+													<a  rel="noreferrer" href="https://credit.quanzhou.gov.cn/#/double-publicity-info?creditCode=3505021" title="信用中国（福建泉州）<br>（行政许可/行政处罚公示）" target="_blank">
+														<i><img src="./qt/ptxt/202312/W020250904620384597293.png" alt="read_image (1).png"/></i>
+														<p><span>信用中国（福建泉州）<br>（行政许可/行政处罚公示）</span></p>
+													</a>
+												</div>
+											</li>
+										
+											<li class="trt-col-6 trt-col-sm-12 trt-col-md-24 slb-trt-col-12 slb-trt-col-md-24">
+												<div class="piclink_conent">
+													<a  rel="noreferrer" href="http://220.160.52.213:10053/idp-province/#/home" title="福建省企业环境信息依法披露" target="_blank">
+														<i><img src="./qt/ptxt/202302/W020230223591838104014.png" alt="W020221124537281185585.png"/></i>
+														<p><span>福建省企业环境信息依法披露</span></p>
+													</a>
+												</div>
+											</li>
+										
+											<li class="trt-col-6 trt-col-sm-12 trt-col-md-24 slb-trt-col-12 slb-trt-col-md-24">
+												<div class="piclink_conent">
+													<a  rel="noreferrer" href="http://iconsult-eia.china-eia.com/" title="全国环评技术评估服务咨询平台" target="_blank">
+														<i><img src="./qt/ptxt/202101/W020221124532790960078.png" alt="221027qznyj_icon8.png"/></i>
+														<p><span>全国环评技术评估服务咨询平台</span></p>
+													</a>
+												</div>
+											</li>
+										
+											<li class="trt-col-6 trt-col-sm-12 trt-col-md-24 slb-trt-col-12 slb-trt-col-md-24">
+												<div class="piclink_conent">
+													<a  rel="noreferrer" href="http://rr.mee.gov.cn/rsmsreq/login.jsp" title="辐射安全申报系统" target="_blank">
+														<i><img src="./qt/ptxt/202004/W020221124533210021360.png" alt="221027qznyj_icon9.png"/></i>
+														<p><span>辐射安全申报系统</span></p>
+													</a>
+												</div>
+											</li>
+										
+											<li class="trt-col-6 trt-col-sm-12 trt-col-md-24 slb-trt-col-12 slb-trt-col-md-24">
+												<div class="piclink_conent">
+													<a  rel="noreferrer" href="http://220.160.52.213:10072/fjqq/" title="福建省生态环境亲清服务平台" target="_blank">
+														<i><img src="./qt/ptxt/202004/W020221124533558532334.png" alt="221027qznyj_icon11.png"/></i>
+														<p><span>福建省生态环境亲清服务平台</span></p>
+													</a>
+												</div>
+											</li>
+										
+											<li class="trt-col-6 trt-col-sm-12 trt-col-md-24 slb-trt-col-12 slb-trt-col-md-24">
+												<div class="piclink_conent">
+													<a  rel="noreferrer" href="https://beian.china-eia.com/f/announcement/announcementShow" title="建设项目环境影响登记表信息公开" target="_blank">
+														<i><img src="./qt/ptxt/202004/W020221124533761554414.png" alt="221027qznyj_icon13.png"/></i>
+														<p><span>建设项目环境影响登记表信息公开</span></p>
+													</a>
+												</div>
+											</li>
+										
+											<li class="trt-col-6 trt-col-sm-12 trt-col-md-24 slb-trt-col-12 slb-trt-col-md-24">
+												<div class="piclink_conent">
+													<a  rel="noreferrer" href="https://beian.china-eia.com/" title="建设项目环境影响登记表备案系统" target="_blank">
+														<i><img src="./qt/ptxt/202004/W020221124537281185585.png" alt="221027qznyj_icon12.png"/></i>
+														<p><span>建设项目环境影响登记表备案系统</span></p>
+													</a>
+												</div>
+											</li>
+										
+											<li class="trt-col-6 trt-col-sm-12 trt-col-md-24 slb-trt-col-12 slb-trt-col-md-24">
+												<div class="piclink_conent">
+													<a  rel="noreferrer" href="https://wryfb.fjemc.org.cn/" title="福建省污染源监测信息综合发布平台" target="_blank">
+														<i><img src="./qt/ptxt/202004/W020221124537410638225.png" alt="221027qznyj_icon15.png"/></i>
+														<p><span>福建省污染源监测信息综合发布平台</span></p>
+													</a>
+												</div>
+											</li>
+										
+											<li class="trt-col-6 trt-col-sm-12 trt-col-md-24 slb-trt-col-12 slb-trt-col-md-24">
+												<div class="piclink_conent">
+													<a  rel="noreferrer" href="https://ljgk.envsc.cn/index.html?rg=EE2148A6BDA59E96E018CF6F5F554B14" title="垃圾焚烧厂自动监测数据公开" target="_blank">
+														<i><img src="./qt/ptxt/202004/W020221124537521526255.png" alt="221027qznyj_icon14.png"/></i>
+														<p><span>垃圾焚烧厂自动监测数据公开</span></p>
+													</a>
+												</div>
+											</li>
+										
+											<li class="trt-col-6 trt-col-sm-12 trt-col-md-24 slb-trt-col-12 slb-trt-col-md-24">
+												<div class="piclink_conent">
+													<a  rel="noreferrer" href="http://223.99.217.146:45040/dataVis/BI/#/dataPublish" title="泉州市功能区声环境质量信息" target="_blank">
+														<i><img src="./qt/ptxt/202512/W020251223315819134599.png" alt="read_image (2).png"/></i>
+														<p><span>泉州市功能区声环境质量信息</span></p>
+													</a>
+												</div>
+											</li>
+										
+									</ul>
+								</div>
+								<div class="num">
+									<ul>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="mar_t_base">
+							<div class="tabs">
+								<div class="tabs_header">
+										<ul>
+												<li class="on"><a href="./xxgk/ztzl/" target="_blank" title="专题专栏">专题专栏</a></li>
+										</ul>
+										<span class="more">
+												<a href="./xxgk/ztzl/">更多&gt;&gt;</a>
+										</span>
+								</div>
+							</div>
+						</div>
+						<div class="piclink_group piclink_group_06 mar_t_base mar_b_small mar_t_base mar_t_base0_sm" id="ztzl_list" role="viewlist" des="专题专栏">
+							<span class="prev"><i class="trt-iconfont trt-icon-arrow-left"></i></span>
+							<span class="next"><i class="trt-iconfont trt-icon-arrow"></i></span>
+							<div class="bd piclink_list">
+								<ul class="trt-row">
+									
+
+										
+											<li class=" trt-col-6 trt-col-sm-12 trt-col-md-24 slb-trt-col-12 slb-trt-col-md-24">
+												<div class="piclink_conent">
+													<div class="piclink_text">
+														<h3><a href="https://sthjj.quanzhou.gov.cn/xxgk/ztzl/slhjxzqzjgxxjy/" target="_blank" title="树立和践行正确政绩观学习教育专栏">树立和践行正确政绩观学习教育专栏</a></h3>
+													</div>
+												</div>
+											</li>						
+										
+									
+									
+
+										
+											<li class=" trt-col-6 trt-col-sm-12 trt-col-md-24 slb-trt-col-12 slb-trt-col-md-24">
+												<div class="piclink_conent">
+													<div class="piclink_text">
+														<h3><a href="http://sthjj.quanzhou.gov.cn/xxgk/ztzl/xxxjpxsdts" target="_blank" title="学习宣传贯彻习近平新时代中国特色社会主义思想">学习宣传贯彻习近平新时代中国特色社会主义思想</a></h3>
+													</div>
+												</div>
+											</li>						
+										
+									
+									
+
+										
+											<li class=" trt-col-6 trt-col-sm-12 trt-col-md-24 slb-trt-col-12 slb-trt-col-md-24">
+												<div class="piclink_conent">
+													<div class="piclink_text">
+														<h3><a href="http://sthjj.quanzhou.gov.cn/xxgk/ztzl/zjjgfwlx/" target="_blank" title="环境影响评价文件监督管理">环境影响评价文件监督管理</a></h3>
+													</div>
+												</div>
+											</li>						
+										
+									
+									
+
+										
+											<li class=" trt-col-6 trt-col-sm-12 trt-col-md-24 slb-trt-col-12 slb-trt-col-md-24">
+												<div class="piclink_conent">
+													<div class="piclink_text">
+														<h3><a href="http://sthjj.quanzhou.gov.cn/xxgk/ztzl/xzzfgs" target="_blank" title="行政执法公示">行政执法公示</a></h3>
+													</div>
+												</div>
+											</li>						
+										
+									
+									
+
+										
+											<li class=" trt-col-6 trt-col-sm-12 trt-col-md-24 slb-trt-col-12 slb-trt-col-md-24">
+												<div class="piclink_conent">
+													<div class="piclink_text">
+														<h3><a href="http://sthjj.quanzhou.gov.cn/xxgk/ztzl/sxzxgwrx/" target="_blank" title="深学争优、敢为争先、实干争效">深学争优、敢为争先、实干争效</a></h3>
+													</div>
+												</div>
+											</li>						
+										
+									
+									
+
+										
+											<li class=" trt-col-6 trt-col-sm-12 trt-col-md-24 slb-trt-col-12 slb-trt-col-md-24">
+												<div class="piclink_conent">
+													<div class="piclink_text">
+														<h3><a href="http://sthjj.quanzhou.gov.cn/xxgk/ztzl/wmcj/" target="_blank" title="文明创建">文明创建</a></h3>
+													</div>
+												</div>
+											</li>						
+										
+									
+									
+
+										
+											<li class=" trt-col-6 trt-col-sm-12 trt-col-md-24 slb-trt-col-12 slb-trt-col-md-24">
+												<div class="piclink_conent">
+													<div class="piclink_text">
+														<h3><a href="https://sthjj.quanzhou.gov.cn/hjgl/wrfz/dlkh/202507/t20250723_3192347.htm" target="_blank" title="非法倾倒处置固体废物问题线索征集">非法倾倒处置固体废物问题线索征集</a></h3>
+													</div>
+												</div>
+											</li>						
+										
+									
+									
+
+										
+									
+									
+
+										
+									
+									
+
+										
+									
+									
+
+										
+									
+									
+
+										
+									
+									
+
+										
+									
+									
+
+										
+									
+									
+
+										
+									
+									
+
+										
+									
+									
+
+										
+									
+									
+
+										
+									
+									
+
+										
+									
+									
+
+										
+									
+									
+
+										
+									
+									
+
+										
+									
+									
+
+										
+									
+									
+
+										
+									
+									
+
+										
+									
+									
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer">
+    <div class="border_t_solid_01"></div>
+    <div class="row"  role= "navigation" des="网站链接">
+        <div class="out_links">
+            <ul class="trt-row">
+                <li class="trt-col-8">
+                    <p>泉州政务网站</p>
+                    <div class="shadow_base">
+                        <ul class="trt-row">
+                            
+                                <li class="trt-col-ave-7 trt-col-sm-24"><a href="http://www.quanzhou.gov.cn/" target="_blank" title="泉州市人民政府">泉州市人民政府</a></li>
+                                <li class="trt-col-ave-7 trt-col-sm-24"><a href="http://fgw.quanzhou.gov.cn/" target="_blank" title="发展和改革委员会">发展和改革委员会</a></li>
+                                <li class="trt-col-ave-7 trt-col-sm-24"><a href="http://jyj.quanzhou.gov.cn/" target="_blank" title="教育局">教育局</a></li>
+                                <li class="trt-col-ave-7 trt-col-sm-24"><a href="http://kj.quanzhou.gov.cn/" target="_blank" title="科学技术局">科学技术局</a></li>
+                                <li class="trt-col-ave-7 trt-col-sm-24"><a href="http://gxj.quanzhou.gov.cn/" target="_blank" title="工业和信息化局">工业和信息化局</a></li>
+                                <li class="trt-col-ave-7 trt-col-sm-24"><a href="http://mzzj.quanzhou.gov.cn/" target="_blank" title="民族与宗教事务局">民族与宗教事务局</a></li>
+                                <li class="trt-col-ave-7 trt-col-sm-24"><a href="http://gaj.quanzhou.gov.cn/" target="_blank" title="公安局">公安局</a></li>
+                                <li class="trt-col-ave-7 trt-col-sm-24"><a href="http://mzj.quanzhou.gov.cn/" target="_blank" title="民政局">民政局</a></li>
+                                <li class="trt-col-ave-7 trt-col-sm-24"><a href="http://sfj.quanzhou.gov.cn/" target="_blank" title="司法局">司法局</a></li>
+                                <li class="trt-col-ave-7 trt-col-sm-24"><a href="http://czj.quanzhou.gov.cn/" target="_blank" title="财政局">财政局</a></li>
+                                <li class="trt-col-ave-7 trt-col-sm-24"><a href="http://rsj.quanzhou.gov.cn/" target="_blank" title="人力资源和社会保障局">人力资源和社会保障局</a></li>
+                                <li class="trt-col-ave-7 trt-col-sm-24"><a href="http://zyghj.quanzhou.gov.cn/" target="_blank" title="自然资源和规划局">自然资源和规划局</a></li>
+                                <li class="trt-col-ave-7 trt-col-sm-24"><a href="http://zfjsj.quanzhou.gov.cn/" target="_blank" title="住房和城乡建设局">住房和城乡建设局</a></li>
+                                <li class="trt-col-ave-7 trt-col-sm-24"><a href="http://jtj.quanzhou.gov.cn/" target="_blank" title="交通运输局">交通运输局</a></li>
+                                <li class="trt-col-ave-7 trt-col-sm-24"><a href="http://nyncj.quanzhou.gov.cn/" target="_blank" title="农业农村局">农业农村局</a></li>
+                                <li class="trt-col-ave-7 trt-col-sm-24"><a href="http://lyj.quanzhou.gov.cn/" target="_blank" title="林业局">林业局</a></li>
+                                <li class="trt-col-ave-7 trt-col-sm-24"><a href="http://qzybj.quanzhou.gov.cn/" target="_blank" title="医疗保障局">医疗保障局</a></li>
+                                <li class="trt-col-ave-7 trt-col-sm-24"><a href="http://scjgj.quanzhou.gov.cn/" target="_blank" title="市场监督管理局">市场监督管理局</a></li>
+                                <li class="trt-col-ave-7 trt-col-sm-24"><a href="http://csglj.quanzhou.gov.cn/" target="_blank" title="城市管理局">城市管理局</a></li>
+                                <li class="trt-col-ave-7 trt-col-sm-24"><a href="http://hyj.quanzhou.gov.cn/" target="_blank" title="海洋与渔业局">海洋与渔业局</a></li>
+                                <li class="trt-col-ave-7 trt-col-sm-24"><a href="http://slj.quanzhou.gov.cn/" target="_blank" title="水利局">水利局</a></li>
+                                <li class="trt-col-ave-7 trt-col-sm-24"><a href="http://cbtb.quanzhou.gov.cn/" target="_blank" title="文化广电和旅游局">文化广电和旅游局</a></li>
+                                <li class="trt-col-ave-7 trt-col-sm-24"><a href="http://qzbofcom.quanzhou.gov.cn/" target="_blank" title="商务局">商务局</a></li>
+                                <li class="trt-col-ave-7 trt-col-sm-24"><a href="http://tyj.quanzhou.gov.cn/" target="_blank" title="体育局">体育局</a></li>
+                                <li class="trt-col-ave-7 trt-col-sm-24"><a href="http://health.quanzhou.gov.cn/" target="_blank" title="卫生健康委员会">卫生健康委员会</a></li>
+                                <li class="trt-col-ave-7 trt-col-sm-24"><a href="http://tjj.quanzhou.gov.cn/" target="_blank" title="统计局">统计局</a></li>
+                                <li class="trt-col-ave-7 trt-col-sm-24"><a href="http://yjj.quanzhou.gov.cn/" target="_blank" title="应急管理局">应急管理局</a></li>
+                                <li class="trt-col-ave-7 trt-col-sm-24"><a href="http://gzw.quanzhou.gov.cn/" target="_blank" title="国有资产监督管理委员会">国有资产监督管理...</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="trt-col-8">
+                    <p>省内环保网站</p>
+                    <div class="shadow_base">
+                        <ul class="trt-row">
+                            
+                                <li class="trt-col-ave-7 trt-col-sm-24"><a href="http://sthjt.fujian.gov.cn/" target="_blank" title="福建省生态环境厅">福建省生态环境厅</a></li>
+                                <li class="trt-col-ave-7 trt-col-sm-24"><a href="http://www.fuzhou.gov.cn/zgfzzt/shbj/" target="_blank" title="福州市生态环境局">福州市生态环境局</a></li>
+                                <li class="trt-col-ave-7 trt-col-sm-24"><a href="http://sthjj.xm.gov.cn/" target="_blank" title="厦门市生态环境局">厦门市生态环境局</a></li>
+                                <li class="trt-col-ave-7 trt-col-sm-24"><a href="http://hbj.zhangzhou.gov.cn/" target="_blank" title="漳州市生态环境局">漳州市生态环境局</a></li>
+                                <li class="trt-col-ave-7 trt-col-sm-24"><a href="http://shb.sm.gov.cn/" target="_blank" title="三明市生态环境局">三明市生态环境局</a></li>
+                                <li class="trt-col-ave-7 trt-col-sm-24"><a href="http://sthjj.putian.gov.cn/" target="_blank" title="莆田市生态环境局">莆田市生态环境局</a></li>
+                                <li class="trt-col-ave-7 trt-col-sm-24"><a href="http://sthjj.np.gov.cn/" target="_blank" title="南平市生态环境局">南平市生态环境局</a></li>
+                                <li class="trt-col-ave-7 trt-col-sm-24"><a href="http://sthjj.longyan.gov.cn/" target="_blank" title="龙岩市生态环境局">龙岩市生态环境局</a></li>
+                                <li class="trt-col-ave-7 trt-col-sm-24"><a href="http://sthjj.ningde.gov.cn/" target="_blank" title="宁德市生态环境局">宁德市生态环境局</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="trt-col-8">
+                    <p>区县环保网站</p>
+                    <div class="shadow_base">
+                        <ul class="trt-row">
+                            
+                                <li class="trt-col-ave-7 trt-col-sm-24"><a href="https://www.qzlc.gov.cn/xxgk/hjbhxx/" target="_blank" title="泉州市鲤城生态环境局">泉州市鲤城生态环境局</a></li>
+                                <li class="trt-col-ave-7 trt-col-sm-24"><a href="https://www.qzfz.gov.cn/zwgk/zdgkxx/hjbh/" target="_blank" title="泉州市丰泽生态环境局">泉州市丰泽生态环境局</a></li>
+                                <li class="trt-col-ave-7 trt-col-sm-24"><a href="http://www.qzlj.gov.cn/zwgk/zdgkxx/hjbh/" target="_blank" title="泉州市洛江生态环境局">泉州市洛江生态环境局</a></li>
+                                <li class="trt-col-ave-7 trt-col-sm-24"><a href="https://www.qg.gov.cn/zwgk/zdxxgk/hjbh/" target="_blank" title="泉州市泉港生态环境局">泉州市泉港生态环境局</a></li>
+                                <li class="trt-col-ave-7 trt-col-sm-24"><a href="https://www.shishi.gov.cn/zwgk/zwgkzdgz/hjbh/" target="_blank" title="泉州市石狮生态环境局">泉州市石狮生态环境局</a></li>
+                                <li class="trt-col-ave-7 trt-col-sm-24"><a href="https://www.jinjiang.gov.cn/xxgk/zdxxgk/hjbh/" target="_blank" title="泉州市晋江生态环境局">泉州市晋江生态环境局</a></li>
+                                <li class="trt-col-ave-7 trt-col-sm-24"><a href="https://www.nanan.gov.cn/zwgk/zfxxgkzdgz/hjbh/" target="_blank" title="泉州市南安生态环境局">泉州市南安生态环境局</a></li>
+                                <li class="trt-col-ave-7 trt-col-sm-24"><a href="http://www.huian.gov.cn/zwgk/zdxxgk/hjbh/" target="_blank" title="泉州市惠安生态环境局">泉州市惠安生态环境局</a></li>
+                                <li class="trt-col-ave-7 trt-col-sm-24"><a href="http://www.fjax.gov.cn/zwgk/zdgkxx/hjbh/" target="_blank" title="泉州市安溪生态环境局">泉州市安溪生态环境局</a></li>
+                                <li class="trt-col-ave-7 trt-col-sm-24"><a href="https://www.fjyc.gov.cn/zwgk/hjbh/" target="_blank" title="泉州市永春生态环境局">泉州市永春生态环境局</a></li>
+                                <li class="trt-col-ave-7 trt-col-sm-24"><a href="http://www.dehua.gov.cn/zwgk/zdxxgk/hjbh/" target="_blank" title="泉州市德化生态环境局">泉州市德化生态环境局</a></li>
+                                <li class="trt-col-ave-7 trt-col-sm-24"><a href="http://www.qzkfq.gov.cn/zwgk/zdxxgk/hjbh/" target="_blank" title="泉州经济技术开发区自然资源和规划建设局">泉州经济技术开发...</a></li>
+                                <li class="trt-col-ave-7 trt-col-sm-24"><a href="http://www.qzts.gov.cn/zwgk/zdxxgk/hjbh/index.htm" target="_blank" title="泉州台商投资区农林水与生态环境局">泉州台商投资区农...</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            <div class="out_links_close shadow_base"><i class="trt-iconfont trt-icon-dacha"></i></div>
+        </div>
+    </div>
+    <div class="border_b_solid_01"></div>
+    <div class="row mar_t_base mar_t_small_sm" role="serve" des="底部信息">
+        <div class="trt-row clearflx">
+            <div class="trt-col-12 trt-col-sm-24 website_info">
+                <p><a href="/qt/wzxx/lxwm/">联系我们</a><em>|</em><a href="/qt/wzxx/wzdt/">网站地图</a><em>|</em><a href="/qt/wzxx/wzsm/">版权声明</a><em>|</em><a href="/qt/wzxx/bzxx/">帮助信息</a><em>|</em><a href="/qt/wzxx/ysyaq/">隐私安全</a></p>
+                <p><span><a href="http://beian.miit.gov.cn/" target="_blank">闽ICP备11010133号-2</a></span><span><a href="http://beian.miit.gov.cn/" target="_blank">闽ICP备11010133号-7</a></span><span><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=35050302000136" target="_blank"><img src="/images/babs.png" />闽公网安备 35050302000136号</a></span></p>
+                <p><span>网站标识码:3505000024</span><span>访客数总量：<em id="siteCount"></em></span></p>
+                <p><span>地址：泉州市丰泽区东海行政中心交通科研楼D栋  电话：0595-22574308</span></p>
+            </div>
+            <div class="trt-col-8 trt-col-sm-24 media_info">
+                <h3>新媒体矩阵</h3>
+                <ul class="trt-row trt-row-small">
+                    <li class="trt-col-8"><a href="javascript:void(0)"><span class="trt-iconfont trt-icon-minzhengtong"></span>闽政通</a><div class="ewm_tu"><img src="/images/20xmszf_mzt_ewm.png" /></div></li>
+                    <li class="trt-col-8"><a href="javascript:void(0)"><span class="trt-iconfont trt-icon-weixin1"></span>微信</a><div class="ewm_tu"><img src="/images/wxewm.jpg" /></div></li>
+                    <li class="trt-col-8"><a href="javascript:void(0)"><span class="trt-iconfont trt-icon-weibo"></span>微博</a><div class="ewm_tu"><img src="/images/qzhbj_wbewm.png" /></div></li>
+                </ul>
+            </div>
+            <div class="trt-col-4 trt-col-sm-24 error_img">
+                <span id="_ideConac" class="foot-icon02 pho-none"><a href="https://bszs.conac.cn/sitename?method=show&id=06C8F607CFE3560DE053012819AC6C3E" target="_blank"><img id="imgConac" vspace="0" hspace="0" border="0" src="https://dcs.conac.cn/image/red.png" data-bd-imgshare-binded="1" /></a></span>
+                <span id="_span_jiucuo"><script id="_jiucuo_" sitecode='3505000024' src='https://zfwzgl.www.gov.cn/exposure/jiucuo.js'></script></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright_info" >
+        <div class="row">
+            <p><span>泉州市生态环境局主办</span></p>
+            <p>为确保最佳浏览效果，建议您使用以下浏览器版本：IE浏览器9.0版本及以上； Google Chrome浏览器 63版本及以上； 360浏览器9.1版本及以上，且IE内核9.0及以上。</p>
+        </div>
+    </div>
+</div>
+		</div>
+		 		
+				<div id="ad1" style="position:absolute; top: -15px;z-index:10000">
+						<table width="249" height="353">
+							<tr>
+								<td width="249" style="cursor:hand"> <a href="javascript:void()" target="_blank"> <img src="https://sthjj.quanzhou.gov.cn/qt/sypftp/202601/W020260121617326022216.jpg"</a /> </td>
+								<td width="16" height="16" align="right" valign="top"><a href="javascript:myclose1();" style="cursor:default;" title="关闭"><img src="./images/close.png" width="16" height="16" /></a></td>
+							</tr>
+						</table>
+				</div>
+		
+		<script type="text/javascript">
+    var DOCID = "";
+    var SITEID = '95';
+    var CHNLID = "";
+    var DOCCRTIME = "2020-02-19";
+    var DOCRELTIME = "";
+
+</script>
+<script type="text/javascript" src="/comps/images/module.min.v1.js?v=1.0"></script>
+<script type="text/javascript" src="/comps/images/jquery.SuperSlide.js"></script>
+<script type="text/javascript" src="/comps/images/TouchSlide.source.js"></script>
+<script type="text/javascript" src="/comps/images/js_rem.min.js"></script>
+<script type="text/javascript" src="/comps/images/barrier.free.min.js" id="barrierFree" sn="4089082964275609"></script>
+<script type="text/javascript" src="/comps/images/wzaRests.js"></script>
+<script type="text/javascript" src="/comps/images/allSites.js"></script>
+<script type="text/javascript" src="/comps/images/qrcode.min.js"></script>
+<script type="text/javascript" src="/comps/images/share.min.js"></script>
+<script>
+var winUrl=window.location.href;
+if(winUrl.indexOf('js')>-1){
+}else{
+document.write("<script src='/qt/wza_12408.js'><\/script>");
+}
+</script>
+		<script type="text/javascript">
+			$(function() {
+				$.ajax({
+					url : '//www.fujian.gov.cn/szfxx?page=1&prepage=15&callback=pushInfosJsonpCallBack',
+					dataType : "jsonp",
+					jsonp : "pushInfosJsonpCallBack",
+					jsonpCallback:"pushInfosJsonpCallBack",
+					scriptCharset: "utf-8",
+					success : function(d) {
+						$.each(d.docs,function(n,jsonp){
+							$("#rmrzInfoUI").append("<li><a href='"+jsonp.url+"' title='"+jsonp.title+"' target='_blank'>"+jsonp.title+"</a><span>"+jsonp.time+"</span></li>")
+							if(n>=6) return false;
+						});
+						//$("#rmrzInfoUI").append('<li class="read_more" ><a  href="https://www.fujian.gov.cn/" title="省政府信息" target="_blank" >查看更多&gt;&gt;</a></li>');
+					},
+					error:function(){
+						//alert('fail');
+					}
+				});
+				$.ajax({
+					url : '//www.gov.cn/pushinfo/v150203/pushinfo.jsonp',
+					dataType : "jsonp",
+					jsonp : "pushInfoJsonpCallBack",
+					jsonpCallback:"pushInfoJsonpCallBack",
+					scriptCharset: "utf-8",
+					success : function(data) {
+						$.each(data,function(i,json){
+							$("#pushInfoUI").append("<li><a href='"+json.link+"' title='"+json.title+"' target='_blank'>"+json.title+"</a><span>"+json.pubDate+"</span></li>")
+							if(i>=6) return false;
+						});
+						//$("#pushInfoUI").append('<li class="read_more" ><a  href="http://www.gov.cn/" title="国务院信息"  target="_blank" >查看更多&gt;&gt;</a></li>');
+jQuery(".tabs_yw").each(function(i,o){
+	if(!$(this).hasClass(".tabs_dynamic")){
+		jQuery(this).slide({titCell: ".tabs_hd li", mainCell:".tabs_bd", effect:"left", defaultIndex:2, targetCell:".tabs_hd .more a"});
+	}
+})
+					},
+					error:function(){
+						//alert('fail');
+					}
+				});
+			})
+		</script>
+        <script>
+;!(function(win){
+    win.loadScripts=function(options){
+        if(options.url){
+			scripts.load(options);
+        }
+        else{
+			alert("请输入需要动态加载js的路径!")
+        }
+    }
+    var scripts={};
+    //添加额外的属性
+    scripts.attr=function(ele,obj){
+        if(typeof obj=='object'){
+            for(var name in obj){
+                ele.setAttribute(name,obj[name]);
+            }
+        }else{
+            return;
+        }
+    }
+    scripts.load=function(options){
+        var script=options.url,id=options.id,callback=options.callback,_obj=options.attr;
+        if(typeof(script) != "object") var script = [script];
+        var HEAD = document.getElementsByTagName("head").item(0) || document.documentElement;
+        var s = new Array(), last = script.length - 1, recursiveLoad = function(i) {
+            // 递归
+            s[i] = document.createElement("script");
+            s[i].setAttribute("type","text/javascript");
+            if(id){
+                s[i].setAttribute("id",id);
+            }
+            if(_obj && typeof  _obj=='object'){
+
+                scripts.attr(s[i],_obj);
+            }
+            s[i].onload = s[i].onreadystatechange = function() {
+
+                if(!/*@cc_on!@*/0 || this.readyState == "loaded" || this.readyState == "complete") {
+                    this.onload = this.onreadystatechange = null; this.parentNode.removeChild(this);
+                    if(i != last) recursiveLoad(i + 1); else if(typeof(callback) == "function") callback();
+                }
+            }
+            s[i].setAttribute("src",script[i]);
+            HEAD.appendChild(s[i]);
+        }
+        recursiveLoad(0);
+    }
+}(window))
+
+$.ajax({
+        url: "/visitor/api/visit/site",
+        data: {
+            siteId: 95
+        },
+        type: "get",
+        dataType: "json",
+        success: function (res) {
+            if (res.code == '200') {
+                $("#siteCount").html(res.data.count);
+               
+            }
+        }
+    })
+    //流量统计
+    loadScripts({url:'/visitor/hm.js'});
+
+
+
+    try {
+        if(DOCID){
+            jQuery.ajax({
+                url: '/visitor/api/visit/doc?siteId=95&docId='+DOCID,
+                type:'post',
+                dataType:'json',
+                success:function(msg){
+                    if(msg.code == '200'){
+                        var vm=msg.data.count;
+                        $("#xlcount").html(vm);
+                    }
+                }
+            });
+        }
+    } catch (error) {
+
+    }
+
+</script>
+		       <script type="text/javascript" src="./images/piaofu.js"></script>
+		<script>
+		
+					var ad1 = new AdMove("ad1");
+					ad1.Run();
+					function myclose1() {
+						document.getElementById("ad1").style.display = "none";
+					}
+		
+		</script>
+
+<script>
+	// 访谈站点
+	var _siteId = '605';
+	// 访谈栏目id
+	var _ftChnlIds = '2899';
+	// 访谈静态资源路径staticitp/站点/访谈栏目
+	var _ftStaticUrl = '/staticitp/qzhjj/zxft/';
+	
+
+	
+	
+
+	avalon.filters.getDocImg=function(obj){//
+		
+		if(obj.picturefileList.length>0){
+				return '<i class="picture_fixed picture_scale_169" style="background-image: url(/qzitp/interface/download/picture.action?appFile='+obj.picturefileList[0][0].appFile+');"></i>';
+			}else{
+				return '<i class="picture_fixed picture_scale_169" style="background-image: url(/images/21qzwlj_tu1.jpg);"></i>';
+			}
+	}	
+	// 分页根据情况调整
+	var _pageHtmlTemp= '<ul class="page_tools">' +
+		'<li class="prev disabled" ms-if="pageIndex==1"><a href="#"><em>&lt;&lt;</em>上一页</a></li>' +
+		'<li class="prev" ms-if="pageIndex>1" ms-click="toPage(pageIndex-1,$event)"><a href="#"><em>&lt;&lt;</em>上一页</a></li>' +
+		'<li ms-repeat="pages" href="#" ms-click="toPage(el,$event)" ms-class="active:el==pageIndex"><a href="#" ms-text="el"></a></li>' +
+		'<li class="next" ms-if="pageIndex<pageCount" ms-click="toPage(pageIndex+1,$event)"><a href="#">下一页<em>&gt;&gt;</em></a></li>' +
+		'<li class="next disabled" ms-if="pageIndex==pageCount"><a href="#">下一页<em>&gt;&gt;</em></a></li>' +
+		'</ul>' +
+		'<div class="page_go">' +
+		'<span>共{{pageCount}}页，跳转到第</span><input ms-duplex-number="inputNumber" name="" type="text" class="form_control" /><span>页</span><span class="fy_go" ms-click="toPage(inputNumber,$event)">GO</span>' +
+		'</div>' +
+		'<div class="clear"></div>';	
+
+</script>
+<!-- 访谈脚本 -->
+<script>
+	require(['list'],function(listModel){
+		avalon.templateCache["dynamicAndStatic.html"] = _pageHtmlTemp;
+		_pgTemp="dynamicAndStatic.html";
+		
+		var list = listModel({
+			objId: 'firstList',
+			Mode: 'poll',
+			showStatic: true, 
+			objArgs: {    
+				showStatic: true,      
+				staticArgs: {
+					listApi: {
+						url: _ftStaticUrl
+					},	
+					regParam:{
+						regUrl:'{pageIndex}'
+					}
+				},
+				listApi: {
+					rsName : 'interviews'
+				}
+			},
+			pagebar:{
+				prepage :15,
+				pgTemp: _pgTemp
+			},
+			cache:false
+		});
+		
+	})
+</script>
+<script>
+	
+
+	avalon.filters.clearN = function(str){
+		if(!str){
+			return "";
+		}
+		return str.replace(/<br\s*\/?>/gi, '').replace(/？/gi,"");
+	}
+
+	require(['list'],function(listModel){
+		avalon.templateCache["dynamicAndStatic.html"] = _pageHtmlTemp;
+		_pgTemp="dynamicAndStatic.html";
+		
+		var vmObj = listModel({
+			//objId: 'list',
+			Mode: 'poll',
+			objArgs: {
+				listArgs:{
+					siteId: _siteId,
+					chnlIds: _ftChnlIds,
+					orderKey:'startTime',
+					order:'desc',
+					years:''
+				},
+				listApi: {
+					url:'/qzitp/interface/interview/list.action',
+					rsName : 'rows',
+					type: "post"
+				},
+				callBeforeAjax: function(ajaxArgs) {
+					//console.log(ajaxArgs);
+					return ajaxArgs;
+				},
+				injAfterAjax: function(apiRes) {
+					apiRes['rows']=apiRes['data'];
+					return apiRes;
+				}
+			},
+			cache:false,
+			pagebar:{
+				prepage :8,
+				pgTemp: _pgTemp
+			},
+			search:{
+				searchArgs: {
+					years: {
+						field: "years",
+						compare: "=",
+						value: "",
+						valueType: "string"
+					}
+				},
+				vmArgsExt:{
+					yearItems:[]
+				}
+			},
+			injAfterGetData:function(apiRes){
+				if(apiRes.classes&&apiRes.classes.length>0&&vmObj.$search.$vm.yearItems.length==0){
+					if(apiRes.classes[0].name=="publishyear"){
+						vmObj.$search.$vm.yearItems.push({
+							desc: '全部',
+							name: '全部',
+							value: ''
+						});
+						for(var idx2=0;idx2<apiRes.classes[0].items.length;idx2++){
+							vmObj.$search.$vm.yearItems.push({
+								desc: apiRes.classes[0].items[idx2].name+'年',
+								name: apiRes.classes[0].items[idx2].name+'年',
+								value: apiRes.classes[0].items[idx2].name
+							});
+						}
+					}
+				}
+				return apiRes;
+			}
+			
+		});
+	})
+
+</script>
+
+	</body>
+</html>
