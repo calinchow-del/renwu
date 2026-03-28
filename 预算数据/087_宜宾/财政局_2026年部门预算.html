@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>宜宾市财政局</title>
+<script type="text/javascript" src="http://www.yibin.gov.cn/images/write.js"></script>
+    <link rel="stylesheet" href="./images/common.css">
+    <link rel="stylesheet" href="./images/style.css">
+    <link rel="stylesheet" href="/material/gwyszf.css">
+        <script type="text/javascript" src="./images/jquery.min.js"></script>
+        <script type="text/javascript" src="./images/common.js"></script>
+        <script type="text/javascript" src="./images/tool.js"></script>
+        <script type="text/javascript" src="./images/base.js"></script>
+        <script type="text/javascript" src="http://www.yibin.gov.cn/images/layer_1.js"></script>
+        <script type="text/javascript" src="./images/floatadv.js"></script>
+
+<style>
+.index-headline-item span {line-height: 38px;}
+.index-wrap2-con3 .a1{ width:290px;}
+</style>
+</head>
+
+<body>
+
+
+<!--国庆图片漂浮开始-->
+<!--<div id="wzsse" style="position:absolute;z-index: 9999;">
+            <div style="text-align:right;cursor:pointer;font-size:12px;" id="closepiaofu">关闭</div>
+            <img src="./images/gq70.png" />
+</div>
+        <script type="text/javascript">
+            $(function() {
+                $("#closepiaofu").click(function() {
+                    $("#wzsse").hide();
+                });
+            })
+            var ad1 = new AdMove("wzsse", true);
+            ad1.Run();
+        </script>  -->
+<!--国庆图片漂浮结束--> 
+
+<!----------顶部------------->
+<!--检索-->
+<script>
+    function SubsiteSearch(){
+        var SearchKey = $("#qwjs").val();
+        SearchKey=$.trim(SearchKey);
+        var reg =/[`~!@#$%^&*_+<>{}\/'[\]]/im;
+        if(reg.test(SearchKey)){
+            layer.msg('您输入的信息包含非法字符!');
+            return false;
+        }
+        if(SearchKey=="" || SearchKey== null ){
+            layer.msg("请输入检索条件!");
+            return false;
+        }else{
+            SearchKey = SearchKey.replace("-","\-");
+            SearchKey = SearchKey.replace("(","\(");
+            SearchKey = SearchKey.replace(")","\)");
+        }
+        //window.open("/site/ybsczj/search.html?searchWord=" + SearchKey + "&siteId=182&orderBy=time&timeOrder=desc")  ;
+        window.open("/irs-c-web/search.html?searchWord=" + SearchKey + "&tenantId=6070&code=18808a47dd2")  ;
+    }
+</script>
+<div class="header">
+        <div class="top clearfix">
+            <div class="w-container">
+                <div class="top-l lf">
+                    <!--a href="http://www.gov.cn/" target="_blank">中央人民政府</a>
+                    <span>|</span>
+                    <a href="http://www.sc.gov.cn/" target="_blank">四川省人民政府</a>
+                    <span>|</span-->
+                    <a href="http://www.yibin.gov.cn/" target="_blank">宜宾市政府网站集约化平台</a>
+<span>|</span-->
+<a id="toolbarSwitch" href="javascript:void(0);">无障碍浏览</a>
+<span>|</span>
+<a href="/zzzq/">长者专区</a>
+
+                </div>
+                <div class="top-l rt">
+                <a>
+                <script language="JavaScript">
+                var enabled = 0; today = new Date();
+                var day; var date;
+                if(today.getDay()==0) day = "星期日"
+                if(today.getDay()==1) day = "星期一"
+                if(today.getDay()==2) day = "星期二"
+                if(today.getDay()==3) day = "星期三"
+                if(today.getDay()==4) day = "星期四"
+                if(today.getDay()==5) day = "星期五"
+                if(today.getDay()==6) day = "星期六"
+                document.fgColor = "000000";
+                date = "今天是"+(today.getFullYear())+"年"+(today.getMonth()+1)+"月"+today.getDate()+"日"+day+"";
+                document.write(date);
+                </script>
+                </a>
+                </div>
+            </div>
+        </div>
+        <div class="header-con w-container">
+            <a class="logo" href="http://czj.yibin.gov.cn/"><img src="/images/logo.png" /></a>
+            <div class="search-box rt">
+                <input id="qwjs" onkeydown="if(event.keyCode==13){SubsiteSearch(); return false;}" onFocus="this.value=''" type="text" name="" />
+                <button onclick="SubsiteSearch()">搜索</button>
+            </div>
+        </div>
+    </div>
+    <div class="nav">
+        <div class="w-container">
+            <ul class="nav-l clearfix">
+                <li class="cur"><a href="http://czj.yibin.gov.cn/"><span>首页</span></a></li>
+              
+                <li><a href="http://czj.yibin.gov.cn/jggk/">机关概况</a></li>
+                <li><a href="http://czj.yibin.gov.cn/bszn/" target="_blank">办事服务</a></li>
+                <li><a href="http://czj.yibin.gov.cn/tpxw/">图片新闻</a></li>
+                <li><a href="http://czj.yibin.gov.cn/gzdt/">工作动态</a></li>
+                <li><a href="http://czj.yibin.gov.cn/tzgg/">通知公告</a></li>
+                <li><a href="http://czj.yibin.gov.cn/xxgk/">信息发布</a></li>
+            </ul>
+        </div>
+    </div>
+
+<div id="windows_r" class="sy_show ftyg_show" style="z-index: 9999; position: fixed;right: 0;bottom: 0px; width: 328px; height: 210px;">
+<span style="position: absolute; top: -20px; cursor: pointer;  right: 0px;font-weight: bold;color: red;font-size: 14px;" id="productDetailDiv">关闭</span>
+   <iframe style="border: none;" id="werty" src="" width="328" height="210"></iframe>
+</div>
+<script type="text/javascript">
+     if(window.location.protocol=="https:"){
+            $("#windows_r iframe").attr("src","https://www.yibin.gov.cn/qt_297/test/test1/index.html");
+        }else if(window.location.protocol=="http:"){
+            $("#windows_r iframe").attr("src","http://www.yibin.gov.cn/qt_297/test/test1/index.html");
+        }
+    $('#productDetailDiv').click(function(){
+    $('#windows_r').hide();
+    });
+</script>
+<a style="display:block;width:1200px;height:80px;margin:0 auto;margin-top:0px;margin-bottom:30px;" href="https://www.sc.gov.cn/" target="_blank"><img width="1200" src="//www.yibin.gov.cn/images/szfpic_blue.jpg" /></a>
+    <div class="main m-container">
+
+        <div class="index-headline clearfix">
+            <div class="index-headline-btn">
+                <span class="prev"></span>
+                <span class="next"></span>
+            </div>
+            <img class="lf" src="./images/icon8.png" />
+            <div class="index-headline-tab lf">
+                                
+                <div class="index-headline-item">
+                    <a href="./tt/202602/t20260226_2206244.html" target="_blank">
+                        <span>实干担当 为民造福——习近平总书记引领全党树立和践行正确政绩观</span>
+                        <p></p>
+                    </a>
+                </div>
+                                
+            </div>
+        </div>
+        <div class="index-wrap1 clearfix">
+            <div class="index-wrap1-col1 lf clearfix">
+                <div class="index-wrap1-t lf">
+                    <a class="a1 cur">图片新闻<i></i></a>
+                    <a class="a2" href="./jggk/" target="_blank">机关概况<i></i></a>
+                    <a class="a3" href="./jggk/jgsz/" target="_blank">机构设置<i></i></a>
+                    <a class="a4" href="./jggk/txl/" target="_blank">通讯录<i></i></a>
+                </div>
+                <div class="index-wrap1-con lf">
+                    <div class="index-wrap1-tab">
+                        <div class="index-wrap1-btn">
+                            <img class="prev" src="./images/left.png" />
+                            <img class="next" src="./images/right.png" />
+                        </div>
+                        <ul class="index-newspic">
+                                                        
+                            <li><a href="./tpxw/202603/t20260319_2213919.html" target="_blank"><img src="./tpxw/202603/W020260319550901539392.png" /></a></li>
+                                                        
+                            <li><a href="./tpxw/202603/t20260309_2211065.html" target="_blank"><img src="./tpxw/202603/W020260309340896837835.webp" /></a></li>
+                                                        
+                            <li><a href="./tpxw/202602/t20260225_2205920.html" target="_blank"><img src="./tpxw/202602/W020260225331991401899.jpg" /></a></li>
+                                                        
+                            <li><a href="./tpxw/202602/t20260212_2204467.html" target="_blank"><img src="./tpxw/202602/W020260212559716483607.png" /></a></li>
+                                                        
+                            <li><a href="./tpxw/202602/t20260202_2200881.html" target="_blank"><img src="./tpxw/202602/W020260202377324926932.jpg" /></a></li>
+                                                        
+                        </ul>
+                        <ul class="index-pictt">
+                                                        
+                            <li><a href="./tpxw/202603/t20260319_2213919.html" target="_blank">宜宾市召开2026年度政策性农业保险工作部署会议</a></li>
+
+                                                        
+                            <li><a href="./tpxw/202603/t20260309_2211065.html" target="_blank">金融活水助推筠连县域经济高质量发展</a></li>
+
+                                                        
+                            <li><a href="./tpxw/202602/t20260225_2205920.html" target="_blank">江安县财政局大胆探索财评工作新模式</a></li>
+
+                                                        
+                            <li><a href="./tpxw/202602/t20260212_2204467.html" target="_blank">宜宾高新区：开展政府采购项目履约验收问题整治</a></li>
+
+                                                        
+                            <li><a href="./tpxw/202602/t20260202_2200881.html" target="_blank">财政厅印发重大项目招商引资激励奖补资金绩效评价办法</a></li>
+
+                                                        
+                        </ul>
+                        <ul class="index-picpg clearfix">
+                                                        
+                                                        
+                            <li class="cur"></li>
+                                                        
+                                                        
+                            <li></li>
+                                                        
+                            <li></li>
+                                                        
+                            <li></li>
+                                                        
+                            <li></li>
+                                                        
+                                                        
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="index-wrap1-col2 rt">
+                <div class="index-tit" id="addGSxx">
+                  
+                    <a href="http://www.yibin.gov.cn/xxgk/gsyw/gwyxx/"  target="_Blank" style="font-size: 15px;">党中央国务院信息</a>
+                    <a href="https://www.sc.gov.cn/10462/c110462/list_ft.shtml"  target="_Blank"  style="font-size: 15px;">省委省政府信息</a>
+                    <a href="./tzgg/" target="_blank" style="font-size: 15px;">通知公告</a>
+                </div>
+               <div class="index-wrap1-col2-l" >
+                    <ul id="gwyinfo"></ul>
+                    <ul class="wenjianku">
+                    <li class="gwylastli gwylastlishengzf">
+                    <a href="https://www.gov.cn/zhengce/xxgk/index.htm" target="_blank" style="display: inline;">
+                     <span style="font-weight: bold; color: #cc272d; float: none; padding: 0;">国家政策文件库：</span></a>
+                    <div class="link-container" id="gwywjk">  </div>
+                    </li>
+                    </ul>
+                </div>
+                <div class="index-wrap1-col2-l" style="display:none;">
+                    
+                    <div class="cp-item gl-l" >
+                       <script src="https://www.sc.gov.cn/10462/szfxx/szfxx.js"> </script>
+                       <ul class="szfwenjianku">
+                        <li class="gwylastli gwylastlishengzf">
+                        <a class="red" href="https://www.sc.gov.cn/10462/scszcwjkss/scszcwjkss.shtml" target="_blank" style="display: inline;">省政府政策文件：</a>
+                        <div class="link-container"  id="szfwjk"></div></li>
+                        </ul>
+                    </div>
+
+
+                  
+
+                </div>
+                 <div class="index-wrap1-col2-l" style="display:none;">
+                    <ul>
+                                                
+                        <li><a href="./tzgg/202603/t20260327_2215923.html" target="_blank">宜宾市财政局 关于宜宾职业技术学院财务检查购买服务项目中选公示</a><span>03-27</span></li>
+                                                
+                        <li><a href="./tzgg/202603/t20260323_2214423.html" target="_blank">宜宾市财政局 关于购买服务开展财务检查的公告</a><span>03-23</span></li>
+                                                
+                        <li><a href="./tzgg/202602/t20260227_2206548.html" target="_blank">宜宾市财政局 关于2025年度法治政府建设情况的报告</a><span>02-11</span></li>
+                                                
+                        <li><a href="./tzgg/202602/t20260210_2203607.html" target="_blank">宜宾市财政局（部门）2026年部门决算公开</a><span>02-10</span></li>
+                                                
+                        <li><a href="./tzgg/202601/t20260128_2199281.html" target="_blank">宜宾市财政局关于下达2025年第三批省级财政城乡建设发展专项资金预算的通知</a><span>01-28</span></li>
+                                                
+                    </ul>
+                    <ul>
+                                                
+                        <li><a href="./tzgg/202601/t20260113_2195052.html" target="_blank">宜宾市财政局关于领取2025年度会计专业技术中级资格证书的公告</a><span>01-13</span></li>
+                                                
+                        <li><a href="./tzgg/202511/t20251126_2174808.html" target="_blank">中共宜宾市财政局党组 关于巡察集中整改进展情况的通报</a><span>11-26</span></li>
+                                                
+                        <li><a href="./tzgg/202512/t20251225_2182624.html" target="_blank">2025年市本级财政收支预算调整方案</a><span>11-12</span></li>
+                                                
+                        <li><a href="./tzgg/202511/t20251105_2165697.html" target="_blank">宜宾市财政局关于领取2025年度会计专业技术初级资格证书的公告</a><span>11-05</span></li>
+                                                
+                        <li><a href="./tzgg/202510/t20251027_2162921.html" target="_blank">宜宾市财政局财政专网终端准入管理设备升级改造项目 成交公告</a><span>10-27</span></li>
+                                                
+                    </ul>
+                </div>
+              
+
+<style type="text/css">
+.index-wrap1-col2-l ul li a{
+    max-width:74%;
+}
+#addGSxx a{margin-right:20px;}
+</style>
+<script>
+            $.ajax({
+                url: 'https://www.yibin.gov.cn/qt_297/gwy_6722.json',
+                dataType: "jsonp",
+                jsonp: "gwyxx",
+                jsonpCallback: "gwyxx",
+                success: function(data) {
+                    var data = data.datas;
+                    $.each(data, function(i, json) {
+                        if (i == 8) {
+                            return false;
+                        }
+                        date = json.docreltime;
+                        var temp = json.title;
+                        if(temp.length>25){
+                          temp = temp.substring(0,25)+"...";
+                        }
+                        $("#gwyinfo").append("<li><a href='" + json.url + "' target='_Blank' title='标题：" + json.title + "'>" + temp + "</a><span>" + date + "</span></li>");
+
+
+
+                    })
+                },
+                error: function() {}
+            });
+
+           
+
+$("#addGSxx a").hover(function(){
+    $(".index-wrap1-col2-l").eq($(this).index()).show().siblings(".index-wrap1-col2-l").hide();
+
+});
+
+  </script>
+            </div>
+        </div>
+        <!--div class="index-banner1 clearfix">
+            <a class="tit"><img src="./images/icon12.png" /></a>
+            <div class="index-banner1-l lf">
+                <ul>
+                    <li><a href=""><img src="./images/img3.png" /></a></li>
+                    <li><a href=""><img src="./images/img4.png" /></a></li>
+                    <li><a href=""><img src="./images/img5.png" /></a></li>
+                    <li><a href=""><img src="./images/img6.png" /></a></li>
+                    <li><a href=""><img src="./images/img3.png" /></a></li>
+                    <li><a href=""><img src="./images/img4.png" /></a></li>
+                    <li><a href=""><img src="./images/img5.png" /></a></li>
+                    <li><a href=""><img src="./images/img6.png" /></a></li>
+                </ul>
+            </div>
+            <a class="more" href=""><img src="./images/icon11.png" /></a>
+        </div-->
+        <div class="index-wrap2 clearfix">
+            <div class="index-wrap2-box1">
+                <div class="index-tit">
+                    <a href="./gzdt/">工作动态</a>     <a href="./gzdt/"> | </a> 
+
+<a href="https://czj.yibin.gov.cn/wjk/zcjdwj/index.html">文件解读</a>
+                </div>
+                <div class="index-wrap2-con1">
+                                        
+                    <a class="head clearfix" href="./tpxw/202603/t20260319_2213919.html" target="_blank" title="宜宾市召开2026年度政策性农业保险工作部署会议">
+                        <img src="./tpxw/202603/W020260319550901539392.png" />
+                        <div class="head-c lf">
+                            <span>宜宾市召开2026年度政策性...</span>
+                            <p></p>
+                        </div>
+                    </a>
+                                        
+                    <ul class="list">
+                                                
+                        <li><a href="./gzdt/202603/t20260319_2213921.html" target="_blank">宜宾高新区：双线发力抢进度 精准对上谋...</a><span>03-19</span></li>
+                                                
+                        <li><a href="./gzdt/202603/t20260309_2211045.html" target="_blank">保障粮食丰收！宜宾财政投入超11亿元“...</a><span>03-09</span></li>
+                                                
+                        <li><a href="./gzdt/202602/t20260224_2205587.html" target="_blank">全省首批！宜宾成功投放民间投资专项担...</a><span>02-24</span></li>
+                                                
+                        <li><a href="./gzdt/202602/t20260212_2204469.html" target="_blank">宜宾财政：以“真金白银”护航春耕春种</a><span>02-12</span></li>
+                                                
+                        <li><a href="./gzdt/202602/t20260202_2200871.html" target="_blank">全省财政工作会议在成都召开</a><span>02-02</span></li>
+                                                
+                        <li><a href="./gzdt/202601/t20260120_2196772.html" target="_blank">宜宾引导降低创业担保贷款融资利率上限</a><span>01-20</span></li>
+                                                
+                    </ul>
+                </div>
+            </div>
+            <div class="index-wrap2-box1">
+                <div class="index-tit">
+                    <a>联系我们</a>
+                </div>
+                <div class="index-wrap2-con2 clearfix">
+                    <ul class="index-wrap2-l lf">
+                        <li class="clearfix">
+                            <img src="./images/icon14.png" />
+                            <div>
+                                <span>办公室</span>
+                                <p>电话：0831-8224494</p>
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                            <img src="./images/icon14.png" />
+                            <div>
+                                <span>会计科</span>
+                                <p>电话：0831-8221473</p>
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                            <img src="./images/icon14.png" />
+                            <div>
+                                <span>采购科</span>
+                                <p>电话：0831-8228012</p>                           
+                            </div>
+                        </li>
+    <li class="clearfix">
+                            <img src="./images/icon14.png" />
+                            <div>
+                                <span>法规与税政科</span>
+                                <p>电话：0831-8236404</p>                           
+                            </div>
+                        </li>
+                    </ul>
+ <!--           
+    <div class="index-wrap2-i rt">
+                        <p>环境兴市</p>
+                        <img src="./images/img8.png" />
+                        <p>网络测评</p>
+                    </div>
+
+--> 
+                </div>
+            </div>
+            <div class="index-wrap2-box2 rt">
+                <div class="index-tit">
+                    <!--<a>信息公开</a>-->
+                </div>
+                <div class="index-wrap2-con3">
+                    <a class="a2" href="./xxgk/zfxxgk/" target="_blank">
+                        <div>
+                            <img width="290" src="/images/P020200311575380217989.png" />
+                        </div>
+                        
+                    </a>
+                    <!--<a class="a1" href="" target="_blank">
+                        <div>
+                            <img src="./images/icon18.png" />
+                        </div>
+                        <p>政府信息<br>公开目录</p>
+                    </a>
+                    <a class="a1" href="./xxgk/ndbg/" target="_blank">
+                        <div>
+                            <img src="./images/icon19.png" />
+                        </div>
+                        <p>政府信息<br>公开年度报告</p>
+                    </a>-->
+                    <a class="a2" href="./xxgk/xzqlqljggs/" target="_blank"><img src="./images/img9.png" /></a>
+                    <a class="a2" href="./xxgk/wzndgzbg/" target="_blank"><img src="./images/img10.png" /></a>
+                   <a class="a2" href="./zfcgzl/" target="_blank"><img src="./images/zfcgzl.png" /></a>
+                    <a class="a3" href="./ldxx/" target="_blank" style="width:92px; margin-right:7px;"><img src="./images/20190701ldxx.jpg" /></a>
+                 <!--   <a class="a3" href="" target="_blank" style="width:92px; margin-right:7px;"><img src="./images/20190701wsdc.jpg" /></a>-->
+                    <a class="a3 rt" href="./xxgk/jsjf/" target="_blank" style="width:92px;"><img src="./images/20190701jsjf.jpg" /></a>
+<!--
+                    <a class="a3" href="./ldxx/" target="_blank"><img src="./images/icon20.png" /><span>领导信箱</span></a>
+                    <a class="a3 rt" href="" target="_blank"><img src="./images/icon21.png" /><span>网上调查</span></a>
+-->
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+<style>
+.drop-down {margin-left: 80px;}
+</style>
+<div class="footer">
+        <div class="f-link">
+            <div class="w-container">
+                <img src="/images/link.png" />
+                <span>友情链接</span>
+                <div class="drop-groups">
+                 
+                    <div class="drop-down">
+                        <p class="tag">地市州政府网站</p>
+                        <ul class="drop-lists">
+                                                        
+                            <li><a href="http://www.lsz.gov.cn/" target="_blank">凉山</a></li>
+                                                        
+                            <li><a href="http://www.gzz.gov.cn/" target="_blank">甘孜</a></li>
+                                                        
+                            <li><a href="http://www.abazhou.gov.cn/" target="_blank">阿坝</a></li>
+                                                        
+                            <li><a href="http://www.ziyang.gov.cn" target="_blank">资阳</a></li>
+                                                        
+                            <li><a href="http://www.ms.gov.cn/" target="_blank">眉山</a></li>
+                                                        
+                            <li><a href="http://www.yaan.gov.cn/" target="_blank">雅安</a></li>
+                                                        
+                            <li><a href="http://www.cnbz.gov.cn/" target="_blank">巴中</a></li>
+                                                        
+                            <li><a href="http://www.dazhou.gov.cn/" target="_blank">达州</a></li>
+                                                        
+                            <li><a href="http://www.guang-an.gov.cn/" target="_blank">广元</a></li>
+                                                        
+                            <li><a href="http://www.yibin.gov.cn/index.html" target="_blank">宜宾</a></li>
+                                                        
+                            <li><a href="http://www.nanchong.gov.cn/" target="_blank">南充</a></li>
+                                                        
+                            <li><a href="http://www.leshan.gov.cn/" target="_blank">乐山</a></li>
+                                                        
+                            <li><a href="http://www.neijiang.gov.cn/" target="_blank">内江</a></li>
+                                                        
+                            <li><a href="http://www.suining.gov.cn/" target="_blank">遂宁</a></li>
+                                                        
+                            <li><a href="http://www.cngy.gov.cn/" target="_blank">广元</a></li>
+                                                        
+                            <li><a href="http://www.my.gov.cn/" target="_blank">绵阳</a></li>
+                                                        
+                            <li><a href="http://www.deyang.gov.cn/" target="_blank">德阳</a></li>
+                                                        
+                            <li><a href="http://www.luzhou.gov.cn/" target="_blank">泸州</a></li>
+                                                        
+                            <li><a href="http://www.zg.gov.cn/" target="_blank">自贡</a></li>
+                                                        
+                            <li><a href="http://www.panzhihua.gov.cn/" target="_blank">攀枝花</a></li>
+                                                        
+                            <li><a href="http://www.chengdu.gov.cn/" target="_blank">成都</a></li>
+                                                        
+                        </ul>
+                    </div>
+                    <div class="drop-down">
+                        <p class="tag">市政府工作部门</p>
+                        <ul class="drop-lists">
+                                                        
+                            <li><a href="http://zwfwhfgjjfzj.yibin.gov.cn" target="_blank">市政务服务非公经济局</a></li>
+                                                        
+                            <li><a href="http://sjhxcj.yibin.gov.cn" target="_blank">市经合新产局</a></li>
+                                                        
+                            <li><a href="http://xfj.yibin.gov.cn/" target="_blank">市信访局</a></li>
+                                                        
+                            <li><a href="http://scjgj.yibin.gov.cn/" target="_blank">市市场监管局</a></li>
+                                                        
+                            <li><a href="http://gzw.yibin.gov.cn/" target="_blank">市国资委</a></li>
+                                                        
+                            <li><a href="http://tjj.yibin.gov.cn/" target="_blank">市统计局</a></li>
+                                                        
+                            <li><a href="http://sjj.yibin.gov.cn" target="_blank">市审计局</a></li>
+                                                        
+                            <li><a href="http://yjglj.yibin.gov.cn/" target="_blank">市应急管理局</a></li>
+                                                        
+                            <li><a href="http://tyjrswj.yibin.gov.cn/" target="_blank">市退役军人局</a></li>
+                                                        
+                            <li><a href="http://ybwjw.yibin.gov.cn/" target="_blank">市卫生健康委</a></li>
+                                                        
+                            <li><a href="http://wglyj.yibin.gov.cn/" target="_blank">市文广旅游局</a></li>
+                                                        
+                            <li><a href="http://ybcom.yibin.gov.cn/" target="_blank">市商务局</a></li>
+                                                        
+                            <li><a href="http://yblz.yibin.gov.cn" target="_blank">市林业竹业局</a></li>
+                                                        
+                            <li><a href="http://nyncj.yibin.gov.cn" target="_blank">市农业农村局</a></li>
+                                                        
+                            <li><a href="http://ybsswj.yibin.gov.cn" target="_blank">市水利局</a></li>
+                                                        
+                            <li><a href="http://jtysj.yibin.gov.cn/" target="_blank">市交通运输局</a></li>
+                                                        
+                            <li><a href="http://jsj.yibin.gov.cn/" target="_blank">市住房城乡建设局</a></li>
+                                                        
+                            <li><a href="http://sthjj.yibin.gov.cn" target="_blank">市生态环境局</a></li>
+                                                        
+                            <li><a href="http://zygh.yibin.gov.cn" target="_blank">市自然资源规划局</a></li>
+                                                        
+                            <li><a href="http://rsj.yibin.gov.cn" target="_blank">市人力资源社会保障局</a></li>
+                                                        
+                            <li><a href="http://czj.yibin.gov.cn" target="_blank">市财政局</a></li>
+                                                        
+                            <li><a href="http://ybsf.yibin.gov.cn/" target="_blank">市司法局</a></li>
+                                                        
+                            <li><a href="http://mzj.yibin.gov.cn/" target="_blank">市民政局</a></li>
+                                                        
+                            <li><a href="http://www.yibin.gov.cn" target="_blank">市政府办公室</a></li>
+                                                        
+                            <li><a href="http://gaj.yibin.gov.cn/" target="_blank">市公安局</a></li>
+                                                        
+                            <li><a href="http://ybkj.yibin.gov.cn" target="_blank">市科技局</a></li>
+                                                        
+                            <li><a href="http://jyj.yibin.gov.cn/" target="_blank">市教育体育局</a></li>
+                                                        
+                            <li><a href="http://jjhxxhj.yibin.gov.cn/" target="_blank">市经济和信息化局</a></li>
+                                                        
+                            <li><a href="http://fg.yibin.gov.cn" target="_blank">市发展改革委</a></li>
+                                                        
+                        </ul>
+                    </div>
+                    <div class="drop-down">
+                        <p class="tag">区县政府网站</p>
+                        <ul class="drop-lists">
+                                                        
+                            <li><a href="//www.gaoxian.gov.cn" target="_blank">高县</a></li>
+                                                        
+                            <li><a href="//www.gongxian.gov.cn" target="_blank">珙县</a></li>
+                                                        
+                            <li><a href="//www.scjlx.gov.cn" target="_blank">筠连县</a></li>
+                                                        
+                            <li><a href="//www.ybja.gov.cn/" target="_blank">江安县</a></li>
+                                                        
+                            <li><a href="//www.scxw.gov.cn" target="_blank">兴文县</a></li>
+                                                        
+                            <li><a href="//www.scnx.gov.cn/" target="_blank">南溪区</a></li>
+                                                        
+                            <li><a href="//www.ybxz.gov.cn/" target="_blank">叙州区</a></li>
+                                                        
+                            <li><a href="//www.sccn.gov.cn" target="_blank">长宁县</a></li>
+                                                        
+                            <li><a href="//www.ybps.gov.cn" target="_blank">屏山县</a></li>
+                                                        
+                            <li><a href="//www.cuiping.gov.cn" target="_blank">翠屏区</a></li>
+                                                        
+                        </ul>
+                    </div>
+                    <div class="drop-down">
+                        <p class="tag">其他网站</p>
+                        <ul class="drop-lists">
+                                                        
+                            <li><a href="http://czt.sc.gov.cn/" target="_blank">四川省财政厅</a></li>
+                                                        
+                            <li><a href="http://www.scicpa.org.cn" target="_blank">四川省注册会计师协会</a></li>
+                                                        
+                            <li><a href="http://kzp.mof.gov.cn/" target="_blank">财政部会计资格评价中心</a></li>
+                                                        
+                            <li><a href="http://kj.scsczt.cn/" target="_blank">四川会计服务</a></li>
+                                                        
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="f-help">
+            
+            <div class="f-text">
+                <p class="f-text1"><span>主办单位/内容保障单位：宜宾市财政局  联系电话：0831-8224494</span><span>建设维护单位：宜宾市政府信息服务保障中心</span>
+<script type="text/javascript">document.write(unescape("%3Cspan style='display:none;' id='cnzz_stat_icon_1279125483'%3E%3C/span%3E%3Cscript src='https://s4.cnzz.com/z_stat.php%3Fid%3D1279125483%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
+</p>
+                <p class="f-text2"><span>网站标识码 5115000009</span>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.beian.gov.cn/portal/registerSystemInfo?COLLCC=50867142&COLLCC=1932174891&recordcode=51150202000243" target="_blank" style="margin-right:30px;"><img src="http://czj.yibin.gov.cn/images/20190428ga.png" style="vertical-align: middle;" /><span style="color:#003f6b;">川公网安备 51150202000243号</span></a><span> <a href="https://beian.miit.gov.cn" target="_blank">蜀ICP备2021017251号-1</a>
+</span></p>
+            </div>
+                        
+
+        </div>
+        <div style="text-align: center;">
+            <a href="http://bszs.conac.cn/sitename?method=show&id=73610556E98B61A9E053022E1AAC4765" target="_blank"><img class="f-img1" src="/images/f-img1.png" /></a>
+<script id='_jiucuo_' sitecode='5115000009' src='https://zfwzgl.www.gov.cn/exposure/jiucuo.js'></script>
+        </div>
+    </div>
+
+<script type="text/javascript">
+    //定位当前大栏目,并且高亮
+    document.addEventListener('DOMContentLoaded', function() {
+        var currentPath = window.location.pathname;
+        var navItems = document.querySelectorAll('.nav-l li');
+        navItems.forEach(function(navItem) {
+            var linkPath = new URL(navItem.querySelector('a').href).pathname;
+            if (currentPath === linkPath) {
+                navItem.classList.add('cur');
+            } else {
+                navItem.classList.remove('cur');
+            }
+        });
+    });
+</script>
+
+
+<script type="text/javascript">
+    //定位当前大栏目,并且高亮
+   /* jQuery(function($){
+        var url =window.location.pathname;
+        var urls=url.split("/");
+        var index=urls[1];
+        var $nava=jQuery(".nav-l li");
+        $nava.removeClass("cur");
+        if(index=="ldjs"){
+            $nava.eq(1).addClass("cur");
+        }else if (index=="jggk"){
+            $nava.eq(2).addClass("cur");
+        }else if (index=="bszn"){
+            $nava.eq(3).addClass("cur");
+        }else if (index=="tpxw"){
+            $nava.eq(4).addClass("cur");
+        }else if (index=="gzdt"){
+            $nava.eq(5).addClass("cur");
+        }else if (index=="tzgg"){
+        $nava.eq(6).addClass("cur");
+        } else if (index=="xxgk"){
+        $nava.eq(7).addClass("cur");
+        } else{
+            $nava.eq(0).addClass("cur");
+        };
+    })
+  //定位当前子栏目,并且高亮
+        jQuery(function($){
+            var src=window.location.href;
+            $('.gl-nav-l li').removeClass("cur");
+            $('.gl-nav-l li a').each(function(){
+                if( $(this).attr("href")==src){
+                    $(this).parents(".l-show").addClass("cur");
+                }
+            });
+        })*/
+</script>
+<script src="https://auth.mangren.com/boots/czj.yibin.gov.cn/esdToolsInit.js" charset="UTF-8"></script>
+<script id="_trs_ta_js" src="//ta.trs.cn/c/js/ta.js?mpid=2779" async="async" defer="defer"></script>
+
+<script type="text/javascript" src="/material/gwyszf.js"></script>
+</body>
+</html>

@@ -1,0 +1,1651 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>包头市交通运输局</title>
+   <meta name="SiteName" content="包头市交通运输局">
+<meta name="SiteDomain" content="http://jtj.baotou.gov.cn/">
+<meta name="SiteIDCode" content="">
+<link rel="shortcut icon" href="./material/images/favicon.png" type="image/x-icon">
+   <link rel="stylesheet" href="./material/css/swiper-bundle.min.css" />
+   <link rel="stylesheet" href="./material/css/initialize.css" />
+   <link rel="stylesheet" href="./material/css/header_footer.css" />
+   <link rel="stylesheet" href="./material/css/header_footer_h5.css" media="screen and (max-width:750px)" />
+   <link rel="stylesheet" href="./material/css/index.css" />
+   <link rel="stylesheet" href="./material/css/index_h5.css" media="screen and (max-width:750px)" />
+   <script src="./material/js/jquery.min.js"></script>
+   <script src="./material/js/swiper-bundle.min.js"></script>
+   <script src="./material/js/jquery.SuperSlide.2.1.3.js"></script>
+   <script src="./material/js/h5.js"></script>
+   <script src="./material/js/resize.js"></script>
+</head>
+
+<body>
+   <!-- 公共头部 -->
+   <style type="text/css">
+      .adv {
+        width: 250px;
+        height: 166px;
+        z-index: 9999;
+      }
+
+      .adv img {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+
+      .adv .close {
+        position: absolute;
+        top: -30px;
+        right: 0;
+        font-size: 16px;
+      }
+    </style>
+
+
+    <!--整体飘窗内容-->
+    <div class="adv" id="adv">
+      <div class="close" id="adv_close">关闭</div>
+      <a href="http://116.114.161.151:200/btsjtysj/pc/202509/t20250925_576439.html">
+        <img src="./material/images/img_pc_1.png" alt="" />
+      </a>
+    </div>
+
+    <script>
+      (function ($) {
+        $.fn.adFloat = function (options) {
+          return new AdFloat(this, options);
+        };
+        var AdFloat = function (element, options) {
+          this.element = $(element);
+          this.options = $.extend(
+            {
+              width: 230, //默认的广告的宽
+              height: 118, //默认的广告的高
+              top: 0, //默认的广告的Y坐标
+              left: 0, //默认的广告的X坐标
+              delay: 30, //延迟
+              step: 2, //默认的广告每次移动的距离(像素)
+            },
+            options
+          );
+          this.interval = null;
+          this.xPos = this.options.left;
+          this.yPos = this.options.top;
+          this.yon = 0;
+          this.xon = 0;
+          this.isPause = false;
+          this.init();
+        };
+        AdFloat.prototype = {
+          init: function () {
+            var me = this;
+            me.element.css("display", "block");
+            me.element.css({
+              position: "absolute",
+              left: me.options.left,
+              top: me.options.top,
+              width: me.options.width,
+              height: me.options.height,
+            });
+            me.element.hover(
+              function () {
+                clearInterval(me.interval);
+              },
+              function () {
+                me.interval = setInterval(function () {
+                  me.changePos();
+                }, me.options.delay);
+              }
+            );
+            $(document).ready(function () {
+              me.start();
+            });
+          },
+          changePos: function () {
+            var me = this;
+            var clientWidth = $(window).width();
+            var clientHeight = $(window).height();
+            var Hoffset = me.options.height;
+            var Woffset = me.options.width;
+            me.element.css({ left: me.xPos + $(document).scrollLeft(), top: me.yPos + $(document).scrollTop() });
+            if (me.yon) {
+              me.yPos = me.yPos + me.options.step;
+            } else {
+              me.yPos = me.yPos - me.options.step;
+            }
+            if (me.yPos < 0) {
+              me.yon = 1;
+              me.yPos = 0;
+            }
+            if (me.yPos >= clientHeight - Hoffset) {
+              me.yon = 0;
+              me.yPos = clientHeight - Hoffset;
+            }
+            if (me.xon) {
+              me.xPos = me.xPos + me.options.step;
+            } else {
+              me.xPos = me.xPos - me.options.step;
+            }
+            if (me.xPos < 0) {
+              me.xon = 1;
+              me.xPos = 0;
+            }
+            if (me.xPos >= clientWidth - Woffset) {
+              me.xon = 0;
+              me.xPos = clientWidth - Woffset;
+            }
+          },
+          start: function () {
+            var me = this;
+            me.element.css("top", me.yPos);
+            me.interval = setInterval(function () {
+              me.changePos();
+            }, me.options.delay);
+          },
+        };
+      })(jQuery);
+      //飘窗展示
+      $(function () {
+        $("#adv").adFloat({ width: 250, height: 166, top: 0, left: 0 });
+      });
+      //飘窗关闭
+      $("#adv_close").click(function () {
+        $("#adv").css("display", "none");
+      });
+    </script>
+   <div class="header">
+      <div class="shortcut">
+        <div class="w">
+          <ul class="left">
+            <li>
+              <a href="https://www.gov.cn/">中国政府网</a>
+            </li>
+            <li>|</li>
+            <li>
+              <a href="https://www.mot.gov.cn/">中华人民共和国交通运输部</a>
+            </li>
+            <li>|</li>
+            <li>
+              <a href="https://jtyst.nmg.gov.cn/">内蒙古交通运输厅</a>
+            </li>
+            <li>|</li>
+            <li>
+              <a href="https://baotou.gov.cn/">包头市人民政府</a>
+            </li>
+          </ul>
+
+          <ul class="right">
+            <li>
+                <a class="userInfo1" href="javascript:void(0)" onclick="goLogin()">登录/注册</a>
+                <a class="userInfo2" href="https://zwfw.nmg.gov.cn/personal_center_profile" target="_blank"  style="display: none;">用户中心</a>
+            </li>
+            <li>|</li>
+            <li id="wza_id">无障碍</li>
+            <li>|</li>
+            <li id="zoomIn">关怀版</li>
+            <li style="display: none;">|</li>
+            <li style="display: none;" id="resetZoom">退出关怀版</li>
+
+            <li>|</li>
+            <li onclick="SetHome(window.location)" href="javascript:void(0)">设为主页</li>
+            <li>|</li>
+            <li onclick="AddFavorite(window.location,document.title)">加入收藏</li>
+          </ul>
+        </div>
+      </div>
+      <div class="banner">
+        <div class="w">
+            <div class="search">
+              <input id="searchInput" class="search_text" placeholder="请输入需要搜索的关键词" type="text" onfocus="this.placeholder=''" onblur="this.placeholder='请输入需要搜索的关键词'" />
+               <button class="btn search_button" type="submit" id="searchBtn">
+                  <img src="./material/images/search.png" alt="搜索" />
+               </button>
+         </div>
+        </div>
+      </div>
+      <div class="nav">
+        <ul class="navlist w">
+          <li>
+            <a href="./">网站首页</a>
+          </li>
+          <li>
+            <a href="./jtyw/">交通新闻</a>
+          </li>
+          <li>
+            <a href="http://1.180.33.96:8020/jtj/toJtjLinkPage">业务办理</a>
+          </li>
+          <li>
+            <a href="./zfxxgk/">政府信息公开</a>
+          </li>
+          <li>
+            <a href="./zfxxgk/fdzdgknr/jgjj/">机构职责</a>
+          </li>
+          <li>
+            <a href="./dwgk/">党务公开</a>
+          </li>
+          <li>
+            <a href="https://zwfw.nmg.gov.cn/OrgItem_index?regionCode=150200000000&orgCode=11150200011536388B&record=istrue" rel="noopener noreferrer">双公示</a>
+          </li>
+          <li>
+            <a href="https://zwfw.nmg.gov.cn/OrgItem_index?regionCode=150200000000&orgCode=11150200011536388B&record=istrue">办事指南</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <script type="text/javascript" language="javascript">
+      //加入收藏
+      function AddFavorite(sURL, sTitle) {
+        sURL = encodeURI(sURL);
+        try {
+          window.external.addFavorite(sURL, sTitle);
+        } catch (e) {
+          try {
+            window.sidebar.addPanel(sTitle, sURL, "");
+          } catch (e) {
+            alert("您的浏览器不支持自动加入收藏功能，请使用Ctrl+D进行添加，或手动在浏览器里进行设置！");
+          }
+        }
+      }
+
+      //设为首页
+      function SetHome(url) {
+        if (document.all) {
+          document.body.style.behavior = "url(#default#homepage)";
+          document.body.setHomePage(url);
+        } else {
+          alert("您的浏览器不支持自动设置页面为首页功能，请您手动在浏览器里设置该页面为首页！");
+        }
+      }
+    </script>
+
+    <!-- 搜索 -->
+    <script>
+      document.getElementById("searchBtn").addEventListener("click", function () {
+        var keyword = document.getElementById("searchInput").value;
+          if (keyword) {
+            window.location.href = "/searchweb-dept/#/Door?siteTag=1&siteid=51&keywords=" + keyword;
+          } else {
+            alert("请输入您需要查询的关键词");
+          }
+        });
+    </script>
+
+   <!-- 头条 -->
+   <div class="headlines w">
+      
+         <a href="https://www.gov.cn/yaowen/liebiao/202603/content_7063423.htm">
+         习近平向拉美和加勒比国家共同体第十届峰会致贺电
+         </a>
+      
+   </div>
+
+   <!-- 横幅 -->
+   <div class="hf w">
+      <div class="swiper hfSwiper">
+         <div class="swiper-wrapper">
+            <div class="swiper-slide">
+               <a>
+                  <img src="./material/images/hf_img_1.png" alt="" />
+               </a>
+            </div>
+            <div class="swiper-slide">
+               <a>
+                  <img src="./material/images/hf_img_2.png" alt="" />
+               </a>
+            </div>
+            <!-- <div class="swiper-slide">
+            <a href="#">
+              <img src="./material/images/hf_img_3.png" alt="" />
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#">
+              <img src="./material/images/hf_img_4.png" alt="" />
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#">
+              <img src="./material/images/hf_img_5.png" alt="" />
+            </a>
+          </div> -->
+         </div>
+      </div>
+   </div>
+
+   <!-- 图片新闻 -->
+   <div class="news w">
+      <div class="news_l">
+         <div class="swiper newsSwiper">
+            <div class="swiper-wrapper">
+               
+                  <div class="swiper-slide">
+                     <a href="https://www.gov.cn/yaowen/liebiao/202603/content_7063141.htm">
+                     <img id="pic_preview_box_id" src="./jtyw/jtyw_tpxw/202603/W020260323364370219661.jpg"/>
+                     </a>
+                     <div class="mask">
+                        习近平会见土库曼斯坦民族领袖、人民委员会主席别...
+                     </div>
+                  </div>
+               
+                  <div class="swiper-slide">
+                     <a href="https://www.gov.cn/yaowen/liebiao/202603/content_7062710.htm">
+                     <img id="pic_preview_box_id" src="./jtyw/jtyw_tpxw/202603/W020260316354301417725.jpg"/>
+                     </a>
+                     <div class="mask">
+                        习近平：推动海洋经济高质量发展
+                     </div>
+                  </div>
+               
+                  <div class="swiper-slide">
+                     <a href="https://www.gov.cn/zhuanti/2026qglh/2026xjpdlhsj/index.htm">
+                     <img id="pic_preview_box_id" src="./jtyw/jtyw_tpxw/202603/W020260309346580481749.jpg"/>
+                     </a>
+                     <div class="mask">
+                        习近平的两会时间
+                     </div>
+                  </div>
+               
+                  <div class="swiper-slide">
+                     <a href="https://www.gov.cn/yaowen/liebiao/202602/content_7060046.htm">
+                     <img id="pic_preview_box_id" src="./jtyw/jtyw_tpxw/202603/W020260302395411754190.jpg"/>
+                     </a>
+                     <div class="mask">
+                        习近平：让愿担当、敢担当、善担当蔚然成风
+                     </div>
+                  </div>
+               
+            </div>
+            <div class="swiper-pagination swiper-news-pagination"></div>
+         </div>
+      </div>
+      <div class="news_r newsSlide">
+         <div class="hd">
+            <ul class="head">
+               <li>
+                  <a href="./jtyw/jtyw_jtyw/">交通要闻</a>
+               </li>
+               <li>
+                  <a href="./jtyw/jtyw_gzdt/">工作动态</a>
+               </li>
+               <li>
+                  <a href="./jtyw/jtyw_gsgxlkcx/">国省干线路况查询</a>
+               </li>
+            </ul>
+         </div>
+
+         <div class="bd">
+            <ul class="list">
+               
+                  <li>
+                     <a href="https://www.mot.gov.cn/xinwen/jiaotongyaowen/202603/t20260323_4202313.html">
+                     <span>
+                        十大赛道扩容升级 自主命题鼓励创新 第二届综合交通运输...
+                     </span>
+                     <span class="date">
+                        2026-03-23
+                     </span>
+                     </a>
+                  </li>
+               
+                  <li>
+                     <a href="https://www.mot.gov.cn/xinwen/jiaotongyaowen/202603/t20260316_4201893.html">
+                     <span>
+                        春运40天全社会跨区域人员流动量94亿人次
+                     </span>
+                     <span class="date">
+                        2026-03-16
+                     </span>
+                     </a>
+                  </li>
+               
+                  <li>
+                     <a href="https://www.mot.gov.cn/xinwen/jiaotongyaowen/index.html">
+                     <span>
+                        更好推动投资于物与投资于人紧密结合
+                     </span>
+                     <span class="date">
+                        2026-03-09
+                     </span>
+                     </a>
+                  </li>
+               
+                  <li>
+                     <a href="https://www.mot.gov.cn/xinwen/jiaotongyaowen/202603/t20260302_4201177.html">
+                     <span>
+                        内蒙古去年43.6万件道路运输业务“跨省通办”
+                     </span>
+                     <span class="date">
+                        2026-03-02
+                     </span>
+                     </a>
+                  </li>
+               
+                  <li>
+                     <a href="https://www.mot.gov.cn/xinwen/jiaotongyaowen/202602/t20260224_4200730.html">
+                     <span>
+                        9天假期探亲访友旅游度假出行需求集中释放　交通运输部门...
+                     </span>
+                     <span class="date">
+                        2026-02-24
+                     </span>
+                     </a>
+                  </li>
+               
+                  <li>
+                     <a href="https://www.mot.gov.cn/xinwen/jiaotongyaowen/202602/t20260214_4200353.html">
+                     <span>
+                        发挥规划先行作用 推动“十五五”开好局起好步
+                     </span>
+                     <span class="date">
+                        2026-02-14
+                     </span>
+                     </a>
+                  </li>
+               
+                  <li>
+                     <a href="https://www.mot.gov.cn/xinwen/jiaotongyaowen/202602/t20260214_4200350.html">
+                     <span>
+                        2025年公路重大工程新闻宣传优秀项目出炉
+                     </span>
+                     <span class="date">
+                        2026-02-14
+                     </span>
+                     </a>
+                  </li>
+               
+            </ul>
+            <ul class="list">
+               
+                  <li>
+                     <a href="https://mp.weixin.qq.com/s/vEkBkCMPDAZ2Z36kid3OXw">
+                     <span>
+                        一周速览
+                     </span>
+                     <span class="date">
+                        2026-03-21
+                     </span>
+                     </a>
+                  </li>
+               
+                  <li>
+                     <a href="https://mp.weixin.qq.com/s/nicEdbU-25Xtm9QtzSQAKA">
+                     <span>
+                        一周速览
+                     </span>
+                     <span class="date">
+                        2026-03-14
+                     </span>
+                     </a>
+                  </li>
+               
+                  <li>
+                     <a href="https://mp.weixin.qq.com/s/QhcWvdVIgR0oeO6nDqEL6w">
+                     <span>
+                        一周速览
+                     </span>
+                     <span class="date">
+                        2026-03-07
+                     </span>
+                     </a>
+                  </li>
+               
+                  <li>
+                     <a href="https://mp.weixin.qq.com/s/NMd1QMo77FiGBcGDNfpe1Q">
+                     <span>
+                        一周速览
+                     </span>
+                     <span class="date">
+                        2026-03-01
+                     </span>
+                     </a>
+                  </li>
+               
+                  <li>
+                     <a href="https://mp.weixin.qq.com/s/5FW3j-F83HBEkCTu5I2ulw">
+                     <span>
+                        【春运进行时】聚焦安全、服务与应急保障 守护平安暖心出...
+                     </span>
+                     <span class="date">
+                        2026-02-23
+                     </span>
+                     </a>
+                  </li>
+               
+                  <li>
+                     <a href="https://mp.weixin.qq.com/s/I7_moGlBVKK6pNcQP4TRQg">
+                     <span>
+                        一周速览
+                     </span>
+                     <span class="date">
+                        2026-02-07
+                     </span>
+                     </a>
+                  </li>
+               
+                  <li>
+                     <a href="https://mp.weixin.qq.com/s/JHEQxHCzbTsM1Rym-wBjDQ">
+                     <span>
+                        一周速览
+                     </span>
+                     <span class="date">
+                        2026-01-31
+                     </span>
+                     </a>
+                  </li>
+               
+            </ul>
+            <ul class="list">
+               
+                  <li>
+                     <a href="./jtyw/jtyw_gsgxlkcx/202602/t20260227_801579.html">
+                     <span>
+                        国省干线路况信息
+                     </span>
+                     <span class="date">
+                        2026-02-27
+                     </span>
+                     </a>
+                  </li>
+               
+                  <li>
+                     <a href="./jtyw/jtyw_gsgxlkcx/202602/t20260227_801550.html">
+                     <span>
+                        国省干线路况信息
+                     </span>
+                     <span class="date">
+                        2026-02-27
+                     </span>
+                     </a>
+                  </li>
+               
+                  <li>
+                     <a href="./jtyw/jtyw_gsgxlkcx/202512/t20251222_719525.html">
+                     <span>
+                        国省干线路况信息
+                     </span>
+                     <span class="date">
+                        2025-12-22
+                     </span>
+                     </a>
+                  </li>
+               
+                  <li>
+                     <a href="./jtyw/jtyw_gsgxlkcx/202512/t20251218_719151.html">
+                     <span>
+                        国省干线路况信息
+                     </span>
+                     <span class="date">
+                        2025-12-18
+                     </span>
+                     </a>
+                  </li>
+               
+                  <li>
+                     <a href="./jtyw/jtyw_gsgxlkcx/202512/t20251202_716230.html">
+                     <span>
+                        国省干线路况信息
+                     </span>
+                     <span class="date">
+                        2025-12-02
+                     </span>
+                     </a>
+                  </li>
+               
+                  <li>
+                     <a href="./jtyw/jtyw_gsgxlkcx/202511/t20251121_714157.html">
+                     <span>
+                        国省干线路况信息
+                     </span>
+                     <span class="date">
+                        2025-11-21
+                     </span>
+                     </a>
+                  </li>
+               
+                  <li>
+                     <a href="./jtyw/jtyw_gsgxlkcx/202511/t20251117_713367.html">
+                     <span>
+                        国省干线路况信息
+                     </span>
+                     <span class="date">
+                        2025-11-17
+                     </span>
+                     </a>
+                  </li>
+               
+            </ul>
+         </div>
+      </div>
+   </div>
+
+   <!-- 左右轮播 -->
+   <div class="carousel w">
+      <div class="carousel_item">
+         <div class="swiper leftSwiper">
+            <div class="swiper-wrapper">
+               <div class="swiper-slide">
+                  <a href="http://1.180.33.96:8020/jtj/toJtjLinkPage">
+                     <img src="./material/images/left_img_1.png" alt="" />
+                  </a>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="carousel_item">
+         <div class="swiper rightSwiper">
+            <div class="swiper-wrapper">
+               
+                  <div class="swiper-slide">
+                     <a href="./ztzl/ztzl_yhyshjzl/">
+                        <img src="./ztzl/ztzl_yhyshjzl/images/P020250812325946155395.png" />
+                     </a>
+                  </div>
+               
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <!-- 国务院文件 -->
+   <div class="notice w">
+      <div class="notice_item noticeSlide">
+         <div class="hd">
+            <ul class="head">
+               <li>
+                  <a href="./gwyxx/gwyxx_gwywj/">国务院文件</a>
+               </li>
+               <li>
+                  <a href="./gwyxx/gwyxx_gwyxx/">国务院信息</a>
+               </li>
+            </ul>
+         </div>
+
+         <div class="bd">
+            <ul class="list">
+               
+                  <li>
+                     <a href="https://www.gov.cn/yaowen/liebiao/202603/content_7063467.htm">
+                     <span>
+                        中共中央办公厅 国务院办公厅印发《国有企业领导人员廉洁...
+                     </span>
+                     <span class="date">
+                        2026-03-22
+                     </span>
+                     </a>
+                  </li>
+               
+                  <li>
+                     <a href="https://www.gov.cn/zhengce/content/202603/content_7063044.htm">
+                     <span>
+                        国务院关于修改《社会团体登记管理条例》的决定
+                     </span>
+                     <span class="date">
+                        2026-03-17
+                     </span>
+                     </a>
+                  </li>
+               
+                  <li>
+                     <a href="https://www.gov.cn/zhengce/content/202603/content_7061164.htm">
+                     <span>
+                        国务院办公厅关于加强基层消防工作的意见
+                     </span>
+                     <span class="date">
+                        2026-03-06
+                     </span>
+                     </a>
+                  </li>
+               
+                  <li>
+                     <a href="https://www.gov.cn/yaowen/liebiao/202602/content_7058349.htm">
+                     <span>
+                        中办印发《通知》在全党开展树立和践行正确政绩观学习教育
+                     </span>
+                     <span class="date">
+                        2026-02-23
+                     </span>
+                     </a>
+                  </li>
+               
+                  <li>
+                     <a href="https://www.gov.cn/zhengce/content/202602/content_7058028.htm">
+                     <span>
+                        供水条例
+                     </span>
+                     <span class="date">
+                        2026-02-14
+                     </span>
+                     </a>
+                  </li>
+               
+                  <li>
+                     <a href="https://www.gov.cn/zhengce/content/202602/content_7057744.htm">
+                     <span>
+                        国务院办公厅关于完善全国统一电力市场体系的实施意见
+                     </span>
+                     <span class="date">
+                        2026-02-11
+                     </span>
+                     </a>
+                  </li>
+               
+                  <li>
+                     <a href="https://www.gov.cn/zhengce/content/202602/content_7057651.htm">
+                     <span>
+                        国务院办公厅转发民政部等部门《关于进一步加强养老机构...
+                     </span>
+                     <span class="date">
+                        2026-02-10
+                     </span>
+                     </a>
+                  </li>
+               
+            </ul>
+            <ul class="list">
+               
+                  <li>
+                     <a href="https://www.gov.cn/yaowen/liebiao/202603/content_7063467.htm">
+                     <span>
+                        中共中央办公厅 国务院办公厅印发《国有企业领导人员廉洁...
+                     </span>
+                     <span class="date">
+                        2026-03-22
+                     </span>
+                     </a>
+                  </li>
+               
+                  <li>
+                     <a href="https://www.gov.cn/zhengce/content/202603/content_7063044.htm">
+                     <span>
+                        国务院关于修改《社会团体登记管理条例》的决定
+                     </span>
+                     <span class="date">
+                        2026-03-17
+                     </span>
+                     </a>
+                  </li>
+               
+                  <li>
+                     <a href="https://www.gov.cn/zhengce/content/202603/content_7061164.htm">
+                     <span>
+                        国务院办公厅关于加强基层消防工作的意见
+                     </span>
+                     <span class="date">
+                        2026-03-06
+                     </span>
+                     </a>
+                  </li>
+               
+                  <li>
+                     <a href="https://www.gov.cn/yaowen/liebiao/202602/content_7058349.htm">
+                     <span>
+                        中办印发《通知》在全党开展树立和践行正确政绩观学习教育
+                     </span>
+                     <span class="date">
+                        2026-02-23
+                     </span>
+                     </a>
+                  </li>
+               
+                  <li>
+                     <a href="https://www.gov.cn/zhengce/content/202602/content_7058028.htm">
+                     <span>
+                        供水条例
+                     </span>
+                     <span class="date">
+                        2026-02-14
+                     </span>
+                     </a>
+                  </li>
+               
+                  <li>
+                     <a href="https://www.gov.cn/zhengce/content/202602/content_7057744.htm">
+                     <span>
+                        国务院办公厅关于完善全国统一电力市场体系的实施意见
+                     </span>
+                     <span class="date">
+                        2026-02-11
+                     </span>
+                     </a>
+                  </li>
+               
+                  <li>
+                     <a href="https://www.gov.cn/zhengce/content/202602/content_7057651.htm">
+                     <span>
+                        国务院办公厅转发民政部等部门《关于进一步加强养老机构...
+                     </span>
+                     <span class="date">
+                        2026-02-10
+                     </span>
+                     </a>
+                  </li>
+               
+            </ul>
+         </div>
+      </div>
+      <div class="notice_item noticeSlide">
+         <div class="hd">
+            <ul class="head">
+               <li>
+                  <a href="./zfxxgk/fdzdgknr/fd_tzgg/">通知公告</a>
+               </li>
+               <li>
+                  <a href="./zfxxgk/fdzdgknr/fd_zbtb/">招标投标</a>
+               </li>
+               <li>
+                  <a href="./zfxxgk/fdzdgknr/fd_yjsgk/">预决算公开</a>
+               </li>
+            </ul>
+         </div>
+
+         <div class="bd">
+            <ul class="list">
+               
+                  <li>
+                     <a href="./zfxxgk/fdzdgknr/fd_tzgg/202601/t20260113_724866.html">
+                     <span>
+                        包头市交通运输局2025年度政府网站工作年度报表
+                     </span>
+                     <span class="date">
+                        2026-01-13
+                     </span>
+                     </a>
+                  </li>
+               
+                  <li>
+                     <a href="./zfxxgk/fdzdgknr/fd_tzgg/202603/t20260319_841226.html">
+                     <span>
+                        遗失声明（蒙BDT0860道路运输证丢失，声明作废）
+                     </span>
+                     <span class="date">
+                        2026-03-19
+                     </span>
+                     </a>
+                  </li>
+               
+                  <li>
+                     <a href="./zfxxgk/fdzdgknr/fd_tzgg/202603/t20260318_840958.html">
+                     <span>
+                        包头市2025年度出租汽车驾驶员服务质量信誉考核结果
+                     </span>
+                     <span class="date">
+                        2026-03-18
+                     </span>
+                     </a>
+                  </li>
+               
+                  <li>
+                     <a href="./zfxxgk/fdzdgknr/fd_tzgg/202603/t20260320_841537.html">
+                     <span>
+                        包头市交通运输局关于报送2025年度中央对地方转移支付交...
+                     </span>
+                     <span class="date">
+                        2026-03-17
+                     </span>
+                     </a>
+                  </li>
+               
+                  <li>
+                     <a href="./zfxxgk/fdzdgknr/fd_tzgg/202603/t20260317_835324.html">
+                     <span>
+                        遗失声明（蒙B589HV道路运输证丢失，声明作废）
+                     </span>
+                     <span class="date">
+                        2026-03-17
+                     </span>
+                     </a>
+                  </li>
+               
+                  <li>
+                     <a href="./zfxxgk/fdzdgknr/fd_tzgg/202603/t20260313_826824.html">
+                     <span>
+                        包头市交通运输局关于城市客运企业主要负责人和安全生产...
+                     </span>
+                     <span class="date">
+                        2026-03-13
+                     </span>
+                     </a>
+                  </li>
+               
+                  <li>
+                     <a href="./zfxxgk/fdzdgknr/fd_tzgg/202603/t20260313_826727.html">
+                     <span>
+                        遗失声明（蒙B2359T道路运输证丢失，声明作废）
+                     </span>
+                     <span class="date">
+                        2026-03-13
+                     </span>
+                     </a>
+                  </li>
+               
+            </ul>
+            <ul class="list">
+               
+                  <li>
+                     <a href="./zfxxgk/fdzdgknr/fd_zbtb/202512/t20251223_719782.html">
+                     <span>
+                        包头市交通运输局关于2025年“双随机、一公开”招标投标...
+                     </span>
+                     <span class="date">
+                        2025-12-23
+                     </span>
+                     </a>
+                  </li>
+               
+                  <li>
+                     <a href="./zfxxgk/fdzdgknr/fd_zbtb/202512/t20251218_719177.html">
+                     <span>
+                        包头市交通运输局关于开展2025年“双随机、一公开”招标...
+                     </span>
+                     <span class="date">
+                        2025-12-17
+                     </span>
+                     </a>
+                  </li>
+               
+                  <li>
+                     <a href="./zfxxgk/fdzdgknr/fd_zbtb/202512/t20251216_718694.html">
+                     <span>
+                        国道210线固阳至东河段公路工程项目和国道210线古城湾黄...
+                     </span>
+                     <span class="date">
+                        2025-12-15
+                     </span>
+                     </a>
+                  </li>
+               
+                  <li>
+                     <a href="./zfxxgk/fdzdgknr/fd_zbtb/202512/t20251215_718532.html">
+                     <span>
+                        国道210线固阳至东河段公路工程项目和国道210线古城湾黄...
+                     </span>
+                     <span class="date">
+                        2025-12-11
+                     </span>
+                     </a>
+                  </li>
+               
+                  <li>
+                     <a href="./zfxxgk/fdzdgknr/fd_zbtb/202512/t20251203_716354.html">
+                     <span>
+                        国道210线固阳至东河段公路工程项目和国道210线古城湾黄...
+                     </span>
+                     <span class="date">
+                        2025-11-19
+                     </span>
+                     </a>
+                  </li>
+               
+                  <li>
+                     <a href="./zfxxgk/fdzdgknr/fd_zbtb/202511/t20251118_713468.html">
+                     <span>
+                        国道210线固阳至东河段公路工程项目和国道210线古城湾黄...
+                     </span>
+                     <span class="date">
+                        2025-11-14
+                     </span>
+                     </a>
+                  </li>
+               
+                  <li>
+                     <a href="./zfxxgk/fdzdgknr/fd_zbtb/202510/t20251021_707272.html">
+                     <span>
+                        S506线K128-199段；S238线K15-K27段；G331线K6419-K6459...
+                     </span>
+                     <span class="date">
+                        2025-10-20
+                     </span>
+                     </a>
+                  </li>
+               
+            </ul>
+            <ul class="list">
+               
+                  <li>
+                     <a href="./zfxxgk/fdzdgknr/fd_yjsgk/202602/t20260209_778078.html">
+                     <span>
+                        2026年度包头市交通运输局（部门）预算公开
+                     </span>
+                     <span class="date">
+                        2026-02-09
+                     </span>
+                     </a>
+                  </li>
+               
+                  <li>
+                     <a href="./zfxxgk/fdzdgknr/fd_yjsgk/202509/t20250929_607425.html">
+                     <span>
+                        2024年度包头市交通运输局决算公开
+                     </span>
+                     <span class="date">
+                        2025-09-26
+                     </span>
+                     </a>
+                  </li>
+               
+                  <li>
+                     <a href="./zfxxgk/fdzdgknr/fd_yjsgk/202508/t20250815_218497.html">
+                     <span>
+                        2025年度包头市交通运输局（部门） 预算公开
+                     </span>
+                     <span class="date">
+                        2025-01-26
+                     </span>
+                     </a>
+                  </li>
+               
+                  <li>
+                     <a href="./zfxxgk/fdzdgknr/fd_yjsgk/202508/t20250815_218496.html">
+                     <span>
+                        2023年度包头市交通运输局（部门）决算公开
+                     </span>
+                     <span class="date">
+                        2024-09-26
+                     </span>
+                     </a>
+                  </li>
+               
+                  <li>
+                     <a href="./zfxxgk/fdzdgknr/fd_yjsgk/202508/t20250815_218495.html">
+                     <span>
+                        2024年度包头市交通运输局（部门） 预算公开
+                     </span>
+                     <span class="date">
+                        2024-02-27
+                     </span>
+                     </a>
+                  </li>
+               
+                  <li>
+                     <a href="./zfxxgk/fdzdgknr/fd_yjsgk/202508/t20250815_218494.html">
+                     <span>
+                        2022年度包头市交通运输局决算公开
+                     </span>
+                     <span class="date">
+                        2023-09-26
+                     </span>
+                     </a>
+                  </li>
+               
+                  <li>
+                     <a href="./zfxxgk/fdzdgknr/fd_yjsgk/202508/t20250815_218493.html">
+                     <span>
+                        2023年度包头市交通运输局（部门） 预算公开
+                     </span>
+                     <span class="date">
+                        2023-02-03
+                     </span>
+                     </a>
+                  </li>
+               
+            </ul>
+         </div>
+      </div>
+   </div>
+
+   <!-- 横幅 -->
+   <div class="hf w">
+      <div class="swiper hfSwiper">
+         <div class="swiper-wrapper">
+            
+               <div class="swiper-slide">
+                  <a href="http://116.114.161.151:200/btsjtysj/ztzl/ztzl_yhyshjzl/yhyshjzl_zzjg/">
+                  <a href="http://116.114.161.151:200/btsjtysj/ztzl/ztzl_yhyshjzl/yhyshjzl_zzjg/" target="_self"><img id="pic_preview_box_id" src="./hf/202508/W020250812328396335956.png"/></a>
+                  </a>
+               </div>
+            
+               <div class="swiper-slide">
+                  <a href="https://www.mot.gov.cn/zhuanti/sihaoncl/index.html">
+                  <a href="https://www.mot.gov.cn/zhuanti/sihaoncl/index.html" target="_self"><img id="pic_preview_box_id" src="./hf/202508/W020250812327286456763.jpg"/></a>
+                  </a>
+               </div>
+            
+         </div>
+      </div>
+   </div>
+
+   <!-- 政策法规 -->
+   <div class="policy w">
+      <div class="policy_l policySlide">
+         <div class="hd">
+            <ul class="head">
+               <li>
+                  <a href="./zfxxgk/fdzdgknr/fd_zcfg/">政策法规</a>
+               </li>
+               <li>
+                  <a href="./zfxxgk/fdzdgknr/fd_zcjd/">政策解读</a>
+               </li>
+            </ul>
+         </div>
+
+         <div class="bd">
+            <ul class="list">
+               
+                  <li>
+                     <a href="https://xxgk.mot.gov.cn/2020/jigou/glj/202512/t20251223_4182651.html">
+                     <span>
+                        交通运输部关于发布《公路工程施工环境保护技术规范》的公告
+                     </span>
+                     <span class="date">
+                        2025-12-23
+                     </span>
+                     </a>
+                  </li>
+               
+                  <li>
+                     <a href="./zfxxgk/fdzdgknr/fd_zcfg/202511/t20251106_711371.html">
+                     <span>
+                        包头市交通运输局关于2025年法治政府建设情况的报告
+                     </span>
+                     <span class="date">
+                        2025-11-05
+                     </span>
+                     </a>
+                  </li>
+               
+                  <li>
+                     <a href="./zfxxgk/fdzdgknr/fd_zcfg/202511/t20251112_712629.html">
+                     <span>
+                        包头市交通运输局企业行政合规指导清单
+                     </span>
+                     <span class="date">
+                        2025-10-13
+                     </span>
+                     </a>
+                  </li>
+               
+                  <li>
+                     <a href="./zfxxgk/fdzdgknr/fd_zcfg/202511/t20251112_712617.html">
+                     <span>
+                        包头市交通运输局“轻罚免罚”事项清单（第三批次）
+                     </span>
+                     <span class="date">
+                        2025-09-23
+                     </span>
+                     </a>
+                  </li>
+               
+                  <li>
+                     <a href="https://xxgk.mot.gov.cn/2020/jigou/glj/202508/t20250807_4174184.html">
+                     <span>
+                        交通运输部关于贯彻实施《农村公路条例》的通知
+                     </span>
+                     <span class="date">
+                        2025-08-07
+                     </span>
+                     </a>
+                  </li>
+               
+                  <li>
+                     <a href="https://xxgk.mot.gov.cn/2020/jigou/glj/202507/t20250723_4173067.html">
+                     <span>
+                        交通运输部关于发布《公路避险车道设计规范》的公告
+                     </span>
+                     <span class="date">
+                        2025-07-23
+                     </span>
+                     </a>
+                  </li>
+               
+                  <li>
+                     <a href="https://xxgk.mot.gov.cn/2020/jigou/glj/202507/t20250722_4172995.html">
+                     <span>
+                        交通运输部关于发布《涉路施工安全评价技术规范》的公告
+                     </span>
+                     <span class="date">
+                        2025-07-22
+                     </span>
+                     </a>
+                  </li>
+               
+            </ul>
+            <ul class="list">
+               
+                  <li>
+                     <a href="https://www.mot.gov.cn/2025zhengcejd/202512/t20251215_4181664.html">
+                     <span>
+                        《执行抢险救灾任务车辆免费通行服务保障规程》政策解读
+                     </span>
+                     <span class="date">
+                        2025-12-16
+                     </span>
+                     </a>
+                  </li>
+               
+                  <li>
+                     <a href="./zfxxgk/fdzdgknr/fd_zcjd/202511/t20251106_711378.html">
+                     <span>
+                        【图解】收藏学习！“十五五”规划建议思维导图
+                     </span>
+                     <span class="date">
+                        2025-11-06
+                     </span>
+                     </a>
+                  </li>
+               
+                  <li>
+                     <a href="https://www.mot.gov.cn/2025zhengcejd/202507/t20250722_4173009.html">
+                     <span>
+                        司法部、交通运输部负责人就《农村公路条例》答记者问
+                     </span>
+                     <span class="date">
+                        2025-07-22
+                     </span>
+                     </a>
+                  </li>
+               
+                  <li>
+                     <a href="https://www.mot.gov.cn/2025zhengcejd/202507/t20250722_4172994.html">
+                     <span>
+                        《涉路施工安全评价技术规范》解读
+                     </span>
+                     <span class="date">
+                        2025-07-22
+                     </span>
+                     </a>
+                  </li>
+               
+                  <li>
+                     <a href="https://www.mot.gov.cn/2025zhengcejd/202506/t20250618_4170820.html">
+                     <span>
+                        《铁路建设工程勘察设计管理办法》政策解读
+                     </span>
+                     <span class="date">
+                        2025-06-19
+                     </span>
+                     </a>
+                  </li>
+               
+                  <li>
+                     <a href="https://www.mot.gov.cn/2025zhengcejd/202505/t20250522_4169184.html">
+                     <span>
+                        《交通运输部2025年立法工作计划》解读
+                     </span>
+                     <span class="date">
+                        2025-05-23
+                     </span>
+                     </a>
+                  </li>
+               
+                  <li>
+                     <a href="https://www.mot.gov.cn/2025zhengcejd/202504/t20250418_4167170.html">
+                     <span>
+                        专家解读文章一|强化全链条治理多元主体责任 加快推进快...
+                     </span>
+                     <span class="date">
+                        2025-04-18
+                     </span>
+                     </a>
+                  </li>
+               
+            </ul>
+         </div>
+      </div>
+      <div class="policy_r">
+         <div class="title_head">
+            <img src="./material/images/title_hdjl.png" alt="" />
+         </div>
+         <div class="policy_inner">
+            <ul class="side">
+               <li>
+                  <a href="./hdjl/hdjl_wsqzzj/">
+                     <img src="./material/images/side_icon_1.png" />
+                     <div>网上群众之家</div>
+                  </a>
+               </li>
+               <li>
+                  <a href="./hdjl/hdjl_yjzj/">
+                     <img src="./material/images/side_icon_2.png" />
+                     <div>意见征集</div>
+                  </a>
+               </li>
+               <li>
+                  <a href="./hdjl/hdjl_hcsjjsjbzstd/">
+                     <img src="./material/images/side_icon_3.png" />
+                     <div>货车司机接诉即办专属通道</div>
+                  </a>
+               </li>
+            </ul>
+            <div class="content">
+               <div class="top">
+                  <img src="./material/images/img_jddh.png" />
+               </div>
+               <div class="bot">
+                  <img src="./material/images/ewm.png" />
+                  <div class="right">
+                     <div class="name">包头交通运输宣传微信公众号</div>
+                     <div class="tips">
+                        <img src="./material/images/icon_left.png" />
+                        <div>扫一扫关注我们</div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <!-- 公共底部 -->
+   <div class="footer">
+      <div class="friendship">
+        <ul class="links w">
+          <li>
+            <div class="name">政府网站链接</div>
+            <div class="panel">
+              <a href="https://www.gov.cn/" target="_blank">中华人民共和国中央人民政府</a>
+              <a href="https://www.nmg.gov.cn/" target="_blank">内蒙古自治区人民政府</a>
+              <a href="https://www.baotou.gov.cn/" target="_blank">包头市人民政府</a>
+            </div>
+          </li>
+          <li>
+            <div class="name">交通系统网站链接</div>
+            <div class="panel">
+              <a href="https://www.mot.gov.cn/" target="_blank">中华人民共和国交通运输部</a>
+              <a href="https://jtyst.nmg.gov.cn/" target="_blank">内蒙古自治区交通运输厅</a>
+            </div>
+          </li>
+          <li>
+            <div class="name">地市交通网站链接</div>
+            <div class="panel">
+              <a href="http://jtj.chifeng.gov.cn/" target="_blank">赤峰市交通运输局</a>
+              <a href="http://jtysj.huhhot.gov.cn/" target="_blank">呼和浩特市交通运输局</a>
+            </div>
+          </li>
+          <li>
+            <div class="name">相关单位</div>
+            <div class="panel">
+              <a href="https://gaj.baotou.gov.cn/" target="_blank">包头市公安局</a>
+              <a href="https://www.btjttz.com/" target="_blank">包头交通投资集团</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="copyright">
+        <div class="w">
+          <ul class="top">
+            <li>主办单位：包头市交通运输局</li>
+            <li><a href="./wzxx/wzxx_wzdt/">网站地图</a></li>
+            <li><a href="./wzxx/xx_lxwm/">联系我们</a></li>
+          </ul>
+          <ul class="other">
+            <li>
+              <a href="https://beian.miit.gov.cn/">蒙ICP备19005711号</a>
+            </li>
+            <li>|</li>
+            <li>
+              <a href="https://beian.mps.gov.cn/#/query/webSearch?code=15029002000505">
+                <img src="./material/images/icon_mga.png" alt="" />
+                <span>蒙公网安备15029002000505号</span>
+              </a>
+            </li>
+            <li>|</li>
+            <li>政府网站标识码：1502000001</li>
+          </ul>
+
+          <div class="bot">
+            <a href="https://zfwzgl.www.gov.cn/exposure/jiucuo.html?site_code=1502000001&url=http%3A%2F%2Fjtj.baotou.gov.cn%2Fjtxw.jhtml">
+              <img src="./material/images/img_jiucuo.png" alt="" />
+            </a>
+            <a href="https://bszs.conac.cn/sitename?method=show&id=935B42D0AF0C2D36E05310291AAC4CC7">
+              <img src="./material/images/img_dang.png" alt="" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+ <script>
+$(function() {
+    const zoomFactor = 1.25;
+
+    function getTargetElements() {
+        return $('p, span, a, h1, h2, h3, h4, h5, h6, li, td, th, label, div:not(:has(*))');
+    }
+
+    // --- 开启长者模式 ---
+    $('#zoomIn').on('click', function() {
+        if ($('body').hasClass('senior-mode-active')) {
+            return;
+        }
+
+        const currentElements = getTargetElements();
+        // ... (字体放大的两步走逻辑，此处省略以保持简洁) ...
+        currentElements.each(function() { /* 保存原始大小 */
+             const currentSizeStr = $(this).css('font-size');
+             $(this).data('original-font-size', currentSizeStr);
+        });
+        currentElements.each(function() { /* 计算并应用新大小 */
+             const originalSizeStr = $(this).data('original-font-size');
+             if (originalSizeStr) {
+                 const originalSizeNum = parseFloat(originalSizeStr);
+                 if (!isNaN(originalSizeNum) && originalSizeNum > 0) {
+                    $(this).css('font-size', (originalSizeNum * zoomFactor) + 'px');
+                 }
+             }
+        });
+
+        $('body').addClass('senior-mode-active'); // 仍然建议保留class用于状态判断
+
+        // --- 切换按钮显示 ---
+        $(this).hide(); // 隐藏自己（“开启”按钮）
+        $('#resetZoom').show(); // 查找并显示“关闭”按钮
+    });
+
+    // --- 关闭长者模式 ---
+    $('#resetZoom').on('click', function() {
+        const currentElements = getTargetElements();
+        // ... (字体恢复的逻辑) ...
+        currentElements.each(function() {
+            const originalSize = $(this).data('original-font-size');
+            if (originalSize) {
+                $(this).css('font-size', originalSize);
+                $(this).removeData('original-font-size');
+            }
+        });
+        
+        $('body').removeClass('senior-mode-active');
+
+        // --- 切换按钮显示 ---
+        $(this).hide(); // 隐藏自己（“关闭”按钮）
+        $('#zoomIn').show(); // 查找并显示“开启”按钮
+    });
+})
+</script>
+<!--无障碍-->
+<script id="toolbarjs" src="./material/toolbar_init.js"></script>
+<!--网脉-->
+<script id="_trs_ta_js" src="//ta.trs.cn/c/js/ta.js?mpid=6568" async="async" defer="defer"></script>
+<!--点击量-->
+<script id="_trs_ta_js" src=".//material/js/trs_report_sdk.js"></script>
+<script type="text/javascript">
+    //上传点击数据
+    let eventReport = new EventReport("/hx-api/receive/receiveData")
+    let siteName = "包头市交通运输局"
+    let chnlRelation = "包头市交通运输局"
+    chnlRelation = chnlRelation.replace(siteName+">","")
+    let docid = ""
+    let doc_id = 0
+    if(docid.length > 0){
+        doc_id = parseInt(docid)
+    }
+    let url = "####"
+    let title ='';
+    var reg =/<[^<>]+>/g;
+    title = title.replace(reg, "");
+    let docpubtime = ""
+    
+    if (doc_id== 0) {
+    doc_id = 0;
+    url = document.URL
+    title = document.title
+    docpubtime = ""
+    }
+    let doc_channel = ""
+    let siteid = parseInt("")
+    if (siteid.length == 0) {
+    siteid = 0
+    }
+    
+    let channel_id = parseInt("")
+    
+    if(channel_id.length == 0){
+    channel_id = 0
+    }
+    //appkey
+    let appKey = "dda1bee997e29182febbe848dd3b313a"
+    
+    let myParam = {
+		title: title,
+		url: url,
+		doc_id: doc_id,
+		siteid: siteid,
+		site_name: siteName,
+		doc_channel: doc_channel,
+		channel_relation: chnlRelation,
+		channel_id: channel_id,
+		doc_pub_time: docpubtime,
+		app_key: appKey
+    }
+    //统计外链
+    InitExternalLinks("/hx-api/receive/receiveLink",myParam,"trs.nmsuny.com")
+    eventReport.trackUserData(myParam)
+    // 点击量埋点结束
+</script>
+
+<!--关怀版-->
+<script>
+$(function() {
+    const zoomFactor = 1.25;
+
+    function getTargetElements() {
+        return $('p, span, a, h1, h2, h3, h4, h5, h6, li, td, th, label, div:not(:has(*))');
+    }
+
+    // --- 开启长者模式 ---
+    $('#zoomIn').on('click', function() {
+        if ($('body').hasClass('senior-mode-active')) {
+            return;
+        }
+
+        const currentElements = getTargetElements();
+        // ... (字体放大的两步走逻辑，此处省略以保持简洁) ...
+        currentElements.each(function() { /* 保存原始大小 */
+             const currentSizeStr = $(this).css('font-size');
+             $(this).data('original-font-size', currentSizeStr);
+        });
+        currentElements.each(function() { /* 计算并应用新大小 */
+             const originalSizeStr = $(this).data('original-font-size');
+             if (originalSizeStr) {
+                 const originalSizeNum = parseFloat(originalSizeStr);
+                 if (!isNaN(originalSizeNum) && originalSizeNum > 0) {
+                    $(this).css('font-size', (originalSizeNum * zoomFactor) + 'px');
+                 }
+             }
+        });
+
+        $('body').addClass('senior-mode-active'); // 仍然建议保留class用于状态判断
+
+        // --- 切换按钮显示 ---
+        $(this).hide(); // 隐藏自己（“开启”按钮）
+        $('#resetZoom').show(); // 查找并显示“关闭”按钮
+    });
+
+    // --- 关闭长者模式 ---
+    $('#resetZoom').on('click', function() {
+        const currentElements = getTargetElements();
+        // ... (字体恢复的逻辑) ...
+        currentElements.each(function() {
+            const originalSize = $(this).data('original-font-size');
+            if (originalSize) {
+                $(this).css('font-size', originalSize);
+                $(this).removeData('original-font-size');
+            }
+        });
+        
+        $('body').removeClass('senior-mode-active');
+
+        // --- 切换按钮显示 ---
+        $(this).hide(); // 隐藏自己（“关闭”按钮）
+        $('#zoomIn').show(); // 查找并显示“开启”按钮
+    });
+})
+</script>
+<!-- 用户登录注册 -->
+<script>
+function goLogin(){
+       window.open("/personal/validate/gotoLogin.do?client_id=VNWELIJ28&goto="+decodeURIComponent("http://jtj.baotou.gov.cn/"));
+}
+var ovUserInfo;
+var ovData;
+// 获取用户登录状态
+function getUserObj() {
+    $.ajax({
+        url: '/personal/usrlogin/getUserInfo', //根据实际事情情况更换域名
+        type: 'get',
+        dataType: 'json',
+        success: function(data) {
+            if(!data.success){ 
+                $(".userInfo2").hide();
+                $(".userInfo1").show();
+            }else{
+                ovUserInfo = data.data;
+                $(".userInfo1").hide();
+                $(".userInfo2").show();
+                $('.userInfo2').html("欢迎："+ovUserInfo.USER_NAME);
+            }
+        },
+        error: function (err) {
+            console.log('不好意思，您请求的接口出错了！')
+        }
+    })
+    return ovData;
+}
+
+$(function () {
+    $(".userInfo2").hide();
+    $(".userInfo1").show();
+     getUserObj();
+ })
+</script>
+
+   <script>
+      var swiper1 = new Swiper(".hfSwiper", {
+         autoplay: true,
+         loop: true,
+         direction: "vertical",
+      });
+
+      var swiper2 = new Swiper(".newsSwiper", {
+         autoplay: true,
+         loop: true,
+         pagination: {
+            el: ".swiper-news-pagination",
+         },
+      });
+
+      $(".newsSlide").slide({});
+
+      var swiper3 = new Swiper(".leftSwiper", {
+         autoplay: true,
+         loop: true,
+         direction: "vertical",
+      });
+
+      var swiper4 = new Swiper(".rightSwiper", {
+         autoplay: true,
+         loop: true,
+         direction: "vertical",
+      });
+
+      $(".noticeSlide").slide({});
+      $(".policySlide").slide({});
+   </script>
+</body>
+
+</html>

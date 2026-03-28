@@ -1,0 +1,1355 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="SiteName" content="包头市审计局" />
+<meta name="SiteDomain" content="http://sjj.baotou.gov.cn" />
+<meta name="SiteIDCode" content="1502000034" />
+<link rel="shortcut icon" href="./material/images/favicon.png" type="image/x-icon" />
+    <title>包头市审计局</title>
+    <link rel="stylesheet" href="./material/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./material/css/initialize.css" />
+    <link rel="stylesheet" href="./material/css/header_footer.css" />
+    <link rel="stylesheet" href="./material/css/header_footer_h5.css" media="screen and (max-width:750px)" />
+    <link rel="stylesheet" href="./material/css/index.css" />
+    <link rel="stylesheet" href="./material/css/index_h5.css" media="screen and (max-width:750px)" />
+    <script src="./material/js/jquery.min.js"></script>
+    <script src="./material/js/swiper-bundle.min.js"></script>
+    <script src="./material/js/jquery.SuperSlide.2.1.3.js"></script>
+    <script src="./material/js/resize.js"></script>
+    <script src="./material/js/h5.js"></script>
+    <style>
+      .headlines .title a {
+          color: #016bb5;
+      }
+.topBanner_slideBox {
+	width: 100%;
+	height: 104px;
+	overflow: hidden;
+	position: relative;
+	margin: 0 auto;
+	margin: 20px auto;
+}
+
+.topBanner_slideBox .hd {
+	height: 15px;
+	overflow: hidden;
+	position: absolute;
+	right: 5px;
+	bottom: 5px;
+	z-index: 1;
+}
+
+.topBanner_slideBox .hd ul {
+	overflow: hidden;
+	zoom: 1;
+	float: left;
+}
+
+.topBanner_slideBox .hd ul li {
+	float: left;
+	margin-right: 2px;
+	width: 15px;
+	height: 15px;
+	line-height: 14px;
+	text-align: center;
+	background: #fff;
+	cursor: pointer;
+}
+
+.topBanner_slideBox .hd ul li.on {
+	background: #f00;
+	color: #fff;
+}
+
+.topBanner_slideBox .bd {
+	position: relative;
+	height: 100%;
+	z-index: 0;
+}
+
+.topBanner_slideBox .bd li {
+	zoom: 1;
+	vertical-align: middle;
+}
+
+.topBanner_slideBox .bd img {
+	width: 100%;
+	height: 104px;
+	display: block;
+}
+
+.policy {
+  margin-top: 35px;
+}
+
+.special {
+  margin-top: 35px;
+}
+
+.investigate {
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+    </style>
+
+  </head>
+
+  <body>
+    <!-- 头部 -->
+    <div class="header">
+      <div class="w">
+        <div class="shortcut">
+          <img class="logo" src="./material/images/logo.png" alt="" />
+          <div class="shortcut_r">
+            <ul class="shortcut_nav">
+              <li>
+                <a style="cursor: pointer;">
+                  <img src="./material/images/icon_wza.png" alt="" />
+                  <span id="wza_id">无障碍</span>
+                </a>
+              </li>
+              <li>|</li>
+              <li id="zoomIn">
+                <a style="cursor: pointer;">
+                  <span>关怀版</span>
+                </a>
+              </li>
+              <li style="display: none;">|</li>
+              <li style="display: none;" id="resetZoom">
+                <a style="cursor: pointer;">
+                  <span>退出</span>
+                </a>
+              </li>
+              <li>|</li>
+              <li>
+                <a class="userInfo1" href="javascript:void(0)" onclick="goLogin()">登录/注册</a>
+                <a class="userInfo2" href="https://zwfw.nmg.gov.cn/personal_center_profile" target="_blank"  style="display: none;">用户中心</a>
+              </li>
+
+            </ul>
+            <div class="search">
+              <div class="search_box">
+                <input id="searchInput" placeholder="请输入您需要查询的关键词" type="text" />
+                <button class="btn" id="searchBtn">
+                  <img src="./material/images/icon_fdj.png" alt="" />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <ul class="nav" id="headerNav">
+          <li>
+            <a href="./" target="_blank">网站首页</a>
+          </li>
+          <li>
+            <a href="./ywdt/">要闻动态</a>
+          </li>
+          <li>
+            <a href="./zwgk/">政务公开</a>
+          </li>
+          <li>
+            <a href="./djlz/">党建廉政</a>
+          </li>
+          <li>
+            <a href="./hdjl/">互动交流</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+<script>
+      document.getElementById("searchBtn").addEventListener("click", function () {
+        var keyword = document.getElementById("searchInput").value;
+          if (keyword) {
+            window.location.href = "/searchweb-dept/#/Door?siteTag=1&siteid=16&keywords=" + keyword;
+          } else {
+            alert("请输入您需要查询的关键词");
+          }
+        });
+
+      // 导航栏目着重
+      $(function() {
+        var href = window.location.href;
+        var index = 0;
+        if (href.indexOf("/ywdt/") != -1) index = 1;
+        if (href.indexOf("/zwgk/") != -1) index = 2;
+        if (href.indexOf("/djlz/") != -1) index = 3;
+        if (href.indexOf("/hdjl/") != -1) index = 4;
+        $("#headerNav li").each(function(i){
+          $("#headerNav li").removeClass("on").eq(index).addClass("active");
+        });
+      })
+    </script>
+    <!-- 头条 -->
+    <div class="headlines">
+      <div class="w">
+      <div class="toutiao w">
+         <a href="./ywdt/ywdt_tt/"><img src="./material/images/toutiao_img.png" /></a>
+         <div class="toutiao-cont">
+            
+               <a href="./ywdt/ywdt_tt/202603/t20260327_847542.html" class="title">
+                  总书记两会后首次考察指引“十五五”开局起步
+               </a>
+            
+
+            
+               <a class="desc" href="./ywdt/ywdt_tt/202603/t20260326_846777.html">
+                  习近平总书记赴雄安新区考察并主持召开深入推进雄安新区高质量建设... 
+               </a>
+            
+         </div>
+      </div>
+
+<!--
+        
+          <div class="title">
+            <a href="./ywdt/ywdt_tt/202603/t20260327_847542.html">
+              总书记两会后首次考察指引“十五五”开局起步
+            </a>
+          </div>
+          <div class="desc">
+            
+          </div>
+        
+-->
+      </div>
+    </div>
+    <!-- 新闻 -->
+    <div class="news w">
+      <div class="news_l">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            
+              <div class="swiper-slide">
+                <a href="./ywdt/ywdt_zwyw/202602/t20260226_801259.html">
+                  <img src="./ywdt/ywdt_zwyw/202602/W020260226371653837671.png" />
+                </a>
+                <div class="mask">
+                  包头市审计学会、内部审计协会双双荣获5A级社会组...
+                </div>
+              </div>
+            
+              <div class="swiper-slide">
+                <a href="./ywdt/ywdt_zwyw/202602/t20260204_765917.html">
+                  <img src="./ywdt/ywdt_zwyw/202602/W020260204524437462377_ORIGIN.jpg" />
+                </a>
+                <div class="mask">
+                  包头市召开2026年全市审计工作会议暨全市审计机关...
+                </div>
+              </div>
+            
+              <div class="swiper-slide">
+                <a href="./ywdt/ywdt_zwyw/202505/t20250530_82333.html">
+                  <img src="./ywdt/ywdt_zwyw/202505/W020250806585381183393.png" />
+                </a>
+                <div class="mask">
+                  喜报！包头市审计局蝉联“全国文明单位”荣誉称号
+                </div>
+              </div>
+            
+              <div class="swiper-slide">
+                <a href="./ywdt/ywdt_zwyw/202505/t20250530_534183.html">
+                  <img src="./ywdt/ywdt_zwyw/202505/W020250922490681555938.png" />
+                </a>
+                <div class="mask">
+                  喜报！包头市审计局蝉联“全国文明单位”荣誉称号
+                </div>
+              </div>
+            
+          </div>
+          <div class="swiper-pagination swiper-news-pagination"></div>
+        </div>
+      </div>
+      <div class="news_r newsSlide">
+        <div class="head hd">
+          <ul class="head_nav">
+            <li>
+              <a href="./ywdt/ywdt_zwyw/">审计动态</a>
+            </li>
+            <li>
+              <a href="./ywdt/ywdt_tzgg/">通知公告</a>
+            </li>
+          </ul>
+        </div>
+        <div class="bd">
+          <ul class="list">
+            
+              <div class="first">
+                <div class="title">
+                  <a href="./ywdt/ywdt_zwyw/202603/t20260327_847746.html">
+                    以制度建设为抓手全面推进校园餐整改落地见效
+                  </a>
+                </div>
+                <div class="desc">
+                  
+                </div>
+                <div class="date">
+                  2026-03-27
+                </div>
+              </div>
+            
+            
+              <li>
+                <a href="./ywdt/ywdt_zwyw/202603/t20260326_846778.html">
+                  <span>
+                    包头市审计局以三个加强护航有为政府建设
+                  </span>
+                  <span class="date">
+                    2026-03-26
+                  </span>
+                </a>
+              </li>
+            
+              <li>
+                <a href="./ywdt/ywdt_zwyw/202603/t20260324_843100.html">
+                  <span>
+                    以制度建设为抓手全面推进校园餐整改落地见效
+                  </span>
+                  <span class="date">
+                    2026-03-24
+                  </span>
+                </a>
+              </li>
+            
+              <li>
+                <a href="./ywdt/ywdt_zwyw/202603/t20260320_842298.html">
+                  <span>
+                    包头市审计局积极践行“三个如”推动审计工作高质...
+                  </span>
+                  <span class="date">
+                    2026-03-20
+                  </span>
+                </a>
+              </li>
+            
+              <li>
+                <a href="./ywdt/ywdt_zwyw/202603/t20260316_832590.html">
+                  <span>
+                    强化引领 系统护航包头市审计局以三年行动方案与党...
+                  </span>
+                  <span class="date">
+                    2026-03-16
+                  </span>
+                </a>
+              </li>
+            
+              <li>
+                <a href="./ywdt/ywdt_zwyw/202603/t20260304_803311.html">
+                  <span>
+                    审计“三步走”重点关注工业园区违规用地问题
+                  </span>
+                  <span class="date">
+                    2026-03-04
+                  </span>
+                </a>
+              </li>
+            
+              <li>
+                <a href="./ywdt/ywdt_zwyw/202602/t20260226_801259.html">
+                  <span>
+                    包头市审计学会、内部审计协会双双荣获5A级社会组...
+                  </span>
+                  <span class="date">
+                    2026-02-26
+                  </span>
+                </a>
+              </li>
+            
+              <li>
+                <a href="./ywdt/ywdt_zwyw/202602/t20260225_800580.html">
+                  <span>
+                    审计多维发力护航教育优质均衡发展
+                  </span>
+                  <span class="date">
+                    2026-02-25
+                  </span>
+                </a>
+              </li>
+            
+              <li>
+                <a href="./ywdt/ywdt_zwyw/202602/t20260214_800253.html">
+                  <span>
+                    三维发力精准赋能自然资源审计工作
+                  </span>
+                  <span class="date">
+                    2026-02-23
+                  </span>
+                </a>
+              </li>
+            
+          </ul>
+          <ul class="list">
+            
+              <div class="first">
+                <div class="title">
+                  <a href="./ywdt/ywdt_tzgg/202601/t20260109_724471.html">
+                    关于征集2026年审计项目计划建议的公告
+                  </a>
+                </div>
+                <div class="desc">
+                  
+                </div>
+                <div class="date">
+                  2026-01-09
+                </div>
+              </div>
+            
+            
+              <li>
+                <a href="./ywdt/ywdt_tzgg/202511/t20251117_713254.html">
+                  <span>
+                    包头市审计局关于《轻微违法行为不予行政处罚清单...
+                  </span>
+                  <span class="date">
+                    2025-08-13
+                  </span>
+                </a>
+              </li>
+            
+              <li>
+                <a href="./ywdt/ywdt_tzgg/202505/t20250529_80275.html">
+                  <span>
+                    行政执法事项清单
+                  </span>
+                  <span class="date">
+                    2025-05-29
+                  </span>
+                </a>
+              </li>
+            
+              <li>
+                <a href="./ywdt/ywdt_tzgg/202509/t20250901_393510.html">
+                  <span>
+                    关于内蒙古自治区2025年度审计专业技术资格考试报...
+                  </span>
+                  <span class="date">
+                    2025-05-12
+                  </span>
+                </a>
+              </li>
+            
+              <li>
+                <a href="./ywdt/ywdt_tzgg/202505/t20250506_80274.html">
+                  <span>
+                    2025年度包头市国家机关普法责任清单
+                  </span>
+                  <span class="date">
+                    2025-05-06
+                  </span>
+                </a>
+              </li>
+            
+              <li>
+                <a href="./ywdt/ywdt_tzgg/202510/t20251022_707543.html">
+                  <span>
+                    关于开展2025年全国知识产权宣传周活动的通知
+                  </span>
+                  <span class="date">
+                    2025-03-31
+                  </span>
+                </a>
+              </li>
+            
+              <li>
+                <a href="./ywdt/ywdt_tzgg/202411/t20241115_80273.html">
+                  <span>
+                    关于征集2025年度审计项目计划建议的公告
+                  </span>
+                  <span class="date">
+                    2024-11-15
+                  </span>
+                </a>
+              </li>
+            
+              <li>
+                <a href="./ywdt/ywdt_tzgg/202405/t20240522_80272.html">
+                  <span>
+                    2024年度包头市国家机关普法责任清单
+                  </span>
+                  <span class="date">
+                    2024-05-22
+                  </span>
+                </a>
+              </li>
+            
+              <li>
+                <a href="./ywdt/ywdt_tzgg/202310/t20231023_80271.html">
+                  <span>
+                    包头市审计局关于开展学习贯彻习近平新时代中国特...
+                  </span>
+                  <span class="date">
+                    2023-10-23
+                  </span>
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 政策文件 -->
+    <div class="policy w">
+      <div class="policy_l policySlide">
+        <div class="hd">
+          <ul class="head">
+            <li>
+              <a href="./ywdt/ywdt_djlz/">
+                <div class="icon"></div>
+                <span>党建廉政</span>
+              </a>
+            </li>
+            <li>
+              <a href="./ywdt/ywdt_nbsjxh/">
+                <div class="icon"></div>
+                <span>内部审计协会</span>
+              </a>
+            </li>
+            <li>
+              <a href="./ywdt/ywdt_sjxh/">
+                <div class="icon"></div>
+                <span>审计学会</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="bd">
+          <ul class="list">
+            
+              <li>
+                <a href="./ywdt/ywdt_djlz/202601/t20260127_743899.html">
+                  <span>
+                    包头市审计局多点发力推动全方位建设模范自治区走深走实
+                  </span>
+                  <span>
+                    01-27
+                  </span>
+                </a>
+              </li>
+            
+              <li>
+                <a href="./ywdt/ywdt_djlz/202512/t20251216_718690.html">
+                  <span>
+                    包头市审计局打造“党建强审 包审护航”党建品牌 以高质量党建促进...
+                  </span>
+                  <span>
+                    12-16
+                  </span>
+                </a>
+              </li>
+            
+              <li>
+                <a href="./ywdt/ywdt_djlz/202409/t20240910_82828.html">
+                  <span>
+                    以全过程人民民主为中国式现代化凝心聚力
+                  </span>
+                  <span>
+                    09-10
+                  </span>
+                </a>
+              </li>
+            
+              <li>
+                <a href="./ywdt/ywdt_djlz/202409/t20240910_82827.html">
+                  <span>
+                    以基层党建强化基层治理
+                  </span>
+                  <span>
+                    09-10
+                  </span>
+                </a>
+              </li>
+            
+              <li>
+                <a href="./ywdt/ywdt_djlz/202409/t20240910_82805.html">
+                  <span>
+                    市审计局“五措并举” 推进党外干部队伍建设
+                  </span>
+                  <span>
+                    09-10
+                  </span>
+                </a>
+              </li>
+            
+              <li>
+                <a href="./ywdt/ywdt_djlz/202407/t20240713_82851.html">
+                  <span>
+                    党纪学习教育每日一课：工作纪律是什么，违反工作纪律的行为有哪些？
+                  </span>
+                  <span>
+                    07-13
+                  </span>
+                </a>
+              </li>
+            
+          </ul>
+          <ul class="list">
+            
+              <li>
+                <a href="./ywdt/ywdt_nbsjxh/202602/t20260226_801254.html">
+                  <span>
+                    包头市审计学会、内部审计协会双双荣获5A级社会组织称号
+                  </span>
+                  <span>
+                    02-26
+                  </span>
+                </a>
+              </li>
+            
+              <li>
+                <a href="./ywdt/ywdt_nbsjxh/202510/t20251031_710270.html">
+                  <span>
+                    做好内部审计统计调查工作浅析
+                  </span>
+                  <span>
+                    10-16
+                  </span>
+                </a>
+              </li>
+            
+              <li>
+                <a href="./ywdt/ywdt_nbsjxh/202510/t20251031_710269.html">
+                  <span>
+                    赋能内审发展 领航行业未来  包头市内部审计协会参与社会组织等级评估
+                  </span>
+                  <span>
+                    10-09
+                  </span>
+                </a>
+              </li>
+            
+              <li>
+                <a href="./ywdt/ywdt_nbsjxh/202510/t20251031_710268.html">
+                  <span>
+                    高标准完成内部审计统计调查  精准夯实内审工作数据基石
+                  </span>
+                  <span>
+                    09-30
+                  </span>
+                </a>
+              </li>
+            
+              <li>
+                <a href="./ywdt/ywdt_nbsjxh/202510/t20251031_710266.html">
+                  <span>
+                    包头市内部审计协会  赴包头医学院开展内部审计工作调研
+                  </span>
+                  <span>
+                    09-01
+                  </span>
+                </a>
+              </li>
+            
+              <li>
+                <a href="./ywdt/ywdt_nbsjxh/202510/t20251031_710263.html">
+                  <span>
+                    汲取知识养分 赋能内审新征程  参加内审人员业务能力提升培训班培...
+                  </span>
+                  <span>
+                    06-06
+                  </span>
+                </a>
+              </li>
+            
+          </ul>
+          <ul class="list">
+            
+              <li>
+                <a href="./ywdt/ywdt_sjxh/202510/t20251031_710275.html">
+                  <span>
+                    包头市审计学会  三项举措提升工作质效
+                  </span>
+                  <span>
+                    09-29
+                  </span>
+                </a>
+              </li>
+            
+              <li>
+                <a href="./ywdt/ywdt_sjxh/202510/t20251031_710274.html">
+                  <span>
+                    坚持学术立会 激发创新活力  包头市审计学会开启审计学术研究  与...
+                  </span>
+                  <span>
+                    05-05
+                  </span>
+                </a>
+              </li>
+            
+              <li>
+                <a href="./ywdt/ywdt_sjxh/202510/t20251031_710273.html">
+                  <span>
+                    包头市审计局深耕研究型审计  拓展审计维度成果显著
+                  </span>
+                  <span>
+                    04-07
+                  </span>
+                </a>
+              </li>
+            
+              <li>
+                <a href="./ywdt/ywdt_sjxh/202509/t20250901_393412.html">
+                  <span>
+                    包头市审计机关启动2024年度研究型审计案例评审工作助力审计质效提升
+                  </span>
+                  <span>
+                    03-14
+                  </span>
+                </a>
+              </li>
+            
+              <li>
+                <a href="./ywdt/ywdt_sjxh/202510/t20251031_710271.html">
+                  <span>
+                    包头市审计局研究型审计结硕果
+                  </span>
+                  <span>
+                    02-03
+                  </span>
+                </a>
+              </li>
+            
+              <li>
+                <a href="./ywdt/ywdt_sjxh/202509/t20250901_393435.html">
+                  <span>
+                    包头市内部审计理论研究工作取得良好成效
+                  </span>
+                  <span>
+                    12-26
+                  </span>
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+      <div class="policy_r">
+        <div class="top">政府信息公开</div>
+        <ul class="nav">
+          <li>
+            <a href="./zwgk/zfxxgkzn/">
+              <div class="icon">
+                <img src="./material/images/icon_public_1.png" alt="" />
+              </div>
+              <div>政府信息公开指南</div>
+            </a>
+          </li>
+          <li>
+            <a href="./zwgk/zfxxgkzd/">
+              <div class="icon">
+                <img src="./material/images/icon_public_2.png" alt="" />
+              </div>
+              <div>政府信息公开制度</div>
+            </a>
+          </li>
+          <li>
+            <a href="./zwgk/fdzdgknr/">
+              <div class="icon">
+                <img src="./material/images/icon_public_3.png" alt="" />
+              </div>
+              <div>法定主动公开内容</div>
+            </a>
+          </li>
+          <li>
+            <a href="./zwgk/zfxxgknb/">
+              <div class="icon">
+                <img src="./material/images/icon_public_4.png" alt="" />
+              </div>
+              <div>政府信息公开年报</div>
+            </a>
+          </li>
+          <li>
+            <a href="./zwgk/zfwznb/">
+              <div class="icon">
+                <img src="./material/images/icon_public_5.png" alt="" />
+              </div>
+              <div>政府网站年报</div>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <div class="icon">
+                <img src="./material/images/icon_public_6.png" alt="" />
+              </div>
+              <div>政府信息依申请公开</div>
+            </a>
+          </li>
+        </ul>
+        <div class="other">
+          <div class="item">
+            <a href="http://1.180.60.79:8082/sjjd/zwfk.html?org=TURBeE1EQTFNREl6">
+              <img src="./material/images/icon_gkjd.png" alt="" />
+              <span>公开监督</span>
+            </a>
+          </div>
+          <div class="item">
+            <a href="./zwgk/fdzdgknr/fd_yjsgk/">
+              <img src="./material/images/icon_yjsgk.png" alt="" />
+              <span>预决算公开</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 专题 -->
+    <div class="special w">
+<div id="topBanner_slideBox" class="topBanner_slideBox">
+                    <div class="hd">
+                        <ul>
+                             <li class="on">1</li>
+                             <li >2</li>
+                             <li >3</li>
+                             <li >4</li>
+                             <li >5</li>
+                             <li >6</li>
+                             <li >7</li>
+                             <li >8</li>
+                             <li >9</li>
+                        </ul>
+                    </div>
+                    <div class="bd">
+                        <ul>
+          
+            <li>
+              <a href="https://www.xuexi.cn/xxqg.html?id=85a36708538c4fda94daa97507e00da1">
+                <img src="./hengfu/4843/images/P020250904549989422110.jpg" />
+              </a>
+            </li>
+          
+            <li>
+              <a href="./hengfu/zlzhmzgttyscjqgmztjjbsfs/">
+                <img src="./hengfu/zlzhmzgttyscjqgmztjjbsfs/images/P020250827641510571385.jpg" />
+              </a>
+            </li>
+          
+            <li>
+              <a href="https://www.audit.gov.cn/n10018889/n10137162/index.html">
+                <img src="./hengfu/4845/images/P020250904550132216439.jpg" />
+              </a>
+            </li>
+          
+            <li>
+              <a href="./hengfu/hswlaqzrgzwlaqfx/">
+                <img src="./hengfu/hswlaqzrgzwlaqfx/images/P020250904550307293431.jpg" />
+              </a>
+            </li>
+          
+            <li>
+              <a href="./hengfu/hysgjszcbthh/">
+                <img src="./hengfu/hysgjszcbthh/images/P020250827640416591618.jpg" />
+              </a>
+            </li>
+          
+            <li>
+              <a href="https://www.gov.cn/hudong/">
+                <img src="./hengfu/4848/images/P020250827643266127839.jpg" />
+              </a>
+            </li>
+          
+            <li>
+              <a href="https://www.baotou.gov.cn/ztzl/cxjs/">
+                <img src="./hengfu/4850/images/P020250904550479788456.jpg" />
+              </a>
+            </li>
+          
+            <li>
+              <a href="https://www.12371.cn/bxgd/">
+                <img src="./hengfu/5044/images/P020250904550656888570.jpg" />
+              </a>
+            </li>
+          
+                            
+                        </ul>
+                    </div>
+                </div>
+
+<!--
+      <div class="swiper-container specialSwiper">
+        <div class="swiper-wrapper">
+          
+            <div class="swiper-slide">
+              <a href="./ztzl/zlzhmzgttyscjqgmztjjbsfs/">
+                <img src="./ztzl/zlzhmzgttyscjqgmztjjbsfs/images/P020250901376596079220.jpg" />
+              </a>
+            </div>
+          
+            <div class="swiper-slide">
+              <a href="./ztzl/hswlaqzrgzwlaqfx/">
+                <img src="./ztzl/hswlaqzrgzwlaqfx/images/P020250901376802813535.png" />
+              </a>
+            </div>
+          
+            <div class="swiper-slide">
+              <a href="./ztzl/hysgjszcbthh/">
+                <img src="./ztzl/hysgjszcbthh/images/P020250901376996894669.png" />
+              </a>
+            </div>
+          
+            <div class="swiper-slide">
+              <a href="https://www.baotou.gov.cn/ztzl/tdbtgzlfz.htm">
+                <img src="./ztzl/5030/images/P020250901379059360030.jpg" />
+              </a>
+            </div>
+          
+            <div class="swiper-slide">
+              <a href="https://www.12371.cn/xxsx/">
+                <img src="./ztzl/5043/images/P020250901379931739376.jpg" />
+              </a>
+            </div>
+          
+        </div>
+      </div>
+-->
+
+    </div>
+
+    <!-- 征集调查 -->
+    <div class="investigate w">
+      <div class="investigate_l">
+        <div class="head">
+          <div class="title">在线访谈</div>
+          <a href="./hdjl/hdjl_zxft/">
+            <img src="./material/images/icon_more.png" alt="" />
+          </a>
+        </div>
+        <ul class="list" id="online_list">
+          <!-- <div class="first">
+            <img src="" alt="" />
+            <div class="right">
+              <div class="title">
+                <a href="#"> 我为包头市“十五五”规划建言献策 </a>
+              </div>
+              <div class="desc">
+                “十五五”时期（2026-2030年）是我国基本实现社会主义现代化承上启下的关键时期。科学编制“十五五”规划，对加快推进现代化包头建设影响...
+              </div>
+            </div>
+          </div>
+
+          <li>
+            <a href="#">
+              <span>包头市民政局公开征集“整治社会救助不到位”问题线索</span>
+              <span class="date">2025-08-10</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span>包头市民政局公开征集“整治社会救助不到位”问题线索</span>
+              <span class="date">2025-08-10</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span>包头市民政局公开征集“整治社会救助不到位”问题线索</span>
+              <span class="date">2025-08-10</span>
+            </a>
+          </li> -->
+        </ul>
+      </div>
+      <div class="investigate_r">
+        <div class="title">互动交流</div>
+
+        <ul class="nav">
+          <li>
+            <a href="./hdjl/hdjl_ldxx/">
+              <img src="./material/images/icon_hudong_1.png" alt="" />
+              <span>领导信箱</span>
+            </a>
+          </li>
+          <li>
+            <a href="./hdjl/hdjl_yjfk/">
+              <img src="./material/images/icon_hudong_2.png" alt="" />
+              <span>意见反馈</span>
+            </a>
+          </li>
+          <li>
+            <a href="./hdjl/hdjl_ldxx/ldxx_wyxx/">
+              <img src="./material/images/icon_hudong_3.png" alt="" />
+              <span>我要写信</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.baotou.gov.cn/hdjl/hdjl_zcwdk/zcwdk_sy/">
+              <img src="./material/images/icon_hudong_4.png" alt="" />
+              <span>政策问答库</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 底部 -->
+    <div class="footer">
+      <div class="w">
+        <ul class="footer_nav">
+          <li>
+            <a href="https://www.audit.gov.cn/">中华人民共和国审计署</a>
+          </li>
+          <li>
+            <a href="http://audit.nmg.gov.cn/">内蒙古自治区审计厅</a>
+          </li>
+          <li>
+            <a href="https://www.baotou.gov.cn/">包头市人民政府</a>
+          </li>
+          <li>
+            <a href="http://www.icnao.cn/">中国审计数字在线网</a>
+          </li>
+        </ul>
+        <div class="footer_main">
+          <div class="item pic">
+            <a href="https://bszs.conac.cn/sitename?method=show&id=958B9DECC088BF7CE05310291AAC9DAF">
+              <img src="./material/images/dang.png" alt="" />
+            </a>
+            <a href="https://zfwzgl.www.gov.cn/exposure/jiucuo.html?site_code=1502000030&url=http%3A%2F%2Fsjj.baotou.gov.cn%2Fzlxz.jhtml">
+              <img src="./material/images/jiucuo.png" alt="" />
+            </a>
+          </div>
+          <div class="item word">
+            <div class="block">
+              <div>
+                <a href="./wzxx/wzxx_wzdt/">网站地图</a>
+              </div>
+              <div>
+                <a href="./wzxx/wzxx_lxwm/">联系我们</a>
+              </div>
+            </div>
+            <div class="block">
+              <div>Copyright @ 2008-2025 包头市审计局版权所有</div>
+              <div>监督投诉：0472-5171962</div>
+              <div><a href="https://beian.miit.gov.cn/">蒙ICP备19004954号-1</a></div>
+            </div>
+          </div>
+          <div class="item word">
+            <div class="block">
+              <div>地址：包头市九原区乌拉特大街240号咨询大厦</div>
+              <div>邮政编码：014060</div>
+              <div><a href="https://beian.mps.gov.cn/#/query/webSearch?code=15020702000334">蒙公网安备15020702000334号</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 无障碍/是老化 -->
+    <script id="toolbarjs" src="./material/js/toolbar_init.js"></script>
+    <!-- 网脉 -->
+    <script id="_trs_ta_js" src="//ta.trs.cn/c/js/ta.js?mpid=6576" async="async" defer="defer"></script>
+    <!-- 点击量 -->
+    <script type="text/javascript" src="./material/js/trs_report_sdk.js"></script>
+
+    <script>
+      $(function() {
+          const zoomFactor = 1.25;
+
+          function getTargetElements() {
+              return $('p, span, a, h1, h2, h3, h4, h5, h6, li, td, th, label, div:not(:has(*))');
+          }
+
+          // --- 开启长者模式 ---
+          $('#zoomIn').on('click', function() {
+              if ($('body').hasClass('senior-mode-active')) {
+                  return;
+              }
+
+              const currentElements = getTargetElements();
+              // ... (字体放大的两步走逻辑，此处省略以保持简洁) ...
+              currentElements.each(function() { /* 保存原始大小 */
+                  const currentSizeStr = $(this).css('font-size');
+                  $(this).data('original-font-size', currentSizeStr);
+              });
+              currentElements.each(function() { /* 计算并应用新大小 */
+                  const originalSizeStr = $(this).data('original-font-size');
+                  if (originalSizeStr) {
+                      const originalSizeNum = parseFloat(originalSizeStr);
+                      if (!isNaN(originalSizeNum) && originalSizeNum > 0) {
+                          $(this).css('font-size', (originalSizeNum * zoomFactor) + 'px');
+                      }
+                  }
+              });
+
+              $('body').addClass('senior-mode-active'); // 仍然建议保留class用于状态判断
+
+              // --- 切换按钮显示 ---
+              $(this).hide(); // 隐藏自己（“开启”按钮）
+              $('#resetZoom').show(); // 查找并显示“关闭”按钮
+          });
+
+          // --- 关闭长者模式 ---
+          $('#resetZoom').on('click', function() {
+              const currentElements = getTargetElements();
+              // ... (字体恢复的逻辑) ...
+              currentElements.each(function() {
+                  const originalSize = $(this).data('original-font-size');
+                  if (originalSize) {
+                      $(this).css('font-size', originalSize);
+                      $(this).removeData('original-font-size');
+                  }
+              });
+              
+              $('body').removeClass('senior-mode-active');
+
+              // --- 切换按钮显示 ---
+              $(this).hide(); // 隐藏自己（“关闭”按钮）
+              $('#zoomIn').show(); // 查找并显示“开启”按钮
+          });
+      })
+      </script>
+
+  <script type="text/javascript">
+	//上传点击数据
+    let eventReport = new EventReport("/hx-api/receive/receiveData")
+    let siteName = "包头市审计局"
+    let chnlRelation = "包头市审计局"
+    chnlRelation = chnlRelation.replace(siteName+">","")
+    let docid = ""
+    let doc_id = 0
+    if(docid.length > 0){
+        doc_id = parseInt(docid)
+    }
+    let url = "####"
+    let title ='';
+    var reg =/<[^<>]+>/g;
+    title = title.replace(reg, "");
+    let docpubtime = ""
+    
+    if (doc_id== 0) {
+    doc_id = 0;
+    url = document.URL
+    title = document.title
+    docpubtime = ""
+    }
+    let doc_channel = ""
+    let siteid = parseInt("")
+    if (siteid.length == 0) {
+    siteid = 0
+    }
+    
+    let channel_id = parseInt("")
+    
+    if(channel_id.length == 0){
+    channel_id = 0
+    }
+    //appkey
+    let appKey = "dda1bee997e29182febbe848dd3b313a"
+    
+    let myParam = {
+		title: title,
+		url: url,
+		doc_id: doc_id,
+		siteid: siteid,
+		site_name: siteName,
+		doc_channel: doc_channel,
+		channel_relation: chnlRelation,
+		channel_id: channel_id,
+		doc_pub_time: docpubtime,
+		app_key: appKey
+    }
+    //统计外链
+    InitExternalLinks("/hx-api/receive/receiveLink",myParam,"trs.nmsuny.com")
+    eventReport.trackUserData(myParam)
+    // 点击量埋点结束
+  </script>
+
+    <!-- 用户一号登录 -->
+       <script>
+      function goLogin(){
+        window.open("/personal/validate/gotoLogin.do?client_id=V5WCG4TWC&goto="+decodeURIComponent("http://sjj.baotou.gov.cn/"));
+      }
+      var ovUserInfo;
+      var ovData;
+      // 获取用户登录状态
+      function getUserObj() {
+        $.ajax({
+          url: '/personal/usrlogin/getUserInfo',//根据实际事情情况更换域名
+          type: 'get',
+          dataType: 'json',
+          success: function(data) {
+            if(!data.success){ 
+              $(".userInfo2").hide();
+              $(".userInfo1").show();
+            }else{
+              ovUserInfo = data.data;
+              $(".userInfo1").hide();
+              $(".userInfo2").show();
+              $('.userInfo2').html("欢迎："+ovUserInfo.USER_NAME);
+            }
+          },
+          error: function (err) {
+            console.log('不好意思，您请求的接口出错了！')
+          }
+        })
+        return ovData;
+      }
+
+      $(function () {
+        $(".userInfo2").hide();
+        $(".userInfo1").show();
+        getUserObj();
+      })
+    </script>
+
+    <script>
+      // 图片新闻轮播
+      var swiper1 = new Swiper(".mySwiper", {
+        autoplay: true,
+        loop: true,
+        pagination: {
+          el: ".swiper-news-pagination",
+          clickable: true,
+        },
+      });
+
+      // 要闻动态Slide
+      $(".newsSlide").slide({});
+
+      // 政策文件Slide
+      $(".policySlide").slide({});
+
+/*
+      var swiper2 = new Swiper(".specialSwiper", {
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        slidesPerView: 3,
+        spaceBetween: 30,
+        slidesPerGroup: 1,
+        loop: true,
+        loopFillGroupWithBlank: true,
+        breakpoints: {
+          750: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          1200: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+        },
+
+        navigation: {
+          nextEl: ".swiper-special-next",
+          prevEl: ".swiper-special-prev",
+        },
+      });
+*/
+
+jQuery(".topBanner_slideBox").slide({mainCell: ".bd ul", autoPlay: true});
+
+
+
+      // 限制文本长度
+      function limitContent(content, len) {
+        if (content.length > len) {
+          content = content.substring(0, len) + "...";
+        }
+        return content;
+      }
+
+      // 日期格式化
+      function formatDate(dateStr, format) {
+        const date = new Date(dateStr);
+        const map = {
+          M: date.getMonth() + 1, // 月份
+          d: date.getDate(), // 日
+          h: date.getHours(), // 小时
+          m: date.getMinutes(), // 分钟
+          s: date.getSeconds(), // 秒
+          q: Math.floor((date.getMonth() + 3) / 3), // 季度
+          S: date.getMilliseconds(), // 毫秒
+        };
+
+        format = format.replace(/([yMdhmsqS])+/g, (all, t) => {
+          let v = map[t];
+          if (v !== undefined) {
+            if (all.length > 1) {
+              v = "0" + v;
+              v = v.substr(v.length - all.length);
+            }
+            return v;
+          } else if (t === "y") {
+            return (date.getFullYear() + "").substr(4 - all.length);
+          }
+          return all;
+        });
+        return format;
+      }
+
+      // 去除富文本标签
+      function stripHtml(html) {
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(html, 'text/html');
+        return doc.body.textContent || '';
+      }
+
+      /* 接口调取 */
+      const SITEID = 16;
+
+      // 在线访谈
+      function getInterviewList() {
+        $.ajax({
+          type: "GET",
+          url: "/IGI/open/openInterview/list",
+          data: {
+            siteId: SITEID,
+            pageIndex: 1,
+            pageSize: 4,
+            type:-1,
+            interviewFlag: '在线访谈'
+          },
+          success: function (res) {
+            const $container = $('#online_list');
+            if(res.statusCode === 200) {
+              $container .empty()
+              const list = res.datas.data;
+              let htmlStr = ''              
+
+              list.forEach((item,index) => {
+                var cover = ''
+
+                if(!item.attachList) {
+                  cover = ''
+                } else {
+                  cover =  item.attachList[0].filePath // 封面
+                }
+
+                if (index === 0) {
+                  htmlStr += '<div class="first">' +
+                              '<img src="' + cover + '" alt="" />' +
+                              '<div class="right">' +
+                                '<div class="title">' +
+                                  '<a href="' + item.publishUrl + '?id=' + item.id + '">' + 
+                                    limitContent(item.title, 30) +
+                                  '</a>' +
+                                '</div>' +
+                                '<div class="desc">' +
+                                  limitContent(stripHtml(item.comment), 40) +
+                                '</div>' +
+                              '</div>' +
+                            '</div>';
+                } else {
+                  htmlStr += '<li>' +
+                              '<a href="' + item.publishUrl + '?id=' + item.id + '">' +
+                                '<span>' + limitContent(item.title, 30) + '</span>' +
+                                '<span class="date">' +
+                                  formatDate(Number(item.startTime), 'yyyy-MM-dd') + '至' + formatDate(Number(item.endTime), 'yyyy-MM-dd') +
+                                '</span>' +
+                              '</a>' +
+                            '</li>';
+                }
+              })
+
+              $container .append(htmlStr)
+            }
+          }
+        });
+      }
+
+      getInterviewList()
+
+
+
+    </script>
+  </body>
+</html>

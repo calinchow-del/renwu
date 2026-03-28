@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html><head><title>临沂市公安局</title><meta name="pageType" content="1">
+<meta name="pageTitle" content="临沂市公安局">
+
+
+<META Name="SiteName" Content="临沂市公安局" />
+<META Name="SiteDomain" Content="gaj.linyi.gov.cn" />
+
+
+
+
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=1002,user-scalable=yes">
+<meta content="IE=9,IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+<meta content="no-transform" http-equiv="Cache-Control">
+<meta content="no-siteapp" http-equiv="Cache-Control">
+<meta name="applicable-device" content="pc,mobile">
+<meta name="renderer" content="webkit">
+<meta name="screen-orientation" content="portrait">
+<meta name="x5-orientation" content="portrait">
+<link rel="stylesheet" type="text/css" href="css/index.css"><link rel="stylesheet" href="css/jquery.hiSliderxcw.css"><script type="text/javascript" src="js/jquery.js"></script>
+<style>
+.wza-box .old_btn{display:inline;}
+</style>
+
+
+
+<!--Announced by Visual SiteBuilder 9-->
+<script language="javascript" src="_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307b78475d52555742000500094652 -->
+<link rel="stylesheet" type="text/css" href="index.vsb.css" />
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1001,'/index.jsp',-1,1449523829)</script>
+</head>
+<body style="background:none"><script type="text/javascript" id="linyiggx" src="http://www.linyi.gov.cn/js/linyiggx20.js"></script>
+<div class="bodybg" style="background:url(images/gaindex_banner.jpg) center 0px no-repeat;">
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+$(".wzdtph").html($(".wzdtdata").html())
+})
+</script>
+<div class="wzdtdata" style="display:none;">
+<a href="wzdt.htm" target="_blank">网站地图</a>
+</div>
+<!--bg改-->
+<div class="main">
+<div style="top:10px;text-align:right;width:1000px;z-index:999">
+<!--bg改-->
+
+<!--无障碍-->
+<style>
+.wza_ic{color:#fff;font-size:14px;line-height:28px;margin-top:5px;z-index:9;}
+</style>
+<div class="wza-box">
+<div class="wza_ic wza-item"><a id="toolbarSwitch" href="javascript:void(0);">无障碍浏览</a></div>
+<div class="old_btn wza-item">进入长者模式</div>
+</div>
+
+<script src="https://auth.mangren.com/boots/linyiV6/esdToolsInit.js" charset="UTF-8"></script>
+<!--无障碍-->
+</div>
+<div class="banner">
+<div class="logo"><a href=""></a></div>
+<div class="sousuo"><!-- 3.1.3版本 -->
+
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><LINK href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><script language="javascript" src="/system/resource/openapp/search/js/containsHtmlTags.js"></script><script language="javascript" src="/system/resource/openapp/search/layui/layui.js"></script><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<div id="divu1"></div>
+<script type="text/html" id="htmlu1">
+    <div id="appu1" class="jdjs_app">
+        <input class="ssk qwss" name="qt" type="text" id="qt"  autocomplete=off onkeyup="keyUpFunu1(event)">
+        <input type="submit" class="tjbt tj" value="&nbsp;" onclick="onSubmitu1()">
+    </div>
+</script>
+
+<script>
+   var appElementu1 = document.querySelector("#appu1");
+   if (appElementu1 && appElementu1.__vue__) {
+
+   } else {
+      $("#divu1").html($("#htmlu1").text());
+      var appOwner = "1449523829";   
+      var urlPrefix = "/aop_component/";
+      var ifLogin="false";
+      var token = ifLogin=='true'?gettoken(10, true).trim():'tourist';
+      if (containsHtmlTags(token) || !token) { 
+         token = 'tourist';
+      }
+      jQuery.support.cors = true;
+      $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+      });
+      var queryInfou1 = {
+        query: {
+            keyWord: "",//搜索关键词
+            owner: appOwner,
+            token: token,
+            urlPrefix: urlPrefix,
+            lang:"i18n_zh_CN"
+        },
+        isError: false
+      };
+      function keyUpFunu1(e){
+        var theEvent = e || window.event;
+        var keyCode = theEvent.keyCode || theEvent.which || theEvent.charCode;
+        if(keyCode == 13){
+          onSubmitu1();
+        }
+      };
+
+      function onSubmitu1(e) {
+        queryInfou1.query.keyWord= $("#appu1  .qwss").val();
+        
+        var url = "/aop_views/search/modules/resultpc/soso.html";      
+        if ("10" == "1" || "10" == "2") {
+           url = "" + url;
+        }
+        var query = queryInfou1.query;
+        if (url.indexOf("?") > -1) {
+            url = url.split("?")[0];
+        }
+        if (query.keyWord) {
+            var query = new Base64().encode(JSON.stringify(query));
+            window.open(url + "?query=" + query);
+        } else {
+            alert("请填写搜索内容")
+        }
+      };
+   }
+</script></div></div>
+<div class="daohang">
+<ul><li class=" act"><A href="index.htm" title="首页">首页</A></li>
+<li class="nav02 "><A href="jwyw.htm" title="警务要闻">警务要闻</A></li>
+<li class="nav03 "><A href="zfxxgk1.htm" title="政府信息公开">政府信息公开</A></li>
+<li class="nav04 "><A href="http://lyzwfw.sd.gov.cn/lys/department/departmentHall/departmentHallInfo?id=371300LY371300GA" title="网上政务大厅">网上政务大厅</A></li>
+<li class="nav05 "><A href="zfxxgk1/gsgg.htm" title="公示公告">公示公告</A></li>
+<li class="nav06 "><A href="jgdj.htm" title="机关党建">机关党建</A></li>
+</ul></div>
+<div class="tptz">
+<div class="tpxw">
+<ul class="hiSlider hiSlider3">
+
+<script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/centerCutImg.js"></script><script language="javascript" src="/system/resource/js/ajax.js"></script><LI class="hiSlider-item"><A href="info/1484/9846.htm" target="_blank"><IMG alt="任泽龙到基层派出所宣讲党的二十届四中..." src="/virtual_attach_file.vsb?afc=5LmLCZMNUDoR9PLQmGYU8QRL7V7nRAq7MmrVoRAkozlaMRv0gihFp2hmCIa0LYhRLkhkoSybLmUPLzTfozAkMzNPnNn2oRAkUlLsUlnkL8QFUz7io7LsozQFLzUYMRGJqjfjo4OeoDPbvD6Aq1hXptQ0gY84gY84gtA8pUpcc&oid=1449523829&e=.jpg" width="358" height="268"></A> </LI>
+<LI class="hiSlider-item"><A href="info/1484/9728.htm" target="_blank"><IMG alt="夏凤俭到临沂市调研指导公安工作" src="/virtual_attach_file.vsb?afc=5LzTC7U4LZozGbUQ8lZn7l8MmNPnRGqPnl-PL7Csn7CZo7C0gihFp2hmCIa0oSyinSyZUSy4MmlaLmGDnRvioRL4LRvaUmffU8U8nz9iUlrFLRQ7M8lbU8QFLlWfUm9Jqjfjo4OeoDPbvD6Aq1hXptQ0gY84gY84gtA8pUpcc&oid=1449523829&e=.jpg" width="358" height="268"></A> </LI>
+<LI class="hiSlider-item"><A href="info/1484/9361.htm" target="_blank"><IMG alt="临沂公安全力护航刀郎演唱会安全顺利举行" src="/virtual_attach_file.vsb?afc=5LRWCkozGYoRCsnQlrfU4GiL4G8MzCqiUmLsLmrRnNCZnll0gihFp2hmCIa0M1y4USy8MkyYUmLsnmC4LzV2M7LYozNZnz-4LRARMll8nznFU49ZLRrRUmfFLl78olCJqjfjo4OeoDPbvD6Aq1hXptQ0gY84gY84gtA8pUpcc&oid=1449523829&e=.jpg" width="358" height="268"></A> </LI>
+<LI class="hiSlider-item"><A href="info/1484/9330.htm" target="_blank"><IMG alt="王世波任泽龙督导夜间巡查宣防暨依法严..." src="/virtual_attach_file.vsb?afc=5LlCCZL8CinRWRUQzn2oRGPL4N4oz9qZLzr7o7lsM4vaLm90gihFp2hmCIa0nShfnkyPLkyPL8CiUz78L4Q7nzNsollPUz-aUNL8Mm-bUmrFoR7Znz-ZL7MFn7V7M4vJv2bjo4OeoDPbvD6Aq1hXptQ0gY84gY84gtA8pUpcc&oid=1449523829&e=.png" width="358" height="268"></A> </LI>
+<script>_showDynClickBatch(['dynclicks_u3_9846','dynclicks_u3_9728','dynclicks_u3_9361','dynclicks_u3_9330'],[9846,9728,9361,9330],"wbnews", 1449523829)</script>
+</ul><script type="text/javascript" src="js/jquery.hiSlider.min.js"></script><script>
+        
+        $('.hiSlider3').hiSlider({
+            isFlexible: true,
+            isSupportTouch: true,
+            titleAttr: function(curIdx){
+                return $('img', this).attr('alt');
+            }
+        });
+
+    </script></div>
+<div class="jwyw">
+<div class="tl">
+<div class="t"><a href="jwyw.htm">警务要闻</a></div></div>
+<div class="c">
+<ul>
+
+
+<li><div class="old-title" style="float:left;width:330px;overflow:hidden;"><a href="info/1484/9995.htm" target="_blank">临沂市公安局党委部署开展树立和践行正确政绩观学习教育</a></div>
+<div class="old-time" style="width:50px;float:right;overflow:hidden;">03-07</div>
+</li>
+
+
+<li><div class="old-title" style="float:left;width:330px;overflow:hidden;"><a href="info/1484/10089.htm" target="_blank">临沂召开市禁毒委成员单位述职讲评会议暨全市禁毒工作视频会议</a></div>
+<div class="old-time" style="width:50px;float:right;overflow:hidden;">03-26</div>
+</li>
+
+
+<li><div class="old-title" style="float:left;width:330px;overflow:hidden;"><a href="info/1484/10069.htm" target="_blank">学报告·启新程——2026年山东省《政府工作报告》线上答题邀您参与</a></div>
+<div class="old-time" style="width:50px;float:right;overflow:hidden;">03-20</div>
+</li>
+
+
+<li><div class="old-title" style="float:left;width:330px;overflow:hidden;"><a href="info/1484/10049.htm" target="_blank">临沂市公安局部署“齐鲁守护”打击整治暨加强农村基层矛盾纠纷排查化解专项工作</a></div>
+<div class="old-time" style="width:50px;float:right;overflow:hidden;">03-18</div>
+</li>
+
+
+<li><div class="old-title" style="float:left;width:330px;overflow:hidden;"><a href="info/1484/10039.htm" target="_blank">临沂公安这一集体获评“全国巾帼文明岗”</a></div>
+<div class="old-time" style="width:50px;float:right;overflow:hidden;">03-16</div>
+</li>
+
+
+<li><div class="old-title" style="float:left;width:330px;overflow:hidden;"><a href="info/1484/10029.htm" target="_blank">李强主持召开国务院常务会议</a></div>
+<div class="old-time" style="width:50px;float:right;overflow:hidden;">03-16</div>
+</li>
+
+
+<li><div class="old-title" style="float:left;width:330px;overflow:hidden;"><a href="info/1484/10019.htm" target="_blank">临沂唯一！“全国三八红旗手” 徐邦艳</a></div>
+<div class="old-time" style="width:50px;float:right;overflow:hidden;">03-16</div>
+</li>
+
+
+<li><div class="old-title" style="float:left;width:330px;overflow:hidden;"><a href="info/1484/10014.htm" target="_blank">李强主持召开国务院常务会议</a></div>
+<div class="old-time" style="width:50px;float:right;overflow:hidden;">03-16</div>
+</li>
+
+<script>_showDynClickBatch(['dynclicks_u4_9995','dynclicks_u4_10089','dynclicks_u4_10069','dynclicks_u4_10049','dynclicks_u4_10039','dynclicks_u4_10029','dynclicks_u4_10019','dynclicks_u4_10014'],[9995,10089,10069,10049,10039,10029,10019,10014],"wbnews", 1449523829)</script>
+</ul></div></div>
+<div class="tzgg">
+<div class="tl">
+<div class="t"><a href="zfxxgk1/gsgg.htm" target="_blank">公示公告</a></div></div>
+<div class="c">
+<div id="demp" class="psrol2">
+<div id="demp1"><SPAN><i>·</i><a href="info/1667/10009.htm" target="_blank">关于注销临沂市国泰保安服务有限公司保安服务许可证的公告</a><font>[2026-03-12]</font><div class="clear"></div></SPAN>
+<SPAN><i>·</i><a href="info/1667/9987.htm" target="_blank">关于对ASIM MUHAMMAD等三人所持 居留许可宣布作废的公告</a><font>[2026-03-06]</font><div class="clear"></div></SPAN>
+<SPAN><i>·</i><a href="info/1667/9935.htm" target="_blank">关于对拟补录辅警进行公示的公告</a><font>[2026-02-09]</font><div class="clear"></div></SPAN>
+<SPAN><i>·</i><a href="info/1667/9931.htm" target="_blank">临沂市公安局交通管理支队公安交通管理行政处罚决定书公告</a><font>[2026-02-06]</font><div class="clear"></div></SPAN>
+<SPAN><i>·</i><a href="info/1667/9930.htm" target="_blank">关于进行补充录用辅警体检和心理素质测评的公告</a><font>[2026-02-05]</font><div class="clear"></div></SPAN>
+<script>_showDynClickBatch(['dynclicks_u5_10009','dynclicks_u5_9987','dynclicks_u5_9935','dynclicks_u5_9931','dynclicks_u5_9930'],[10009,9987,9935,9931,9930],"wbnews", 1449523829)</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+<div id="demp2"></div></div><script> 
+  var speed2=50; 
+  demp2.innerHTML=demp1.innerHTML; 
+  demp.scrollLeft=demp.scrollWidth; 
+  function Marquee2(){ 
+  if(demp2.offsetTop-demp.scrollTop<=0)//当滚动至demp1与demp2交界时
+    demp.scrollTop-=demp1.offsetHeight; //demp跳到最顶端
+    else{
+    demp.scrollTop++;
+    }
+  } 
+  var MyMar2=setInterval(Marquee2,speed2); 
+  demp.onmouseover=function() {clearInterval(MyMar2)} 
+  demp.onmouseout=function() {MyMar2=setInterval(Marquee2,speed2)} 
+function demp_onclick() {
+
+}
+            </script></div></div>
+<div class="clear"></div></div>
+<div class="hf_1"><style type="text/css">
+ul,li{
+    padding:0;
+    margin:0;
+    list-style:none;}
+#flashBoxu_u6_{
+    width:1000px;
+    height:80px;
+    border:0px solid #EEE;
+    position:relative;
+    margin-left: auto;
+    margin-right: auto;}
+#flashBoxu_u6_ img{
+    /*初始不要显示*/
+    display:none;
+    /*用边框来实现空位，因为margin和paading有时会引起些麻烦*/
+    border:0px solid #FFF;}
+#flashBoxu_u6_ ul{
+    display:none;
+    position:absolute;
+    right:7px;
+    bottom:3px;
+    font:9px tahoma;}
+#flashBoxu_u6_ ul li{
+    display:none;
+    float:left;
+    width:12px;
+    height:12px;
+    line-height:12px;
+    margin-right:3px;
+    border:0px solid #999;
+    background:#F0F0F0;
+    text-align:center;
+    cursor:pointer;}
+#flashBoxu_u6_ ul li.hover{
+    border-color:red;
+    background:#FFE1E1;
+    color:red;}
+</style>
+<script type="text/javascript">
+function flashBoxCtrl(o){
+    this.obj=document.getElementById(o);
+    //这个私有方法虽然写了，但暂时没用到
+    function addListener(ele,eventName,functionBody){
+        if (ele.attachEvent){
+            ele.attachEvent("on"+eventName, functionBody);
+        }else if (ele.addEventListener){
+            ele.addEventListener("on"+eventName,functionBody, false);
+        }else{
+            return false;
+        }
+    }
+    //初始化
+    this.init=function(){
+        var objImg=this.obj.getElementsByTagName("img");
+        var tagLength=objImg.length;
+        if (tagLength>0){
+            var oUl=document.createElement("ul");
+            oUl.setAttribute("id",o+"numTag");
+            for (var i=0;i<tagLength;i++){
+                var oLi=oUl.appendChild(document.createElement("li"));
+                if (i==0){
+                    oLi.setAttribute("class","hover"); //初始化时把第一个设置为高亮
+                    oLi.setAttribute("className","hover");
+                }
+                //设置标签的数字
+                oLi.appendChild(document.createTextNode((i+1)));
+            }
+            this.obj.appendChild(oUl);
+            objImg[0].style.display="block";
+            //设置标签事件
+            var oTag=this.obj.getElementsByTagName("li");
+            for (var i=0;i<oTag.length;i++){
+                var flag = 0;
+                var temp = 0;
+                var timeout=null;
+                var step = function(){
+                    for (j=0;j<oTag.length;j++){
+                        oTag[j].className="";
+                        objImg[j].style.display="none";
+                    }
+                    this.className="hover";
+                    flag = flag>=oTag.length-1?0:flag+1;
+                    objImg[flag].style.display="block";
+                    oTag[flag].className = "hover";
+                    timeout = setTimeout(step,4000);
+                };
+                oTag[i].onmouseover=function(){
+                    for (j=0;j<oTag.length;j++){
+                        oTag[j].className="";
+                        objImg[j].style.display="none";
+                        temp = j;
+                    }
+                    this.className="hover";
+                    objImg[this.innerHTML-1].style.display="block";
+                    temp = this.innerHTML-1;
+                    flag = i;
+                    clearInterval(timeout);
+                }
+                oTag[i].onmouseout = function(){
+                    for (j=0;j<oTag.length;j++){
+                        oTag[j].className="";
+                        objImg[j].style.display="none";
+                    }
+                    flag = temp;
+                    objImg[temp].style.display="block";
+                    oTag[temp].className = "hover";
+                    timeout = setTimeout(step,4000);
+                }
+                if(i==0)
+                {
+                    timeout = setTimeout(step,4000);
+                }
+            }
+        }
+    };
+    //自动滚动的方法还没写
+    this.imgRoll=function(){};
+    //生成对象时自动加载init()方法以初始化对象
+    this.init();
+}
+</script>
+<table cellspacing="0" cellpadding="0" border="0"><tr><td><div id="flashBoxu_u6_"><img src="images/19/12/25/3fqnsxqt4m/hf191225.jpg" border="0" width="1000" height="80" /></div></td></tr></table><SCRIPT language="JavaScript">new flashBoxCtrl("flashBoxu_u6_");</SCRIPT></div>
+<div class="infogk">
+<div class="tl">
+<div class="t">政府信息公开</div></div>
+<div class="c">
+<ul>
+<li class="k1"><a href="zfxxgk1/jgzn.htm" target="_blank">机构职能</a></li>
+<li class="k2"><a href="zfxxgk1/lzyj.htm" target="_blank">履职依据</a></li>
+<li class="k3"><a href="zfxxgk1/xxgknb.htm" target="_blank">信息公开年报</a></li>
+<li class="k4"><a href="zfxxgk1/xxgkzn.htm" target="_blank">信息公开指南</a></li>
+<li class="k5"><a href="zfxxgk1/hygk.htm" target="_blank">会议公开</a></li>
+<li class="k6"><a href="zfxxgk1/czxx.htm" target="_blank">财政信息</a></li>
+<li class="k7"><a href="zfxxgk1/zdly.htm" target="_blank">重点领域</a></li>
+<li class="k8"><a href="https://www.linyi.gov.cn/ysqgk/front/frontDeskDept?dept=4835" target="_blank">依申请公开</a></li>
+</ul>
+<ul style="display:none">
+<li><a href="<span style='color:red;font-size:9pt'>转换链接错误</span>" target="_blank">主要职责</a> </li>
+<li><a href="<span style='color:red;font-size:9pt'>转换链接错误</span>" target="_blank">领导分工</a> </li>
+<li><a href="<span style='color:red;font-size:9pt'>转换链接错误</span>" target="_blank">机构设置</a> </li>
+<li><a href="<span style='color:red;font-size:9pt'>转换链接错误</span>" target="_blank">公示公告</a> </li>
+<li><a href="<span style='color:red;font-size:9pt'>转换链接错误</span>" target="_blank">政策解读</a> </li>
+<li><a href="<span style='color:red;font-size:9pt'>转换链接错误</span>" target="_blank">统计数据</a> </li>
+<li><a href="<span style='color:red;font-size:9pt'>转换链接错误</span>" target="_blank">公开目录</a> </li>
+<li><a href="<span style='color:red;font-size:9pt'>转换链接错误</span>" target="_blank">公开年报</a> </li>
+<li><a href="<span style='color:red;font-size:9pt'>转换链接错误</span>" target="_blank">公开指南</a> </li>
+<li><a href="<span style='color:red;font-size:9pt'>转换链接错误</span>" target="_blank">依申请公开</a> </li>
+</ul>
+
+</div></div>
+<div class="jlhd">
+<div class="tl">
+<div class="t">交流互动</div></div>
+<div class="c">
+<ul>
+<style type="text/css">
+.jlhd .c li{padding:21px 0px;background:#e9edf6;}
+</style>
+<li class="k1"><a href="jzxx_tj.jsp?urltype=tree.TreeTempUrl&wbtreeid=1051" target="_blank">局长信箱</a> </li>
+<li class="k2"><a href="tsjy_tj.jsp?urltype=tree.TreeTempUrl&wbtreeid=1052" target="_blank">在线咨询</a> </li>
+<li class="k3" style="display:none"><a href="dh/zxft.htm" target="_blank">在线访谈</a> </li>
+<li class="k4"><a href="xsjb_tj.jsp?urltype=tree.TreeTempUrl&wbtreeid=1490" target="_blank">线索举报</a> </li>
+<li class="k5"><a href="jlhd/dczj.htm" target="_blank">调查征集</a> </li>
+<li class="k6" style="display:none"><a href="dh/rdhy.htm" target="_blank">热点回应</a> </li></ul></div></div>
+<div class="clear"></div>
+<div class="yqlj"><script language="javascript" src="/system/resource/js/vsbpreloadimg.js"></script>
+<TABLE width="998" cellSpacing="0" cellPadding="0" align="center" border="0"> 
+    <TR><TD>
+        <DIV id="u_u7_demo" style="OVERFLOW:hidden;WIDTH:998px;COLOR:#ffffff"><TABLE cellSpacing="0" cellPadding="0" border="0">
+                <TR><TD id="u_u7_demo1" vAlign="top" width="998"><table border="0" cellpadding="0" cellspacing="0" width="998">
+                        <tr>
+
+                            <td valign="top" align="center" style="padding-left:4px;padding-right:4px"><div style="padding:0px;width:242px"><table cellpadding="0" cellspacing="0" style="border:0px solid black;">
+                                    <tr><td width="242" height="66" valign="middle" align="center"><a href="https://www.gov.cn/zhengce/zczhjd/" target="_blank" onclick="_addDynClicks('wbimage',1449523829,46596)"><img name="u_u7_img" border="0" src="/system/resource/images/loading.gif" alt="" title="" hspace="0" vspace="0"></a></td></tr>
+                                </table></div></td>
+                            <td valign="top" align="center" style="padding-left:4px;padding-right:4px"><div style="padding:0px;width:242px"><table cellpadding="0" cellspacing="0" style="border:0px solid black;">
+                                    <tr><td width="242" height="66" valign="middle" align="center"><a href="https://www.chinafxj.cn/" target="_blank" onclick="_addDynClicks('wbimage',1449523829,46537)"><img name="u_u7_img" border="0" src="/system/resource/images/loading.gif" alt="" title="" hspace="0" vspace="0"></a></td></tr>
+                                </table></div></td>
+                            <td valign="top" align="center" style="padding-left:4px;padding-right:4px"><div style="padding:0px;width:242px"><table cellpadding="0" cellspacing="0" style="border:0px solid black;">
+                                    <tr><td width="242" height="66" valign="middle" align="center"><a href="http://www.gov.cn/zhengce/index.htm" target="_blank" onclick="_addDynClicks('wbimage',1449523829,42313)"><img name="u_u7_img" border="0" src="/system/resource/images/loading.gif" alt="" title="" hspace="0" vspace="0"></a></td></tr>
+                                </table></div></td>
+                            <td valign="top" align="center" style="padding-left:4px;padding-right:4px"><div style="padding:0px;width:242px"><table cellpadding="0" cellspacing="0" style="border:0px solid black;">
+                                    <tr><td width="242" height="66" valign="middle" align="center"><a href="http://www.ymlz.gov.cn/" target="_blank" onclick="_addDynClicks('wbimage',1449523829,42314)"><img name="u_u7_img" border="0" src="/system/resource/images/loading.gif" alt="" title="" hspace="0" vspace="0"></a></td></tr>
+                                </table></div></td>
+                            <td valign="top" align="center" style="padding-left:4px;padding-right:4px"><div style="padding:0px;width:242px"><table cellpadding="0" cellspacing="0" style="border:0px solid black;">
+                                    <tr><td width="242" height="66" valign="middle" align="center"><a href="https://tousu.www.gov.cn/dc/zhuanti.htm" target="_blank" onclick="_addDynClicks('wbimage',1449523829,44000)"><img name="u_u7_img" border="0" src="/system/resource/images/loading.gif" alt="" title="" hspace="0" vspace="0"></a></td></tr>
+                                </table></div></td>
+                            <td valign="top" align="center" style="padding-left:4px;padding-right:4px"><div style="padding:0px;width:242px"><table cellpadding="0" cellspacing="0" style="border:0px solid black;">
+                                    <tr><td width="242" height="66" valign="middle" align="center"><a href="http://www.paly.gov.cn/special.html?cid=867" target="_blank" onclick="_addDynClicks('wbimage',1449523829,45790)"><img name="u_u7_img" border="0" src="/system/resource/images/loading.gif" alt="" title="" hspace="0" vspace="0"></a></td></tr>
+                                </table></div></td>
+                            <td valign="top" align="center" style="padding-left:4px;padding-right:4px"><div style="padding:0px;width:242px"><table cellpadding="0" cellspacing="0" style="border:0px solid black;">
+                                    <tr><td width="242" height="66" valign="middle" align="center"><a href="http://www.linyi.gov.cn/info/1242/323404.htm" target="_blank" onclick="_addDynClicks('wbimage',1449523829,46213)"><img name="u_u7_img" border="0" src="/system/resource/images/loading.gif" alt="" title="" hspace="0" vspace="0"></a></td></tr>
+                                </table></div></td></tr>
+           </table></TD> 
+          <TD id="u_u7_demo2" vAlign="top" width="998"></TD> 
+        </TR> 
+      </TABLE> 
+      </DIV> 
+    </TD> 
+  </TR> 
+</TABLE> 
+<SCRIPT language="javascript">
+    var u_u7_imgs = new VsbPreloadImgArray();
+    
+    //初始化图片
+    function u_u7_init_img()
+    {
+
+            u_u7_imgs.addImg("images\/zyjcjssxg.jpg", "0", u_u7_onimgload);
+
+            u_u7_imgs.addImg("images\/P020230419524796732245.png", "1", u_u7_onimgload);
+
+            u_u7_imgs.addImg("images\/gwyxx180420.jpg", "2", u_u7_onimgload);
+
+            u_u7_imgs.addImg("images\/ffcl180420.jpg", "3", u_u7_onimgload);
+
+            u_u7_imgs.addImg("images\/gwyllw.jpg", "4", u_u7_onimgload);
+
+            u_u7_imgs.addImg("images\/jyzd.jpg", "5", u_u7_onimgload);
+
+            u_u7_imgs.addImg("images\/aishandong1.png", "6", u_u7_onimgload);
+
+    }
+    function u_u7_onimgload(img, imgid)
+    {
+        var imgobjs = document.getElementsByName("u_u7_img");
+        var imgindex = new Number(imgid);
+        
+        img.showImg(imgobjs[imgindex], 242, 66, true, true);
+        img.showImg(imgobjs[imgindex+ 7], 242, 66, true, true);
+    }
+
+
+    var u_u7_MyMar;
+    var u_u7_speed3;
+    var u_u7_move = true;
+    var u_u7_movenum = 0;
+    var u_u7_pos = null; //td位置组
+    
+    function u_u7_initpos()
+    {
+        u_u7_pos = new Array();
+        
+        var tds1 = document.getElementById("u_u7_demo1").childNodes[0].rows[0].cells;
+        
+        for(i = 0 ;i < tds1.length; i++)
+        {
+            u_u7_pos[u_u7_pos.length] = tds1[i].offsetLeft;
+        }
+        
+        var tds2 = document.getElementById("u_u7_demo2").childNodes[0].rows[0].cells;
+        var tds2offset = document.getElementById("u_u7_demo2").offsetLeft;
+        for(i = 0 ;i < tds2.length; i++)
+        {
+            u_u7_pos[u_u7_pos.length] = tds2[i].offsetLeft + tds2offset;
+        }
+    }
+    
+    function u_u7_getpos(scrollpos)
+    {
+        for(i = 0; i < u_u7_pos.length; i++)
+        {
+            if(scrollpos < u_u7_pos[i])
+                return i-1;
+        }
+    }
+
+
+    function u_u7_Marquee() 
+    { 
+        try 
+        { 
+            if(!u_u7_move)
+                return;
+            
+            var demoobj = document.getElementById("u_u7_demo");
+            var demo1obj = document.getElementById("u_u7_demo1");
+
+            //滚动步长
+            var scrollstep = 1
+            
+            //当前位置
+            var oldscrollLeft = demoobj.scrollLeft;
+            
+            //更新后的位置, 已考虑过回滚
+            var newscrollLeft = (oldscrollLeft + scrollstep)%demo1obj.scrollWidth;
+
+            
+            demoobj.scrollLeft = newscrollLeft; 
+            
+        } 
+        catch(e) 
+        { 
+        } 
+    } 
+
+    function u_u7_clearInterval()
+    {
+        clearInterval(u_u7_MyMar);
+    }
+    
+    function u_u7_setInterval()
+    {
+        u_u7_MyMar = setInterval(u_u7_Marquee,u_u7_speed3);
+    }
+    
+    function u_u7_stopmove()
+    {
+        u_u7_move = false;
+    }
+
+    function u_u7_startmove()
+    {
+        u_u7_move = true;
+    }
+    
+    function u_u7_init()
+    {
+        u_u7_speed3 = 50;
+        if(u_u7_speed3 < 1)
+        {
+            u_u7_speed3 = 1;
+        }
+        
+        document.getElementById("u_u7_demo").onmouseover = u_u7_stopmove;
+        document.getElementById("u_u7_demo").onmouseout = u_u7_startmove;
+
+        document.getElementById("u_u7_demo2").innerHTML = document.getElementById("u_u7_demo1").innerHTML;
+        
+        u_u7_init_img();
+
+        u_u7_setInterval();
+
+    }
+    
+    u_u7_init();
+</SCRIPT></div>
+<div class="footer">
+<p>
+    临沂市公安局主办 市政府网站集约化平台技术支持 <span class="wzdtph"></span>
+</p>
+<p>网站标识码:3713000054 <a href="https://beian.miit.gov.cn/" target="_blank" style="color:#02295e">鲁ICP备19053533号</a><a href="info/1168/5566.htm" target="_blank" style="color:#02295e">联系我们</a></p>
+<p><span id="_ideConac"><a href="https://bszs.conac.cn/sitename?method=show&amp;id=75CFF3F1C8D85950E053022E1AACADF2" target="_blank"><img id="imgConac" vspace="0" hspace="0" border="0" src="images/red.png" data-bd-imgshare-binded="1"></a></span></p>
+<p style="height:55px;width:110px;margin-top:-140px;float:left">
+    <script id="_jiucuo_" src="https://zfwzgl.www.gov.cn/exposure/jiucuo.js" sitecode="3713000054"></script>
+</p>
+<div style="width:270px;margin:0 auto;padding:0px 0;">
+                <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=37130202371855" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="images/beian.png" style="float:left;" /><p style="float:left;height:20px;line-height:20px;margin:0px 0px 0px 5px;color:#939393;">鲁公网安备 37130202371855号</p></a>
+            </div></div></div>
+   
+</SCRIPT>
+ 
+    
+<DIV id="adu10" width="159" style="Z-index:99999;LEFT:0px;POSITION:absolute;TOP:0px">
+<iframe frameborder="0" src="about:blank" style="position:absolute;Z-index:-1;width:100%;height:100%;top:0;left:0;scrolling:no;filter:progid:DXImageTransform.Microsoft.Alpha(style=0,opacity=0)"></iframe>
+    <TABLE cellspacing="0" cellpadding="0" border="0">   
+    <TBODY>   
+
+<TR align="center">
+    <TD align="left"><A href="https://www.mps.gov.cn/n2255079/n6356296/n6485385/index.html" target="_blank" title="" onclick="_addDynClicks('wbimage',1449523829,45791)"><img src="images/xjpjh.jpg" width="200" height="60" border="0"></A></TD>
+</TR>
+   
+        <TR>   
+            <TD align="right" style="padding-top:1px"><table border="0" cellpadding="10" cellspacing="0"><tr><td style="background-color:#f5f5f5;padding:1px"><a href="javascript:showimagecloseu10();" class="closestyle220349">关闭</a></td></tr></table></TD> 
+        </TR>   
+   
+   
+    </TBODY> 
+    </TABLE> 
+</DIV>
+  
+<SCRIPT>   
+function showimagecloseu10()   
+{   
+    var obju10=document.getElementById("adu10");   
+    obju10.style.display = 'none';   
+};   
+//水平             //上下    
+   
+var xu10 = 0;yu10 = 0;   
+   
+var xinu10 = true; yinu10 = true;   
+var stepu10 = 1;   
+   
+var delayu10 = 25;   
+ 
+var obju10=document.getElementById("adu10");
+var bdyu10 = document.body;  
+    if (document.compatMode && document.compatMode != "BackCompat")
+        bdyu10 = document.documentElement;
+    else
+        bdyu10 = document.body;
+function floatADu10()
+{
+    var bdy_scrollTop = document.body.scrollTop | document.documentElement.scrollTop;
+    var Lu10=Tu10=0;   
+    var Ru10= bdyu10.clientWidth-obju10.offsetWidth;  
+    var Bu10 = bdyu10.clientHeight-obju10.offsetHeight; 
+    obju10.style.left = xu10 + bdyu10.scrollLeft+"px";   
+    obju10.style.top = yu10 + bdy_scrollTop+"px";   
+    xu10 = xu10 + stepu10*(xinu10?1:-1);    
+    if(xu10 < Lu10) 
+    { 
+        xinu10 = true;
+        xu10 = Lu10;
+    }  
+    if(xu10 > Ru10)
+    { 
+        xinu10 = false; 
+        xu10 = Ru10;
+    }  
+    yu10 = yu10 + stepu10*(yinu10?1:-1);    
+    if(yu10 < Tu10) 
+    { 
+        yinu10 = true; 
+        yu10 = Tu10; 
+    }
+    if(yu10 > Bu10) 
+    { 
+        yinu10 = false; 
+        yu10 = Bu10; 
+    }
+} 
+var itlu10;
+if(window.navigator.userAgent.indexOf("MSIE")>=1)
+{
+    window.attachEvent('onload', adftu10);
+}
+else
+{
+    window.addEventListener('load',adftu10, false);
+}
+function adftu10()
+{
+    itlu10 = setInterval("floatADu10()", delayu10);   
+}
+    obju10.onmouseover=function(){clearInterval(itlu10);};   
+    obju10.onmouseout=function(){itlu10=setInterval("floatADu10()", delayu10)};      
+   
+</SCRIPT>
+
+<!--左侧浮动-->
+<script type="text/javascript">
+    $(document).ready(function() {
+$(".closeBtn").click(function(){
+            $(".gov_weixin_share").hide()
+        })
+}); 
+$(document).ready(function() {
+$(".closeBtnrb").click(function(){
+            $(this).parent().parent().hide()
+        })
+});
+</script>
+<div class="gov_weixin_share" style="position:fixed;font-size:12px;top:330px;left:0px;z-index:200">
+<div class="closeBtn" style="text-align:left;height:15px;font-size:12px;padding-top:5px"><img src="images/close140403.gif" style="cursor:pointer"></div>
+<div class="gov_wx fixed" style="border-bottom:medium none;border-left:medium none;padding-bottom:6px;padding-left:0px;padding-right:0px;border-top:medium none;border-right:medium none;padding-top:6px">    
+    
+
+                        <img src="images/gwydc.jpg" title="" border="0" 1>
+
+
+</div></div>
+<script src="https://auth.mangren.com/boots/linyiV6/esdToolsInit.js" charset="UTF-8"></script>
+ <script type="text/javascript">
+        function getUrlParam(name) {
+
+var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+
+var r = window.location.search.substr(1).match(reg);
+
+if (r != null) return unescape(r[2]); return null;
+
+}
+
+if(getUrlParam('s')==1){
+$(".old_btn").show();
+}
+        
+        
+        
+            var storage = window.localStorage;
+            var switchNum;
+            if (storage.hasOwnProperty("mode")) {
+                $("body").addClass("pageold");
+                $(".old_btn").html("退出长者模式");
+                switchNum = 1;
+                 $(window).resize()
+            } else {
+                $("body").removeClass("pageold");
+                $(".old_btn").text("进入长者模式");
+                switchNum = 0;
+                 $(window).resize()
+            }
+            $(".old_btn").click(function() { 
+            console.log("1")
+                if (switchNum == 0){
+                    $("body").addClass("pageold");
+                    storage.setItem("mode", 2);
+                    $(".old_btn").html("退出长者模式");
+                    switchNum = 1;
+                     $(window).resize()
+                }else if (switchNum == 1){
+                    $("body").removeClass("pageold");
+                    storage.removeItem("mode");
+                    $(".old_btn").text("进入长者模式");
+                    switchNum = 0;
+                     $(window).resize()
+                }
+                //location.reload(true);
+            });
+        </script>
+<!--右侧-->
+<script type="text/javascript">
+$(document).ready(function() {
+$(".closeBtnr").click(function(){
+            $(this).parent().parent().hide()
+        })
+});
+</script>
+
+<div style="position:fixed;right:5px;top:290px;z-index:10000;">
+<img src="images/ewm180426.jpg" style="display:block;" />
+<div style="width:100%;height:16px;border-bottom:solid 1px #e1e1e1;background:#f0f0f0;">
+  <div class="closeBtnr" style="font-size:12px;line-height:16px;text-align:right;text-indent:5px;cursor:pointer;color:#666666;">关闭&nbsp;</div>
+ </div>
+</div>
+<!--右侧-->
+</div>
+</body>
+<meta http-equiv="pragma" content="no-cache"><meta http-equiv="Cache-Control" content="no-store, must-revalidate"><script type="text/javascript">(function(){ var heat = document.createElement("script");heat.type = "text/javascript";heat.async = true;heat.src = "http://xxcj.bdb.shandong.gov.cn:81/jubac/sync/headcollect.do";var h = document.getElementsByTagName("script")[0];h.parentNode.insertBefore(heat,h);var iframe = document.createElement("iframe");iframe.width = "100%";iframe.height = "0";iframe.id = "juba_iframepage";iframe.scrolling = "no";iframe.frameborder = "0";iframe.style = "position:absolute";document.body.appendChild(iframe);var params = window.location.search;if (params.indexOf("?") != -1 && params.indexOf("systemurl") != -1){var params = params.substr(params.indexOf("?")+1);var para = params.split("&");var systemurl = para[0].split("=")[1];var pageurl = para[1].split("=")[1];var iframeHeight = document.body.scrollHeight==0?document.documentElement.scrollHeight:document.body.scrollHeight;var iframeWidth = document.body.scrollWidth;document.getElementById("juba_iframepage").src = systemurl + "/afterhotpage.jsp?pageurl="+pageurl+"&height="+iframeHeight+"&systemurl="+systemurl+"&width="+iframeWidth;}})();</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

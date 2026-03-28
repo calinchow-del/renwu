@@ -1,0 +1,1728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>重庆市水利局</title>
+  <!--站点类-->
+<meta name="SiteName" content="重庆市水利局">
+<meta name="SiteDomain" content="http://slj.cq.gov.cn/">
+<meta name="SiteIDCode" content="5000000056">
+<!--栏目类-->
+<meta name="ColumnName" content="">
+
+    
+    
+   
+        
+        
+          
+            <meta name="ColumnDescription" content="重庆市水利局-栏目,主要展示-相关的内容,是-的信息展示窗口">
+        
+    
+
+
+
+    
+    
+        
+        
+            <meta name="ColumnKeywords" content="重庆市水利局，信息发布，内容展示，，">
+        
+    
+
+
+
+    <meta name="ColumnType" content="">
+
+
+  <link rel="stylesheet" href="./images/swiper.min.css">
+  <link rel="stylesheet" href="./images/animate.min.css">
+  <link rel="stylesheet" href="./images/2024-index.css">
+  <link rel="stylesheet" href="./images/20240905add.css">
+  <script src="./images/jquery.min.js"></script>
+  <script src="./images/prefixfree.js"></script>
+  <style>
+    .i-bar1{
+      height: 120px;
+      overflow: hidden;
+      position: relative;
+      width:1340px;
+      margin:20px auto;
+    }
+    .i-bar1 .swiper-container{
+      width: 100%;
+      height: 100%;
+    }
+    .i-bar1 a{
+      display: block;
+    }
+    .i-bar1 a img{
+      width: 100%;
+      height: 100%;
+    }
+    .i-bar1 .prev,.i-bar1 .next{
+      width: 22px;
+      height: 22px;
+      vertical-align: middle;
+      cursor: pointer;
+      position: absolute;
+
+      z-index: 10;
+    }
+    .i-bar1 .prev{
+      margin-right: 10px;
+      left: 0;
+      top: 50px;
+    }
+    .i-bar1 .next{
+      margin-left: 10px;
+      right: 0;
+      top: 50px;
+    }
+    .i-bar1-btn{
+      position: absolute;
+      bottom: 8px;
+
+      right: 10px;
+
+      font-size: 0;
+      z-index:99;
+    }
+    .i-bar1-btn span{
+      font-size: 18px;
+
+      color: #fff;
+      vertical-align: middle;
+    }
+    @media screen and (max-width: 750px) {
+      .i-bar1{
+        width:100%;
+      }
+    }
+  </style>
+</head>
+
+<body class="bodyhid">
+<div class="top">
+  <div class="slj-header-t clearfix w136">
+    <div class="slj-header-t-l"> <a href="//www.gov.cn" target="_blank">中国政府网</a> <a href="//www.cq.gov.cn" target="_blank">重庆市人民政府网</a> </div>
+    <div class="slj-header-t-r clearfix">
+      <ul>
+        <a onclick="aria.start()" href="javascript:void(0)">无障碍</a>
+        <a onclick="aria.oldFixedStart()" href="javascript:void(0)">关怀版</a>
+        <a id="topLogin" class="cq-login" href="javascript:void(0)">登录</a>
+        <a href="javascript:void(0)" id="topLogout" class="cq-logout" style="display:none;">注销</a>
+        <a class="cq-register cq-register-gr" id="topRegister" href="javascript:void(0)">注册</a>
+        <span class="cq-logined-show" id="topUserName" style="display: none;color: #ffffff">(<span class="cq-user-name"></span>  欢迎您)</span>
+      </ul>
+      <script src="//cq.gov.cn/images/crypto-js.min.js"></script>
+<script src="//cq.gov.cn/images/DECRYPT.js"></script>
+<script src="//cq.gov.cn/images/ykb-request.js"></script>
+<script src="//cq.gov.cn/images/ykb-api.js"></script>
+<script src="//cq.gov.cn/images/ykb-base.js?v=1.2"></script>
+<input type="text" hidden id="loginSiteId" value="250" />
+<script>
+  $(function () {
+    //获取用户信息-有额外的操作可以在回调中使用
+    getUserInfo(function (res) {
+      if(res!=200){
+        // 校验国家政务网登录 start
+        checkLoginGj()
+        // 校验国家政务网登录 end
+      }
+    })
+  })
+</script>
+    </div>
+  </div>
+</div>
+
+<div class="main-banner">
+  <div class="box"> <a href="" class="logo"> <img src="./images/slj-index-logo.png" alt="" /> </a>
+    <div class="search-box">
+      <input type="text" placeholder="请输入关键字查询" id="textfield" />
+      <button onclick="submitsearch()"></button>
+    </div>
+  </div>
+  <script>
+    function submitsearch(){
+      var result = $("#textfield").val();
+      result = $.trim(result);
+      var reg = /[`~!@#$%^&*_+<>{}\/'[\]]/im;
+     
+      if (result == "请输入搜索内容" || result == "" || result == null) {
+        window.wxc.xcConfirm('请输入检索条件!', window.wxc.xcConfirm.typeEnum.info)
+        return false;
+      } else {
+        result = result.replace("-", "\-");
+        result = result.replace("(", "\(");
+        result = result.replace(")", "\)");
+      }
+      window.location.href=  "/cqs/searchResultPC.html?tenantId=59&configTenantId=59&areaCode=500000127&searchWord=" + encodeURI(result);
+      //window.location.href = "/cq/index.html?sitecode=928e7a345b514c55ab9205d7693747d6&siteid=46&keyWork=" + encodeURI(result);
+    }
+  </script>
+  <div class="swiper-container swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"> <img src="./images/slj-index-banner1.png" alt="" /> </div>
+      <div class="swiper-slide"> <img src="./images/bg2.png" alt="" /> </div>
+      <div class="swiper-slide"> <img src="./images/bg3.png" alt="" /> </div>
+      <div class="swiper-slide"> <img src="./images/bg51.jpg" alt="" /> </div>
+    </div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+</div>
+<div class="nav">
+  <div class="nav-wrap w136">
+    <div class="nav-item on"> <a href="/">首页</a> </div>
+    <div class="nav-item"> <a href="./zwgk_250/">政务公开</a> </div>
+    <div class="nav-item"> <a href="https://slj.cq.gov.cn/zwfw202404/">政务服务</a> </div>
+    <div class="nav-item"> <a href="//slj.cq.gov.cn/hdjl_250/">互动交流</a> </div>
+    <div class="nav-item"> <a href="//slj.cq.gov.cn/sjslcs/">走进水利</a> </div>
+    <span class="active" id="mode"></span> </div>
+</div>
+<div class="center">
+  <div class="center-t">
+    
+      <div  class="top-news w136">
+        <a href="https://h.xinhuaxmt.com/vh512/share/13005098?docid=13005098&newstype=1001&d=13525d9" class="title">新华社：李强主持召开国务院常务会议</a>
+        <div class="info"></div>
+        <a href="./sy_250/tt/" class="more">更多</a>
+      </div>
+    
+    <div class="news w136">
+      <div class="news-wrap clear">
+        <div class="news-l">
+          <div class="news-banner swiper-container">
+            <div class="swiper-wrapper">
+              
+                <a href="./sy_250/tpjj/202603/t20260325_15566496.html" class="swiper-slide">
+                  <div class="pic"> <img src="./sy_250/tpjj/202603/W020260325583850130829_ORIGIN_570.jpg" alt="" /> </div>
+                  <p>3月18日，重庆市水利投融资“政银企”项目推介会召开</p>
+                </a>
+              
+                <a href="./sy_250/tpjj/202603/t20260311_15520959.html" class="swiper-slide">
+                  <div class="pic"> <img src="./sy_250/tpjj/202603/W020260311534449887830_ORIGIN_570.jpg" alt="" /> </div>
+                  <p>近期，水利部召开2026年全国水旱灾害防御工作会议，重庆市水...</p>
+                </a>
+              
+                <a href="./sy_250/tpjj/202602/t20260225_15454521.html" class="swiper-slide">
+                  <div class="pic"> <img src="./sy_250/tpjj/202602/W020260225648071752846_ORIGIN_570.jpg" alt="" /> </div>
+                  <p>云阳长滩河</p>
+                </a>
+              
+                <a href="./sy_250/tpjj/202602/t20260212_15436419.html" class="swiper-slide">
+                  <div class="pic"> <img src="./sy_250/tpjj/202602/W020260212364041092049_ORIGIN_570.JPG" alt="" /> </div>
+                  <p>2月10日，全市水土保持工作会议召开</p>
+                </a>
+              
+                <a href="./sy_250/tpjj/202601/t20260127_15357923.html" class="swiper-slide">
+                  <div class="pic"> <img src="./sy_250/tpjj/202601/W020260127611869125057_ORIGIN_570.jpg" alt="" /> </div>
+                  <p>近日，水利部召开河湖生态产品价值实现机制调研座谈会</p>
+                </a>
+              
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+        <div class="news-r">
+          <div class="normal-title">
+            <ul class="normal-banner swiper-container">
+              <div class="swiper-wrapper">
+                <a href="http://www.gov.cn/pushinfo/v150203/index.htm" target="_blank" class="swiper-slide active">国务院信息</a>
+                <a href="http://www.cq.gov.cn/ywdt/jrzq/" target="_blank" class="swiper-slide">今日重庆</a>
+                <a href="./sy_250/slyw/" class="swiper-slide">水利要闻</a>
+                <a href="./sy_250/qxdt/" class="swiper-slide">区县动态</a>
+                <a href="./sy_250/mtgz/" class="swiper-slide">媒体关注</a>
+                <a href="./sy_250/zhxx/" class="swiper-slide">综合信息</a> </div>
+              <div class="swiper-scrollbar"></div>
+            </ul>
+          </div>
+          <div class="normal-list-wrap clear">
+            <div class="normal-list active" id="gwyinfo"> </div>
+            <div class="normal-list" id="cqjrcq">  </div>
+            <div class="normal-list">
+              
+                <a href="./sy_250/slyw/202603/t20260326_15568148.html" class="normal-list-item">
+                  <div class="title">
+                    <p>重庆市水利局在三峡工程管理工作会议上作交流发言</p>
+                    <span class="time">2026.03.26</span> </div>
+                  <p>3月23日，水利部在北京以视频形式组织召开三峡工程管理工作会议，水利部副部长、党组成员陈敏出席会议并讲话，水利部总工程师仲志余主持会议。局党...</p>
+                </a>
+              
+                <a href="./sy_250/slyw/202603/t20260326_15568140.html" class="normal-list-item">
+                  <div class="title">
+                    <p>市水利局召开2026年全市节约用水管理工作会</p>
+                    <span class="time">2026.03.26</span> </div>
+                  <p>近日，市水利局组织召开2026年全市节约用水管理工作会。市发展改革委、市农业农村委、市经济信息委、市城市管理局等22个市级节约用水联席会议成员...</p>
+                </a>
+              
+                <a href="./sy_250/slyw/202603/t20260325_15564990.html" class="normal-list-item">
+                  <div class="title">
+                    <p>黄明忠参加运管处党支部2025年度组织生活会</p>
+                    <span class="time">2026.03.25</span> </div>
+                  <p>3月20日，运管处党支部召开2025年度组织生活会。局党组成员、副局长黄明忠同志以普通党员身份参加会议，支部书记王超同志主持会议，支部党员参加会...</p>
+                </a>
+              
+                <a href="./sy_250/slyw/202603/t20260325_15564653.html" class="normal-list-item">
+                  <div class="title">
+                    <p>市水利局指导铜梁区水利高质量发展大会 共绘“十五五”水利发展新蓝图</p>
+                    <span class="time">2026.03.25</span> </div>
+                  <p>3月20日，铜梁区水利高质量发展大会在区委会议中心召开。市水利局副局长卢峰到会指导并讲话。铜梁区委副书记、区政府区长皮涛出席会议并讲话。会议...</p>
+                </a>
+              
+            </div>
+            <div class="normal-list">
+              
+                <a href="./sy_250/qxdt/202603/t20260326_15569079.html" class="normal-list-item">
+                  <div class="title">
+                    <p>云阳县开展涉河排污等重点领域巡查排查</p>
+                    <span class="time">2026.03.26</span> </div>
+                  <p>为切实保障水生态环境安全，全面落实涉河排污及历史积存污染风险“回头看”专项行动要求，近日，云阳县水利局组织专班，围绕河长制履职情况、防汛...</p>
+                </a>
+              
+                <a href="./sy_250/qxdt/202603/t20260326_15568890.html" class="normal-list-item">
+                  <div class="title">
+                    <p>城口县“三共”齐发力  推动跨界河流入选全国幸福河湖优秀案例</p>
+                    <span class="time">2026.03.26</span> </div>
+                  <p>重庆任河（城口县段）入选2025年全国幸福河湖优秀案例。一是坚持责任共担，重构治河权责。联动四川万源、陕西紫阳建立任河流域联合巡查与会商机制...</p>
+                </a>
+              
+                <a href="./sy_250/qxdt/202603/t20260326_15568154.html" class="normal-list-item">
+                  <div class="title">
+                    <p>大足区水利局“三向发力”保春灌护春耕</p>
+                    <span class="time">2026.03.26</span> </div>
+                  <p>一是强化水源保障。维修养护水库117座、山坪塘52口，综合运用引、提、调等措施新增蓄水近1.5亿立方米。截至2月底，全区水利工程蓄水总量达2.24亿立...</p>
+                </a>
+              
+                <a href="./sy_250/qxdt/202603/t20260323_15560978.html" class="normal-list-item">
+                  <div class="title">
+                    <p>两江新区河长办公室开展河长制10周年宣传暨江滩守护志愿服务活动</p>
+                    <span class="time">2026.03.23</span> </div>
+                  <p>今年是全面推行河长制10周年，为深入推进河长制工作走深走实，进一步凝聚全民护河共识、营造共治共享氛围，近日，两江新区河长办联合江北城街道党...</p>
+                </a>
+              
+            </div>
+            <div class="normal-list">
+              
+                <a href="https://wap.cqrb.cn/xcq/NewsDetail?classId=1403&newsId=2608605&staticUrl=https%3A%2F%2Ft.cqrb.cn%2F4mABk" class="normal-list-item">
+                  <div class="title">
+                    <p>【重庆-重庆日报】十五五推动一大批水库投用 新建100余座水库 重庆2030年将初步建...</p>
+                    <span class="time">2026.03.24</span> </div>
+                  <p>3月22日是第三十四届“世界水日”，3月22日-28日是第三十九届“中国水周”。当“国家水网 世纪画卷”的年度主题响彻全国之际，巴渝大地上，一场织水网、惠民生、利长远的治...</p>
+                </a>
+              
+                <a href="https://app.ahnews.com.cn/displayTemplate/news/newsDetail/1127157.html?isDigital=true&isShare=true" class="normal-list-item">
+                  <div class="title">
+                    <p>【安徽日报】：引来“两江之水”，渝西从“水紧张”到“水自由</p>
+                    <span class="time">2026.03.11</span> </div>
+                  <p>2026年春节刚过，重庆市璧山区青杠街道清明社区仍洋溢着浓浓的年味。今年春节，这个散落在缙云山脉龙隐山上的社区格外热闹——300多名外出务工人员返乡，山间民宿迎来接待高...</p>
+                </a>
+              
+                <a href="https://cqxyh5.cbgcloud.com/pages/details/details.html?companyId=cqxwzx&productId=6B1BEE01515143AFAF290F6044E54A89&docid=65A64E490E6F4574AEBB4D5C89F1F254&isNew=yes&downloadTips=true" class="normal-list-item">
+                  <div class="title">
+                    <p>【第1眼新闻】“洪旱交替并存、极端灾害风险突出”！重庆部署应对今年汛期→</p>
+                    <span class="time">2026.02.27</span> </div>
+                  <p>2月27日，2026年全市水文与水旱灾害防御工作会在市水利局召开，预计今年汛期（5月-9月），重庆市将呈现“洪旱交替并存、极端灾害风险突出”的复杂态势。</p>
+                </a>
+              
+                <a href="https://wap.cqrb.cn/xcq/NewsDetail?classId=1403&newsId=2575523&staticUrl=https%3A%2F%2Ft.cqrb.cn%2F4lyoQ" class="normal-list-item">
+                  <div class="title">
+                    <p>【新重庆-重庆日报】马年首个工作日 全市在建大中型重点水源工程全面复工</p>
+                    <span class="time">2026.02.25</span> </div>
+                  <p>2月24日，马年首个工作日，我市在建大中型重点水源工程全面按下复工复产“快进键”，复工率达100%。</p>
+                </a>
+              
+            </div>
+            <div class="normal-list">
+              
+                <a href="./sy_250/zhxx/202603/t20260326_15569640.html" class="normal-list-item">
+                  <div class="title">
+                    <p>重庆多地开展“千城地标亮节水” 公益宣传活动</p>
+                    <span class="time">2026.03.26</span> </div>
+                  <p>在第34届“世界水日”、第39届“中国水周”期间，为进一步提升全民节水意识和文明素养，凝聚全社会亲水、惜水、节水的强大合力，3月22日20时，重庆...</p>
+                </a>
+              
+                <a href="./sy_250/zhxx/202603/t20260324_15563079.html" class="normal-list-item">
+                  <div class="title">
+                    <p>市水利局召开2026年重庆市区域生产建设项目水土保持监督性监测工作会议</p>
+                    <span class="time">2026.03.24</span> </div>
+                  <p>近日，市水利局召开2026年重庆市区域生产建设项目水土保持监督性监测工作会议。市水利局水保处、市水保总站相关负责人，相关区域管理机构及所在区...</p>
+                </a>
+              
+                <a href="./sy_250/zhxx/202603/t20260324_15563055.html" class="normal-list-item">
+                  <div class="title">
+                    <p>市水利局召开全市水文测报工作会议</p>
+                    <span class="time">2026.03.24</span> </div>
+                  <p>3月24日，市水利局召开全市水文测报工作会议，会议传达学习2026年全国水文暨水情工作会议精神，介绍2026年洪旱趋势预测分析、复盘2025年水文测报工...</p>
+                </a>
+              
+                <a href="./sy_250/zhxx/202603/t20260324_15562791.html" class="normal-list-item">
+                  <div class="title">
+                    <p>市水文总站赴长寿区预防犯罪法治教育基地开展警示教育活动</p>
+                    <span class="time">2026.03.24</span> </div>
+                  <p>为进一步加强党员干部政德建设、树立和践行正确政绩观，提高我站党员干部职工纪律意识和拒腐防变能力，市水文总站分别于3月12日、3月19日，组织全...</p>
+                </a>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <a href="https://www.12371.cn/djxx/" class="ztjy w136 ">
+    <div class="pic"> <img src="./images/slj-index-ztw.png" alt="" /> </div>
+    </a> -->
+    <!-- 首页中间轮播 -->
+    <div class="i-bar1 i-bar1pc">
+      <div class="swiper-container index-banner">
+        <div class="swiper-wrapper">
+          
+                <a target="_blank" href="https://www.cq.gov.cn/zt/xxgcddesjszqhjs_502836/" class="swiper-slide">
+                  <img class="common-pcshow" src="./ggbf_search/zjggw/202512/W020251201591101567596.png" alt="" />
+                </a>
+            
+                <a target="_blank" href="https://www.cq.gov.cn/zt/yyztls/index.html" class="swiper-slide">
+                  <img class="common-pcshow" src="./ggbf_search/zjggw/202512/W020251201591969133921.png" alt="" />
+                </a>
+            
+                <a target="_blank" href="https://www.cq.gov.cn/zt/esd/" class="swiper-slide">
+                  <img class="common-pcshow" src="./ggbf_search/zjggw/202512/W020251201593982132842.png" alt="" />
+                </a>
+            
+                <a target="_blank" href="https://www.cq.gov.cn/zt/xxgczgzqswljqcqhjs/" class="swiper-slide">
+                  <img class="common-pcshow" src="./ggbf_search/zjggw/202512/W020251201595187673260.png" alt="" />
+                </a>
+            
+                <a target="_blank" href="https://www.gov.cn/hudong/" class="swiper-slide">
+                  <img class="common-pcshow" src="./ggbf_search/zjggw/202512/W020251201597372520009.png" alt="" />
+                </a>
+            
+                <a target="_blank" href="https://slj.cq.gov.cn/zwgk_250/zfxxgkml/tzgg/202505/t20250513_14607207.html" class="swiper-slide">
+                  <img class="common-pcshow" src="./ggbf_search/zjggw/202512/W020251201596147169666.png" alt="" />
+                </a>
+            
+        
+        </div>
+        <img class="prev" src="./images/2024index-ic1.png" />
+
+        <img class="next" src="./images/2024index-ic2.png" />
+
+
+      </div>
+    </div>
+    <div class="zwgk w136">
+      <div class="main-title"> <a href="//slj.cq.gov.cn/zwgk_250/">政务公开</a> </div>
+      <div class="zwgk-wrap clear">
+        <div class="zwgk-l">
+          <div class="sub-title"> <a href="./zwgk_250/zfxxgkzn/">政府信息公开</a> </div>
+          <div class="zwgk-links">
+            <a href="./zwgk_250/zfxxgkzn/" class="zwgk-links-item"> <img src="./images/zwfw-icon1.png" alt="" /> <span>政府信息公开指南</span> </a>
+            <a href="./zwgk_250/zfxxgkzd/" class="zwgk-links-item"> <img src="./images/zwfw-icon2.png" alt="" /> <span>政府信息公开制度</span> </a>
+            <a href="./zwgk_250/fdzdgknr/" class="zwgk-links-item"> <img src="./images/zwfw-icon3.png" alt="" /> <span>法定主动公开内容</span> </a>
+            <a href="./zwgk_250/zfxxgknb/" class="zwgk-links-item"> <img src="./images/zwfw-icon4.png" alt="" /> <span>政府信息公开年报</span> </a> </div>
+        </div>
+        <div class="zwgk-r">
+          <div class="zwgk-r-t">
+            <div class="normal-title normal-title2">
+              <ul class="normal-banner swiper-container">
+                <div class="swiper-wrapper"> <a href="./zwgk_250/zfxxgkml/tzgg/" class="swiper-slide active">通知公告</a> <a href="./zwgk_250/zfxxgkml/zcfg/" class="swiper-slide">政策文件</a> <a href="./zwgk_250/zcjd1/" class="swiper-slide">政策解读</a> </div>
+                <div class="swiper-scrollbar"></div>
+              </ul>
+            </div>
+            <div class="normal-list-wrap clear">
+              <div class="normal-list2 active">
+                
+                  <a href="./zwgk_250/zfxxgkml/tzgg/202603/t20260325_15566071.html" class="normal-list2-item">
+                    <p>重庆市水利局关于公开征求《水资源论证后评估（征求意见稿）》《取水工程验收技术...</p>
+                    <span>2026-03-25</span> </a>
+                
+                  <a href="./zwgk_250/zfxxgkml/tzgg/202603/t20260316_15531237.html" class="normal-list2-item">
+                    <p>重庆市水利局关于2025年度重庆市工业企业用水效率达到国家用水定额先进值的纳税人...</p>
+                    <span>2026-03-16</span> </a>
+                
+                  <a href="./zwgk_250/zfxxgkml/tzgg/202603/t20260311_15522374.html" class="normal-list2-item">
+                    <p>重庆市水利局关于公开征求《重庆市“十五五”水安全保障规划（征求意见稿）》意见...</p>
+                    <span>2026-03-11</span> </a>
+                
+                  <a href="./zwgk_250/zfxxgkml/tzgg/202603/t20260310_15518092.html" class="normal-list2-item">
+                    <p>重庆市水利局关于2025年度重庆市取用水领域信用评价结果的公示</p>
+                    <span>2026-03-10</span> </a>
+                
+                  <a href="./zwgk_250/zfxxgkml/tzgg/202603/t20260304_15488336.html" class="normal-list2-item">
+                    <p>重庆河长办公室关于转发《水利部办公厅关于开展首届“河湖守护者”宣传选树活动的...</p>
+                    <span>2026-03-04</span> </a>
+                
+                  <a href="./zwgk_250/zfxxgkml/tzgg/202602/t20260212_15439948.html" class="normal-list2-item">
+                    <p>重庆市水利局关于征求《市级水土流失重点预防区和重点治理区范围划定成果（征求意...</p>
+                    <span>2026-02-12</span> </a>
+                
+              </div>
+              <div class="normal-list2 ">
+                
+                  <a href="./zwgk_250/zfxxgkml/zcfg/qtxx/202603/t20260326_15567455.html" class="normal-list2-item">
+                    <p>重庆市水利局关于西永线三合阀室—外环双福阀室天然气输气管道工程水土保持方案准...</p>
+                    <span>2026-03-26</span> </a>
+                
+                  <a href="./zwgk_250/zfxxgkml/zcfg/qtxx/202603/t20260323_15558226.html" class="normal-list2-item">
+                    <p>重庆市水利局关于重庆市奉节县百岛湖水库工程取水准予行政许可的决定</p>
+                    <span>2026-03-23</span> </a>
+                
+                  <a href="./zwgk_250/zfxxgkml/zcfg/gfxwj1/202603/t20260319_15543805.html" class="normal-list2-item">
+                    <p>重庆市水利局 重庆市发展和改革委员会关于印发重庆市取用水领域信用评价工作方案（...</p>
+                    <span>2026-03-19</span> </a>
+                
+                  <a href="./zwgk_250/zfxxgkml/zcfg/qtxx/202603/t20260304_15488336.html" class="normal-list2-item">
+                    <p>重庆河长办公室关于转发《水利部办公厅关于开展首届“河湖守护者”宣传选树活动的...</p>
+                    <span>2026-03-04</span> </a>
+                
+                  <a href="./zwgk_250/zfxxgkml/zcfg/qtxx/202602/t20260228_15466550.html" class="normal-list2-item">
+                    <p>重庆市水利局关于西永线三合阀室—外环双福阀室天然气输气管道工程洪水影响评价准...</p>
+                    <span>2026-02-28</span> </a>
+                
+                  <a href="./zwgk_250/zfxxgkml/zcfg/qtxx/202602/t20260228_15466074.html" class="normal-list2-item">
+                    <p>重庆市水利局关于悦来水厂（一二三四期） 取水准予行政许可的决定</p>
+                    <span>2026-02-28</span> </a>
+                
+              </div>
+              <div class="normal-list2 ">
+                
+                  <a href="./zwgk_250/zcjd1/tpjd/202602/t20260204_15381550.html" class="normal-list2-item">
+                    <p>重庆市水利局2025年政府信息公开工作年度报告（图解版）</p>
+                    <span>2026-02-04</span> </a>
+                
+                  <a href="./zwgk_250/zcjd1/tpjd/202601/t20260121_15343266.html" class="normal-list2-item">
+                    <p>一图读懂重庆市水土保持生态产品价值转化</p>
+                    <span>2026-01-21</span> </a>
+                
+                  <a href="./zwgk_250/zcjd1/wzjd/202512/t20251230_15280831.html" class="normal-list2-item">
+                    <p>《关于全面推进生态清洁小流域水土保持生态产品价值转化的实施意见》政策解读</p>
+                    <span>2025-12-30</span> </a>
+                
+                  <a href="./zwgk_250/zcjd1/spjd/202509/t20250929_15055341.html" class="normal-list2-item">
+                    <p>重庆市水利政务服务事项办理方式</p>
+                    <span>2025-09-29</span> </a>
+                
+                  <a href="./zwgk_250/zcjd1/spjd/202509/t20250929_15055336.html" class="normal-list2-item">
+                    <p>水利水电工程可行性研究报告（或项目申请报告）技术审查办事指南解读</p>
+                    <span>2025-09-29</span> </a>
+                
+                  <a href="./zwgk_250/zcjd1/spjd/202509/t20250929_15055329.html" class="normal-list2-item">
+                    <p>水利水电工程施工企业主要负责人、项目负责人和专职安全生产管理人员安全生产考核...</p>
+                    <span>2025-09-29</span> </a>
+                
+              </div>
+            </div>
+          </div>
+          <div class="zwgk-r-b clear">
+            <a href="https://slj.cq.gov.cn/zwgk_250/fdzdgknr/jgzn/?lm=负责人信息"  class="zwgk-links2-item"> <img src="./images/slj-index-fzrxx-text.png" />
+              <a href="https://slj.cq.gov.cn/zwgk_250/fdzdgknr/jgzn/" class="zwgk-links2-item"> <img src="./images/slj-index-jgzn-text.png" />
+                <a href="./zwgk_250/zfxxgkml/zczxwdk/" class="zwgk-links2-item"> <img src="./images/slj-index-zcwdk-text.png" alt="" />
+                </a> <a href="./zwgk_250/zfxxgkml/jczwgk/" class="zwgk-links2-item"> <img src="./images/slj-index-jczwgk-text.png" alt="" /> </a> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="center-c">
+    <div class="zwfw w136">
+      <div class="main-title"> <a href="./zwfw202404/">政务服务</a> </div>
+      <div class="zwfw-wrap clear">
+        <div class="zwfw-l">
+          <div class="sub-title"> <a>个人服务</a> </div>
+          <div class="links clear"> <a href="https://zwykb.cq.gov.cn/v2/fwqd/bszn.html?catalogId=a8eecccf-9ff2-4e70-a15c-27a381f0edff&transactCode=50011901400009" class="links-item"> <img src="./images/slj-index-xzxk-icon.png" alt="" />
+            <p>施工企业专职安全生产管理人员安全生产考核合格证书申领</p>
+          </a> <a href="https://zwykb.cq.gov.cn/v2/fwqd/bszn.html?catalogId=a8eecccf-9ff2-4e70-a15c-27a381f0edff&transactCode=50011901400007" class="links-item"> <img src="./images/slj-index-xzcj-icon.png" alt="" />
+            <p>施工企业项目负责人安全生产考核合格证书变更</p>
+          </a> <a href="https://zwykb.cq.gov.cn/v2/fwqd/bszn.html?catalogId=a8eecccf-9ff2-4e70-a15c-27a381f0edff&transactCode=50011901400005" class="links-item"> <img src="./images/slj-index-qtql-icon.png" alt="" />
+            <p>施工企业项目负责人安全生产考核合格证书申领</p>
+          </a> </div>
+        </div>
+        <div class="zwfw-r">
+          <div class="sub-title sub2"> <a>企业服务</a> </div>
+          <div class="links clear"> <a href="https://zwfw.cq.gov.cn/cqnew/icity/project/proinfo?id=934b288c-f9e0-430a-8520-33b81f787f05&flowId=fdf436a8-f798-11e8-b040-005056a83845&formId=ShuiLiJuXin&itemId=934b288c-f9e0-430a-8520-33b81f787f05&itemName=%E7%94%9F%E4%BA%A7%E5%BB%BA%E8%AE%BE%E9%A1%B9%E7%9B%AE%E6%B0%B4%E5%9C%9F%E4%BF%9D%E6%8C%81%E6%96%B9%E6%A1%88%E5%AE%A1%E6%89%B9%EF%BC%88%E6%8A%A5%E5%91%8A%E4%B9%A6%EF%BC%89&itemCode=11500000009276433Y300011901200002&nodeFormId=ShuiLiJuXin&flowName=%E6%B0%B4%E5%88%A9%E5%B7%A5%E7%A8%8B01&itemType=XK&leaderOrgCode=500000127&leaderOrgName=%E9%87%8D%E5%BA%86%E5%B8%82%E6%B0%B4%E5%88%A9%E5%B1%80&itemOrgCode=500000127&itemOrgName=%E9%87%8D%E5%BA%86%E5%B8%82%E6%B0%B4%E5%88%A9%E5%B1%80&oIndex=0" class="links-item"> <img src="./images/slj-index-xzxk-icon.png" alt="" />
+            <p>生产建设项目水土保持方案审批（报告书）</p>
+          </a> <a href="https://zwfw.cq.gov.cn/cqnew/icity/project/proinfo?id=5887c54e-29dd-4aed-a17a-7f6bb48747f5&flowId=fdf436a8-f798-11e8-b040-005056a83845&formId=ShuiLiJuXin&itemId=5887c54e-29dd-4aed-a17a-7f6bb48747f5&itemName=%E6%B0%B4%E5%88%A9%E5%9F%BA%E5%BB%BA%E9%A1%B9%E7%9B%AE%E5%88%9D%E6%AD%A5%E8%AE%BE%E8%AE%A1%E6%96%87%E4%BB%B6%E5%AE%A1%E6%89%B9&itemCode=11500000009276433Y3000119002000&nodeFormId=ShuiLiJuXin&flowName=%E6%B0%B4%E5%88%A9%E5%B7%A5%E7%A8%8B01&itemType=XK&leaderOrgCode=500000127&leaderOrgName=%E9%87%8D%E5%BA%86%E5%B8%82%E6%B0%B4%E5%88%A9%E5%B1%80&itemOrgCode=500000127&itemOrgName=%E9%87%8D%E5%BA%86%E5%B8%82%E6%B0%B4%E5%88%A9%E5%B1%80&oIndex=0" class="links-item"> <img src="./images/slj-index-xzcj-icon.png" alt="" />
+            <p>水利基建项目初步设计文件审批</p>
+          </a> <a href="https://zwfw.cq.gov.cn/cqnew/icity/project/proinfo?id=7e2681f9-b16e-4549-acb0-783d59b235b4&flowId=fdf436a8-f798-11e8-b040-005056a83845&formId=TongYongShenPiBingLianShenPiTo&itemId=7e2681f9-b16e-4549-acb0-783d59b235b4&itemName=%E7%94%9F%E4%BA%A7%E5%BB%BA%E8%AE%BE%E9%A1%B9%E7%9B%AE%E6%B0%B4%E5%9C%9F%E4%BF%9D%E6%8C%81%E8%AE%BE%E6%96%BD%E8%87%AA%E4%B8%BB%E9%AA%8C%E6%94%B6%E6%8A%A5%E5%A4%87&itemCode=11500000009276433Y3502019001000&nodeFormId=TongYongShenPiBingLianShenPiTo&flowName=%E6%B0%B4%E5%88%A9%E5%B7%A5%E7%A8%8B01&itemType=XK&leaderOrgCode=500000127&leaderOrgName=%E9%87%8D%E5%BA%86%E5%B8%82%E6%B0%B4%E5%88%A9%E5%B1%80&itemOrgCode=500000127&itemOrgName=%E9%87%8D%E5%BA%86%E5%B8%82%E6%B0%B4%E5%88%A9%E5%B1%80&oIndex=0" class="links-item"> <img src="./images/slj-index-qtql-icon.png" alt="" />
+            <p>生产建设项目水土保持设施自主验收报备</p>
+          </a> <a href="https://zwfw.cq.gov.cn/cqnew/icity/project/proinfo?id=f13efb10-d4ec-4fb9-b9af-3491dd5643ce&flowId=fdf436a8-f798-11e8-b040-005056a83845&formId=ShuiLiJuXin&itemId=f13efb10-d4ec-4fb9-b9af-3491dd5643ce&itemName=%E5%8F%96%E6%B0%B4%E8%AE%B8%E5%8F%AF%EF%BC%88%E5%B8%B8%E8%A7%84%E5%AE%A1%E6%89%B9%E5%88%B6%EF%BC%89&itemCode=11500000009276433Y300011900100001&nodeFormId=ShuiLiJuXin&flowName=%E6%B0%B4%E5%88%A9%E5%B7%A5%E7%A8%8B01&itemType=XK&leaderOrgCode=500000127&leaderOrgName=%E9%87%8D%E5%BA%86%E5%B8%82%E6%B0%B4%E5%88%A9%E5%B1%80&itemOrgCode=500000127&itemOrgName=%E9%87%8D%E5%BA%86%E5%B8%82%E6%B0%B4%E5%88%A9%E5%B1%80&oIndex=0" class="links-item"> <img src="./images/slj-index-ggfw-icon.png" alt="" />
+            <p>取水许可（常规审批制）</p>
+          </a> </div>
+        </div>
+      </div>
+    </div>
+    <a href="https://zwykb.cq.gov.cn/v2/fwqd/bmfwqd/index.html?orgcode=500000127" class="ykb w136">
+      <div class="pic"> <img src="./images/slj-zwfw-ykb.png" alt="" /> </div>
+    </a>
+    <div class="bysx w136">
+      <div class="main-title"> <a href="./bysx/">巴渝水讯</a> </div>
+      <div class="bysx-wrap clear">
+        <div class="bysx-l">
+          <div class="normal-title normal-title2">
+            <ul class="normal-banner swiper-container">
+              <div class="swiper-wrapper">
+                <a href="./bysx/sqyj/" class="swiper-slide active">水情预警</a>
+                <a href="./bysx/szygk/" class="swiper-slide">水资源概况</a>
+                <a href="./bysx/sqgg/" class="swiper-slide">水情信息</a>
+                <a href="./bysx/zstip/" class="swiper-slide">涨水提示</a> </div>
+              <div class="swiper-scrollbar"></div>
+            </ul>
+          </div>
+          <div class="bysx-list clear">
+            <div class="bysx-list-item active"><iframe src="//cqsw.slj.cq.gov.cn/hydrology/v2/#/warning/waters?type=1" style="width:100%;height:491px;"></iframe></div>
+            <div class="bysx-list-item ">
+              
+                <img class="img" src="./bysx/szygk/202602/W020260202587376651060_ORIGIN.png" />
+                <p>一、水资源概况重庆市水资源量多年均值为567.8亿立方米；受降水特征的影响，地区分布不均匀，呈现由东到西逐渐减少的趋势，渝西地区普遍偏低；年内分配多集中在5-9月，相对集中，对水资源的利用不利，而且易发生洪涝灾害；年际变化较大。重庆市多年平均入境水量为3837亿立方米，出境水量为4386亿立方米，我市对外来水源的依赖程度较低。二、河流水系重庆地区水系发达，河流纵横，境内流域面积大于100平方千米的河流有275条，其...<a class="more" href="./bysx/szygk/202602/t20260202_15373278.html">[查看详情]</a></p>
+              
+            </div>
+            <div class="bysx-list-item "> <iframe src="//cqsw.slj.cq.gov.cn/hydrology/v2/#/warning/notice" style="width:100%;height:491px;"></iframe></div>
+            <div class="bysx-list-item "> <iframe src="https://cqsw.slj.cq.gov.cn/hydrology/v2/#/warning/water-tip?type=1" style="width:100%;height:491px;"></iframe></div>
+          </div>
+        </div>
+        <div class="bysx-r">
+          <div class="bysx-r-t">
+            <div class="normal-title normal-title2">
+              <ul class="normal-banner swiper-container">
+                <div class="swiper-wrapper"> <a href="./bysx/mlhh/" class="swiper-slide active">幸福河湖</a> <a href="./bysx/slsp/" class="swiper-slide">水利视频</a> </div>
+                <div class="swiper-scrollbar"></div>
+              </ul>
+            </div>
+            <div class="bysx-pics">
+              <div class="bysx-pics-item active">
+                <div class="swiper-container bysx-banner">
+                  <div class="swiper-wrapper">
+                    
+                      <a href="./bysx/mlhh/202503/t20250317_14410875.html" class="swiper-slide">
+                        <div class="pic"> <img src="./bysx/mlhh/202503/W020250317518789292548_ORIGIN_570.jpg" alt="" /> </div>
+                        <p>长寿湖</p>
+                      </a>
+                    
+                      <a href="./bysx/mlhh/202503/t20250317_14410861.html" class="swiper-slide">
+                        <div class="pic"> <img src="./bysx/mlhh/202503/W020250317518352638713_ORIGIN_570.jpg" alt="" /> </div>
+                        <p>长寿桃花溪</p>
+                      </a>
+                    
+                      <a href="./bysx/mlhh/202503/t20250317_14410846.html" class="swiper-slide">
+                        <div class="pic"> <img src="./bysx/mlhh/202503/W020250317518012097932_ORIGIN_570.jpg" alt="" /> </div>
+                        <p>长滩河长江入江口</p>
+                      </a>
+                    
+                      <a href="./bysx/mlhh/202503/t20250317_14410826.html" class="swiper-slide">
+                        <div class="pic"> <img src="./bysx/mlhh/202503/W020250317517429566067_ORIGIN_570.jpg" alt="" /> </div>
+                        <p>御临河龙兴段</p>
+                      </a>
+                    
+                      <a href="./bysx/mlhh/202503/t20250317_14410788.html" class="swiper-slide">
+                        <div class="pic"> <img src="./bysx/mlhh/202503/W020250317516918332134_ORIGIN_570.jpg" alt="" /> </div>
+                        <p>生态酉水河</p>
+                      </a>
+                    
+                  </div>
+                  <!-- 如果需要分页器 -->
+                  <div class="swiper-pagination"></div>
+                </div>
+              </div>
+              <div class="bysx-pics-item">
+                
+                  <video src="" controls poster="./bysx/slsp/202603/W020260324393267095681_ORIGIN.png"></video>
+                
+
+              </div>
+            </div>
+          </div>
+          <div class="bysx-r-b clear">
+            <a href="./zwgk_250/fdzdgknr/tjgb/stbcgb/"> <img src="./images/slj-index-stls-icon.png" alt="" /> <span>水土保持</span> </a>
+            <a href="http://slj.cq.gov.cn/zwgk_250/fdzdgknr/tjgb/szygb/index.html"> <img src="./images/slj-index-gsys-icon.png" alt="" /> <span>供水用水</span> </a> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="center-b">
+    <div class="hdjl w136">
+      <div class="main-title"> <a href="./hdjl_250/">互动交流</a> </div>
+      <div class="hdjl-wrap clear">
+        <div class="hdjl-l">
+          <div class="normal-title normal-title2">
+            <ul class="normal-banner swiper-container">
+              <div class="swiper-wrapper"> <a href="./hdjl_250/gkxx/" class="swiper-slide active">公开信箱</a> <a href="./hdjl_250/yzzj/" class="swiper-slide">意见征集</a> </div>
+              <div class="swiper-scrollbar"></div>
+            </ul>
+          </div>
+          <div class="hdjl-list">
+            <div class="hdjl-list-item active">
+              <div id="gkxx" class="clear">
+                <div class="gkxx-list">  </div>
+                <div class="gkxx-links"> <a href="./hdjl_250/gkxx/wyxx/" class="gkxx-links-item"> <img src="./images/slj-index-wyxx-icon.png" alt="" />
+                  <p>我要写信</p>
+                </a> <a href="./hdjl_250/gkxx/xjcx/" class="gkxx-links-item"> <img src="./images/slj-index-xjcx-icon.png" alt="" />
+                  <p>信件查询</p>
+                </a> </div>
+              </div>
+            </div>
+            <div class="hdjl-list-item ">
+              <div id="yjzj"> </div>
+            </div>
+          </div>
+        </div>
+        <div class="hdjl-r">
+          <a href="https://spjc.mwr.gov.cn/spjc/hall/index.jsp" class="fwpt"> <img src="./images/slj-index-slpt-icon.png" alt="" /> <img src="./images/slj-index-slpt-text.png" alt="" /> </a>
+          <div class="jd-links">
+            <a> <img src="./images/slj-index-jwjd.png" alt="" /> </a>
+            <a> <img src="./images/slj-index-shce.png" alt="" /> </a>
+            <a> <img src="./images/slj-index-slgc.png" alt="" /> </a> </div>
+        </div>
+      </div>
+    </div>
+    <div class="ztzl w136">
+      <div class="main-title"> <a href="./ztzl_250/">专题专栏</a> </div>
+      <div class="ztzl-wrap">
+        <div class="swiper-container ztzl-banner">
+          <div class="swiper-wrapper">
+            
+              <a href="https://www.gov.cn/zhengce/zczhjd/" class="swiper-slide">
+                <div class="pic"> <img src="./ztzl_250/415773/images/P020230801387138637397.jpg" alt="" /> </div>
+                <p>重要政策举措及实施效果</p>
+              </a>
+            
+              <a href="./ztzl_250/slhjxzqzjgxxjy/" class="swiper-slide">
+                <div class="pic"> <img src="./ztzl_250/slhjxzqzjgxxjy/images/P020260327611930151664.png" alt="" /> </div>
+                <p>树立和践行正确政绩观学习教育</p>
+              </a>
+            
+              <a href="./ztzl_250/hzzjsst/" class="swiper-slide">
+                <div class="pic"> <img src="./ztzl_250/hzzjsst/images/P020191223543927139483.png" alt="" /> </div>
+                <p>河长制及水生态</p>
+              </a>
+            
+              <a href="./ztzl_250/jgdj_24015/" class="swiper-slide">
+                <div class="pic"> <img src="./ztzl_250/jgdj_24015/images/P020221130805263944885.png" alt="" /> </div>
+                <p>机关党建</p>
+              </a>
+            
+              <a href="./ztzl_250/sxhxjdkzy/" class="swiper-slide">
+                <div class="pic"> <img src="./ztzl_250/sxhxjdkzy/images/P020191223544049980861.png" alt="" /> </div>
+                <p>三峡后续及对口支援</p>
+              </a>
+            
+              <a href="./ztzl_250/shzhfyjslaq/" class="swiper-slide">
+                <div class="pic"> <img src="./ztzl_250/shzhfyjslaq/images/P020200113414301876279.png" alt="" /> </div>
+                <p>水旱灾害防御及水利安全</p>
+              </a>
+            
+              <a href="./ztzl_250/slfpjncslsd/" class="swiper-slide">
+                <div class="pic"> <img src="./ztzl_250/slfpjncslsd/images/P020200113404883062461.png" alt="" /> </div>
+                <p>水利扶贫及农村水利水电</p>
+              </a>
+            
+              <a href="./ztzl_250/zdxmjsljs/" class="swiper-slide">
+                <div class="pic"> <img src="./ztzl_250/zdxmjsljs/images/P020200113405016906376.png" alt="" /> </div>
+                <p>重大项目及水利建设</p>
+              </a>
+            
+              <a href="./ztzl_250/yshj/" class="swiper-slide">
+                <div class="pic"> <img src="./ztzl_250/yshj/images/P020200305652050542224.jpg" alt="" /> </div>
+                <p>营商环境</p>
+              </a>
+            
+              <a href="http://slj.cq.gov.cn/zwgk_250/fdzdgknr/qtfdxx/zfwzndgzbb/" class="swiper-slide">
+                <div class="pic"> <img src="./ztzl_250/107172/images/P020200427644548672584.png" alt="" /> </div>
+                <p>政府网站年度工作报表</p>
+              </a>
+            
+              <a href="./ztzl_250/cqsljssczt/" class="swiper-slide">
+                <div class="pic"> <img src="./ztzl_250/cqsljssczt/images/P020211216640485099114.png" alt="" /> </div>
+                <p>重庆水利建设市场主体信用</p>
+              </a>
+            
+          </div>
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="slj-footer">
+        <div class="fot-wrap">
+            <div class="fot w136">
+                <ul class="df-sb clearfix">
+                    <li class="down"> <a href="javascript:;"> 国务院部门网站 </a>
+                        <div class="sub">
+                            <div class="fot-13 animated fadeInDown">
+
+       
+        <a href="http://www.mfa.gov.cn/mfa_chn/" target="_blank" title="外交部">外交部</a>
+      
+        <a href="http://www.mod.gov.cn/" target="_blank" title="国防部">国防部</a>
+      
+        <a href="http://www.ndrc.gov.cn" target="_blank" title="国家发展和改革委员会">国家发展和改革委员会</a>
+      
+        <a href="http://www.moe.gov.cn/" target="_blank" title="教育部">教育部</a>
+      
+        <a href="http://www.most.gov.cn" target="_blank" title="科学技术部">科学技术部</a>
+      
+        <a href="http://www.miit.gov.cn/" target="_blank" title="工业和信息化部">工业和信息化部</a>
+      
+        <a href="https://www.neac.gov.cn/" target="_blank" title="国家民族事务委员会">国家民族事务委员会</a>
+      
+        <a href="http://www.mps.gov.cn/n16/index.html" target="_blank" title="公安部">公安部</a>
+      
+        <a href="http://www.mca.gov.cn/" target="_blank" title="民政部">民政部</a>
+      
+        <a href="http://www.moj.gov.cn/" target="_blank" title="司法部">司法部</a>
+      
+        <a href="http://www.mof.gov.cn/" target="_blank" title="财政部">财政部</a>
+      
+        <a href="http://www.mohrss.gov.cn/" target="_blank" title="人力资源和社会保障部">人力资源和社会保障部</a>
+      
+        <a href="http://www.mnr.gov.cn/" target="_blank" title="自然资源部">自然资源部</a>
+      
+        <a href="http://www.mee.gov.cn/" target="_blank" title="生态环境部">生态环境部</a>
+      
+        <a href="http://www.mohurd.gov.cn/" target="_blank" title="住房和城乡建设部">住房和城乡建设部</a>
+      
+        <a href="http://www.mot.gov.cn/" target="_blank" title="交通运输部">交通运输部</a>
+      
+        <a href="http://www.mwr.gov.cn/" target="_blank" title="水利部">水利部</a>
+      
+        <a href="http://www.moa.gov.cn/" target="_blank" title="农业农村部">农业农村部</a>
+      
+        <a href="http://www.mofcom.gov.cn/" target="_blank" title="商务部">商务部</a>
+      
+        <a href="http://www.mct.gov.cn" target="_blank" title="文化和旅游部">文化和旅游部</a>
+      
+        <a href="http://www.nhc.gov.cn/" target="_blank" title="国家卫生健康委员会">国家卫生健康委员会</a>
+      
+        <a href="http://www.mva.gov.cn" target="_blank" title="退役军人事务部">退役军人事务部</a>
+      
+        <a href="https://www.mem.gov.cn" target="_blank" title="应急管理部">应急管理部</a>
+      
+        <a href="http://www.pbc.gov.cn/" target="_blank" title="人民银行">人民银行</a>
+      
+        <a href="http://www.audit.gov.cn/" target="_blank" title="审计署">审计署</a>
+      
+        <a href="http://www.moe.gov.cn/jyb_sy/China_Language/" target="_blank" title="国家语言文字工作委员会">国家语言文字工作委员会</a>
+      
+        <a href="http://www.caea.gov.cn" target="_blank" title="国家原子能机构">国家原子能机构</a>
+      
+        <a href="http://nnsa.mee.gov.cn/" target="_blank" title="国家核安全局">国家核安全局</a>
+      
+        <a href="http://www.sasac.gov.cn" target="_blank" title="国务院国有资产监督管理委员会">国务院国有资产监督管理委员会</a>
+      
+        <a href="http://www.customs.gov.cn/" target="_blank" title="海关总署">海关总署</a>
+      
+        <a href="http://www.chinatax.gov.cn" target="_blank" title="国家税务总局">国家税务总局</a>
+      
+        <a href="http://www.samr.gov.cn/" target="_blank" title="国家市场监督管理总局">国家市场监督管理总局</a>
+      
+        <a href="http://www.nrta.gov.cn/" target="_blank" title="国家广播电视总局">国家广播电视总局</a>
+      
+        <a href="http://www.sport.gov.cn" target="_blank" title="国家体育总局">国家体育总局</a>
+      
+        <a href="http://www.stats.gov.cn" target="_blank" title="国家统计局">国家统计局</a>
+      
+
+                            </div>
+                        </div>
+                    </li>
+                    <li class="down"> <a href="javascript:;"> 全国水利网站 </a>
+                        <div class="sub">
+                            <div class="fot-13 animated fadeInDown">
+       
+        <a href="http://swj.beijing.gov.cn/" target="_blank" title="北京">北京</a>
+      
+        <a href="http://swj.tj.gov.cn/" target="_blank" title="天津">天津</a>
+      
+        <a href="http://swj.sz.gov.cn/" target="_blank" title="深圳">深圳</a>
+      
+        <a href="http://swglj.qingdao.gov.cn" target="_blank" title="青岛">青岛</a>
+      
+        <a href="http://www.swj.dl.gov.cn/" target="_blank" title="大连">大连</a>
+      
+        <a href="http://slt.xinjiang.gov.cn" target="_blank" title="新疆">新疆</a>
+      
+        <a href="http://slt.qinghai.gov.cn" target="_blank" title="青海">青海</a>
+      
+        <a href="http://slt.nx.gov.cn/" target="_blank" title="宁夏">宁夏</a>
+      
+        <a href="http://slt.gansu.gov.cn/" target="_blank" title="甘肃">甘肃</a>
+      
+        <a href="http://slt.shaanxi.gov.cn/" target="_blank" title="陕西">陕西</a>
+      
+        <a href="http://wcb.yn.gov.cn/" target="_blank" title="云南">云南</a>
+      
+        <a href="http://mwr.guizhou.gov.cn/" target="_blank" title="贵州">贵州</a>
+      
+        <a href="http://slt.sc.gov.cn/" target="_blank" title="四川">四川</a>
+      
+        <a href="http://swt.hainan.gov.cn/" target="_blank" title="海南">海南</a>
+      
+        <a href="http://slt.gxzf.gov.cn" target="_blank" title="广西">广西</a>
+      
+        <a href="http://slt.gd.gov.cn/" target="_blank" title="广东">广东</a>
+      
+        <a href="http://slt.hunan.gov.cn/" target="_blank" title="湖南">湖南</a>
+      
+        <a href="http://slt.hubei.gov.cn/" target="_blank" title="湖北">湖北</a>
+      
+        <a href="http://slt.henan.gov.cn" target="_blank" title="河南">河南</a>
+      
+        <a href="http://wr.shandong.gov.cn" target="_blank" title="山东">山东</a>
+      
+        <a href="http://slt.jiangxi.gov.cn/" target="_blank" title="江西">江西</a>
+      
+        <a href="http://slt.fujian.gov.cn/" target="_blank" title="福建">福建</a>
+      
+        <a href="http://slt.ah.gov.cn/" target="_blank" title="安徽">安徽</a>
+      
+        <a href="http://slt.zj.gov.cn" target="_blank" title="浙江">浙江</a>
+      
+        <a href="http://jswater.jiangsu.gov.cn/" target="_blank" title="江苏">江苏</a>
+      
+        <a href="http://swj.sh.gov.cn" target="_blank" title="上海">上海</a>
+      
+        <a href="http://slt.hlj.gov.cn/" target="_blank" title="黑龙江">黑龙江</a>
+      
+        <a href="http://slt.jl.gov.cn/" target="_blank" title="吉林">吉林</a>
+      
+        <a href="http://slt.ln.gov.cn/" target="_blank" title="辽宁">辽宁</a>
+      
+        <a href="http://slt.nmg.gov.cn/" target="_blank" title="内蒙古">内蒙古</a>
+      
+        <a href="http://slt.shanxi.gov.cn" target="_blank" title="山西">山西</a>
+      
+        <a href="http://slt.hebei.gov.cn/" target="_blank" title="河北">河北</a>
+      
+        <a href="http://btslj.xjbt.gov.cn/" target="_blank" title="新疆生产建设兵团">新疆生产建设兵团</a>
+      
+
+                            </div>
+                        </div>
+                    </li>
+                    <li class="down"> <a href="javascript:;"> 地方政府网站 </a>
+                        <div class="sub">
+                            <div class="fot-13 animated fadeInDown">
+
+       
+        <a href="http://www.beijing.gov.cn/" target="_blank" title="北京">北京</a>
+      
+        <a href="http://www.tj.gov.cn/" target="_blank" title="天津">天津</a>
+      
+        <a href="http://www.hebei.gov.cn/" target="_blank" title="河北">河北</a>
+      
+        <a href="http://www.shanxi.gov.cn/" target="_blank" title="山西">山西</a>
+      
+        <a href="http://www.ln.gov.cn/" target="_blank" title="辽宁">辽宁</a>
+      
+        <a href="http://www.nmg.gov.cn/" target="_blank" title="内蒙古">内蒙古</a>
+      
+        <a href="http://www.jl.gov.cn/" target="_blank" title="吉林">吉林</a>
+      
+        <a href="http://www.hlj.gov.cn/" target="_blank" title="黑龙江">黑龙江</a>
+      
+        <a href="http://www.shanghai.gov.cn/" target="_blank" title="上海">上海</a>
+      
+        <a href="http://www.jiangsu.gov.cn/" target="_blank" title="江苏">江苏</a>
+      
+        <a href="http://www.zj.gov.cn/" target="_blank" title="浙江">浙江</a>
+      
+        <a href="http://www.ah.gov.cn/" target="_blank" title="安徽">安徽</a>
+      
+        <a href="http://www.fujian.gov.cn/" target="_blank" title="福建">福建</a>
+      
+        <a href="http://www.jiangxi.gov.cn/" target="_blank" title="江西">江西</a>
+      
+        <a href="http://www.shandong.gov.cn/" target="_blank" title="山东">山东</a>
+      
+        <a href="http://www.henan.gov.cn/" target="_blank" title="河南">河南</a>
+      
+        <a href="http://www.hubei.gov.cn/" target="_blank" title="湖北">湖北</a>
+      
+        <a href="http://www.hunan.gov.cn/" target="_blank" title="湖南">湖南</a>
+      
+        <a href="http://www.gd.gov.cn/" target="_blank" title="广东">广东</a>
+      
+        <a href="http://www.gxzf.gov.cn/" target="_blank" title="广西">广西</a>
+      
+        <a href="http://www.hainan.gov.cn/code/html/" target="_blank" title="海南">海南</a>
+      
+        <a href="http://www.cq.gov.cn" target="_blank" title="重庆">重庆</a>
+      
+        <a href="http://www.sc.gov.cn/" target="_blank" title="四川">四川</a>
+      
+        <a href="http://www.guizhou.gov.cn/" target="_blank" title="贵州">贵州</a>
+      
+        <a href="http://www.yn.gov.cn/" target="_blank" title="云南">云南</a>
+      
+        <a href="http://www.xizang.gov.cn/" target="_blank" title="西藏">西藏</a>
+      
+        <a href="http://www.shaanxi.gov.cn/" target="_blank" title="陕西">陕西</a>
+      
+        <a href="http://www.gansu.gov.cn/" target="_blank" title="甘肃">甘肃</a>
+      
+        <a href="http://www.qinghai.gov.cn/" target="_blank" title="青海">青海</a>
+      
+        <a href="http://www.nx.gov.cn/" target="_blank" title="宁夏">宁夏</a>
+      
+        <a href="http://www.xinjiang.gov.cn/" target="_blank" title="新疆">新疆</a>
+      
+        <a href="http://www.gov.hk/sc/residents/" target="_blank" title="香港">香港</a>
+      
+        <a href="http://portal.gov.mo/web/guest/welcomepage;jsessionid=D7630ED4AF99A5CEF281CF8C77C92729" target="_blank" title="澳门">澳门</a>
+      
+        <a href="http://www.gwytb.gov.cn/" target="_blank" title="台湾">台湾</a>
+      
+        <a href="http://www.xjbt.gov.cn/" target="_blank" title="新疆生产建设兵团">新疆生产建设兵团</a>
+      
+
+                            </div>
+                        </div>
+                    </li>
+                    <li class="down"> <a href="javascript:;"> 市政府部门网站 </a>
+                        <div class="sub">
+                            <div class="fot-13 animated fadeInDown">
+
+       
+        <a href="http://fzggw.cq.gov.cn/" target="_blank" title="市发展改革委">市发展改革委</a>
+      
+        <a href="http://jw.cq.gov.cn/" target="_blank" title="市教委">市教委</a>
+      
+        <a href="http://kjj.cq.gov.cn/" target="_blank" title="市科技局">市科技局</a>
+      
+        <a href="http://jjxxw.cq.gov.cn/" target="_blank" title="市经济信息委">市经济信息委</a>
+      
+        <a href="http://mzzjw.cq.gov.cn" target="_blank" title="市民族宗教委">市民族宗教委</a>
+      
+        <a href="http://gaj.cq.gov.cn/" target="_blank" title="市公安局">市公安局</a>
+      
+        <a href="http://mzj.cq.gov.cn" target="_blank" title="市民政局">市民政局</a>
+      
+        <a href="http://sfj.cq.gov.cn" target="_blank" title="市司法局">市司法局</a>
+      
+        <a href="http://czj.cq.gov.cn/" target="_blank" title="市财政局">市财政局</a>
+      
+        <a href="http://rlsbj.cq.gov.cn/" target="_blank" title="市人力社保局">市人力社保局</a>
+      
+        <a href="http://ghzrzyj.cq.gov.cn" target="_blank" title="市规划自然资源局">市规划自然资源局</a>
+      
+        <a href="http://sthjj.cq.gov.cn" target="_blank" title="市生态环境局">市生态环境局</a>
+      
+        <a href="http://zfcxjw.cq.gov.cn/" target="_blank" title="市住房城乡建委">市住房城乡建委</a>
+      
+        <a href="http://cgj.cq.gov.cn/" target="_blank" title="市城市管理局">市城市管理局</a>
+      
+        <a href="http://jtj.cq.gov.cn/" target="_blank" title="市交通运输委">市交通运输委</a>
+      
+        <a href="http://slj.cq.gov.cn/" target="_blank" title="市水利局">市水利局</a>
+      
+        <a href="http://nyncw.cq.gov.cn/" target="_blank" title="市农业农村委">市农业农村委</a>
+      
+        <a href="http://sww.cq.gov.cn" target="_blank" title="市商务委">市商务委</a>
+      
+        <a href="http://whlyw.cq.gov.cn/" target="_blank" title="市文化旅游委">市文化旅游委</a>
+      
+        <a href="http://wsjkw.cq.gov.cn/" target="_blank" title="市卫生健康委">市卫生健康委</a>
+      
+        <a href="http://yjj.cq.gov.cn" target="_blank" title="市应急局">市应急局</a>
+      
+        <a href="http://sjj.cq.gov.cn/" target="_blank" title="市审计局">市审计局</a>
+      
+        <a href="http://zfwb.cq.gov.cn/" target="_blank" title="市政府外办">市政府外办</a>
+      
+        <a href="http://gzw.cq.gov.cn/" target="_blank" title="市国资委">市国资委</a>
+      
+        <a href="http://scjgj.cq.gov.cn/" target="_blank" title="市市场监管局">市市场监管局</a>
+      
+        <a href="http://tyj.cq.gov.cn" target="_blank" title="市体育局">市体育局</a>
+      
+        <a href="http://tjj.cq.gov.cn/" target="_blank" title="市统计局">市统计局</a>
+      
+        <a href="http://jgswj.cq.gov.cn" target="_blank" title="市机关事务局">市机关事务局</a>
+      
+        <a href="http://jrjgj.cq.gov.cn/" target="_blank" title="市金融监管局">市金融监管局</a>
+      
+        <a href="http://xfb.cq.gov.cn/" target="_blank" title="市信访办">市信访办</a>
+      
+        <a href="http://rmfkb.cq.gov.cn/" target="_blank" title="市人民防空办">市人民防空办</a>
+      
+        <a href="http://ggzyjyjgj.cq.gov.cn/" target="_blank" title="市公共资源交易监管局">市公共资源交易监管局</a>
+      
+        <a href="http://lyj.cq.gov.cn/" target="_blank" title="市林业局">市林业局</a>
+      
+        <a href="http://yaojianju.cq.gov.cn" target="_blank" title="市药监局">市药监局</a>
+      
+        <a href="http://zscqj.cq.gov.cn" target="_blank" title="市知识产权局">市知识产权局</a>
+      
+        <a href="http://ljxq.cq.gov.cn/" target="_blank" title="两江新区管委会">两江新区管委会</a>
+      
+        <a href="http://ws.cq.gov.cn" target="_blank" title="万盛经开区管委会">万盛经开区管委会</a>
+      
+        <a href="http://gxq.cq.gov.cn" target="_blank" title="高新区管委会">高新区管委会</a>
+      
+        <a href="http://jkq.cq.gov.cn" target="_blank" title="重庆经开区管委会">重庆经开区管委会</a>
+      
+        <a href="http://gxhzs.cq.gov.cn/" target="_blank" title="市供销合作社">市供销合作社</a>
+      
+
+                            </div>
+                        </div>
+                    </li>
+                    <li class="down"> <a href="javascript:;"> 区县政府网站 </a>
+                        <div class="sub">
+                            <div class="fot-13 animated fadeInDown">
+
+       
+        <a href="http://www.wz.gov.cn/" target="_blank" title="万州区">万州区</a>
+      
+        <a href="http://www.qianjiang.gov.cn" target="_blank" title="黔江区">黔江区</a>
+      
+        <a href="http://www.fl.gov.cn/" target="_blank" title="涪陵区">涪陵区</a>
+      
+        <a href="http://www.cqyz.gov.cn/" target="_blank" title="渝中区">渝中区</a>
+      
+        <a href="http://www.ddk.gov.cn/" target="_blank" title="大渡口区">大渡口区</a>
+      
+        <a href="http://www.cqjb.gov.cn" target="_blank" title="江北区">江北区</a>
+      
+        <a href="http://cqspb.gov.cn/" target="_blank" title="沙坪坝区">沙坪坝区</a>
+      
+        <a href="http://www.cqjlp.gov.cn" target="_blank" title="九龙坡区">九龙坡区</a>
+      
+        <a href="http://www.cqna.gov.cn/" target="_blank" title="南岸区">南岸区</a>
+      
+        <a href="http://www.beibei.gov.cn/" target="_blank" title="北碚区">北碚区</a>
+      
+        <a href="http://www.ybq.gov.cn" target="_blank" title="渝北区">渝北区</a>
+      
+        <a href="http://www.cqbn.gov.cn/" target="_blank" title="巴南区">巴南区</a>
+      
+        <a href="http://www.jiangjin.gov.cn/" target="_blank" title="江津区">江津区</a>
+      
+        <a href="http://www.cqcs.gov.cn/" target="_blank" title="长寿区">长寿区</a>
+      
+        <a href="http://www.hc.gov.cn/" target="_blank" title="合川区">合川区</a>
+      
+        <a href="http://www.cqyc.gov.cn" target="_blank" title="永川区">永川区</a>
+      
+        <a href="http://www.cqnc.gov.cn" target="_blank" title="南川区">南川区</a>
+      
+        <a href="http://www.cqqj.gov.cn/" target="_blank" title="綦江区">綦江区</a>
+      
+        <a href="http://www.dazu.gov.cn/" target="_blank" title="大足区">大足区</a>
+      
+        <a href="https://www.cqstl.gov.cn" target="_blank" title="铜梁区">铜梁区</a>
+      
+        <a href="http://www.bishan.gov.cn" target="_blank" title="璧山区">璧山区</a>
+      
+        <a href="http://www.cqtn.gov.cn/" target="_blank" title="潼南区">潼南区</a>
+      
+        <a href="http://www.rongchang.gov.cn/" target="_blank" title="荣昌区">荣昌区</a>
+      
+        <a href="http://www.cqkz.gov.cn" target="_blank" title="开州区">开州区</a>
+      
+        <a href="http://www.cqlp.gov.cn/" target="_blank" title="梁平区">梁平区</a>
+      
+        <a href="http://www.cqwl.gov.cn/" target="_blank" title="武隆区">武隆区</a>
+      
+        <a href="http://www.cqck.gov.cn/" target="_blank" title="城口县">城口县</a>
+      
+        <a href="http://www.cqfd.gov.cn/" target="_blank" title="丰都县">丰都县</a>
+      
+        <a href="http://www.zhongxian.gov.cn" target="_blank" title="忠县">忠县</a>
+      
+        <a href="http://www.cqsdj.gov.cn" target="_blank" title="垫江县">垫江县</a>
+      
+        <a href="http://www.yunyang.gov.cn" target="_blank" title="云阳县">云阳县</a>
+      
+        <a href="http://www.cqfj.gov.cn/" target="_blank" title="奉节县">奉节县</a>
+      
+        <a href="http://www.cqws.gov.cn/" target="_blank" title="巫山县">巫山县</a>
+      
+        <a href="http://www.cqwx.gov.cn/" target="_blank" title="巫溪县">巫溪县</a>
+      
+        <a href="http://www.cqszx.gov.cn" target="_blank" title="石柱县">石柱县</a>
+      
+        <a href="http://www.cqxs.gov.cn/" target="_blank" title="秀山县">秀山县</a>
+      
+        <a href="http://www.youyang.gov.cn" target="_blank" title="酉阳县">酉阳县</a>
+      
+        <a href="http://www.psx.gov.cn/" target="_blank" title="彭水县">彭水县</a>
+      
+
+                            </div>
+                        </div>
+                    </li>
+                    <li class="down"> <a href="javascript:;"> 新闻媒体网站 </a>
+                        <div class="sub">
+                            <div class="fot-13 animated fadeInDown">
+
+       
+        <a href="http://www.cbg.cn/" target="_blank" title="视界网">视界网</a>
+      
+        <a href="http://www.cqnews.net" target="_blank" title="华龙网">华龙网</a>
+      
+        <a href="http://www.cqqnb.net" target="_blank" title="重庆青年报">重庆青年报</a>
+      
+        <a href="http://www.chinacqsb.com/" target="_blank" title="重庆商报">重庆商报</a>
+      
+        <a href="http://www.cqcb.com" target="_blank" title="重庆晨报">重庆晨报</a>
+      
+        <a href="https://www.cqrb.cn" target="_blank" title="重庆日报">重庆日报</a>
+      
+        <a href="http://www.cyol.net/" target="_blank" title="中青报">中青报</a>
+      
+        <a href="http://www.cq.xinhuanet.com" target="_blank" title="新华社重庆分社">新华社重庆分社</a>
+      
+        <a href="http://cq.people.com.cn" target="_blank" title="人民日报重庆分社">人民日报重庆分社</a>
+      
+
+                            </div>
+                        </div>
+                    </li>
+                    <li class="down"> <a href="javascript:;"> 其他网站 </a>
+                        <div class="sub">
+                            <div class="fot-13 animated fadeInDown">
+
+       
+        <a href="http://jjc.cq.gov.cn/" target="_blank" title="市纪委监委机关">市纪委监委机关</a>
+      
+        <a href="https://www.12371.gov.cn/" target="_blank" title="市委组织部">市委组织部</a>
+      
+        <a href="http://cq.wenming.cn/" target="_blank" title="市委宣传部">市委宣传部</a>
+      
+        <a href="http://www.cqtzb.gov.cn/" target="_blank" title="市委统战部">市委统战部</a>
+      
+        <a href="https://www.pacq.gov.cn/" target="_blank" title="市委政法委">市委政法委</a>
+      
+        <a href="http://www.cqjgdj.gov.cn/" target="_blank" title="市委直属机关工委">市委直属机关工委</a>
+      
+        <a href="http://jbm.cq.gov.cn" target="_blank" title="市国家保密局">市国家保密局</a>
+      
+        <a href="https://www.cqrd.gov.cn/" target="_blank" title="市人大常委会">市人大常委会</a>
+      
+        <a href="http://www.cqzx.gov.cn" target="_blank" title="市政协">市政协</a>
+      
+        <a href="http://cqfy.chinacourt.org" target="_blank" title="市高法院">市高法院</a>
+      
+        <a href="http://www.cq.jcy.gov.cn/" target="_blank" title="市检察院">市检察院</a>
+      
+        <a href="http://www.minge.gov.cn" target="_blank" title="民革市委会">民革市委会</a>
+      
+        <a href="http://www.cqmm.org.cn" target="_blank" title="民盟市委会">民盟市委会</a>
+      
+        <a href="https://www.cqmj.org.cn" target="_blank" title="民建市委会">民建市委会</a>
+      
+        <a href="http://www.cqmjsw.gov.cn" target="_blank" title="民进市委会">民进市委会</a>
+      
+        <a href="http://www.cqngd.gov.cn/" target="_blank" title="农工党市委会">农工党市委会</a>
+      
+        <a href="http://www.cqzgd.gov.cn" target="_blank" title="致公党市委会">致公党市委会</a>
+      
+        <a href="http://www.cq93.gov.cn" target="_blank" title="九三学社市委会">九三学社市委会</a>
+      
+        <a href="http://www.tmcq.gov.cn" target="_blank" title="台盟市委会">台盟市委会</a>
+      
+        <a href="https://www.cqgcc.gov.cn" target="_blank" title="市工商联">市工商联</a>
+      
+        <a href="http://www.cqgh.org" target="_blank" title="市总工会">市总工会</a>
+      
+        <a href="http://www.cqyl.org.cn" target="_blank" title="团市委">团市委</a>
+      
+        <a href="http://www.cqwomen.org.cn" target="_blank" title="市妇联">市妇联</a>
+      
+        <a href="http://www.cqast.cn" target="_blank" title="市科协">市科协</a>
+      
+        <a href="http://www.cqskl.com" target="_blank" title="市社科联">市社科联</a>
+      
+        <a href="http://www.cqwl.org" target="_blank" title="市文联">市文联</a>
+      
+        <a href="http://www.cqwriter.com" target="_blank" title="市作协">市作协</a>
+      
+        <a href="http://www.cqdpf.org.cn/" target="_blank" title="市残联">市残联</a>
+      
+        <a href="http://www.ccpitcq.org/" target="_blank" title="市贸促会">市贸促会</a>
+      
+        <a href="http://www.cqredcross.org.cn/index.html" target="_blank" title="市红十字会">市红十字会</a>
+      
+        <a href="http://www.cqdx.gov.cn" target="_blank" title="市委党校">市委党校</a>
+      
+        <a href="http://www.redsa.com.cn" target="_blank" title="市委党史研究室">市委党史研究室</a>
+      
+        <a href="http://www.cqass.net.cn/index/" target="_blank" title="重庆社科院">重庆社科院</a>
+      
+        <a href="http://www.3gmuseum.cn" target="_blank" title="三峡博物馆">三峡博物馆</a>
+      
+        <a href="http://www.hongyan.info" target="_blank" title="红岩博物馆">红岩博物馆</a>
+      
+        <a href="http://www.cqsy.net.cn" target="_blank" title="重庆社会主义学院">重庆社会主义学院</a>
+      
+        <a href="http://www.cqaas.cn" target="_blank" title="市农科院">市农科院</a>
+      
+        <a href="http://www.cqac.org.cn" target="_blank" title="重庆仲裁办">重庆仲裁办</a>
+      
+        <a href="http://chongqing.chinatax.gov.cn/cqtax/" target="_blank" title="重庆市税务局">重庆市税务局</a>
+      
+        <a href="http://chongqing.pbc.gov.cn" target="_blank" title="人行重庆营管部">人行重庆营管部</a>
+      
+        <a href="http://www.csrc.gov.cn/pub/chongqing/" target="_blank" title="重庆证监局">重庆证监局</a>
+      
+        <a href="http://chongqing.customs.gov.cn" target="_blank" title="重庆海关">重庆海关</a>
+      
+        <a href="http://cqca.miit.gov.cn/" target="_blank" title="市通信管理局">市通信管理局</a>
+      
+        <a href="http://cq.spb.gov.cn" target="_blank" title="市邮政管理局">市邮政管理局</a>
+      
+        <a href="http://www.cqdzj.gov.cn" target="_blank" title="市地震局">市地震局</a>
+      
+        <a href="http://www.966599.com" target="_blank" title="市烟草专卖局">市烟草专卖局</a>
+      
+        <a href="http://www.cqjy.com" target="_blank" title="市教科研究院">市教科研究院</a>
+      
+        <a href="http://www.cqksy.cn" target="_blank" title="市教育考试院">市教育考试院</a>
+      
+        <a href="http://zfcxjw.cq.gov.cn/gzf" target="_blank" title="市公租房管理局">市公租房管理局</a>
+      
+        <a href="http://www.ccle.cn" target="_blank" title="重庆农村土地交易所">重庆农村土地交易所</a>
+      
+        <a href="http://www.cqgjj.cn" target="_blank" title="市住房公积金中心">市住房公积金中心</a>
+      
+
+                            </div>
+                        </div>
+                    </li>
+                   
+                </ul>
+            </div>
+        </div>
+
+        <div class="slj-footer-wrap w136">
+            <div class="slj-footer-content clearfix">
+                <div class="slj-footer-content-l">
+                    <div class="link clear">
+                        <p><a href="//slj.cq.gov.cn/ggbf_search/wzdt/">网站地图</a></p>
+                        <p><a href="//slj.cq.gov.cn/ggbf_search/bqsm/">版权声明</a></p>
+                        <p><a href="//slj.cq.gov.cn/ggbf_search/lxwm/">联系我们</a></p>
+                    </div>
+                    <div class="link">
+                        <a>版权所有：重庆市水利局 </a>
+                        <a>主办：重庆市水利局</a>
+                        <a>联系方式 023-89079000</a>
+                    </div>
+                    <div class="link">
+                        <a >网站标识码：5000000056 </a>
+                        <a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank"> ICP备案：渝ICP备05005604号-5  </a>
+                        <a class="beian" rel="noreferrer" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=50011202504388" target="_blank">渝公网安备 50011202504388号</a>
+                    </div>
+                    <!--<div class="link">
+                        <a>地址 : 重庆市渝北区新南路3号水利大厦</a>
+                        <a>电话 : 023-89079000</a>
+                    </div>-->
+
+                </div>
+                <div class="slj-footer-content-r clearfix">
+                    <div class="fl">
+                        <a href="http://wza.isc.org.cn/rzpt/bsgl/dt/20241129/3691.html" target="_blank"> <img src="/images/slj-slh.png" alt="" /></a>
+                         
+     <script id="_jiucuo_" sitecode="5000000056" src="https://zfwzgl.www.gov.cn/exposure/jiucuo.js"></script>
+
+      <script>document.write(unescape("%3Cspan id='_ideConac' %3E%3C/span%3E"));var span_msg=document.getElementById("_ideConac");span_msg.innerHTML='<a href="http://bszs.conac.cn/sitename?method=show&id=05FAC178637C2666E053022819ACC37C" target="_blank"><img id="imgConac" vspace="0" hspace="0" border="0" src="/images/index2.png" data-bd-imgshare-binded="1" /></a>';</script> 
+  
+      <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=50011202500121"  target="_blank">
+        <img src="/images/index1.png" alt="" />
+      </a>
+   
+                    </div>
+                    <div class="fr clearfix">
+                        <p><img src="/images/slj-qrcode2.png" alt="" /> <span>重庆水文公众号</span></p>
+                        <p><img src="/images/slj-qrcode1.png" alt="" /><span>重庆河长制公众号</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script type="text/javascript">
+    // 定义后缀名与 MIME 类型的映射表
+    var mimeTypeMap = {
+        'txt': 'text/plain',
+        'html': 'text/html',
+        'css': 'text/css',
+        'js': 'application/javascript',
+        'json': 'application/json',
+        'png': 'image/png',
+        'jpg': 'image/jpeg',
+        'jpeg': 'image/jpeg',
+        'gif': 'image/gif',
+        'svg': 'image/svg+xml',
+        'pdf': 'application/pdf',
+        'doc': 'application/msword',
+        'docx': 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+        'xls': 'application/vnd.ms-excel',
+        'xlsx': 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+        'zip': 'application/zip',
+        'mp3': 'audio/mpeg',
+        'mp4': 'video/mp4'
+    };
+
+    // 根据文件名获取 MIME 类型的函数
+    function getMimeType(fileName) {
+        // 提取文件后缀（如 "test.txt" → "txt"）
+        var ext = fileName.split('.').pop().toLowerCase();
+        // 从映射表获取，默认使用二进制流类型（通用但不精确）
+        return mimeTypeMap[ext] || 'application/octet-stream';
+    }
+
+    function downloadFj(fileName, filePath) {
+        var mimeType = getMimeType(fileName);
+
+        // 兼容 IE/360 兼容模式
+        if (window.navigator.msSaveOrOpenBlob) {
+            try {
+                // 请求前端项目内的静态文件
+                var xhr = new XMLHttpRequest();
+                xhr.open('GET', filePath, true);
+                xhr.responseType = 'blob';
+                
+                xhr.onload = function() {
+                    if (xhr.status === 200) {
+                        var blob = xhr.response;
+                        if (window.navigator.msSaveOrOpenBlob) {
+                            window.navigator.msSaveBlob(blob, fileName);
+                        } else {
+                            var a = document.createElement('a');
+                            a.href = URL.createObjectURL(blob);
+                            a.download = fileName;
+                            a.click();
+                            URL.revokeObjectURL(a.href);
+                        }
+                    } else {
+                        console.error('文件不存在');
+                    }
+                };
+                
+                xhr.onerror = function() {
+                    console.error('下载失败');
+                };
+                
+                xhr.send();
+            } catch (err) {
+                console.error('下载失败：', err);
+            }
+        } else {
+            // 现代浏览器：使用 download 属性
+            var a = document.createElement('a');
+            a.href = filePath;
+            a.download = fileName;
+            a.click();
+            // 释放 URL 对象（避免内存泄漏）
+            URL.revokeObjectURL(a.href);
+        }
+    }
+</script>
+<script id="_trs_ta_js" src="//ta.trs.cn/c/js/ta.js?mpid=3950" async="async" defer="defer"></script>
+<script defer async type="text/javascript" src="//gov.govwza.cn/dist/aria.js?appid=538cab7947ffd15c3720fd4090025f7c" charset="utf-8"></script>
+<style>
+.beian{
+    background: url(/images/baicon.png) no-repeat left center;
+    padding-left: 20px;
+    background-size: 15px 15px;
+}
+</style>
+</body>
+<script src="./images/swiper.min.js"></script>
+<script src="/images/2024-index.js"> </script>
+<script>
+  new Swiper('.index-banner', {
+    slidesPerView: 3,
+    spaceBetween: 22,
+    loop: true,
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+      0: { //当屏幕宽度大于等于320
+        slidesPerView: 1,
+        spaceBetween: 10
+      },
+      500: { //当屏幕宽度大于等于768
+        slidesPerView: 2,
+        spaceBetween: 20
+      },
+      1000: { //当屏幕宽度大于等于1280
+        slidesPerView:1 ,
+        spaceBetween: 22,
+      }
+    },
+    navigation: {
+      nextEl: '.i-bar1pc .next',
+      prevEl: '.i-bar1pc .prev',
+    },
+  })
+  if ($(window).width() < 769) {
+    $('body').removeClass('bodyhid');
+  }
+  if ($(window).scrollTop() != 0) {
+    $('body').removeClass('bodyhid');
+  }
+  if ($(window).scrollTop() > 0) {
+    $('body').removeClass('bodyhid');
+  }
+  window.addEventListener("wheel", WheelGo);
+  var invoke = false;
+
+  function stopDefault(e) {
+    if (e.preventDefault) {
+      // e.preventDefault()
+    }
+    return false;
+  }
+
+  function WheelGo(e) {
+    //判断当前所处位置
+
+    var isDown = e.deltaY > 0 ? true : false;
+    // if ($(window).width() < 768) {
+    //     invoke = true
+    // } else {
+    //     invoke = false
+    // }
+    stopDefault(e);
+    if (invoke) {
+      return;
+    }
+    // console.log(isDown)
+    movego(isDown);
+  }
+
+  function movego(isDown) {
+    b = $('.nav').offset().top;
+    a = $(window).scrollTop() - b;
+    c = 0;
+    // if ($(window).width() < 992) {
+    //     b = $(window).height() - 60;
+    //     c = -60;
+    // }
+
+    if (isDown) {
+      // 往下
+      if (a < c) {
+        invoke = true;
+        $('body,html').animate({
+          scrollTop: b
+        }, 800);
+        setTimeout(function() {
+          $('body').removeClass('bodyhid');
+          invoke = false;
+        }, 810);
+      }
+    } else {
+      // 往上
+      if (a <= c) {
+        invoke = true;
+        $('body').addClass('bodyhid');
+        $('body,html').animate({
+          scrollTop: 0
+        }, 800);
+        setTimeout(function() {
+          invoke = false;
+        }, 810);
+      }
+    }
+  }
+</script>
+<script>
+
+  //动态获取国务院信息
+  $(function() {
+    $.ajax({
+      url: '//www.gov.cn/pushinfo/v150203/pushinfo.jsonp',
+      dataType: "jsonp",
+      jsonp: "pushInfoJsonpCallBack",
+      jsonpCallback: "pushInfoJsonpCallBack",
+      success: function(data) {
+        console.log('111', data);
+        var html = ''
+
+        $.each(data, function(index, item) {
+
+          if (index < 6) {
+            html += '<a href="' + item.link + '" class="normal-list-item ariaskiptheme">' +
+              '<div class="title">' +
+              '<p setedaria="true" tabindex="0">' + item.title + '</p>' +
+              '<span class="time" tabindex="0">' + item.pubDate + '</span> </div>' +
+              '<p setedaria="true" tabindex="0" style="display:none">近日，我院获评“2023年重庆市职业教育产教融合先进单位”，全市共有6个单位获此殊荣。近年来，学院把产教融合作为基础性、关键性和全局性工作来抓...</p>' +
+              '</a>'
+          }
+        });
+
+        $("#gwyinfo").html(html);
+
+      },
+      error: function() {
+        console.log("获取失败");
+      }
+    });
+    // 今日重庆
+    $.ajax({
+      url: "//www.cq.gov.cn/ywdt/jrzq/index.json",
+      dataType: "jsonp",
+      jsonp: "cqjrcq",
+      jsonpCallback: "cqjrcq",
+      success: function(data) {
+        console.log('222', data);
+        data = data.datas;
+        var html = ''
+        $.each(data, function(index, item) {
+
+          if (index < 4) {
+            html += '<a href="' + item.url + '" class="normal-list-item ariaskiptheme">' +
+              '<div class="title">' +
+              '<p setedaria="true" tabindex="0">' + item.title + '</p>' +
+              '<span class="time" tabindex="0">' + item.docreltime + '</span> </div>' +
+              '<p setedaria="true" tabindex="0">' + item.doccontent + '</p>' +
+              '</a>'
+          }
+        });
+
+        $("#cqjrcq").html(html);
+      },
+      error: function() {
+        console.log("获取失败");
+      }
+    });
+  });
+
+  var appId=59;
+  var siteId=250;
+  /**获取公开信箱列表*/
+  function getSZXXList(pageIndex, pageSize) {
+    var address = "/IGI/nbhd/openGovmsgbox.do"; //信件接口
+    var url = './json/lxxd.json';
+    var datajson = {
+      siteId: siteId,
+      appId: appId,
+      method: 'listGovmsgboxs',
+      "pageIndex": pageIndex,
+      "pageSize": pageSize
+    };
+    $.ajax({
+      url:address ,
+      dataType: "json",
+      data: datajson,
+      type: "get",
+      success: function(data) {
+        if (data.statusCode != 200) {
+          return;
+        } else {
+          var html = "";
+          var result = data.datas;
+          for (var i = 0; i < result.data.length; i++) {
+            var title = result.data[i].TITLE; //标题
+            var openDate = formatDate('yyyy-MM-dd', parseFloat(result.data[i].REPLYTIME)); // 回复日期
+            var metadataId = result.data[i].METADATAID;
+            var GOVMSGBOXTYPE = result.data[i].GOVMSGBOXTYPE;
+            var pubUrl =  result.data[i].PUBLISHURL
+
+            // html += "\n<a href=\"./gkxx/lxxd/detail.html?metadataId=".concat(metadataId, "\" target=\"_blank\" title=\"").concat(title, "\">\n<div class=\"left\">\n<i>").concat(GOVMSGBOXTYPE, "</i>\n<p>").concat(title, "</p>\n</div>\n<span>").concat(openDate, "</span>\n</a>");
+            html += '<a href=" '+ pubUrl  +' " class="gkxx-list-item">'
+            if (GOVMSGBOXTYPE == '投诉') {
+              html += '<i class="tag red">' + GOVMSGBOXTYPE + '</i>'
+            } else {
+              html += '<i class="tag">' + GOVMSGBOXTYPE + '</i>'
+            }
+            html += '<p>' + title + '</p>' +
+              '<span>' + openDate + '</span>' +
+              '</a>';
+          }
+          $("#gkxx .gkxx-list").html(html);
+        }
+      },
+      error: function(data) {}
+    })
+  }
+  getSZXXList(1, 6);
+  // 意见征集
+  var url2 = "/IGI/opinion/web/list"; //意见征集
+  // var url2 = "./json/yjzj.json"; //意见征集
+  var detailUrl2 = "https://slj.cq.gov.cn/hdjl_250/yzzj/detail.html?id="; //详情页地址
+  getList2();
+
+  function getList2() {
+    $.ajax({
+      url: url2,
+      dataType: "json",
+      // dataType: 'jsonp',
+      // jsonpCallback: "JsonpCallBack",
+      data: {
+        "siteId": siteId,
+        "pageIndex": 1,
+        "pageSize": 6,
+        "orderBy": "startTime_desc"
+      },
+      type: "get",
+      async: "true",
+      success: function(data) {
+        if (data.statusCode != 200) {
+          return;
+        } else {
+          var html = "";
+          for (var i = 0; i < data.datas.data.length; i++) {
+            var id = data.datas.data[i].id; //id
+            var title = data.datas.data[i].theme; //主题
+            var begintime = formatDate('yyyy-MM-dd', parseInt(data.datas.data[i].beginTime)); //开始时间
+            var endtime = formatDate('yyyy-MM-dd', parseInt(data.datas.data[i].endTime)); //结束时间
+            var status = data.datas.data[i].status; //征集状态
+
+
+            html += ' <a href="' + detailUrl2 + id + '" class="yjzj-item">' +
+              '<i class="tag ' + (status == 0 ? '' : status == 2 ? '' : 'b') + '">' +
+              (status == 0 ? '征集中' : status == 2 ? '未开始' : '已结束') + '</i>' +
+              ' <p>' + title + '</p>' + '<span>[' + endtime + ']</span>'
+
+
+          }
+          $("#yjzj").html(html);
+        }
+      },
+      error: function(data) {
+        console.info(data);
+      }
+    })
+  }
+
+  //时间戳转换
+  function formatDate(fmt, value) {
+    if (!value) {
+      return ''
+    }
+    var time = new Date(value)
+    var o = {
+      'M+': time.getMonth() + 1, // 月份 4
+      'd+': time.getDate(), // 日  9
+      'h+': time.getHours(), // 小时 11
+      'm+': time.getMinutes(), // 分 22
+      's+': time.getSeconds(), // 秒 44
+      'q+': Math.floor((time.getMonth() + 3) / 3), // 季度
+      'S': time.getMilliseconds() // 毫秒
+    };
+    if (/(y+)/.test(fmt)) {
+      // RegExp.$1是RegExp的一个属性,指的是与正则表达式匹配的第一个子匹配
+      fmt = fmt.replace(RegExp.$1, (time.getFullYear() + '').substr(4 - RegExp.$1.length)); // 这是转换年
+    }
+    for (var k in o) {
+      if (new RegExp('(' + k + ')').test(fmt)) {
+        fmt = fmt.replace(RegExp.$1, (RegExp.$1.length === 1) ?
+          (o[k]) : (('00' + o[k]).substr(('' + o[k]).length)));
+        // o[k] 4 9 11 22 44
+        // '00'+o[k] 004 009 0011 0022 0044
+        // ..substr(('' + o[k]).length从o[k].length开始截取
+      }
+    }
+    return fmt; // 2019-04-09 11:22:44
+  }
+</script>
+<script>
+</script>
+</html>

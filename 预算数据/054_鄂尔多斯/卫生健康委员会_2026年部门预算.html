@@ -1,0 +1,1349 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>鄂尔多斯市卫生健康委员会</title>
+    <link rel="stylesheet" href="./css/animate.min.css" />
+    <link rel="stylesheet" href="./images/swiper-bundle_1.min.css" />
+    <link rel="stylesheet" href="./images/base.css" />
+    <link rel="stylesheet" href="./images/header_footer.css" />
+    <link rel="stylesheet" href="./images/header_footer_h5.css" media="screen and (max-width:750px)" />
+    <link rel="stylesheet" href="./images/index.css" />
+    <link rel="stylesheet" href="./images/index_h5.css" media="screen and (max-width:750px)" />
+    <script src="./images/jquery.min.js"></script>
+    <script id="barrierfree" src="./accessibility/load_1.js"></script>
+    <script src="./images/swiper-bundle_1.min.js"></script>
+    <script src="./images/jquery.SuperSlide.2.1.3.js"></script>
+    <script src="./images/resize_1.js"></script>
+    <script src="./images/h5_1.js"></script>
+
+    <style>
+      .policy .policy_r {
+    /*    background-image: url(./tpbc/202412/W020241212554670797646.png);  */
+      }
+
+      .public li {
+        background-image: url(./tpbc/202412/W020241212554672079717.png);
+      }
+
+      .rank .rank_l .top li a {
+        color: #00569d;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+<div id="barrierfree_container">
+    <!-- 公共头部 -->
+    <style>
+  .header .header_main {
+    background-image: url(./tpbc/202412/W020241209546157881294.png);
+  }
+
+  .header .header_main .banner .search_web::before {
+    background-image: url(./tpbc/202412/W020241209547492270030.png);
+  }
+</style>
+<div class="header">
+  <div class="header_main">
+    <div class="w">
+      <div class="shortcut">
+        <div class="date" id="date"></div>
+        <ul class="shortcut_list">
+          <li>
+            <a href="#">登录/注册 </a>
+          </li>
+          <li>|</li>
+          <li>
+            <a href="javascript:void(0);" onclick="toggleToolBar()">无障碍</a>
+          </li>
+          <li>|</li>
+          <li>
+            <a href="http://wjw.ordos.gov.cn/zzms/">长者模式</a>
+          </li>
+        </ul>
+      </div>
+      <div class="banner">
+        <h1 class="logo">
+          <a href="./index.html" target="_blank">
+            <img src="./images/W020241218630683514222.png" alt="" />
+          </a>
+        </h1>
+        <form
+          method="post"
+          class="search_web"
+          action="http://wjw.ordos.gov.cn/was40/search"
+          target="_blank"
+        >
+          <input class="search_text" type="text" name="searchword" placeholder="请输入关键词搜索" />
+          <input type="hidden" name="channelid" value="20311" />
+          <input type="hidden" name="topurl" value="https://wjw.ordos.gov.cn/ssqt/sstb_ssqt/" />
+          <input type="hidden" name="bottomurl" value="https://wjw.ordos.gov.cn/ssqt/ssdb_ssqt/" />
+          <input type="hidden" name="topframeh" value="321px" />
+          <input type="hidden" name="bottomframeh" value="218px" />
+          <input class="search_button" type="submit" value="搜索" />
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="header_nav">
+    <ul class="navlist w">
+      <li class="active">
+        <a href="./index.html" title="网站首页">网站首页</a>
+      </li>
+      <li>
+        <a href="./xwzx/" title="新闻中心">新闻中心</a>
+      </li>
+      <li>
+        <a href="./zfxxgkx/" title="政府信息公开">政府信息公开</a>
+      </li>
+      <li>
+        <a href="https://zwfw.nmg.gov.cn/OrgItem_index?regionCode=150600000000&orgCode=11150600MB1984769D&record=istrue" title="办事服务">办事服务</a>
+      </li>
+      <li>
+        <a href="./hdjl/" title="互动交流">互动交流</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+<script>
+  $(function () {  
+    var href = window.location.href;
+    var index = 0;
+    if(href.indexOf("/xwzx/") != -1) index = 1;
+    if(href.indexOf("/zfxxgkx/") != -1) index = 2;
+    if(href.indexOf("/bsfw/") != -1) index = 3;
+    if(href.indexOf("/hdjl/") != -1) index = 4;
+
+    $(".navlist li").each(function(i) {
+      $(".navlist li").removeClass("active").eq(index).addClass("active");
+    });
+  })
+</script>
+
+<script>
+  var date = new Date()
+  var year = date.getFullYear();
+  var month = date.getMonth() + 1
+  var day = date.getDate()
+  var week = date.getDay()
+  var weekDays = ['星期天', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
+
+  var str = year + '年' + month + '月' + day + '日'+ ' ' + weekDays[week]
+
+  var ele = document.getElementById('date')
+  ele.innerText = str;
+</script>
+    <!-- 头条 -->
+    <div class="headlines">
+      <div class="w">
+        <a href="./toutiao/" target="_blank">
+          <img class="icon" src="./images/headlines_icon.png" alt="" />
+        </a>
+        <div class="inner headlines_swiper">
+          <div class="swiper-wrapper">
+            
+              <div class="swiper-slide">
+                <a href="./toutiao/202603/t20260327_3884422.html" target="_blank">
+                  中共中央办公厅国务院办公厅关于 加快建立长期护理保险制度的意见
+                </a>
+              </div>
+            
+              <div class="swiper-slide">
+                <a href="./toutiao/202603/t20260326_3883957.html" target="_blank">
+                  “对雄安的发展前景，我们充满信心” ——习近平总书记赴雄安新区考察并主持召开深入推...
+                </a>
+              </div>
+            
+              <div class="swiper-slide">
+                <a href="./toutiao/202603/t20260325_3883649.html" target="_blank">
+                  习近平在河北雄安新区考察并主持召开深入推进雄安新区高质量建设和发展座谈会时强调  牢...
+                </a>
+              </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 新闻 -->
+    <div class="news w">
+      <div class="news_l">
+        <a class="outlink" href="https://www.gov.cn/pushinfo/v150203/" target="_blank">国务院信息</a>
+        <div class="news_swiper">
+          <div class="swiper-wrapper">
+            
+              <div class="swiper-slide">
+                <a href="https://liuyan.www.gov.cn/2024wwzfgzbgtjy/bmdf.html?q=nmg" target="_blank">
+                  <img src="./xwzx/tpxw_xwzx/202412/W020241221408709551744.png" alt="图层 3 拷贝.png"/>
+                  <div class="mask">
+                    @国务院 我来说
+                  </div>
+                </a>
+              </div>
+            
+              <div class="swiper-slide">
+                <a href="https://tousu.www.gov.cn/dc/2023zhdc/index.htm" target="_blank">
+                  <img src="./xwzx/tpxw_xwzx/202412/W020241214569864689192.png" alt="W020231023755661118866.png"/>
+                  <div class="mask">
+                    2023年度国务院推动高质量发展综合督查问题线索征集
+                  </div>
+                </a>
+              </div>
+            
+              <div class="swiper-slide">
+                <a href="https://tousu.www.gov.cn/dc/2024yxyshjjs/index.htm" target="_blank">
+                  <img src="./xwzx/tpxw_xwzx/202412/W020241214569865679175.png" alt="W020231023755661118866.png"/>
+                  <div class="mask">
+                    影响营商环境建设问题线索征集
+                  </div>
+                </a>
+              </div>
+            
+              <div class="swiper-slide">
+                <a href="./xwzx/tpxw_xwzx/202603/t20260324_3883482.html" target="_blank">
+                  <img src="./xwzx/tpxw_xwzx/202603/W020260324385767652277.jpg" alt="1.jpg"/>
+                  <div class="mask">
+                    彭丽媛出席2026年世界防治结核病日主题宣传活动
+                  </div>
+                </a>
+              </div>
+            
+              <div class="swiper-slide">
+                <a href="./xwzx/tpxw_xwzx/202603/t20260317_3881817.html" target="_blank">
+                  <img src="./xwzx/tpxw_xwzx/202603/W020260317337134457387.jpg" alt="1.jpg"/>
+                  <div class="mask">
+                    2026年世界防治结核病日主题宣传海报发布
+                  </div>
+                </a>
+              </div>
+            
+          </div>
+          <div class="swiper-news-pagination swiper-pagination"></div>
+        </div>
+      </div>
+      <div class="news_r news_slide">
+        <div class="hd">
+          <ul class="news_head" id="newsHead">
+            <li index="0" class="on">
+              <a href="./xwzx/zxdt_xwzx/" target="_blank" title="最新动态">最新动态</a>
+            </li>
+            <li index="1">
+              <a href="./xwzx/qqdt_xwzx/" target="_blank" title="旗区动态">旗区动态</a>
+            </li>
+            <li index="2">
+              <a href="./xwzx/tzgg_xwzx/" target="_blank" title="通知公告">通知公告</a>
+            </li>
+          </ul>
+        </div>
+        <div class="bd">
+          <div class="news_con news_con_1">
+            
+              <div class="first">
+                <div class="date">
+                  <div class="day">27</div>
+                  <div class="year">2026-03</div>
+                </div>
+                <div class="first_inner">
+                  <a href="./xwzx/zxdt_xwzx/202603/t20260327_3884452.html" target="_blank" class="title">
+                    市妇幼保健院走进第十四幼儿园开展幼儿心理早教专题讲座
+                  </a>
+                  <div class="desc">
+                    
+                  </div>
+                </div>
+              </div>
+            
+            <ul class="list">
+              
+                <li>
+                  <a href="./xwzx/zxdt_xwzx/202603/t20260326_3884138.html" target="_blank">
+                    <span>
+                      鄂尔多斯市开展“健康科普行——万场健康知识讲座”暨“...
+                    </span>
+                    <span>
+                      2026-03-26
+                    </span>
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="./xwzx/zxdt_xwzx/202603/t20260326_3883968.html" target="_blank">
+                    <span>
+                      我市召开中医药（蒙医药）经典名方验方传承创新发展调研...
+                    </span>
+                    <span>
+                      2026-03-26
+                    </span>
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="./xwzx/zxdt_xwzx/202603/t20260323_3883127.html" target="_blank">
+                    <span>
+                      鄂尔多斯市中医医院“耳穴健康科普课堂”走进康巴什区第...
+                    </span>
+                    <span>
+                      2026-03-23
+                    </span>
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="./xwzx/zxdt_xwzx/202603/t20260319_3882383.html" target="_blank">
+                    <span>
+                      鄂尔多斯市疾控中心开展“世界防治结核病日”系列宣讲活动
+                    </span>
+                    <span>
+                      2026-03-19
+                    </span>
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="./xwzx/zxdt_xwzx/202603/t20260317_3881866.html" target="_blank">
+                    <span>
+                      优质医疗资源下沉基层 | 鄂尔多斯市妇幼保健院与基层共...
+                    </span>
+                    <span>
+                      2026-03-17
+                    </span>
+                  </a>
+                </li>
+              
+            </ul>
+          </div>
+          <div class="news_con news_con_2" style="display: none;">
+            
+              <div class="first">
+                <div class="date">
+                  <div class="day">27</div>
+                  <div class="year">2026-03</div>
+                </div>
+                <div class="first_inner">
+                  <a href="./xwzx/qqdt_xwzx/202603/t20260327_3884475.html" target="_blank" class="title">
+                    杭锦旗社区卫生服务中心开展65岁以上老年人免费健康体检...
+                  </a>
+                  <div class="desc">
+                    
+                  </div>
+                </div>
+              </div>
+            
+            <ul class="list">
+              
+                <li>
+                  <a href="./xwzx/qqdt_xwzx/202603/t20260327_3884432.html" target="_blank">
+                    <span>
+                      准格尔旗中医蒙医医院推出中药足浴包 助力群众养生康复
+                    </span>
+                    <span>
+                      2026-03-27
+                    </span>
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="./xwzx/qqdt_xwzx/202603/t20260326_3883969.html" target="_blank">
+                    <span>
+                      达拉特旗举办“健康科普行——万场健康知识讲座” 暨“...
+                    </span>
+                    <span>
+                      2026-03-26
+                    </span>
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="./xwzx/qqdt_xwzx/202603/t20260325_3883669.html" target="_blank">
+                    <span>
+                      准格尔旗开展“世界防治结核病日”系列宣传活动
+                    </span>
+                    <span>
+                      2026-03-25
+                    </span>
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="./xwzx/qqdt_xwzx/202603/t20260325_3883664.html" target="_blank">
+                    <span>
+                      鄂托克旗卫生健康委员会开展“世界防治结核病日”主题宣...
+                    </span>
+                    <span>
+                      2026-03-25
+                    </span>
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="./xwzx/qqdt_xwzx/202603/t20260323_3883154.html" target="_blank">
+                    <span>
+                      东胜区：医共体“健康圈”让群众在家门口享优质医疗
+                    </span>
+                    <span>
+                      2026-03-23
+                    </span>
+                  </a>
+                </li>
+              
+            </ul>
+          </div>
+          <div class="news_con news_con_3" style="display: none;">
+            
+              <div class="first">
+                <div class="date">
+                  <div class="day">17</div>
+                  <div class="year">2026-03</div>
+                </div>
+                <div class="first_inner">
+                  <a href="http://www.eyyfy.org.cn/plus/view.php?aid=263" target="_blank" class="title">
+                    鄂尔多斯应用技术学院附属医院关于2026年度公开招聘控制...
+                  </a>
+                  <div class="desc">
+                    
+                  </div>
+                </div>
+              </div>
+            
+            <ul class="list">
+              
+                <li>
+                  <a href="./xwzx/tzgg_xwzx/202603/t20260313_3880948.html" target="_blank">
+                    <span>
+                      鄂尔多斯市2025年度公共场所分级评价结果公示
+                    </span>
+                    <span>
+                      2026-03-13
+                    </span>
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="./xwzx/tzgg_xwzx/202603/t20260312_3880906.html" target="_blank">
+                    <span>
+                      鄂尔多斯市卫生健康委员会关于所属事业单位竞争性比选拟...
+                    </span>
+                    <span>
+                      2026-03-12
+                    </span>
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="./xwzx/tzgg_xwzx/202602/t20260226_3877580.html" target="_blank">
+                    <span>
+                      鄂尔多斯市卫生健康委员会委托鄂尔多斯市疾病预防控制中...
+                    </span>
+                    <span>
+                      2026-02-26
+                    </span>
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="./xwzx/tzgg_xwzx/202602/t20260226_3877579.html" target="_blank">
+                    <span>
+                      鄂尔多斯市疾病预防控制中心（鄂尔多斯市卫生监督所）行...
+                    </span>
+                    <span>
+                      2026-02-26
+                    </span>
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="./xwzx/tzgg_xwzx/202602/t20260226_3877578.html" target="_blank">
+                    <span>
+                      鄂尔多斯市卫生健康综合行政执法授权委托书
+                    </span>
+                    <span>
+                      2026-02-26
+                    </span>
+                  </a>
+                </li>
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 专题专栏 -->
+    <div class="special w">
+      <div class="special_head">
+        <div class="title">专题专栏</div>
+        <a href="./ztzlx/" target="_blank" class="more">更多+</a>
+      </div>
+      <div class="special_swiper swiper">
+        <div class="swiper-wrapper">
+          
+            <div class="swiper-slide">
+              <a href="./ztzlx/dwgk_ztzl/" target="_blank">
+                <img src="./ztzlx/dwgk_ztzl/images/P020241211494964186390.png" />
+              </a>
+            </div>
+          
+            <div class="swiper-slide">
+              <a href="./ztzlx/jkeedsxd_ztzl/" target="_blank">
+                <img src="./ztzlx/jkeedsxd_ztzl/images/P020241211495131193029.png" />
+              </a>
+            </div>
+          
+            <div class="swiper-slide">
+              <a href="./ztzlx/yhyshj/" target="_blank">
+                <img src="./ztzlx/yhyshj/images/P020241220556806966800.png" />
+              </a>
+            </div>
+          
+            <div class="swiper-slide">
+              <a href="./ztzlx/wmdwfcz_ztzl/" target="_blank">
+                <img src="./ztzlx/wmdwfcz_ztzl/images/P020241211495394659940.png" />
+              </a>
+            </div>
+          
+            <div class="swiper-slide">
+              <a href="./ztzlx/zlzhmzgtt_ztzl/" target="_blank">
+                <img src="./ztzlx/zlzhmzgtt_ztzl/images/P020241211495588077173.png" />
+              </a>
+            </div>
+          
+            <div class="swiper-slide">
+              <a href="./ztzlx/wsjkcxjs_ztzl/" target="_blank">
+                <img src="./ztzlx/wsjkcxjs_ztzl/images/P020241211495667710616.png" />
+              </a>
+            </div>
+          
+            <div class="swiper-slide">
+              <a href="./ztzlx/jmxz_ztzl/" target="_blank">
+                <img src="./ztzlx/jmxz_ztzl/images/P020241211495759853739.png" />
+              </a>
+            </div>
+          
+            <div class="swiper-slide">
+              <a href="https://www.ordos.gov.cn/ordosml/bmlq/lqzc/sbjzcwj/" target="_blank">
+                <img src="./ztzlx/160154/images/P020241211495844455960.png" />
+              </a>
+            </div>
+          
+            <div class="swiper-slide">
+              <a href="./ztzlx/jkzs_ztzl/" target="_blank">
+                <img src="./ztzlx/jkzs_ztzl/images/P020241211495940470204.png" />
+              </a>
+            </div>
+          
+            <div class="swiper-slide">
+              <a href="http://20th.cpcnews.cn/" target="_blank">
+                <img src="./ztzlx/160156/images/P020241211496057338636.png" />
+              </a>
+            </div>
+          
+            <div class="swiper-slide">
+              <a href="./ztzlx/aqscxcjy_ztzl/" target="_blank">
+                <img src="./ztzlx/aqscxcjy_ztzl/images/P020241211496216833020.png" />
+              </a>
+            </div>
+          
+            <div class="swiper-slide">
+              <a href="http://www.ordos.gov.cn/zt_127959/yzwfsxmd/" target="_blank">
+                <img src="./ztzlx/160158/images/P020241213366627482929.png" />
+              </a>
+            </div>
+          
+            <div class="swiper-slide">
+              <a href="./ztzlx/yyjkkp_ztzl/" target="_blank">
+                <img src="./ztzlx/yyjkkp_ztzl/images/P020241211496654819443.png" />
+              </a>
+            </div>
+          
+        </div>
+      </div>
+      <div class="swiper-special-next">
+        <img src="./images/arrow_r.png" alt="" />
+      </div>
+      <div class="swiper-special-prev">
+        <img src="./images/arrow_l.png" alt="" />
+      </div>
+    </div>
+    <!-- 政策文件 -->
+    <div class="policy w">
+      <div class="policy_l policy_slide">
+        <div class="hd">
+          <ul class="policy_head">
+            <li index="0">政策文件</li>
+            <!--<li index="1">政策解读</li>-->
+          </ul>
+          <a class="more plicy_more_0" href="./zfxxgkx/fdzdgk_xxgk/zcwj/" target="_blank" title="政策文件">更多+</a>
+          <a style="display: none" class="more plicy_more_1" href="./zfxxgkx/fdzdgk_xxgk/zcjd/" target="_blank" title="政策解读">更多+</a>
+        </div>
+        <div class="bd">
+          <ul class="list">
+            
+              <li>
+                <a href="./zfxxgkx/fdzdgk_xxgk/zcwj/202601/t20260104_3866272.html" target="_blank">
+                  <span>
+                    关于印发《鄂尔多斯市推进托幼一体化工作方案》的通知
+                  </span>
+                  <span>
+                    2026-01-04
+                  </span>
+                </a>
+              </li>
+            
+              <li>
+                <a href="./zfxxgkx/fdzdgk_xxgk/zcwj/202505/t20250528_3801523.html" target="_blank">
+                  <span>
+                    关于进一步促进医疗卫生机构支持托育服务发展的通知
+                  </span>
+                  <span>
+                    2025-05-28
+                  </span>
+                </a>
+              </li>
+            
+              <li>
+                <a href="./zfxxgkx/fdzdgk_xxgk/zcwj/202412/t20241214_3745606.html" target="_blank">
+                  <span>
+                    鄂尔多斯市卫生健康委员会关于印发《鄂尔多斯市公共场所卫生...
+                  </span>
+                  <span>
+                    2024-10-16
+                  </span>
+                </a>
+              </li>
+            
+              <li>
+                <a href="./zfxxgkx/fdzdgk_xxgk/zcwj/202412/t20241214_3745605.html" target="_blank">
+                  <span>
+                    中华人民共和国保守国家秘密法
+                  </span>
+                  <span>
+                    2024-03-21
+                  </span>
+                </a>
+              </li>
+            
+              <li>
+                <a href="./zfxxgkx/fdzdgk_xxgk/zcwj/202412/t20241214_3745604.html" target="_blank">
+                  <span>
+                    关于印发鄂尔多斯市二孩、三孩家庭 育儿补贴及托育机构建设和...
+                  </span>
+                  <span>
+                    2024-03-15
+                  </span>
+                </a>
+              </li>
+            
+          </ul>
+
+      <!--
+          <ul class="list">
+            
+              <li>
+                <a href="./zfxxgkx/fdzdgk_xxgk/zcjd/202601/t20260104_3866273.html" target="_blank">
+                  <span>
+                    《关于印发<鄂尔多斯市推进托幼一体化工作方案>的通知》政策解读
+                  </span>
+                  <span>
+                    2026-01-04
+                  </span>
+                </a>
+              </li>
+            
+              <li>
+                <a href="./zfxxgkx/fdzdgk_xxgk/zcjd/202505/t20250528_3801524.html" target="_blank">
+                  <span>
+                    《关于进一步促进医疗卫生机构支持托育服务发展的通知》政策解读
+                  </span>
+                  <span>
+                    2025-05-28
+                  </span>
+                </a>
+              </li>
+            
+              <li>
+                <a href="./zfxxgkx/fdzdgk_xxgk/zcjd/202503/t20250327_3777439.html" target="_blank">
+                  <span>
+                    《关于印发<鄂尔多斯市普惠性托育服务机构认定管理办法（试行...
+                  </span>
+                  <span>
+                    2024-10-28
+                  </span>
+                </a>
+              </li>
+            
+              <li>
+                <a href="./zfxxgkx/fdzdgk_xxgk/zcjd/202412/t20241214_3745627.html" target="_blank">
+                  <span>
+                    鄂尔多斯市卫生健康委员会关于印发《鄂尔多斯市公共场所卫生...
+                  </span>
+                  <span>
+                    2024-10-16
+                  </span>
+                </a>
+              </li>
+            
+              <li>
+                <a href="./zfxxgkx/fdzdgk_xxgk/zcjd/202412/t20241214_3745626.html" target="_blank">
+                  <span>
+                    解读｜《中华人民共和国保守国家秘密法》
+                  </span>
+                  <span>
+                    2024-03-21
+                  </span>
+                </a>
+              </li>
+            
+          </ul>
+      -->
+
+        </div>
+      </div>
+      <div class="policy_l policy_r">
+
+        <div class="hd">
+          <ul class="policy_head">
+            <li index="0" class="on">政策解读</li>
+          </ul>
+          <a  class="more plicy_more_0" href="./zfxxgkx/fdzdgk_xxgk/zcjd/" target="_blank" title="政策解读">更多+</a>
+        </div>
+        <div class="bd">
+
+          <ul class="list">
+            
+              <li>
+                <a href="./zfxxgkx/fdzdgk_xxgk/zcjd/202601/t20260104_3866273.html" target="_blank">
+                  <span>
+                    《关于印发<鄂尔多斯市推进托幼一体化工作方案>的通知》政策解读
+                  </span>
+                  <span>
+                    2026-01-04
+                  </span>
+                </a>
+              </li>
+            
+              <li>
+                <a href="./zfxxgkx/fdzdgk_xxgk/zcjd/202505/t20250528_3801524.html" target="_blank">
+                  <span>
+                    《关于进一步促进医疗卫生机构支持托育服务发展的通知》政策解读
+                  </span>
+                  <span>
+                    2025-05-28
+                  </span>
+                </a>
+              </li>
+            
+              <li>
+                <a href="./zfxxgkx/fdzdgk_xxgk/zcjd/202503/t20250327_3777439.html" target="_blank">
+                  <span>
+                    《关于印发<鄂尔多斯市普惠性托育服务机构认定管理办法（试行...
+                  </span>
+                  <span>
+                    2024-10-28
+                  </span>
+                </a>
+              </li>
+            
+              <li>
+                <a href="./zfxxgkx/fdzdgk_xxgk/zcjd/202412/t20241214_3745627.html" target="_blank">
+                  <span>
+                    鄂尔多斯市卫生健康委员会关于印发《鄂尔多斯市公共场所卫生...
+                  </span>
+                  <span>
+                    2024-10-16
+                  </span>
+                </a>
+              </li>
+            
+              <li>
+                <a href="./zfxxgkx/fdzdgk_xxgk/zcjd/202412/t20241214_3745626.html" target="_blank">
+                  <span>
+                    解读｜《中华人民共和国保守国家秘密法》
+                  </span>
+                  <span>
+                    2024-03-21
+                  </span>
+                </a>
+              </li>
+            
+          </ul>
+
+        </div>
+
+
+<!--
+        <div class="leader_head">
+          <img src="./images/leader_icon.png" alt="" />
+          <span>领导之窗</span>
+        </div>
+        <div class="leader_con">
+          
+            <div class="first">
+              <a href="./zfxxgkx/fdzdgk_xxgk/jgjj_xxgk/ldzc_jgjj/202509/t20250901_3831121.html" target="_blank">
+                <img class="leader_img" src="./zfxxgkx/fdzdgk_xxgk/jgjj_xxgk/ldzc_jgjj/202509/W020250901553946692701.jpg" alt="" />
+                <div class="name">
+                  闫彩煜
+                </div>
+                <div class="duty">
+                  党组书记、主任、市卫健行业党工委书记
+                </div>
+              </a>
+            </div>
+          
+          <ul class="leader_list">
+            
+              <li>
+                <a href="./zfxxgkx/fdzdgk_xxgk/jgjj_xxgk/ldzc_jgjj/202509/t20250901_3831112.html" target="_blank">
+                  闫永升
+                </a>
+              </li>
+            
+              <li>
+                <a href="./zfxxgkx/fdzdgk_xxgk/jgjj_xxgk/ldzc_jgjj/202412/t20241213_3744930.html" target="_blank">
+                  赵　瑞
+                </a>
+              </li>
+            
+              <li>
+                <a href="./zfxxgkx/fdzdgk_xxgk/jgjj_xxgk/ldzc_jgjj/202412/t20241213_3744929.html" target="_blank">
+                  张建平
+                </a>
+              </li>
+            
+              <li>
+                <a href="./zfxxgkx/fdzdgk_xxgk/jgjj_xxgk/ldzc_jgjj/202412/t20241213_3744928.html" target="_blank">
+                  靳尚武
+                </a>
+              </li>
+            
+              <li>
+                <a href="./zfxxgkx/fdzdgk_xxgk/jgjj_xxgk/ldzc_jgjj/202412/t20241213_3744927.html" target="_blank">
+                  李春梅
+                </a>
+              </li>
+            
+              <li>
+                <a href="./zfxxgkx/fdzdgk_xxgk/jgjj_xxgk/ldzc_jgjj/202512/t20251226_3864243.html" target="_blank">
+                  王进轶
+                </a>
+              </li>
+            
+              <li>
+                <a href="./zfxxgkx/fdzdgk_xxgk/jgjj_xxgk/ldzc_jgjj/202412/t20241213_3744926.html" target="_blank">
+                  董鹤耀
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+-->
+
+
+
+      </div>
+    </div>
+    <!-- 信息公开 -->
+    <ul class="public w">
+      <li>
+        <a href="./zfxxgkx/xxgkzn_xxgk/" target="_blank">
+          <img src="./images/pub_icon_1.png" alt="" />
+          <span>政府信息<br />公开指南</span>
+        </a>
+      </li>
+      <li>
+        <a href="./zfxxgkx/xxgkzd_xxgk/" target="_blank">
+          <img src="./images/pub_icon_2.png" alt="" />
+          <span>政府信息<br />公开制度</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="./zfxxgkx/fdzdgk_xxgk/" target="_blank">
+          <img src="./images/pub_icon_3.png" alt="" />
+          <span>法定主动<br />公开内容</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="./zfxxgkx/xxgkml_xxgk/" target="_blank">
+          <img src="./images/pub_icon_4.png" alt="" />
+          <span>政府信息<br />公开目录</span>
+        </a>
+      </li>
+      <li>
+        <a href="./zfxxgkx/xxgknb_xxgk/" target="_blank">
+          <img src="./images/pub_icon_5.png" alt="" />
+          <span>政府信息<br />公开年报</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.ordos.gov.cn/ordosml/xxgk_new/ysqgk/sqbl/" target="_blank">
+          <img src="./images/pub_icon_6.png" alt="" />
+          <span><br />依申请公开</span>
+        </a>
+      </li>
+      <li>
+        <a href="./zfxxgkx/xyxxgk/" target="_blank">
+          <img src="./images/pub_icon_7.png" alt="" />
+          <span>信用信息<br />公开</span>
+        </a>
+      </li>
+    </ul>
+    <!-- 信息统计 -->
+    <div class="rank w">
+      <div class="rank_l">
+        <div class="head">信息统计</div>
+        <ul class="top">
+             <li style="width: 77px">
+                排名
+             </li>
+             <li style="width: 153px">
+                <a href="./wzxx/bspm_wzxx/ks/" target="_blank">各科室</a>
+             </li>
+             <li style="width: 190px">
+                <a href="./wzxx/bspm_wzxx/qq/" target="_blank">各旗区</a>
+             </li>
+             <li style="flex: 1">
+                <a href="./wzxx/bspm_wzxx/szylwsjkdw/" target="_blank">市直医疗卫生健康单位</a>
+             </li>
+        </ul>
+
+        <div class="rank_swiper swiper">
+          <div class="swiper-wrapper">
+            
+              <div class="swiper-slide">
+                <div class="num" style="width: 77px">
+                  1
+                </div>
+                <div style="width: 153px">
+                  办公室
+                </div>
+                <div style="width: 190px">
+                  东胜区卫生健康委
+                </div>
+                <div style="flex: 1">
+                  市中心医院
+                </div>
+              </div>
+            
+              <div class="swiper-slide">
+                <div class="num" style="width: 77px">
+                  2
+                </div>
+                <div style="width: 153px">
+                  人事科
+                </div>
+                <div style="width: 190px">
+                  康巴什区卫生健康委
+                </div>
+                <div style="flex: 1">
+                  市中医医院
+                </div>
+              </div>
+            
+              <div class="swiper-slide">
+                <div class="num" style="width: 77px">
+                  3
+                </div>
+                <div style="width: 153px">
+                  规划发展与信息科
+                </div>
+                <div style="width: 190px">
+                  达拉特旗卫生健康委
+                </div>
+                <div style="flex: 1">
+                  市蒙医医院
+                </div>
+              </div>
+            
+              <div class="swiper-slide">
+                <div class="num" style="width: 77px">
+                  4
+                </div>
+                <div style="width: 153px">
+                  财务审计科
+                </div>
+                <div style="width: 190px">
+                  准格尔旗卫生健康委
+                </div>
+                <div style="flex: 1">
+                  市第二人民医院
+                </div>
+              </div>
+            
+              <div class="swiper-slide">
+                <div class="num" style="width: 77px">
+                  5
+                </div>
+                <div style="width: 153px">
+                  法规与综合监督科
+                </div>
+                <div style="width: 190px">
+                  伊金霍洛旗卫生健康委
+                </div>
+                <div style="flex: 1">
+                  市第四人民医院
+                </div>
+              </div>
+            
+              <div class="swiper-slide">
+                <div class="num" style="width: 77px">
+                  6
+                </div>
+                <div style="width: 153px">
+                  体制改革科
+                </div>
+                <div style="width: 190px">
+                  乌审旗卫生健康委
+                </div>
+                <div style="flex: 1">
+                  市妇幼保健院
+                </div>
+              </div>
+            
+          </div>
+        </div>
+      </div>
+      <div class="rank_r rank_slide">
+        <div class="hd">
+          <ul class="rank_head">
+            <li index="0">媒体报道</li>
+          </ul>
+          <a class="more rank_more_0" href="./xwzx/mtbd_hdjl/" target="_blank" title="媒体报道"> 更多+
+          </a>
+        </div>
+        <div class="bd">
+          <ul class="list">
+            
+              <li>
+                <a href="https://www.xuexi.cn/local/normalTemplate.html?itemId=10597285081611209038#search_qid=c1eacff0" target="_blank">
+                  <span>
+                    鄂尔多斯市：创新“两癌”防治模式 筑牢妇女健康防线
+                  </span>
+                  <span>
+                    2026-03-24
+                  </span>
+                </a>
+              </li>
+            
+              <li>
+                <a href="./xwzx/mtbd_hdjl/202601/t20260121_3870608.html" target="_blank">
+                  <span>
+                    学习强国 | 鄂尔多斯：民生守护 为成长筑牢“心”防线
+                  </span>
+                  <span>
+                    2026-01-21
+                  </span>
+                </a>
+              </li>
+            
+              <li>
+                <a href="./xwzx/mtbd_hdjl/202601/t20260120_3870316.html" target="_blank">
+                  <span>
+                    学习强国 | 鄂尔多斯：慢病防控按下“快进键” 健康红利释放...
+                  </span>
+                  <span>
+                    2026-01-20
+                  </span>
+                </a>
+              </li>
+            
+              <li>
+                <a href="./xwzx/mtbd_hdjl/202512/t20251229_3864682.html" target="_blank">
+                  <span>
+                    学习强国 | 鄂尔多斯：早筛“网”住癌变 民生“兜”住健康
+                  </span>
+                  <span>
+                    2026-12-29
+                  </span>
+                </a>
+              </li>
+            
+              <li>
+                <a href="./xwzx/mtbd_hdjl/202512/t20251208_3856566.html" target="_blank">
+                  <span>
+                    央广网 | 鄂尔多斯市中心医院多科协作守护患者健康
+                  </span>
+                  <span>
+                    2025-12-08
+                  </span>
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 征集调查 -->
+    <div class="other w">
+      <div class="other_swiper swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <a href="./hdjl/zjdc_hdjl/">
+              <img src="./images/W020241213394634187116.png" alt="" />
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="https://www.ordos.gov.cn/zwfwbmrx/home/writeLetters?areaCode=1506&objectCode=150600224">
+              <img src="./images/W020241213394634250404.png" alt="" />
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="./hdjl/tsjb_hdjl/">
+              <img src="./images/W020241213394634338958.png" alt="" />
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="./ztzlx/ksfw_hdjl/">
+              <img src="./images/W020241219353742627066.png" alt="" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 公共底部 -->
+    <div class="footer">
+  <div class="friendship">
+    <ul class="friendship_list w">
+      
+        <li>
+          <a href="http://www.nhc.gov.cn/" target="_blank">
+            中华人民共和国国家卫生健康委员会
+          </a>
+        </li>
+      
+        <li>
+          <a href="https://www.ordos.gov.cn/" target="_blank">
+            鄂尔多斯市人民政府网站
+          </a>
+        </li>
+      
+        <li>
+          <a href="https://wjw.nmg.gov.cn/" target="_blank">
+            内蒙古自治区卫生健康委员会
+          </a>
+        </li>
+      
+        <li>
+          <a href="https://zwfw.nmg.gov.cn/city_index?regionCode=150600000000&record=istrue" target="_blank">
+            鄂尔多斯市政务服务网
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+  <div class="copyright w">
+    <div class="left">
+      <a href="https://bszs.conac.cn/sitename?method=show&id=0856200DB28428F0E053012819AC5A0A" target="_blank">
+        <img class="dang" src="./images/dang.png" alt="" />
+      </a>
+
+<!--
+      <a href="https://zfwzgl.www.gov.cn/exposure/jiucuo.html?site_code=1506000095&url=http%3A%2F%2Fwjw.ordos.gov.cn%2F" target="_blank">
+        <img class="jiucuo" src="./images/jiucuo.png" alt="" />
+      </a>
+-->
+ <script id="_jiucuo_" sitecode='1506000095' src='https://zfwzgl.www.gov.cn/exposure/jiucuo.js'></script>
+
+    </div>
+    <div class="block">
+      <div class="item">
+        <a href="./wzxx/wzdt_wzxx/" target="_blank">网站地图</a>
+      </div>
+      <div class="item">
+        <span>网站标识码 ：1506000095</span>
+        <script type="text/javascript">document.write(unescape("%3Cspan id='cnzz_stat_icon_1279587746'%3E%3C/span%3E%3Cscript src='https://v1.cnzz.com/z.js%3Fid%3D1279587746%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+
+      </div>
+
+      <div class="item">
+        <a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank">蒙ICP备18001446号-2</a>
+      </div>
+      <div class="item">
+        <a href="https://beian.mps.gov.cn/#/query/webSearch" target="_blank">蒙公网安备 15060302000135号</a>
+      </div>
+    </div>
+    <div class="block">
+      <div class="item">主办：鄂尔多斯市卫生健康委员会</div>
+      <div class="item">地址：康巴什区卫生健康大厦9楼9031室</div>
+      <div class="item">电话：0477-8588401</div>
+      <div class="item">E-Mail：eedswjw@126.com</div>
+    </div>
+
+    <div class="block">
+       <img src="./images/W020241226377852120197.jpg" title="二维码" style="width:110px;" alt="" />
+    </div>
+
+  </div>
+</div>
+
+    <style>
+.yxjbox{
+   position: fixed;
+   bottom: 0;
+   right: 0;
+   z-index:3;
+}
+.yxj_gb {
+   display:inline-block;
+   position: absolute;
+   top: 0;
+   right: 0;
+   width: 40px;
+   height: 40px;
+   cursor: pointer;
+   text-align: center;
+   font-size: 20px;
+   color: #fff;
+   boeder: 1px solid #666;
+}
+
+.zxjbox {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 3;
+}
+.zxj_gb {
+   display:inline-block;
+   position: absolute;
+   top: 0;
+   right: 0;
+   width: 40px;
+   height: 40px;
+   cursor: pointer;
+   text-align: center;
+   font-size: 20px;
+   color: #666;
+   border: 1px solid #666;
+}
+</style>
+
+
+
+
+<div class="yxjbox">
+     <a href="https://wjw.ordos.gov.cn/zfxxgkx/gzbb_xxgk/202601/t20260119_3869744.html" target="_blank">
+        <img src="./images/W020260120351059229725.png" /> 
+     </a>
+     <span class="yxj_gb">×</span>
+</div>
+
+
+
+<div class="zxjbox">
+        <img src="./images/W020241220407812135772.png" /> 
+     <span class="zxj_gb">×</span>
+</div>
+
+<script>
+  $(".yxj_gb").click(function(){
+  $(".yxjbox").animate({height:"0px"});
+});
+
+  $(".zxj_gb").click(function(){
+  $(".zxjbox").animate({height:"0px"});
+});
+
+</script> /> />
+
+    <script>
+      // 头条轮播
+      var headlines_swiper = new Swiper(".headlines_swiper", {
+        direction: "vertical",
+        autoplay: true,
+        loop: true,
+      });
+      // 新闻轮播
+      var swiper = new Swiper(".news_swiper", {
+        autoplay: true,
+        loop: true,
+        pagination: {
+          el: ".swiper-news-pagination",
+          clickable: true,
+        },
+      });
+
+      // 新闻切换
+      // $(".news_slide").slide({ effect: "left" });
+
+      $('#newsHead li').mouseenter(function () { 
+        let index = $(this).attr('index');
+        $(this).addClass('on').siblings().removeClass('on');
+        if(index == 0) {
+          $('.news_con_1').show()
+          $('.news_con_2').hide()
+          $('.news_con_3').hide()
+        } else if(index == 1) {
+          $('.news_con_1').hide()
+          $('.news_con_2').show()
+          $('.news_con_3').hide()
+        } else {
+          $('.news_con_1').hide()
+          $('.news_con_2').hide()
+          $('.news_con_3').show()
+        }
+        
+      
+      });
+
+      // 专题专栏轮播
+      var swiper = new Swiper(".special_swiper", {
+        autoplay: true,
+        loop: true,
+        slidesPerView: 2,
+        spaceBetween: 30,
+        navigation: {
+          nextEl: ".swiper-special-next",
+          prevEl: ".swiper-special-prev",
+        },
+      });
+
+      // 政策文件/政策解读切换
+      $(".policy_slide").slide({ effect: "left" });
+
+      $(".policy_head li").mouseenter(function (e) {
+        let current = $(this).attr("index");
+
+        if (current == 0) {
+          $(".plicy_more_0").show();
+          $(".plicy_more_1").hide();
+        } else if (current == 1) {
+          $(".plicy_more_0").hide();
+          $(".plicy_more_1").show();
+        }
+      });
+
+      // 报送排名轮播
+      var swiper = new Swiper(".rank_swiper", {
+        loop: true,
+        autoplay: false,
+        direction: "vertical",
+        slidesPerView: 5,
+        spaceBetween: 1,
+      });
+
+      // 排行榜切换
+      $(".rank_slide").slide({ effect: "left" });
+      $(".rank_head li").mouseenter(function (e) {
+        let current = $(this).attr("index");
+
+        if (current == 0) {
+          $(".rank_more_0").show();
+          $(".rank_more_1").hide();
+        } else if (current == 1) {
+          $(".rank_more_0").hide();
+          $(".rank_more_1").show();
+        }
+      });
+
+      var swiper = new Swiper(".other_swiper", {
+        slidesPerView: 4,
+        spaceBetween: 30,
+      });
+    </script>
+</div>
+  </body>
+</html>

@@ -1,0 +1,568 @@
+<!doctype html>
+<html>
+<head>
+
+<meta charset="utf-8">
+
+<meta name="SiteName" content="长春市市容环境卫生管理局  长春市城市管理行政执法局"/>
+<meta name="SiteDomain" content="http://srhwj.changchun.gov.cn/"/>
+<meta name="SiteIDCode" content="2201000052"/>
+<meta name="ColumnName" content=""/>
+<meta name="ColumnType" content=""/>
+<meta name="ColumnDescription" content="">
+<meta name="ColumnKeywords" content="">
+<meta name="ArticleTitle" content=""/>
+<meta name="PubDate" content=""/>
+<meta name="ContentSource" content="" />
+
+<script src="./images/jquery-1.8.3.min.js"></script>
+
+<script>
+     $(function () {
+       var xl_name="";
+       var lm_name="";
+       var zd_name="长春市城市管理局";
+       if(xl_name==="" && lm_name===""){
+         document.title=zd_name;
+       }else if(xl_name===""){
+         document.title=lm_name+"-"+zd_name;
+       }else{
+         document.title=xl_name+"-"+zd_name;
+       }
+    });
+</script>
+<link href="./images/wsy_main.css" type="text/css" rel="stylesheet">
+<link href="http://www.changchun.gov.cn/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+<script src="./images/jquery-1.8.3.min.js"></script>
+<script src="./images/base-min.js"></script>
+<style>
+#testUl li{display: block !important;padding-left: 12px;overflow: hidden;height: 30px;line-height: 30px;padding-left: 10px;font-size: 14px;}
+#testUl li a{color: #fff;display: inline-block;height: 30px;line-height: 30px;float: left;}
+#testUl li .data{float: right;}
+#testUl1 li{display: block !important;overflow: hidden;height: 30px;line-height: 30px;font-size: 14px;}
+#testUl1 li span{color: #fff;}
+#testUl li span{color: #fff;}
+#testUl1 li a{color: #fff;display: inline-block;height: 30px;line-height: 30px;float: left;padding-left: 8px;}
+#testUl1 li .data{float: right;}
+.rtop{width: 70px;position: fixed;top: 260px;right: 20px;z-index: 9999999;}
+.rtop a{display: block;overflow: hidden;}
+.rtop a img{display: block;}
+.share, .wechat{width: 70px;height: 63px;}
+.code_box img{filter: drop-shadow(5px 5px 10px #999);width: 120px;height: 120px;}
+.code_box .code:nth-child(1) img{height: 284px;}
+.code_box{position: absolute;right: 80px;top: 0;}
+*{font-family: "微软雅黑";}
+.header_top a{border-right: 1px solid #333;height: 14px !important;line-height: 14px !important;font-size: 14px;padding: 0 10px;color: #333;}
+.header_top{height: 14px;margin-top: 8px;}
+.zms-p{z-index: 999999;position: fixed;top: 300px;left: 20px;}
+.samaclose img{position: absolute;cursor: pointer;width: 20px;height: 20px;position: absolute;right: 0;top: 0;}
+#focus1{width:958px;height:130px;border:1px solid #7a7a7a;overflow:hidden;position:relative;}
+#focus1 img{width:100%;height:130px;}
+#focus1 a{position:relative;zoom:1;}
+#focus1 p{position:absolute;height:30px;line-height:30px;padding-left:15px;bottom:2px;left:0;color:#fff;font-size:14px;font-weight:bold;}
+#focus1 p span{float:left;}
+#focus1 a:hover .text{text-decoration:underline;cursor:pointer}
+#focus1 s{position:absolute;height:38px;line-height:38px;width:100%;bottom:0;left:0;filter:Alpha(Opacity=70);Opacity:0.7;background:#000;cursor:pointer}
+#ctr1{position:absolute;bottom:12px;right:17px;z-index:2;color:#fff;}
+#ctr1 span{background:url(./images/doc.png) no-repeat;_background:none;
+ _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='doc.png', sizingMethod='crop');text-align:center;width:12px;height:11px;float:left;margin-right:7px;cursor:pointer}
+#ctr1 span.current{background:url(./images/doc_hover.png) no-repeat;_background:none;}
+.hdjl_but a img {text-align: center;margin: 0 auto;}
+.hdjl_but a {width: 237px;}
+.hdjl_but a:first-child{background:#7694c8;}
+.hdjl_but a:last-child{background:#e2ba3e;}
+</style>
+<script>
+ $(function() {
+  $.ajax({
+   url: 'http://www.jl.gov.cn/kzgn/nrtj/demo1/qgyw/',
+   dataType: "jsonp",
+   contentType: "application/x-www-form-urlencoded; charset=gb2312",
+   jsonp: "pushInfoJsonpCallBack",
+   jsonpCallback: "qgywJsonpCallBack",
+   success: function(data) {
+    i = 0;
+    $.each(data, function(i, json) {
+     i++;
+     if (i == 9) {
+      return false;
+     }
+     var str2 = json.title;
+     str2 = str2.substr(0, 22);
+     if (json.title.substr(22) != "") {
+      str2 += "..."
+     }
+     $("#testUl").append("<li><a href='" + json.link + "' target=_blank >" + str2 + "</a><span class='data'>" + json.pubDate + "</span></li>")
+    })
+    $.ajax({
+     url: 'http://www.jl.gov.cn/kzgn/nrtj/demo1/fbcs/pushinfo2015.html',
+     dataType: "jsonp",
+     contentType: "application/x-www-form-urlencoded; charset=gb2312",
+     jsonp: "pushInfoJsonpCallBack",
+     jsonpCallback: "pushInfoJsonpCallBack",
+     success: function(data) {
+      i = 0;
+      $.each(data, function(i, json) {
+       i++;
+       if (i == 9) {
+        return false;
+       }
+       var str2 = json.title;
+       str2 = str2.substr(0, 22);
+       if (json.title.substr(22) != "") {
+        str2 += "..."
+       }
+       $("#testUl1").append("<li><a href='" + json.link + "' target=_blank >" + str2 + "</a><span class='data'>" + json.pubDate + "</span></li>")
+      })
+     },
+     error: function() {
+     }
+    });
+   },
+   error: function() {}
+  });
+ })
+</script>
+</head>
+
+<body id="mdgov_bodyTag">
+
+<div id="wrap">
+
+ <div id="header">
+
+  <div class="jb_top">
+   <div class="jb_top1">
+    <ul class="jb_top_left">
+     <li><a href="http://www.gov.cn/" target="_blank">中国政府网</a></li>
+     <li><a href="http://www.jl.gov.cn/" target="_blank">吉林省政府网</a></li>
+     <li><a href="http://www.changchun.gov.cn/" target="_blank">长春市政府网</a></li>
+    </ul>
+    <div class="header_top" style="float:right;">
+     <a href="javascript:void(0);" class="zc" id="zcBtn">注册</a>
+     <a class="dl" href="javascript:void(0);" id="loginBtn" style="border:none;">登录</a>
+     <a href="javascript:void(0);" id="tcBtn" style="display:none;margin-left:0px!important;border:none;">退出</a>
+     <script type="text/javascript" src="./images/07030userInfo_4.js"></script>
+     <div style="display: none;">
+      <iframe src="https://user.jl.gov.cn/v1/apigw/none/user/authentication/checklogin?appId=575ecd1d2d70450ea4c5a6b468c50c7f&amp;version=1.0.0&amp;format=json&amp;charset=utf-8&amp;timestamp=2019-08-10%2016:46:13&amp;backUrl=http://srhwj.changchun.gov.cn/yhzx/dl/" id="gjdl"></iframe>
+     </div>
+    </div>
+    <div class="clearfix"></div>
+   </div>
+  </div>
+ 
+  <div class="jb_dh">
+   <ul class="jb_dh1" style="width: 980px;">
+    <li class="on" style="background:url(images/jb_sy.png) no-repeat 0 8px; padding-left:40px;"><a target="_blank" href="./" >首页</a></li>
+    <li style="background:url(images/jb_zjcc.png) no-repeat 60px 8px;"><a target="_blank" href="./cgdt/bddt/">城管动态</a></li>
+    <li style="background:url(images/jb_zw.png) no-repeat 60px 8px;"><a target="_blank" href="./xxgk/zdzw/">政府信息公开</a></li>
+    <li style="background:url(images/jb_fw.png) no-repeat 60px 8px;"><a target="_blank" href="http://zwfw.jl.gov.cn/jlszwfw/cksx/?deptId=11220100726259898U&area=220100">政务服务</a></li>
+    <li style="background:url(images/jb_hd.png) no-repeat 60px 8px;"><a target="_blank" href="./hdjl/zxzx/">互动交流</a></li>
+    <li style="background:url(images/jb_dz.png) no-repeat 60px 8px;"><a target="_blank" href="./dwjs/dthd/">队伍建设</a></li>
+    <div class="clearfix"></div>
+   </ul>
+  </div>
+
+ </div>
+
+ <div id="content">
+  <div class="con">
+
+   <div class="jb_ding">
+    <ul class="jb_ding1">
+     <li class="jb_logo"> <img src="./images/jb_logo.png" /> </li>
+     <li class="jb_sousuo">
+      <script type="text/javascript">
+       function checkIP() { 
+        var text = document.getElementById("text").value; 
+        if (text == "" || text == "请输入搜索内容") {
+         alert("请输入检索词！"); 
+         return false; 
+        }
+        return true;
+       }
+      </script>
+      <form action="http://intellsearch.changchun.gov.cn/was5/web/search" target="_blank" onsubmit="return checkIP();">
+       <input class="jb-sstext" type="text" name="searchword" value="请输入搜索内容" id="text" onfocus="if(this.value=='请输入搜索内容'){this.value='';}" onblur="if(this.value==''){this.value='请输入搜索内容';}" />
+       <input name="channelid" type="hidden" value="274747" />
+       <input id="searchscope_title" name="searchscope" value="doctitle" type="hidden" />
+       <input type="submit" class="jb-ssbutton" value="" />
+      </form>
+     </li>
+     <div class="clearfix"></div>
+    </ul>
+   </div>
+ 
+  </div>
+  <div class="topnews">
+   <div class="news_ywdt"> <span>通知公告</span>
+    <ul class="news_li">
+     
+      <li><a target="_blank" href="./cgdt/tzggx/202601/t20260110_3459566.html">长春市2025年四季度餐厨废弃物处置量公示</a></li>
+     
+      <li><a target="_blank" href="./cgdt/tzggx/202512/t20251231_3456993.html">2025年度长春市裴家生活垃圾卫生填埋场土壤和地下水自行监测公示</a></li>
+     
+      <li><a target="_blank" href="./cgdt/tzggx/202511/t20251126_3443049.html">2025年度土壤和地下水自行监测公示</a></li>
+     
+      <li><a target="_blank" href="./cgdt/tzggx/202511/t20251111_3439829.html">长春市2025年三季度餐厨废弃物处置量公示</a></li>
+     
+      <li><a target="_blank" href="./cgdt/tzggx/202509/t20250926_3430354.html">2025年长春市秋菜上市时间为10月1日至25日，点击详情查看销售点位。</a></li>
+     
+    </ul>
+    <ul class="swap">
+    </ul>
+   </div>
+  </div>
+  <div class="jb_qh">
+
+   <div class="jb_qhlef">
+            	<div id="focus">
+				
+					<a target="_blank"  href="./tpxw/202602/t20260210_3468130.html"><img src="./tpxw/202602/W020260210563229209400_450.jpg" alt="微信图片_20260210141524.jpg" width="450" height="300"/><s></s><p><span class="text">以“两站一场”精细化治理擦亮城市窗口 | 市城市管...</span></p></a>
+					
+					
+					<a target="_blank"  href="./tpxw/202602/t20260210_3468093.html"><img src="./tpxw/202602/W020260210514988638984_450.jpg" alt="微信图片_20260210140928.jpg" width="450" height="300"/><s></s><p><span class="text">我市启动“两站一场”区域综合治理工作    张春达...</span></p></a>
+					
+					
+					<a target="_blank"  href="./tpxw/202512/t20251212_3446832.html"><img src="./tpxw/202512/W020251212522744847285_450.jpg" alt="微信图片_20251212143013.jpg" width="450" height="300"/><s></s><p><span class="text">2026“@国务院 我为政府工作报告提建议”网民建言...</span></p></a>
+					
+					
+					<div id="ctr">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+				</div>
+				<script type="text/javascript" src="./images/Tab-min.js"></script>
+				<script type="text/javascript">
+					t1 = new Tab("ctr", "span", "focus", "a", {
+					autoPlay : true,
+					timeout : 5000,
+					delay:200,
+					event : "mouseover"	
+					});		
+				</script>
+            </div>
+
+   <div class="jb_qhrig">
+    <div class="tabbox">
+     <div class="lj">
+      <script type="text/javascript">
+       newstab2 = new TabClass({
+        tabName: 'newstab2',
+        cntName: 'news_contentx2',
+        tabShowCls: 'on',
+        number: 3
+       });
+      </script>
+      <div class="tab"> <span class="on" id="newstab2_0" onmouseover="newstab2.show(0);"><a href="http://www.gov.cn/" target="_blank">国家要闻</a></span> <span id="newstab2_1" onmouseover="newstab2.show(1);"><a href="http://www.jl.gov.cn/" target="_blank">吉林要闻</a></span> <span id="newstab2_2" onmouseover="newstab2.show(2);"> <a href="./cgdt/bddt/" target="_blank" >本地动态</a></span> </div>
+     </div>
+     <div class="content">
+      <ul>
+       <li id="news_contentx2_0" style="display:block;">
+        <ul id="testUl">
+        </ul>
+       </li>
+       <li id="news_contentx2_1">
+        <ul id="testUl1">
+        </ul>
+       </li>
+       <li id="news_contentx2_2">
+        
+         <p>
+          <a href="./cgdt/bddt/202603/t20260327_3477060.html" target="_blank">走遍长春 情暖春城——市城市管理局深入一线...</a>
+          <span>
+           2026-03-27
+          </span>
+         </p>
+        
+         <p>
+          <a href="./cgdt/bddt/202603/t20260327_3477061.html" target="_blank">聚焦春季人居环境突出问题 长春市启动城市精...</a>
+          <span>
+           2026-03-24
+          </span>
+         </p>
+        
+         <p>
+          <a href="./cgdt/bddt/202603/t20260327_3477062.html" target="_blank">借雨洗城正当时 | 长春城市管理系统雨中除尘...</a>
+          <span>
+           2026-03-23
+          </span>
+         </p>
+        
+         <p>
+          <a href="./cgdt/bddt/202603/t20260327_3477066.html" target="_blank">关于征集您身边生态环境领域问题的公告</a>
+          <span>
+           2026-03-20
+          </span>
+         </p>
+        
+         <p>
+          <a href="./cgdt/bddt/202603/t20260327_3477064.html" target="_blank">凌晨出动 雪中作业 长春城市管理系统全力清雪...</a>
+          <span>
+           2026-03-18
+          </span>
+         </p>
+        
+         <p>
+          <a href="./cgdt/bddt/202603/t20260315_3473471.html" target="_blank">黄强主持召开全省传达学习全国两会精神大会</a>
+          <span>
+           2026-03-15
+          </span>
+         </p>
+        
+         <p>
+          <a href="./cgdt/bddt/202603/t20260312_3473125.html" target="_blank">巾帼绽芳华 橙光暖春城｜绿园区开展“三八”...</a>
+          <span>
+           2026-03-04
+          </span>
+         </p>
+        
+         <p>
+          <a href="./cgdt/bddt/202602/t20260228_3470634.html" target="_blank">长春市城市管理系统全力清雪保畅通</a>
+          <span>
+           2026-02-22
+          </span>
+         </p>
+        
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+
+   <div class="clearfix"></div>
+  </div>
+  <div class="jb_qh">
+
+   <div class="jb_qhrig" style=" float:left; width:450px">
+    <div class="tabbox">
+     <div class="lj">
+      <div class="tab">
+       <script type="text/javascript">
+        newstab = new TabClass({
+         tabName: 'newstab',
+         cntName: 'news_contentx',
+         tabShowCls: 'on',
+         number: 2
+        });
+       </script>
+       <span class="on" id="newstab_0" onmouseover="newstab.show(0);" style="width: 50%;"><a href="./dwjs/dthd/" target="_blank" >队伍建设</a></span>
+       <span id="newstab_1" onmouseover="newstab.show(1);" style="width: 50%;"><a href="./cgdt/wbcz/" target="_blank">外埠传真</a></span>
+      </div>
+     </div>
+     <div class="content">
+      <ul>
+       <li id="news_contentx_0" style="display:block;">
+        
+         <p><a target="_blank" href="./dwjs/dthd/202602/t20260228_3470712.html" target="_blank"><a href="./dwjs/dthd/202602/t20260228_3470712.html" target="_blank">青春赋能城管提质 实干护航城市发展 | 长春...</a></a><span>2026-02-06</span></p>
+        
+         <p><a target="_blank" href="./dwjs/dthd/202601/t20260112_3459843.html" target="_blank"><a href="./dwjs/dthd/202601/t20260112_3459843.html" target="_blank">长春市城市管理系统开展“情暖春城”志愿服...</a></a><span>2026-01-12</span></p>
+        
+         <p><a target="_blank" href="./dwjs/dthd/202512/t20251227_3455755.html" target="_blank"><a href="./dwjs/dthd/202512/t20251227_3455755.html" target="_blank">市城市管理局组织干部职工观看电影《花儿为...</a></a><span>2025-12-27</span></p>
+        
+         <p><a target="_blank" href="./dwjs/dthd/202601/t20260104_3457899.html" target="_blank"><a href="./dwjs/dthd/202601/t20260104_3457899.html" target="_blank">市城市管理局：举办“以民为尺 共建美好城市...</a></a><span>2025-11-28</span></p>
+        
+         <p><a target="_blank" href="./dwjs/dthd/202510/t20251029_3436848.html" target="_blank"><a href="./dwjs/dthd/202510/t20251029_3436848.html" target="_blank">长春市城市管理局“学榜样、守初心、严作风...</a></a><span>2025-10-29</span></p>
+        
+         <p><a target="_blank" href="./dwjs/dthd/202509/t20250922_3428927.html" target="_blank"><a href="./dwjs/dthd/202509/t20250922_3428927.html" target="_blank">铭记抗战历史，汲取奋进力量  长春市城市管...</a></a><span>2025-09-16</span></p>
+        
+         <p><a target="_blank" href="./dwjs/dthd/202509/t20250922_3428919.html" target="_blank"><a href="./dwjs/dthd/202509/t20250922_3428919.html" target="_blank">固管中心组织党员干部参观长春历史文化博物馆</a></a><span>2025-09-02</span></p>
+        
+        <p><a href="./dwjs/dthd/" target="_blank">更多...</a></p>
+       </li>
+       <li id="news_contentx_1">
+        
+         <p><a target="_blank" href="./cgdt/wbcz/202603/t20260327_3477069.html" target="_blank">
+          <a href="./cgdt/wbcz/202603/t20260327_3477069.html" target="_blank">城市管理进社区｜江苏苏州：“金管善治”深...</a>
+          </a><span>
+           2026-03-27
+          </span>
+         </p>
+        
+         <p><a target="_blank" href="./cgdt/wbcz/202603/t20260327_3477068.html" target="_blank">
+          <a href="./cgdt/wbcz/202603/t20260327_3477068.html" target="_blank">山东潍坊：用脚步“丈量”城市，让管理更“...</a>
+          </a><span>
+           2026-03-13
+          </span>
+         </p>
+        
+         <p><a target="_blank" href="./cgdt/wbcz/202602/t20260228_3470706.html" target="_blank">
+          <a href="./cgdt/wbcz/202602/t20260228_3470706.html" target="_blank">山东青岛：创新“五微”工作法，激活城市治...</a>
+          </a><span>
+           2026-02-28
+          </span>
+         </p>
+        
+         <p><a target="_blank" href="./cgdt/wbcz/202602/t20260228_3470710.html" target="_blank">
+          <a href="./cgdt/wbcz/202602/t20260228_3470710.html" target="_blank">福建厦门：着力推进城市管理高质量发展</a>
+          </a><span>
+           2026-02-13
+          </span>
+         </p>
+        
+         <p><a target="_blank" href="./cgdt/wbcz/202601/t20260112_3459889.html" target="_blank">
+          <a href="./cgdt/wbcz/202601/t20260112_3459889.html" target="_blank">江西赣州：全国推广！赣州这两项城市管理工...</a>
+          </a><span>
+           2026-01-12
+          </span>
+         </p>
+        
+         <p><a target="_blank" href="./cgdt/wbcz/202512/t20251227_3455757.html" target="_blank">
+          <a href="./cgdt/wbcz/202512/t20251227_3455757.html" target="_blank">江苏无锡：城市管理进社区   温暖城市烟火，...</a>
+          </a><span>
+           2025-12-27
+          </span>
+         </p>
+        
+         <p><a target="_blank" href="./cgdt/wbcz/202512/t20251227_3455756.html" target="_blank">
+          <a href="./cgdt/wbcz/202512/t20251227_3455756.html" target="_blank">辽宁大连：健全工作体系，推动城市管理向科...</a>
+          </a><span>
+           2025-11-28
+          </span>
+         </p>
+        
+        <p><a href="./cgdt/wbcz/" target="_blank">更多...</a></p>
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div class="hdjl_box">
+    <h2>互动交流</h2>
+    <div class="hdjl_but"> <a href="https://www.cccgt.org.cn/complaint.jspx" target="_blank"><img src="./images/wsts.jpg" /></a> <a href="./hdjl/zxzx/" target="_blank"><img src="./images/jzxx.jpg" /></a> </div>
+    <div class="hdjl_img"><img src="./images/cgdh_1.jpg" style="float:left;" alt="" />
+     <a href="./yshj/bddt/" target="_blank"><img src="./images/cgdh_2.jpg" alt="" /></a>
+    </div>
+   </div>
+  </div>
+  <div class="jb_xh">
+   <div class="fzzf">
+    <h2>政务服务</h2>
+    <a target="_blank" href="http://zwfw.jl.gov.cn/jlszwfw/cksx/?deptId=11220100726259898U&area=220100"><img src="./images/wsbs.png" /></a>
+    <a target="_blank" href="http://srhwj.changchun.gov.cn/cgdt/bddt/202308/t20230822_3219973.html"><img src="./images/spzn_1.jpg" alt="" /></a>
+   </div>
+   <div class="lxyz">
+    <h2>政府信息公开</h2>
+    <ul>
+     <li><a target="_blank" href="./xxgk/jgzn/ldxx/"><span><img src="./images/ico.jpg" /></span>领导信息</a></li>
+     <li><a target="_blank" href="./xxgk/jgzn/jgsz/"><span><img src="./images/ico3.jpg" /></span>机构职能</a></li>
+     <li><a target="_blank" href="./xxgk/jgzn/nsjg/"><span><img src="./images/ico4.jpg" /></span>内设机构</a></li>
+     <li><a target="_blank" href="./xxgk/sgs/xzxk/"><span><img src="./images/ico1.jpg" /></span>双公示</a></li>
+     <li><a target="_blank" href="./xxgk/zcfg/"><span><img src="./images/ico6.jpg" /></span>政策法规</a></li>
+     <li><a target="_blank" href="./xxgk/jgzn/zyzz/"><span><img src="./images/ico5.jpg" /></span>主要职责</a></li>
+    </ul>
+   </div>
+  </div>
+
+  <div>
+   <div id="focus1">
+    
+     <a target="_blank" href="http://www.12371.cn/djxx/"><img src="./ztlb/202404/W020240428539566818919.png" alt="党纪学习教育.png"/></a>
+    
+     <a target="_blank" href="https://www.gov.cn/zhuanti/zggcddescqgdbdh/index.htm"><img src="./ztlb/202404/W020240428539308999753.jpg" alt="xxgcdesd.jpg"/></a>
+    
+    <div id="ctr1">
+     <span></span>
+     <span></span>
+    </div>
+   </div>
+   <script type="text/javascript">
+    t1 = new Tab("ctr1", "span", "focus1", "a", {
+     autoPlay: true,
+     timeout: 5000,
+     delay: 200,
+     event: "mouseover"
+    });
+   </script>
+  </div>
+
+  <div class="mlyb">
+   <div class="title"><a target="_blank" href="./jcgzcgz/">城市管理<span>工作</span>展示</a></div>
+   <div class="content">
+    <div class="orbit-wrapper">
+     <div class="orbit-wrapper">
+      <div id="featured" class="orbit">
+        <a target="_blank" href="./jcgzcgz/202512/t20251227_3455758.html"> </a>  <a target="_blank" href="./jcgzcgz/201905/t20190505_1932972.html"> <img src="./jcgzcgz/201905/W020190505395685110914.jpg" alt="8吉林大路.jpg" height="364"/></a>  <a target="_blank" href="./jcgzcgz/201804/t20180409_1145493.html"> <img src="./jcgzcgz/201804/W020181015558487717748.jpg" alt="4.jpg" height="364"/></a>  <a target="_blank" href="./jcgzcgz/201803/t20180330_1145492.html"> <img src="./jcgzcgz/201803/W020181015556853181758.jpg" alt="3.jpg" height="364"/></a>  <a target="_blank" href="./jcgzcgz/201803/t20180329_1145491.html"> <img src="./jcgzcgz/201803/W020181015555237246845.jpg" alt="2.jpg" height="364"/></a> 
+      </div>
+      <script type="text/javascript" src="./images/jq.js">
+      </script>
+     </div>
+    </div>
+   </div>
+  </div>
+ </div>
+
+</div>
+
+
+<div class="rtop">
+  <div class="newclose"> <a href="javascript:void(0);" onclick="closeRtop()"><img src="./images/2019_heli_close.png" /></a> </div>
+  
+  <a href="#" title=""><img class="share" src="./images/topr77.jpg" /></a>
+	<a href="#" title=""><img class="wechat" src="./images/rtop6.png" /></a>
+    <a href="#" title=""><img class="wechat" src="./images/rtop7.png" /></a>
+   <a href="#top" class="smooth" title="回到顶部"><img src="./images/rtop3.png" /></a>
+  <div class="code_box">
+
+    <div class="code"><img src="./images/topr77.jpg" /></div>
+    <div class="code"><img src="./images/rtop6.jpg" /></div>
+    <div class="code"><img src="./images/rtop7.jpg" /></div>
+    <div class="code"></div>
+  </div>
+</div>
+<script src="./images/jquery-1.8.3.min.js"></script> 
+<script type="text/javascript">
+$(document).ready(function() {
+	$(".code").hide();
+	$(".rtop>a").mouseenter(function(){
+		var n = $(this).index();
+		$(".code_box").children(".code").eq(n-1).slideDown();
+	}).mouseleave(function(){
+		$(".code_box").children(".code").slideUp();
+	})
+});
+function closeRtop() {
+	jQuery(".rtop").hide();
+}
+</script>
+<style>
+.rtop .newclose{ width:auto; height:20px}
+.rtop .newclose a{width:20px; height:20px; margin-left:45px;}
+a:focus {outline-style:none; -moz-outline-style: none;}
+</style>
+<div id="footer"> 
+
+	<div class="footer_box">
+		<div class="footers">
+			<div class="footer_img"> 
+                                <script type="text/javascript">document.write(unescape("%3Cspan id='_ideConac' %3E%3C/span%3E%3Cscript src='http://dcs.conac.cn/js/09/151/0000/60046209/CA091510000600462090002.js' type='text/javascript'%3E%3C/script%3E"));</script>
+
+			</div>
+			<div class="footer_text">
+				<p><span>主办单位：长春市城市管理局</span> <span>电话：85292384</span></p>
+				<p><span>地址：长春市南关区南湖大路1477号</span> <span>邮编：130022</span></p>
+				<p><span>网站标识码：2201000052</span> <span><a href="https://beian.miit.gov.cn/" target="_blank">吉ICP备11002904号</a></span> <span class="footer_ico"><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=22010202000663" target="_blank">吉公网安备 22010202000663号</a></span></p>
+				<p> <span><a target="_blank" href="./gywm/">关于我们</a></span>|&nbsp;&nbsp;&nbsp;&nbsp;<span><a target="_blank" href="./wzdt/">网站地图</a></span>|&nbsp;&nbsp;&nbsp;&nbsp;</p>
+			</div>
+			<div class="footer_jc"> 
+				<script id="_jiucuo_" sitecode="2201000052" src="./images/jiucuo.js"></script> 
+			</div>
+		</div>
+	</div>
+
+</div>
+
+</div>
+
+<link type="text/css" href="images/fixed_20201201.css" rel="stylesheet" />
+
+
+<script type="text/javascript" src="images/jquerycookie_20201201.js" charset="UTF-8"></script>
+
+<script type="text/javascript" src="images/jqueryfixed_20201201.js" charset="UTF-8"></script>
+
+<script type="text/javascript" src="images/init_fixed_20201201.js" charset="UTF-8"></script>
+
+</body>
+</html>

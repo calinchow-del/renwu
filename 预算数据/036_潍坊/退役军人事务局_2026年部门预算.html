@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><script language="javascript" src="/module/jslib/jquery/jquery.js"></script>
+<script language="javascript" src="/module/jslib/urite/urite.min.js"></script>
+<link href="/module/jslib/tag/css/infotag.css" type=text/css rel=stylesheet>
+<meta name='WebId' content='359'>
+
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>山东省退役军人事务厅</title>
+<meta name='Maketime' content='2026-03-28 02:04:40'>
+
+<meta name="SiteName" content="山东省退役军人事务厅">
+<meta name="SiteDomain"  content="dva.shandong.gov.cn">
+<meta name="SiteIDCode"  content="3700000101">
+<meta name="siteurl"  content="http://dva.shandong.gov.cn/index.html">
+<meta name="guild"    content="">
+<meta name="district"    content="">
+<meta name="i_webid" content="359">
+<meta name="i_columnid" content="0">
+<meta name="i_articleid" content="0">
+<meta name="pagetype" content="3">
+<meta name="sitecatalog"    content="">
+
+
+    <link rel="stylesheet" href="/images/44100/hanweb.css">
+    <link rel="stylesheet" href="/images/44100/tyjrswt-index.css">
+	<link rel="stylesheet" type="text/css" href="/images/44100/old.css"/>
+    <script src="/images/44100/jquery-1.8.3.js"></script>
+    <script src="/images/44100/tab.js"></script>
+</head>
+
+<body id="page_type" alt="综合页">
+
+<div id="barrierfree_container">
+
+<script src="/script/3682/2408121527397992.js"></script>
+
+<!--首页飘窗-->
+<!-- <div style='z-index:9999' id="no1" >
+    <a href="http://dva.shandong.gov.cn/art/2020/9/27/art_94134_9882083.html" target="_blank">
+        <img src="http://dva.shandong.gov.cn/picture/0/2009271202424436735.png" width="320" height="140" border="0" alt='' />
+    </a>
+    <div class="btn_box"style='cursor:pointer;position: absolute; right: 0px; top: 0px; opacity: 0.6; width: 56px;height: 40px;text-align: center;'>
+        <span id='close' style=' color: #FFFFFF; line-height: 40px; font-size: 18px; background-color: rgb(0, 0, 0);' onclick='close()'>关闭</span>
+    </div>
+
+</div> -->
+<style type="text/css">
+    #close{
+        display: none;
+    }
+    .btn_box:hover #close{
+        display: block;
+    }
+</style>
+<script language=javascript>
+    function addEvent(obj, evtType, func, cap) {
+        cap = cap || false;
+        if(obj.addEventListener) {
+            obj.addEventListener(evtType, func, cap);
+            return true;
+        } else if(obj.attachEvent) {
+            if(cap) {
+                obj.setCapture();
+                return true;
+            } else {
+                return obj.attachEvent('on' + evtType, func);
+            }
+        } else {
+            return false;
+        }
+    }
+
+    function getPageScroll() {
+        var xScroll, yScroll;
+        if(self.pageXOffset) {
+            xScroll = self.pageXOffset;
+        } else if(document.documentElement && document.documentElement.scrollLeft) {
+            xScroll = document.documentElement.scrollLeft;
+        } else if(document.body) {
+            xScroll = document.body.scrollLeft;
+        }
+        if(self.pageYOffset) {
+            yScroll = self.pageYOffset;
+        } else if(document.documentElement && document.documentElement.scrollTop) {
+            yScroll = document.documentElement.scrollTop;
+        } else if(document.body) {
+            yScroll = document.body.scrollTop;
+        }
+        arrayPageScroll = new Array(xScroll, yScroll);
+        return arrayPageScroll;
+    }
+
+    function GetPageSize() {
+        var xScroll, yScroll;
+        if(window.innerHeight && window.scrollMaxY) {
+            xScroll = document.body.scrollWidth;
+            yScroll = window.innerHeight + window.scrollMaxY;
+        } else if(document.body.scrollHeight > document.body.offsetHeight) {
+            xScroll = document.body.scrollWidth;
+            yScroll = document.body.scrollHeight;
+        } else {
+            xScroll = document.body.offsetWidth;
+            yScroll = document.body.offsetHeight;
+        }
+        var windowWidth, windowHeight;
+        if(self.innerHeight) {
+            windowWidth = self.innerWidth;
+            windowHeight = self.innerHeight;
+        } else if(document.documentElement && document.documentElement.clientHeight) {
+            windowWidth = document.documentElement.clientWidth;
+            windowHeight = document.documentElement.clientHeight;
+        } else if(document.body) {
+            windowWidth = document.body.clientWidth;
+            windowHeight = document.body.clientHeight;
+        }
+        if(yScroll < windowHeight) {
+            pageHeight = windowHeight;
+        } else {
+            pageHeight = yScroll;
+        }
+        if(xScroll < windowWidth) {
+            pageWidth = windowWidth;
+        } else {
+            pageWidth = xScroll;
+        }
+        arrayPageSize = new Array(pageWidth, pageHeight, windowWidth, windowHeight)
+        return arrayPageSize;
+    }
+
+    var AdMoveConfig = new Object();
+    AdMoveConfig.IsInitialized = false;
+    AdMoveConfig.ScrollX = 0;
+    AdMoveConfig.ScrollY = 0;
+    AdMoveConfig.MoveWidth = 0;
+    AdMoveConfig.MoveHeight = 0;
+    AdMoveConfig.Resize = function() {
+        var winsize = GetPageSize();
+        AdMoveConfig.MoveWidth = winsize[2];
+        AdMoveConfig.MoveHeight = winsize[3];
+        AdMoveConfig.Scroll();
+    }
+    AdMoveConfig.Scroll = function() {
+        var winscroll = getPageScroll();
+        AdMoveConfig.ScrollX = winscroll[0];
+        AdMoveConfig.ScrollY = winscroll[1];
+    }
+    addEvent(window, 'resize', AdMoveConfig.Resize);
+    addEvent(window, 'scroll', AdMoveConfig.Scroll);
+
+    function AdMove(id) {
+        if(!AdMoveConfig.IsInitialized) {
+            AdMoveConfig.Resize();
+            AdMoveConfig.IsInitialized = true;
+        }
+        var obj = document.getElementById(id);
+        obj.style.position = 'absolute';
+        var W = AdMoveConfig.MoveWidth - obj.offsetWidth;
+        var H = AdMoveConfig.MoveHeight - obj.offsetHeight;
+        var x = W * Math.random(),
+            y = H * Math.random();
+        var rad = (Math.random() + 1) * Math.PI / 6;
+        var kx = Math.sin(rad),
+            ky = Math.cos(rad);
+        var dirx = (Math.random() < 0.5 ? 1 : -1),
+            diry = (Math.random() < 0.5 ? 1 : -1);
+        var step = 1;
+        var interval;
+        this.SetLocation = function(vx, vy) {
+            x = vx;
+            y = vy;
+        }
+        this.SetDirection = function(vx, vy) {
+            dirx = vx;
+            diry = vy;
+        }
+        obj.CustomMethod = function() {
+            obj.style.left = (x + AdMoveConfig.ScrollX) + 'px';
+            obj.style.top = (y + AdMoveConfig.ScrollY) + 'px';
+            rad = (Math.random() + 1) * Math.PI / 6;
+            W = AdMoveConfig.MoveWidth - obj.offsetWidth;
+            H = AdMoveConfig.MoveHeight - obj.offsetHeight;
+            x = x + step * kx * dirx;
+            if(x < 0) {
+                dirx = 1;
+                x = 0;
+                kx = Math.sin(rad);
+                ky = Math.cos(rad);
+            }
+            if(x > W) {
+                dirx = -1;
+                x = W;
+                kx = Math.sin(rad);
+                ky = Math.cos(rad);
+            }
+            y = y + step * ky * diry;
+            if(y < 0) {
+                diry = 1;
+                y = 0;
+                kx = Math.sin(rad);
+                ky = Math.cos(rad);
+            }
+            if(y > H) {
+                diry = -1;
+                y = H;
+                kx = Math.sin(rad);
+                ky = Math.cos(rad);
+            }
+        }
+        this.Run = function() {
+            //    ط   Ϊ100
+            var delay = 20;
+            interval = setInterval(obj.CustomMethod, delay);
+            obj.onmouseover = function() {
+                clearInterval(interval);
+            }
+            obj.onmouseout = function() {
+                interval = setInterval(obj.CustomMethod, delay);
+            }
+        }
+    }
+</script>
+<script>
+    var ad1 = new AdMove('no1');
+    ad1.Run();
+    $('#close').bind('click', function() {
+        $('#no1').hide()
+    })
+</script>
+		
+
+<!--内容-->
+<div class="main">
+    <div class="main_one">
+        <p class="main_one1"><a title="中共中央办公厅国务院办公厅关于加快建立长期护理保险制度的意见" target="_blank" href="http://dva.shandong.gov.cn/art/2026/3/26/art_122492_720852.html" style="font-size: 30px;">中共中央办公厅国务院办公厅关于加快建立长期护理保险制度的意见</a></p>
+    
+   
+
+
+
+    </div>
+    <div class="main_two" ergodic="view" barrierfree_zone_dsc="视窗区">
+        <div class="main_two_left">
+<style type="text/css">
+/* qqshop focus */
+*{ padding:0; list-style:none; border:none;}
+#focus {width:775px; height:500px; overflow:hidden; position:relative;margin:0 auto; z-index:0;}
+#focus ul {height:860px; position:absolute;margin:0;padding:0;}
+#focus ul li {float:left; width:775px; height:500px; overflow:hidden; position:relative; background:#000;}
+#focus ul li div.photo_bt {position:absolute; bottom:0; left:12px; color:#ffffff; z-index:1; line-height:50px;padding-left: 15px;}
+#focus .btnBg {position:absolute; width:775px; height:50px; left:0; bottom:0; background:#000;}
+#focus .btn {position:absolute; width:250px; height:50px; right:36px; bottom:0; text-align:right; line-height:50px;}
+#focus .btn span {display:inline-block; _display:inline; _zoom:1; width:12px; height:12px; _font-size:0; margin-left:17px; cursor:pointer; background:url(/picture/0/1909271031499998304.png) no-repeat center;}
+#focus .btn span.on {background: url(/picture/0/1909271031499725425.png) no-repeat center;}
+#focus .preNext {width:45px; height:100px; position:absolute; top:45px; cursor:pointer;}
+#focus .pre {left:0;}
+#focus .next {right:0; background-position:right top;}
+</style>
+<script type="text/javascript">
+$(function() {
+	var sWidth = $("#focus").width(); //获取焦点图的宽度（显示面积）
+	var len = $("#focus ul li").length; //获取焦点图个数
+	var index = 0;
+	var picTimer;
+	
+	//以下代码添加数字按钮和按钮后的半透明条，还有上一页、下一页两个按钮
+	var btn = "<div class='btnBg'></div><div class='btn'>";
+	for(var i=0; i < len; i++) {
+		
+		btn += "<span readexclude></span>";
+	}
+	btn += "</div><div class='preNext pre'></div><div class='preNext next'></div>";
+	$("#focus").append(btn);
+	$("#focus .btnBg").css("opacity",0.5);
+
+	//为小按钮添加鼠标滑入事件，以显示相应的内容
+	$("#focus .btn span").css("opacity",0.4).mouseenter(function() {
+		index = $("#focus .btn span").index(this);
+		showPics(index);
+$(this).attr("tabindex", "-1");  }).eq(0).trigger("mouseenter");
+
+	//上一页、下一页按钮透明度处理
+	$("#focus .preNext").css("opacity",0.2).hover(function() {
+		$(this).stop(true,false).animate({"opacity":"0.5"},300);
+	},function() {
+		$(this).stop(true,false).animate({"opacity":"0.2"},300);
+	});
+
+	//上一页按钮
+	$("#focus .pre").click(function() {
+		index -= 1;
+		if(index == -1) {index = len - 1;}
+		showPics(index);
+	});
+
+	//下一页按钮
+	$("#focus .next").click(function() {
+		index += 1;
+		if(index == len) {index = 0;}
+		showPics(index);
+	});
+
+	//本例为左右滚动，即所有li元素都是在同一排向左浮动，所以这里需要计算出外围ul元素的宽度
+	$("#focus ul").css("width",sWidth * (len));
+	
+	//鼠标滑上焦点图时停止自动播放，滑出时开始自动播放
+	$("#focus").hover(function() {
+		clearInterval(picTimer);
+	},function() {
+		picTimer = setInterval(function() {
+			showPics(index);
+			index++;
+			if(index == len) {index = 0;}
+		},4000); //此4000代表自动播放的间隔，单位：毫秒
+	}).trigger("mouseleave");
+	
+	//显示图片函数，根据接收的index值显示相应的内容
+	function showPics(index) { //普通切换
+		var nowLeft = -index*sWidth; //根据index值计算ul元素的left值
+		$("#focus ul").stop(true,false).animate({"left":nowLeft},300); //通过animate()调整ul元素滚动到计算出的position
+		$("#focus .btn span").removeClass("on").eq(index).addClass("on"); //为当前的按钮切换到选中的效果
+		$("#focus .btn span").stop(true,false).animate({"opacity":"0.4"},300).eq(index).stop(true,false).animate({"opacity":"1"},300); //为当前的按钮切换到选中的效果
+	}
+});
+
+</script>
+<div id="focus">
+<ul>			
+
+<li style="position:relative">
+	<a href="http://dva.shandong.gov.cn/art/2026/1/26/art_157552_10338088.html" target="_blank"  title="全省退役军人事务局长会议召开">
+		 
+		
+		<img src="/picture/0/s_73f9164684114bb597e314209c9d4a3d.jpg" alt="全省退役军人事务局长会议召开" width="775" height="500"/>
+	</a> 
+	<div class="photo_bt" tabindex="-1"  readexclude>
+		<a title="全省退役军人事务局长会议召开" href="http://dva.shandong.gov.cn/art/2026/1/26/art_157552_10338088.html" target="_blank" style="color:#ffffff; font-size:17px; font-family:'微软雅黑'; text-decoration:none;" tabindex="-1"  readexclude>全省退役军人事务局长会议召开</a>
+	</div>
+</li>
+
+<li style="position:relative">
+	<a href="http://dva.shandong.gov.cn/art/2025/11/24/art_157552_10337132.html" target="_blank"  title="第四届山东省退役军人创业创新大赛决赛在滨州成功举办">
+		 
+		
+		<img src="/picture/0/s_4bec50e31cce4a2e8fb8f40cad1f2b95.jpg" alt="第四届山东省退役军人创业创新大赛决赛在滨州成功举办" width="775" height="500"/>
+	</a> 
+	<div class="photo_bt" tabindex="-1"  readexclude>
+		<a title="第四届山东省退役军人创业创新大赛决赛在滨州成功举办" href="http://dva.shandong.gov.cn/art/2025/11/24/art_157552_10337132.html" target="_blank" style="color:#ffffff; font-size:17px; font-family:'微软雅黑'; text-decoration:none;" tabindex="-1"  readexclude>第四届山东省退役军人创业创新大赛决赛在滨州成功举办</a>
+	</div>
+</li>
+
+<li style="position:relative">
+	<a href="http://dva.shandong.gov.cn/art/2025/9/30/art_157552_10336440.html" target="_blank"  title="焦点访谈 ：山河永念 英名不朽">
+		 
+		
+		<img src="/picture/0/04425b56e2fa465ab520b4860c35d972.jpg" alt="焦点访谈 ：山河永念 英名不朽" width="775" height="500"/>
+	</a> 
+	<div class="photo_bt" tabindex="-1"  readexclude>
+		<a title="焦点访谈 ：山河永念 英名不朽" href="http://dva.shandong.gov.cn/art/2025/9/30/art_157552_10336440.html" target="_blank" style="color:#ffffff; font-size:17px; font-family:'微软雅黑'; text-decoration:none;" tabindex="-1"  readexclude>焦点访谈 ：山河永念 英名不朽</a>
+	</div>
+</li>
+
+<li style="position:relative">
+	<a href="http://dva.shandong.gov.cn/art/2025/9/4/art_157552_10335702.html" target="_blank"  title="徐耀带队赴山东调研退役军人工作">
+		 
+		
+		<img src="/picture/0/s_e0602fda0eeb48a2a30958d2d000dd92.png" alt="徐耀带队赴山东调研退役军人工作" width="775" height="500"/>
+	</a> 
+	<div class="photo_bt" tabindex="-1"  readexclude>
+		<a title="徐耀带队赴山东调研退役军人工作" href="http://dva.shandong.gov.cn/art/2025/9/4/art_157552_10335702.html" target="_blank" style="color:#ffffff; font-size:17px; font-family:'微软雅黑'; text-decoration:none;" tabindex="-1"  readexclude>徐耀带队赴山东调研退役军人工作</a>
+	</div>
+</li>
+
+<li style="position:relative">
+	<a href="http://dva.shandong.gov.cn/art/2025/8/28/art_157552_10335537.html" target="_blank"  title="山东省双拥模范表彰大会召开">
+		 
+		
+		<img src="/picture/0/424a9c262c0c4b7989f11bcda953d882.png" alt="山东省双拥模范表彰大会召开" width="775" height="500"/>
+	</a> 
+	<div class="photo_bt" tabindex="-1"  readexclude>
+		<a title="山东省双拥模范表彰大会召开" href="http://dva.shandong.gov.cn/art/2025/8/28/art_157552_10335537.html" target="_blank" style="color:#ffffff; font-size:17px; font-family:'微软雅黑'; text-decoration:none;" tabindex="-1"  readexclude>山东省双拥模范表彰大会召开</a>
+	</div>
+</li>
+
+</ul>
+</div>
+        </div>
+        <div class="main_two_right">
+            <ul class="main_two_right_title yb">
+                <li id="one1" class="active" onmouseover="setTab('one',1,3)"><a href="/col/col94134/index.html?vc_xxgkarea=11370000MB2846333T&number=SD1003" onfocus="setTab('one',1,3)">工作资讯</a><span tabindex="-1"  readexclude>|</span>
+                </li>
+				<li id="one2"  onmouseover="setTab('one',2,3)"><a href="/col/col100309/index.html" onfocus="setTab('one',2,3)">省内要闻</a><span tabindex="-1"  readexclude>|</span>
+				</li>
+                <li id="one3"  onmouseover="setTab('one',3,3)"><a target="_blank" href="/col/col298398/index.html" onfocus="setTab('one',3,3)">时政要闻</a>
+                </li>
+            </ul>
+			<ul class="main_two_right_title sjb">
+			    <li id="one1" class="active" onmouseover="setTabsj('one',1,3)"><a  onfocus="setTabsj('one',1,3)">工作资讯</a><span tabindex="-1"  readexclude>|</span>
+			    </li>
+				<li id="one2"  onmouseover="setTabsj('one',2,3)"><a  onfocus="setTabsj('one',2,3)">省内要闻</a><span tabindex="-1"  readexclude>|</span>
+				</li>
+			    <li id="one3"  onmouseover="setTabsj('one',3,3)"><a target="_blank" onfocus="setTabsj('one',3,3)">时政要闻</a>
+			    </li>
+				<ul class="qh_tit_more">
+					<li id="more-one-1">
+<a href="/col/col94134/index.html?vc_xxgkarea=11370000MB2846333T&number=SD1003" >更多</a>
+</li>
+					<li id="more-one-2" style="display: none;">
+<a href="/col/col100309/index.html" >更多</a>
+</li>
+					<li id="more-one-3" style="display: none;">
+<a href="/col/col298398/index.html" >更多</a>
+</li>
+				</ul>
+			</ul>
+	<span class="sdfr">		
+            <ul class="main_two_right_list" id="con-one-1" style="display:block;">
+                <li><img src="/picture/0/e8f2f3136bff40dfb4806ac2001d19c4.jpg" align="absmiddle" border="0" tabindex="-1"  readexclude><a title='山东省“戎耀齐鲁”退役军人就业创业专项行动正式启动03月27日' target="_blank" href="/art/2026/3/27/art_94134_10338988.html">山东省“戎耀齐鲁”退役军人就业创业专项行动正式启动</a><span tabindex="-1"  readexclude>03-27</span></li><li><img src="/picture/0/e8f2f3136bff40dfb4806ac2001d19c4.jpg" align="absmiddle" border="0" tabindex="-1"  readexclude><a title='齐鲁时代楷模”张军桥同志先进事迹报告会在济南举行03月27日' target="_blank" href="/art/2026/3/27/art_94134_10338986.html">齐鲁时代楷模”张军桥同志先进事迹报告会在济南举行</a><span tabindex="-1"  readexclude>03-27</span></li><li><img src="/picture/0/e8f2f3136bff40dfb4806ac2001d19c4.jpg" align="absmiddle" border="0" tabindex="-1"  readexclude><a title='省退役军人厅党组召开扩大会议传达学习习近平总书记重要讲话和全国两会精神03月16日' target="_blank" href="/art/2026/3/16/art_94134_10338813.html">省退役军人厅党组召开扩大会议传达学习习近平总书记重要讲话和全国两会精神</a><span tabindex="-1"  readexclude>03-16</span></li><li><img src="/picture/0/e8f2f3136bff40dfb4806ac2001d19c4.jpg" align="absmiddle" border="0" tabindex="-1"  readexclude><a title='省退役军人厅党组部署开展树立和践行正确政绩观学习教育03月11日' target="_blank" href="/art/2026/3/11/art_94134_10338727.html">省退役军人厅党组部署开展树立和践行正确政绩观学习教育</a><span tabindex="-1"  readexclude>03-11</span></li><li><img src="/picture/0/e8f2f3136bff40dfb4806ac2001d19c4.jpg" align="absmiddle" border="0" tabindex="-1"  readexclude><a title='省退役军人厅召开2025年度基层党组织书记抓基层党建工作述职评议会议02月05日' target="_blank" href="/art/2026/2/5/art_94134_10338230.html">省退役军人厅召开2025年度基层党组织书记抓基层党建工作述职评议会议</a><span tabindex="-1"  readexclude>02-05</span></li><li><img src="/picture/0/e8f2f3136bff40dfb4806ac2001d19c4.jpg" align="absmiddle" border="0" tabindex="-1"  readexclude><a title='山东军休之歌榜上有名！2025山东“双百”正能量网络精品公布02月03日' target="_blank" href="/art/2026/2/3/art_94134_10338191.html">山东军休之歌榜上有名！2025山东“双百”正能量网络精品公布</a><span tabindex="-1"  readexclude>02-03</span></li><li><img src="/picture/0/e8f2f3136bff40dfb4806ac2001d19c4.jpg" align="absmiddle" border="0" tabindex="-1"  readexclude><a title='国家卫生健康委举办张军桥烈士先进事迹报告会01月30日' target="_blank" href="/art/2026/1/30/art_94134_10338149.html">国家卫生健康委举办张军桥烈士先进事迹报告会</a><span tabindex="-1"  readexclude>01-30</span></li><li><img src="/picture/0/e8f2f3136bff40dfb4806ac2001d19c4.jpg" align="absmiddle" border="0" tabindex="-1"  readexclude><a title='全省退役军人事务局长会议召开01月23日' target="_blank" href="/art/2026/1/23/art_94134_10338029.html">全省退役军人事务局长会议召开</a><span tabindex="-1"  readexclude>01-23</span></li><li><img src="/picture/0/e8f2f3136bff40dfb4806ac2001d19c4.jpg" align="absmiddle" border="0" tabindex="-1"  readexclude><a title='省退役军人厅党组理论学习中心组开展民主生活会会前专题理论学习01月23日' target="_blank" href="/art/2026/1/23/art_94134_10338027.html">省退役军人厅党组理论学习中心组开展民主生活会会前专题理论学习</a><span tabindex="-1"  readexclude>01-23</span></li><li><img src="/picture/0/e8f2f3136bff40dfb4806ac2001d19c4.jpg" align="absmiddle" border="0" tabindex="-1"  readexclude><a title='全省军休宣传工作亮点纷呈喜结硕果01月08日' target="_blank" href="/art/2026/1/8/art_94134_10337824.html">全省军休宣传工作亮点纷呈喜结硕果</a><span tabindex="-1"  readexclude>01-08</span></li>
+
+            </ul>
+            <ul class="main_two_right_list" id="con-one-2" style="display:none;">
+                <li><img src="/picture/0/e8f2f3136bff40dfb4806ac2001d19c4.jpg" align="absmiddle" border="0" tabindex="-1"  readexclude><a title='枣庄｜枣庄推进农村客货邮融合03月27日' target="_blank" href="http://www.shandong.gov.cn/art/2026/3/27/art_97564_721028.html">枣庄｜枣庄推进农村客货邮融合</a><span tabindex="-1"  readexclude>03-27</span></li><li><img src="/picture/0/e8f2f3136bff40dfb4806ac2001d19c4.jpg" align="absmiddle" border="0" tabindex="-1"  readexclude><a title='烟台｜海洋牧场“春耕”忙03月27日' target="_blank" href="http://www.shandong.gov.cn/art/2026/3/27/art_97564_721015.html">烟台｜海洋牧场“春耕”忙</a><span tabindex="-1"  readexclude>03-27</span></li><li><img src="/picture/0/e8f2f3136bff40dfb4806ac2001d19c4.jpg" align="absmiddle" border="0" tabindex="-1"  readexclude><a title='临沂｜临沂以产业为基筑万亿之城03月27日' target="_blank" href="http://www.shandong.gov.cn/art/2026/3/27/art_97564_720998.html">临沂｜临沂以产业为基筑万亿之城</a><span tabindex="-1"  readexclude>03-27</span></li><li><img src="/picture/0/e8f2f3136bff40dfb4806ac2001d19c4.jpg" align="absmiddle" border="0" tabindex="-1"  readexclude><a title='破解神经酰胺百年谜题，山大成果入选“中国科学十大进展”03月27日' target="_blank" href="http://www.shandong.gov.cn/art/2026/3/27/art_97564_720964.html">破解神经酰胺百年谜题，山大成果入选“中国科学十大进展”</a><span tabindex="-1"  readexclude>03-27</span></li><li><img src="/picture/0/e8f2f3136bff40dfb4806ac2001d19c4.jpg" align="absmiddle" border="0" tabindex="-1"  readexclude><a title='山东与东盟共筑农业产供链新生态03月27日' target="_blank" href="http://www.shandong.gov.cn/art/2026/3/27/art_97564_720962.html">山东与东盟共筑农业产供链新生态</a><span tabindex="-1"  readexclude>03-27</span></li><li><img src="/picture/0/e8f2f3136bff40dfb4806ac2001d19c4.jpg" align="absmiddle" border="0" tabindex="-1"  readexclude><a title='青岛｜全国首票“TIR+保税”跨境电商进口业务落地青岛03月27日' target="_blank" href="http://www.shandong.gov.cn/art/2026/3/27/art_97564_720927.html">青岛｜全国首票“TIR+保税”跨境电商进口业务落地青岛</a><span tabindex="-1"  readexclude>03-27</span></li><li><img src="/picture/0/e8f2f3136bff40dfb4806ac2001d19c4.jpg" align="absmiddle" border="0" tabindex="-1"  readexclude><a title='济南｜济南出台创业新政支持青年办企业03月27日' target="_blank" href="http://www.shandong.gov.cn/art/2026/3/27/art_97564_720905.html">济南｜济南出台创业新政支持青年办企业</a><span tabindex="-1"  readexclude>03-27</span></li><li><img src="/picture/0/e8f2f3136bff40dfb4806ac2001d19c4.jpg" align="absmiddle" border="0" tabindex="-1"  readexclude><a title='济宁｜1—2月，济宁规上工业增加值同比增长8.2%03月26日' target="_blank" href="http://www.shandong.gov.cn/art/2026/3/26/art_97564_720879.html">济宁｜1—2月，济宁规上工业增加值同比增长8.2%</a><span tabindex="-1"  readexclude>03-26</span></li><li><img src="/picture/0/e8f2f3136bff40dfb4806ac2001d19c4.jpg" align="absmiddle" border="0" tabindex="-1"  readexclude><a title='东营｜东营储能产业发展“进化论”——从“超级充电宝”到“绿电心脏”03月26日' target="_blank" href="http://www.shandong.gov.cn/art/2026/3/26/art_97564_720835.html">东营｜东营储能产业发展“进化论”——从“超级充电宝”到“绿电心脏”</a><span tabindex="-1"  readexclude>03-26</span></li><li><img src="/picture/0/e8f2f3136bff40dfb4806ac2001d19c4.jpg" align="absmiddle" border="0" tabindex="-1"  readexclude><a title='山东累计培育全国质量标杆87项03月26日' target="_blank" href="http://www.shandong.gov.cn/art/2026/3/26/art_97564_720819.html">山东累计培育全国质量标杆87项</a><span tabindex="-1"  readexclude>03-26</span></li>
+
+            </ul>
+			<ul class="main_two_right_list" id="con-one-3" style="display:none;">
+			    <li><img src="/picture/0/e8f2f3136bff40dfb4806ac2001d19c4.jpg" align="absmiddle" border="0" tabindex="-1"  readexclude><a title='李强主持召开国务院常务会议03月16日' target="_blank" href="/art/2026/3/16/art_298398_10338811.html">李强主持召开国务院常务会议</a><span tabindex="-1"  readexclude>03-16</span></li><li><img src="/picture/0/e8f2f3136bff40dfb4806ac2001d19c4.jpg" align="absmiddle" border="0" tabindex="-1"  readexclude><a title='世界看两会丨国际人士：中国高质量发展为全球经济注入稳定性03月10日' target="_blank" href="/art/2026/3/10/art_298398_10338713.html">世界看两会丨国际人士：中国高质量发展为全球经济注入稳定性</a><span tabindex="-1"  readexclude>03-10</span></li><li><img src="/picture/0/e8f2f3136bff40dfb4806ac2001d19c4.jpg" align="absmiddle" border="0" tabindex="-1"  readexclude><a title='第二场部长通道 回应关切真抓实干（现场·部长通道）03月10日' target="_blank" href="/art/2026/3/10/art_298398_10338712.html">第二场部长通道 回应关切真抓实干（现场·部长通道）</a><span tabindex="-1"  readexclude>03-10</span></li><li><img src="/picture/0/e8f2f3136bff40dfb4806ac2001d19c4.jpg" align="absmiddle" border="0" tabindex="-1"  readexclude><a title='代表委员积极建言献策 有关部门全面记录梳理高效转办回应03月10日' target="_blank" href="/art/2026/3/10/art_298398_10338711.html">代表委员积极建言献策 有关部门全面记录梳理高效转办回应</a><span tabindex="-1"  readexclude>03-10</span></li><li><img src="/picture/0/e8f2f3136bff40dfb4806ac2001d19c4.jpg" align="absmiddle" border="0" tabindex="-1"  readexclude><a title='听民意 汇民智|“今天的反馈很全面也很务实”——全国人大代表张雨霏与国家体育总局工作人员面对面03月09日' target="_blank" href="/art/2026/3/9/art_298398_10338699.html">听民意 汇民智|“今天的反馈很全面也很务实”——全国人大代表张雨霏与国家体育总局工作人员面对面</a><span tabindex="-1"  readexclude>03-09</span></li><li><img src="/picture/0/e8f2f3136bff40dfb4806ac2001d19c4.jpg" align="absmiddle" border="0" tabindex="-1"  readexclude><a title='中国经济信心说丨读懂“十五五”主要指标的深意03月09日' target="_blank" href="/art/2026/3/9/art_298398_10338698.html">中国经济信心说丨读懂“十五五”主要指标的深意</a><span tabindex="-1"  readexclude>03-09</span></li><li><img src="/picture/0/e8f2f3136bff40dfb4806ac2001d19c4.jpg" align="absmiddle" border="0" tabindex="-1"  readexclude><a title='人工智能让产业更“能”（融观察）03月09日' target="_blank" href="/art/2026/3/9/art_298398_10338697.html">人工智能让产业更“能”（融观察）</a><span tabindex="-1"  readexclude>03-09</span></li><li><img src="/picture/0/e8f2f3136bff40dfb4806ac2001d19c4.jpg" align="absmiddle" border="0" tabindex="-1"  readexclude><a title='开启民意“直通车” 两会“旁听员”让基层声音听得到、落得实03月09日' target="_blank" href="/art/2026/3/9/art_298398_10338696.html">开启民意“直通车” 两会“旁听员”让基层声音听得到、落得实</a><span tabindex="-1"  readexclude>03-09</span></li><li><img src="/picture/0/e8f2f3136bff40dfb4806ac2001d19c4.jpg" align="absmiddle" border="0" tabindex="-1"  readexclude><a title='政府工作报告里的变与不变03月09日' target="_blank" href="/art/2026/3/9/art_298398_10338695.html">政府工作报告里的变与不变</a><span tabindex="-1"  readexclude>03-09</span></li><li><img src="/picture/0/e8f2f3136bff40dfb4806ac2001d19c4.jpg" align="absmiddle" border="0" tabindex="-1"  readexclude><a title='两会新华视点｜“十五五”规划纲要草案的新指标、新看点03月09日' target="_blank" href="/art/2026/3/9/art_298398_10338694.html">两会新华视点｜“十五五”规划纲要草案的新指标、新看点</a><span tabindex="-1"  readexclude>03-09</span></li>
+			
+			</ul>
+          </span>
+        </div>
+    </div>
+    <div class="main_three">
+        <div class="main_three_left"  ergodic="view" barrierfree_zone_dsc="视窗区">
+            <ul class="tad_title" style="height:54px;">
+                <li class="current currentzw" style="height:54px;line-height:54px; width:150px;"><a href="/col/col66301/index.html">政府信息公开</a>
+                </li>
+            </ul>
+            <div class="main_three_left1">
+                <div class="zcwj">
+                    <p><a href="/col/col298075/index.html">政策文件</a>
+                    </p>
+                    <ul class="tad">
+                        <li><img src="/picture/0/e8f2f3136bff40dfb4806ac2001d19c4.jpg" align="absmiddle" border="0" tabindex="-1"  readexclude ><a title='山东省退役军人事务厅 中共山东省委组织部 山东省财政厅关于调整部分优抚对象等人员抚恤和生活补助标准的通知（2025年）' target="_blank" href="http://dva.shandong.gov.cn/art/2026/1/5/art_298075_78323.html">山东省退役军人事务厅 中共山东省委组织部 山东省财政厅关于调整部分优抚对象等人员抚恤和生活补助标准的通知（2025年）</a><span tabindex="-1"  readexclude>01-05</span></li><li><img src="/picture/0/e8f2f3136bff40dfb4806ac2001d19c4.jpg" align="absmiddle" border="0" tabindex="-1"  readexclude ><a title='关于修改并继续执行《关于加强移交政府安置的军队离休退休干部医疗保障工作的意见》的通知' target="_blank" href="http://dva.shandong.gov.cn/art/2025/12/26/art_298075_78256.html">关于修改并继续执行《关于加强移交政府安置的军队离休退休干部医疗保障工作的意见》的通知</a><span tabindex="-1"  readexclude>12-26</span></li><li><img src="/picture/0/e8f2f3136bff40dfb4806ac2001d19c4.jpg" align="absmiddle" border="0" tabindex="-1"  readexclude ><a title='山东省退役军人事务厅 山东省财政厅关于印发《山东省军队离休退休干部荣誉疗养办法》的通知' target="_blank" href="http://dva.shandong.gov.cn/art/2025/12/11/art_298075_77894.html">山东省退役军人事务厅 山东省财政厅关于印发《山东省军队离休退休干部荣誉疗养办法》的通知</a><span tabindex="-1"  readexclude>12-11</span></li><li><img src="/picture/0/e8f2f3136bff40dfb4806ac2001d19c4.jpg" align="absmiddle" border="0" tabindex="-1"  readexclude ><a title='关于修订《山东省残疾军人康复辅助器具配置实施办法》的通知' target="_blank" href="http://dva.shandong.gov.cn/art/2025/12/2/art_298075_77678.html">关于修订《山东省残疾军人康复辅助器具配置实施办法》的通知</a><span tabindex="-1"  readexclude>12-02</span></li><li><img src="/picture/0/e8f2f3136bff40dfb4806ac2001d19c4.jpg" align="absmiddle" border="0" tabindex="-1"  readexclude ><a title='关于修改并继续执行《山东省退役军人事务厅等10部门关于印发山东省抚恤定补优抚对象住房优待办法的通知》的通知' target="_blank" href="http://dva.shandong.gov.cn/art/2025/11/27/art_298075_77679.html">关于修改并继续执行《山东省退役军人事务厅等10部门关于印发山东省抚恤定补优抚对象住房优待办法的通知》的通知</a><span tabindex="-1"  readexclude>11-27</span></li>
+
+                    </ul>
+                </div>
+                <div class="zcjd">
+                    <p><a href="/col/col360353/index.html">政策解读</a>
+                    </p>
+                    <ul class="tad">
+                        <li><img src="/picture/0/e8f2f3136bff40dfb4806ac2001d19c4.jpg" align="absmiddle" border="0" tabindex="-1"  readexclude ><a title='《关于调整部分优抚对象等人员抚恤和生活补助标准的通知》（鲁退役军人发〔2025〕45号）政策解读' target="_blank" href="http://dva.shandong.gov.cn/art/2026/1/6/art_360353_15332.html">《关于调整部分优抚对象等人员抚恤和生活补助标准的通知》（鲁退役军人发〔2025〕45号）政策解读</a><span tabindex="-1"  readexclude>01-06</span></li><li><img src="/picture/0/e8f2f3136bff40dfb4806ac2001d19c4.jpg" align="absmiddle" border="0" tabindex="-1"  readexclude ><a title='《山东省军队离休退休干部荣誉疗养办法》解读' target="_blank" href="http://dva.shandong.gov.cn/art/2025/12/12/art_360353_14941.html">《山东省军队离休退休干部荣誉疗养办法》解读</a><span tabindex="-1"  readexclude>12-12</span></li><li><img src="/picture/0/e8f2f3136bff40dfb4806ac2001d19c4.jpg" align="absmiddle" border="0" tabindex="-1"  readexclude ><a title='《山东省残疾军人康复辅助器具配置实施办法》政策解读' target="_blank" href="http://dva.shandong.gov.cn/art/2025/12/2/art_360353_14861.html">《山东省残疾军人康复辅助器具配置实施办法》政策解读</a><span tabindex="-1"  readexclude>12-02</span></li><li><img src="/picture/0/e8f2f3136bff40dfb4806ac2001d19c4.jpg" align="absmiddle" border="0" tabindex="-1"  readexclude ><a title='《关于做好退役军人移交接收期间户口登记工作的通知》政策解读' target="_blank" href="http://dva.shandong.gov.cn/art/2025/10/30/art_360353_14284.html">《关于做好退役军人移交接收期间户口登记工作的通知》政策解读</a><span tabindex="-1"  readexclude>10-30</span></li><li><img src="/picture/0/e8f2f3136bff40dfb4806ac2001d19c4.jpg" align="absmiddle" border="0" tabindex="-1"  readexclude ><a title='《关于全面做好退役士兵教育培训工作的实施意见》政策解读' target="_blank" href="http://dva.shandong.gov.cn/art/2025/8/1/art_360353_14094.html">《关于全面做好退役士兵教育培训工作的实施意见》政策解读</a><span tabindex="-1"  readexclude>08-01</span></li>
+
+                    </ul>
+                </div>
+            </div>
+            <ul class="main_three_left2">
+                <li><a href="/col/col159338/index.html?vc_xxgkarea=11370000MB2846333T"><img src="/picture/0/30d30f671b8b456c9fdd834ac11b8467.png" alt=""><span style="font-size: 13px;">政府信息公开指南</span></a></li>
+<li><a href="/col/col93360/index.html?vc_xxgkarea=11370000MB2846333T&jh=262"><img src="/picture/0/ea7aa3f9bb2044a29d188f0096fffe7d.png" alt=""><span style="font-size: 13px;">政府信息公开制度</span></a></li>
+
+<li><a href="http://dva.shandong.gov.cn/col/col93360/index.html?vc_xxgkarea=11370000MB2846333T&jh=263"><img src="/picture/0/c1ed13842f3b4c38857247253b4a9c53.png" alt=""><span style="font-size: 13px;">政府信息公开目录</span></a></li>
+<li><a href="http://www.shandong.gov.cn/ysqgk/frontDeptDetail?dept=21"><img src="/picture/0/fdfdf101ac4443f98997224f35991901.png"><span style="font-size: 13px;">政府信息公开申请</span></a></li>
+
+            </ul>
+            <div class="main_three_left3" style="height:110px;">
+                
+<style type="text/css">
+/* qqshop focus1 */
+*{ padding:0; list-style:none; border:none;}
+#focus1 {width:755px; height:110px; overflow:hidden; position:relative;margin:0 auto; z-index:1}
+#focus1 ul {height:860px; position:absolute;margin:0;padding:0;}
+#focus1 ul li {float:left; width:755px; height:110px; overflow:hidden; position:relative; background:#000;}
+#focus1 ul li div.photo_bt1 {position:absolute; bottom:0; left:12px; color:#ffffff; z-index:1; line-height:50px;padding-left: 15px;}
+/*#focus1 .btnBg {position:absolute; width:755px; height:50px; left:0; bottom:0; background:#000;}*/
+#focus1 .btn {position:absolute; width:250px; height:20px; right:0px; bottom:0px; text-align:right; line-height:20px;}
+#focus1 .btn span {display:inline-block; _display:inline; _zoom:1; width:22px; height:20px;color:#ffffff;text-align: center; _font-size:0; margin-left:2px; cursor:pointer; background:#4f6ea3;}
+#focus1 .btn span.on {background:#c10d0c;}
+#focus1 .preNext {width:45px; height:100px; position:absolute; top:45px; cursor:pointer;}
+#focus1 .pre {left:0;}
+#focus1 .next {right:0; background-position:right top;}
+</style>
+<script type="text/javascript">
+$(function() {
+	var sWidth = $("#focus1").width(); //获取焦点图的宽度（显示面积）
+	var len = $("#focus1 ul li").length; //获取焦点图个数
+	var index = 0;
+	var picTimer;
+	
+	//以下代码添加数字按钮和按钮后的半透明条，还有上一页、下一页两个按钮
+	var btn = "<div class='btnBg'></div><div class='btn'>";
+	for(var i=1; i < len+1; i++) {
+		btn += "<span readexclude>"+i+"</span>";
+	}
+	/*btn += "</div><div class='preNext pre'></div><div class='preNext next'></div>";*/
+	$("#focus1").append(btn);
+	$("#focus1 .btnBg").css("opacity",0.5);
+
+	//为小按钮添加鼠标滑入事件，以显示相应的内容
+	$("#focus1 .btn span").css("opacity",0.8).mouseenter(function() {
+		index = $("#focus1 .btn span").index(this);
+		showPics(index);
+	}).eq(0).trigger("mouseenter");
+
+	//上一页、下一页按钮透明度处理
+	$("#focus1 .preNext").css("opacity",0.2).hover(function() {
+		$(this).stop(true,false).animate({"opacity":"0.5"},300);
+	},function() {
+		$(this).stop(true,false).animate({"opacity":"0.2"},300);
+	});
+
+	//上一页按钮
+	$("#focus1 .pre").click(function() {
+		index -= 1;
+		if(index == -1) {index = len - 1;}
+		showPics(index);
+	});
+
+	//下一页按钮
+	$("#focus1 .next").click(function() {
+		index += 1;
+		if(index == len) {index = 0;}
+		showPics(index);
+	});
+
+	//本例为左右滚动，即所有li元素都是在同一排向左浮动，所以这里需要计算出外围ul元素的宽度
+	$("#focus1 ul").css("width",sWidth * (len));
+	
+	//鼠标滑上焦点图时停止自动播放，滑出时开始自动播放
+	$("#focus1").hover(function() {
+		clearInterval(picTimer);
+	},function() {
+		picTimer = setInterval(function() {
+			showPics(index);
+			index++;
+			if(index == len) {index = 0;}
+		},4000); //此4000代表自动播放的间隔，单位：毫秒
+	}).trigger("mouseleave");
+	
+	//显示图片函数，根据接收的index值显示相应的内容
+	function showPics(index) { //普通切换
+		var nowLeft = -index*sWidth; //根据index值计算ul元素的left值
+		$("#focus1 ul").stop(true,false).animate({"left":nowLeft},300); //通过animate()调整ul元素滚动到计算出的position
+		$("#focus1 .btn span").removeClass("on").eq(index).addClass("on"); //为当前的按钮切换到选中的效果
+		$("#focus1 .btn span").stop(true,false).animate({"opacity":"0.8"},300).eq(index).stop(true,false).animate({"opacity":"1"},300); //为当前的按钮切换到选中的效果
+	}
+});
+
+</script>
+<div id="focus1">
+<ul>			
+
+<li style="position:relative">
+	<a href="https://sdxw.iqilu.com/service/zt/kzjy/index.html" title="山河铭记｜山东抗战记忆线上长廊">
+		 
+		
+		<img src="/picture/0/c0458ff91bd0413c889618cec9c794b8.png" alt="山河铭记｜山东抗战记忆线上长廊" width="755" height="110"/>
+	</a> 
+</li>
+
+<li style="position:relative">
+	<a href="/col/col359619/index.html" title="2025年全省转业军官安置考试">
+		 
+		
+		<img src="/picture/0/5bb1cbb2ff1c488dad9427cc6155ada6.png" alt="2025年全省转业军官安置考试" width="755" height="110"/>
+	</a> 
+</li>
+
+<li style="position:relative">
+	<a href="https://www.mva.gov.cn/sy/shipin/zcfgxcjd/index.html" title="退役军人工作政策法规宣传解读短视频">
+		 
+		
+		<img src="/picture/0/0e0eacf542a64c2e8ffa5589b9d395c0.jpg" alt="退役军人工作政策法规宣传解读短视频" width="755" height="110"/>
+	</a> 
+</li>
+
+<li style="position:relative">
+	<a href="http://dva.shandong.gov.cn/col/col353994/index.html" title="优待专栏">
+		 
+		
+		<img src="/picture/0/d67d63ba6ad44799896511e1a62d1105.png" alt="优待专栏" width="755" height="110"/>
+	</a> 
+</li>
+
+<li style="position:relative">
+	<a href="/col/col347483/index.html" title="“像英烈那样守纪律”山东英烈守纪故事">
+		 
+		
+		<img src="/picture/0/161568051d57426fa1387bcb20564486.jpg" alt="“像英烈那样守纪律”山东英烈守纪故事" width="755" height="110"/>
+	</a> 
+</li>
+
+<li style="position:relative">
+	<a href="http://www.sdmartyrs.cn/#/onlineMemorial/index" title="2024崇尚">
+		 
+		
+		<img src="/picture/0/af3728f5e9954224915f11b5de661a66.jpg" alt="2024崇尚" width="755" height="110"/>
+	</a> 
+</li>
+
+</ul>
+</div>
+
+
+
+
+
+                
+            </div>
+            <div class="main_three_left4">
+                <ul class="tad_title" style="height:54px;">
+                    <li class="current currentfw" style="height:54px;line-height:54px;"><a href="/col/col65451/index.html">服务</a>
+                    </li>
+                </ul>
+                <div class="zwfw">
+                    <div class="zwfw_img" style="overflow: hidden;">
+	<div style="float:right;width:365px;height:150px;" class="zwffpt">
+		<div style="width:170px;height:150px;float: left;">
+			<a target="_blank" href="http://www.shandong.gov.cn/api-gateway/jpaas-jiq-web-sdywtb/front/item/bmft_index?orgCode=SD370000TYJR&deptName=%E7%9C%81%E9%80%80%E5%BD%B9%E5%86%9B%E4%BA%BA%E5%8E%85"
+			 style="display:block;height:100%;" title="山东政务服务网">
+				<img alt="山东政务服务网" src="/picture/0/1910251017141908089.jpg" style="height:150px;width: 170px;" />
+			</a>
+		</div>
+		<div style="width:170px;height:150px;float: left;margin-left: 25px;" class="tyzxxx">
+			<a title="退役军人在线学习平台" target="_blank" href="https://www.mvazqh.org.cn/" style="display:block;height:100%;">
+				<img alt="退役军人在线学习平台" src="/picture/0/1910251017141477686.jpg" style="height:150px;width: 170px;" />
+			</a>
+		</div>
+	</div>
+</div>
+
+                    <ul class="zwfw_list">
+                        <li><a href="/col/col65471/index.html"><img src="/picture/0/1909271256105993037.jpg"><span>权益维护</span></a></li><li><a href="/col/col65472/index.html"><img src="/picture/0/1909271256106365095.jpg"><span>退役安置</span></a></li><li><a href="/col/col65475/index.html"><img src="/picture/0/1909271256106765078.jpg"><span>就业服务</span></a></li><li><a href="/col/col65477/index.html"><img src="/picture/0/1909271256107033238.png"><span>英烈褒扬</span></a></li><li><a href="/col/col187824/index.html"><img src="/picture/0/1909271256107337195.jpg"><span>军休生活</span></a></li><li><a href="/col/col65477/index.html"><img src="/picture/0/1909271256107577333.jpg"><span>优抚褒扬</span></a></li><li><a href="/col/col98187/index.html"><img src="/picture/0/20701232aabc48a7bf5dbd4b99860dda.jpg"><span>双拥风采</span></a></li><li><a href="/col/col65485/index.html"><img src="/picture/0/1909271256108086657.png"><span>教育培训</span></a></li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="main_three_left5">
+                <ul class="tad_title" style="height:54px;">
+                    <li class="current currenthd" style="height:54px;line-height:54px;"><a href="/col/col65452/index.html">互动</a>
+                    </li>
+                </ul>
+                <p class="xwfbh"><a href="/col/col93387/index.html" style="height: 50px;line-height: 50px;color: #355e92;">新闻发布会</a>
+                </p>
+                <div class="bt_xwfbh">
+                    
+
+
+
+<a href="/art/2025/5/26/art_93387_10334167.html" target="_blank" class="xwfbh_img" title="山东省退役军人事务厅、北部战区陆军政治工作部联合开展“送政策法规、送职业规划、送招聘信息”进军营活动"><img alt="山东省退役军人事务厅、北部战区陆军政治工作部联合开展“送政策法规、送职业规划、送招聘信息”进军营活动"
+	 src="/picture/0/s_9d55c4c2e71e4db19ee88953e6823a38.png">
+</a>
+<p class="xwfbh_con">
+	<a href="/art/2025/5/26/art_93387_10334167.html" target="_blank" title='山东省退役军人事务厅、北部战区陆军政治工作部联合开展“送政策法规、送职业规划、送招聘信息”进军营活动'>
+		山东省退役军人事务厅、北部战区陆军政治工作部联合开...
+	</a>
+	<span tabindex="-1"  readexclude>
+		点击播放视频为认真学习贯彻党的二十大和二十届二中、三中全会精神，深入贯彻落实习近平总书记关于退役军人工作重要论述，进一步弘扬双拥光荣传统，凝聚军政军民合力，深入实施就业优先战略，促进退役军人高质量充分...
+	</span>
+</p>
+
+
+                    <ul class="hdjl_list">
+                        
+<li>
+	<a href="/col/col65459/index.html">
+		<img src="/picture/0/dc1c0a7ccb2342b0852eb878b4f2b2e6.png" class="ystb">
+		<img src="/picture/3862/2408211912009831457.jpg" class="oldtub">
+		<span>
+			厅长信箱
+		</span>
+	</a>
+</li>
+
+<li>
+	<a href="/col/col97786/index.html">
+		<img src="/picture/0/ad304da2878e4019978b75b56e05d0a4.png" class="ystb">
+		<img src="/picture/3862/2408211912010282702.jpg" class="oldtub">
+		<span>
+			业务咨询
+		</span>
+	</a>
+</li>
+
+<li>
+	<a href="/col/col94084/index.html">
+		<img src="/picture/0/f2e89610b4ce4cda842e91dc84492ef7.png" class="ystb">
+		<img src="/picture/3862/2408211912010783222.jpg" class="oldtub">
+		<span>
+			网上信访
+		</span>
+	</a>
+</li>
+
+<li>
+	<a href="/col/col93359/index.html">
+		<img src="/picture/0/651e02c81abc42c18168fb1647dc52f5.png" class="ystb">
+		<img src="/picture/3862/2408211912010532503.png" class="oldtub">
+		<span>
+			意见征集
+		</span>
+	</a>
+</li>
+
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="main_three_right" ergodic="view" barrierfree_zone_dsc="视窗区">
+            <ul class="tad_title">
+                <li class="current"><a href="/col/col65455/index.html">通知公告</a>
+                </li>
+            </ul>
+            <ul class="main_three_right_list">
+                <li><img src="/picture/0/9e82bda62be04c9c8827905cd92988ae.jpg" align="absmiddle" border="0" tabindex="-1"  readexclude><a title='2026年度省属医疗卫生事业单位公开招聘人员公告03月05日' target="_blank" href="http://hrss.shandong.gov.cn/articles/ch00232/202603/b7ce1c26-4396-44f1-8969-267f5e55d9c3.shtml">2026年度省属医疗卫生事业单位公开招聘人员公告</a><span tabindex="-1"  readexclude>03-05</span></li><li><img src="/picture/0/9e82bda62be04c9c8827905cd92988ae.jpg" align="absmiddle" border="0" tabindex="-1"  readexclude><a title='山东省退役军人事务厅 中共山东省委组织部 山东省财政厅关于调整部分优抚对象等人员抚恤和生活补助标准的通知01月05日' target="_blank" href="/art/2026/1/5/art_65455_10337746.html">山东省退役军人事务厅 中共山东省委组织部 山东省财政厅关于调整部分优抚对象等人员抚恤和生活补助标准的通知</a><span tabindex="-1"  readexclude>01-05</span></li><li><img src="/picture/0/9e82bda62be04c9c8827905cd92988ae.jpg" align="absmiddle" border="0" tabindex="-1"  readexclude><a title='关于2025年烈士评定结果的公示12月23日' target="_blank" href="/art/2025/12/23/art_65455_10337576.html">关于2025年烈士评定结果的公示</a><span tabindex="-1"  readexclude>12-23</span></li><li><img src="/picture/0/9e82bda62be04c9c8827905cd92988ae.jpg" align="absmiddle" border="0" tabindex="-1"  readexclude><a title='第四届山东省退役军人创业创新大赛拟入围决赛项目及企业（团队）公示11月03日' target="_blank" href="/art/2025/11/3/art_65455_10336735.html">第四届山东省退役军人创业创新大赛拟入围决赛项目及企业（团队）公示</a><span tabindex="-1"  readexclude>11-03</span></li><li><img src="/picture/0/9e82bda62be04c9c8827905cd92988ae.jpg" align="absmiddle" border="0" tabindex="-1"  readexclude><a title='省委、省政府、省军区决定表彰山东省双拥模范先进集体和先进个人09月01日' target="_blank" href="/art/2025/9/1/art_65455_10335613.html">省委、省政府、省军区决定表彰山东省双拥模范先进集体和先进个人</a><span tabindex="-1"  readexclude>09-01</span></li><li><img src="/picture/0/9e82bda62be04c9c8827905cd92988ae.jpg" align="absmiddle" border="0" tabindex="-1"  readexclude><a title='关于2025年山东省烈士事迹编纂和宣传教育中心公开招聘工作人员资格审查的通知05月20日' target="_blank" href="/art/2025/5/20/art_65455_10334057.html">关于2025年山东省烈士事迹编纂和宣传教育中心公开招聘工作人员资格审查的通知</a><span tabindex="-1"  readexclude>05-20</span></li><li><img src="/picture/0/9e82bda62be04c9c8827905cd92988ae.jpg" align="absmiddle" border="0" tabindex="-1"  readexclude><a title='《走近英雄：山东省纪念抗战胜利80周年文集》征稿启事04月21日' target="_blank" href="/art/2025/4/21/art_65455_10333478.html">《走近英雄：山东省纪念抗战胜利80周年文集》征稿启事</a><span tabindex="-1"  readexclude>04-21</span></li><li><img src="/picture/0/9e82bda62be04c9c8827905cd92988ae.jpg" align="absmiddle" border="0" tabindex="-1"  readexclude><a title='山东省退役军人服务“一件事”办事指南02月28日' target="_blank" href="/art/2025/2/28/art_65455_10334831.html">山东省退役军人服务“一件事”办事指南</a><span tabindex="-1"  readexclude>02-28</span></li>
+
+            </ul>
+			<ul class="tad_title" style="display:none;">
+			    <li class="current">
+			    </li>
+			</ul>
+			<div class="main_three_right1" style="display:none;padding-top:0px;">
+			    
+			</div>
+            <ul class="tad_title yb">
+                <li id="two1" class="current" onmouseover="Tab('two',1,3)"><a href="/col/col83495/index.html" onfocus="Tab('two',1,3)">厅内信息</a>
+                </li>
+                <li id="two2" onmouseover="Tab('two',2,3)"><a href="/col/col97787/index.html" onfocus="Tab('two',2,3)">市县交流</a>
+                </li>
+				<li id="two3" onmouseover="Tab('two',3,3)"><a href="/col/col191313/index.html" onfocus="Tab('two',3,3)">媒体报道</a>
+				</li>
+            </ul>
+			<ul class="tad_title sjb sjbs">
+			    <li id="two1" class="current" onmouseover="Tab('two',1,3)"><a  onfocus="Tab('two',1,3)">厅内信息</a>
+			    </li>
+			    <li id="two2" onmouseover="Tab('two',2,3)"><a  onfocus="Tab('two',2,3)">市县交流</a>
+			    </li>
+				<li id="two3" onmouseover="Tab('two',3,3)"><a  onfocus="Tab('two',3,3)">媒体报道</a>
+				</li>
+				<ul class="qh_tit_more">
+					<li id="more-two-1">
+<a href="/col/col83495/index.html">更多</a>
+</li>
+					<li id="more-two-2" style="display: none;">
+<a href="/col/col97787/index.html">更多</a>
+</li>
+					<li id="more-two-3" style="display: none;">
+<a href="/col/col191313/index.html">更多</a>
+</li>
+				</ul>
+			</ul>
+	<span class="sdfr sdfrs">	
+            <div class="main_three_right1" id="con-two-1" style="display:block;">
+                                <a target="_blank" class="main_three_right1_con" href="/art/2026/2/6/art_83495_10338238.html" title='省退役军人厅军休服务管理处与临沂市退役军人事务局联合开展主题党日活动'><img src="/picture/0/s_8afb3e29f6d94b8c91563f647b543c7b.jpg"><span>省退役军人厅军休服务管理处与临沂市退役军人事务局联合开展主题党日活动</span></a>
+
+
+                <ul class="main_three_right_list" style="padding-top: 20px;padding-bottom: 22px">
+                    <li><img src="/picture/0/9e82bda62be04c9c8827905cd92988ae.jpg" align="absmiddle" border="0" tabindex="-1"  readexclude><a title='省退役军人厅举办2026年第1期“崇军大讲堂”03月20日' target="_blank" href="/art/2026/3/20/art_83495_10338869.html">省退役军人厅举办2026年第1期“崇军大讲堂”</a><span tabindex="-1"  readexclude>03-20</span></li><li><img src="/picture/0/9e82bda62be04c9c8827905cd92988ae.jpg" align="absmiddle" border="0" tabindex="-1"  readexclude><a title='省退役军人厅2025年新录用选调生赴基层锻炼03月17日' target="_blank" href="/art/2026/3/17/art_83495_10338828.html">省退役军人厅2025年新录用选调生赴基层锻炼</a><span tabindex="-1"  readexclude>03-17</span></li><li><img src="/picture/0/9e82bda62be04c9c8827905cd92988ae.jpg" align="absmiddle" border="0" tabindex="-1"  readexclude><a title='省退役军人厅开展厅属单位人事人才工作专题学习研讨03月16日' target="_blank" href="/art/2026/3/16/art_83495_10338810.html">省退役军人厅开展厅属单位人事人才工作专题学习研讨</a><span tabindex="-1"  readexclude>03-16</span></li><li><img src="/picture/0/9e82bda62be04c9c8827905cd92988ae.jpg" align="absmiddle" border="0" tabindex="-1"  readexclude><a title='山东省第三荣军优抚医院以高质量党建赋能荣军服务工作提质增效03月13日' target="_blank" href="/art/2026/3/13/art_83495_10338769.html">山东省第三荣军优抚医院以高质量党建赋能荣军服务工作提质增效</a><span tabindex="-1"  readexclude>03-13</span></li><li><img src="/picture/0/9e82bda62be04c9c8827905cd92988ae.jpg" align="absmiddle" border="0" tabindex="-1"  readexclude><a title='省退役军人厅开展庆祝2026年“三八”国际妇女节活动03月09日' target="_blank" href="/art/2026/3/9/art_83495_10338692.html">省退役军人厅开展庆祝2026年“三八”国际妇女节活动</a><span tabindex="-1"  readexclude>03-09</span></li><li><img src="/picture/0/9e82bda62be04c9c8827905cd92988ae.jpg" align="absmiddle" border="0" tabindex="-1"  readexclude><a title='省退役军人厅军休服务管理处与临沂市退役军人事务局联合开展主题党日活动02月06日' target="_blank" href="/art/2026/2/6/art_83495_10338238.html">省退役军人厅军休服务管理处与临沂市退役军人事务局联合开展主题党日活动</a><span tabindex="-1"  readexclude>02-06</span></li><li><img src="/picture/0/9e82bda62be04c9c8827905cd92988ae.jpg" align="absmiddle" border="0" tabindex="-1"  readexclude><a title='山东省第三荣军优抚医院召开高质量发展考核复盘总结会剖析短板明方向 凝心聚力再出发02月06日' target="_blank" href="/art/2026/2/6/art_83495_10338277.html">山东省第三荣军优抚医院召开高质量发展考核复盘总结会剖析短板明方向 凝心聚力再出发</a><span tabindex="-1"  readexclude>02-06</span></li><li><img src="/picture/0/9e82bda62be04c9c8827905cd92988ae.jpg" align="absmiddle" border="0" tabindex="-1"  readexclude><a title='省退役军人厅有关处室（单位）与山东青年政治学院马克思主义学院开展“弘扬英烈精神与青年思政教育创新”座谈02月06日' target="_blank" href="/art/2026/2/6/art_83495_10338234.html">省退役军人厅有关处室（单位）与山东青年政治学院马克思主义学院开展“弘扬英烈精神与青年思政教育创新”座谈</a><span tabindex="-1"  readexclude>02-06</span></li>
+
+                </ul>
+            </div>
+            <div class="main_three_right1" id="con-two-2" style="display:none;">
+                                 <a target="_blank" class="main_three_right1_con" href="/art/2026/3/27/art_97787_10338768.html" title='泰安市：2026年全市退役军人事务工作会议召开'><img src="/picture/0/s_dcaa81b0ec844198ab8c52993280a1df.jpg"><span>泰安市：2026年全市退役军人事务工作会议召开</span></a>
+
+
+                <ul class="main_three_right_list" style="padding-top: 20px;padding-bottom: 22px">
+                    <li><img src="/picture/0/9e82bda62be04c9c8827905cd92988ae.jpg" align="absmiddle" border="0" tabindex="-1"  readexclude><a title='泰安市：2026年全市退役军人事务工作会议召开03月27日' target="_blank" href="/art/2026/3/27/art_97787_10338768.html">泰安市：2026年全市退役军人事务工作会议召开</a><span tabindex="-1"  readexclude>03-27</span></li><li><img src="/picture/0/9e82bda62be04c9c8827905cd92988ae.jpg" align="absmiddle" border="0" tabindex="-1"  readexclude><a title='淄博市周村区：“加减乘除”工作法做好春季自主就业退役士兵返乡报到“一件事”03月26日' target="_blank" href="/art/2026/3/26/art_97787_10338714.html">淄博市周村区：“加减乘除”工作法做好春季自主就业退役士兵返乡报到“一件事”</a><span tabindex="-1"  readexclude>03-26</span></li><li><img src="/picture/0/9e82bda62be04c9c8827905cd92988ae.jpg" align="absmiddle" border="0" tabindex="-1"  readexclude><a title='枣庄市滕州市：隆重举行滕县保卫战88周年纪念活动03月25日' target="_blank" href="/art/2026/3/25/art_97787_10338846.html">枣庄市滕州市：隆重举行滕县保卫战88周年纪念活动</a><span tabindex="-1"  readexclude>03-25</span></li><li><img src="/picture/0/9e82bda62be04c9c8827905cd92988ae.jpg" align="absmiddle" border="0" tabindex="-1"  readexclude><a title='威海市荣成市：以英烈事迹赋能预定新兵思想铸魂03月24日' target="_blank" href="/art/2026/3/24/art_97787_10338756.html">威海市荣成市：以英烈事迹赋能预定新兵思想铸魂</a><span tabindex="-1"  readexclude>03-24</span></li><li><img src="/picture/0/9e82bda62be04c9c8827905cd92988ae.jpg" align="absmiddle" border="0" tabindex="-1"  readexclude><a title='济宁市嘉祥县：榜样引领强信念 新兵整装赴军营03月23日' target="_blank" href="/art/2026/3/23/art_97787_10338855.html">济宁市嘉祥县：榜样引领强信念 新兵整装赴军营</a><span tabindex="-1"  readexclude>03-23</span></li><li><img src="/picture/0/9e82bda62be04c9c8827905cd92988ae.jpg" align="absmiddle" border="0" tabindex="-1"  readexclude><a title='济南市：举办驻济部队随军家属专场招聘会03月20日' target="_blank" href="/art/2026/3/20/art_97787_10338853.html">济南市：举办驻济部队随军家属专场招聘会</a><span tabindex="-1"  readexclude>03-20</span></li><li><img src="/picture/0/9e82bda62be04c9c8827905cd92988ae.jpg" align="absmiddle" border="0" tabindex="-1"  readexclude><a title='东营市广饶县：组织预定新兵开展“追寻·2026·清明祭英烈”主题教育03月19日' target="_blank" href="/art/2026/3/19/art_97787_10338854.html">东营市广饶县：组织预定新兵开展“追寻·2026·清明祭英烈”主题教育</a><span tabindex="-1"  readexclude>03-19</span></li><li><img src="/picture/0/9e82bda62be04c9c8827905cd92988ae.jpg" align="absmiddle" border="0" tabindex="-1"  readexclude><a title='淄博市张店区：军地联动开展爱国主义教育进校园活动03月19日' target="_blank" href="/art/2026/3/19/art_97787_10338708.html">淄博市张店区：军地联动开展爱国主义教育进校园活动</a><span tabindex="-1"  readexclude>03-19</span></li>
+
+                </ul>
+            </div>
+			<div class="main_three_right1" id="con-two-3" style="display:none;">
+			                    <a target="_blank" class="main_three_right1_con" href="http://dva.shandong.gov.cn/art/2025/12/24/art_191313_7281.html" title='新华社：一座小城，如何成为军人军属的暖心港湾？'><img src="/picture/0/s_e6ebe56f605c43c69dcd0fd6247a7500.png"><span>新华社：一座小城，如何成为军人军属的暖心...</span></a>
+
+			
+			    <ul class="main_three_right_list" style="padding-top: 20px;padding-bottom: 22px">
+			        <li><img src="/picture/0/9e82bda62be04c9c8827905cd92988ae.jpg" align="absmiddle" border="0" tabindex="-1"  readexclude><a title='大众新闻：机会多多！山东省“戎耀齐鲁”退役军人就业创业专项行动正式启动03月27日' target="_blank" href="http://dva.shandong.gov.cn/art/2026/3/27/art_191313_7442.html">大众新闻：机会多多！山东省“戎耀齐鲁”退役军人就业创业专项行动正式启动</a><span tabindex="-1"  readexclude>03-27</span></li><li><img src="/picture/0/9e82bda62be04c9c8827905cd92988ae.jpg" align="absmiddle" border="0" tabindex="-1"  readexclude><a title='新华网：山东省退役军人就业创业专项行动启动仪式27日举行03月27日' target="_blank" href="http://dva.shandong.gov.cn/art/2026/3/27/art_191313_7441.html">新华网：山东省退役军人就业创业专项行动启动仪式27日举行</a><span tabindex="-1"  readexclude>03-27</span></li><li><img src="/picture/0/9e82bda62be04c9c8827905cd92988ae.jpg" align="absmiddle" border="0" tabindex="-1"  readexclude><a title='大众新闻：6500个岗位、165家企业！山东省退役军人就业创业专项行动即将启动03月26日' target="_blank" href="http://dva.shandong.gov.cn/art/2026/3/26/art_191313_7421.html">大众新闻：6500个岗位、165家企业！山东省退役军人就业创业专项行动即将启动</a><span tabindex="-1"  readexclude>03-26</span></li><li><img src="/picture/0/9e82bda62be04c9c8827905cd92988ae.jpg" align="absmiddle" border="0" tabindex="-1"  readexclude><a title='新华社：车轮上的“家”03月04日' target="_blank" href="http://dva.shandong.gov.cn/art/2026/3/4/art_191313_7401.html">新华社：车轮上的“家”</a><span tabindex="-1"  readexclude>03-04</span></li><li><img src="/picture/0/9e82bda62be04c9c8827905cd92988ae.jpg" align="absmiddle" border="0" tabindex="-1"  readexclude><a title='新华网：山东全省退役军人事务局长会议召开01月26日' target="_blank" href="http://dva.shandong.gov.cn/art/2026/1/26/art_191313_7383.html">新华网：山东全省退役军人事务局长会议召开</a><span tabindex="-1"  readexclude>01-26</span></li><li><img src="/picture/0/9e82bda62be04c9c8827905cd92988ae.jpg" align="absmiddle" border="0" tabindex="-1"  readexclude><a title='闪电新闻：全省退役军人事务局长会议召开01月26日' target="_blank" href="http://dva.shandong.gov.cn/art/2026/1/26/art_191313_7382.html">闪电新闻：全省退役军人事务局长会议召开</a><span tabindex="-1"  readexclude>01-26</span></li><li><img src="/picture/0/9e82bda62be04c9c8827905cd92988ae.jpg" align="absmiddle" border="0" tabindex="-1"  readexclude><a title='山东新闻联播：山东2025年举办退役军人专场招聘870余场 促成就业意向1.9万人01月26日' target="_blank" href="http://dva.shandong.gov.cn/art/2026/1/26/art_191313_7381.html">山东新闻联播：山东2025年举办退役军人专场招聘870余场 促成就业意向1.9万人</a><span tabindex="-1"  readexclude>01-26</span></li><li><img src="/picture/0/9e82bda62be04c9c8827905cd92988ae.jpg" align="absmiddle" border="0" tabindex="-1"  readexclude><a title='人民网：山东省退役军人事务局长会议召开01月23日' target="_blank" href="http://dva.shandong.gov.cn/art/2026/1/23/art_191313_7362.html">人民网：山东省退役军人事务局长会议召开</a><span tabindex="-1"  readexclude>01-23</span></li>
+			
+			    </ul>
+			</div>
+             </span>
+        </div>
+    </div>
+    <div class="main_four" ergodic="view" barrierfree_zone_dsc="视窗区">
+        <ul><li><a target="_blank" href="http://www.sdmartyrs.cn" title="齐鲁英烈"><img alt="齐鲁英烈" src="/picture/0/e6b11c95f74e49c6bb6a695597e80b53.jpg"></a></li><li><a target="_blank" href="/col/col187824/index.html" title="军休生活"><img alt="军休生活" src="/picture/0/cb85aca334424634be212967c7f787ca.jpg"></a></li><li><a target="_blank" href="/col/col98187/index.html" title="双拥风采"><img alt="双拥风采" src="/picture/0/bafc009f585d4a548d9020e574129b6d.jpg"></a></li></ul>
+
+    </div>
+</div>
+<!--友情链接-->
+
+<!--通用底部-->
+<script src="/script/3682/2408190915461017.js"></script>
+<script src="/script/0/1912311510065917.js"></script>
+<style>
+	.tuyisyx {
+    border: 1px solid #0085c3;
+    width: 200px;
+    min-height: 76px;
+    position: fixed;
+    bottom: 0;
+    z-index: 99999;
+    right: 0;
+	text-decoration: none !important;
+	color: #3d3d3d;
+	
+}
+
+.tuyisyx_tit {
+    padding-left: 10px;
+    background: #0085c3;
+    color: #FFF;
+    text-indent: 15px;
+	font-size:19px;
+	position: relative;
+	font-weight:bold;
+	height: 90px;line-height: 25px;text-align: center;text-indent: 0;padding: 5px;
+}
+
+.close-hide {
+    float: right;
+    font-size: 21px;
+    color: #fff;
+    margin-right: 10px;
+	text-decoration: none !important;
+	position: absolute;
+    top: 0;
+    right:0;
+	width:20px;
+}
+.tuyisyx_con {
+    background: #FFF;
+    padding: 10px 15px;
+    line-height: 25px;
+    border-bottom: 1px solid #e8e8e8;
+    color: #3d3d3d;
+	font-size:13px;
+}
+.tuyisyx_con2 {
+    padding: 10px 15px;
+    background: #FFF;
+}
+
+.tuyisyx_btn {
+    width: 70px;
+    height: 30px;
+    display: block;
+    line-height: 30px;
+    color: #FFF !important;
+    font-size: 12px;
+    background: #0085c3;
+    float: right;
+    text-align: center;
+    margin-right: 15px;
+	text-decoration: none !important;
+}
+a.tuyisyx_btn:hover {
+    background: #006290;
+    color: #FFF !important;
+}
+.clear{
+	clear: both;
+    overflow: hidden;
+    font-size: 0px;
+    border: 0px;
+    height: 0px;
+    margin: 0px;
+    padding: 0px;
+	
+}
+/*****************************************************/
+#moquu_top,#moquu_wxin,#moquu_wshare,#moquu_wmaps {
+	z-index:2;
+	width:50px;
+	height:50px;
+	right:10px;
+	position:fixed;
+	cursor:pointer;
+	_position:absolute;
+	_bottom:auto;
+	_top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0)))
+}
+
+#moquu_wxin {
+	top:360px;
+	_margin-top:360px
+}
+#moquu_wxin a {
+	background:url(/picture/702/1912311506154708389.png) center top no-repeat;
+	right:0;
+	float:left;
+	width:50px;
+	height:50px;
+	/*text-indent:-9999px*/
+}
+#moquu_wxin a:hover {
+	background:url(/picture/702/1912311506153864272.png) -50px -0px
+}
+#moquu_wshare {
+	top:412px;
+	_margin-top:412px
+}
+#moquu_wshare a {
+	background:url(/picture/702/1912311506158854182.png) center top no-repeat;
+	width:50px;
+	height:50px;
+	right:0;
+	float:left;
+	text-indent:-9999px
+}
+#moquu_wshare a:hover {
+	background:url(/picture/702/1912311506153864272.png) -50px -50px
+}
+#moquu_wmaps {
+	top:464px;
+	_margin-top:464px
+}
+#moquu_wmaps a {
+	background:url(/picture/0/4c0fd2fc3cae4de8b37079c09cca547b.jpg) 0 -155px;
+	width:50px;
+	height:50px;
+	right:0;
+	float:left;
+	text-indent:-9999px
+}
+#moquu_top {
+	top:464px;
+	_margin-top:516px;
+	background:url(/picture/702/1912311506154273608.png) center top no-repeat;
+	width:50px;
+	height:50px
+}
+#moquu_top:hover {
+	background:url(/picture/702/1912311506153864272.png) -50px -101px
+}
+.moquu_wxin,.moquu_wshare {
+	position:relative;
+	z-index:2
+}
+.moquu_wxin a:hover .moquu_wxinh,.moquu_wshare a:hover .moquu_wshareh {
+	display:block
+}
+.moquu_wxin .moquu_wxinh {
+	position:absolute;
+	display:none;
+	left:-200px;
+	top:-135px;
+	width:200px;
+	height:230px;
+/*	background:url(../images/wchat.png) center top no-repeat;*/
+}
+.moquu_wshare .moquu_wshareh {
+	position:absolute;
+	display:none;
+	left:-160px;
+	top:-90px;
+	width:160px;
+	height:200px;
+/*	background:url(../images/moquu_wshare.png) no-repeat*/
+}
+.cloud{ width:380px; height:auto; position:fixed; top:0px; left:0px; background-color:#ddd; z-index:999;}
+.cloud_close{ width:25px; height:25px; position:absolute; top:-26px; right:0px; background-color:#f00; font-size:20px; line-height:25px; color:#fff; text-align:center; cursor:pointer;}
+.cloud_close:hover{ background-color:#000;}
+.test{ width:300px; height:200px; position:fixed; top:0px; left:0px; background-color:#0f0; z-index:998;}
+</style>
+
+<div id="moquu_wxin" class="moquu_wxin">
+<a href="javascript:void(0)">
+<div class="moquu_wxinh">
+<img src="/picture/702/1912311506154481833.png" style="display:block;"/>
+<span style="display:block;text-align:center;height:20px; font-family:'微软雅黑';font-size:18px;color:#333;">微信公众号</span>
+</div>
+</a>
+</div>
+<div id="moquu_wshare" class="moquu_wshare">
+<a href="http://app.www.gov.cn/download/Chinese.html" target="_blank">
+<div class="moquu_wshareh">
+<img src="/picture/702/1912311506156936783.png" style="display:block;"/>
+</div>
+</a>
+</div>
+<div id="moquu_wmaps" class="moquu_wmaps">
+<a href="http://dva.shandong.gov.cn/jrobot/robot/index.do?webid=359" target="_blank">
+</a>
+</div>
+<!--<div id="moquu_wmaps"><a href="javascript:void(0)" class='moquu_wmaps'></a></div>-->
+<a id="moquu_top" href="javascript:void(0)"></a>
+
+<div id="cloud" class="cloud" style="display:none;">
+	<a href="/col/col119972/index.html" target="_blank"><img style="width:380px; height:auto;" src="http://dva.shandong.gov.cn/picture/702/2002050932170472836.jpg"/></a>
+	<div class="cloud_close" onClick="javascript:document.getElementById('cloud').style.display='none';">X</div>
+</div>
+
+<script>
+$(document).ready(function(){
+	/*初始设置*/
+	var f_speed = 20; /*漂浮速度*/
+	var fi_top=50,fi_left=20; /*初始位置：上、左*/
+	var $f_cloud = $("#cloud"); /*选定漂浮元素*/
+	//var $f_cloud = $(".test");
+	
+	var f_top=0,f_left=0;
+	var f_W = $(window).width()-$f_cloud.width();
+	var f_H = $(window).height()-$f_cloud.height();
+	function f_auto(){
+		if(fi_top>=0 && fi_top<f_H){
+			fi_top++;
+			f_top = 1*fi_top;
+		}else if(fi_top>=f_H && fi_top<2*f_H){
+			fi_top++;
+			f_top = 2*f_H-fi_top;
+		}else{
+			fi_top=0;
+			fi_top++;
+			f_top = 1*fi_top;
+		}
+		if(fi_left>=0 && fi_left<f_W){
+			fi_left++;
+			f_left = 1*fi_left;
+		}else if(fi_left>=f_W && fi_left<2*f_W){
+			fi_left++;
+			f_left = 2*f_W-fi_left;
+		}else{
+			fi_left=0;
+			fi_left++;
+			f_left = 1*fi_left;
+		}
+		$f_cloud.css({top:f_top,left:f_left});
+	}
+	var f_cloud = setInterval(f_auto,f_speed);
+	f_auto();
+	/*鼠标移入移出*/
+	$f_cloud.hover(function(){
+		clearInterval(f_cloud);
+	},function(){
+		f_cloud = setInterval(f_auto,f_speed);
+	});
+	/*自适应屏幕*/
+	$(window).resize(function(){
+		f_W = $(window).width()-$f_cloud.width();
+		f_H = $(window).height()-$f_cloud.height();
+		f_auto();
+	});
+});
+</script>
+
+
+
+<div class="piao" style="width:173px;position:fixed;bottom:60%;">
+  <div style="position:absolute;">
+    <div class="gu_close" style="width:40px;height:20px;position:absolute;top:-20px;left:0px;cursor:pointer;font-size:15px;" onclick="asd()">关闭</div>
+    <a href="/col/col359619/index.html"><img src="/picture/0/s_08bb521540844607b2045ceba61e6e62.png" style="width:173px;height:100px;margin-bottom:10px;"></a><a href="https://www.gov.cn/zhengce/zczhjd/index.htm"><img src="/picture/0/s_b3484cafab714bd5b72a7db3585775db.png" style="width:173px;height:100px;margin-bottom:10px;"></a><a href="http://dva.shandong.gov.cn/module/download/downfile.jsp?classid=0&filename=63361f9adb7143a9b56bc69534d86958.pdf"><img src="/picture/0/080a93181cc641efa0835a6e3fbded5c.png" style="width:173px;height:100px;margin-bottom:10px;"></a>
+  </div>
+</div>
+<script>
+  $(function() {
+    $('.gu_close').click(function() {
+      $(this).parents('.piao').hide();
+    });
+  });
+</script>
+
+
+
+
+
+
+
+</div>
+
+<!-- juba热力图埋点 -->
+<META HTTP-EQUIV="pragma" CONTENT="no-cache"><META HTTP-EQUIV="Cache-Control" CONTENT="no-store, must-revalidate"><script type="text/javascript">(function(){ var heat = document.createElement("script");heat.type = "text/javascript";heat.async = true;heat.src = "http://xxcj.bdb.shandong.gov.cn:81/jubac/sync/headcollect.do";var h = document.getElementsByTagName("script")[0];h.parentNode.insertBefore(heat,h);var iframe = document.createElement("iframe");iframe.width = "100%";iframe.height = "0";iframe.id = "juba_iframepage";iframe.scrolling = "no";iframe.frameborder = "0";iframe.style = "position:absolute";document.body.appendChild(iframe);var params = window.location.search;if (params.indexOf("?") != -1 && params.indexOf("systemurl") != -1){var params = params.substr(params.indexOf("?")+1);var para = params.split("&");var systemurl = para[0].split("=")[1];var pageurl = para[1].split("=")[1];var iframeHeight = document.body.scrollHeight==0?document.documentElement.scrollHeight:document.body.scrollHeight;var iframeWidth = document.body.scrollWidth;document.getElementById("juba_iframepage").src = systemurl + "/afterhotpage.jsp?pageurl="+pageurl+"&height="+iframeHeight+"&systemurl="+systemurl+"&width="+iframeWidth;}})();</script>
+<!-- juba热力图埋点结束 -->
+<!--置灰start-->  
+ <script src="http://lscb.shandong.gov.cn/script/0/2212011737065986.js"></script>  
+ <!--置灰end--> 
+
+
+<!-- rem适配 -->
+<script>
+    function setRem() {
+        var ratio = 75;
+        var viewWidth = document.documentElement.clientWidth;
+        var fontSize = viewWidth / ratio;
+        document.documentElement.style.fontSize = fontSize + 'px';
+    }
+    setRem();
+    window.addEventListener('resize', setRem);
+</script>
+<script>
+		$(".sjb li").click(function() {
+			var l = $(this).index();
+			// var b = l / 2;
+			console.log(l);
+			$(this).addClass("active").siblings().removeClass("active");
+			$(".sdfr .main_two_right_list").eq(l).show().siblings().hide();
+			$(".qh_tit_more li").eq(l).show().siblings().hide();
+		});
+	</script>
+     <script>
+	    $(".sjbs li").click(function() {
+			var l = $(this).index();
+			// var b = l / 2;
+			console.log(l);
+			$(this).addClass("current").siblings().removeClass("current");
+			$(".sdfrs .main_three_right1").eq(l).show().siblings().hide();
+			$(".qh_tit_more li").eq(l).show().siblings().hide();
+	});
+</script>
+
+
+<!-- visitcount Begin --><iframe src='./module/visitcount/visit.jsp?type=1&i_webid=359&i_columnid=65289' name="vishidden" id="vishidden" frameborder="0" style="width:0; height:0; display:none"></iframe><!-- visitcount End -->
+<script language="javascript" src='/script/pagecontrol.js'></script><script language="javascript" src='/script/web_front.js'></script>
+</body>
+</html>

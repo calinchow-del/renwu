@@ -1,0 +1,1281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>包头市应急管理局</title>
+   <meta name="SiteName" content="包头市应急管理局">
+<meta name="SiteDomain" content="http://yjglj.baotou.gov.cn">
+<meta name="SiteIDCode" content="">
+<link href="./material/images/favicon.png" rel="shortcut icon" type="image/x-icon" />
+   <link rel="stylesheet" href="./material/css/swiper-bundle.min.css" />
+   <link rel="stylesheet" href="./material/css/initialize.css" />
+   <link rel="stylesheet" href="./material/css/header_footer.css" />
+   <link rel="stylesheet" href="./material/css/header_footer_h5.css" media="screen and (max-width:750px)" />
+   <link rel="stylesheet" href="./material/css/index.css" />
+   <link rel="stylesheet" href="./material/css/index_h5.css" media="screen and (max-width:750px)" />
+   <script src="./material/js/jquery.min.js"></script>
+   <script src="./material/js/swiper-bundle.min.js"></script>
+   <script src="./material/js/jquery.SuperSlide.2.1.3.js"></script>
+   <script src="./material/js/resize.js"></script>
+   <script src="./material/js/h5.js"></script>
+</head>
+
+<body>
+   <!-- 头部 -->
+   <div class="header">
+      <div class="w">
+        <div class="shortcut">
+          <img class="logo" src="./material/images/logo.png" />
+          <div class="shortcut_r">
+            <ul class="shortcut_nav">
+              <li>
+                <a style="cursor: pointer;">
+                  <img src="./material/images/icon_wza.png" />
+                  <span id="wza_id">无障碍</span>
+                </a>
+              </li>
+              <li>|</li>
+              <li id="zoomIn">
+                <a style="cursor: pointer;">
+                  <span>关怀版</span>
+                </a>
+              </li>
+              <li style="display: none;">|</li>
+              <li style="display: none;" id="resetZoom">
+                <a style="cursor: pointer;">
+                  <span>退出</span>
+                </a>
+              </li>
+              <!-- <li>|</li>
+              <li>
+                <a href="#">
+                  <span>微信</span>
+                </a>
+                <div class="panel">
+                  <img src="" />
+                </div>
+              </li> -->
+              <li>|</li>
+              <li>
+                <a class="userInfo1" href="javascript:void(0)" onclick="goLogin()">登录/注册</a>
+                <a class="userInfo2" href="https://zwfw.nmg.gov.cn/personal_center_profile" target="_blank"  style="display: none;">用户中心</a>
+              </li>
+            </ul>
+            <div class="search">
+              <div class="search_box">
+                <input id="searchInput" placeholder="请输入您需要搜索的关键词" type="text" onfocus="this.placeholder=' '" onblur="this.placeholder='请输入您需要查询的关键词'" />
+                <button class="btn" id="searchBtn">
+                  <img src="./material/images/icon_fdj.png" alt="" />
+                </button>
+              </div>
+              <!-- <a href="#" class="chat_btn">智能问答</a> -->
+            </div>
+          </div>
+        </div>
+        <ul class="nav" id="headerNav">
+          <li>
+            <a href="./">网站首页</a>
+          </li>
+          <li>
+            <a href="./ywdt/">要闻动态</a>
+          </li>
+          <li>
+            <a href="./zfxxgk/">政府信息公开</a>
+          </li>
+          <li>
+            <a href="https://zwfw.nmg.gov.cn/out/org_window?regionCode=150200000000&orgCode=11150200764493554R">政务服务</a>
+          </li>
+          <li>
+            <a href="./hdjl/">互动交流</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <script>
+      document.getElementById("searchBtn").addEventListener("click", function () {
+        var keyword = document.getElementById("searchInput").value;
+          if (keyword) {
+            window.location.href = "/searchweb-dept/#/Door?siteTag=1&siteid=18&keywords=" + keyword;
+          } else {
+            alert("请输入您需要查询的关键词");
+          }
+        });
+
+        // 导航栏目着重
+        $(function() {
+          var href = window.location.href;
+          var index = 0;
+          if (href.indexOf("/ywdt/") != -1) index = 1;
+          if (href.indexOf("/zfxxgk/") != -1) index = 2;
+          if (href.indexOf("/zwfw/") != -1) index = 3;
+          if (href.indexOf("/ywgz/") != -1) index = 4;
+          if (href.indexOf("/hdjl/") != -1) index = 5;
+          $("#headerNav li").each(function(i){
+            $("#headerNav li").removeClass("on").eq(index).addClass("active");
+          });
+        })
+      </script>
+   <!-- 头条 -->
+   <div class="headlines">
+      <div class="w">
+         
+            <div class="title">
+               <a href="714">
+                  <img src="./material/images/icon_headlines.png" />
+               </a>
+               <a href="./ywdt/tt/202603/t20260320_841599.html">
+                  为构建人类命运共同体注入文明动力
+               </a>
+            </div>
+            <div class="desc">
+             2023年3月15日，习近平总书记在中国共产党与世界政党高层对话会上提出全球文明倡议，以前所未有的宏阔视野、深邃洞察，就事关人...
+            </div>
+         
+      </div>
+   </div>
+
+   <div class="hf w" style="display: none;">
+      <div class="swiper hfSwiper">
+         <div class="swiper-wrapper">
+            
+         </div>
+         <div class="swiper-pagination swiper-hf-pagination"></div>
+      </div>
+      <div class="swiper-button-next swiper-hf-next"></div>
+      <div class="swiper-button-prev swiper-hf-prev"></div>
+   </div>
+   <!-- 新闻 -->
+   <div class="news w">
+      <div class="news_l">
+         <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+               
+                  <div class="swiper-slide">
+                     <a href="./ywdt/tpxw/202603/t20260320_841613.html">
+                     <img src="./ywdt/tpxw/202603/W020260320544636509675.jpg" />
+                     </a>
+                     <div class="mask">
+                        习近平：推动海洋经济高质量发展
+                     </div>
+                  </div>
+               
+                  <div class="swiper-slide">
+                     <a href="./ywdt/tpxw/202603/t20260312_817757.html">
+                     <img src="./ywdt/tpxw/202603/W020260312405503047557.jpg" />
+                     </a>
+                     <div class="mask">
+                        全国政协十四届四次会议闭幕 习近平等出席
+                     </div>
+                  </div>
+               
+                  <div class="swiper-slide">
+                     <a href="./ywdt/tpxw/202603/t20260305_803880.html">
+                     <img src="./ywdt/tpxw/202603/W020260305361963626707.jpg" />
+                     </a>
+                     <div class="mask">
+                        全国政协十四届四次会议开幕会在京举行
+                     </div>
+                  </div>
+               
+                  <div class="swiper-slide">
+                     <a href="./ywdt/tpxw/202602/t20260225_800899.html">
+                     <img src="./ywdt/tpxw/202602/W020260225548658595516.png" />
+                     </a>
+                     <div class="mask">
+                        第一观察丨开局起步，总书记强调正确政绩观
+                     </div>
+                  </div>
+               
+                  <div class="swiper-slide">
+                     <a href="./ywdt/tpxw/202602/t20260212_799274.html">
+                     <img src="./ywdt/tpxw/202602/W020260212606273470026.jpg" />
+                     </a>
+                     <div class="mask">
+                        李强主持召开国务院第十次全体会议 讨论政府工作报...
+                     </div>
+                  </div>
+               
+            </div>
+            <div class="swiper-pagination swiper-news-pagination"></div>
+         </div>
+      </div>
+      <div class="news_r newsSlide">
+         <div class="head hd">
+            <ul class="head_nav">
+               <li>
+                  <a href="./ywdt/yjxw/">应急新闻</a>
+               </li>
+               <li>
+                  <a href="./ywdt/qxqdt/">旗县区动态</a>
+               </li>
+               <li>
+                  <a href="./ywdt/tzgg/">通知公告</a>
+               </li>
+            </ul>
+         </div>
+         <div class="bd">
+            <ul class="list">
+               
+                  <div class="first">
+                     <div class="title">
+                        <a href="./ywdt/yjxw/202603/t20260319_841199.html">
+                        树立和践行正确政绩观 筑牢执法根基
+                        </a>
+                     </div>
+                     <div class="desc">
+                        为深入贯彻落实党中央《关于在全党开展树立和践行正确政绩观学习教育的通知》要求，3月13日...
+                     </div>
+                     <div class="date">
+                        2026-03-19
+                     </div>
+                  </div>
+               
+               
+                  <li>
+                     <a href="./ywdt/yjxw/202603/t20260317_838632.html">
+                     <span>
+                        包头市矿山安全监管局召开全市矿山企业...
+                     </span>
+                     <span class="date">
+                        2026-03-17
+                     </span>
+                     </a>
+                  </li>
+               
+                  <li>
+                     <a href="./ywdt/yjxw/202603/t20260312_817658.html">
+                     <span>
+                        开展地震安全评价执法 提升我市防震减灾...
+                     </span>
+                     <span class="date">
+                        2026-03-11
+                     </span>
+                     </a>
+                  </li>
+               
+                  <li>
+                     <a href="./ywdt/yjxw/202603/t20260306_804201.html">
+                     <span>
+                        市应急管理局召开烟花爆竹经营安全工作...
+                     </span>
+                     <span class="date">
+                        2026-03-06
+                     </span>
+                     </a>
+                  </li>
+               
+                  <li>
+                     <a href="./ywdt/yjxw/202603/t20260306_804200.html">
+                     <span>
+                        以练备战 以联促能｜包头市应急管理局联...
+                     </span>
+                     <span class="date">
+                        2026-03-06
+                     </span>
+                     </a>
+                  </li>
+               
+                  <li>
+                     <a href="./ywdt/yjxw/202603/t20260305_803893.html">
+                     <span>
+                        市应急管理局召开全市冶金等工贸行业安...
+                     </span>
+                     <span class="date">
+                        2026-03-05
+                     </span>
+                     </a>
+                  </li>
+               
+                  <li>
+                     <a href="./ywdt/yjxw/202603/t20260312_817650.html">
+                     <span>
+                        弘扬雷锋精神 筑牢安全防线
+                     </span>
+                     <span class="date">
+                        2026-03-05
+                     </span>
+                     </a>
+                  </li>
+               
+            </ul>
+            <ul class="list">
+               
+                  <div class="first">
+                     <div class="title">
+                        <a href="./ywdt/qxqdt/202603/t20260327_847517.html">
+                        白云鄂博矿区各行业安全生产检查情况
+                        </a>
+                     </div>
+                     <div class="desc">
+                        区安委会各成员单位开展常态化安全生产检查<br>1.3月26日，区应急管理局对自治区督查组检查鄂...
+                     </div>
+                     <div class="date">
+                        2026-03-27
+                     </div>
+                  </div>
+               
+               
+                  <li>
+                     <a href="./ywdt/qxqdt/202603/t20260326_846834.html">
+                     <span>
+                        白云鄂博矿区各行业安全生产检查情况
+                     </span>
+                     <span class="date">
+                        2026-03-26
+                     </span>
+                     </a>
+                  </li>
+               
+                  <li>
+                     <a href="./ywdt/qxqdt/202603/t20260326_846823.html">
+                     <span>
+                        旗安委办联合多部门开展新能源项目复工...
+                     </span>
+                     <span class="date">
+                        2026-03-25
+                     </span>
+                     </a>
+                  </li>
+               
+                  <li>
+                     <a href="./ywdt/qxqdt/202603/t20260326_846818.html">
+                     <span>
+                        达茂旗应急管理局召开2025年度专题组织...
+                     </span>
+                     <span class="date">
+                        2026-03-25
+                     </span>
+                     </a>
+                  </li>
+               
+                  <li>
+                     <a href="./ywdt/qxqdt/202603/t20260325_846380.html">
+                     <span>
+                        白云鄂博矿区各行业安全生产检查情况
+                     </span>
+                     <span class="date">
+                        2026-03-25
+                     </span>
+                     </a>
+                  </li>
+               
+                  <li>
+                     <a href="./ywdt/qxqdt/202603/t20260324_843045.html">
+                     <span>
+                        土右旗应急管理局召开2025年干部年度考...
+                     </span>
+                     <span class="date">
+                        2026-03-24
+                     </span>
+                     </a>
+                  </li>
+               
+                  <li>
+                     <a href="./ywdt/qxqdt/202603/t20260323_842905.html">
+                     <span>
+                        区防灾减灾救灾委员会组织开展防灾减灾...
+                     </span>
+                     <span class="date">
+                        2026-03-23
+                     </span>
+                     </a>
+                  </li>
+               
+            </ul>
+            <ul class="list">
+               
+                  <div class="first">
+                     <div class="title">
+                        <a href="./ywdt/tzgg/202603/t20260324_845411.html">
+                        关于公布拟新增专家名单的公告
+                        </a>
+                     </div>
+                     <div class="desc">
+                        <br>根据工作需要，我局近期开展了专家增补选聘工作，经筛选确定部分拟新增专家人员，名单请查...
+                     </div>
+                     <div class="date">
+                        2026-03-24
+                     </div>
+                  </div>
+               
+               
+                  <li>
+                     <a href="./ywdt/tzgg/202603/t20260317_835338.html">
+                     <span>
+                        2026年4月“三项岗位”人员安全培训计划...
+                     </span>
+                     <span class="date">
+                        2026-03-17
+                     </span>
+                     </a>
+                  </li>
+               
+                  <li>
+                     <a href="./ywdt/tzgg/202602/t20260225_800816.html">
+                     <span>
+                        关于进一步强化打击非法运输、储存、销...
+                     </span>
+                     <span class="date">
+                        2026-02-18
+                     </span>
+                     </a>
+                  </li>
+               
+                  <li>
+                     <a href="./ywdt/tzgg/202601/t20260131_762933.html">
+                     <span>
+                        受理群众反映隐患线索公告
+                     </span>
+                     <span class="date">
+                        2026-01-31
+                     </span>
+                     </a>
+                  </li>
+               
+                  <li>
+                     <a href="./ywdt/tzgg/202601/t20260122_741656.html">
+                     <span>
+                        2026年包头市矿山领域政府领导挂牌包保...
+                     </span>
+                     <span class="date">
+                        2026-01-22
+                     </span>
+                     </a>
+                  </li>
+               
+                  <li>
+                     <a href="./ywdt/tzgg/202601/t20260106_723789.html">
+                     <span>
+                        关于开展应急管理专家增补选聘工作的公告
+                     </span>
+                     <span class="date">
+                        2026-01-06
+                     </span>
+                     </a>
+                  </li>
+               
+                  <li>
+                     <a href="./ywdt/tzgg/202511/t20251120_714072.html">
+                     <span>
+                        关于崔晓光同志退出包头市应急管理局专...
+                     </span>
+                     <span class="date">
+                        2025-11-20
+                     </span>
+                     </a>
+                  </li>
+               
+            </ul>
+         </div>
+      </div>
+   </div>
+
+   <!-- 政策文件 -->
+   <div class="policy w">
+      <div class="policy_l policySlide">
+         <div class="hd">
+            <ul class="head">
+               <li>
+                  <a href="./zfxxgk/fdzdgknr/zcwj/">
+                     <div class="icon"></div>
+                     <span>政策文件</span>
+                  </a>
+               </li>
+               <li>
+                  <a href="./zfxxgk/fdzdgknr/zcjd/">
+                     <div class="icon"></div>
+                     <span>政策解读</span>
+                  </a>
+               </li>
+            </ul>
+         </div>
+         <div class="bd">
+            <ul class="list">
+               
+                  <li>
+                     <a href="./zfxxgk/fdzdgknr/zcwj/202508/t20250830_377971.html">
+                     <span>
+                        包头市人民政府办公室关于废止、修改和宣布失效部分行政规范性文件...
+                     </span>
+                     <span>
+                        12-30
+                     </span>
+                     </a>
+                  </li>
+               
+                  <li>
+                     <a href="./zfxxgk/fdzdgknr/zcwj/202508/t20250830_377970.html">
+                     <span>
+                        包头市人民政府关于划定禁止燃放烟花爆竹、堆燃旺火时段和区域的通告
+                     </span>
+                     <span>
+                        12-24
+                     </span>
+                     </a>
+                  </li>
+               
+                  <li>
+                     <a href="./zfxxgk/fdzdgknr/zcwj/202508/t20250830_377969.html">
+                     <span>
+                        包头市人民政府办公室关于印发包头市支持氢能产业高质量发展若干措...
+                     </span>
+                     <span>
+                        12-16
+                     </span>
+                     </a>
+                  </li>
+               
+                  <li>
+                     <a href="./zfxxgk/fdzdgknr/zcwj/202508/t20250830_377968.html">
+                     <span>
+                        国家防灾减灾救灾委员会办公室关于进一步加强应急抢险救灾物资保障...
+                     </span>
+                     <span>
+                        10-23
+                     </span>
+                     </a>
+                  </li>
+               
+                  <li>
+                     <a href="./zfxxgk/fdzdgknr/zcwj/202508/t20250830_377965.html">
+                     <span>
+                        包头市人民政府关于对市重点林区和草原实施防火管制的通告
+                     </span>
+                     <span>
+                        03-22
+                     </span>
+                     </a>
+                  </li>
+               
+            </ul>
+            <ul class="list">
+               
+                  <li>
+                     <a href="./zfxxgk/fdzdgknr/zcjd/202508/t20250830_377890.html">
+                     <span>
+                        《企业安全生产标准化建设定级办法》解读
+                     </span>
+                     <span>
+                        11-19
+                     </span>
+                     </a>
+                  </li>
+               
+                  <li>
+                     <a href="./zfxxgk/fdzdgknr/zcjd/202508/t20250830_377897.html">
+                     <span>
+                        应急管理部 金融监管总局有关司局负责人  就《安全生产责任保险实...
+                     </span>
+                     <span>
+                        04-07
+                     </span>
+                     </a>
+                  </li>
+               
+                  <li>
+                     <a href="./zfxxgk/fdzdgknr/zcjd/202508/t20250830_377896.html">
+                     <span>
+                        应急管理部消防救援局负责同志就《社会消防技术服务管理规定》答记...
+                     </span>
+                     <span>
+                        03-31
+                     </span>
+                     </a>
+                  </li>
+               
+                  <li>
+                     <a href="./zfxxgk/fdzdgknr/zcjd/202508/t20250830_377895.html">
+                     <span>
+                        应急管理部消防救援局负责同志就  《消防救援机构办理行政案件程序...
+                     </span>
+                     <span>
+                        03-24
+                     </span>
+                     </a>
+                  </li>
+               
+                  <li>
+                     <a href="./zfxxgk/fdzdgknr/zcjd/202508/t20250830_377894.html">
+                     <span>
+                        国家突发事件总体应急预案一图读懂
+                     </span>
+                     <span>
+                        03-17
+                     </span>
+                     </a>
+                  </li>
+               
+            </ul>
+         </div>
+      </div>
+      <div class="policy_r">
+         <div class="top">政府信息公开</div>
+         <ul class="nav">
+            <li>
+               <a href="./zfxxgk/zfxxgkzn/">
+                  <div class="icon">
+                     <img src="./material/images/icon_public_1.png" alt="" />
+                  </div>
+                  <div>政府信息公开指南</div>
+               </a>
+            </li>
+            <li>
+               <a href="./zfxxgk/zfxxgkzd/">
+                  <div class="icon">
+                     <img src="./material/images/icon_public_2.png" alt="" />
+                  </div>
+                  <div>政府信息公开制度</div>
+               </a>
+            </li>
+            <li>
+               <a href="./zfxxgk/fdzdgknr/">
+                  <div class="icon">
+                     <img src="./material/images/icon_public_3.png" alt="" />
+                  </div>
+                  <div>法定主动公开内容</div>
+               </a>
+            </li>
+            <li>
+               <a href="./zfxxgk/wzndgzbb/">
+                  <div class="icon">
+                     <img src="./material/images/icon_public_4.png" alt="" />
+                  </div>
+                  <div>政府网站工作报表</div>
+               </a>
+            </li>
+            <li>
+               <a href="./zfxxgk/xxgkndbg/">
+                  <div class="icon">
+                     <img src="./material/images/icon_public_5.png" alt="" />
+                  </div>
+                  <div>信息公开年度报告</div>
+               </a>
+            </li>
+            <li>
+               <a href="https://zwfw.nmg.gov.cn/sso/sso/login?utype=0&redirect=istrue&client_id=LFWKGMPAY&goto=https://www.nmg.gov.cn/zwgk/zfxxgk/ysqgk/index_351.html?deptId=735">
+                  <div class="icon">
+                     <img src="./material/images/icon_public_6.png" alt="" />
+                  </div>
+                  <div>依申请公开</div>
+               </a>
+            </li>
+         </ul>
+         <div class="other">
+            <div class="item">
+               <a href="./zfxxgk/fdzdgknr/xzcf/">
+                  <img src="./material/images/icon_xzcf.png" alt="" />
+                  <span>行政处罚<br />信息公示</span>
+               </a>
+            </div>
+            <div class="item">
+               <a href="./zfxxgk/fdzdgknr/xzxk/">
+                  <img src="./material/images/icon_xzxk.png" alt="" />
+                  <span>行政许可<br />信息公示</span>
+               </a>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <!-- 专题 -->
+   <div class="special w">
+      <div class="swiper-container specialSwiper">
+         <div class="swiper-wrapper">
+            
+               <div class="swiper-slide">
+                  <a href="./ztlm_0/hqzczq/">
+                     <img src="./ztlm_0/hqzczq/images/P020250825577481053339.jpg" />
+                  </a>
+               </div>
+            
+               <div class="swiper-slide">
+                  <a href="./ztlm_0/aqscpxjgmd/">
+                     <img src="./ztlm_0/aqscpxjgmd/images/P020250825577617208088.jpg" />
+                  </a>
+               </div>
+            
+               <div class="swiper-slide">
+                  <a href="./ztlm_0/aqsczbgjsnxd/">
+                     <img src="./ztlm_0/aqsczbgjsnxd/images/P020250825577837918005.jpg" />
+                  </a>
+               </div>
+            
+               <div class="swiper-slide">
+                  <a href="https://www.gov.cn/zhengce/zczhjd/">
+                     <img src="./ztlm_0/3063/images/P020250825577924422285.png" />
+                  </a>
+               </div>
+            
+               <div class="swiper-slide">
+                  <a href="https://www.baotou.gov.cn/ztzl/yhyshj/">
+                     <img src="./ztlm_0/3064/images/P020250825578206471514.jpg" />
+                  </a>
+               </div>
+            
+               <div class="swiper-slide">
+                  <a href="./ztlm_0/zhmzyjq/">
+                     <img src="./ztlm_0/zhmzyjq/images/P020250825578504238887.jpg" />
+                  </a>
+               </div>
+            
+               <div class="swiper-slide">
+                  <a href="https://dctjfx.mem.gov.cn/aqscjb#/">
+                     <img src="./ztlm_0/3066/images/P020250825578934251262.jpg" />
+                  </a>
+               </div>
+            
+               <div class="swiper-slide">
+                  <a href="./ztlm_0/hysgjszcbthh/">
+                     <img src="./ztlm_0/hysgjszcbthh/images/P020250825579277636735.png" />
+                  </a>
+               </div>
+            
+               <div class="swiper-slide">
+                  <a href="http://yjglj.baotou.gov.cn/ywdt/yjxw/aqscxx/">
+                     <img src="./ztlm_0/3068/images/P020250825579375423111.jpg" />
+                  </a>
+               </div>
+            
+               <div class="swiper-slide">
+                  <a href="https://mw.nmg.gov.cn/zt/zlzhmzgttys/">
+                     <img src="./ztlm_0/3072/images/P020250825579552696001.png" />
+                  </a>
+               </div>
+            
+         </div>
+      </div>
+      <div class="swiper-button-next swiper-special-next"></div>
+      <div class="swiper-button-prev swiper-special-prev"></div>
+   </div>
+
+   <!-- 征集调查 -->
+   <div class="investigate w">
+      <div class="investigate_l">
+         <div class="head">
+            <div class="title">调查征集</div>
+            <a href="./hdjl/yjzj/">
+               <img src="./material/images/icon_more.png" />
+            </a>
+         </div>
+         <ul class="list" id="survey_list">
+            
+               <li>
+                  <a href="./hdjl/yjzj/202509/t20250904_401434.html">
+                     <span>
+                        对应急管理局门户网站是否满意
+                     </span>
+                     <span class="date">
+                        2025-11-19
+                     </span>
+                  </a>
+               </li>
+            
+               <li>
+                  <a href="./hdjl/yjzj/202509/t20250904_401436.html">
+                     <span>
+                        对包头市应急管理局微信公众号是否满意
+                     </span>
+                     <span class="date">
+                        2024-12-20
+                     </span>
+                  </a>
+               </li>
+            
+               <li>
+                  <a href="./hdjl/yjzj/202509/t20250904_401435.html">
+                     <span>
+                        从哪些途径了解包头应急管理局的动态及政策信息？
+                     </span>
+                     <span class="date">
+                        2024-01-03
+                     </span>
+                  </a>
+               </li>
+            
+         </ul>
+         <!-- <ul class="list" id="survey_list">
+                   <li>
+                     <a href="#">
+                       <span>包头市民政局公开征集“整治社会救助不到位”问题线索</span>
+                       <span class="date">2025-08-10</span>
+                     </a>
+                   </li> 
+                  </ul> -->
+         <div class="other">
+            <div class="item">
+               <a href="https://yjglt.nmg.gov.cn/kpEducation/ggzsaqk/">
+                  <img src="./material/images/img_xxyd.png" alt="" />
+               </a>
+            </div>
+            <div class="item">
+               <a href="https://yjglt.nmg.gov.cn/xxnr/cxfw/">
+                  <img src="./material/images/img_cxfw.png" alt="" />
+               </a>
+            </div>
+         </div>
+      </div>
+      <div class="investigate_r">
+         <div class="title">互动交流</div>
+         <div class="mail">
+            <div class="mail_item">
+               <div>已收到</div>
+               <div class="num" id="allTotal"></div>
+            </div>
+            <div class="line"></div>
+            <div class="mail_item">
+               <div>已回复</div>
+               <div class="num" id="yhfTotal"></div>
+            </div>
+         </div>
+         <ul class="nav">
+            <li>
+               <a href="./hdjl/jzxx/">
+                  <img src="./material/images/icon_hudong_1.png" alt="" />
+                  <span>局长信箱</span>
+               </a>
+            </li>
+            <li>
+               <a href="./hdjl/jzxx/">
+                  <img src="./material/images/icon_hudong_2.png" alt="" />
+                  <span>信件查询</span>
+               </a>
+            </li>
+            <li>
+               <a href="./hdjl/jzxx/wyxx/">
+                  <img src="./material/images/icon_hudong_3.png" alt="" />
+                  <span>我要写信</span>
+               </a>
+            </li>
+         </ul>
+      </div>
+   </div>
+
+   <!-- 底部 -->
+   <div class="footer">
+   <div class="w">
+      <ul class="footer_nav">
+         <li>
+            <a href="https://www.mem.gov.cn/" target="_blank">中华人民共和国应急管理部</a>
+         </li>
+         <li>
+            <a href="https://yjglt.nmg.gov.cn/" target="_blank">内蒙古应急管理厅</a>
+         </li>
+         <li class="links" style="display: none;">
+            <a>
+               <span>包头市及旗县区</span>
+               <img src="./material/images/arrow_down.png" />
+            </a>
+            <div class="panel_box">
+               <div class="panel">
+                  
+               </div>
+            </div>
+         </li>
+      </ul>
+      <div class="footer_main">
+         <div class="item pic">
+            <a target="_blank">
+               <script type="text/javascript">document.write(unescape("%3Cspan id='_ideConac' %3E%3C/span%3E%3Cscript src='https://dcs.conac.cn/js/07/128/0000/41449600/CA071280000414496000005.js' type='text/javascript'%3E%3C/script%3E"));</script>
+            </a>
+            <a target="_blank">
+               <script id="_jiucuo_" sitecode='1502000045' src='http://yjglj.baotou.gov.cn/material/jiucuo.js'></script>
+            </a>
+         </div>
+         <div class="item word">
+            <div class="block">
+               <div>
+                  <a href="./wzxx/wzdt/">网站地图</a>
+               </div>
+               <div>
+                  <a href="./wzxx/lxwm/">联系我们</a>
+               </div>
+            </div>
+            <div class="block">
+               <div>主办：包头市应急管理局</div>
+               <div>中文域名：包头市应急管理局</div>
+               <div><a href="https://beian.miit.gov.cn/" target="_blank">蒙ICP备19004425号</a></div>
+            </div>
+         </div>
+         <div class="item word">
+            <div class="block">
+               <div>政府网站标识码：1502000045</div>
+               <div><a href="https://beian.mps.gov.cn/#/query/webSearch?code=15029002000309" target="_blank">蒙公网安备 15029002000309号</a></div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+<!-- 无障碍/是老化 -->
+<script id="toolbarjs" src="./material/toolbar_init.js"></script>
+<!-- 网脉 -->
+<!--<script id="_trs_ta_js" src="//ta.trs.cn/c/js/ta.js?mpid=6575" async="async" defer="defer"></script>-->
+<script id="_trs_ta_js" src="//yjglj.baotou.gov.cn/midc_ta/ta.js?mpid=6575&cPrefix=ta.trs.cn/c" async="async" defer="defer"></script>
+<!-- 点击量 -->
+<script type="text/javascript" src="./material/trs_report_sdk.js"></script>
+
+<!-- 无障碍/是老化 -->
+    <script>
+      $(function() {
+          const zoomFactor = 1.25;
+
+          function getTargetElements() {
+              return $('p, span, a, h1, h2, h3, h4, h5, h6, li, td, th, label, div:not(:has(*))');
+          }
+
+          // --- 开启长者模式 ---
+          $('#zoomIn').on('click', function() {
+              if ($('body').hasClass('senior-mode-active')) {
+                  return;
+              }
+
+              const currentElements = getTargetElements();
+              // ... (字体放大的两步走逻辑，此处省略以保持简洁) ...
+              currentElements.each(function() { /* 保存原始大小 */
+                  const currentSizeStr = $(this).css('font-size');
+                  $(this).data('original-font-size', currentSizeStr);
+              });
+              currentElements.each(function() { /* 计算并应用新大小 */
+                  const originalSizeStr = $(this).data('original-font-size');
+                  if (originalSizeStr) {
+                      const originalSizeNum = parseFloat(originalSizeStr);
+                      if (!isNaN(originalSizeNum) && originalSizeNum > 0) {
+                          $(this).css('font-size', (originalSizeNum * zoomFactor) + 'px');
+                      }
+                  }
+              });
+
+              $('body').addClass('senior-mode-active'); // 仍然建议保留class用于状态判断
+
+              // --- 切换按钮显示 ---
+              $(this).hide(); // 隐藏自己（“开启”按钮）
+              $('#resetZoom').show(); // 查找并显示“关闭”按钮
+          });
+
+          // --- 关闭长者模式 ---
+          $('#resetZoom').on('click', function() {
+              const currentElements = getTargetElements();
+              // ... (字体恢复的逻辑) ...
+              currentElements.each(function() {
+                  const originalSize = $(this).data('original-font-size');
+                  if (originalSize) {
+                      $(this).css('font-size', originalSize);
+                      $(this).removeData('original-font-size');
+                  }
+              });
+              
+              $('body').removeClass('senior-mode-active');
+
+              // --- 切换按钮显示 ---
+              $(this).hide(); // 隐藏自己（“关闭”按钮）
+              $('#zoomIn').show(); // 查找并显示“开启”按钮
+          });
+      })
+      </script>
+
+<script type="text/javascript">
+	//上传点击数据
+    let eventReport = new EventReport("/hx-api/receive/receiveData")
+    let siteName = "包头市应急管理局"
+    let chnlRelation = "包头市应急管理局"
+    chnlRelation = chnlRelation.replace(siteName+">","")
+    let docid = ""
+    let doc_id = 0
+    if(docid.length > 0){
+        doc_id = parseInt(docid)
+    }
+    let url = "####"
+    let title ='';
+    var reg =/<[^<>]+>/g;
+    title = title.replace(reg, "");
+    let docpubtime = ""
+    
+    if (doc_id== 0) {
+    doc_id = 0;
+    url = document.URL
+    title = document.title
+    docpubtime = ""
+    }
+    let doc_channel = ""
+    let siteid = parseInt("")
+    if (siteid.length == 0) {
+    siteid = 0
+    }
+    
+    let channel_id = parseInt("")
+    
+    if(channel_id.length == 0){
+    channel_id = 0
+    }
+    //appkey
+    let appKey = "dda1bee997e29182febbe848dd3b313a"
+    
+    let myParam = {
+		title: title,
+		url: url,
+		doc_id: doc_id,
+		siteid: siteid,
+		site_name: siteName,
+		doc_channel: doc_channel,
+		channel_relation: chnlRelation,
+		channel_id: channel_id,
+		doc_pub_time: docpubtime,
+		app_key: appKey
+    }
+    //统计外链
+    InitExternalLinks("/hx-api/receive/receiveLink",myParam,"trs.nmsuny.com")
+    eventReport.trackUserData(myParam)
+    // 点击量埋点结束
+  </script>
+
+  <!-- 用户一号登录 -->
+<script>
+function goLogin(){
+       window.open("/personal/validate/gotoLogin.do?client_id=IL4O0Z7GP&goto="+decodeURIComponent("http://yjglj.baotou.gov.cn/"));
+}
+var ovUserInfo;
+var ovData;
+// 获取用户登录状态
+function getUserObj() {
+    $.ajax({
+        url: '/personal/usrlogin/getUserInfo',//根据实际事情情况更换域名
+        type: 'get',
+        dataType: 'json',
+        success: function(data) {
+            if(!data.success){ 
+                $(".userInfo2").hide();
+                $(".userInfo1").show();
+            }else{
+                ovUserInfo = data.data;
+                $(".userInfo1").hide();
+                $(".userInfo2").show();
+                $('.userInfo2').html("欢迎："+ovUserInfo.USER_NAME);
+            }
+        },
+        error: function (err) {
+            console.log('不好意思，您请求的接口出错了！')
+        }
+    })
+    return ovData;
+}
+
+$(function () {
+    $(".userInfo2").hide();
+    $(".userInfo1").show();
+     getUserObj();
+ })
+</script>
+<style>
+    .fixed {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      z-index: 9999;
+    }
+
+    .fixed .close {
+      position: absolute;
+      top: -20px;
+      right: 0;
+      cursor: pointer;
+    }
+  </style>
+
+<div class="fixed">
+    <a href="https://mp.weixin.qq.com/s/uZLgsBniw0uyTKYbC8v49Q" target="_blank">
+      <img src="./material/images/fixed_img_1.png" alt="" />
+    </a>
+    <div class="close" id="close_fixed">X</div>
+  </div>
+
+  <script>
+
+    $('#close_fixed').click(function() {
+      $('.fixed').hide();
+    });
+  </script>
+
+   <script>
+      // 图片新闻轮播
+      var swiper1 = new Swiper(".mySwiper", {
+         autoplay:{
+            delay: 2500,
+            disableOnInteraction: false,
+         },
+
+         pagination: {
+            el: ".swiper-news-pagination",
+            clickable: true,
+         },
+      });
+
+      // 要闻动态Slide
+      $(".newsSlide").slide({});
+
+      // 政策文件Slide
+      $(".policySlide").slide({});
+
+      var swiper2 = new Swiper(".specialSwiper", {
+         autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+         },
+         slidesPerView: 3,
+         spaceBetween: 30,
+         slidesPerGroup: 1,
+         loop: true,
+         loopFillGroupWithBlank: true,
+         breakpoints: {
+            750: {
+               slidesPerView: 1,
+               spaceBetween: 20,
+            },
+            1200: {
+               slidesPerView: 3,
+               spaceBetween: 30,
+            },
+         },
+         navigation: {
+            nextEl: ".swiper-special-next",
+            prevEl: ".swiper-special-prev",
+         },
+      });
+
+      var swiper = new Swiper(".hfSwiper", {
+         autoplay: true,
+         loop: true,
+         navigation: {
+            nextEl: ".swiper-hf-next",
+            prevEl: ".swiper-hf-prev",
+         },
+         pagination: {
+            el: ".swiper-hf-pagination",
+         },
+      });
+
+
+      /* 接口调取 */
+      const SITEID = 18; // 站点ID
+      const APPID = 16276; // 应用ID
+
+      // 限制文本长度
+      function limitContent(content, len) {
+         if (content.length > len) {
+            content = content.substring(0, len) + "...";
+         }
+         return content;
+      }
+
+      // 日期格式化
+      function formatDate(dateStr, format) {
+         const date = new Date(dateStr);
+         const map = {
+            M: date.getMonth() + 1, // 月份
+            d: date.getDate(), // 日
+            h: date.getHours(), // 小时
+            m: date.getMinutes(), // 分钟
+            s: date.getSeconds(), // 秒
+            q: Math.floor((date.getMonth() + 3) / 3), // 季度
+            S: date.getMilliseconds(), // 毫秒
+         };
+
+         format = format.replace(/([yMdhmsqS])+/g, (all, t) => {
+            let v = map[t];
+            if (v !== undefined) {
+               if (all.length > 1) {
+                  v = "0" + v;
+                  v = v.substr(v.length - all.length);
+               }
+               return v;
+            } else if (t === "y") {
+               return (date.getFullYear() + "").substr(4 - all.length);
+            }
+            return all;
+         });
+         return format;
+      }
+
+      // 去除富文本标签
+      function stripHtml(html) {
+         const parser = new DOMParser();
+         const doc = parser.parseFromString(html, 'text/html');
+         return doc.body.textContent || '';
+      }
+
+      // 意见征集
+      // function getSurveyList() {
+      //    $.ajax({
+      //       type: "GET",
+      //       url: "/IGI/opinion/web/list",
+      //       data: {
+      //          siteId: SITEID,
+      //          pageIndex: 1,
+      //          pageSize: 3
+      //       },
+      //       success: function (res) {
+
+      //          if (res.statusCode === 200) {
+      //             const $container = $("#survey_list");
+      //             const list = res.datas.data;
+
+      //             let htmlStr = ""
+      //             $container.empty();
+
+      //             list.forEach((item, index) => {
+      //                let coverImg = ''
+
+      //                if (item.thumbnailsList.length == 0) {
+      //                   coverImg = ''
+      //                } else {
+      //                   coverImg = item.thumbnailsList[0]['filePath']
+      //                }
+
+      //                htmlStr += '<li>' +
+      //                   '  <a href="' + item.publishUrl + '?id=' + item.id + '">' +
+      //                   '    <span>' +
+      //                   limitContent(item.theme, 20) +
+      //                   '    </span>' +
+      //                   '    <span class="date">' +
+      //                   formatDate(Number(item.beginTime), 'yyyy-MM-dd') +
+      //                   '    </span>' +
+      //                   '  </a>' +
+      //                   '</li>';
+      //             })
+
+      //             $container.append(htmlStr);
+      //          }
+      //       }
+      //    });
+      // }
+
+      // getSurveyList()
+
+      // 获取信箱数据
+      function getMailInfo() {
+         $.ajax({
+            type: 'GET',
+            url: '/IGI/nbhd/openGovmsgbox.do',
+            data: {
+               method: 'countGovmsgboxs',
+               appId: APPID,
+               siteId: SITEID
+            },
+            success: function (res) {
+
+               if (res.statusCode === 200) {
+                  $('#allTotal').text(res.datas.totalCount)
+                  $('#yhfTotal').text(res.datas.replyedCount)
+               }
+
+            }
+         })
+      }
+
+      getMailInfo()
+   </script>
+</body>
+
+</html>

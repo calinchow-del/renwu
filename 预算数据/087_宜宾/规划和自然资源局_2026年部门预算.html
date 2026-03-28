@@ -1,0 +1,2069 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!--站点类-->
+<meta name="SiteName" content="宜宾市自然资源和规划局">
+<meta name="SiteDomain" content="http://zygh.yibin.gov.cn/">
+<meta name="SiteIDCode" content="5115000044">
+    <title>
+        宜宾市自然资源和规划局
+    </title>
+    <script type="text/javascript" src="http://www.yibin.gov.cn/images/write.js"></script>
+    <link rel="stylesheet" href="./images/common.css">
+    <link rel="stylesheet" href="./images/style.css">
+    <link rel="stylesheet" type="text/css" href="./images/jquery.bxslider.css">
+    <script type="text/javascript" src="./images/jquery.min.js"></script>
+    <link rel="stylesheet" href="/material/gwyszf.css">
+
+
+
+</head>
+<style type="text/css">
+    .zr-tit1 .line {
+        margin: 22px 5px 0;
+
+    }
+
+    .zr-tit3 .tit {
+        width: 120px;
+    }
+
+    .main_tab {
+        width: 460px;
+    }
+
+    .index-wrap1-col1 {
+        width: 670px;
+    }
+
+    .index-bar3 a img {
+        vertical-align: middle;
+        margin-left: 28px;
+        margin-right: 14px;
+    }
+</style>
+
+
+<body>
+    <div id="windows_r" class="sy_show ftyg_show"
+        style="z-index: 9999; position: fixed;right: 0;bottom: 0px; width: 328px; height: 210px;">
+        <span
+            style="position: absolute; top: -20px; cursor: pointer;  right: 0px;font-weight: bold;color: red;font-size: 14px;"
+            id="productDetailDiv">关闭</span>
+        <iframe style="border: none;" src="http://www.yibin.gov.cn/qt_297/test/test1/index.html" width="328"
+            height="210"></iframe>
+    </div>
+
+    <script type="text/javascript">
+        $('#productDetailDiv').click(function () {
+            $('#windows_r').hide();
+        });
+    </script>
+
+    <!-- <script type="text/javascript" src="/images/jquery.min.js"></script> -->
+<script type="text/javascript" src="/images/xcConfirm.js"></script>
+<link rel="stylesheet" type="text/css" href="/images/xcConfirm.css" />
+<!--检索-->
+<script>
+    function SubsiteSearch(){
+        var SearchKey = $("#textfield").val();
+        SearchKey=$.trim(SearchKey);
+        var reg =/[`~!@#$%^&*_+<>{}\/'[\]]/im;
+        if(reg.test(SearchKey)){
+                        window.wxc.xcConfirm("对不起，您输入的信息包含非法字符!", window.wxc.xcConfirm.typeEnum.info);
+            return false;
+        }
+        if(SearchKey=="" || SearchKey== null ){
+                        window.wxc.xcConfirm("对不起，请输入检索条件!", window.wxc.xcConfirm.typeEnum.info);
+            return false;
+        }else{
+            SearchKey = SearchKey.replace("-","\-");
+            SearchKey = SearchKey.replace("(","\(");
+            SearchKey = SearchKey.replace(")","\)");
+        }
+        SearchKey = encodeURIComponent(SearchKey);
+        //window.open("/site/sghj/search.html?searchWord=" + SearchKey + "&siteId=463&orderBy=time&timeOrder=desc")  ;
+window.open("/irs-c-web/search.html?tenantId=6240&code=18808a48264&searchWord=" + SearchKey);
+
+    }
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+   var uri = window.location.pathname;
+   $(".nav-l li").each(function () {
+	$(this).removeClass("cur"); 
+	});
+	if(uri.indexOf("/jg/")>=0){		
+       $(".nav-l li").eq(1).addClass('cur');
+	}else if(uri.indexOf("/xw/")>=0){
+       $(".nav-l li").eq(2).addClass('cur');
+	}else if(uri.indexOf("/gk/")>=0){
+       $(".nav-l li").eq(3).addClass('cur');
+	}else if(uri.indexOf("/bs/")>=0){
+       $(".nav-l li").eq(4).addClass('cur');}
+else if(uri.indexOf("/hd/")>=0){
+       $(".nav-l li").eq(5).addClass('cur');}
+else if(uri.indexOf("/zt/")>=0){
+       $(".nav-l li").eq(6).addClass('cur');}
+       else{		
+         $(".nav-l li").eq(0).addClass('cur');
+	}
+});
+</script>
+    <div class="header">
+        <div class="top clearfix">
+            <div class="w-container">
+                <span>欢迎来到宜宾市自然资源和规划局 !</span>
+                <div class="top-l rt">
+                   <a id="toolbarSwitch" href="javascript:void(0);">无障碍浏览</a>
+                   <span>|</span>
+                 <a id="toolbarSwitch" href=" /zzzq/">长者专区</a>
+        <span>|</span>
+                    <a href="javascript:;">设为首页</a>
+                    <span>|</span>
+                    <a href="javascript:window.external.AddFavorite('http://zygh.yibin.gov.cn/', '宜宾市自然资源和规划局')">加入收藏</a>
+                </div>
+            </div>
+        </div>
+        <div class="header-con clearfix w-container">
+            <a class="logo" href="http://zygh.yibin.gov.cn/"><img src="http://zygh.yibin.gov.cn/images/logo.png" /></a>
+            <div class="rt">
+                <div class="search-box">
+                    <input id="textfield" type="text" name="" placeholder="请输入搜索关键词" />
+                    <button  onclick="SubsiteSearch()">搜索</button>
+                </div>
+                <div class="hot_search clearfix">
+                    <!--<div class="lf hot_search_p">热词搜索：</div>
+                    <ul class="hot_search_ul lf">
+                        <li>
+                            <a href="#">扫黑除恶</a>
+                        </li>
+                        <li>
+                            <a href="#">律师证</a>
+                        </li>
+                        <li>
+                            <a href="#">法律职业资格</a>
+                        </li>
+                    </ul>-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="nav">
+        <div class="w-container">
+            <ul class="nav-l clearfix">
+                <li class="cur"><a href="http://zygh.yibin.gov.cn/"><span class="s1">首页</a></span></li>
+                <li><a href="http://zygh.yibin.gov.cn/jg/"><span class="s2">机构</span></a></li>
+                <li><a href="http://zygh.yibin.gov.cn/xw/"><span class="s3">新闻</span></a></li>
+                <li><a href="http://zygh.yibin.gov.cn/gk/"><span class="s4">公开</span></a></li>
+                <li><a href="http://www.sczwfw.gov.cn/jiq/front/item/bmft_index?deptCode=511501-13&areaCode=511500000000"><span class="s5">办事</span></a></li>
+                <li><a href="http://zygh.yibin.gov.cn/hd/"><span class="s6">互动</span></a></li>
+                <li><a href="http://zygh.yibin.gov.cn/zt/"><span class="s7">专题</span></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <SCRIPT type="text/javascript" src="/images/myfocus-2.0.4.min.js"></SCRIPT>
+    <script type="text/javascript" src="/images/floatadv.js"></script>
+
+
+    <div id="light" class="white_content"><a href="javascript:void(0)"
+            onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'"
+            style="float:right;font-size:14px;text-decoration: none;">关闭</a>
+
+        <a href="https://weibo.com/u/5388872741" target="_blank"><img src="http://zygh.yibin.gov.cn/images/zwwb.jpg" width="151" height="148" /> </a> <img src="http://zygh.yibin.gov.cn/images/zwwx.png" width="151" height="148" />
+    </div>
+    <div id="light2" class="white_content" style="padding-top:8Px"><a href="javascript:void(0)"
+            onclick="document.getElementById('light2').style.display='none';document.getElementById('fade').style.display='none'"
+            style="float:right;font-size:14px;text-decoration: none;">关闭</a>
+        <a href="http://zygh.yibin.gov.cn/gk/tdgl/zdxx/" target="_blank"><img src="http://zygh.yibin.gov.cn/images/zdxx1.jpg" /> </a><a
+            href="http://202.61.89.138/zd/zdplatform/Index.html" target="_blank" style="float:right"><img src="http://zygh.yibin.gov.cn/images/zdxx2.jpg" /></a>
+    </div>
+    <div id="fade" class="black_overlay"></div>
+    <style>
+        .header {
+            position: absolute;
+            z-index: 999;
+            background-color: #e8f1f8;
+        }
+
+        .nav {
+            position: absolute;
+            margin-top: 176px;
+            border-color: #e8f1f8;
+            z-index: 999;
+        }
+
+        .banner {
+            margin-top: 236px;
+            z-index: -1;
+        }
+
+        .bx-wrapper {
+            position: relative;
+            margin: 0 auto 60px;
+            padding: 0;
+            *zoom: 1;
+        }
+
+        .index-headline-tab {
+            width: 1200px;
+        }
+
+        .i_cont {
+            position: relative;
+            width: 1200px;
+            margin: 0 auto;
+            background-color: #fff;
+        }
+
+        .img-zk-css {
+            cursor: pointer;
+            position: absolute;
+            float: right;
+            right: -50px;
+            height: 18px;
+            width: 40px;
+            border: 1px solid #ecedf1;
+            text-align: center;
+            border-radius: 0 0 20px 20px;
+            top: 26px;
+            display: none;
+            z-index: 99999999999999;
+        }
+
+
+
+        .i_cl_r {
+            width: 580px;
+            float: right;
+        }
+
+        .i_c_l {
+            width: 580px;
+            margin: 10px;
+            float: left;
+        }
+
+        .black_overlay {
+            display: none;
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            z-index: 1001;
+            -moz-opacity: 0.8;
+            opacity: .80;
+            filter: alpha(opacity=80);
+        }
+
+        .white_content {
+            display: none;
+            position: absolute;
+            top: 40%;
+
+            width: 480Px;
+            height: 160Px;
+            padding: 10px;
+            left: 34%;
+            border: 1px solid ccc;
+            background-color: white;
+            z-index: 1002;
+            overflow: auto;
+        }
+    </style>
+
+
+
+    <!-- <div class="banner">
+    <div class="lbanner" style="position: relative;">
+    
+        <div class="slide">
+            <img src="./qt/sylbt/202007/W020200707572861049345.jpg" style="height: 350px;width:100%;" alt="" />
+        </div>
+    
+        <div class="slide">
+            <img src="./qt/sylbt/202008/W020200806564496819852.jpg" style="height: 350px;width:100%;" alt="" />
+        </div>
+    
+    </div>
+    </div> -->
+    <div class="i_cont clear">
+        <div class="i_c_l">
+
+        </div>
+        <div class="i_cl_r">
+            <div class="img-zk-css" title="展开大图">
+                <img src="/images/syimg-zk.png" style="width: 16px;" />
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+    <div class="main w-container" style="position: relative;">
+
+
+
+
+        <div class="index-headline">
+            <div class="index-headline-tab">
+                
+                    
+                        <div class="index-headline-item" style="display: block;">
+                            <div class="date"><span>
+                                    03月26日
+                                </span></div>
+                            <h1><img src="./images/img17.png" />
+                                <a href="./xw/qxdt/202603/t20260326_2215566.html" target="_blank" title="宜宾市自然资源和规划局党委召开党委书记听取下级党组织书记述责述廉报告会暨2026年党风廉政建设工作会" class="f-tac title f-otw">宜宾市自然资源和规划局党委召开党委书记听取下级党组织书记述责述廉报告会暨2026年党风廉政建设工作会</a>
+                            </h1>
+                            <p>
+                                近日，宜宾市自然资源和规划局党委召开党委书记听取下级党组织书记述责述廉报告会暨2026年党风廉政建设工作会，局党委书记、局长张锡恒出席会议并讲话。会议由局党委委员、副局长张友刚主持，驻局纪检监察组组长...
+                            </p>
+                        </div>
+                    
+                    
+                        <div class="index-headline-item" style="display: none;">
+                            <div class="date"><span>
+                                    03月11日
+                                </span></div>
+                            <h1><img src="./images/img17.png" />
+                                <a href="./xw/qxdt/202603/t20260311_2211860.html" target="_blank" title="巾帼护航守资源·芳华绽放兴规划" class="f-tac title f-otw">巾帼护航守资源·芳华绽放兴规划</a>
+                            </h1>
+                            <p>
+                                为庆祝第116个“三八”国际劳动妇女节，丰富女职工精神文化生活，凝聚自然资源系统巾帼力量，近日宜宾市自然资源和规划局与江安县自然资源规划局联合开展“巾帼护航守资源.芳华绽放兴规划”主题活动，市、县两级...
+                            </p>
+                        </div>
+                    
+                        <div class="index-headline-item" style="display: none;">
+                            <div class="date"><span>
+                                    02月24日
+                                </span></div>
+                            <h1><img src="./images/img17.png" />
+                                <a href="./xw/qxdt/202602/t20260224_2205598.html" target="_blank" title="张锡恒局长开展“局长跑流程”" class="f-tac title f-otw">张锡恒局长开展“局长跑流程”</a>
+                            </h1>
+                            <p>
+                                为深入贯彻落实市委经济工作会议关于优化营商环境的决策部署，近日，市自然资源和规划局党委书记、局长张锡恒带队到市不动产登记中心开展“局长跑流程”。市政务服务和非公经济发展局副局长张会翠，市税务局、市...
+                            </p>
+                        </div>
+                    
+                
+            </div>
+        </div>
+        <div class="index-wrap1 mt10 b-w clearfix">
+            <a href="https://www.sc.gov.cn/" target="_blank"><img style=" margin-bottom: 10px;" src="http://www.yibin.gov.cn/images/szfpic.jpg" /></a>
+            <div class="index-wrap1-col1 lf">
+                <ul class="index-newspic">
+                    
+                        <li> <a href="./xw/qxdt/202603/t20260326_2215566.html" target='_blank'><img src="./xw/qxdt/202603/W020260326342150841574.png" style="width:670px;height:394px;" /></a></li>
+                    
+                        <li> <a href="./xw/qxdt/202602/t20260224_2205598.html" target='_blank'><img src="./xw/qxdt/202602/W020260224339261037665.png" style="width:670px;height:394px;" /></a></li>
+                    
+                        <li> <a href="./xw/qxdt/202602/t20260213_2204974.html" target='_blank'><img src="./xw/qxdt/202602/W020260224340075987842.png" style="width:670px;height:394px;" /></a></li>
+                    
+                        <li> <a href="./xw/qxdt/202601/t20260128_2199477.html" target='_blank'><img src="./xw/qxdt/202601/W020260128560959243949.png" style="width:670px;height:394px;" /></a></li>
+                    
+                        <li> <a href="./xw/qxdt/202601/t20260106_2190089.html" target='_blank'><img src="./xw/qxdt/202601/W020260106379902171934.png" style="width:670px;height:394px;" /></a></li>
+                    
+                </ul>
+                <ul class="index-pictt">
+                    
+                        <li>
+                            <a href="./xw/qxdt/202603/t20260326_2215566.html" target="_blank">宜宾市自然资源和规划局党委召开党委书记听取下级党组织书记述责述廉报告会暨2026年党风廉政建设工作会</a></a>
+                        </li>
+                    
+                        <li>
+                            <a href="./xw/qxdt/202602/t20260224_2205598.html" target="_blank">张锡恒局长开展“局长跑流程”</a></a>
+                        </li>
+                    
+                        <li>
+                            <a href="./xw/qxdt/202602/t20260213_2204974.html" target="_blank">市自然资源规划局召开节前全市地质灾害防治、安全生产、 廉政教育工作视频会议</a></a>
+                        </li>
+                    
+                        <li>
+                            <a href="./xw/qxdt/202601/t20260128_2199477.html" target="_blank">锚定“十五五”开局 绘就发展新蓝图 全市2026年自然资源规划工作会召开</a></a>
+                        </li>
+                    
+                        <li>
+                            <a href="./xw/qxdt/202601/t20260106_2190089.html" target="_blank">宜宾市地质灾害防治指挥部办公室组织召开乌蒙山区冬春季地质灾害专项 排查防范行动调度会</a></a>
+                        </li>
+                    
+                </ul>
+                <ul class="index-picpg clearfix">
+                    
+                        
+                            <li class="cur"></li>
+                        
+                        
+                            <li></li>
+                        
+                            <li></li>
+                        
+                            <li></li>
+                        
+                            <li></li>
+                        
+                    
+                </ul>
+            </div>
+            <div class="main_tab zr-sw rt">
+                <!-- mark -->
+                <div class="tab-list-bool zr-tit clearfix">
+                    <a href="http://www.yibin.gov.cn/xxgk/gsyw/gwyxx/" class="tit cur">党中央国务院信息</a>
+                    <a href="https://www.sc.gov.cn/10462/c110462/list_ft.shtml" class="tit">省委省政府信息</a>
+                    <!-- <a href="./xw/gsyw/" class="tit cur">国省要闻</a> -->
+                    <!-- <a href="http://www.yibin.gov.cn/xxgk/gsyw/gwyxx" class="tit cur">党中央国务院信息</a> -->
+                   
+                    <a href="./xw/qxdt/" class="tit">工作动态</a>
+                    <a href="./gk/gggs/" class="tit">公告公示</a>
+                </div>
+                <div class="zr-tab">
+
+                    <div class="zr-item" style="display: none;">
+                        <ul class="gl-l" id="gwyxx">
+
+                        </ul>
+                        <ul class="wenjianku">
+                            <li class="gwylastli gwylastlishengzf">
+                                <a href="https://www.gov.cn/zhengce/xxgk/index.htm" target="_blank"
+                                    style="display: inline;">
+                                    <span
+                                        style="font-weight: bold; color: #cc272d; float: none; padding: 0;">国家政策文件库：</span>
+                                </a>
+                                <div class="link-container" id="gwywjk">
+                                </div>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <div class="zr-item" style="display: none;">
+                                <script src="https://www.sc.gov.cn/10462/szfxx/szfxx.js"> </script>
+                                <ul class="szfwenjianku">
+                                    <li class="gwylastli gwylastlishengzf">
+
+                                        <a class="red" href="https://www.sc.gov.cn/10462/scszcwjkss/scszcwjkss.shtml"
+                                            target="_blank" style="display: inline;">
+                                            省政府政策文件：
+                                        </a>
+                                        <div class="link-container" id="szfwjk">
+
+                                        </div>
+
+                                    </li>
+                                </ul>
+                            </div>
+
+                    <!-- mark -->
+                    
+                    <div class="zr-item" style="display: none;">
+                        
+                            
+                                <div class="index-wrap1-head">
+                                    <h1>
+                                        <a href="./xw/qxdt/202603/t20260326_2215566.html" target="_blank" title="宜宾市自然资源和规划局党委召开党委书记听取下级党组织书记述责述廉报告会暨2026年党风廉政建设工作会" class="">宜宾市自然资源和规划局党委召开党委书记听取下级党组织书记述责述廉报告会暨2026年党风廉政建设工作会</a>
+                                    </h1>
+                                    <p class=""><i></i>
+                                        近日，宜宾市自然资源和规划局党委召开党委书记听取下级党组织书记述责述廉报告会暨2026年党风廉政建设工作会，局党委书记、局长张锡恒出席会议并讲话。会议...<a target='_blank'
+                                            href="./xw/qxdt/202603/t20260326_2215566.html ">[详情]</a>
+                                    </p>
+                                </div>
+                            
+                            <ul class="gl-l">
+                                
+                                    <li>
+                                        <a href="./xw/qxdt/202603/t20260311_2211860.html" target="_blank" title="巾帼护航守资源·芳华绽放兴规划" class="">巾帼护航守资源·芳华绽放兴规划</a><span>
+                                            2026-03-11
+                                        </span>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="./xw/qxdt/202602/t20260224_2205598.html" target="_blank" title="张锡恒局长开展“局长跑流程”" class="">张锡恒局长开展“局长跑流程”</a><span>
+                                            2026-02-24
+                                        </span>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="./xw/qxdt/202602/t20260213_2204974.html" target="_blank" title="市自然资源规划局召开节前全市地质灾害防治、安全生产、 廉政教育工作视频会议" class="">市自然资源规划局召开节前全市地质灾害防治、安全生产、 廉政教育工作视频会议</a><span>
+                                            2026-02-13
+                                        </span>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="./xw/qxdt/202602/t20260210_2203427.html" target="_blank" title="我市成功实现全省首笔取水权抵押融资" class="">我市成功实现全省首笔取水权抵押融资</a><span>
+                                            2026-02-10
+                                        </span>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="./xw/qxdt/202601/t20260128_2199477.html" target="_blank" title="锚定“十五五”开局 绘就发展新蓝图 全市2026年自然资源规划工作会召开" class="">锚定“十五五”开局 绘就发展新蓝图 全市2026年自然资源规划工作会召开</a><span>
+                                            2026-01-28
+                                        </span>
+                                    </li>
+                                
+                            </ul>
+                        
+                    </div>
+
+
+                    <div class="zr-item" style="display: none;">
+                        
+                            
+                                <div class="index-wrap1-head">
+                                    <h1>
+                                        <a href="./gk/gggs/qtgggs/202603/t20260326_2215796.html" target="_blank" title="宜宾市自然资源和规划局2026年行政处罚公示第二批（执法类别）" class="">宜宾市自然资源和规划局2026年行政处罚公示第二批（执法类别）</a>
+                                    </h1>
+                                    <p class=""><i></i>
+                                        详见附件。<a target='_blank'
+                                            href="./gk/gggs/qtgggs/202603/t20260326_2215796.html ">[详情]</a>
+                                    </p>
+                                </div>
+                            
+                            <ul class="gl-l">
+                                
+                                    <li>
+                                        <a href="./gk/gggs/qtgggs/202603/t20260325_2215173.html" target="_blank" title="宜宾市自然资源和规划局 宜宾市2026年测绘地理信息质量监督检查项目采购需求调查公告" class="">宜宾市自然资源和规划局 宜宾市2026年测绘地理信息质量监督检查项目采购需求调查公告</a><span>
+                                            2026-03-25
+                                        </span>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="./gk/gggs/tdyegggs/202603/t20260323_2214649.html" target="_blank" title="宜宾市国有建设用地使用权 拍卖出让公告 （宜市拍﹝2026﹞4号）" class="">宜宾市国有建设用地使用权 拍卖出让公告 （宜市拍﹝2026﹞4号）</a><span>
+                                            2026-03-23
+                                        </span>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="./gk/gggs/qtgggs/202603/t20260318_2213707.html" target="_blank" title="宜宾市自然资源和规划局宜宾市采矿损毁土地状况调查市级技术服务中选结果公告" class="">宜宾市自然资源和规划局宜宾市采矿损毁土地状况调查市级技术服务中选结果公告</a><span>
+                                            2026-03-18
+                                        </span>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="./gk/gggs/qtgggs/202603/t20260318_2213667.html" target="_blank" title="宜宾市自然资源和规划局短信平台采购项目结果公示" class="">宜宾市自然资源和规划局短信平台采购项目结果公示</a><span>
+                                            2026-03-18
+                                        </span>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="./gk/gggs/qtgggs/202603/t20260318_2213664.html" target="_blank" title="宜宾市自然资源和规划局关于公开选择宜宾市2026年度矿产执法地质勘查测绘技术服务单位结果的公示" class="">宜宾市自然资源和规划局关于公开选择宜宾市2026年度矿产执法地质勘查测绘技术服务单位结果的公示</a><span>
+                                            2026-03-18
+                                        </span>
+                                    </li>
+                                
+                            </ul>
+                        
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+        <!--ad图切换-->
+        <script type="text/javascript" src="http://www.yibin.gov.cn/images/jquery.SuperSlide.2.1.1.js"></script>
+        <style>
+            .zt-gr {
+                position: relative;
+                height: 120px;
+            }
+
+            .zt-gr {
+                width: 1200px;
+                height: 120px;
+                overflow: hidden;
+                position: relative;
+            }
+
+            .zt-gr .bd {
+                position: relative;
+                height: 100%;
+                z-index: 0;
+            }
+
+            .zt-gr .bd li {
+                zoom: 1;
+                vertical-align: middle;
+                position: relative;
+            }
+
+            .zt-gr .bd img {
+                width: 1200px;
+                height: 120px;
+                display: block;
+            }
+
+            .zt-gr .hd ul {
+                position: absolute;
+                right: 10px;
+                bottom: 10px;
+                overflow: hidden;
+                z-index: 10
+            }
+
+            .zt-gr .hd ul li {
+                float: left;
+                width: 30px;
+                height: 5px;
+                overflow: hidden;
+                margin-right: 10px;
+                cursor: pointer;
+                background: #D9D9D9
+            }
+
+            .zt-gr .hd ul li.on {
+                background: #0075c4;
+            }
+        </style>
+        <div id="zt-gr" class="zt-gr fl">
+            <div class="hd">
+                <ul>
+
+                    
+                        <li></li>
+                    
+                        <li></li>
+                    
+                        <li></li>
+                    
+                        <li></li>
+                    
+                        <li></li>
+                    
+                        <li></li>
+                    
+
+
+
+
+
+                </ul>
+            </div>
+            <div class="bd">
+                <ul>
+                    
+                        <li><a target="_blank" href="http://zygh.yibin.gov.cn/index.html"> <img width="1200" src="./qt/sygglbt/202305/W020230519409692393597.png" /></a>
+                        </li>
+                    
+                        <li><a target="_blank" href="http://www.gov.cn/hudong/index.htm"> <img width="1200" src="./qt/sygglbt/202304/W020230418614336461868.png" /></a>
+                        </li>
+                    
+                        <li><a target="_blank" href="http://www.gov.cn/zhuanti/zswzjjylzzccs/index.htm"> <img width="1200" src="./qt/sygglbt/202209/W020220923653126708814.jpg" /></a>
+                        </li>
+                    
+                        <li><a target="_blank" href=""> <img width="1200" src="./qt/sygglbt/202111/W020211101556193861920.png" /></a>
+                        </li>
+                    
+                        <li><a target="_blank" href="http://dangshi.people.cn/?study_style_id=feeds_pure&pid=26665000862151345&ptype=70&source=share"> <img width="1200" src="./qt/sygglbt/202103/W020210712330159234998.jpg" /></a>
+                        </li>
+                    
+                        <li><a target="_blank" href="http://www.xinhuanet.com/politics/fdbnlqhxzc/"> <img width="1200" src="./qt/sygglbt/202101/W020210127404149686704.jpg" /></a>
+                        </li>
+                    
+
+
+
+
+                </ul>
+            </div>
+        </div>
+
+        <script>
+
+            jQuery(".zt-gr").slide({ mainCell: ".bd ul", effect: "fold", autoPlay: true, easing: "easeInBack", delayTime: 0 });
+        </script>
+        <!--ad图切换结束-->
+
+
+
+
+
+
+        <!--  <div class="index-bar1 mt10">
+           <a href="http://www.12371.cn/special/19jwzqh/"  target="_blank"> <img src="./qt/syhfgg/images/P020201111627497645386.jpg" alt="" class="img" /></a>
+        </div> -->
+
+
+
+
+
+        <div class="mt10 b-w index-wrap2">
+            <div class="sec-tit">
+                <img class="img" src="./images/icon25.png" />
+                <a class="tit" href="http://zygh.yibin.gov.cn/gk/zfxxgk">政府信息公开</a>
+                <span class="en"></span>
+            </div>
+            <div class="clearfix mt20">
+                <div class="index-bar2 lf">
+                    <a class="a1" href="http://zygh.yibin.gov.cn/jg/jgzn/">
+                        <div></div>
+                        <p>
+                            机构职能
+                        </p>
+                    </a>
+                    <a class="a2" href="http://zygh.yibin.gov.cn/jg/ldzc/">
+                        <div></div>
+                        <p>
+                            领导之窗
+                        </p>
+                    </a>
+                    <a class="a3" href="http://zygh.yibin.gov.cn/jg/nsjg/">
+                        <div></div>
+                        <p>
+                            内设机构
+                        </p>
+                    </a>
+                    <a class="a4" href="http://zygh.yibin.gov.cn/jg/lxfs/">
+                        <div></div>
+                        <p>
+                            联系方式
+                        </p>
+                    </a>
+                </div>
+                <div class="index-wrap2-l lf">
+                    <style type="text/css">
+                        .zr-tit1 a {
+                            display: inline-block;
+                            padding-right: 10px;
+                        }
+                    </style>>
+                    <div class="zr-sw">
+                        <!-- mark -->
+                        <div class="zr-tit zr-tit1  zr-tit2">
+                            <a href="./xw/gsyw/" class="tit cur">国省要闻</a>
+                             <a href="./xw/xyxw/" class="tit">行业新闻</a>
+
+                            
+                            <a href="./gk/zcfg/" class="tit">政策法规</a>
+
+                            <a href="./gk/czxx/" class="tit ">财政信息</a>
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            <a href="./gk/rsxx/" class="tit ">人事信息</a>
+
+
+                        </div>
+
+
+
+
+                        <div class="zr-tab">
+                            <!-- zhanwei1 -->
+                            <div class="zr-item">
+                                
+                                    
+                                        <div class="index-wrap1-head">
+                                            <h1>
+                                                <a href="./xw/gsyw/202603/t20260326_2215554.html" target="_blank" title="我国土地质量稳中向好" class="">我国土地质量稳中向好</a>
+                                            </h1>
+                                            <p class=""><i></i>
+                                                记者3月22日从自然资源部中国地质调查局获悉，新发布的《国家土地地球化学监测报告2025》显示，我国土地质量稳中向好，土壤正在变得更“肥沃”和“健康”。研...<a target='_blank'
+                                                    href="./xw/gsyw/202603/t20260326_2215554.html ">[详情]</a>
+                                            </p>
+                                        </div>
+                                    
+                                    <ul class="gl-l">
+                                        
+                                            <li>
+                                                <a href="./xw/gsyw/202603/t20260311_2211844.html" target="_blank" title="2026年政府工作报告 自然资源看点" class="">2026年政府工作报告 自然资源看点</a><span>
+                                                    2026-03-11
+                                                </span>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="./xw/gsyw/202602/t20260226_2206401.html" target="_blank" title="自然资源部发布十四个全民所有自然资源资产清查典型案例" class="">自然资源部发布十四个全民所有自然资源资产清查典型案例</a><span>
+                                                    2026-02-26
+                                                </span>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="./xw/gsyw/202602/t20260210_2203383.html" target="_blank" title="自然资源部召开党组会议传达学习习近平总书记在省部级主要领导干部学习贯彻党的二十届四中全会精神专题研讨班开班式上的重要讲话精神等" class="">自然资源部召开党组会议传达学习习近平总书记在省部级主要领导干部学习贯彻党的二十届四中全会精神专题研讨班开班式上的重要讲话精神等</a><span>
+                                                    2026-02-10
+                                                </span>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="./xw/gsyw/202601/t20260120_2196932.html" target="_blank" title="我国超额完成“十四五”历史遗留矿山生态修复目标任务" class="">我国超额完成“十四五”历史遗留矿山生态修复目标任务</a><span>
+                                                    2026-01-20
+                                                </span>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="./xw/gsyw/202601/t20260106_2190053.html" target="_blank" title="2025年自然资源工作取得亮眼成效" class="">2025年自然资源工作取得亮眼成效</a><span>
+                                                    2026-01-06
+                                                </span>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </div>
+                             <div class="zr-item">
+                                
+                                    
+                                        <div class="index-wrap1-head">
+                                            <h1>
+                                                <a href="./xw/xyxw/202603/t20260326_2215558.html" target="_blank" title="省厅印发通知进一步规范省级非法采矿价值认定工作" class="">省厅印发通知进一步规范省级非法采矿价值认定工作</a>
+                                            </h1>
+                                            <p class=""><i></i>
+                                                为进一步规范省厅非法采矿采出矿产品价值、非法采矿或破坏性采矿造成矿产资源破坏价值认定工作，依法惩处破坏矿产资源违法犯罪行为，近日，省厅印发《关于进...<a target='_blank'
+                                                    href="./xw/xyxw/202603/t20260326_2215558.html ">[详情]</a>
+                                            </p>
+                                        </div>
+                                    
+                                    <ul class="gl-l">
+                                        
+                                            <li>
+                                                <a href="./xw/xyxw/202603/t20260311_2211848.html" target="_blank" title="自然资源部部署2026年地勘和测绘行业安全生产工作" class="">自然资源部部署2026年地勘和测绘行业安全生产工作</a><span>
+                                                    2026-03-11
+                                                </span>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="./xw/xyxw/202602/t20260226_2206403.html" target="_blank" title="四川省印发通知建立重大电网项目用地用林要素保障服务机制" class="">四川省印发通知建立重大电网项目用地用林要素保障服务机制</a><span>
+                                                    2026-02-26
+                                                </span>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="./xw/xyxw/202602/t20260210_2203403.html" target="_blank" title="省厅组织离退休干部赴泸州宜宾调研考察耕地保护工作" class="">省厅组织离退休干部赴泸州宜宾调研考察耕地保护工作</a><span>
+                                                    2026-02-10
+                                                </span>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="./xw/xyxw/202601/t20260120_2196935.html" target="_blank" title="自然资源部相关司局负责人解读《关于进一步加强找矿成果发布管理工作的通知》" class="">自然资源部相关司局负责人解读《关于进一步加强找矿成果发布管理工作的通知》</a><span>
+                                                    2026-01-20
+                                                </span>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="./xw/xyxw/202601/t20260106_2190065.html" target="_blank" title="为什么要实行统筹存量和增量综合供地" class="">为什么要实行统筹存量和增量综合供地</a><span>
+                                                    2026-01-06
+                                                </span>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </div>
+
+                            
+
+
+                            <div class="zr-item">
+                                <ul class="gl-l">
+                                    
+                                        <li>
+                                            <a href="./gk/zcfg/zcjd/202601/t20260119_2196409.html" target="_blank" title="《宜宾市征收农民集体所有土地补偿安置办法》政策问答" class="">《宜宾市征收农民集体所有土地补偿安置办法》政策问答</a><span>
+                                                2026-01-19
+                                            </span>
+                                        </li>
+                                    
+                                        <li>
+                                            <a href="./gk/zcfg/zcwj/202601/t20260119_2196401.html" target="_blank" title="宜宾市人民政府关于印发《宜宾市征收农民集体所有土地补偿安置办法》的通知" class="">宜宾市人民政府关于印发《宜宾市征收农民集体所有土地补偿安置办法》的通知</a><span>
+                                                2026-01-19
+                                            </span>
+                                        </li>
+                                    
+                                        <li>
+                                            <a href="http://jsj.yibin.gov.cn/wjk/zewj/202510/t20251024_2162544.html" target="_blank" title="宜宾市住房和城乡建设局 宜宾市自然资源和规划局 关于开展宜宾市第一届“好房子”设计竞赛 的通知" class="">宜宾市住房和城乡建设局 宜宾市自然资源和规划局 关于开展宜宾市第一届“好房子”设计竞赛 的通知</a><span>
+                                                2025-10-27
+                                            </span>
+                                        </li>
+                                    
+                                        <li>
+                                            <a href="./gk/zcfg/flfggz/202512/t20251211_2178646.html" target="_blank" title="四川省自然资源厅关于印发《四川省地质灾害自动化监测预警项目管理工作指引》的通知" class="">四川省自然资源厅关于印发《四川省地质灾害自动化监测预警项目管理工作指引》的通知</a><span>
+                                                2025-09-25
+                                            </span>
+                                        </li>
+                                    
+                                        <li>
+                                            <a href="./gk/zcfg/zcjd/202508/t20250820_2144259.html" target="_blank" title="解读《宜宾市自然资源和规划局关于印发《宜宾市〈建设工程规划许可证〉豁免清单》的通知》" class="">解读《宜宾市自然资源和规划局关于印发《宜宾市〈建设工程规划许可证〉豁免清单》的通知》</a><span>
+                                                2025-08-20
+                                            </span>
+                                        </li>
+                                    
+                                        <li>
+                                            <a href="./gk/zcfg/zcwj/202508/t20250820_2144234.html" target="_blank" title="宜宾市自然资源和规划局关于印发《宜宾市〈建设工程规划许可证〉 豁免清单》的通知" class="">宜宾市自然资源和规划局关于印发《宜宾市〈建设工程规划许可证〉 豁免清单》的通知</a><span>
+                                                2025-08-20
+                                            </span>
+                                        </li>
+                                    
+                                </ul>
+
+                            </div>
+                            <div class="zr-item" style="display: none;">
+                                <ul class="gl-l">
+                                    
+                                        <li>
+                                            <a href="./gk/czxx/bmys/202602/t20260210_2203455.html" target="_blank" title="宜宾市自然资源和规划局翠屏区分局2026年单位预算编制说明" class="">宜宾市自然资源和规划局翠屏区分局2026年单位预算编制说明</a><span>
+                                                2026-02-10
+                                            </span>
+                                        </li>
+                                    
+                                        <li>
+                                            <a href="./gk/czxx/bmys/202602/t20260210_2203453.html" target="_blank" title="宜宾市城乡规划编制研究院2026年单位预算编制说明" class="">宜宾市城乡规划编制研究院2026年单位预算编制说明</a><span>
+                                                2026-02-10
+                                            </span>
+                                        </li>
+                                    
+                                        <li>
+                                            <a href="./gk/czxx/bmys/202602/t20260210_2203447.html" target="_blank" title="宜宾市自然资源和规划部门2026年部门预算编制说明" class="">宜宾市自然资源和规划部门2026年部门预算编制说明</a><span>
+                                                2026-02-10
+                                            </span>
+                                        </li>
+                                    
+                                        <li>
+                                            <a href="./gk/czxx/bmys/202602/t20260210_2203439.html" target="_blank" title="宜宾市自然资源和规划局2026年单位预算编制说明" class="">宜宾市自然资源和规划局2026年单位预算编制说明</a><span>
+                                                2026-02-10
+                                            </span>
+                                        </li>
+                                    
+                                        <li>
+                                            <a href="./gk/czxx/bmjs/202509/t20250929_2154136.html" target="_blank" title="2024年度宜宾市自然资源和规划局翠屏区分局部门决算公开" class="">2024年度宜宾市自然资源和规划局翠屏区分局部门决算公开</a><span>
+                                                2025-09-29
+                                            </span>
+                                        </li>
+                                    
+                                        <li>
+                                            <a href="./gk/czxx/bmjs/202509/t20250929_2154089.html" target="_blank" title="2024年度宜宾市不动产登记中心单位决算公开" class="">2024年度宜宾市不动产登记中心单位决算公开</a><span>
+                                                2025-09-29
+                                            </span>
+                                        </li>
+                                    
+                                </ul>
+                            </div>
+                            <div class="zr-item" style="display: none;">
+                                <ul class="gl-l">
+                                    
+                                        <li>
+                                            <a href="./gk/rsxx/rykl/202510/t20251013_2156941.html" target="_blank" title="宜宾市自然资源和规划局公开招聘驾驶员最终成绩及体检有关事项的公告" class="">宜宾市自然资源和规划局公开招聘驾驶员最终成绩及体检有关事项的公告</a><span>
+                                                2025-10-13
+                                            </span>
+                                        </li>
+                                    
+                                        <li>
+                                            <a href="./gk/rsxx/rykl/202508/t20250825_2145288.html" target="_blank" title="宜宾市自然资源和规划局关于公开招聘驾驶员的公告" class="">宜宾市自然资源和规划局关于公开招聘驾驶员的公告</a><span>
+                                                2025-08-25
+                                            </span>
+                                        </li>
+                                    
+                                        <li>
+                                            <a href="./gk/rsxx/rsrm/202508/t20250825_2145110.html" target="_blank" title="中共宜宾市自然资源和规划局委员会关于刘勇等三名同志正式任职的通知" class="">中共宜宾市自然资源和规划局委员会关于刘勇等三名同志正式任职的通知</a><span>
+                                                2025-07-21
+                                            </span>
+                                        </li>
+                                    
+                                        <li>
+                                            <a href="https://www.scpta.com.cn/content-63-979D0EC0BD5B50E0" target="_blank" title="四川省宜宾市所属事业单位2025年上半年公开考试招聘工作人员（综合类）公告" class="">四川省宜宾市所属事业单位2025年上半年公开考试招聘工作人员（综合类）公告</a><span>
+                                                2025-05-22
+                                            </span>
+                                        </li>
+                                    
+                                        <li>
+                                            <a href="./gk/rsxx/rsrm/202503/t20250313_2102268.html" target="_blank" title="中共宜宾市自然资源和规划局委员会关于杨书文同志免职的通知" class="">中共宜宾市自然资源和规划局委员会关于杨书文同志免职的通知</a><span>
+                                                2025-03-13
+                                            </span>
+                                        </li>
+                                    
+                                        <li>
+                                            <a href="./gk/rsxx/rsrm/202406/t20240611_1993689.html" target="_blank" title="中共宜宾市自然资源和规划局委员会关于王长贵等四名同志任职的通知" class="">中共宜宾市自然资源和规划局委员会关于王长贵等四名同志任职的通知</a><span>
+                                                2024-04-25
+                                            </span>
+                                        </li>
+                                    
+                                </ul>
+                            </div>
+
+
+
+
+
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+                <div class="index-bar3 rt">
+                    <a target="_blank" class="a1"
+                        href="http://zygh.yibin.gov.cn/gk/zfxxgk/"><img src="./images/icon30.png" />
+                        政府信息公开指南
+                    </a>
+                    <a href="http://www.yibin.gov.cn/ztzl/zfxxgk/zfxxgkzdnew/"><img src="./images/icon31.png" />
+                        政府信息公开制度
+                    </a>
+                    <a href="http://zygh.yibin.gov.cn/xxgkpt/doclist.html?deptId=92337815&chnlId=1434&id=fad2571c-829d-4724-8a98-c905b001ff1c"><img src="./images/icon32.png" />
+                        政府信息公开年报
+                    </a>
+                    <a
+                        href="http://zygh.yibin.gov.cn/xxgkpt/morelist.html?deptId=92337815&chnlId=1410&id=cd2a393a-77c5-4282-b61b-235e42cd62fd"><img src="./images/icon33.png" />法定主动公开内容</a>
+                    <a href="http://zygh.yibin.gov.cn/gk/zfxxgk/ndgzbb/"><img src="./images/icon34.png" />
+                        政府网站工作年度报表
+                    </a>
+                    <a href="http://zygh.yibin.gov.cn/gk/zfxxgk/ysqgk/"><img src="./images/icon35.png" />
+                        依申请公开
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="index-bar4 mt10 clearfix">
+            <a href="http://zygh.yibin.gov.cn/gk/tdgl/zdxx/202011/t20201125_1384616.html"><img src="./images/img19.png" /></a>
+            <div class="index-bar5 rt">
+                <ul class="index-bar5-l">
+
+
+
+                    </li>
+                    <li><a target="_blank" href="http://zygh.yibin.gov.cn/gk/dzzhfz/dzzhyjyb/"><img src="./gk/dzzhfz/dzzhyjyb/images/P020200927554644211644.png" alt="" class="img" /></a>
+                    </li>
+
+
+
+
+                    <li><a target="_blank" href="/gk/chgl/gyxdtfw/tdtyb/"><img src="./gk/chgl/gyxdtfw/images/P020231207347927586417.jpg" alt="" class="img" /></a>
+                    </li>
+                </ul>
+                <ul class="index-bar5-n clearfix">
+                    <li class="cur"></li>
+                    <li class=""></li>
+
+
+
+                </ul>
+            </div>
+        </div>
+        <div class="clearfix mt10">
+            <div class="index-box1 h352 b-w lf">
+                <div class="sec-tit">
+                    <img class="img" src="./images/icon41.png" />
+                    <a class="tit" href="http://zygh.yibin.gov.cn/bs/">办事服务</a>
+                    <span class="en"></span>
+                </div>
+                <div class="index-bar7 clearfix">
+                    <a class="lf"
+                        href="http://www.sczwfw.gov.cn/jiq/front/item/bmft_index?deptCode=511501-13&areaCode=511500000000"><img src="./images/img21.png" /></a>
+                    <a class="lf" href="/bs"><img src="./images/img22.png" /></a>
+
+                    <a style="margin-left: 13px;" href="http://zygh.yibin.gov.cn/gk/bdcdj/">
+                        <img src="./gk/bdcdj/images/P020201127422730464818.jpg" alt="" class="img" />
+                    </a>
+
+                </div>
+            </div>
+            <div class="index-box2 zr-sw h352 b-w rt">
+                <div class="zr-tit zr-tit1">
+                    <a href="./gk/tdgl/" class="tit cur">土地管理</a>
+                    <img class="line" src="./images/icon16.png" />
+                    <a href="./gk/kcgl/" class="tit">矿产管理</a>
+                    <img class="line" src="./images/icon16.png" />
+                    <a href="./gk/chgl/" class="tit">测绘管理</a>
+                    <img class="line" src="./images/icon16.png" />
+                    <a href="./gk/dzzhfz/" class="tit">地质灾害防治</a>
+                    <img class="line" src="./images/icon16.png" />
+
+                    <a href="http://zygh.yibin.gov.cn/gk/bdcdj/" class="tit">不动产登记</a>
+                </div>
+                <div class="zr-tab">
+                    <div class="zr-item index-sw">
+                        <div class="zr-tit3 index-tit">
+                            <a class="tit cur" href="http://zygh.yibin.gov.cn/gk/gggs/tdyegggs/">
+                                土地业务公告公示<i></i>
+                            </a>
+                            <a class="tit cur" href="http://zygh.yibin.gov.cn/gk/tdgl/xgdjh/">
+                                供地计划<i></i>
+                            </a>
+                            <a class="tit" href="http://zygh.yibin.gov.cn/gk/tdgl/tdsc/">
+                                土地市场<i></i>
+                            </a>
+                            <a class="tit" href="http://zygh.yibin.gov.cn/gk/tdgl/djxx/">
+                                地价信息<i></i>
+                            </a>
+
+
+                        </div>
+                        <div class="index-tab">
+                            <ul class="index-item gl-l">
+                                
+                                    <li>
+                                        <a href="./gk/gggs/tdyegggs/202603/t20260323_2214649.html" target="_blank" title="宜宾市国有建设用地使用权 拍卖出让公告 （宜市拍﹝2026﹞4号）" class="">宜宾市国有建设用地使用权 拍卖出让公告 （宜市拍﹝2026﹞4号）</a><span>
+                                            2026-03-23
+                                        </span>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="./gk/gggs/tdyegggs/202603/t20260316_2213195.html" target="_blank" title="宜宾市国有建设用地使用权拍卖出让公告（宜市拍﹝2026﹞3号）" class="">宜宾市国有建设用地使用权拍卖出让公告（宜市拍﹝2026﹞3号）</a><span>
+                                            2026-03-16
+                                        </span>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="./gk/gggs/tdyegggs/202603/t20260303_2207634.html" target="_blank" title="宜宾市国有建设用地使用权拍卖出让公告（宜市拍﹝2026﹞2号）" class="">宜宾市国有建设用地使用权拍卖出让公告（宜市拍﹝2026﹞2号）</a><span>
+                                            2026-03-03
+                                        </span>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="./gk/gggs/tdyegggs/202602/t20260214_2205259.html" target="_blank" title="宜宾市国有建设用地使用权 挂牌出让公告 （宜市挂﹝2026﹞4号）" class="">宜宾市国有建设用地使用权 挂牌出让公告 （宜市挂﹝2026﹞4号）</a><span>
+                                            2026-02-14
+                                        </span>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="./gk/gggs/tdyegggs/202602/t20260214_2205231.html" target="_blank" title="宜宾市国有建设用地使用权 拍卖出让公告 （宜市拍﹝2026﹞1号）" class="">宜宾市国有建设用地使用权 拍卖出让公告 （宜市拍﹝2026﹞1号）</a><span>
+                                            2026-02-13
+                                        </span>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="./gk/gggs/tdyegggs/202602/t20260212_2204550.html" target="_blank" title="宜宾市国有建设用地使用权挂牌出让公告（宜市挂﹝2026﹞3号）" class="">宜宾市国有建设用地使用权挂牌出让公告（宜市挂﹝2026﹞3号）</a><span>
+                                            2026-02-12
+                                        </span>
+                                    </li>
+                                
+                            </ul>
+
+                            <ul class="index-item gl-l">
+                                
+                                    <li>
+                                        <a href="./gk/tdgl/xgdjh/202504/t20250429_2115555.html" target="_blank" title="宜宾市中心城区2025年度国有建设用地供应计划（含出让计划）" class="">宜宾市中心城区2025年度国有建设用地供应计划（含出让计划）</a><span>
+                                            2025-04-29
+                                        </span>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="./gk/tdgl/xgdjh/202412/t20241230_2079908.html" target="_blank" title="宜宾市中心城区2024年度国有建设用地供应计划调整表（含出让计划）" class="">宜宾市中心城区2024年度国有建设用地供应计划调整表（含出让计划）</a><span>
+                                            2024-12-30
+                                        </span>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="./gk/tdgl/xgdjh/202403/t20240312_1964801.html" target="_blank" title="宜宾市中心城区2024年度国有建设用地供应计划（含出让计划）" class="">宜宾市中心城区2024年度国有建设用地供应计划（含出让计划）</a><span>
+                                            2024-03-12
+                                        </span>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="./gk/tdgl/xgdjh/202312/t20231226_1939950.html" target="_blank" title="宜宾市中心城区2023年度国有建设用地供应计划调整表（含出让计划）" class="">宜宾市中心城区2023年度国有建设用地供应计划调整表（含出让计划）</a><span>
+                                            2023-12-26
+                                        </span>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="./gk/tdgl/xgdjh/202303/t20230330_1837501.html" target="_blank" title="宜宾市中心城区2023年度国有建设用地供应计划（含出让计划）" class="">宜宾市中心城区2023年度国有建设用地供应计划（含出让计划）</a><span>
+                                            2023-03-30
+                                        </span>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="./gk/tdgl/xgdjh/202212/t20221202_1797281.html" target="_blank" title="宜宾市中心城区2022年度国有建设用地供应计划调整表（含出让计划）" class="">宜宾市中心城区2022年度国有建设用地供应计划调整表（含出让计划）</a><span>
+                                            2022-12-02
+                                        </span>
+                                    </li>
+                                
+                            </ul>
+
+                            <ul class="index-item gl-l" style="display: none;">
+
+                                
+                                    <li>
+                                        <a href="./gk/tdgl/tdsc/clzzydxx/202505/t20250522_2120614.html" target="_blank" title="宜宾市自然资源和规划局关于存量住宅用地信息栏目久未更新的情况说明" class="">宜宾市自然资源和规划局关于存量住宅用地信息栏目久未更新的情况说明</a><span>
+                                            2025-05-22
+                                        </span>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="./gk/tdgl/tdsc/tdcrjg/202603/t20260310_2211675.html" target="_blank" title="宜宾市2024年15期国有建设用地使用权挂牌出让成交结果公示" class="">宜宾市2024年15期国有建设用地使用权挂牌出让成交结果公示</a><span>
+                                            2025-01-16
+                                        </span>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="./gk/tdgl/tdsc/tdcrjg/202603/t20260310_2211677.html" target="_blank" title="宜宾市2024年第14期国有建设用使用权拍卖出让成交结果公示" class="">宜宾市2024年第14期国有建设用使用权拍卖出让成交结果公示</a><span>
+                                            2024-12-31
+                                        </span>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="./gk/tdgl/tdsc/tdcrjg/202603/t20260310_2211670.html" target="_blank" title="宜宾市2024年第14期国有建设用地使用权挂牌出让成交结果公示" class="">宜宾市2024年第14期国有建设用地使用权挂牌出让成交结果公示</a><span>
+                                            2024-12-25
+                                        </span>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="./gk/tdgl/tdsc/tdcrjg/202603/t20260310_2211668.html" target="_blank" title="宜宾市2024年第13期国有建设用地使用权使用权拍卖出让成交结果公示" class="">宜宾市2024年第13期国有建设用地使用权使用权拍卖出让成交结果公示</a><span>
+                                            2024-12-24
+                                        </span>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="./gk/tdgl/tdsc/tdcrjg/202603/t20260310_2211614.html" target="_blank" title="宜宾市2024年第13期国有建设用地使用权挂牌出让成交结果公示" class="">宜宾市2024年第13期国有建设用地使用权挂牌出让成交结果公示</a><span>
+                                            2024-12-20
+                                        </span>
+                                    </li>
+                                
+                            </ul>
+                            <ul class="index-item gl-l" style="display: none;">
+                                
+                            </ul>
+
+                        </div>
+                    </div>
+
+
+                    <div class="zr-item index-sw" style="display: none;">
+                        <div class="zr-tit3 index-tit">
+                            <a class="tit cur" href="http://zygh.yibin.gov.cn/gk/gggs/kcywgggs/">
+                                矿产业务公告公示<i></i>
+                            </a>
+                            <a class="tit" href="http://zygh.yibin.gov.cn/gk/kcgl/kczyztgh/">
+                                矿产资源规划<i></i>
+                            </a>
+                            <a class="tit" href="http://zygh.yibin.gov.cn/gk/kcgl/kyqsc/">
+                                矿业权市场<i></i>
+                            </a>
+                            <a class="tit" href="http://zygh.yibin.gov.cn/gk/kcgl/ckqsp/">
+                                采矿权审批结果<i></i>
+                            </a>
+
+                        </div>
+                        <div class="index-tab">
+                            <ul class="index-item gl-l">
+                                
+                                    <li>
+                                        <a href="./gk/gggs/kcywgggs/202602/t20260212_2204278.html" target="_blank" title="宜宾市自然资源和规划局关于《屏山县新安镇干河村石灰矿开采方案》评审结果公示" class="">宜宾市自然资源和规划局关于《屏山县新安镇干河村石灰矿开采方案》评审结果公示</a><span>
+                                            2026-02-12
+                                        </span>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="./gk/gggs/kcywgggs/202602/t20260211_2204063.html" target="_blank" title="宜宾市 2026年第 2期采矿权拍卖出让成交结果公示 （宜公共采拍〔2026〕2号）（兴文县大鱼洞建筑石料用灰岩采矿权）" class="">宜宾市 2026年第 2期采矿权拍卖出让成交结果公示 （宜公共采拍〔2026〕2号）（兴文县大鱼洞建筑石料用灰岩采矿权）</a><span>
+                                            2026-02-11
+                                        </span>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="./gk/gggs/kcywgggs/202602/t20260211_2204060.html" target="_blank" title="宜宾市 2026年第 1 期采矿权拍卖出让成交结果公示 （宜公共采拍〔2026〕1 号）（兴文县草山头建筑石料用灰岩采矿权））" class="">宜宾市 2026年第 1 期采矿权拍卖出让成交结果公示 （宜公共采拍〔2026〕1 号）（兴文县草山头建筑石料用灰岩采矿权））</a><span>
+                                            2026-02-11
+                                        </span>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="./gk/gggs/kcywgggs/202602/t20260202_2200943.html" target="_blank" title="宜宾市自然资源和规划局叙州区分局关于注销四川省宜宾市吴桥建材工业有限责任公司南广镇页岩矿等3个矿业权的公告" class="">宜宾市自然资源和规划局叙州区分局关于注销四川省宜宾市吴桥建材工业有限责任公司南广镇页岩矿等3个矿业权的公告</a><span>
+                                            2026-02-02
+                                        </span>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="./gk/gggs/kcywgggs/202601/t20260109_2194271.html" target="_blank" title="四川省兴文县大鱼洞建筑石料用灰岩采矿权拍卖出让公告（宜公共矿拍〔2026〕2号）" class="">四川省兴文县大鱼洞建筑石料用灰岩采矿权拍卖出让公告（宜公共矿拍〔2026〕2号）</a><span>
+                                            2026-01-09
+                                        </span>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="./gk/gggs/kcywgggs/202601/t20260109_2194266.html" target="_blank" title="四川省兴文县草山头建筑石料用灰岩采矿权拍卖出让公告（宜公共矿拍〔2026〕1号）" class="">四川省兴文县草山头建筑石料用灰岩采矿权拍卖出让公告（宜公共矿拍〔2026〕1号）</a><span>
+                                            2026-01-09
+                                        </span>
+                                    </li>
+                                
+                            </ul>
+                            <ul class="index-item gl-l" style="display: none;">
+                                
+                                    <li>
+                                        <a href="./gk/kcgl/kczyztgh/202406/t20240613_1994558.html" target="_blank" title="宜宾市自然资源和规划局关于矿产资源规划栏目信息久未更新的情况说明" class="">宜宾市自然资源和规划局关于矿产资源规划栏目信息久未更新的情况说明</a><span>
+                                            2025-08-25
+                                        </span>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="./gk/kcgl/kczyztgh/202201/t20220114_1691906.html" target="_blank" title="宜宾市自然资源和规划局翠屏区分局 关于《宜宾市翠屏区矿产资源总体规划（2021-2025年）》报批前的公示（第二次）" class="">宜宾市自然资源和规划局翠屏区分局 关于《宜宾市翠屏区矿产资源总体规划（2021-2025年）》报批前的公示（第二次）</a><span>
+                                            2022-01-14
+                                        </span>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="./gk/kcgl/kczyztgh/202111/t20211130_1670105.html" target="_blank" title="《宜宾市矿产资源总体规划（2021-2025年）》 听证纪要" class="">《宜宾市矿产资源总体规划（2021-2025年）》 听证纪要</a><span>
+                                            2021-11-30
+                                        </span>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="./gk/kcgl/kczyztgh/202008/t20200823_1334682.html" target="_blank" title="宜宾市自然资源和规划局 关于印发《宜宾市矿产资源规划（2021—2025年）编制工作方案》的通知" class="">宜宾市自然资源和规划局 关于印发《宜宾市矿产资源规划（2021—2025年）编制工作方案》的通知</a><span>
+                                            2020-05-10
+                                        </span>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="./gk/kcgl/kczyztgh/202008/t20200823_1334679.html" target="_blank" title="宜宾市国土资源局
+关于《宜宾市矿产资源总体规划（2016-2020）》编制进度说明" class="">宜宾市国土资源局
+关于《宜宾市矿产资源总体规划（2016-2020）》编制进度说明</a><span>
+                                            2017-12-07
+                                        </span>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="./gk/kcgl/kczyztgh/202008/t20200823_1334687.html" target="_blank" title="关于《宜宾市矿产资源总体规划（2016-2020）》编制进度说明" class="">关于《宜宾市矿产资源总体规划（2016-2020）》编制进度说明</a><span>
+                                            2016-11-22
+                                        </span>
+                                    </li>
+                                
+                            </ul>
+                            <ul class="index-item gl-l" style="display: none;">
+
+                                
+
+                                    <li>
+                                        <a href="./gk/kcgl/kyqsc/kyqcrjggs/202411/t20241104_2037147.html" target="_blank" title="宜宾市自然资源和规划局关于矿业权出让结果公示栏目信息久未更新的情况" class="">宜宾市自然资源和规划局关于矿业权出让结果公示栏目信息久未更新的情况</a><span>
+                                            2025-11-26
+                                        </span>
+                                    </li>
+                                
+                            </ul>
+
+                            <ul class="index-item gl-l" style="display: none;">
+                                
+                                    <li>
+                                        <a href="./gk/kcgl/ckqsp/202504/t20250401_2107816.html" target="_blank" title="2024年5月-2025年3月采矿权审批结果表" class="">2024年5月-2025年3月采矿权审批结果表</a><span>
+                                            2025-04-01
+                                        </span>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="./gk/kcgl/ckqsp/202406/t20240613_1994610.html" target="_blank" title="2024年1-5月采矿权审批结果表" class="">2024年1-5月采矿权审批结果表</a><span>
+                                            2024-06-13
+                                        </span>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="./gk/kcgl/ckqsp/202406/t20240613_1994601.html" target="_blank" title="2023年度采矿权审批结果表" class="">2023年度采矿权审批结果表</a><span>
+                                            2024-06-13
+                                        </span>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="./gk/kcgl/ckqsp/202406/t20240613_1994595.html" target="_blank" title="2022年度采矿权审批结果表" class="">2022年度采矿权审批结果表</a><span>
+                                            2024-06-13
+                                        </span>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="./gk/kcgl/ckqsp/202406/t20240613_1994586.html" target="_blank" title="2021年度采矿权审批结果表" class="">2021年度采矿权审批结果表</a><span>
+                                            2024-06-13
+                                        </span>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="./gk/kcgl/ckqsp/202101/t20210104_1407531.html" target="_blank" title="2020年度采矿权审批结果表" class="">2020年度采矿权审批结果表</a><span>
+                                            2021-01-04
+                                        </span>
+                                    </li>
+                                
+                            </ul>
+
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="zr-item index-sw" style="display: none;">
+                        <div class="zr-tit3 index-tit">
+                            <a class="tit cur" href="http://zygh.yibin.gov.cn/gk/chgl/chxx/">
+                                多测合一<i></i>
+                            </a>
+                            <a class="tit cur" href="/gk/chgl/gyxdtfw/tdtyb/">
+                                公益性地图服务<i></i>
+                            </a>
+
+
+                        </div>
+                        <div class="index-tab">
+                            <ul class="index-item gl-l">
+                                
+                                    <li>
+                                        <a href="./gk/chgl/chxx/202602/t20260202_2200999.html" target="_blank" title="宜宾市港宏建设工程咨询有限公司 申请测绘资质主要信息公开表（试行）" class="">宜宾市港宏建设工程咨询有限公司 申请测绘资质主要信息公开表（试行）</a><span>
+                                            2026-02-02
+                                        </span>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="./gk/chgl/chxx/202601/t20260121_2197448.html" target="_blank" title="宜宾市新诺土地信息咨询服务有限公司申请测绘资质主要信息公开表（试行）" class="">宜宾市新诺土地信息咨询服务有限公司申请测绘资质主要信息公开表（试行）</a><span>
+                                            2026-01-21
+                                        </span>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="./gk/chgl/chxx/202511/t20251120_2173255.html" target="_blank" title="四川隽涛工程勘察设计有限公司  申请测绘资质 主要信息公开表（试行）" class="">四川隽涛工程勘察设计有限公司  申请测绘资质 主要信息公开表（试行）</a><span>
+                                            2025-11-20
+                                        </span>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="./gk/chgl/chxx/202511/t20251112_2170783.html" target="_blank" title="四川涛钇工程管理有限责任公司申请测绘资质主要信息公开表（试行）" class="">四川涛钇工程管理有限责任公司申请测绘资质主要信息公开表（试行）</a><span>
+                                            2025-11-12
+                                        </span>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="./gk/chgl/chxx/202412/t20241227_2079468.html" target="_blank" title="宜宾市鼎坤建设开发有限责任公司申请测绘资质主要信息公开表（试行）" class="">宜宾市鼎坤建设开发有限责任公司申请测绘资质主要信息公开表（试行）</a><span>
+                                            2024-12-27
+                                        </span>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="./gk/chgl/chxx/202412/t20241202_2070819.html" target="_blank" title="宜宾君信测绘有限责任公司申请测绘资质主要信息公开表（试行）" class="">宜宾君信测绘有限责任公司申请测绘资质主要信息公开表（试行）</a><span>
+                                            2024-12-02
+                                        </span>
+                                    </li>
+                                
+                            </ul>
+
+                            <ul class="index-item gl-l" style="display: none;">
+
+                                
+                                    <li>
+                                        <a href="http://sichuan.tianditu.gov.cn/yibin/" target="_blank" title="天地图.宜宾" class="">天地图.宜宾</a><span>
+                                            2025-03-31
+                                        </span>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="http://bzdt.ch.mnr.gov.cn/" target="_blank" title="国家标准地图服务" class="">国家标准地图服务</a><span>
+                                            2025-03-31
+                                        </span>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="./gk/chgl/gyxdtfw/sxbzdtfw/202311/t20231102_1920465.html" target="_blank" title="宜宾市中心城区图" class="">宜宾市中心城区图</a><span>
+                                            2025-03-31
+                                        </span>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="./gk/chgl/gyxdtfw/sxbzdtfw/202311/t20231102_1920478.html" target="_blank" title="宜宾市行政区划图" class="">宜宾市行政区划图</a><span>
+                                            2025-03-31
+                                        </span>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="./gk/chgl/gyxdtfw/sjbzdtfw/202501/t20250103_2081744.html" target="_blank" title="四川省行政区划图" class="">四川省行政区划图</a><span>
+                                            2025-01-03
+                                        </span>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="./gk/chgl/gyxdtfw/sjbzdtfw/202501/t20250103_2081732.html" target="_blank" title="四川省标准地图政区设色版" class="">四川省标准地图政区设色版</a><span>
+                                            2025-01-03
+                                        </span>
+                                    </li>
+                                
+
+
+
+                        </div>
+                    </div>
+
+
+                    <div class="zr-item index-sw" style="display: none;">
+                        <div class="zr-tit3 index-tit">
+                            <a class="tit cur" href="http://zygh.yibin.gov.cn/gk/dzzhfz/dzzhfz_12058/">
+                                地质灾害防治信息<i></i>
+                            </a>
+                            <a class="tit" href="http://zygh.yibin.gov.cn/gk/dzzhfz/dzzhyjyb/">
+                                地质灾害预警预报<i></i>
+                            </a>
+                        </div>
+                        <div class="index-tab">
+                            <ul class="index-item gl-l">
+                                
+                                    <li>
+                                        <a href="./xw/qxdt/202602/t20260213_2204974.html" target="_blank" title="市自然资源规划局召开节前全市地质灾害防治、安全生产、 廉政教育工作视频会议" class="">市自然资源规划局召开节前全市地质灾害防治、安全生产、 廉政教育工作视频会议</a><span>
+                                            2026-02-13
+                                        </span>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="./xw/qxdt/202601/t20260106_2190089.html" target="_blank" title="宜宾市地质灾害防治指挥部办公室组织召开乌蒙山区冬春季地质灾害专项 排查防范行动调度会" class="">宜宾市地质灾害防治指挥部办公室组织召开乌蒙山区冬春季地质灾害专项 排查防范行动调度会</a><span>
+                                            2026-01-06
+                                        </span>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="./xw/qxdt/202508/t20250812_2142408.html" target="_blank" title="我市召开地质灾害防治工作现场会" class="">我市召开地质灾害防治工作现场会</a><span>
+                                            2025-08-12
+                                        </span>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="./xw/qxdt/202507/t20250715_2135364.html" target="_blank" title="我市召开全市地质灾害防治工作会议" class="">我市召开全市地质灾害防治工作会议</a><span>
+                                            2025-07-15
+                                        </span>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="./xw/qxdt/202506/t20250612_2126582.html" target="_blank" title="我市召开全市地质灾害防治知识培训暨汛期防灾工作部署会" class="">我市召开全市地质灾害防治知识培训暨汛期防灾工作部署会</a><span>
+                                            2025-06-12
+                                        </span>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="./xw/qxdt/202505/t20250528_2122201.html" target="_blank" title="我市召开全市防汛抗旱、地灾防治、 河湖长制推进工作会议" class="">我市召开全市防汛抗旱、地灾防治、 河湖长制推进工作会议</a><span>
+                                            2025-05-28
+                                        </span>
+                                    </li>
+                                
+                            </ul>
+
+                            <ul class="index-item gl-l">
+                                
+                                    <li>
+                                        <a href="./gk/dzzhfz/dzzhyjyb/202508/t20250825_2145118.html" target="_blank" title="强降雨天气消息" class="">强降雨天气消息</a><span>
+                                            2025-08-22
+                                        </span>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="./gk/dzzhfz/dzzhyjyb/202505/t20250527_2122043.html" target="_blank" title="强降雨天气消息" class="">强降雨天气消息</a><span>
+                                            2025-05-26
+                                        </span>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="./gk/dzzhfz/dzzhyjyb/202503/t20250305_2099991.html" target="_blank" title="关于升级为四川省地质灾害一级应急响应的通知" class="">关于升级为四川省地质灾害一级应急响应的通知</a><span>
+                                            2025-02-08
+                                        </span>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="https://mp.weixin.qq.com/s/Umta6VTQNeEPJoWMp4o0Uw" target="_blank" title="四川继续发布地灾预警，涉19个县市！" class="">四川继续发布地灾预警，涉19个县市！</a><span>
+                                            2024-06-27
+                                        </span>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="https://mp.weixin.qq.com/s/VLOwP4uznBc6vH__lp5Itg" target="_blank" title="预警范围扩大！四川9市州39个县市区请注意防范地质灾害" class="">预警范围扩大！四川9市州39个县市区请注意防范地质灾害</a><span>
+                                            2024-06-21
+                                        </span>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="./gk/dzzhfz/dzzhyjyb/202406/t20240611_1993726.html" target="_blank" title="强降雨重要天气信息" class="">强降雨重要天气信息</a><span>
+                                            2024-06-01
+                                        </span>
+                                    </li>
+                                
+                            </ul>
+
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+            <div class="clearfix mt10">
+                <div class="index-box1 h380 b-w lf">
+                    <div class="sec-tit">
+                        <img class="img" src="./images/icon38.png" />
+                        <a href="./gk/kjgh/" class="tit">空间规划</a>
+                        <span class="en"> </span>
+                    </div>
+                    <ul class="gl-l mt20">
+                        
+                            <li>
+                                <a href="./gk/gggs/ghxmgggs/202512/t20251209_2177898.html" target="_blank" title="宜宾市自然资源和规划局关于《宜宾市翠屏区城乡融合片区国土空间总体规划（2021—2035年）》等42个乡镇级片区国土空间总体规划成果的公告" class="">宜宾市自然资源和规划局关于《宜宾市翠屏区城乡融合片区国土空间总体规划（2021—2035年）》等42个乡镇级片区国土空间总体规划成果的公告</a><span>
+                                    2025-12-09
+                                </span>
+                            </li>
+                        
+                            <li>
+                                <a href="./gk/gggs/ghxmgggs/202506/t20250619_2128606.html" target="_blank" title="宜宾市自然资源和规划局关于《宜宾市国土空间总体规划（2021—2035年）》（2025年第1次）调整方案草案公示" class="">宜宾市自然资源和规划局关于《宜宾市国土空间总体规划（2021—2035年）》（2025年第1次）调整方案草案公示</a><span>
+                                    2025-05-20
+                                </span>
+                            </li>
+                        
+                            <li>
+                                <a href="./gk/gggs/ghxmgggs/202410/t20241008_2028553.html" target="_blank" title="宜宾市人民政府关于印发《宜宾市国土空间总体规划（2021—2035年）》的通知" class="">宜宾市人民政府关于印发《宜宾市国土空间总体规划（2021—2035年）》的通知</a><span>
+                                    2024-10-08
+                                </span>
+                            </li>
+                        
+                            <li>
+                                <a href="./gk/kjgh/ghgs/202403/t20240304_1962545.html" target="_blank" title="四川省人民政府关于《宜宾市国土空间总体规划（2021—2035年）》的批复（川府函〔2024〕62号）" class="">四川省人民政府关于《宜宾市国土空间总体规划（2021—2035年）》的批复（川府函〔2024〕62号）</a><span>
+                                    2024-03-04
+                                </span>
+                            </li>
+                        
+                            <li>
+                                <a href="./gk/kjgh/ghgs/202303/t20230310_1830902.html" target="_blank" title="宜宾市国土空间总体规划（2021-2035年）公示" class="">宜宾市国土空间总体规划（2021-2035年）公示</a><span>
+                                    2023-03-10
+                                </span>
+                            </li>
+                        
+                            <li>
+                                <a href="./gk/kjgh/ghgs/202301/t20230106_1810263.html" target="_blank" title="《宜宾市南部新区（南一区）控制性详细规划修编》（批前成果公示）" class="">《宜宾市南部新区（南一区）控制性详细规划修编》（批前成果公示）</a><span>
+                                    2023-01-06
+                                </span>
+                            </li>
+                        
+                            <li>
+                                <a href="https://mp.weixin.qq.com/s/O48pzc3fzVpGblDvCUBZ6w" target="_blank" title="五粮液门户区概念设计方案国际征集资格预审公告" class="">五粮液门户区概念设计方案国际征集资格预审公告</a><span>
+                                    2022-04-14
+                                </span>
+                            </li>
+                        
+                    </ul>
+                </div>
+                <div class="index-box2 h380 b-w rt">
+                    <div class="sec-tit">
+                        <img class="img" src="./images/icon37.png" />
+                        <a class="tit" href="http://zygh.yibin.gov.cn/hd/">互动交流</a>
+                        <span class="en"> </span>
+                    </div>
+                    <div class="index-bar6">
+                        <a href="./hd/jzxx/">局长信箱</a>
+                        <a href="./hd/wsdc/">网上调查</a>
+                        <a href="./hd/wxwb/">微信微博</a>
+                        <a href="./hd/zxft/">访谈视频</a>
+                    </div>
+                    <div class="ldxx-t">
+                        <span>调查征集</span>
+                    </div>
+                    <ul class="hd-dc-l" id="yjzj">
+
+                    </ul>
+                    <div class="ldxx-t" id="mt10">
+                        <a href="http://zygh.yibin.gov.cn/hd/rdwd/"><span style="color: #000;">热点问答</span></a>
+                    </div>
+                    <ul class="hd-dc-l" style="padding-top: 2px;">
+                        
+                            <li>
+                                <a href="./hd/rdwd/202511/t20251110_2166593.html" target="_blank" title="自然资源相关政策热点问答（2）" class="">自然资源相关政策热点问答（2）</a><span>
+                                    2025-11-10
+                                </span>
+                            </li>
+                        
+                            <li>
+                                <a href="./hd/rdwd/202511/t20251110_2166582.html" target="_blank" title="自然资源相关政策热点问答（1）" class="">自然资源相关政策热点问答（1）</a><span>
+                                    2025-11-10
+                                </span>
+                            </li>
+                        
+                    </ul>
+
+                </div>
+            </div>
+            <div class="index-zt mt10 b-w">
+                <div class="index-zt-b">
+                    <div class="index-zt-l">
+                        
+                            <a href="./zt/gdbh/"><img src="http://zygh.yibin.gov.cn/zt/gdbh/images/P020230323534950598560.png" /></a>
+                        
+                            <a href="./zt/tdrdqr/"><img src="http://zygh.yibin.gov.cn/zt/tdrdqr/images/P020200817053621150220.jpg" /></a>
+                        
+                            <a href="./zt/djhdflzjszl/"><img src="http://zygh.yibin.gov.cn/zt/djhdflzjszl/images/P020200817052487578406.jpg" /></a>
+                        
+                            <a href="./zt/jzfp/"><img src="http://zygh.yibin.gov.cn/zt/jzfp/images/P020200817053168227917.jpg" /></a>
+                        
+                            <a href="./zt/dzfz/"><img src="http://zygh.yibin.gov.cn/zt/dzfz/images/P020200817054539238675.jpg" /></a>
+                        
+                            <a href="./zt/yhyshj/"><img src="http://zygh.yibin.gov.cn/zt/yhyshj/images/P020240304630741371884.png" /></a>
+                        
+                    </div>
+                </div>
+                <img class="btn prev" src="./images/icon39.png" />
+                <img class="btn next" src="./images/icon40.png" />
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <style type="text/css">
+.drop-lists li a,.drop-down .tag{font-size: 14px;}
+
+
+</style>
+<div class="f-link">
+            <div class="w-container">
+                <img src="http://zygh.yibin.gov.cn/images/link.png" />
+                <span>友情链接</span>
+                <div class="drop-groups">
+                    <div class="drop-down">
+                        <p class="tag">自然资源系统网站</p>
+                        <ul class="drop-lists">
+                        
+                            <li><a href="http://www.mnr.gov.cn/">中华人民共和国自然资源部</a></li>
+                        
+                            <li><a href="http://dnr.sc.gov.cn/">四川省自然资源厅</a></li>
+                        
+                            <li><a href="http://mpnr.chengdu.gov.cn/">成都市规划和自然资源局</a></li>
+                        
+                            <li><a href="http://www.ms.gov.cn/xxgkpt/xxgk-list-bm.jsp?urltype=tree.TreeTempUrl&wbtreeid=5674&pubid=1547&wbdeptcode=szrzyj">眉山市自然资源局</a></li>
+                        
+                            <li><a href="http://zrzyhghj.my.gov.cn/">绵阳市自然资源和规划局</a></li>
+                        
+                            <li><a href="http://zrzyhghj.yaan.gov.cn/">雅安市自然资源和规划局</a></li>
+                        
+                            <li><a href="http://zrzy.cngy.gov.cn/">广元市自然资源局</a></li>
+                        
+                            <li><a href="http://zygh.yibin.gov.cn/">宜宾市自然资源和规划局</a></li>
+                        
+                            <li><a href="http://zrzyhghj.luzhou.gov.cn/">泸州市自然资源和规划局</a></li>
+                        
+                            <li><a href="http://zrzyj.dazhou.gov.cn/">达州市自然资源和规划局</a></li>
+                        
+                            <li><a href="http://zrzygh.cnbz.gov.cn/">巴中市自然资源和规划局</a></li>
+                        
+                            <li><a href="http://dnr.lsz.gov.cn/">凉山彝族自治州自然资源局</a></li>
+                        
+                            <li><a href="http://gtj.gzz.gov.cn/">甘孜藏族自治州自然资源局</a></li>
+                        
+                            <li><a href="http://www.iziran.net/">中国自然资源报网</a></li>
+                        
+                            <li><a href="http://www.landchina.com/">中国土地市场网</a></li>
+                        
+                        </ul>
+                    </div>
+                    <div class="drop-down">
+                        <p class="tag">部门网站</p>
+                        <ul class="drop-lists">
+                        
+                            <li><a href="http://www.yibin.gov.cn/">宜宾市人民政府</a></li>
+                        
+                            <li><a href="http://fg.yibin.gov.cn/">宜宾市发展改革委</a></li>
+                        
+                            <li><a href="http://tjj.yibin.gov.cn/">宜宾市统计局</a></li>
+                        
+                            <li><a href="http://ybsf.yibin.gov.cn/">宜宾市司法局</a></li>
+                        
+                            <li><a href="http://mzj.yibin.gov.cn/">宜宾市民政局</a></li>
+                        
+                            <li><a href="http://yblz.yibin.gov.cn/">宜宾市林业与竹业局</a></li>
+                        
+                            <li><a href="http://scjgj.yibin.gov.cn/">宜宾市市场监督管理局</a></li>
+                        
+                            <li><a href="http://czj.yibin.gov.cn/">宜宾市财政局</a></li>
+                        
+                            <li><a href="http://jtysj.yibin.gov.cn/">宜宾市交通运输局</a></li>
+                        
+                            <li><a href="http://ybkj.yibin.gov.cn/">宜宾市科学技术局</a></li>
+                        
+                            <li><a href="http://nyncj.yibin.gov.cn/">宜宾市农业农村局</a></li>
+                        
+                            <li><a href="http://jsj.yibin.gov.cn/">宜宾市住房和城乡建设局</a></li>
+                        
+                            <li><a href="http://sjj.yibin.gov.cn/">宜宾市审计局</a></li>
+                        
+                            <li><a href="http://gaj.yibin.gov.cn/">宜宾市公安局</a></li>
+                        
+                        </ul>
+                    </div>
+                    <div class="drop-down">
+                        <p class="tag">区、县网站</p>
+                        <ul class="drop-lists">
+                        
+                            <li><a href="http://www.ybps.gov.cn/">屏山县人民政府</a></li>
+                        
+                            <li><a href="http://www.scxw.gov.cn/">兴文县人民政府</a></li>
+                        
+                            <li><a href="http://www.gongxian.gov.cn/">珙县人民政府</a></li>
+                        
+                            <li><a href="http://www.scjlx.gov.cn/">筠连县人民政府</a></li>
+                        
+                            <li><a href="http://www.gaoxian.gov.cn/">高县人民政府</a></li>
+                        
+                            <li><a href="http://www.sccn.gov.cn/">长宁县人民政府</a></li>
+                        
+                            <li><a href="http://www.ybja.gov.cn/">江安县人民政府</a></li>
+                        
+                            <li><a href="http://www.scnx.gov.cn/">南溪区人民政府</a></li>
+                        
+                            <li><a href="http://www.ybxz.gov.cn/">叙州区人民政府</a></li>
+                        
+                            <li><a href="http://www.cuiping.gov.cn/">翠屏区人民政府</a></li>
+                        
+                        </ul>
+                    </div>
+                    <div class="drop-down">
+                        <p class="tag">综合性门户网站</p>
+                        <ul class="drop-lists">
+                        
+                            <li><a href="http://www.gov.cn/">中央人民政府网站</a></li>
+                        
+                            <li><a href="https://www.sc.gov.cn/">四川省人民政府</a></li>
+                        
+                            <li><a href="http://www.ybxww.com/">宜宾新闻网</a></li>
+                        
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <style>
+    #_span_ideConac img {
+        margin: -90px 0px 35px -800px !important;
+    }
+</style>
+<div class="f-help">
+    <div class="w-container clearfix">
+        <div class="lf f-text">
+            <p class="f-text1">
+                <a href="http://zygh.yibin.gov.cn/qt/gywm/" target="_blank">关于我们</a><span>|</span>
+                <a href="http://zygh.yibin.gov.cn/hd/wsdc/" target="_blank">网上调查</a><span>|</span>
+                <a href="http://zygh.yibin.gov.cn/qt/lxfs_12084/" target="_blank">联系方式</a><span>|</span>
+                <a href="http://zygh.yibin.gov.cn/qt/wzdt/" target="_blank">网站地图</a>
+            </p>
+            <p>主办单位/内容保障单位：宜宾市自然资源和规划局 建设维护单位：宜宾市政府信息服务保障中心 </p>
+            <p>网站标识码：5115000044 <a href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=51150402000036"
+                    target="_blank"><img src="http://zygh.yibin.gov.cn/images/f-img3.png" /> 川公网安备 51150402000036号</a>
+                <a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank">蜀ICP备2020037679号-1</a>
+                <script type="text/javascript">document.write(unescape("%3Cspan id='cnzz_stat_icon_1279126459'%3E%3C/span%3E%3Cscript src='https://v1.cnzz.com/z_stat.php%3Fid%3D1279126459%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
+
+                <script id="_trs_ta_js" src="//ta.trs.cn/c/js/ta.js?mpid=2834" async="async" defer="defer"></script>
+            </p>
+        </div>
+        <script type="text/javascript">document.write(unescape("%3Cspan id='_ideConac' %3E%3C/span%3E%3Cscript   src='https://dcs.conac.cn/js/23/344/0000/40639524/CA233440000406395240001.js' type='text/javascript'%3E%3C/script%3E"));</script>
+        <script id='_jiucuo_' sitecode='5115000044' src='//zfwzgl.www.gov.cn/exposure/jiucuo.js'></script>
+        <!--<a href="javascript:void(0)" class="f-img2 lf">
+                    <img src="http://zygh.yibin.gov.cn/images/f-img2.png" />
+                </a>-->
+
+    </div>
+</div>
+<script src="https://auth.mangren.com/boots/zygh.yibin.gov.cn/esdToolsInit.js" charset="UTF-8"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#_ideConac a").addClass('f-img2');
+        $("#_jiucuo_").addClass('f-img2 rt');
+    });
+</script>>
+    </div>
+    <style type="text/css">
+        .vps-fixed-box {
+            left: 10px;
+            bottom: 200px;
+        }
+
+        .vps-fixed-box_l {
+            position: fixed;
+            /* // top: 40%; */
+            left: 10px;
+            width: 84px;
+            border-top: 3px solid #1988e8;
+            background: #ffffff;
+            box-sizing: border-box;
+            bottom: 0px;
+        }
+    </style>
+    <div class="vps-fixed-box_l" >
+        <img src="./qt/syggwscs/images/P020210624563439458347.jpg" alt="" class="img" />
+
+    </div>
+    <div class="vps-fixed-box" style="">
+
+        <a class="item" href="http://zygh.yibin.gov.cn/hd/wxwb/">
+            <span class="pic"><img src="http://zygh.yibin.gov.cn/images/img1.png" /></span>
+            <span class="txt">官方公众号</span>
+        </a>
+        <a class="item"   href="http://zygh.yibin.gov.cn/hd/wxwb/">
+            <span class="pic"><img src="http://zygh.yibin.gov.cn/images/img2.png" /></span>
+            <span class="txt">官方微博</span>
+        </a>
+        <a class="item"   href="http://zygh.yibin.gov.cn/hd/tsjbrx/">
+            <span class="pic"><img src="http://zygh.yibin.gov.cn/images/img3.png" /></span>
+            <span class="txt">投诉举报热线</span>
+        </a>
+
+        </div>
+
+</body>
+
+<script type="text/javascript" src="./images/common.js"></script>
+<script type="text/javascript" src="./images/base.js"></script>
+<script type="text/javascript" src="./images/jquery.slider.js"></script>
+<script type="text/javascript" src="./images/jquery.bxslider.js"></script>
+<script type="text/javascript" src="./images/javascript.js"></script>
+
+
+<script>
+    var scrollFlag = true;
+    var startFlag = true;
+    var int = null;
+    var imgH = 203;
+    var bannerH = 350;
+    var initH = bannerH;
+    $(function () {
+        int = self.setInterval("initSlow()", 10000);
+        var imgFlag = 0;
+        $('.img-zk-css').click(function () {
+            scrollFlag = false;
+            $(".img-zk-css").css("top", "0px");
+            if (imgFlag == 0) {
+                imgFlag = 1;
+                $(".banner").css("margin-top", "236px");
+                $(".img-zk-css img").attr("src", "/images/syimg-zk-r.png");
+            } else {
+                $(".banner").css("margin-top", "-120px");
+                $(".img-zk-css img").attr("src", "/images/syimg-zk.png");
+                imgFlag = 0;
+            }
+
+        })
+
+
+    })
+
+    function scroll() {
+        $('.lbanner').bxSlider({
+            mode: 'fade',
+            auto: false,
+            speed: 20000,
+            autoControls: true,
+            autoHover: true,
+            hideControlOnEnd: false,
+            controls: false,
+            pager: false
+        });
+        //console.log("打印log日志");实时看下效果
+
+        if (scrollFlag && startFlag) {
+            startFlag = false;
+            int = self.setInterval("initSlow()", 2000);
+        }
+    }
+
+    /* var scrollFunc = function(e) {
+         e = e || window.event;
+         if (e.wheelDelta) { //第一步：先判断浏览器IE，谷歌滑轮事件               
+             if (e.wheelDelta > 0) { //当滑轮向上滚动时  
+                 
+             }
+             if (e.wheelDelta < 0) { //当滑轮向下滚动时  
+                 
+                 scroll()
+             }
+         } else if (e.detail) { //Firefox滑轮事件  
+             if (e.detail > 0) { //当滑轮向上滚动时  
+                 
+             }
+             if (e.detail < 0) { //当滑轮向下滚动时  
+                 
+                 scroll()
+             }
+         }
+     }
+     //给页面绑定滑轮滚动事件  
+     if (document.addEventListener) { //firefox  
+         document.addEventListener('DOMMouseScroll', scrollFunc, false);
+     }
+     //滚动滑轮触发scrollFunc方法  //ie 谷歌  
+     window.onmousewheel = document.onmousewheel = scrollFunc;*/
+
+
+    function initSlow() {
+        window.clearInterval(int);
+        int = null;
+        int = self.setInterval("hideBgImg()", 1000);
+        bannerH = $(".banner img").height();
+        initH = $(".banner img").height();
+        if (bannerH < 100) {
+            bannerH = 400;
+            initH = 400;
+        }
+    }
+
+    function hideBgImg() {
+        // $(".banner").hide();
+        window.clearInterval(int);
+        int = null;
+        int = self.setInterval("slow()", 10);
+    }
+
+    function slow() {
+        imgH = imgH - 1;
+        bannerH = bannerH - 1;
+        $(".banner").css("margin-top", imgH + "px");
+        if (bannerH < 0) {
+            $(".img-zk-css").css("display", "block");
+
+            //$(".banner").hide();
+            window.clearInterval(int);
+        }
+
+
+    }
+</script>
+
+
+<script type="text/javascript">
+    var pagesize = 6;
+    var siteId = "53";//站点id
+    var $yjzj = "http://zygh.yibin.gov.cn/hd/yjzj/detail_5599.html?id=";
+    var datajson = { siteId: siteId, pageIndex: 1, pageSize: pagesize, orderBy: "" };
+    $(function () {
+        getMYZJ(datajson);
+    })
+    //意见征集
+    function getMYZJ() {
+        $.ajax({
+            url: "/IGI/opinion/web/list",
+            data: datajson,
+            dataType: "json",
+            type: "get",
+            async: "true",
+            success: function (data) {
+                var html = "";
+                var date = new Date();
+                for (var i = 0; i < 2; i++) {
+                    var id = data.datas.data[i].id;
+                    if (data.datas.data[i].endTime > date) {
+                        html += '<li><span class="sta">进行中</span><a href="' + $yjzj + id + '">' + data.datas.data[i].theme + '</a><span class="date">' + getMyDate(parseInt(data.datas.data[i].beginTime)) + '</span></li>';
+                    } else {
+                        html += '<li><span class="sta end">已结束</span><a href="' + $yjzj + id + '">' + data.datas.data[i].theme + '</a><span class="date">' + getMyDate(parseInt(data.datas.data[i].beginTime)) + '</span></li>';
+                    }
+                }
+                $("#yjzj").html(html);
+            },
+            error: function () {
+                console.log(data);
+            }
+        });
+    }
+    //时间戳转换
+    function getMyDate(str) {
+        if (typeof str == "undefined" || str == null || str == "" || str == "0") {
+            return "";
+        }
+        var oDate = new Date(str),
+            oYear = oDate.getFullYear(),
+            oMonth = oDate.getMonth() + 1,
+            oDay = oDate.getDate(),
+            oHour = oDate.getHours(),
+            oMin = oDate.getMinutes(),
+            oSen = oDate.getSeconds(),
+            oTime = oYear + '-' + getzf(oMonth) + '-' + getzf(oDay);//最后拼接时间
+        //oTime = oYear +'-'+ getzf(oMonth) +'-'+ getzf(oDay) +' '+ getzf(oHour) +':'+ getzf(oMin) +':'+getzf(oSen);//最后拼接时间
+        return oTime;
+    };
+    //补0操作
+    function getzf(num) {
+        if (parseInt(num) < 10) {
+            num = '0' + num;
+        }
+        return num;
+    }
+
+</script>
+<script type="text/javascript" src="./images/gwy.js"></script>
+<script type="text/javascript" src="/material/gwyszf.js"></script>
+
+</html>
