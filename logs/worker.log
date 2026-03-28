@@ -4432,3 +4432,9 @@ Fast-forward
 2026-03-28 21:15:09 任务标记running但进程已死，自动重启
 2026-03-28 21:15:09 自动重启爬取 PID: 1368941
 2026-03-28 21:15:09 统计: 城市, 266个PDF, 爬取运行中 (PID: 1368941)
+From https://github.com/calinchow-del/renwu
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+2026-03-28 21:35:02 任务标记running但进程已死，自动重启
+2026-03-28 21:35:02 自动重启爬取 PID: 1378678
+2026-03-28 21:35:02 统计: 城市, 266个PDF, 爬取运行中 (PID: 1378678)
