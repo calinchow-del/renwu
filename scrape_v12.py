@@ -39,6 +39,13 @@ HEADERS = {
     'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8',
     'Accept-Encoding': 'gzip, deflate',
 }
+# Rotate User-Agents to reduce blocking
+USER_AGENTS = [
+    'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36',
+    'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:128.0) Gecko/20100101 Firefox/128.0',
+    'Mozilla/5.0 (Macintosh; Intel Mac OS X 14_5) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.5 Safari/605.1.15',
+    'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36',
+]
 TIMEOUT = 20
 RETRY = 3
 MAX_LIST_PAGES = 50       # 最多翻50页列表页
@@ -61,7 +68,7 @@ TARGET_DEPTS = [
 ]
 
 MATCH_RULES = [
-    (["公安局交通警察", "公安交通管理", "交警局", "交通警察局", "交警支队", "公安局交通管理", "公安交警", "交警大队", "交通警察支队", "公安局交警"], "公安局交通警察局"),
+    (["公安局交通警察", "公安交通管理", "交警局", "交通警察局", "交警支队", "公安局交通管理", "公安交警", "交警大队", "交通警察支队", "公安局交警", "交通警察总队", "交管局", "公安局交管", "公安交通警察", "交通管理局"], "公安局交通警察局"),
     (["卫生健康委", "卫健委", "卫生健康局", "卫生局"], "卫生健康委员会"),
     (["教育局", "教育委员会", "教育委", "教委", "教育体育局", "教体局"], "教育局"),
     (["发展和改革", "发展改革", "发改委", "发改局"], "发展和改革局"),
@@ -73,7 +80,7 @@ MATCH_RULES = [
     (["工业和信息化", "工信局", "经济和信息化", "经信局", "经信委"], "工业和信息化局"),
     (["市场监督管理", "市场监管"], "市场监督管理局"),
     (["国有资产监督管理", "国资委"], "国有资产监督管理委员会"),
-    (["口岸办公室", "口岸办", "口岸事务", "口岸管理", "口岸局", "口岸管理局"], "口岸办公室"),
+    (["口岸办公室", "口岸办", "口岸事务", "口岸管理", "口岸局", "口岸管理局", "口岸和物流", "口岸服务", "口岸工作"], "口岸办公室"),
     (["公安局", "市公安局"], "公安局"),
     (["医疗保障局", "医保局"], "医疗保障局"),
     (["商务局", "商务委"], "商务局"),
@@ -82,13 +89,13 @@ MATCH_RULES = [
     (["政务服务和数据管理", "政务服务数据管理", "政务服务局", "大数据管理局", "数据局", "行政审批局", "政数局", "大数据发展局", "政务和大数据", "行政审批服务", "数据管理局", "政务服务管理"], "政务服务和数据管理局"),
     (["城市管理和综合执法", "城市管理综合执法", "城市管理局", "城管局", "城管执法", "综合行政执法", "城管和综合执法", "城市管理行政执法", "城市管理委员会", "综合执法局"], "城市管理和综合执法局"),
     (["退役军人事务", "退役军人局"], "退役军人事务局"),
-    (["宣传部", "市委宣传", "宣传部门", "中共.*宣传", "党委宣传"], "宣传部"),
+    (["宣传部", "市委宣传", "宣传部门", "中共.*宣传", "党委宣传", "委宣传部", "宣传部（", "宣传部门预算", "宣传部2026"], "宣传部"),
     (["司法局"], "司法局"),
     (["住房和建设", "住房和城乡建设", "住建局", "住房建设", "住房城乡建设", "住建委", "住房保障和房屋管理", "住房保障和房管"], "住房和建设局"),
     (["建筑工务署", "建筑工务中心", "建设工程事务", "工务署", "建筑工务", "建设工务署", "建设工务局", "建设工务中心"], "建筑工务署"),
     (["民政局"], "民政局"),
     (["财政局"], "财政局"),
-    (["气象局", "气象台", "气象部门", "气象服务"], "气象局"),
+    (["气象局", "气象台", "气象部门", "气象服务", "气象中心", "气象事业"], "气象局"),
     (["应急管理局", "应急局", "安全生产监督"], "应急管理局"),
     (["审计局"], "审计局"),
     (["政府办公厅", "政府办公室", "人民政府办公"], "政府办公厅"),
@@ -161,27 +168,38 @@ def create_session():
     session.verify = False
     return session
 
+import random
+
 def fetch(session, url, timeout=TIMEOUT):
-    for i in range(RETRY):
-        try:
-            r = session.get(url, timeout=timeout, allow_redirects=True, verify=False)
-            r.encoding = r.apparent_encoding or 'utf-8'
-            if r.status_code == 200:
-                return r
-        except requests.exceptions.SSLError:
-            # SSL失败时尝试http
-            if url.startswith('https://'):
-                http_url = url.replace('https://', 'http://', 1)
-                try:
-                    r = session.get(http_url, timeout=timeout, allow_redirects=True, verify=False)
-                    r.encoding = r.apparent_encoding or 'utf-8'
-                    if r.status_code == 200:
-                        return r
-                except Exception:
-                    pass
-        except Exception:
-            if i < RETRY - 1:
-                time.sleep(1)
+    # Rotate UA per request
+    session.headers['User-Agent'] = random.choice(USER_AGENTS)
+    urls_to_try = [url]
+    if url.startswith('https://'):
+        urls_to_try.append(url.replace('https://', 'http://', 1))
+    elif url.startswith('http://'):
+        urls_to_try.append(url.replace('http://', 'https://', 1))
+
+    for try_url in urls_to_try:
+        for i in range(RETRY):
+            try:
+                r = session.get(try_url, timeout=timeout, allow_redirects=True, verify=False)
+                r.encoding = r.apparent_encoding or 'utf-8'
+                if r.status_code == 200:
+                    return r
+                if r.status_code in (403, 503):
+                    # May be rate-limited, wait and retry
+                    time.sleep(1 + i)
+                    continue
+                if r.status_code >= 400:
+                    break  # Don't retry client errors other than 403
+            except requests.exceptions.SSLError:
+                break  # Try next URL (http/https switch)
+            except requests.exceptions.ConnectionError:
+                if i < RETRY - 1:
+                    time.sleep(1 + i)
+            except Exception:
+                if i < RETRY - 1:
+                    time.sleep(1)
     return None
 
 def match_dept(text, city=""):
@@ -443,6 +461,17 @@ def strategy_paginated_list(session, budget_url, city, needed_depts):
         if r:
             budget_url = alt
     if not r:
+        # 尝试去掉末尾路径层级
+        parsed = urlparse(budget_url)
+        parent = parsed.path.rstrip('/').rsplit('/', 1)[0] + '/'
+        if parent != parsed.path:
+            parent_url = f"{parsed.scheme}://{parsed.netloc}{parent}"
+            r = fetch(session, parent_url)
+            if r and '预算' in (r.text or ''):
+                budget_url = parent_url
+            else:
+                r = None
+    if not r:
         logger.warning(f"  [{city}] 无法访问预算页")
         return found
 
@@ -565,6 +594,20 @@ def extract_pdf_from_detail(session, detail_url, dept_name, city):
             full = urljoin(detail_url, purl)
             pdf_candidates.append(("regex_pdf", full, 3))
 
+    # 方法6: 查找PDF预览器URL (如 /pdfjs/viewer?file=xxx.pdf)
+    if not pdf_candidates:
+        viewer_matches = re.findall(r'[?&]file=([^&"\'>\s]+\.pdf)', r.text, re.I)
+        for purl in viewer_matches[:3]:
+            full = urljoin(detail_url, unquote(purl))
+            pdf_candidates.append(("viewer_pdf", full, 5))
+
+    # 方法7: window.open 或 location.href 中的PDF
+    if not pdf_candidates:
+        js_matches = re.findall(r'(?:window\.open|location\.href)\s*[=(]\s*["\']([^"\']+\.pdf)', r.text, re.I)
+        for purl in js_matches[:3]:
+            full = urljoin(detail_url, purl)
+            pdf_candidates.append(("js_pdf", full, 4))
+
     if not pdf_candidates:
         return None
 
@@ -596,6 +639,15 @@ SEARCH_URL_PATTERNS = [
     "/search_result.jsp?q={query}",
     "/search?key={query}",
     "/search?words={query}",
+    "/search?content={query}",
+    "/search/index.jsp?searchWord={query}",
+    "/was5/web/search?searchWord={query}",
+    "/search?type=0&searchWord={query}",
+    "/search.html?keyword={query}",
+    "/search.html?q={query}",
+    "/search/index?searchWord={query}",
+    "/fullTextSearch?key={query}",
+    "/search?text={query}",
 ]
 
 def detect_search_endpoint(session, website, city):
@@ -757,10 +809,26 @@ COMMON_BUDGET_PATHS = [
     "/zwgk/zdly/czzj/bmys/",
     "/zfxxgk/zdgk/czxx/bmys/",
     "/zfxxgk/zdgk/czxx/bmczyjs/",
+    "/zwgk/zdly/czxx/bmyjs/",
+    "/zwgk/zdly/czxx/bmyjs/2026/",
+    "/zwgk/czsj/bmczyjs/",
+    "/zwgk/czsj/bmczyjs/2026/",
+    "/czj/xxgk/bmys/",
+    "/czj/xxgk/bmys/2026/",
+    "/czj/ysjs/",
+    "/czj/ysjs/bmys/",
+    "/openness/detail/content/",
+    "/col/col_bmys/index.html",
+    "/xxgk/bmys/",
+    "/xxgk/bmys/2026/",
+    "/zfxxgk/fdzdgknr/czxx/czyjs/bmczys/2026/",
+    "/zwgk/czxx/yjshsg/bmczys/",
+    "/zwgk/czxx/yjshsg/bmczys/2026/",
+    "/zwgk/zfxxgk/czxx/bmczyjs/2026/",
 ]
 
 def probe_budget_page(session, website, city):
-    for path in COMMON_BUDGET_PATHS[:35]:
+    for path in COMMON_BUDGET_PATHS[:50]:
         url = urljoin(website, path)
         try:
             r = fetch(session, url, timeout=8)
