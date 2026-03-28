@@ -1843,3 +1843,9 @@ Fast-forward
 2026-03-28 13:35:09 执行任务 [task_010]: cd /root/renwu && python3 scrape_budgets.py --start 1 --end 100
 2026-03-28 13:35:09 任务已后台启动 PID: 1136852
 2026-03-28 13:35:09 统计: 4城市, 532个PDF, 爬取运行中 (PID: 1136852)
+From https://github.com/calinchow-del/renwu
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+2026-03-28 14:00:05 任务标记running但进程已死，自动重启
+2026-03-28 14:00:05 自动重启爬取 PID: 1149343
+2026-03-28 14:00:05 统计: 4城市, 559个PDF, 爬取运行中 (PID: 1149343)
