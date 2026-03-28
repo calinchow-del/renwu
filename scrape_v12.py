@@ -39,8 +39,8 @@ HEADERS = {
     'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8',
     'Accept-Encoding': 'gzip, deflate',
 }
-TIMEOUT = 15
-RETRY = 2
+TIMEOUT = 20
+RETRY = 3
 MAX_LIST_PAGES = 50       # 最多翻50页列表页
 MAX_DETAIL_PER_DEPT = 3   # 每个部门最多进3个详情页找PDF
 DELAY_PAGE = 0.3
@@ -266,7 +266,7 @@ def safe_filename(s, maxlen=80):
 
 def detect_pagination(soup, base_url):
     """检测分页模式, 返回总页数和URL模板"""
-    # 模式1: index_N.html (深圳等)
+    # 模式1: index_N.html / index_N.shtml (深圳等)
     for a in soup.find_all('a', href=True):
         href = a['href']
         text = a.get_text(strip=True)
@@ -275,6 +275,24 @@ def detect_pagination(soup, base_url):
             if m:
                 total = int(m.group(1))
                 return total, 'index_N'
+
+    # 模式1b: column-index-N.shtml (成都等)
+    for a in soup.find_all('a', href=True):
+        href = a['href']
+        text = a.get_text(strip=True)
+        if text in ['尾页', '末页', '最后一页', '下一页', '>>']:
+            m = re.search(r'column-index-(\d+)', href)
+            if m:
+                total = int(m.group(1))
+                return total, 'column_index_N'
+    # 也从所有链接中找column-index模式
+    col_idx_nums = []
+    for a in soup.find_all('a', href=True):
+        m = re.search(r'column-index-(\d+)', a['href'])
+        if m:
+            col_idx_nums.append(int(m.group(1)))
+    if col_idx_nums:
+        return max(col_idx_nums), 'column_index_N'
 
     # 模式2: ?page=N 或 &page=N
     for a in soup.find_all('a', href=True):
@@ -285,14 +303,26 @@ def detect_pagination(soup, base_url):
             if m:
                 return int(m.group(1)), 'page_param'
 
+    # 模式2b: /N.html 数字路径分页 (如 /1.html, /2.html)
+    for a in soup.find_all('a', href=True):
+        href = a['href']
+        text = a.get_text(strip=True)
+        if text in ['尾页', '末页', '最后一页']:
+            m = re.search(r'/(\d+)\.html', href)
+            if m:
+                total = int(m.group(1))
+                return total, 'num_html'
+
     # 模式3: 从JS中提取总页数
     for script in soup.find_all('script'):
         if script.string:
-            # contenpage/totalPage 等变量
-            m = re.search(r'(?:contenpage|totalPage|pageCount)\s*[=:]\s*(\d+)', script.string)
+            # contenpage/totalPage/pageCount/countPage 等变量
+            m = re.search(r'(?:contenpage|totalPage|pageCount|countPage|pages)\s*[=:]\s*(\d+)', script.string)
             if m:
                 total = int(m.group(1))
                 # 判断URL模式
+                if 'column-index' in str(soup):
+                    return min(total, 200), 'column_index_N'
                 if 'index_' in str(soup):
                     return min(total, 200), 'index_N'
                 return min(total, 200), 'page_param'
@@ -309,10 +339,15 @@ def detect_pagination(soup, base_url):
         for a in soup.find_all('a', href=True):
             if a.get_text(strip=True) == str(max_visible):
                 href = a['href']
+                if 'column-index' in href:
+                    return max_visible, 'column_index_N'
                 if 'index_' in href:
                     return max_visible, 'index_N'
                 if 'page=' in href:
                     return max_visible, 'page_param'
+                m = re.search(r'/(\d+)\.html', href)
+                if m:
+                    return max_visible, 'num_html'
 
     return 1, 'single'
 
@@ -320,19 +355,24 @@ def build_page_url(base_url, page_num, pattern):
     """根据分页模式构建第N页URL"""
     if pattern == 'index_N':
         if page_num == 1:
-            # 第1页: index.html
-            return re.sub(r'index(_\d+)?\.html', 'index.html', base_url)
-        # 第N页: index_N.html
-        base = re.sub(r'index(_\d+)?\.html', f'index_{page_num}.html', base_url)
-        if base == base_url and not base_url.endswith('.html'):
+            return re.sub(r'index(_\d+)?\.(html|shtml)', r'index.\2', base_url)
+        base = re.sub(r'index(_\d+)?\.(html|shtml)', f'index_{page_num}.\\2', base_url)
+        if base == base_url and not re.search(r'\.(html|shtml)$', base_url):
             base = base_url.rstrip('/') + f'/index_{page_num}.html'
         return base
+    elif pattern == 'column_index_N':
+        if page_num == 1:
+            return re.sub(r'column-index-\d+', 'column-index-1', base_url)
+        return re.sub(r'column-index-\d+', f'column-index-{page_num}', base_url)
     elif pattern == 'page_param':
         parsed = urlparse(base_url)
         if 'page=' in parsed.query:
             return re.sub(r'page=\d+', f'page={page_num}', base_url)
         sep = '&' if parsed.query else '?'
         return f"{base_url}{sep}page={page_num}"
+    elif pattern == 'num_html':
+        # /1.html -> /2.html
+        return re.sub(r'/\d+\.html$', f'/{page_num}.html', base_url)
     return base_url
 
 def extract_links_from_page(soup, base_url, city):
@@ -373,6 +413,18 @@ def strategy_paginated_list(session, budget_url, city, needed_depts):
         r = fetch(session, alt)
         if r:
             budget_url = alt
+    if not r and budget_url.startswith('https://'):
+        # 尝试http回退
+        http_url = budget_url.replace('https://', 'http://', 1)
+        r = fetch(session, http_url)
+        if r:
+            budget_url = http_url
+    if not r:
+        # 尝试index.shtml
+        alt = budget_url.rstrip('/') + '/index.shtml'
+        r = fetch(session, alt)
+        if r:
+            budget_url = alt
     if not r:
         logger.warning(f"  [{city}] 无法访问预算页")
         return found
@@ -385,9 +437,11 @@ def strategy_paginated_list(session, budget_url, city, needed_depts):
     total_pages, pattern = detect_pagination(soup, budget_url)
     logger.info(f"  [{city}] 检测到 {total_pages} 页, 模式: {pattern}")
 
-    # 确保base_url有index.html用于替换
-    if pattern == 'index_N' and not budget_url.endswith('.html'):
+    # 确保base_url有index.html/shtml用于替换
+    if pattern == 'index_N' and not re.search(r'\.(html|shtml)$', budget_url):
         budget_url = budget_url.rstrip('/') + '/index.html'
+    if pattern == 'column_index_N' and 'column-index' not in budget_url:
+        budget_url = budget_url.rstrip('/') + '/column-index-1.shtml'
 
     pages_to_scan = min(total_pages, MAX_LIST_PAGES)
 
@@ -472,6 +526,28 @@ def extract_pdf_from_detail(session, detail_url, dept_name, city):
             full = urljoin(detail_url, src)
             pdf_candidates.append(("iframe_pdf", full, 10))
 
+    # 方法3: embed/object标签中的PDF
+    for tag in soup.find_all(['embed', 'object']):
+        src = tag.get('src') or tag.get('data') or ''
+        if src.lower().endswith('.pdf'):
+            full = urljoin(detail_url, src)
+            pdf_candidates.append(("embed_pdf", full, 10))
+
+    # 方法4: 从onclick/href中提取PDF URL
+    for a in soup.find_all(['a', 'span', 'div'], onclick=True):
+        onclick = a['onclick']
+        m = re.search(r"['\"]([^'\"]*\.pdf)['\"]", onclick, re.I)
+        if m:
+            full = urljoin(detail_url, m.group(1))
+            pdf_candidates.append(("onclick_pdf", full, 5))
+
+    # 方法5: 从页面文本中正则提取PDF链接
+    if not pdf_candidates:
+        pdf_urls_in_text = re.findall(r'(?:href|src|url)\s*[=:]\s*["\']?([^"\'>\s]+\.pdf)', r.text, re.I)
+        for purl in pdf_urls_in_text[:5]:
+            full = urljoin(detail_url, purl)
+            pdf_candidates.append(("regex_pdf", full, 3))
+
     if not pdf_candidates:
         return None
 
@@ -489,6 +565,14 @@ SEARCH_URL_PATTERNS = [
     "/was5/web/search?channelid=&searchword={query}",
     "/jrobotfront/search.action?webid=1&searchWord={query}",
     "/site/tpl/szfbmczyjs/?searchWord={query}",
+    "/search.do?searchWord={query}",
+    "/search?keyword={query}",
+    "/search?wd={query}",
+    "/search.jsp?keyword={query}",
+    "/search.aspx?q={query}",
+    "/opensearch?searchWord={query}",
+    "/fullsearch?q={query}",
+    "/site/zgnj/search.html?searchWord={query}&siteId=10",
 ]
 
 def detect_search_endpoint(session, website, city):
@@ -504,7 +588,7 @@ def detect_search_endpoint(session, website, city):
                     # 找搜索参数名
                     for inp in form.find_all('input'):
                         name = inp.get('name', '')
-                        if name and name.lower() in ('searchword', 'q', 'keyword', 'wd', 'searchcontent'):
+                        if name and name.lower() in ('searchword', 'q', 'keyword', 'wd', 'searchcontent', 'key', 'kw', 'words', 'search', 'query'):
                             search_base = urljoin(website, action)
                             return f"{search_base}?{name}={{query}}"
         except:
@@ -624,10 +708,22 @@ COMMON_BUDGET_PATHS = [
     "/zwgk/zfxxgk/czxx/",
     "/ztzl/yjsgk/", "/ztzl/ysgk/",
     "/col/col_budget/index.html",
+    "/gkml/czyjs/",
+    "/gkml/czyjs/column-index-1.shtml",
+    "/zdxxgk/czzjxx/szfbmczyjs/",
+    "/zdxxgk/czzjxx/szfbmczyjs/2026/",
+    "/zwgk/zdly/czxx/bmczyjs/2026n/",
+    "/zwgk/czxx/czyjs/bmczys/",
+    "/zwgk/fdzdgknr/czxx/czyjs/",
+    "/zwgk/fdzdgknr/czxx/czyjs/bmczys/",
+    "/columns/zhuzhan/tsczxx/",
+    "/zwgk/fdzdgknr/ysjs/bmczyjsbgjsgjf/bmysnew/2026nbmys/",
+    "/zdlyxxgk/czyjshsgjf/czyjs/",
+    "/zdlyxxgk/czyjshsg/bmyjs/",
 ]
 
 def probe_budget_page(session, website, city):
-    for path in COMMON_BUDGET_PATHS[:20]:
+    for path in COMMON_BUDGET_PATHS[:35]:
         url = urljoin(website, path)
         try:
             r = fetch(session, url, timeout=8)
@@ -699,7 +795,7 @@ def process_city(city_info, progress, force=False):
     still_missing = needed_depts - found_new - existing_depts
     strategy_used = "paginated_list"
 
-    if len(still_missing) > 5:
+    if len(still_missing) > 3:
         # ===== 策略2: 搜索接口 =====
         logger.info(f"  [{city}] 还缺 {len(still_missing)} 个部门, 启用搜索策略")
         search_results = strategy_search(session, website, city, still_missing)
