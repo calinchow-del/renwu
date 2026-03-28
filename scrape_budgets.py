@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-中国百强城市2026年部门预算爬取脚本 v6
-修复: 僵尸线程、单城市超时、进度丢失、断点续爬
+中国百强城市2026年部门预算爬取脚本 v9
+修复: 磁盘检测跳过、进度丢失、进程崩溃
 """
 
 import json
@@ -37,7 +37,7 @@ HEADERS = {
 }
 TIMEOUT = 20
 RETRY = 2
-MAX_WORKERS = 3
+MAX_WORKERS = 2
 DELAY_PAGE = 0.3
 DELAY_CITY = 1
 
@@ -119,7 +119,6 @@ def load_progress():
     return {"completed": {}, "failed": []}
 
 def save_progress_safe(progress_data):
-    """线程安全地保存进度到文件"""
     try:
         with progress_lock:
             safe_data = {
@@ -134,16 +133,29 @@ def save_progress_safe(progress_data):
         logger.error(f"保存进度失败: {e}")
 
 def update_city_progress(progress_data, city_key, found, downloaded):
-    """线程安全地更新单个城市进度"""
     with progress_lock:
-        if 'completed' not in progress_data:
-            progress_data['completed'] = {}
-        progress_data['completed'][city_key] = {
+        progress_data.setdefault('completed', {})[city_key] = {
             "found": found,
             "downloaded": downloaded,
             "time": time.strftime('%Y-%m-%d %H:%M:%S')
         }
     save_progress_safe(progress_data)
+
+
+def count_city_files(city_key):
+    """检查磁盘上该城市已有多少个预算文件(PDF/HTML)"""
+    city_folder = BASE_DIR / city_key
+    if not city_folder.exists():
+        return 0
+    count = 0
+    try:
+        for f in city_folder.iterdir():
+            if f.suffix in ('.pdf', '.html') and f.name != '.gitkeep':
+                if f.stat().st_size > 500:
+                    count += 1
+    except Exception:
+        pass
+    return count
 
 # ========== 核心工具 ==========
 
@@ -337,20 +349,27 @@ def process_city(city_info, progress):
     city_folder = str(BASE_DIR / city_key)
     os.makedirs(city_folder, exist_ok=True)
 
-    # 线程安全检查是否已完成（>=5个部门就跳过，避免重复爬取）
+    # ===== 磁盘检测: 已有>=5个文件就跳过 =====
+    existing_count = count_city_files(city_key)
+    if existing_count >= 5:
+        logger.info(f"[{city}] 磁盘已有{existing_count}个文件，跳过")
+        update_city_progress(progress, city_key, existing_count, existing_count)
+        return {"found": existing_count, "downloaded": existing_count}
+
+    # 也检查progress文件(作为备用)
     try:
         with progress_lock:
             completed = progress.get('completed', {})
             if city_key in completed:
                 prev = completed[city_key]
                 if isinstance(prev, dict) and prev.get('found', 0) >= 5:
-                    logger.info(f"[{city}] 已完成({prev['found']}个部门)，跳过")
+                    logger.info(f"[{city}] 进度记录已完成({prev['found']}个部门)，跳过")
                     return {"found": prev['found'], "downloaded": prev.get('downloaded', 0)}
     except Exception as e:
         logger.warning(f"[{city}] 读取进度异常: {e}")
 
     logger.info(f"{'='*50}")
-    logger.info(f"[{rank}] {city}")
+    logger.info(f"[{rank}] {city} (已有{existing_count}个文件)")
     logger.info(f"{'='*50}")
 
     session = requests.Session()
@@ -441,7 +460,6 @@ def process_city(city_info, progress):
 
         result['found'] = len(result['depts'])
 
-        # 写爬取汇总
         try:
             with open(os.path.join(city_folder, "爬取汇总.txt"), 'w', encoding='utf-8') as f:
                 f.write(f"城市: {city} (排名{rank})\n")
@@ -462,7 +480,6 @@ def process_city(city_info, progress):
         import traceback
         logger.error(traceback.format_exc())
 
-    # 保存进度 - 独立try-except确保不影响返回
     try:
         update_city_progress(progress, city_key, result['found'], result['downloaded'])
     except Exception as e:
@@ -480,10 +497,25 @@ def run(start=1, end=100):
 
     progress = load_progress()
 
+    # 启动时扫描磁盘，同步进度
+    logger.info("扫描磁盘已有文件...")
+    disk_done = 0
+    for c in cities:
+        ck = f"{c['rank']:03d}_{c['city']}"
+        n = count_city_files(ck)
+        if n >= 5:
+            disk_done += 1
+            with progress_lock:
+                progress.setdefault('completed', {})[ck] = {
+                    "found": n, "downloaded": n,
+                    "time": time.strftime('%Y-%m-%d %H:%M:%S')
+                }
+    save_progress_safe(progress)
+    logger.info(f"磁盘已完成: {disk_done}个城市")
+
     already_done = len(progress.get('completed', {}))
     logger.info(f"开始爬取 {len(cities)} 个城市, 32个目标部门")
     logger.info(f"已有进度: {already_done}个城市完成")
-    logger.info(f"策略: 每部门只下载1个部门预算主文件")
     logger.info(f"并发数: {MAX_WORKERS}")
 
     with_url = [c for c in cities if c.get('budget_url')]
@@ -493,7 +525,7 @@ def run(start=1, end=100):
     total_found = 0
     total_downloaded = 0
 
-    CITY_TIMEOUT = 300  # 单城市最多5分钟
+    CITY_TIMEOUT = 300
 
     with ThreadPoolExecutor(max_workers=MAX_WORKERS) as pool:
         futures = {}
@@ -526,7 +558,6 @@ def run(start=1, end=100):
                 except:
                     pass
 
-    # 最终保存进度
     save_progress_safe(progress)
 
     logger.info("=" * 60)
