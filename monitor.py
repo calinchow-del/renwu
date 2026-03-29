@@ -61,7 +61,12 @@ def load_progress():
                 for k, v in data.get('completed', {}).items():
                     if isinstance(v, dict):
                         existing = merged.get(k, {})
-                        if v.get('found', 0) > existing.get('found', 0):
+                        new_found = v.get('found', 0)
+                        old_found = existing.get('found', 0)
+                        new_has_depts = bool(v.get('depts'))
+                        old_has_depts = bool(existing.get('depts'))
+                        # 优先选found更多的; 相同时优先选有depts列表的
+                        if new_found > old_found or (new_found == old_found and new_has_depts and not old_has_depts):
                             merged[k] = v
             except:
                 pass
