@@ -10822,3 +10822,14 @@ Already up to date.
 2026-03-29 10:20:02 任务标记running但进程已死，自动重启
 2026-03-29 10:20:02 自动重启爬取 PID: 1766422
 2026-03-29 10:20:02 统计: 69城市, 284个PDF, 爬取运行中 (PID: 1766422)
+From https://github.com/calinchow-del/renwu
+ * branch            main       -> FETCH_HEAD
+   8376b0b..cfa7f1c  main       -> origin/main
+Updating 8376b0b..cfa7f1c
+Fast-forward
+ scrape_v12.py    | 17 +++++++++++++----
+ validate_pdfs.py | 22 +++++++++++-----------
+ 2 files changed, 24 insertions(+), 15 deletions(-)
+2026-03-29 10:35:08 任务标记running但进程已死，自动重启
+2026-03-29 10:35:08 自动重启爬取 PID: 1774417
+2026-03-29 10:35:08 统计: 69城市, 284个PDF, 爬取运行中 (PID: 1774417)
