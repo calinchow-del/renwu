@@ -1,0 +1,952 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无锡市退役军人事务局-首页</title>
+<link rel="stylesheet" type="text/css" href="https://www.wuxi.gov.cn/static2016/css/ws_extend.css" />
+<script src="https://www.wuxi.gov.cn/static2016/js/wbj_12345.js"></script>
+<link href="/static/css/index.css" rel="stylesheet" type="text/css" />
+<meta name="SiteName" content="无锡市退役军人事务局" />
+<meta name="SiteDomain" content="tyjrswj.wuxi.gov.cn/" />
+<meta name="SiteIDCode" content="3202000082" />
+<script type="text/javascript" src="/static/js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="/static/js/jquery.tab.js"></script>
+<script type="text/javascript" src="/static/js/jquery.roll.js"></script>
+<script type="text/javascript" src="/static/js/jquery.SuperSlide.js"></script>
+<script type="text/javascript" src="/static/js/common.js"></script>
+<script type="text/javascript" src="//www.wuxi.gov.cn/static2016/js/blue_ipv6.js"></script>
+<script type="text/javascript" src="//www.wuxi.gov.cn/static2016/js/checkLogin_t.js"></script>
+<script type="text/javascript" src="//www.wuxi.gov.cn/static_common/js/wzq_common.js"></script>
+<!-- 新检索JS -->
+<script type="text/javascript" src="//www.wuxi.gov.cn/static_common/js/wzq_search_common.js"></script>
+
+<script src="//wza.wuxi.gov.cn/wza/wza2.min.js?appid=STo2kkTo5YFAxP5"></script>
+
+<style>
+/**黑白*/
+/*html{ filter: grayscale(100%);filter: gray; -webkit-filter: grayscale(100%); -moz-filter: grayscale(100%); -ms-filter: grayscale(100%); -o-filter: grayscale(100%); filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1); -webkit-filter: grayscale(1);} 
+body{filter:Gray;background:#ffffff url("/static/images/bg_gray.jpg") no-repeat scroll center top}
+img{filter:Gray;}*/
+</style>
+</head>
+<body style="background:#ffffff url('/static/images/bg_gray.jpg') no-repeat scroll center top;">
+<script language="javascript" type="text/javascript"> 
+ $.getUrlParam = function(name) {
+    		var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+   	var r = window.location.search.substr(1).match(reg);
+   	if (r != null)
+   	return unescape(r[2]);
+   	return null;
+    } 
+var prePage = document.referrer;
+
+String.prototype.Trim = function() 
+{ 
+	return this.replace(/(^\s*)|(\s*$)/g, ""); 
+}
+
+String.prototype.LTrim = function() 
+{ 
+	return this.replace(/(^\s*)/g, ""); 
+} 
+  
+String.prototype.Rtrim = function() 
+{ 
+	return this.replace(/(\s*$)/g, ""); 
+} 
+
+function isNull(str) { 
+	if (str == ""){ 
+		return true;
+	} 
+	var regu = "^[ ]+$"; 
+	var re = new RegExp(regu); 
+	return re.test(str); 
+}
+
+function _loadUserLoginInfo() {
+        var str = "";
+        var code = $.getUrlParam("code");
+        if(checkLogin()) {
+            
+            var loginUser = getLoginUser();
+            
+          str += "<em>欢迎您："+ loginUser +"</em>";
+          str += "<dl>";
+          str += "<dd><a href='/fzlm/hdjlgny/lxbl/wdhx/index.shtml'>我的12345信件</a></dd>";
+          str += "<dd><a href='/fzlm/hdjlgny/ysqgk/wdysqgk/index.shtml'>我的依申请公开</a></dd>";
+
+          str += "<dd ><a target=\"_blank\" href='https://www.jszwfw.gov.cn/jsjis/front/modify/permodify_show.do'>修改个人信息</dd>";
+          str += "<dd ><a target=\"_blank\" href='https://www.jszwfw.gov.cn/jsjis/front/login/modifypwd_step1.do'>修改密码</dd>";
+          str += "<dd style=\"border:none\"><a href=\"javascript:loginOut();\">退出</a></dd>";
+          str += "</dl>";
+
+           
+           /* str += '<input id="username" type="hidden" value="'+loginUser +'" />';
+            str +="<a>"+loginUser +"，您好。</a><a style=\"color:#575757;\" href=\"javascript:loginOut();\">注销</a>&nbsp;&nbsp;&nbsp;<a style=\"color:#575757;\" target=\"_blank\" href=\"https://www.jszwfw.gov.cn/jsjis/front/modify/permodify_show.do\">修改信息</a>";*/
+           
+
+        } else {
+            var localurl = window.location.href;
+            str += '<a href="https://sso.wuxi.gov.cn/auth-center2/login.html?gotoUrl='+localurl+'" class="login">用户登录</a>';
+        }
+        $("#loginHead").empty();
+        $("#loginHead").append(str);
+        
+    }
+
+
+
+$(document).ready(function(){
+   //dealHeaderHtml();
+        _loadUserLoginInfo();
+});
+  
+
+
+//验证码
+ 
+function selectFrom(iFirstValue, iLastValue) {
+    var iChoces = Math.abs(iLastValue - iFirstValue) + 1;  
+    return Math.floor(Math.random() * iChoces + iFirstValue);
+}
+
+
+</script>
+
+<div class="head">
+  <div class="topbar white">
+    <div class="topbar-inner font16 mg-ltrb-center">
+     <p class="wel_date fl" id="ipv6_p"></p>
+      <div class="topbar-date blue fl"><script type="text/javascript" src="/static/js/date.js"></script></div>
+      <ul class="topbar-nav clearfix fr">
+        <li class="blue login_top user_info" id="loginHead">
+        
+        </li> 
+        
+        <li style="display:inline; margin:11px 0 0 12px;"><input onFocus="return refocus();"  onkeydown="EnterSub(event);" onBlur="return reblur();" id="query" class="iptJr01" name="" type="text" /></li>
+        <li style="margin:11px 0 0 0;"><input class="btnJr01 white" name="" type="button" onclick="javascript:sub();return false;" value="搜索" /></li>
+        
+         <li class="blue " style="margin:0  10px;" id="wza_head_li"><a href="javascript:void(0);" id="wza2-enable">无障碍通道</a></li>
+        <li  class="blue " style=""><a href="javascript:void(0);" onclick="jft()">繁体版</a></li>
+         <li class="blue " style="margin:0  10px;"><a  target="_blank" href="https://www.wuxi.gov.cn/ghwd/znwd/index.html">智能问答</a></li>
+        
+      </ul>
+<script>
+  var font = "t";
+  function jft() {
+    zh_tran(font);
+    if (font == "s")
+      font = "t";
+    else
+      font = "s";
+  }
+</script>
+      <script type="text/javascript">
+        function refocus(){     
+          var getquery=document.getElementById("query");
+          getquery.value="";
+          getquery.autocomplete="off";
+          getquery.focus(); 
+
+        }  
+        function reblur(){
+          var getquery=document.getElementById("query");
+          if (getquery.value==""){
+            getquery.value="请输入搜索关键字";	 
+          }
+        }   
+        String.prototype.trim=function(){
+          return this.replace(/(^\s*)|(\s*$)/g,"");
+        }
+
+        //站内提交方法
+        function sub(){
+          //必需，先将文本转换为utf-8
+          document.charset = "utf-8";	
+          var fixvalue = document.getElementById("query").value;
+          fixvalue = fixvalue.replace(/\~|\!|\*|\?|\^|\\|\(|\)|\[|\]|\+|\-|\:|\{|\}|\"/g,"");
+          var dst = "无锡市退役军人事务局";
+          if(fixvalue.trim()=="" || fixvalue.trim()=="请输入搜索关键字"){
+            document.getElementById("query").value = "";
+            alert("关键字不能为空！");
+            document.getElementById("query").focus();
+            return false;
+          }
+          else{
+            //头部检索
+            search_2024_wzq(encodeURIComponent(dst),encodeURIComponent(fixvalue),'');
+
+          }
+          //必需，最后将文本转换为gb2312
+          document.charset="gb2312"
+          return false;
+        }
+
+
+        //站内回车提交方法
+        function EnterSub(){
+          var len=arguments.length;
+          var event;
+          if(len==1){
+            event = arguments[0];
+          }
+          var evt = event ? event : (window.event ? window.event : null);
+          if (evt.keyCode == 13)    {
+            //必需，先将文本转换为utf-8
+            document.charset = "utf-8";	
+            var fixvalue = document.getElementById("query").value;
+            fixvalue = fixvalue.replace(/\~|\!|\*|\?|\^|\\|\(|\)|\[|\]|\+|\-|\:|\{|\}|\"/g,"");
+            var dst = "无锡市退役军人事务局";
+            if(fixvalue.trim()=="" || fixvalue.trim()=="请输入搜索关键字"){
+              document.getElementById("query").value = "";
+              alert("关键字不能为空！");
+              document.getElementById("query").focus();
+              return false;
+            }
+            else{
+              //头部检索
+              search_2024_wzq(encodeURIComponent(dst),encodeURIComponent(fixvalue),'');
+
+            }
+            document.charset="gb2312"
+            return false;
+          }
+        }
+
+</script>
+<script>
+  $(".user_info").hover(function(){
+    if($(this).find("em").is(":visible")>0){
+      $(this).addClass("on").find("dl").slideDown()
+    }else{
+
+    }
+  },function(){
+    $(this).removeClass("on").find("dl").hide()
+  })
+</script>
+    </div>
+  </div>
+</div>
+  <div class="nav">
+  	<div class="w1200 mg-ltrb-center clearfix">
+    	<ul class="nav_ul white fl clearfix">
+        <li class="cur"><a href="/index.shtml">首页</a></li>
+        <li><a href="/gkx/xxgkml/jggk1/index.shtml" target="_blank">政府信息公开</a></li>
+        <li><a href="/hd/jzxx/index.shtml">互动交流</a></li>
+        <li><a href="/sy/sydt/index.shtml">双拥</a></li>
+        <li><a href="/dj/jgdj/index.shtml">党建</a></li>
+        <li><a href="/fc/tyjrfc/index.shtml">风采</a></li>
+         <li><a href="http://wx.jszwfw.gov.cn:7002/ipgs/ipgs/gotoWxQjdFwListZRR.do" target="_blank">政务服务</a></li>
+        </ul>
+    </div>
+  </div>
+
+<div class="greyboxJr">
+	<div class="hotpoint clearfix">
+    	<h2 class="white fb fl"><a >热点关注</a></h2>
+        <h1 class="fl fb"><a href="/doc/2026/03/27/4751225.shtml" target="_blank" title="老兵看过来！每月服务暖心上线～">老兵看过来！每月服务暖心上线～</a></h1>
+    </div>
+</div>
+<div class="w1200 mg-ltrb-center" style="padding:18px 0;">
+	<div class="clearfix">
+        <div id="slideBox" class="slideBox fl">
+          <div class="hd">
+            <ul>
+              <li class="on"></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+          <div class="bd">
+              <ul>
+                <li><a href="https://liuyan.www.gov.cn/2025wwzfgzbgtjy/bmdf.html?q=js" target="_blank"><img src="/uploadfiles/202403/11/2024031114440137422340-thumbnail.jpg" /></a>
+                  <dl>
+                    <dt><a href="https://liuyan.www.gov.cn/2025wwzfgzbgtjy/bmdf.html?q=js" target="_blank" title="@国务院 我来说">@国务院 我来说</a></dt>
+                  </dl>
+                </li>
+                <li><a href="https://wjk.jsrd.gov.cn:8004/#/home" target="_blank"><img src="/uploadfiles/202312/18/2023121815104562059789.jpg" /></a>
+                  <dl>
+                    <dt><a href="https://wjk.jsrd.gov.cn:8004/#/home" target="_blank" title="江苏省法规规章规范性文件数据库">江苏省法规规章规范性文件数据库</a></dt>
+                  </dl>
+                </li>
+              </ul>
+          </div>
+        </div>
+        <script type="text/javascript">jQuery(".slideBox").slide( { mainCell:".bd ul",effect:"fade",interTime:4000,autoPlay:true} );</script>
+        <div class="boxJr01 fl">
+            <h2><ol class="clearfix fb"><li><a href="/dt/szyw/index.shtml" title="政声传递">政声传递</a></li><li><a href="/dt/bsdt/index.shtml" title="工作动态">工作动态</a></li><li><a href="/tzgg/index.shtml" title="公示公告">公示公告</a></li></ol></h2>
+            <div class="boxJr01_con">
+                <ul class="listJr01 font17">
+                <li><span class="riqi fr">03-13</span><a href="https://www.gov.cn/yaowen/liebiao/202603/content_7062604.htm" target="_blank" title="李强主持召开国务院常务会议 讨论通过《国务院2026年重点工作分工方案》等">李强主持召开国务院常务会议 讨论通过《国务院2026年</a></li>
+                <li><span class="riqi fr">03-10</span><a href="https://www.gov.cn/zhuanti/2026nztj/2026qglh/yw/202603/content_7061863.htm" target="_blank" title="第二场“部长通道”：回应关切真抓实干">第二场“部长通道”：回应关切真抓实干</a></li>
+                <li><span class="riqi fr">03-09</span><a href="https://www.gov.cn/zhuanti/2026nztj/2026qglh/yw/202603/content_7061712.htm" target="_blank" title="听民意 汇民智 | “今天的反馈很全面也很务实”——全国人大代表张雨霏与国家体育总局工作人员面对面">听民意 汇民智 | “今天的反馈很全面也很务实”——全</a></li>
+                <li><span class="riqi fr">03-08</span><a href="https://www.gov.cn/zhuanti/2026nztj/2026qglh/yw/202603/content_7061207.htm" target="_blank" title="“十五五”规划纲要草案的新指标、新看点">“十五五”规划纲要草案的新指标、新看点</a></li>
+                <li><span class="riqi fr">03-08</span><a href="https://www.gov.cn/zhuanti/2026nztj/2026qglh/yw/202603/content_7061326.htm" target="_blank" title="政府工作报告里的变与不变">政府工作报告里的变与不变</a></li>
+                <li><span class="riqi fr">03-06</span><a href="https://www.gov.cn/zhuanti/2026nztj/2026qglh/yw/202603/content_7060997.htm" target="_blank" title="听民意 汇民智 | 国务院办公厅和国务院有关部门旁听全国两会，将代表委员真知灼见化为实招硬招">听民意 汇民智 | 国务院办公厅和国务院有关部门旁听全</a></li>
+                <li><span class="riqi fr">02-24</span><a href="https://www.gov.cn/yaowen/liebiao/202602/content_7059026.htm" target="_blank" title="李强主持召开国务院常务会议 对抓紧做好春节假期后政府工作作出部署">李强主持召开国务院常务会议 对抓紧做好春节假期后政</a></li>
+                </ul>
+            </div>
+            <div class="boxJr01_con" style="display:none;">
+                <ul class="listJr01 font17">
+                <li><span class="riqi fr">03-27</span><a href="/doc/2026/03/27/4751225.shtml" target="_blank" title="老兵看过来！每月服务暖心上线～">老兵看过来！每月服务暖心上线～</a></li>
+                <li><span class="riqi fr">03-24</span><a href="/doc/2026/03/24/4749504.shtml" target="_blank" title="清明将至祭英烈 服务保障暖人心——市革命烈士陵园多措并举护航清明祭扫">清明将至祭英烈 服务保障暖人心——市革命烈士陵园多</a></li>
+                <li><span class="riqi fr">03-19</span><a href="/doc/2026/03/19/4747893.shtml" target="_blank" title="苏戎职引  “无”限“锡”才—— 2026年江苏省退役军人家门口就业直通车无锡站活动圆满举行">苏戎职引  “无”限“锡”才—— 2026年江苏省退役军</a></li>
+                <li><span class="riqi fr">03-16</span><a href="/doc/2026/03/16/4746184.shtml" target="_blank" title="“钱坤华烈士，家乡人来看你了！”">“钱坤华烈士，家乡人来看你了！”</a></li>
+                <li><span class="riqi fr">03-11</span><a href="/doc/2026/03/11/4743990.shtml" target="_blank" title="马踏春风暖  乐学耀戎辉——无锡市军休老年大学举办2026年开学典礼">马踏春风暖  乐学耀戎辉——无锡市军休老年大学举办20</a></li>
+                <li><span class="riqi fr">03-11</span><a href="/doc/2026/03/11/4743891.shtml" target="_blank" title="苏戎职引  无”限”锡”才 ——2026年退役军人家门口就业直通车系列活动之无锡站">苏戎职引  无”限”锡”才 ——2026年退役军人家门口</a></li>
+                <li><span class="riqi fr">03-09</span><a href="/doc/2026/03/09/4742693.shtml" target="_blank" title="全市各地退役军人事务部门开展庆祝“三八”妇女节活动">全市各地退役军人事务部门开展庆祝“三八”妇女节活动</a></li>
+                </ul>
+            </div>
+             <div class="boxJr01_con" style="display:none;">
+                <ul class="listJr01 font17">
+                <li><span class="riqi fr">03-17</span><a href="/doc/2026/03/17/4746563.shtml" target="_blank" title="无锡市军休老年大学拟聘用人员公示">无锡市军休老年大学拟聘用人员公示</a></li>
+                <li><span class="riqi fr">01-12</span><a href="/doc/2026/01/12/4718195.shtml" target="_blank" title="关于无锡市革命烈士陵园开园的通告">关于无锡市革命烈士陵园开园的通告</a></li>
+                <li><span class="riqi fr">12-29</span><a href="/doc/2025/12/29/4709109.shtml" target="_blank" title="无锡市爱国拥军促进会负责人任职前公示">无锡市爱国拥军促进会负责人任职前公示</a></li>
+                <li><span class="riqi fr">12-26</span><a href="/doc/2025/12/26/4707603.shtml" target="_blank" title="中共无锡市退役军人事务局党组关于巡察整改报告的通报">中共无锡市退役军人事务局党组关于巡察整改报告的通报</a></li>
+                <li><span class="riqi fr">09-30</span><a href="/doc/2025/09/30/4660843.shtml" target="_blank" title="关于公开征集退役军人补贴性教育培训承训机构的公告">关于公开征集退役军人补贴性教育培训承训机构的公告</a></li>
+                <li><span class="riqi fr">08-14</span><a href="/doc/2025/08/14/4629479.shtml" target="_blank" title="2025年无锡市区营职以下及专业技术转业军官考试考核分数线划定">2025年无锡市区营职以下及专业技术转业军官考试考核分</a></li>
+                <li><span class="riqi fr">08-01</span><a href="/doc/2025/08/01/4623212.shtml" target="_blank" title="邀标公告">邀标公告</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        
+        <p  class="boxJr01 fl" style="margin-top: 6px;">
+        <a href="https://wxsfj.wuxi.gov.cn/wxpf/" target="_blank"><img src="/static/images/img_zhpf.jpg" width="245px" /></a>
+        
+        <a href="https://www.jszwfw.gov.cn/jsjis/front/login.do?uuid=eWiuamoWHJZO&gotoUrl=aHR0cHM6Ly90eWpycWpkLmpzendmdy5nb3YuY246OTAxMC9xamQteWpzLWRlY2xhcmUvIy9zc29Ib21l" target="_blank"><img src="/static/images/jrtyyjs.jpg" width="245px"/></a>
+        
+        </p>
+        
+        
+        
+    </div>
+    
+    <div class="clearfix" style="padding-top:50px;">
+    	<div class="boxJr02 fl" style="width:650px;">
+        	<h3 class="clearfix"><ol class="clearfix fl fb"><li style="padding:0; background:none;"><a href="/gkx/xxgkml/jggk1/index.shtml" target="_blank"><em style="font-size: 24px;">政府信息公开</em></a></li></ol><div class="fl blue" style="position:relative; width:475px; height:45px; display:inline; margin-left:10px; background:#f3f7ff;-webkit-border-radius:6px;-moz-border-radius:6px;border-radius:6px; overflow:hidden;"><dl class="clearfix tab_page1"><dd><a href="/gkx/xxgkml/jggk1/index.shtml" target="_blank">机构概况</a></dd><dd><a href="/gkx/xxgkml/fgwjjjd/index.shtml" target="_blank">法规文件及解读</a></dd><dd><a href="/gkx/xxgkml/ghjh/index.shtml" target="_blank">规划计划</a></dd><!--<dd><a href="/gkx/xxgkml/czxx/index.shtml" target="_blank"> 财政信息</a></dd>--><dd><a href="/gkx/xxgkml/zdgz/index.shtml" target="_blank">重点工作</a></dd></dl><dl class="clearfix tab_page2"><dd><a href="/gkx/xxgkml/rsxx/index.shtml" target="_blank">人事信息</a></dd><!--<dd><a href="/gkx/xxgkml/tjsjjjd/index.shtml" target="_blank">统计数据及解读</a></dd>--></dl><span class="arrow"></span></div></h3>
+            <div class="boxJr02_on clearfix" style="padding:15px 0 0 0">
+            	<ul class="listJr08 fl font18">
+                <li class="sp01"><a href="/gkx/xxgkml/jggk1/index.shtml" target="_blank">政府信息公开目录</a></li>
+                <li class="sp02"><a href="/gkx/xxgkzn/index.shtml" target="_blank">信息公开指南</a></li>
+                <li class="sp03"><a href="/gkx/xxgkzd/index.shtml" target="_blank">信息公开制度</a></li>
+                <!--<li class="sp04"><a href="/gkx/xxgkgzndbg/index.shtml" target="_blank">信息公开工作年度报告</a></li>
+                <li class="sp05"><a href="/gkx/wzndgzbb/index.shtml" target="_blank">网站年度工作报表</a></li>-->
+                <li class="sp06"><a href="/fzlm/hdjlgny/ysqgk/index.shtml" target="_blank">依申请公开</a></li>
+                <li class="sp07"><a href="/gkx/wzndgzbb/index.shtml" target="_blank">网站工作年度报表</a></li>
+                
+                <li class="sp04"><a href="http://www.js.gov.cn/col/col59348/index.html" style="font-size: 14px;" target="_blank">江苏省政府信息公开申请须知</a></li>
+                
+                </ul>
+                <div class="boxJr07 fr" style="width:388px; margin:10px 0 0 0">
+                	<h4><ol class="clearfix font20 fb"><li>最新公开信息</li><li><a href="/gkx/xxgkml/fgwjjjd/index.shtml" target="_blank">法规文件及解读</a></li></ol></h4>
+                    <div class="boxJr07_con" style="padding:20px 5px 0;">
+                    	<ul class="listJr02 lh36">
+                <li><a href="/doc/2026/03/19/4749548.shtml" target="_blank" title="苏戎职引  “无”限“锡”才—— 2026年江苏省退役军人家门口就业直通车无锡站活动圆满举行">苏戎职引  “无”限“锡”才—— 2026年江苏省退</a></li>
+                <li><a href="/doc/2026/03/18/4747084.shtml" target="_blank" title="无锡市退役军人事务局2026年3月重点工作计划">无锡市退役军人事务局2026年3月重点工作计划</a></li>
+                <li><a href="/doc/2026/02/27/4749527.shtml" target="_blank" title=" 市退役军人事务局持续推进“换位跑一次”活动"> 市退役军人事务局持续推进“换位跑一次”活动</a></li>
+                <li><a href="/doc/2026/02/24/4749529.shtml" target="_blank" title="转作风提效能 实干笃行启新程——市退役军人事务局召开作风效能建设工作会议">转作风提效能 实干笃行启新程——市退役军人事务</a></li>
+                <li><a href="/doc/2026/02/14/4735016.shtml" target="_blank" title="2026年度无锡市退役军人服务中心单位预算公开">2026年度无锡市退役军人服务中心单位预算公开</a></li>
+                <li><a href="/doc/2026/02/14/4735002.shtml" target="_blank" title="无锡市军用饮食供应站2026年度单位预算公开">无锡市军用饮食供应站2026年度单位预算公开</a></li>
+                <li><a href="/doc/2026/02/14/4734983.shtml" target="_blank" title="无锡市军队离退休干部服务中心2026年度单位预算公开">无锡市军队离退休干部服务中心2026年度单位预算</a></li>
+                        </ul>
+                    </div>
+                    <div class="boxJr07_con" style="display:none;padding:20px 5px 0;">
+                    	<ul class="listJr02 lh36">
+                <li><a href="/doc/2025/12/12/4716664.shtml" target="_blank" title="《伤残抚恤管理办法》政策解读">《伤残抚恤管理办法》政策解读</a></li>
+                <li><a href="/doc/2025/12/12/4716661.shtml" target="_blank" title=" 伤残抚恤管理办法"> 伤残抚恤管理办法</a></li>
+                <li><a href="/doc/2025/09/29/4716657.shtml" target="_blank" title="退役军人事务部 国家网信办 公安部 市场监管总局 中央军委政治工作部关于印发《退役军人荣誉标识使用管理办法》的通知">退役军人事务部 国家网信办 公安部 市场监管总局</a></li>
+                <li><a href="/doc/2025/09/29/4716653.shtml" target="_blank" title="《退役军人荣誉标识使用管理办法》政策解读和违法违规典型案例">《退役军人荣誉标识使用管理办法》政策解读和违</a></li>
+                <li><a href="/doc/2025/08/04/4652256.shtml" target="_blank" title="《烈士评定工作办法》政策解读">《烈士评定工作办法》政策解读</a></li>
+                <li><a href="/doc/2025/08/04/4652249.shtml" target="_blank" title="退役军人事务部 应急管理部 中央军委政治工作部关于印发《烈士评定工作办法》的通知">退役军人事务部 应急管理部 中央军委政治工作部</a></li>
+                <li><a href="/doc/2025/07/26/4652285.shtml" target="_blank" title="《残疾军人康复辅助器具配置办法》 政策解读">《残疾军人康复辅助器具配置办法》 政策解读</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!--
+    <div class="clearfix" style="padding-top:50px;">
+    	<div class="boxJr02 fl" style="width:550px;">
+        	<h3><ol class="clearfix fb"><li><a href="/tzgg/index.shtml"><em>公示公告</em></a></li><li style="background:none;"><a href="/fzlm/gk/zcfg/index.shtml"><em>政策法规</em></a></li></ol></h3>
+            <div class="boxJr02_on" style="padding:15px 0 0 12px">
+            	<ul class="listJr02 font17 lh36">
+                <li><span class="riqi fr">03-17</span><a href="/doc/2026/03/17/4746563.shtml" target="_blank" title="无锡市军休老年大学拟聘用人员公示">无锡市军休老年大学拟聘用人员公示</a></li>
+                <li><span class="riqi fr">01-12</span><a href="/doc/2026/01/12/4718195.shtml" target="_blank" title="关于无锡市革命烈士陵园开园的通告">关于无锡市革命烈士陵园开园的通告</a></li>
+                <li><span class="riqi fr">12-29</span><a href="/doc/2025/12/29/4709109.shtml" target="_blank" title="无锡市爱国拥军促进会负责人任职前公示">无锡市爱国拥军促进会负责人任职前公示</a></li>
+                <li><span class="riqi fr">12-26</span><a href="/doc/2025/12/26/4707603.shtml" target="_blank" title="中共无锡市退役军人事务局党组关于巡察整改报告的通报">中共无锡市退役军人事务局党组关于巡察整改报告的通报</a></li>
+                <li><span class="riqi fr">09-30</span><a href="/doc/2025/09/30/4660843.shtml" target="_blank" title="关于公开征集退役军人补贴性教育培训承训机构的公告">关于公开征集退役军人补贴性教育培训承训机构的公告</a></li>
+                <li><span class="riqi fr">08-14</span><a href="/doc/2025/08/14/4629479.shtml" target="_blank" title="2025年无锡市区营职以下及专业技术转业军官考试考核分数线划定">2025年无锡市区营职以下及专业技术转业军官考试考核分数线</a></li>
+                <li><span class="riqi fr">08-01</span><a href="/doc/2025/08/01/4623212.shtml" target="_blank" title="邀标公告">邀标公告</a></li>
+                <li><span class="riqi fr">07-14</span><a href="/doc/2025/07/14/4612162.shtml" target="_blank" title="无锡市军队离退休干部服务中心军休老年大学教学成果展演服务项目采购结果公示">无锡市军队离退休干部服务中心军休老年大学教学成果展演服</a></li>
+                </ul>
+            </div>
+            <div class="boxJr02_on" style="display:none; padding:15px 0 0 12px">
+            	<ul class="listJr02 font17 lh36">
+                </ul>
+            </div>
+        </div>-->
+        <div class="boxJr02 fr" style="width:520px;">
+        <div class="boxJr03 w595 fr" style="width:520px;">
+        	<h2 class="clearfix"><span class="tit icoJr05 blue fb fl">互动交流</span></h2>
+            <div class="boxJr03_con" style="padding-top:30px;">
+            	<div class="boxJr02 boxJr02_sp">
+                    <h3><ol class="clearfix"><li><a href="/hd/jzxx/index.shtml"><em>12345信件平台</em></a></li><li style="background:none;"><a href="/hd/dczj/index.shtml"><em>调查征集</em></a></li></ol></h3>
+                    <div class="boxJr02_on" style="padding:5px 0 0">
+                    <form id="searchForm">
+<input id="mailType" name="mailType" value="0" type="hidden">
+<input id="PageSize" name="pageSize" value="4" type="hidden">
+<input id="PageIndex" name="pageNum" value="1" type="hidden">
+<input name="channelId" value="52257" type="hidden">
+                        <ol class="listJr05 clearfix">
+                        
+                        <li class="srk" style="width:350px;"><input class="fl iptJr02" name="Keywords" placeholder="请输入关键字查询" type="text" id="Keywords" style="width:310px;" /><input onclick="cx();" class="fl btnJr02" name="" type="button" /></li><a href="/fzlm/hdjlgny/lxbl/wyxx/index.shtml"><li class="btn"><input class="white" name="" type="button" value="我要写信" /></li></a></ol></form>
+                        <ul class="listJr06" style="padding:10px 0 0 " id="letterList">
+                        
+                        </ul>
+                        
+                         <script>
+            
+              function cx(){
+                           
+                        	
+                            var Keywords=$('#Keywords').val();
+                            window.open('/hd/jzxx/index.shtml?Keywords='+encodeURI(encodeURI(Keywords)));
+                        
+               
+           }
+                    </script>
+                     <script type="text/javascript">
+                        $(function() {
+                            $.ajax({
+                                type:"post",
+                                      //url:"/intertidwebapp/LeadingMail/Gov_Get_IndexLetterList",
+                                      url:listurl,
+                                      data:{
+                                         //DepID: 'WX0120',
+                                         //DoProjectID: 'bfffa273-086a-47cb-a7a8-7ae8140550db',
+                                         //PageIndex: 1,
+                                         //PageSize: 4,
+                                         //DoState: 2
+                                         projectId:"bfffa273-086a-47cb-a7a8-7ae8140550db",
+                                         toDepartment:'WX0120',
+                                         replyDepartment:'WX0120',
+                                         size:4,
+                                         page:1
+                                      },
+                                      dataType:'json',
+                                      success:function(data){
+                                            var str="";
+                                            var map =  data.data.data;
+                                            if(map != undefined && map.length > 0){
+                                                for(var i =0;i<map.length;i++){
+                                                  			
+                                                  
+                                                   str += '<li><span class="riqi fr">'+map[i].endTime+'</span><a target="_blank" href="/fzlm/hdjlgny/lxbl/xjxq/index.shtml?AnswerID=' + map[i].answerID + '">'+map[i].title+'</a></li>';  
+                                                  
+                                                }
+                                            }else{
+                                                str += '<li>暂无数据<span></span></li>';
+                                            }
+                                            $('#letterList').html(str);
+                                           
+                                        	
+                                      },
+                                      error: function(XMLHttpRequest, textStatus, errorThrown) {
+                                          var msg = XMLHttpRequest.responseText;
+                                       //   alert(msg);
+                                      }
+                              });
+                        });
+                        </script>
+                    
+                    
+                       
+                        <p style="padding:15px 0 0 "><img src="/static/images/smrx.gif" /></p>
+                    </div>
+           <script type="text/javascript">
+                        $(function() {
+                            $.ajax({
+                                type:"post",
+                                      url:"/intertidwebapp/survey/getTopicList",
+                                      data:{
+                                        chanId: 52278,
+                                        group:192,
+                                         num: 7
+                                      },
+                                      dataType:'json',
+                                      success:function(data){
+                                            var topics = data.topics;
+                                            var tHtml = "";
+                                            var tSummary = "";
+                                            var tTitle = "";
+                                            if(topics != undefined && topics.length > 0){
+                                              for(var i =0;i<topics.length;i++){
+                                                tTitle = (topics[i].title == null ? '' : topics[i].title);
+                                                 if (tTitle.length > 25) {
+                                                      tTitle = tTitle.substring(0,25) + '...';
+                                                  }
+                                                 if (topics[i].channelType == 4) { 
+                                                 
+                                                
+                                                  
+                                              tHtml+='<li><span class="riqi fr">'+topics[i].startDateString.substring(0,11)+'</span><a  target="_blank" href="/fzlm/hdjlgny/dcxqy/index.shtml?id='+topics[i].id+'">'+tTitle+'</a></li>';
+                                                  
+                                                  
+                                           
+                                            }else{
+                                            
+                                           
+                                            
+                                            tHtml+='<li><span class="riqi fr">'+topics[i].startDateString.substring(0,11)+'</span><a  target="_blank" href="/fzlm/hdjlgny/myzjxqy/index.shtml?chanDocId='+topics[i].id+'&docId='+topics[i].docId+'">'+tTitle+'</a></li>';
+                                                  
+                                            
+                                            
+                                           
+                                            }
+                                                  
+                                                
+                                              }
+                                            }
+                                            $("#zz").html(tHtml);
+                                      },
+                                      error: function(XMLHttpRequest, textStatus, errorThrown) {
+                                          var msg = XMLHttpRequest.responseText;
+                                          //alert(msg);
+                                      }
+                              });
+                        });
+</script>
+                    <div class="boxJr02_on" style="display:none; padding:5px 0 0" >
+                    
+                    
+                     <ul class="listJr06" style="padding:10px 0 0 " id="zz">
+                        
+                        </ul>
+  
+                    </div>
+  
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <!--
+        
+        	<h3><ol class="clearfix fb"><li><a href="/sy/sydt/index.shtml"><em>双拥动态</em></a></li><li style="background:none;"><a href="/sy/sygc/index.shtml"><em>双拥观察</em></a></li></ol></h3>
+            <div class="boxJr02_on" style="padding:15px 0 0 12px">
+            	<ul class="listJr02 lh36">
+                <li><span class="riqi fr">03-27</span><a href="/doc/2026/03/27/4751215.shtml" target="_blank" title="梁溪区开展“缅怀英烈守初心 砥砺奋进担使命”清明祭扫主题活动">梁溪区开展“缅怀英烈守初心 砥砺奋进担使命”清明祭扫主题活动</a></li>
+                <li><span class="riqi fr">03-24</span><a href="/doc/2026/03/24/4749521.shtml" target="_blank" title="从军营到街巷 以坚守践使命——退役军人王鹏飞引领新业态群体服务基层治理">从军营到街巷 以坚守践使命——退役军人王鹏飞引领新业态群体服务</a></li>
+                <li><span class="riqi fr">03-24</span><a href="/doc/2026/03/24/4749509.shtml" target="_blank" title="军供载乡韵 暖心护启航—无锡军供站做好2026年春季新兵保障工作">军供载乡韵 暖心护启航—无锡军供站做好2026年春季新兵保障工作</a></li>
+                <li><span class="riqi fr">03-16</span><a href="/doc/2026/03/16/4746196.shtml" target="_blank" title="从蠡湖出发，他们把青春献给军营——滨湖区预定新兵入伍欢送仪式暨“新兵守国•老兵守家”结对仪式">从蠡湖出发，他们把青春献给军营——滨湖区预定新兵入伍欢送仪式暨</a></li>
+                <li><span class="riqi fr">03-12</span><a href="/doc/2026/03/12/4744621.shtml" target="_blank" title="梁溪区瞻江街道退役军人服务站开展“军民携手播绿意·青春共筑绿色梦”植树节活动">梁溪区瞻江街道退役军人服务站开展“军民携手播绿意·青春共筑绿色</a></li>
+                <li><span class="riqi fr">03-09</span><a href="/doc/2026/03/09/4742701.shtml" target="_blank" title="市军休中心开展“三八”妇女节走访慰问女军休干部活动">市军休中心开展“三八”妇女节走访慰问女军休干部活动</a></li>
+                <li><span class="riqi fr">03-05</span><a href="/doc/2026/03/05/4741147.shtml" target="_blank" title="学雷锋践初心 军民鱼水情更浓 ——驻宜兴武警某部官兵走进敬老院开展志愿服务">学雷锋践初心 军民鱼水情更浓 ——驻宜兴武警某部官兵走进敬老院开</a></li>
+                <li><span class="riqi fr">02-24</span><a href="/doc/2026/02/24/4735834.shtml" target="_blank" title="戎光永耀，情暖旺庄——旺庄街道组织开展退役军人迎新春关怀活动">戎光永耀，情暖旺庄——旺庄街道组织开展退役军人迎新春关怀活动</a></li>
+                </ul>
+                
+                
+            </div>
+            <div class="boxJr02_on" style="display:none; padding:15px 0 0 12px">
+            	<ul class="listJr02 lh36">
+                <li><span class="riqi fr">03-27</span><a href="/doc/2026/03/27/4751220.shtml" target="_blank" title="惠山区举办 “新兵守国・老兵守家” 拥军优属暨欢送新兵入伍主题活动">惠山区举办 “新兵守国・老兵守家” 拥军优属暨欢送新兵入伍主题活</a></li>
+                <li><span class="riqi fr">03-24</span><a href="/doc/2026/03/24/4749517.shtml" target="_blank" title="春风送岗暖兵心 夜市寻岗零距离——滨湖区“人才夜市”直播带岗活动精准服务退役军人就业创业">春风送岗暖兵心 夜市寻岗零距离——滨湖区“人才夜市”直播带岗活</a></li>
+                <li><span class="riqi fr">03-16</span><a href="/doc/2026/03/16/4746186.shtml" target="_blank" title="换位践初心 服务暖兵心——无锡高新区（新吴区）退役军人事务局开展“换位跑一次”活动">换位践初心 服务暖兵心——无锡高新区（新吴区）退役军人事务局开</a></li>
+                <li><span class="riqi fr">03-12</span><a href="/doc/2026/03/12/4744624.shtml" target="_blank" title="以“用户思维”跑出退役军人服务“加速度”">以“用户思维”跑出退役军人服务“加速度”</a></li>
+                <li><span class="riqi fr">03-09</span><a href="/doc/2026/03/09/4742422.shtml" target="_blank" title="沉浸式体验“跑”流程 精准化服务“补”短板">沉浸式体验“跑”流程 精准化服务“补”短板</a></li>
+                <li><span class="riqi fr">03-02</span><a href="/doc/2026/03/02/4739062.shtml" target="_blank" title="滨湖区开展送岗进军营专项招聘活动">滨湖区开展送岗进军营专项招聘活动</a></li>
+                <li><span class="riqi fr">02-17</span><a href="/doc/2026/02/17/4735241.shtml" target="_blank" title="军休赓续炽初心 银龄力行践使命 ——军休中心开展迎新春关爱活动">军休赓续炽初心 银龄力行践使命 ——军休中心开展迎新春关爱活动</a></li>
+                <li><span class="riqi fr">02-14</span><a href="/doc/2026/02/14/4734964.shtml" target="_blank" title="无锡市军休中心开展军休干部新春走访慰问系列活动">无锡市军休中心开展军休干部新春走访慰问系列活动</a></li>
+                </ul>
+            </div>-->
+        </div>
+    </div>
+    <div id="slideBox" class="slideBox02">
+      <div class="hd">
+        <ul>
+          <li class="on">1</li>
+          <li>2</li>  
+         
+        </ul>
+      </div>
+      <div class="bd">
+          <ul>
+             <li><a href="http://www.moj.gov.cn/pub/sfbgw/zwgkztzl/xxxcgcxjpfzsx/index.html" target="_blank"><img src="/static/images/xxgcxjpfzsx.jpg" /></a>
+            </li>
+            <li><a href="https://www.12371.cn/special/zglz4/" target="_blank"><img src="/static/images/zglzdsj_2025.jpg" /></a> 
+            </li>
+            <!--<li><a target="_blank"><img src="/uploadfiles/201809/11/2018091112294712582779.jpg" /></a>
+            </li>
+            <li><a target="_blank"><img src="/uploadfiles/201605/17/2016051715262939489090.jpg" /></a>
+            </li>-->
+          </ul>
+      </div>
+    </div>
+    <script type="text/javascript">jQuery(".slideBox02").slide( { mainCell:".bd ul",effect:"fade",interTime:4000,autoPlay:true} );</script>
+</div>
+<div class="greyboxJr" style="padding:25px 0;">
+	<div class="w1200 mg-ltrb-center clearfix">
+    	<div class="boxJr03 w560 fl">
+        	<h2 class="clearfix"><span class="tit icoJr05 blue fb fl"><a href="/sy/sydt/index.shtml">双拥动态</a></span></h2>
+            <div class="boxJr02_on" style="padding:15px 0 0 12px">
+            	<ul class="listJr02 lh36">
+                <li><span class="riqi fr">03-27</span><a href="/doc/2026/03/27/4751215.shtml" target="_blank" title="梁溪区开展“缅怀英烈守初心 砥砺奋进担使命”清明祭扫主题活动">梁溪区开展“缅怀英烈守初心 砥砺奋进担使命”清明祭扫主题活动</a></li>
+                <li><span class="riqi fr">03-24</span><a href="/doc/2026/03/24/4749521.shtml" target="_blank" title="从军营到街巷 以坚守践使命——退役军人王鹏飞引领新业态群体服务基层治理">从军营到街巷 以坚守践使命——退役军人王鹏飞引领新业态群体服务</a></li>
+                <li><span class="riqi fr">03-24</span><a href="/doc/2026/03/24/4749509.shtml" target="_blank" title="军供载乡韵 暖心护启航—无锡军供站做好2026年春季新兵保障工作">军供载乡韵 暖心护启航—无锡军供站做好2026年春季新兵保障工作</a></li>
+                <li><span class="riqi fr">03-16</span><a href="/doc/2026/03/16/4746196.shtml" target="_blank" title="从蠡湖出发，他们把青春献给军营——滨湖区预定新兵入伍欢送仪式暨“新兵守国•老兵守家”结对仪式">从蠡湖出发，他们把青春献给军营——滨湖区预定新兵入伍欢送仪式暨</a></li>
+                <li><span class="riqi fr">03-12</span><a href="/doc/2026/03/12/4744621.shtml" target="_blank" title="梁溪区瞻江街道退役军人服务站开展“军民携手播绿意·青春共筑绿色梦”植树节活动">梁溪区瞻江街道退役军人服务站开展“军民携手播绿意·青春共筑绿色</a></li>
+                <li><span class="riqi fr">03-09</span><a href="/doc/2026/03/09/4742701.shtml" target="_blank" title="市军休中心开展“三八”妇女节走访慰问女军休干部活动">市军休中心开展“三八”妇女节走访慰问女军休干部活动</a></li>
+                <li><span class="riqi fr">03-05</span><a href="/doc/2026/03/05/4741147.shtml" target="_blank" title="学雷锋践初心 军民鱼水情更浓 ——驻宜兴武警某部官兵走进敬老院开展志愿服务">学雷锋践初心 军民鱼水情更浓 ——驻宜兴武警某部官兵走进敬老院开</a></li>
+                <li><span class="riqi fr">02-24</span><a href="/doc/2026/02/24/4735834.shtml" target="_blank" title="戎光永耀，情暖旺庄——旺庄街道组织开展退役军人迎新春关怀活动">戎光永耀，情暖旺庄——旺庄街道组织开展退役军人迎新春关怀活动</a></li>
+                </ul>
+                
+                
+            </div>
+           
+        </div>
+        
+        
+        
+        <div class="boxJr03 w560 fr">
+        	<h2 class="clearfix"><span class="tit icoJr05 blue fb fl"><a href="/sy/sygc/index.shtml">双拥观察</a></span></h2>
+            <div class="boxJr02_on" style="padding:15px 0 0 12px">
+            	<ul class="listJr02 lh36">
+                <li><span class="riqi fr">03-27</span><a href="/doc/2026/03/27/4751220.shtml" target="_blank" title="惠山区举办 “新兵守国・老兵守家” 拥军优属暨欢送新兵入伍主题活动">惠山区举办 “新兵守国・老兵守家” 拥军优属暨欢送新兵入伍主题活</a></li>
+                <li><span class="riqi fr">03-24</span><a href="/doc/2026/03/24/4749517.shtml" target="_blank" title="春风送岗暖兵心 夜市寻岗零距离——滨湖区“人才夜市”直播带岗活动精准服务退役军人就业创业">春风送岗暖兵心 夜市寻岗零距离——滨湖区“人才夜市”直播带岗活</a></li>
+                <li><span class="riqi fr">03-16</span><a href="/doc/2026/03/16/4746186.shtml" target="_blank" title="换位践初心 服务暖兵心——无锡高新区（新吴区）退役军人事务局开展“换位跑一次”活动">换位践初心 服务暖兵心——无锡高新区（新吴区）退役军人事务局开</a></li>
+                <li><span class="riqi fr">03-12</span><a href="/doc/2026/03/12/4744624.shtml" target="_blank" title="以“用户思维”跑出退役军人服务“加速度”">以“用户思维”跑出退役军人服务“加速度”</a></li>
+                <li><span class="riqi fr">03-09</span><a href="/doc/2026/03/09/4742422.shtml" target="_blank" title="沉浸式体验“跑”流程 精准化服务“补”短板">沉浸式体验“跑”流程 精准化服务“补”短板</a></li>
+                <li><span class="riqi fr">03-02</span><a href="/doc/2026/03/02/4739062.shtml" target="_blank" title="滨湖区开展送岗进军营专项招聘活动">滨湖区开展送岗进军营专项招聘活动</a></li>
+                <li><span class="riqi fr">02-17</span><a href="/doc/2026/02/17/4735241.shtml" target="_blank" title="军休赓续炽初心 银龄力行践使命 ——军休中心开展迎新春关爱活动">军休赓续炽初心 银龄力行践使命 ——军休中心开展迎新春关爱活动</a></li>
+                <li><span class="riqi fr">02-14</span><a href="/doc/2026/02/14/4734964.shtml" target="_blank" title="无锡市军休中心开展军休干部新春走访慰问系列活动">无锡市军休中心开展军休干部新春走访慰问系列活动</a></li>
+                </ul>
+                
+                
+            </div>
+           
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </div>
+</div>
+<div class="w1200 mg-ltrb-center" style="padding:30px 0;">
+	<div class="boxJr04">
+    	<h2 class="fb"><span><a href="/fc/tyjrfc/index.shtml" title="退役军人风采">退役军人风采</a></span><span><a href="/fc/zdbfc/index.shtml" title="子弟兵风采">子弟兵风采</a></span></h2>
+        <div class="boxJr04_con">
+        	<div class="leftLoop">
+                <div class="bd">
+                    <ul class="picList">
+                        <li>
+                            <div class="pic"><a href="/doc/2020/12/10/3136303.shtml" target="_blank"><img src="/uploadfiles/202012/10/2020121010210227120241-thumbnail.png" /></a></div>
+                        </li>
+                        <li>
+                            <div class="pic"><a href="/doc/2020/11/12/3100563.shtml" target="_blank"><img src="/uploadfiles/202011/12/2020111214422631396682.jpg" /></a></div>
+                        </li>
+                        <li>
+                            <div class="pic"><a href="/doc/2020/07/31/2991161.shtml" target="_blank"><img src="/uploadfiles/202010/26/2020102610452276376540-thumbnail.JPG" /></a></div>
+                        </li>
+                        <li>
+                            <div class="pic"><a href="/doc/2020/05/25/2932177.shtml" target="_blank"><img src="/uploadfiles/202010/26/2020102610494118764613.jpg" /></a></div>
+                        </li>
+                        <li>
+                            <div class="pic"><a href="/doc/2019/10/11/2688139.shtml" target="_blank"><img src="/uploadfiles/201910/30/2019103016534199534835.jpg" /></a></div>
+                        </li>
+                       
+                    </ul>
+                </div>
+                <div class="hd">
+                    <ul><li>1</li><li>2</li><li>3</li></ul>
+                    <a class="prev"></a>
+                    <a class="next"></a>
+                </div>
+            </div>
+        </div>
+        <div class="boxJr04_con">
+        	<div class="leftLoop">
+                <div class="bd">
+                    <ul class="picList">
+                        <li>
+                            <div class="pic"><a href="/doc/2020/12/21/3145916.shtml" target="_blank"><img src="/uploadfiles/202012/21/2020122113522681398086.jpg" /></a></div>
+                        </li>
+                        <li>
+                            <div class="pic"><a href="/doc/2020/11/12/3100617.shtml" target="_blank"><img src="/uploadfiles/202011/12/2020111215210351961784-thumbnail.jpg" /></a></div>
+                        </li>
+                        <li>
+                            <div class="pic"><a href="/doc/2020/03/04/2856258.shtml" target="_blank"><img src="/uploadfiles/202010/26/2020102610525653454600.jpg" /></a></div>
+                        </li>
+                        <li>
+                            <div class="pic"><a href="/doc/2019/07/31/2595684.shtml" target="_blank"><img src="/uploadfiles/201907/31/2019073113403553377105.png" /></a></div>
+                        </li>
+                        <li>
+                            <div class="pic"><a href="/doc/2019/07/30/2594928.shtml" target="_blank"><img src="/uploadfiles/201907/30/2019073016282016802790.jpg" /></a></div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="hd">
+                    <ul><li>1</li><li>2</li><li>3</li></ul>
+                    <a class="prev"></a>
+                    <a class="next"></a>
+                </div>
+            </div>
+        </div>
+        
+        <script type="text/javascript">jQuery(".leftLoop").slide({ mainCell:".bd ul",effect:"leftLoop",vis:4,scroll:4,autoPlay:true});</script>
+    </div>
+</div>
+
+<script language="javascript" type="text/javascript" src="https://www.wuxi.gov.cn/static2016/js/Traditionalconversion.js"></script>
+<div id="foot">
+<div class="footlink">
+
+<div class="links visible-lg-inline">
+    <div class="container">
+      <ul class="no-padding clearfix no-margin">
+        <li class="dropdown">
+          <p data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" totabtarget="33" retabtarget="34"><a target="_blank" class="text-white" href="http://www.mva.gov.cn/" title="退役军人事务部" retargeta="166"><em>退役军人事务部</em></a></p>  
+        </li>
+        <li class="dropdown">
+          <p data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" totabtarget="57" retabtarget="58"><a class="text-white" target="_blank" href="http://tyjrswt.jiangsu.gov.cn/" title="江苏省退役军人事务厅" tabtarget="156" toretabtarget="167" retargeta="168"><em>江苏省退役军人事务厅</em></a></p>
+        </li>
+        <li class="dropdown">
+          <p data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" totabtarget="81" retabtarget="82"><a class="text-white" href="javascript:void(0);" title="市政府委办局" tabtarget="158" toretabtarget="169" retargeta="170"><em>市政府委办局</em></a></p>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel" style="display: none;">
+          
+            <li><a href="https://dpc.wuxi.gov.cn" title="市发展和改革委员会" target="_blank">市发展和改革委员会</a></li>
+            <li><a href="https://jy.wuxi.gov.cn" title="市教育局" target="_blank">市教育局</a></li>
+            <li><a href="https://wxkjj.wuxi.gov.cn/" title="市科学技术局" target="_blank">市科学技术局</a></li>
+            <li><a href="https://gxj.wuxi.gov.cn" title="市工业和信息化局" target="_blank">市工业和信息化局</a></li>
+            <li><a href="https://zjj.wuxi.gov.cn" title="市民族宗教事务局" target="_blank">市民族宗教事务局</a></li>
+            <li><a href="https://ga.wuxi.gov.cn" title="市公安局" target="_blank">市公安局</a></li>
+            <li><a href="https://mzj.wuxi.gov.cn" title="市民政局" target="_blank">市民政局</a></li>
+            <li><a href="https://wxsfj.wuxi.gov.cn" title="市司法局" target="_blank">市司法局</a></li>
+            <li><a href="https://cz.wuxi.gov.cn" title="市财政局" target="_blank">市财政局</a></li>
+            <li><a href="https://hrss.wuxi.gov.cn" title="市人力资源和社会保障局" target="_blank">市人力资源和社会保障局</a></li>
+             <li><a href="https://zrzy.wuxi.gov.cn" title="市自然资源和规划局" target="_blank">市自然资源和规划局</a></li>
+            <li><a href="https://bee.wuxi.gov.cn" title="市生态环境局" target="_blank">市生态环境局</a></li>
+            <li><a href="https://js.wuxi.gov.cn" title="市住房和城乡建设局" target="_blank">市住房和城乡建设局</a></li>
+            <li><a href="https://gyj.wuxi.gov.cn" title="市市政和园林局" target="_blank">市市政和园林局</a></li>
+            <li><a href="https://cg.wuxi.gov.cn" title="市城市管理局" target="_blank">市城市管理局</a></li>
+            <li><a href="https://wxjtj.wuxi.gov.cn/" title="市交通运输局" target="_blank">市交通运输局</a></li>
+            <li><a href="https://water.wuxi.gov.cn/" title="市水利局" target="_blank">市水利局</a></li>
+            <li><a href="https://agri.wuxi.gov.cn/" title="市农业农村局" target="_blank">市农业农村局</a></li>
+            <li><a href="https://mofcom.wuxi.gov.cn" title="市商务局" target="_blank">市商务局</a></li>
+            <li><a href="https://crtt.wuxi.gov.cn" title="市文化广电和旅游局" target="_blank">市文化广电和旅游局</a></li>
+            <li><a href="https://wjw.wuxi.gov.cn" title="市卫生健康委员会" target="_blank">市卫生健康委员会</a></li>
+            <li><a href="https://yjglj.wuxi.gov.cn" title="市应急管理局" target="_blank">市应急管理局</a></li>
+            <li><a href="https://sjj.wuxi.gov.cn" title="市审计局" target="_blank">市审计局</a></li>
+            <li><a href="https://fao.wuxi.gov.cn" title="市政府外事办公室" target="_blank">市政府外事办公室</a></li>
+            <li><a href="https://gzw.wuxi.gov.cn" title="市政府国有资产监督管理委员会" target="_blank">市政府国有资产监督管理委员会</a></li>
+            <li><a href="https://scjgj.wuxi.gov.cn" title="市市场监督管理局" target="_blank">市市场监督管理局</a></li>
+            <li><a href="https://tyj.wuxi.gov.cn" title="市体育局" target="_blank">市体育局</a></li>
+            <li><a href="https://bigdata.wuxi.gov.cn" title="市数据局" target="_blank">市数据局</a></li>
+            <li><a href="https://tj.wuxi.gov.cn/" title="市统计局" target="_blank">市统计局</a></li>
+            <li><a href="https://xfj.wuxi.gov.cn" title="市信访局" target="_blank">市信访局</a></li>
+            <li><a href="https://lswz.wuxi.gov.cn" title="市粮食和物资储备局" target="_blank">市粮食和物资储备局</a></li>
+            <li><a href="https://gdb.wuxi.gov.cn" title="市国防动员办公室" target="_blank">市国防动员办公室</a></li>
+            <li><a href="https://jgglj.wuxi.gov.cn" title="市机关事务管理局" target="_blank">市机关事务管理局</a></li>
+            <li><a href="https://gjzx.wuxi.gov.cn" title="市公共工程建设中心" target="_blank">市公共工程建设中心</a></li>
+            <li><a href="https://coop.wuxi.gov.cn" title="市供销合作总社" target="_blank">市供销合作总社</a></li>
+            <li><a href="http://js.cma.gov.cn/dsjwz/wxs/" title="市气象局" target="_blank">市气象局</a></li>
+            <li><a href="http://js.spb.gov.cn/jssyzglj/c102254/indexshi.shtml" title="市邮政管理局" target="_blank">市邮政管理局</a></li>
+            <li><a href="https://dcd.wuxi.gov.cn/" title="国家统计局无锡调查队" target="_blank">国家统计局无锡调查队</a></li>
+            <li><a href="https://www.wuxi.gov.cn/gjj/" title="市住房公积金管理中心" target="_blank">市住房公积金管理中心</a></li>
+        
+          </ul>
+        </li>
+        <li class="dropdown" style="margin-right:0;">
+          <p data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" totabtarget="105" retabtarget="106"><a class="text-white" href="javascript:void(0);" title="专题专栏" tabtarget="160" toretabtarget="171" retargeta="172"><em>专题专栏</em></a></p>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel" style="display: none;">
+            <li> 
+            
+            <a href="http://tyjrswj.wuxi.gov.cn/fzlm/tyjrxzzl/index.shtml" target="blank" title="退役军人事务局行政许可和行政处罚“双公示”专栏" tabtarget="161" toretabtarget="172" retargeta="173">退役军人事务局行政许可和行政处罚“双公示”专栏</a> 
+             
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <script src="/static/js/main.js"></script>
+  <script>
+        //通用
+
+        jQuery(document).ready(function () {
+            Main.init();
+            /*$('.slider-text-1').owlCarousel({
+                items: 1,
+                loop: true,
+                dots: false,
+                smartSpeed: 1000,
+                autoplay: true,
+                autoplayTimeout: 2000,
+                autoplayHoverPause: true
+            });
+            $('.re-sliders').owlCarousel({
+                items: 4,
+                loop: true,
+                nav: true,
+                margin: 10,
+                smartSpeed: 1000,
+                autoplay: true,
+                autoplayTimeout: 2000,
+                autoplayHoverPause: true,
+                responsive: {
+                    0: { items: 1 },
+                    480: { items: 2 },
+                    600: { items: 3 },
+                    960: { items: 4 },
+                    1200: { items: 5 }
+                }
+            });*/
+            $('.card-area > li').hover(function (){
+                $(this).addClass('active').siblings('li').removeClass('active');
+            });
+            $('button.notice').click();
+        });
+    </script>
+	<p class="footer_nav"><a href="/fzlm/wzdt/index.shtml">网站地图</a><em>|</em><a href="/fzlm/lxwm/index.shtml">联系我们</a></p>
+<table class="copyright" width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><p>无锡市退役军人事务局版权所有&nbsp;&nbsp;无锡市退役军人事务局主办&nbsp;&nbsp;&nbsp;技术支持：<a href="#">泰得科技</a></p><p>互联网信息服务备案号:<a href="http://beian.miit.gov.cn" target="_blank">苏ICP备09024546号</a>&nbsp;&nbsp;<a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32021102000707" target="_blank">公安备案号：32021102000707</a>&nbsp;&nbsp;网站标识码:3202000082</p>
+    
+     <p><script type="text/javascript">document.write(unescape("%3Cspan id='_ideConac' %3E%3C/span%3E%3Cscript src='https://dcs.conac.cn/js/11/178/0000/60935418/CA111780000609354180001.js' type='text/javascript'%3E%3C/script%3E"));</script>
+</p>
+    
+    
+   <p class="zhaocuo" ><a href="https://zfwzgl.www.gov.cn/exposure/jiucuo.html?site_code=3202000082&url=https%3A%2F%2Ftyjrswj.wuxi.gov.cn%2F" target="_blank"><img src="https://www.wuxi.gov.cn/static2016/images/jiucuo_2021.png" /></a></p>
+    
+    </td>
+    
+   
+  <!--  <td><a href="#"><img src="/static/images/jiucuo.png" /></a></td>-->
+  </tr>
+</table>
+
+<script language="javascript" type="text/javascript" src="/static/artdialog/artDialog.min.js"></script>
+<link rel="stylesheet" type="text/css" href="/static/artdialog/skin/idialog.css" />
+ 
+</div>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?718ebb10079c27ab417c6940e6d2d882";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<!--[if IE 6]>
+<script type="text/javascript" src="js/DD_belatedPNG_0.0.8a-min.js" ></script>
+<script type="text/javascript">
+DD_belatedPNG.fix('*,background.img');
+</script>
+<![endif]-->
+<script type="text/javascript" src="//www.wuxi.gov.cn/static_common/js/hotkeys.js"></script>
+<script type="text/javascript" src="//www.wuxi.gov.cn/static_common/js/website_group_wza.js"></script>
+<script type="text/javascript" src="//www.wuxi.gov.cn/static_common/js/jquery.cookies.js"></script> 
+<script type="text/javascript" src="/static_older/older.js"></script>  
+
+<div id="mydiv">
+  <link rel="stylesheet" type="text/css" href="//www.wuxi.gov.cn/static_common/css/ts.css" />
+  <div class="pushad">
+    <a href="http://zzxszy.people.cn/GB/458759/index.html" target="blank">
+      <img src="//www.wuxi.gov.cn/static_2023/images/zyzzxszy.jpg" style="width:100%;display:block;margin-top:5px">
+    </a> 
+  </div>
+  <div class="tnew" style="padding:0;">
+    <span class="closeAd closeAd1">
+      <img src="//www.wuxi.gov.cn/static_2023/images/i35.gif" alt="关闭">
+    </span>
+  </div>
+</div>
+<script>
+  $('.closeAd1').each(function(){
+    $(this).click(function(){
+      $(this).parent().hide();$(this).parent().parent().find('.pushad').hide();
+    })
+  })
+  
+  $(function(){
+    wza2.subscribe('after', 'TOGGLE', function(action, state) {
+      if (state.enable === true) {
+        $("#mydiv").css("display","none");
+      }else{
+        $("#mydiv").css("display","");
+      }
+    });
+    wza2.subscribe('after', 'INITIAL_FROM_STORAGE', function(action, state) {
+      if (state.enable === true) {
+        $("#mydiv").css("display","none");
+      }else{
+        $("#mydiv").css("display","");
+      }
+    });
+    /*长者版隐藏*/
+    if($("body").hasClass("web_older")){
+      $("#mydiv").css("display","none");
+    }else{
+      $("#mydiv").css("display","");
+    }
+  })
+  
+</script>
+
+<script language="javascript" type="text/javascript" src="/static/js/piaofu.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+	$(".boxJr01").tab({tabs: "h2 ol li",evtype: "mouseover",box: ".boxJr01_con"});
+	$(".boxJr02").tab({tabs: "h3 ol li",evtype: "mouseover",box: ".boxJr02_on"});
+	$(".boxJr04").tab({tabs: "h2 a",evtype: "mouseover",box: ".boxJr04_con"});
+  //]]>
+$(function(){
+	$(".uproll01").myScrollTop(50);
+	})
+</script>
+</body>
+</html>

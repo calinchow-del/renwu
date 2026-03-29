@@ -1,0 +1,676 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>
+        常州市自然资源和规划局
+    </title>
+
+    <meta name="Description" content="">
+    <meta name="Keywords" content="常州市自然资源和规划局">
+    <link href="http://zrzy.jiangsu.gov.cn/images/hs.css" rel="stylesheet" type="text/css">
+    <link href="/gtzz/images/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="/gtzz/images/font-awesome-ie7.min.css" rel="stylesheet" type="text/css">
+    <!--除去头尾页面主css-->
+    <link href="./images/city-style.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="./images/jquery-1.9.1.min.js"></script>
+    <!--图片新闻外部js-->
+    <script type="text/javascript" src="./images/jquery.SuperSlide.2.1.1.js"></script>
+    <!--专题专栏外部js-->
+    <script type="text/javascript" src="./images/flexslider.js"></script>
+    <!--办件列表滚动外部js-->
+    <script type="text/javascript" src="./images/scroll.js"></script>
+    <script>
+        //图片新闻初始化
+        $(function() {
+            jQuery(".focusBox").slide({
+                titCell: ".num li",
+                mainCell: ".pic",
+                effect: "fold",
+                autoPlay: true,
+                trigger: "click",
+                //下面startFun代码用于控制文字上下切换
+                startFun: function(i) {
+                    jQuery(".focusBox .txt li").eq(i).animate({
+                        "bottom": 0
+                    }).siblings().animate({
+                        "bottom": -36
+                    });
+                }
+            });
+            //专题图片切换初始化
+            $('#demo').flexslider({
+                slideshow: true,
+                animation: "slide",
+                direction: "horizontal",
+                easing: "swing",
+                controlNav: false,
+                directionNav: true
+            });
+            $(".flexslider").each(function() {
+                $(this).hover(function() {
+                    $(this).find(".flex-direction-nav").fadeIn("slow")
+                }, function() {
+                    $(this).find(".flex-direction-nav").hide()
+                })
+            })
+        });
+        $(document).ready(function() {
+            //新闻区域标签切换
+            var $lin = $("#news-sw a");
+            var $divn = $("[id=news]");
+            $lin.hover(function() {
+                    var $tn = $("#news-sw a").index($(this));
+                    $lin.removeClass();
+                    $(this).addClass("active");
+                    $divn.css("display", "none");
+                    $divn.eq($tn).css("display", "block");
+                })
+                //通知公告标签切换
+            var $lif = $("#notice-sw a");
+            var $divf = $("[id=notice]");
+            $lif.hover(function() {
+                var $tq = $("#notice-sw a").index($(this));
+                $lif.removeClass();
+                $(this).addClass("active");
+                $divf.css("display", "none");
+                $divf.eq($tq).css("display", "block");
+            })
+
+            //信息公开标签切换
+            var $lix = $("#xxgk-sw a");
+            var $divx = $("[id=xxgk-lis]");
+            $lix.hover(function() {
+                    var $tx = $("#xxgk-sw a").index($(this));
+                    $lix.removeClass();
+                    $(this).addClass("active");
+                    $divx.css("display", "none");
+                    $divx.eq($tx).css("display", "block");
+                })
+                //信息公开2标签切换
+            var $liy = $("#xxgk-sw-s a");
+            var $divy = $("[id=xxgk-lisp]");
+            $liy.hover(function() {
+                    var $ty = $("#xxgk-sw-s a").index($(this));
+                    $liy.removeClass();
+                    $(this).addClass("active");
+                    $divy.css("display", "none");
+                    $divy.eq($ty).css("display", "block");
+                })
+                //信息公开3标签切换
+            var $liw = $("#bsfw-sw li");
+            var $divw = $("[id=bsfw-list]");
+            $liw.hover(function() {
+                    var $tw = $("#bsfw-sw li").index($(this));
+                    $liw.removeClass();
+                    $(this).addClass("active");
+                    $divw.css("display", "none");
+                    $divw.eq($tw).css("display", "block");
+                })
+                //政策检索标签切换
+            var $li = $("#mac li");
+            var $div = $("[id=zcqh]");
+            $li.hover(function() {
+                var $t = $("#mac li").index($(this));
+                $li.removeClass();
+                $(this).addClass("active");
+                $div.css("display", "none");
+                $div.eq($t).css("display", "block");
+            })
+        });
+    </script>
+    <script type="text/javascript">
+        <!--
+        $(function() {
+            $('#demo').flexslider({
+                slideshow: true,
+                animation: "slide",
+                direction: "horizontal",
+                easing: "swing",
+                controlNav: false,
+                directionNav: true
+            });
+            $(".flexslider").each(function() {
+                $(this).hover(function() {
+                    $(this).find(".flex-direction-nav").fadeIn("slow")
+                }, function() {
+                    $(this).find(".flex-direction-nav").hide()
+                })
+            })
+        })
+    </script>
+    <script src="./images/sydczj.js"></script>
+
+</head>
+
+<body id="page_type" alt="列表页">
+
+    <div id="barrierfree_container">
+        <!--<DIV style=" BACKGROUND-COLOR: #e70202; min-width:1100px;" sizcache="23" sizset="0">
+<DIV style="HEIGHT: 60px; WIDTH: 1100px; MARGIN: 0px auto" sizcache="23" sizset="0">
+  <h1 style="FLOAT: left;"><a href="http://58.213.154.120:81/cz/" target="_blank"><img src="http://zrzy.jiangsu.gov.cn/djtbty/cz.png" width="350" height="60" alt="" /></a></h1>
+  </DIV>
+</DIV>-->
+        <!----------------------飘窗- 开始-------------------->
+
+        <!--首页飘浮广告开始-->
+        <DIV style="Z-INDEX:99; width:300px;  POSITION: absolute; TOP: 100px; LEFT: 100px" id=float_AD>
+            <!--<div><img src="http://zrzy.jiangsu.gov.cn/shipin/rg0924.png" width="300" height="200" border="0" /></div>-->
+
+            
+
+            <!--  <div><img src="http://zrzy.jiangsu.gov.cn/UploadFiles/cz/jjpchwj.jpg" width="300" height="115" border="0" /></div>
+            <div>
+                <a href="http://zrzy.jiangsu.gov.cn/cz/gtzx/ztzl/zgzfcfdzds/" target="_blank"><img src="http://zrzy.jiangsu.gov.cn/UploadFiles/cz/spzb.png" width="300" height="100" border="0" /></div>-->
+            <div>
+                <a href="http://zrzy.jiangsu.gov.cn/cz/gtzx/ztzl/yhyshjzl/ghxkzc/"><img width="300px" src="http://zrzy.jiangsu.gov.cn/UploadFiles/st/czyhyshj.png" border="0" /></a>
+            </div>
+            <div style="float:right;"><span style="CURSOR:hand;"><a href="javascript:void();"  onClick="hide();" style="color:red;text-decoration:none;font-size:12px;">关闭</a></span></div>
+
+        </div>
+        <script>
+            var x = 100,
+                y = 100; //浮动层的初始位置，分别对应层的初始X坐标和Y坐标 
+            var xin = true,
+                yin = true; //判断层的X坐标和Y坐标是否在在控制范围之内，xin为真是层向右移动，否则向左；yin为真是层向下移动，否则向上 
+            var step = 1; //层移动的步长，值越大移动速度越快 
+            var delay = 30; //层移动的时间间隔,单位为毫秒，值越小移动速度越快 
+            var obj = document.getElementById("float_AD"); //捕获id为ad的层作为漂浮目标 
+            function hide() {
+                var div = document.getElementById("float_AD");
+                div.style.display = "none";
+                div.onmouseout = function() {
+                    div.style.visibility = "hidden";
+                }
+            }
+
+            function floatAD() {
+                obj = document.getElementById("float_AD");
+                var L = 0; //层移动范围的左边界(L)
+                var T = 10; //上边界(T)坐标 
+                var R = document.documentElement.clientWidth - obj.offsetWidth; //层移动的右边界 
+                var B = document.documentElement.clientHeight - obj.offsetHeight - 20; //层移动的下边界 
+                obj.style.left = x + document.documentElement.scrollLeft + "px"; //更新层的X坐标，实现X轴方向上的运动；document.body.scrollLeft为文档区域的滚动条向右拉的距离，以保证在滚动条右拉时层仍在可见范围内 
+                obj.style.top = y + document.body.scrollTop + "px"; //更新层的Y坐标，实现Y轴方向上的运动；document.body.scrollTop为文档区域的滚动条向下拉的距离，以保证在滚动条下拉时层仍在可见范围内
+                x = x + step * (xin ? 1 : -1); //通过判断层的范围决定层在X轴上的运动方向 
+                if (x < L) {
+                    xin = true;
+                    x = L
+                } //层超出左边界时的处理 
+                if (x > R) {
+                    xin = false;
+                    x = R
+                } //层超出右边界时的处理 
+                y = y + step * (yin ? 1 : -1); //通过判断层的范围决定层在Y轴上的运动方向 
+                if (y < T) {
+                    yin = true;
+                    y = T
+                } //层超出上边界时的处理 
+                if (y > B) {
+                    yin = false;
+                    y = B
+                } //层超出下边界时的处理
+            }
+            var itl = setInterval("floatAD()", delay); //每delay秒执行一次floatAD函数 
+            obj.onmouseover = function() {
+                    clearInterval(itl)
+                } //层在鼠标移上时清除上面的间隔事件，实现层在的鼠标移上时停止运动的效果 
+            obj.onmouseout = function() {
+                    itl = setInterval("floatAD()", delay)
+                } //层在鼠标移开时开始间隔事件，实现层在的鼠标移开时继续运动的效果
+        </SCRIPT>
+
+        <!----------------- 飘窗代码 结束----------------------->
+
+
+        <div style="display:none;"><img src="./images/top_bg.jpg" /><img src="./images/top_bg2.jpg" /></div>
+        <script src="./images/wza.js"></script>
+        <!--头部开始-->
+        <div>
+            <iframe width="100%" scrolling="no" height="287" frameborder="0" allowtransparency="true" src="/cz/wbdy/tytb/"></iframe>
+        </div>
+        <!--头部结束-->
+        <!--新闻版块外框-->
+        <div class="news-wk">
+
+            <!--图片新闻外框-->
+            <div class="photo-news">
+                <!--图片新闻-->
+                <div class="focusBox" ergodic="view" barrierfree_zone_dsc="轮播图">
+                    <ul class="pic">
+                        
+                            <li>
+                                <a href="./gtzx/gzdt/202603/t20260324_1963932.htm" target="_blank"><img src="./gtzx/gzdt/202603/W020260324563820610731.jpg" alt="图片1.jpg" style='opacity: 1;'/></a>
+                            </li>
+                        
+                            <li>
+                                <a href="./gtzx/gzdt/202602/t20260213_1941266.htm" target="_blank"><img src="./gtzx/gzdt/202602/W020260213386193525054.jpg" style='opacity: 1;'/></a>
+                            </li>
+                        
+                            <li>
+                                <a href="./gtzx/gzdt/202601/t20260126_1928727.htm" target="_blank"><img src="./gtzx/gzdt/202601/W020260126515721498931.jpg" alt="_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&amp;MsgID=4770697049521358306&amp;skey=@crypt_3f8cede2_b0d349f5d8a00e5a4e6ae7e538d2c107&amp;mmweb_appid=wx_webfilehelper.jpg" style='opacity: 1;'/></a>
+                            </li>
+                        
+                            <li>
+                                <a href="./gtzx/gzdt/202601/t20260107_1917240.htm" target="_blank"><img src="./gtzx/gzdt/202601/W020260108609200746165.jpg" alt="六化.jpg" style='opacity: 1;'/></a>
+                            </li>
+                        
+                            <li>
+                                <a href="./gtzx/gzdt/202512/t20251229_1911719.htm" target="_blank"><img src="./gtzx/gzdt/202512/W020251229322267378517.jpg" alt="微信图片_20251228172547_1044_904.jpg" style='opacity: 1;'/></a>
+                            </li>
+                        
+                    </ul>
+                    <div class="txt-bg"></div>
+                    <div class="txt">
+                        <ul>
+                            
+                                <li>
+                                    <a href="./gtzx/gzdt/202603/t20260324_1963932.htm" target="_blank" title="同执锹铲绿新北 共守初心不负春 ——新北分局开展义务植树活动">同执锹铲绿新北 共守初心不负春 ——...</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="./gtzx/gzdt/202602/t20260213_1941266.htm" target="_blank" title="筑牢安全防线 确保祥和过节">筑牢安全防线 确保祥和过节</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="./gtzx/gzdt/202601/t20260126_1928727.htm" target="_blank" title="以讲促学展风采 以赛砺才强科普 ——常州市自然资源和规划局成功举办2026年自然资源科普讲解选拔赛">以讲促学展风采 以赛砺才强科普 ——...</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="./gtzx/gzdt/202601/t20260107_1917240.htm" target="_blank" title="市局召开安全生产“六化”建设部署推进会">市局召开安全生产“六化”建设部署推进会</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="./gtzx/gzdt/202512/t20251229_1911719.htm" target="_blank" title="同题共答 同向而行 金坛区局召开2026年工作思路研讨会">同题共答 同向而行 金坛区局召开2026...</a>
+                                </li>
+                            
+                        </ul>
+                    </div>
+                    <ul class="num">
+                        <li><a>1</a><span></span></li>
+                        <li><a>2</a><span></span></li>
+                        <li><a>3</a><span></span></li>
+                        <li><a>4</a><span></span></li>
+                        <li><a>5</a><span></span></li>
+                    </ul>
+                </div>
+            </div>
+            <!--新闻列表外框-->
+            <div class="news-list-k" ergodic="view" barrierfree_zone_dsc="工作动态信息列表">
+                <!--新闻列表标题-->
+                <div class="sw-tit" id="news-sw"><a href='./gtzx/gzdt/' class="active">工作动态</a></div>
+                <!--新闻列表-->
+                <div class="news-list" id="news" style="height:245px;">
+                    <ul>
+                        
+                            <li>
+                                <a href="./gtzx/gzdt/202603/t20260326_1966188.htm" target="_blank" title="新北分局“新小然”智能体应用平台荣获国家级软件著作权">新北分局“新小然”智能体应用平台荣获国家级软件...</a>
+                            </li>
+                        
+                            <li>
+                                <a href="./gtzx/gzdt/202603/t20260326_1966172.htm" target="_blank" title="喜报！天宁分局（中心所）蝉联区综合考核第一等次">喜报！天宁分局（中心所）蝉联区综合考核第一等次</a>
+                            </li>
+                        
+                            <li>
+                                <a href="./gtzx/gzdt/202603/t20260326_1965967.htm" target="_blank" title="一天两项目多证联发 武进分局服务再提速">一天两项目多证联发 武进分局服务再提速</a>
+                            </li>
+                        
+                            <li>
+                                <a href="./gtzx/gzdt/202603/t20260326_1965748.htm" target="_blank" title="当好“生力军” 建好“主阵地” 做好“助推器”——市自然资源和规划局全面启动乡村规划师派驻行动">当好“生力军” 建好“主阵地” 做好“助推器”—...</a>
+                            </li>
+                        
+                            <li>
+                                <a href="./gtzx/gzdt/202603/t20260326_1965702.htm" target="_blank" title="金坛区召开全区耕地保护工作会议">金坛区召开全区耕地保护工作会议</a>
+                            </li>
+                        
+                            <li>
+                                <a href="./gtzx/gzdt/202603/t20260326_1965299.htm" target="_blank" title="天宁区开展鸟类保护专项检查 强化“三有”动物普法宣传">天宁区开展鸟类保护专项检查 强化“三有”动物普法...</a>
+                            </li>
+                        
+                            <li>
+                                <a href="./gtzx/gzdt/202603/t20260325_1964798.htm" target="_blank" title="钟楼分局召开党建工作思路研讨会">钟楼分局召开党建工作思路研讨会</a>
+                            </li>
+                        
+                            <li>
+                                <a href="./gtzx/gzdt/202603/t20260325_1964745.htm" target="_blank" title="喜报！新北分局获评常州市推动高质量发展先进集体（城乡融合）和2025年度区综合考核“第一等次”">喜报！新北分局获评常州市推动高质量发展先进集体...</a>
+                            </li>
+                        
+                            <li>
+                                <a href="./gtzx/gzdt/202603/t20260325_1964475.htm" target="_blank" title="金坛区局“交地+交底”，让服务企业更“交心”">金坛区局“交地+交底”，让服务企业更“交心”</a>
+                            </li>
+                        
+                    </ul>
+                </div>
+            </div>
+            <!--通知公告外框-->
+
+            <div class="notice-k" ergodic="view" barrierfree_zone_dsc="通知公告、不动产登记信息列表">
+                <div class="sw1-tit" id="notice-sw"><a href='./gtzx/tzgg/' class="active">通知公告</a><a href='./gtzx/bdcgg/'>不动产登记公告</a></div>
+                <!--新闻列表-->
+                <div class="notice-list" id="notice" style="height:170px;">
+                    <ul>
+                        
+                            <li>
+                                <a href="./gtzx/tzgg/202602/t20260213_1941280.htm" target="_blank" title="关于常州市土地储备中心2026年土储专项债项目（一期）申报地方政府专项债券项目用地拟收回收购价格的公示">关于常州市土地储备中心2026年土...</a>
+                            </li>
+                        
+                            <li>
+                                <a href="./gtzx/tzgg/202601/t20260116_1923537.htm" target="_blank" title="常州市自然资源和规划局关于《常州市市级首批一般湿地名录》的公示">常州市自然资源和规划局关于《常...</a>
+                            </li>
+                        
+                            <li>
+                                <a href="./gtzx/tzgg/202601/t20260114_1922064.htm" target="_blank" title="江苏省自然资源厅关于开展滆湖自然资源确权登记的公告(首次登记)">江苏省自然资源厅关于开展滆湖自...</a>
+                            </li>
+                        
+                            <li>
+                                <a href="./gtzx/tzgg/202601/t20260107_1917719.htm" target="_blank" title="2025年常州市自然资源和规划局下属事业单位公开招聘工作人员拟聘用人员名单公示（一）">2025年常州市自然资源和规划局下...</a>
+                            </li>
+                        
+                            <li>
+                                <a href="./gtzx/tzgg/202512/t20251226_1910605.htm" target="_blank" title="常州市自然资源和规划局地质灾害防治单位乙级资质审批公告">常州市自然资源和规划局地质灾害...</a>
+                            </li>
+                        
+                            <li>
+                                <a href="./gtzx/tzgg/202512/t20251219_1906368.htm" target="_blank" title="常州顺达科技服务有限公司许可决定书">常州顺达科技服务有限公司许可决定书</a>
+                            </li>
+                        
+                    </ul>
+                </div>
+                <div class="notice-list" id="notice" style="display:none; height:170px;">
+                    <ul>
+                        
+                            <li>
+                                <a href="./gtzx/bdcgg/202603/t20260328_1967285.htm" target="_blank" title="征询异议公告（2026）武2370号">征询异议公告（2026）武2370号</a>
+                            </li>
+                        
+                            <li>
+                                <a href="./gtzx/bdcgg/202603/t20260328_1967283.htm" target="_blank" title="征询异议公告（2026）武2368号">征询异议公告（2026）武2368号</a>
+                            </li>
+                        
+                            <li>
+                                <a href="./gtzx/bdcgg/202603/t20260328_1967284.htm" target="_blank" title="征询异议公告（2026）武2369号">征询异议公告（2026）武2369号</a>
+                            </li>
+                        
+                            <li>
+                                <a href="./gtzx/bdcgg/202603/t20260328_1967281.htm" target="_blank" title="征询异议公告（2026）武2366号">征询异议公告（2026）武2366号</a>
+                            </li>
+                        
+                            <li>
+                                <a href="./gtzx/bdcgg/202603/t20260328_1967282.htm" target="_blank" title="征询异议公告（2026）武2367号">征询异议公告（2026）武2367号</a>
+                            </li>
+                        
+                            <li>
+                                <a href="./gtzx/bdcgg/202603/t20260328_1967278.htm" target="_blank" title="征询异议公告（2026）武2362号">征询异议公告（2026）武2362号</a>
+                            </li>
+                        
+                    </ul>
+                </div>
+
+            </div>
+
+            <!--专题专栏切换-->
+            <div id="demo" class="flexslider" ergodic="view" barrierfree_zone_dsc="专题">
+                <div class="flex-viewport">
+                    <ul class="slides">
+                        
+                            <li>
+                                <a href='./gtzx/ztzl/sjdqr/' target="_blank">
+                                    <img src='./gtzx/ztzl/sjdqr/images/P020170513606152570817.jpg'/>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href='./gtzx/ztzl/68sjhyr/' target="_blank">
+                                    
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href='./gtzx/ztzl/qgdqrzt/' target="_blank">
+                                    <img src='./gtzx/ztzl/qgdqrzt/images/P020170513606049285831.png'/>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href='./gtzx/ztzl/chxc/' target="_blank">
+                                    <img src='./gtzx/ztzl/chxc/images/P020170907529192652398.jpg'/>
+                                </a>
+                            </li>
+                        
+                    </ul>
+                    <ul class="flex-direction-nav" style="position:absolute;">
+                        <li><a class="flex-prev" href="#">Previous</a></li>
+                        <li><a class="flex-next" href="#">Next</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--信息公开外框-->
+        <div class="xxgk-wk">
+            <!--信息公开标题栏-->
+            <div class="first-ty-tit"> <i class="fa fa-globe"></i><span>政府信息公开</span>
+                <div class="wb-link"><a href="/gtapp/nrglIndex.action?classID=2c9082b55bf0223a015bf0d14da50199">政府信息公开目录</a>|<a href="http://www.changzhou.gov.cn/gi_class/gtj#gtj_51" target="_blank">政府信息公开年报</a>|<a href="https://www.changzhou.gov.cn/ns_class/zjnx86o8" target="_blank">依申请公开</a>|
+                    <a href="http://www.js.gov.cn/col/col59348/index.html" target="_blank">申请获取政府信息10项指引</a>
+                </div>
+            </div>
+            <!--信息公开按钮区域外框-->
+            <div class="xxgk-bt-k" ergodic="navigation" barrierfree_zone_dsc="信息公开导航">
+                <div class="xxgk-bt"> <a href="/gtapp/nrglIndex.action?classID=2c9082b55bf0223a015bf0d4c0b0019e" target="_blank">机构设置</a> <a href="/gtapp/nrglIndex.action?classID=2c9082b55bf0223a015bf0d51ca5019f" target="_blank">政策文件及解读</a> <a href="/gtapp/nrglIndex.action?classID=2c9082b55bf0223a015bf0d650be01a2"
+                        target="_blank">财政信息</a> <a href='./gtzx/ztzl/' target="_blank">专题专栏</a> <a href="/gtapp/nrglIndex.action?classID=2c9082b55bf0223a015bf0d5f92d01a1" target="_blank">人事信息</a> <a href="/gtapp/nrglIndex.action?classID=2c9082b55bf0223a015bf0d56a8601a0"
+                        target="_blank">规划计划总结</a>
+                    <!--<a href="/gtapp/nrglIndex.action?classID=2c9082b55bf0223a015bf0d6fef701a3" target="_blank">统计信息</a>--><a href="/gtapp/nrglIndex.action?classID=2c9082b55bf13353015bf1835e8d00ff" target="_blank">地质灾害预报</a> </div>
+                <div class="xxgk-bt-s"> <a href="http://zrzy.jiangsu.gov.cn/gtapp/nrglIndex.action?classID=ff8080817c727f90017c72940aa20002" target="_blank">住宅用地信息公开</a> <a href="https://credit.changzhou.gov.cn/sgs/moreByBmAll.html?name=11320400MB1886763D&mc=%E5%B8%B8%E5%B7%9E%E5%B8%82%E8%87%AA%E7%84%B6%E8%B5%84%E6%BA%90%E5%92%8C%E8%A7%84%E5%88%92%E5%B1%80&lb=1"
+                        onclick="return confirm('是否离开本站，前往外部站点？');" target="_blank">行政许可和行政处罚等信用公示专栏</a> <a href="http://td.czggzy.cn/ " target="_blank">国有建设用地使用权网上交易系统</a>
+<!--a href="https://jsdzzh.sunbt.ltd:6445/qxyj/czpublic" target="_blank">地质灾害气象风险预警预报</a-->
+<a href="https://jsdzzh.sunbt.ltd:6445/qxyj/public" target="_blank">地质灾害气象风险预警预报</a>
+                    <a href="http://218.93.114.82:16000/index/home" onclick="return confirm('是否离开本站，前往外部站点？');" target="_blank"><img src="./images/wsbjpt.jpg" width="258" height="55" alt="" /></a>
+
+                </div>
+            </div>
+            <div class="xxgk-list-k" ergodic="view" barrierfree_zone_dsc="最新信息公开、土地市场、规划公示信息列表">
+                <!--信息公开切换标题-->
+                <div class="sw-tit" id="xxgk-sw"><a href="/gtapp/nrglIndex.action?classID=2c9082b55bf0223a015bf0d14da50199" class="active">最新信息公开</a></div>
+                <!--最新信息公开列表-->
+                <iframe src="/gtapp/nrglIndex.action?catalogID=2c9082b55bf0223a015bf03f9b140084&type=1" frameborder="0" scrolling="no" width="515" height="175" id="xxgk-lis" style="display:block"></iframe>
+                <!--信息公开切换标题-->
+                <div class="sw-tit" id="xxgk-sw-s" style="margin-top:15px"><a href="/gtapp/nrglIndex.action?classID=2c9082b55bf0223a015bf0d8e0fb01a5" class="active">土地市场</a>
+                    <a href="/gtapp/nrglIndex.action?classID=2c9082b569003faa0169036bfd5e001a">规划公示</a>
+                </div>
+                <!--土地市场iframe-->
+                <iframe src="/gtapp/xxgk/wwsjcx_tdsclb.action?xzqhdm=320400&size=6&xsys=1" frameborder="0" scrolling="no" width="515" height="175" id="xxgk-lisp"></iframe>
+                <iframe src="/gtapp/nrglIndex.action?catalogID=2c9082b569003faa016908d7452d0164&type=1" frameborder="0" scrolling="no" width="515" height="175" id="xxgk-lisp" style="display:none;"></iframe>
+
+            </div>
+            <!--政策检索-->
+            <div class="bcgd-k" ergodic="view" barrierfree_zone_dsc="规范性文件信息列表">
+                <!--通知公告标题-->
+                <div class="sw-tit1" id="mac">
+                    <ul>
+                        <li class="active"><a href="/gtapp/nrglIndex.action?classID=2c9082b55bf13353015bf17fa38a00f3">规范性文件</a></li>
+                        <li>政策检索</li>
+                    </ul>
+                </div>
+                <!--规范文件iframe-->
+                <div class="zc-list" id="zcqh">
+                    <ul>
+                        <iframe width="100%" scrolling="no" height="148" frameborder="0" src="/gtapp/nrglIndex.action?catalogID=2c9082b5599f19b20159a0eff2eb0001&type=1"></iframe>
+                    </ul>
+                </div>
+                <div class="zc-search" id="zcqh" style="display:none">
+                    <ul>
+                        <FORM method=post action="/gtapp/nrglIndex.action?classID=2c9082b55bf0223a015bf0d51ca5019f" target=_blank>
+                            <INPUT name=queryCatalogID value=40288149189c438401189c61ad130028 type=hidden />
+                            <INPUT name=querytype value=2 type=hidden />
+                            <INPUT style="WIDTH: 254px" type="hidden" id=area name=area value="0" />
+                            <li style="background:none; text-align:center; margin:0px; padding:0px; height:30px; line-height:30px">
+                                <INPUT style="border:1px solid #e5e5e5; height:26px; color:#000000; width:180px; font-size:12px; padding-left:5px" id=title name=title value="" />
+                                <input style="background:#FF9600; color:#fff; font-size:12px; line-height:26px; padding:0 10px; height:30px; width:50px;" type="submit" value="查询" name="button" id="button" />
+                            </li>
+                        </FORM>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="bcgd-k">
+                <a href="https://www.0519bdc.com/register-ui/login" style="height:54px" target="_blank"><img src="./images/tb.jpg" width="254" height="49" alt="" /></a>
+            </div>
+            <div class="bcgd-k">
+                <a href="http://zrzy.jiangsu.gov.cn/zd/xxgkController/index.do?xzqhdm=320400" style="height:54px" target="_blank"><img src="./images/jgdj.jpg" width="256" height="50" alt="" /></a>
+            </div>
+            <div class="bcgd-k">
+                <a href="http://jiangsu.tianditu.gov.cn/changzhou/server/index" style="height:54px" target="_blank"><img src="./images/bt_tdt_yz.jpg" width="256" height="50" alt="" /></a>
+            </div>
+            <div class="bcgd-k">
+                <a href="http://zrzy.jiangsu.gov.cn/cz/tdxh/" style="height:54px" target="_blank"><img src="./images/zrzyhghxh.jpg" width="256" height="50" alt="" /></a>
+            </div>
+        </div>
+        <div class="w1100">
+            <!--办事服务外框-->
+            <div class="w820">
+                <!--办事服务标题栏-->
+                <div class="first-ty-tit">
+                    <i class="fa fa-thumbs-o-up"></i><span>办事服务</span>
+                    <!--办事统计iframe-->
+
+                </div>
+                <div class="xxgk-bt-k" style="margin-left:7px;" ergodic="navigation" barrierfree_zone_dsc="办事服务导航">
+                    <!--办事服务按钮-->
+                    <div class="bsfw-bt1">
+                        <ul>
+                            <li><a href="http://zrzy.jiangsu.gov.cn/ggfw/xzzx/" class="q4" target="_blank"><i class="fa fa-download"></i>下载中心</a></li>
+                            <li><a href="/gtapp/nrglIndex.action?classID=2c9082b55bf13353015bf180c9af00f9" class="q3" target="_blank"><i class="fa fa-database"></i>收费标准</a></li>
+                            <li><a href="http://zrzy.jiangsu.gov.cn/ggfw/jsxdzzlmlcxfw/index.html" class="q2" target="_blank"><i class="fa fa-book"></i>地质资料</a></li>
+                            <li><a href="http://zrzy.jiangsu.gov.cn/ggfw/rdwt/" class="q1" target="_blank"><i class="fa fa-question-circle" target="_blank"></i>热点问题</a></li>
+
+                            <li><a href="http://cz.jszwfw.gov.cn/jszwfw/qlqd/deptlist.do?webId=5&type=&deptId=11320400MB1886763D#fw_jump" class="q1" target="_blank"><i class="fa fa-file-text-o"></i>权力清单</a></li>
+                            <li><a href="http://cz.jszwfw.gov.cn/jszwfw/qlqd/deptlist.do?webId=5&type=&deptId=11320400MB1886763D#fw_jump" class="q2" target="_blank"><i class="fa fa-copy"></i>责任清单</a></li>
+                            <li style="width:258px"><a href="http://cz.jszwfw.gov.cn/jszwfw/qlqd/deptlist.do?webId=5&type=&deptId=11320400MB1886763D#fw_jump" target="_blank" class="q3"><i class="fa fa-compass"></i>办事指南</a></li>
+                            <li style="width:258px"><a href='./wsbs/' class="q4"><i class="fa fa-map-marker"></i>服务网点</a></li>
+                           <li style="width:258px"><a href="http://zrzy.jiangsu.gov.cn/cz/wsbs/jcgs/jczt/" target="_blank" class="q3"><i class="far fa-copy" /></i>涉企行政检查公示</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--办事服务切换标题-->
+                <div class="bsfw-r" ergodic="view" barrierfree_zone_dsc="办事服务列表">
+                   <div><iframe width="100%" scrolling="no" height="150" frameborder="0" allowtransparency="true" src="/gtapp/bdcupload/getCZBDCshowListsy.action?&amp;xzqhdm=320400&xsys=1"></iframe></div> 
+
+
+                    <div class="sw-tit2" id="bsfw-sw" style="margin-top:10px">
+                        <ul>
+                            <li class="active"><a href="/gtapp/nrglIndex.action?classID=2c9082b55bf13353015bf1827f6600fb">建设用地审批结果</a></li>
+                            <li><a href="/gtapp/nrglIndex.action?classID=2c9082b55bf13353015bf183281200fe">采矿权审批结果</a></li>
+                            <li><a href="/gtapp/nrglIndex.action?classID=ff80808177d6db080178d45155063bed">林业审批结果</a></li>
+                        </ul>
+                    </div>
+                    <div id="bsfw-list"><iframe src="/gtapp/xxgk/wwsjcx_jsydsp.action?xzqhdm=3204&size=6&jsyd=a&xsys=1" frameborder="0" scrolling="no" width="100%" height="140"></iframe></div>
+                    <div id="bsfw-list" style="display:none"><iframe src="/gtapp/xxgk/wwsjcx_ckqsp.action?xzqhdm=320400&size=6&xsys=1" frameborder="0" scrolling="no" width="100%" height="140"></iframe></div>
+                    <div id="bsfw-list" style="display:none"><iframe src="/gtapp/nrglIndex.action?catalogID=ff80808177d6db080178d46553ea3bef&type=1" frameborder="0" scrolling="no" width="100%" height="140"></iframe></div>
+                </div>
+            </div>
+            <!--公众参与外框-->
+            <div class="w270">
+                <!--公众参与标题栏-->
+                <div class="first-ty-tit"> <i class="fa fa-user"></i><span>公众参与</span> </div>
+                <div class="myzj-bt"><span>民意调查</span><a href='./gzcy/mydc/'>更多>></a></div>
+                <div class="myzj-list" ergodic="view" barrierfree_zone_dsc="民意调查列表">
+                    <table border="0" cellspacing="0" align="center" cellpadding="0" width="100%" id="datas">
+                        <tr id="data" style="display:none;">
+                            <td width="10" align="left"><img src="./images/dot1.png" /></td>
+                            <td height="28" align="left" id="name" class="tyzt"></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="gzcy-bt" style="height:84px;" ergodic="navigation" barrierfree_zone_dsc="网站信箱、热线电话"> <a href='./gzcy/gtxx/' style="width:238px;"><i class="fa fa-envelope-o"></i>网站信箱</a><a href='./gzcy/rxdh/' style="width:238px;"><i class="fa fa-phone"></i>热线电话</a></div>
+                <div class="gzcy-bt1" style="height:32px;"> <span><i class="fa fa-phone"></i>举报电话 12345</span> </div>
+            </div>
+        </div>
+        <div style="margin-top:15px">
+            <iframe width="100%" scrolling="no" height="120" frameborder="0" allowtransparency="true" src="/cz/wbdy/tydb/"></iframe>
+        </div>
+
+
+        <!--右侧微博微信-->
+        <div id="wbwx" style="position:fixed; top:300px; right:5px; width:110px;">
+<div style="width:100%;text-align:center;">
+                <img src="./images/weib.jpg" width="110" height="110" />
+            </div>
+                       <p style="width:100%; height:50px; line-height:20px; text-align:center; font-size:12px;">常州自然资源和规划</p>
+
+            <div style="width:100%;text-align:center;">
+                <a href="http://zrzy.jiangsu.gov.cn/cz/" target="_blank"><img src="./images/wmsw.png" width="120" height="120" /></a>
+            </div>
+
+            <div style="width:100%;text-align:right">
+                <img src="./images/gif-x.gif" width="11" height="11" style="text-align:right" onclick="javascript:document.getElementById('wbwx').style.display = 'none'" />
+            </div>
+        </div>
+
+        <!--左侧微博微信-->
+        <!--<div id="ggz" style="position:fixed; top:320px; left:5px; width:250px;">
+<div style="width:100%; text-align:center; background:#FFF; "><a href="http://zrzy.jiangsu.gov.cn/cz/gtzx/ztzl/cyhbaq/">
+<img src="./images/cyhbaq.jpg" width="250" height="100" /></a>
+</div>-->
+        <!--<div style="width:100%;text-align:right">
+<img src="./images/gif-x.gif" width="11" height="11" style="text-align:right" onclick="javascript:document.getElementById('ggz').style.display = 'none'" />
+ </div>-->
+    </div>
+    <div id="ggz1" style="position:fixed; top:450px; left:5px; width:300px;">
+        <!--<div style="width:100%; text-align:center; background:#FFF; ">
+<img src="./images/czt.jpg" width="300" height="225" />
+</div>
+<div style="width:100%;text-align:right">
+<img src="./images/gif-x.gif" width="11" height="11" style="text-align:right" onclick="javascript:document.getElementById('ggz1').style.display = 'none'" />
+ </div>-->
+    </div>
+
+
+    <div id="ggy" style="position:fixed; top:450px; right:5px; width:300px;">
+        <!--<div style="width:100%; text-align:center; background:#FFF; ">
+<img src="./images/jst.jpg" width="300" height="225" />
+</div>
+<div style="width:100%;text-align:right">
+<img src="./images/gif-x.gif" width="11" height="11" style="text-align:right" onclick="javascript:document.getElementById('ggy').style.display = 'none'" />
+ </div>-->
+    </div>
+
+
+
+    <script>
+        $(function() {
+            //无障碍开启，关闭所有飘窗
+            var is0pen = getCookie("openFlag");
+            if (is0pen == 1) {
+                $("#wbwx").hide();
+                $("#float_AD").hide();
+            }
+            $(".old li:first-child a").on("click", function() {
+                $("#wbwx").hide();
+                $("#float_AD").hide();
+            })
+        })
+
+        function getCookie(cookieName) { //获取相应cookie值
+            const strCookie = document.cookie
+            const cookieList = strCookie.split(';')
+
+            for (let i = 0; i < cookieList.length; i++) {
+                const arr = cookieList[i].split('=')
+                if (cookieName === arr[0].trim()) {
+                    return arr[1]
+                }
+            }
+            return ''
+        }
+    </script>
+    </div>
+    <style>
+        .zt {
+            color: #0a81c5!important;
+            margin-right: 5px;
+            margin-left: 5px;
+        }
+    </style>
+</body>
+
+</html>
