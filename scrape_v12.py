@@ -39,8 +39,8 @@ HEADERS = {
     'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8',
     'Accept-Encoding': 'gzip, deflate',
 }
-TIMEOUT = (5, 15)   # (connect_timeout, read_timeout)
-RETRY = 2
+TIMEOUT = (10, 30)   # (connect_timeout, read_timeout)
+RETRY = 3
 MAX_LIST_PAGES = 50       # 最多翻50页列表页
 MAX_DETAIL_PER_DEPT = 3   # 每个部门最多进3个详情页找PDF
 DELAY_PAGE = 0.3
@@ -179,8 +179,9 @@ def fetch(session, url, timeout=TIMEOUT):
                         return r
                 except Exception:
                     pass
-        except (requests.exceptions.ConnectionError, requests.exceptions.ConnectTimeout):
-            # 连接失败/超时，立即尝试http回退，不再重试https
+        except (requests.exceptions.ConnectionError, requests.exceptions.ConnectTimeout,
+                requests.exceptions.ReadTimeout):
+            # 连接失败/超时/读取超时，尝试http回退
             if url.startswith('https://'):
                 http_url = url.replace('https://', 'http://', 1)
                 try:
@@ -191,7 +192,7 @@ def fetch(session, url, timeout=TIMEOUT):
                 except Exception:
                     pass
             if i < RETRY - 1:
-                time.sleep(0.5)
+                time.sleep(1 * (i + 1))
         except Exception:
             if i < RETRY - 1:
                 time.sleep(1)
@@ -790,16 +791,23 @@ def process_city(city_info, progress, force=False):
     needed_depts = set(TARGET_DEPTS)
 
     # 检查已下载的文件, 排除已有的部门
+    # 使用match_dept匹配,兼容validate_pdfs.py重命名后的文件名
     existing_depts = set()
     try:
         for f in Path(city_folder).iterdir():
             if f.suffix == '.pdf' and f.name != '.gitkeep' and f.name != '爬取汇总.txt':
                 if f.stat().st_size > 1000:
-                    for dept in TARGET_DEPTS:
-                        clean = safe_filename(dept)
-                        # 支持新旧两种命名格式
-                        if f.name.startswith(clean) or f"市{clean}部门预算" in f.name or f"市{clean}（" in f.name:
-                            existing_depts.add(dept)
+                    # 先用match_dept从文件名匹配(兼容validate_pdfs重命名)
+                    dept = match_dept(f.name, city)
+                    if dept:
+                        existing_depts.add(dept)
+                    else:
+                        # 回退: 精确匹配TARGET_DEPTS名
+                        for d in TARGET_DEPTS:
+                            clean = safe_filename(d)
+                            if f"市{clean}部门预算" in f.name or f.name.startswith(clean):
+                                existing_depts.add(d)
+                                break
     except:
         pass
 
