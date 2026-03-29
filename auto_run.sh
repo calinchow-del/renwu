@@ -58,6 +58,12 @@ case "$MONITOR_ACTION" in
         ;;
 esac
 
+# Step 2.5: PDF校验+重命名+清理
+log "Step 2.5: PDF校验..."
+if [ -f "$SCRIPT_DIR/validate_pdfs.py" ]; then
+    python3 "$SCRIPT_DIR/validate_pdfs.py" 2>&1 | tee -a "$ROUND_LOG" || true
+fi
+
 # Step 3: 再次监控, 生成最新报告
 log "Step 3: 生成最终报告..."
 python3 "$SCRIPT_DIR/monitor.py" 2>&1 | tee -a "$ROUND_LOG" || true

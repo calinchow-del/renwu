@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- 必须，不要动 -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="renderer" content="webkit" />
+<!-- 移动端必须、PC端非响应式可以去掉 -->
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+<!-- SEO用 -->
+<meta name="keywords" content="武汉,武汉市,文化旅游,文化旅游局,武汉文旅,武汉市文旅,武汉市文化旅游,武汉市文旅局,武汉市文化和旅游局,武汉市文化和旅游局网站,wlj.wuhan.gov.cn" />
+<meta name="description" content="武汉,武汉市,文化旅游,文化旅游局,武汉文旅,武汉市文旅,武汉市文化旅游,武汉市文旅局,武汉市文化和旅游局,武汉市文化和旅游局网站,wlj.wuhan.gov.cn" />
+<meta name="SiteName" content="武汉市文化和旅游局">
+<meta name="SiteDomain" content="wlj.wuhan.gov.cn">
+<meta name="SiteIDCode" content="4201000053">
+<title>武汉市文化和旅游局</title>
+<link rel="shortcut icon" href="./material/images/ico.png" />
+<link rel="stylesheet" type="text/css" href="./material/css/bootstrap.css" />
+<link rel="stylesheet" type="text/css" href="./material/css/common.css" />
+<link rel="stylesheet" type="text/css" href="./material/css/ui.css" />
+<link type="text/css" rel="stylesheet" href="./material/css/index.css" />
+<link type="text/css" rel="stylesheet" href="./material/css/wlj.css" />
+<link type="text/css" rel="stylesheet" href="./material/css/index_new.css" />
+<!--[if lt IE 9]>
+<script type="text/javascript" src="./material/js/respond.js"></script>
+<script type="text/javascript" src="./material/js/html5shiv.js"></script>
+ <![endif]-->
+<script type="text/javascript" src="./material/js/jquery_1_12_4.js"></script>
+<script type="text/javascript" src="./material/js/common.js"></script>
+<style>
+
+.headline  h2 a font{
+color:#d63030;
+}
+.service a {
+    background-size: 100% auto;
+}
+.bsfw{
+margin-bottom:20px
+}
+@media (max-width: 1024px){
+.wlml, .service {
+    width: 48.5%;
+    margin: 10px;
+    float: left;
+}}
+@media (max-width: 480px){
+.wlml, .service, .a10 {
+    margin: 5px 0px;
+    width: 100%;
+}
+}
+.ztzl ul li a{
+position: relative;
+}
+ .ztzl .bj{
+      font-size: 13px;
+      line-height: 24px;
+      height: 24px;
+      color: #ffffff;
+      background: linear-gradient(to bottom,#f40000,#f79607);
+      padding: 0 10px;
+      padding-left: 12px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      border-radius: 0 0 0 15px;
+    }
+ 
+</style>
+</head>
+<body>
+<!-- dom -->
+<div class="wrap"> 
+ <!-- header 开始 -->
+<div class="header">
+    <div class="ht">
+     <div class="inner clearfix">
+      <p class="fl"> 
+       <script type="text/javaScript">
+         var sysdate = new Date();
+      var year = sysdate.getFullYear();
+      var month = sysdate.getMonth();
+      var date = sysdate.getDate();
+      var day = sysdate.getDay();
+      var week = ['日', '一', '二', '三', '四', '五', '六'];
+      document.write(year + "年" + (month + 1) + "月" + date + "日 星期" + week[day]);
+   </script> 
+      </p>
+      <p class="fr"><a id="wuzhangai" >无障碍</a>|<a><i class="iconfont icon-jyh-wx"></i>微信<span class="qr">
+        <img src="/material/images/wxewm.jpg" alt="" /></span></a>|<a><i class="iconfont icon-jyh-wb"></i>微博<span class="qr">
+            <img src="/material/images/wbewm.png" alt="" /></span></a>|<a><i class="iconfont icon-jyh-sj"></i>手机版<span class="qr">
+                <img src="/material/images/wxewm.png" alt="" /></span></a><!--|<a id="login" style="cursor: pointer;" title="">登录</a>|<a id="zhuce" href="https://oauth.hubei.gov.cn:8443/hbyzw/zwfw/personInfo/personInfoReg.jsp?appCode=hbzfjyhpt" style="cursor: pointer;" title="">注册</a>-->
+                |<a href="http://wlj.wuhan.gov.cn/flzm/zzms/" target="_blank"><i class="iconfont icon-jyh-zzms"></i>长者版</a>
+            </p>
+                
+            </div>
+    </div>
+    <div class="inner clearfix">
+     <h1><a href="http://wlj.wuhan.gov.cn/" class="nt">武汉市文化和旅游局</a></h1>
+     <div class="banner fr">
+      <div class="pic">
+       <div><img src="/material/images/1.png" alt="" /></div>
+       <div><img src="/material/images/2.png" alt="" /></div>
+       <div><img src="/material/images/3.png" alt="" /></div>
+       <div><img src="/material/images/4.png" alt="" /></div>
+       <div><img src="/material/images/5.png" alt="" /></div>
+       <div><img src="/material/images/6.png" alt="" /></div>
+      </div>
+     </div>
+     <div class="search" id="search">
+     <div class="search-btn"></div>
+      <div class="search-box">
+      <select class="" id="choose">
+      <option value="1" >关键词</option>
+      </select>
+       <input type="text" maxlength="20" value="" onclick="if(this.value==''){this.value='';}" placeholder="" id="textfield" />
+       <button onclick="chkSearch()"><span class="iconfont icon-jyh-search"></span>搜 索</button> </div>
+     </div>
+    </div>
+    <div class="nav">
+     <ul>
+      <li id="index"><a href="http://wlj.wuhan.gov.cn/" class="current"><b>首页</b></a></li>
+      <li id="38741"><a href="http://wlj.wuhan.gov.cn/zfxxgk/" class="second"><b>政府信息公开</b></a></li>
+      <li id="12453"><a href="http://wlj.wuhan.gov.cn/hdjl/"><b>互动交流</b></a></li>
+      <li id="12462"><a href="http://zwfw.hubei.gov.cn/s/web/bszn/bmsy.html?department=114201000108896918"><b>办事服务</b></a></li>
+  
+      <li id="25427"><a href="http://wlj.wuhan.gov.cn/whly/"><b>文化旅游</b></a></li>
+      <li id="12487"><a href="http://wlj.wuhan.gov.cn/ztzl_27/"><b>专题专栏</b></a></li>
+      <li><a href="http://data.wuhan.gov.cn/page/data/data_set.html" target="_blank"><b>数据开放</b></a></li>
+  
+     </ul>
+    </div>
+   </div>
+  <script type="text/javascript" src="/material/js/font.js"></script>
+  <link rel="stylesheet" type="text/css" href="/material/indeci/static/css/iconfont.css" />
+  <link rel="stylesheet" type="text/css" href="/material/indeci/static/css/indeci.css" />
+  
+ <!--无障碍浏览代码开始-->
+          <script src="//wza.xinmeinet.cn/front/0569A0E34541AAABA73B8AZZ601C0664" referrerpolicy="origin" async></script>
+   <!--无障碍浏览代码结束-->
+  <script>
+      function chkSearch(){
+          if($('#textfield').val() == '' || $('#textfield').val().length == 0){
+              alert('请输入关键字');
+              return false;
+          }
+   var keywords = encodeURI($('#textfield').val());
+          $url = '/SITE/whs_70/search.html?searchWord='+keywords +'&siteId=15&pageSize=10';
+          window.open($url,'_blank');
+      }
+      $('#textfield').on('keypress',function (event) {
+          if (event.keyCode === 13){
+              chkSearch();
+          }
+      });
+  </script>
+  <style>
+  @media(max-width:768px){
+  .nav li .second{
+     white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+  }
+  }
+  </style>
+ <!-- header 结束 --> 
+ <!-- content 开始 -->
+ <div class="content"> 
+ <!-- p1 开始 -->
+<div class="grid p1">
+  <div class="headline tc">
+       <!-- 头条开始 -->
+           
+                    <h2><a href="./zwgk_27/zwdt/jdxw/202603/t20260327_2745469.shtml"  target="_blank"  title="李殿勋在武汉市调研文旅融合发展">李殿勋在武汉市调研文旅融合发展</a></h2>
+           
+           <p class="clearfix">
+              
+                   <a href="./zwgk_27/zwdt/jdxw/202603/t20260317_2740835.shtml"  target="_blank"  title="李强主持召开国务院常务会议">李强主持召开国务院常务会议</a><span class="hidden-xs"></span>
+              
+                   <a href="https://content-static.cctvnews.cctv.com/snow-book/index.html?item_id=3791285225425095504&toc_style_id=feeds_default&share_to=wechat&track_id=c61b6a85-20bc-4ecf-a644-502987326643"  target="_blank"  title="世界看两会丨国际人士：中国高质量发展为全球经济注入稳定性">世界看两会丨国际人士：中国...</a><span class="hidden-xs"></span>
+              
+                   <a href="./zwgk_27/zwdt/jdxw/202603/t20260312_2738961.shtml"  target="_blank"  title="第二场部长通道 回应关切真抓实干（现场·部长通道）">第二场部长通道 回应关切真抓...</a><span class="hidden-xs"></span>
+              
+               
+                   <a href="https://content-static.cctvnews.cctv.com/snow-book/index.html?item_id=17989700629994020473&toc_style_id=feeds_default&share_to=wechat&track_id=493e0b0e-a078-4056-b7df-35d0487b8e28"  target="_blank"  title="视频丨代表委员积极建言献策 有关部门全面记录梳理高效转办回应">视频丨代表委员积极建言献策 ...</a>
+              
+            </p>   
+<!--12-->
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <div class="swiper-container focus">
+      <div class="swiper-wrapper pic">
+        <!-- 焦点图开始 -->
+          <!-- 循环提取开始 -->
+                            
+                                <div class="swiper-slide"><a href="./zwgk_27/zwdt/jdxw/202602/t20260226_2732336.shtml" target="_blank"  title="新春第一会，武汉文旅吹响“改革创新攻坚”集结号！"><img id="pic_preview_box_id" src="./zwgk_27/zwdt/jdxw/202602/W020260227321518057808_ORIGIN.jpg"/><span>新春第一会，武汉文旅吹响“改革创新攻坚”集结号！</span></a></div>
+                            
+                                <div class="swiper-slide"><a href="./zwgk_27/zwdt/jdxw/202512/t20251224_2701457.shtml" target="_blank"  title="激光秀、交响乐、倒数敲钟！跨年夜，全城地标点亮光影秀！"><img id="pic_preview_box_id" src="./zwgk_27/zwdt/jdxw/202512/W020260112527967479582_ORIGIN.jpg"/><span>激光秀、交响乐、倒数敲钟！跨年夜，全城地标点亮光影秀！</span></a></div>
+                            
+                                <div class="swiper-slide"><a href="./zwgk_27/zwdt/jdxw/202511/t20251117_2678582.shtml" target="_blank"  title="美食市集、街头剧场、千万元礼包……“知音湖北·超级文旅日”武汉主会场火热启动"><img id="pic_preview_box_id" src="./zwgk_27/zwdt/jdxw/202511/W020251210342577527275_ORIGIN.png"/><span>美食市集、街头剧场、千万元礼包……“知音湖北·超级文旅日”武汉主会场火热启动</span></a></div>
+                            
+                                <div class="swiper-slide"><a href="./zwgk_27/zwdt/jdxw/202510/t20251011_2658859.shtml" target="_blank"  title="等了一整年，最重磅的音乐盛宴来了"><img id="pic_preview_box_id" src="./zwgk_27/zwdt/jdxw/202510/W020251011628661540141_ORIGIN.jpg"/><span>等了一整年，最重磅的音乐盛宴来了</span></a></div>
+                            
+                                <div class="swiper-slide"><a href="./zwgk_27/zwdt/jdxw/202509/t20250915_2647636.shtml" target="_blank"  title="2025武汉都市圈五大景点旅游线路发布"><img id="pic_preview_box_id" src="./zwgk_27/zwdt/jdxw/202509/W020250915411489130660_ORIGIN.png"/><span>2025武汉都市圈五大景点旅游线路发布</span></a></div>
+                            
+                            <!-- 循环提取结束 -->
+       <!-- 焦点图结束 -->
+      </div>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination navi"></div>
+      <!-- Add Arrows -->
+      <div class="swiper-button">
+       <div class="swiper-button-next focus-next"><span class="iconfont  icon-jyh-right2"></span></div>
+       <div class="swiper-button-prev focus-prev"><span class="iconfont  icon-jyh-left2"></span></div>
+      </div>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <div class="tab-pane news">
+      <h3 class="tab mb10"><a href="http://www.hubei.gov.cn/szyw/" target="_blank">时政要闻</a><a href="http://www.gov.cn/pushinfo/v150203/index.htm" target="_blank">国务院要闻</a><a href="http://www.hubei.gov.cn/zwgk/hbyw/hbywqb/" target="_blank">湖北要闻</a><a href="http://www.wuhan.gov.cn/sy/whyw/" class="current" target="_blank">武汉要闻</a></h3>
+      <div class="pane">
+       <ul class="list-t" id="szyw"  style="display: none"></ul>
+       <ul class="list-t" style="display: none" id="zfyw"></ul>
+       <ul class="list-t" style="display: none" id="hbyw"></ul>
+       <ul class="list-t"  id="wuhanyw"></ul>
+      </div>
+     </div>
+    </div>
+   </div>
+</div>
+ <!-- p1 结束 -->
+ <!-- p2 开始 -->
+<div class="grid p2" style="padding-bottom:0px;">
+   <div class="row">
+    <div class="col-md-8">
+     <!--单行横向滚动开始-->
+    <iframe src="/flzm/cxts/cxts.shtml" frameborder="0" width="100%" height="60px"></iframe>  
+      <!--单行横向滚动结束--> 
+     <div class="tab-pane mb10">
+      <h3 class="tab mb10"><a href="http://wlj.wuhan.gov.cn/zwgk_27/zwdt/jdxw/" class="current">焦点新闻</a><a href="http://wlj.wuhan.gov.cn/zwgk_27/zwdt/xydt/">行业动态</a><a href="http://wlj.wuhan.gov.cn/zwgk_27/zwdt/tzgg/">通知公告</a></h3>
+      <div class="pane">
+       <ul class="list-t syjd">
+        
+          <li><a href="./zwgk_27/zwdt/jdxw/202603/t20260327_2745469.shtml" class="w90" target="_blank" title="李殿勋在武汉市调研文旅融合发展">李殿勋在武汉市调研文旅融合发展<span class="date">2026-03-26</span></a></li>
+        
+          <li><a href="./zwgk_27/zwdt/jdxw/202603/t20260317_2740835.shtml" class="w90" target="_blank" title="李强主持召开国务院常务会议">李强主持召开国务院常务会议<span class="date">2026-03-17</span></a></li>
+        
+          <li><a href="https://content-static.cctvnews.cctv.com/snow-book/index.html?item_id=3791285225425095504&toc_style_id=feeds_default&share_to=wechat&track_id=c61b6a85-20bc-4ecf-a644-502987326643" class="w90" target="_blank" title="世界看两会丨国际人士：中国高质量发展为全球经济注入稳定性">世界看两会丨国际人士：中国高质量发展为全球经济注入稳定性<span class="date">2026-03-12</span></a></li>
+        
+          <li><a href="./zwgk_27/zwdt/jdxw/202603/t20260312_2738961.shtml" class="w90" target="_blank" title="第二场部长通道 回应关切真抓实干（现场·部长通道）">第二场部长通道 回应关切真抓实干（现场·部长通道）<span class="date">2026-03-12</span></a></li>
+        
+          <li><a href="https://content-static.cctvnews.cctv.com/snow-book/index.html?item_id=17989700629994020473&toc_style_id=feeds_default&share_to=wechat&track_id=493e0b0e-a078-4056-b7df-35d0487b8e28" class="w90" target="_blank" title="视频丨代表委员积极建言献策 有关部门全面记录梳理高效转办回应">视频丨代表委员积极建言献策 有关部门全面记录梳理高效转办回应<span class="date">2026-03-12</span></a></li>
+        
+          <li><a href="./zwgk_27/zwdt/jdxw/202603/t20260310_2737386.shtml" class="w90" target="_blank" title="听民意 汇民智|“今天的反馈很全面也很务实”——全国人大代表张雨霏与国家体育总局工作人员面对面">听民意 汇民智|“今天的反馈很全面也很务实”——全国人大代表张雨霏与国家体育总局工作人员面对面<span class="date">2026-03-10</span></a></li>
+        
+          <li><a href="./zwgk_27/zwdt/jdxw/202603/t20260310_2737382.shtml" class="w90" target="_blank" title="中国经济信心说丨读懂“十五五”主要指标的深意">中国经济信心说丨读懂“十五五”主要指标的深意<span class="date">2026-03-10</span></a></li>
+        
+       </ul>
+       <ul class="list-t syjd" style="display: none">
+        
+          <li><a href="./zwgk_27/zwdt/xydt/202603/t20260326_2745069.shtml" class="w90" target="_blank" title="定向游人群走过，长江大桥上干干净净">定向游人群走过，长江大桥上干干净净<span class="date">2026-03-22</span></a></li>
+        
+          <li><a href="./zwgk_27/zwdt/xydt/202603/t20260326_2745061.shtml" class="w90" target="_blank" title="湖北新增2名全国特级导游">湖北新增2名全国特级导游<span class="date">2026-03-20</span></a></li>
+        
+          <li><a href="./zwgk_27/zwdt/xydt/202603/t20260318_2741704.shtml" class="w90" target="_blank" title="春天里，看见活力涌动的中国">春天里，看见活力涌动的中国<span class="date">2026-03-18</span></a></li>
+        
+          <li><a href="./zwgk_27/zwdt/xydt/202603/t20260317_2740832.shtml" class="w90" target="_blank" title="再登晴川阁，望江赏樱花">再登晴川阁，望江赏樱花<span class="date">2026-03-10</span></a></li>
+        
+          <li><a href="./zwgk_27/zwdt/xydt/202603/t20260305_2735524.shtml" class="w90" target="_blank" title="3月里的元宵春意浓，市民游客踏春赏花逛灯会">3月里的元宵春意浓，市民游客踏春赏花逛灯会<span class="date">2026-03-05</span></a></li>
+        
+          <li><a href="./zwgk_27/zwdt/xydt/202602/t20260224_2731278.shtml" class="w90" target="_blank" title="武汉多地迎来赏花热潮，梅花樱花郁金香竞相绽放">武汉多地迎来赏花热潮，梅花樱花郁金香竞相绽放<span class="date">2026-02-22</span></a></li>
+        
+          <li><a href="./zwgk_27/zwdt/xydt/202602/t20260224_2731275.shtml" class="w90" target="_blank" title="楚天台登高祈福受热捧，东湖磨山新春文旅“别样红火”">楚天台登高祈福受热捧，东湖磨山新春文旅“别样红火”<span class="date">2026-02-21</span></a></li>
+        
+       </ul>
+       <ul class="list-t syjd"  style="display: none">
+
+        
+          <li><a href="./zwgk_27/zwdt/tzgg/202603/t20260320_2743178.shtml" class="w90" target="_blank" title="关于湖北圆梦传承文化旅游发展有限公司办理旅游服务质量保证金提取事项情况的公示">关于湖北圆梦传承文化旅游发展有限公司办理旅游服务质量保证金提取事项情况的公示<span class="date">2026-03-20</span></a></li>
+        
+          <li><a href="./zwgk_27/zwdt/tzgg/202603/t20260309_2737155.shtml" class="w90" target="_blank" title="关于湖北纵冠国际旅行社有限公司办理旅游服务质量保证金提取事项情况的公示">关于湖北纵冠国际旅行社有限公司办理旅游服务质量保证金提取事项情况的公示<span class="date">2026-03-09</span></a></li>
+        
+          <li><a href="./zwgk_27/zwdt/tzgg/202603/t20260305_2735510.shtml" class="w90" target="_blank" title="2025年武汉市新型公共文化空间评定结果公示">2025年武汉市新型公共文化空间评定结果公示<span class="date">2026-03-05</span></a></li>
+        
+          <li><a href="./zwgk_27/zwdt/tzgg/202603/t20260302_2734469.shtml" class="w90" target="_blank" title="关于送达行政处罚履行催告书的公告（武汉加洲星际体育发展有限公司）">关于送达行政处罚履行催告书的公告（武汉加洲星际体育发展有限公司）<span class="date">2026-03-02</span></a></li>
+        
+          <li><a href="./zwgk_27/zwdt/tzgg/202602/t20260228_2733623.shtml" class="w90" target="_blank" title="《武汉市文化和旅游发展“十五五”规划》环境影响评价公示">《武汉市文化和旅游发展“十五五”规划》环境影响评价公示<span class="date">2026-02-28</span></a></li>
+        
+          <li><a href="./zwgk_27/zwdt/tzgg/202602/t20260227_2732987.shtml" class="w90" target="_blank" title="关于湖北旭客国际旅游有限公司办理旅游服务质量保证金提取事项情况的公示">关于湖北旭客国际旅游有限公司办理旅游服务质量保证金提取事项情况的公示<span class="date">2026-02-27</span></a></li>
+        
+          <li><a href="./zwgk_27/zwdt/tzgg/202602/t20260214_2730394.shtml" class="w90" target="_blank" title="关于对黄强强的行政处罚公告">关于对黄强强的行政处罚公告<span class="date">2026-02-14</span></a></li>
+        
+       </ul>
+      </div>
+     </div>
+  <!-- 专题专栏 开始 -->
+   <div class="ztzl clearfix mb20">
+    <div class="swiper-container scroll list">
+     <ul class="swiper-wrapper h">
+
+<!--<li class="swiper-slide">
+<a href="https://www.samr.gov.cn/zt/spaqzp/" target="_blank"><img src="http://wlj.wuhan.gov.cn/material/images/spaqkp.jpg" /></a>
+</li>-->
+
+       
+        <li class="swiper-slide"><a href="./ztzl_27/zxzt/sqxzjcgs/" target="_blank"><img src='./ztzl_27/zxzt/sqxzjcgs/images/P020250306769139907655.png'/>
+<span class="bj"></span>
+</a></li>
+ 
+        <li class="swiper-slide"><a href="./ztzl_27/zxzt/jgdj1214/" target="_blank"><img src='./ztzl_27/zxzt/jgdj1214/images/P020211216386276660248.jpg'/>
+<span class="bj"></span>
+</a></li>
+ 
+        <li class="swiper-slide"><a href="http://www.lzg.whgmbwg.com/pano/SWPano.html" target="_blank"><img src='./ztzl_27/zxzt/38439/images/P020200819368870363013.jpg'/>
+<span class="bj"></span>
+</a></li>
+ 
+        <li class="swiper-slide"><a href="./ztzl_27/zxzt/yhyshj/" target="_blank"><img src='./ztzl_27/zxzt/yhyshj/images/P020250722678302944381.jpg'/>
+<span class="bj"></span>
+</a></li>
+ 
+        <li class="swiper-slide"><a href="./ztzl_27/zxzt/tty/" target="_blank"><img src='./ztzl_27/zxzt/tty/images/P020220415394783880401.jpg'/>
+<span class="bj">2026年度重点专栏</span>
+</a></li>
+ 
+<li class="swiper-slide">
+<a href="http://wlj.wuhan.gov.cn/bsfw_27/xcx/" target="_blank"><img src="/material/images/20221116.jpg" />
+<span class="bj"></span>
+</a></li>
+<li class="swiper-slide">
+<a  target="_blank"><img src="http://wlj.wuhan.gov.cn/material/images/tsjbwt.jpg" />
+<span class="bj"></span>
+</a>
+</li>
+
+
+        <li class="swiper-slide"><a href="./ztzl_27/zxzt/tpgj/" target="_blank"><img src='./ztzl_27/zxzt/tpgj/images/P020211104594926062502.jpg'/>
+<span class="bj"></span>
+</a></li>
+       
+        <li class="swiper-slide"><a href="./ztzl_27/zxzt/yjgl/" target="_blank"><img src='./ztzl_27/zxzt/yjgl/images/P020220620432171824606.jpg'/>
+<span class="bj"></span>
+</a></li>
+       
+        <li class="swiper-slide"><a href="./ztzl_27/zxzt/smwldjt/" target="_blank"><img src='./ztzl_27/zxzt/smwldjt/images/P020210608349374232639.jpg'/>
+<span class="bj"></span>
+</a></li>
+       
+
+<li  class="swiper-slide"><a href="http://wlj.wuhan.gov.cn/ztzl_27/zxzt/swljbmyjsjsgjfyjsxx/" target="_blank"><img src='./ztzl_27/zxzt/swljbmyjsjsgjfyjsxx/images/P020200421562002457259.jpg'/>
+<span class="bj"></span>
+</a></li>
+
+       <!---->
+      
+      <!-- 
+        <li class="swiper-slide"><a href="http://zwfw.hubei.gov.cn/webview/zwgk/qzqd.html?department=114201000108896918" target="_blank"><img src='./zfxxgk/fdzdgknr/52562/images/P020210204387960707263.jpg'/></a></li>
+       -->
+<li class="swiper-slide"><a href="./hdjl/" target="_blank"><img src="./material/images/20230228.png" />
+<span class="bj"></span></a></li>
+     </ul>
+    </div>
+    <div class="ztzl-next"><span class="iconfont  icon-jyh-right2"></span></div>
+    <div class="ztzl-prev"><span class="iconfont  icon-jyh-left2"></span></div>
+   </div>
+  <!-- 专题专栏 结束 -->
+  <!-- ******************************20200415修改 开始***************************** -->
+  <div class="bsfw">
+   <h3 class="t3 mb10" style="margin-bottom:20px;"><b><a href="http://zwfw.hubei.gov.cn/s/web/bszn/bmsy.html?department=114201000108896918"  target="_blank" class="current">办事服务</a></b></h3>
+   <div class="wlml"><a href="http://wlj.wuhan.gov.cn/bsfw_27/wlml/" target="_blank"></a></div>
+   <div class="service"><a href="http://zwfw.hubei.gov.cn/s/index.html" target="_blank"></a></div>
+
+  </div>
+  <div class="clearfix"></div>
+  <!-- ******************************20200415修改 结束***************************** -->
+    </div>
+
+    <div class="col-md-4">
+      <div class="gkzl mb30">
+       <a href="http://wlj.wuhan.gov.cn/zfxxgk/zfxxgkzn/" target="_blank"></a>
+      </div>
+     <ul class="list-a a1 h mb30">
+       <li><a href="http://wlj.wuhan.gov.cn/zfxxgk/zfxxgkzn/" target="_blank">政府信息公开指南</a></li>
+       <li><a href="http://wlj.wuhan.gov.cn/zfxxgk/fdzdgknr/" target="_blank">法定主动公开内容</a></li>
+       <li><a href="http://wlj.wuhan.gov.cn/zfxxgk/zwxxgknb/" target="_blank">政府信息公开年报</a></li>
+       <li><a href="http://wlj.wuhan.gov.cn/zfxxgk/ysqgk/" target="_blank">依申请公开</a></li>
+      </ul>
+  <!-- ******************************20200415修改 开始***************************** -->
+      <ul class="list-a a9 h mb30">
+  <!-- ******************************20200415修改 结束***************************** -->
+        <li><a href="http://wlj.wuhan.gov.cn/zfxxgk/fdzdgknr/jgjj/dwzz/" target="_blank"><i class="s1"></i><span>单位职责</span></a></li>
+        <li><a href="http://wlj.wuhan.gov.cn/zfxxgk/fdzdgknr/jgjj/ldxx/" target="_blank"><i class="s2"></i><span>领导信息</span></a></li>
+        <li><a href="http://wlj.wuhan.gov.cn/ztzl_27/zxzt/yjgl/" target="_blank"><i class="s3"></i><span>应急管理</span></a></li>
+        <li><a href="http://wlj.wuhan.gov.cn/zfxxgk/fdzdgknr/zfcg/" target="_blank"><i class="s4"></i><span>政府采购</span></a></li>
+       </ul>
+      <div class="mb20">
+      <h3 class="t3 mb30"><b>互动交流</b></h3>
+  <!-- ******************************20200415修改 开始***************************** -->
+      <ul class="list-a a11 h mb30">
+  <!-- ******************************20200415修改 结束***************************** -->
+        <li><a href="http://wlj.wuhan.gov.cn/hdjl/hdxx/" target="_blank"><i class="s5"></i><span>局长信箱</span></a></li>
+        <li><a href="http://wlj.wuhan.gov.cn/hdjl/zxts/" target="_blank"><i class="s6"></i><span>咨询投诉</span></a></li>
+        <li><a href="http://wlj.wuhan.gov.cn/hdjl/yjzj/" target="_blank"><i class="s7"></i><span>意见征集</span></a></li>
+        <li><a href="http://wlj.wuhan.gov.cn/hdjl/zxft/" target="_blank"><i class="s8"></i><span>在线访谈</span></a></li>
+       </ul>
+     <!--<div class="swiper-container complain mb30">
+      <div class="swiper-wrapper pic">
+       <div class="swiper-slide"><a href="" target="_blank"><i></i>12301旅游投诉平台</a></div>
+       <div class="swiper-slide"><a href="" target="_blank"><i></i>阳光信访受理平台</a></div>
+       <div class="swiper-slide"><a href="" target="_blank"><i></i>武汉城市留言板</a></div>
+      </div>-->
+      <!-- Add Pagination -->
+     <!-- <div class="swiper-pagination navi"></div>
+     </div>-->
+  
+
+    </div>
+    </div>
+  </div>
+</div>
+ <!-- p2 结束 -->
+ </div>
+ <!-- content 开始 --> 
+ 
+
+</div>
+ <!-- footer 开始 -->
+<div class="footer">
+  <div class="links">
+   <ul class="row">
+    <li class="col-md-4"><a href="https://www.mct.gov.cn/" target="_blank">中华人民共和国文化和旅游部</a>
+     <!--<ul>
+     
+     </ul>-->
+    </li>
+    <li class="col-md-4"><a href="http://wlt.hubei.gov.cn/" target="_blank">湖北省文化和旅游厅</a>
+     <!--<ul>
+     
+     </ul>-->
+    </li>
+    <li class="col-md-4"><a href="http://www.wuhan.gov.cn/" target="_blank">武汉市人民政府</a>
+     <!--<ul>
+     
+     </ul>-->
+    </li>
+   </ul>
+  </div>
+  <div class="copyright clearfix">
+   <div class="footer-map p20 bg-blue fl">
+    <p><a onclick="SetHome(this,document.domain)" style=" cursor: pointer;">设为首页</a><a onclick="AddFavorite('我的网站',location.href)" style="cursor: pointer;">加入收藏</a></p>
+    <p><a href="http://wlj.wuhan.gov.cn/flzm/lxwm/" target="_blank">联系我们</a><a href="http://wlj.wuhan.gov.cn/flzm/wzdt/" target="_blank">网站地图</a></p>
+   </div>
+   <div class="p20 bg-blue ml10 fl">
+    <p>主办单位：武汉市文化和旅游局&ensp;联系地址：武汉市江岸区工农兵路125号</p>
+    <p>电话：027-82810057 &ensp;&ensp;&ensp;传真：027-82813136</p>
+    <p>鄂ICP备20001307号-1&ensp;<a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=42010202001009" target="_blank"><img src="/material/images/footer_icp.png" alt="" />&ensp;鄂公网安备42010202001009号</a></p>
+    <p>政府网站标识码：4201000053</p>
+   </div>
+   <div class="bg-blue credit ml10 fl">
+    <a href="https://www.creditchina.gov.cn/" target="_blank"><p>信用中国</p></a>
+    <a href="http://credit.hubei.gov.cn/" target="_blank"><p>信用湖北</p></a>
+    <a href="https://credit.wuhan.gov.cn/index.html?a=1" target="_blank"><p>信用武汉</p></a>
+   </div>
+   <div class="gov"><a href="http://bszs.conac.cn/sitename?method=show&id=55434C77EF596EB1E053012819AC63E1" target="_blank"><img src="http://wlj.wuhan.gov.cn/material/images/red.png" alt="" /></a></div>
+   <div class="jc"><script id="_jiucuo_" sitecode='4201000053' src='https://zfwzgl.www.gov.cn/exposure/jiucuo.js'></script></div>
+  </div>
+ </div>
+<script id="_trs_ta_js" src="//ta.trs.cn/c/js/ta.js?mpid=3406" async="async" defer="defer"></script>
+
+<!--外链跳转-->
+<link type="text/css" rel="stylesheet" href="//wlj.wuhan.gov.cn/material/css/wltz.css" />
+<script type="text/javascript" src="//wlj.wuhan.gov.cn/material/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="//wlj.wuhan.gov.cn/material/js/wltz.js"></script>
+<script type="text/javascript" src="//wlj.wuhan.gov.cn/material/js/ssoAjax.js"></script>
+<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"  style="height:165px;">
+    <div class="modal-header">
+        <button type="button" class="bootstrap-close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="myModalLabel">&nbsp;</h3>
+    </div>
+    <div class="modal-body">
+        <p>您访问的链接即将离开“<span id="modalDomainName"></span>”门户网站 是否继续？</p>
+        <input id="modalOuterURL" type="hidden" />
+    </div>
+    <div class="modal-footer">
+        <button class="bootstrap-btn bootstrap-btn-default" data-dismiss="modal" aria-hidden="true">放弃</button>
+        <button class="bootstrap-btn bootstrap-btn-danger" onclick="toRedirect()">继续访问</button>
+    </div>
+</div>
+
+<script>
+//设为首页
+	function SetHome(obj,url){
+	    try{
+	        obj.style.behavior='url(#default#homepage)';
+	        obj.setHomePage(url);
+	    }catch(e){
+	        if(window.netscape){
+	            try{
+	                netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+	            }catch(e){
+	                alert("抱歉，此操作被浏览器拒绝！请在浏览器地址栏输入“about:config”并回车然后将[signed.applets.codebase_principal_support]设置为'true'");
+	            }
+	        }else{
+	            alert("抱歉，您所使用的浏览器无法完成此操作。\n\n您需要手动将【"+url+"】设置为首页。");
+	        }
+	    }
+	}
+	 
+	//收藏本站
+	function AddFavorite(title, url) {
+	    try {
+	        window.external.addFavorite(url, title);
+	    }
+	    catch (e) {
+	        try {
+	            window.sidebar.addPanel(title, url, "");
+	        }
+	        catch (e) {
+	            alert("抱歉，您所使用的浏览器无法完成此操作。加入收藏失败，请使用Ctrl+D进行添加");
+	        }
+	    }
+	}
+
+</script>
+ <!-- footer 结束 --> 
+ <!-- 浮窗 开始 -->
+  <style>
+        /*示例1-广告飘窗*/
+        #move_port{
+      position: fixed;
+      min-height: 50px;
+      left: 0;
+      top:0;
+      cursor: pointer;
+      z-index: 10000;
+    }
+.close_port{
+display:none!important
+}
+@media (max-width: 480px){
+#move_port img {
+    width:180px !important;
+    
+}
+}
+</style>
+
+<!--<div id="move_port" >
+    <ul style="margin-bottom:5px;">
+      <a id="close5" href="javascript:" style="margin-right: 10px;position: absolute;color: #fff;right: 0;">X</a>
+      <li><a href="https://wlj.wuhan.gov.cn/zwgk_27/zwdt/tzgg/202508/t20250825_2638161.shtml" target="_blank"><img src="/material/images/piaochuang20250826.png" width="200" /></a></li>
+    </ul>
+  </div>
+  <script type="text/javascript" src="/material/js/move_port.js"></script>
+
+  <script type="text/javascript">
+    $("#move_port #close5").click(function() { $("#move_port").hide(); })
+  </script>
+  <script>
+    /*调用移动浮窗方法并按顺序传入正确参数["obj",x,y,l,t,m],obj必填*/
+    //示例:
+    move_obj("#move_port",'','',1,1,'','',50);
+
+    move_obj(".move_div",'','',10,10,800,500,100);
+    move_obj(".d1",600,500);
+    move_obj(".d2",'','','','','',300,200);
+    move_obj(".d3",500,300);
+ </script>-->
+
+<!-- 浮窗 结束 -->
+<!-- dom 结束 --> 
+<!-- js --> 
+<script type="text/javascript" src="./material/js/index_new11.js"></script>
+<script>
+ //dom effect
+  $(document).ready(function () {
+            $('.ztzl .bj').each(function (){
+                if($(this).text()===''){
+                    $(this).hide();
+                }
+            })
+        });
+ </script> 
+</body>
+</html>

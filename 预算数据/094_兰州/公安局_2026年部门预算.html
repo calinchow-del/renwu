@@ -1,0 +1,1382 @@
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"><script language="javascript" src="/module/jslib/jquery/jquery.js"></script>
+<script language="javascript" src="/module/jslib/urite/urite.min.js"></script>
+<meta name='WebId' content='35'>
+
+  <meta name="Keywords" content="兰州公安网,兰州市公安局,兰州公安,兰州·公安,兰州公安局">
+  <meta name="Description" content="兰州公安网是兰州市公安局唯一的门户网站，主要提供各类群众关注的信息，提供各种咨询类业务，如：在线咨询，厅长信箱等等，提供政府公开信息等功能。">
+  <meta property="qc:admins" content="10655262776737176776636" />
+  <title>兰州市公安局</title>
+<meta name='Maketime' content='2026-03-24 01:23:12'>
+<meta name="SiteName" content="兰州市公安局">
+<meta name="SiteDomain"  content="gaj.lanzhou.gov.cn">
+<meta name="SiteIDCode"  content="">
+<meta name="siteurl"  content="http://gaj.lanzhou.gov.cn/index.html">
+<meta name="guild"    content="">
+<meta name="district"    content="">
+<meta name="sitecatalog"    content="">
+
+  
+ <link href="https://www.gov.cn/images/trs_favicon.ico" rel="shortcut icon" type="image/x-icon">
+  <base target="_blank">
+
+  <script type="text/javascript" src="/images/2652/sundun.core.js"></script>
+  <script type="text/javascript" src="/images/2652/sundun.ui.core.js"></script>
+ <script type="text/javascript" src="/images/2652/sundun.gsindex.js"></script>
+  <!-- <script type="text/javascript" src="/images/2652/has.gsindex.js"></script> -->
+  <script language="javascript' src='/images/2652/16070528.js"></script>
+  <script language="javascript' src='/images/2652/16805185.js"></script>
+  <script type="text/javascript" src="/images/2652/gs_common.js"></script>
+  <script type="text/javascript" src="/images/2652/gs-news.js"></script>
+  <!--  <script type="text/javascript" src="/images/2652/jquery.KinSlideshow-1.1.js"></script> -->
+  <script type="text/javascript" src="/images/2652/jquery.SuperSlide.2.1.1.js"></script>
+  <script type="text/javascript" src="/images/2652/jquery.js"></script>
+ <script type="text/javascript" src="/images/2652/index.js"></script>
+  <script type="text/javascript" src="/images/2652/jquery-ui.min.js"></script>
+  
+  <link type="text/css" rel="stylesheet" href="/images/2652/common.css">
+  <link type="text/css" rel="stylesheet" href="/images/2652/public.css">
+  <link rel="stylesheet" href="/images/2652/idangerous.swiper.css">
+<link rel="stylesheet" href="/images/2652/pc.css">
+  <style>
+    .ml-10 {
+      height: 170px;
+    }
+
+    .fr_news_h li a {
+      width: 110px;
+      margin-right: 1px;
+    }
+
+    .con_c_n1_t {
+      width: 275px;
+    }
+  </style>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $(".form-datetime").datetime({ format: 'yyyy-MM-dd hh:mm' });
+    });
+  </script>
+  <script type="text/javascript">
+    var topMainIndex = '0';
+    $(function () {
+      $("#searchForm").submit(function () {
+        var searchType = $("#searchType").val();
+        var action_2 = "";
+        if (searchType == "outside") {
+          action_2 = 'http://gat.gansu.gov.cn:28080' + "/Search/crawlSearch.jsp";
+        }
+        else {
+          action_2 = 'http://gat.gansu.gov.cn:28080' + "/Search/Result.jsp";
+        }
+        $(this).attr("action", action_2);
+      });
+      //控制选项卡
+      $('.xxk').mouseover(function () {
+        var index = $(this).attr('index');
+        var divName = $(this).attr('divName');
+        var xzName = $(this).attr('xzName');
+        if (!xzName || xzName == '') {
+          xzName = 'xz';
+        }
+        $(this).addClass(xzName);
+        $($(this).siblings()).removeClass(xzName);
+        $('.' + divName + ' ul').eq(index).css('display', 'block').siblings().css('display', 'none');
+      });
+      //交流互动、警营文化切换
+      $(".jlhd").mouseover(function () {
+        $(this).addClass("active");
+        $(".jywh").removeClass("active");
+        $('.jywhDiv').css('display', 'none');
+        $('.jlhdDiv').css('display', 'block');
+      });
+      $(".jywh").mouseover(function () {
+        $(this).addClass("active");
+        $(".jlhd").removeClass("active");
+        $('.jlhdDiv').css('display', 'none');
+        $('.jywhDiv').css('display', 'block');
+      });
+
+      //导航切换
+      $('.MenuCC').mouseover(function () {
+        $(this).addClass("link_active");
+        $(".dhArea").hide();
+        $(".dhArea", this).show();
+      });
+      $('.MenuCC').mouseout(function () {
+        $(this).removeClass("link_active");
+        $(".dhArea").hide();
+      });
+
+      //微博选项卡
+      $('.sina').mouseover(function () {
+        $(this).removeClass('x1').addClass('x2');
+        $('.qq').removeClass('t2').addClass('t1');
+        $('.sinadiv').css('display', 'block');
+        $('.qqdiv').css('display', 'none');
+      });
+      $('.qq').mouseover(function () {
+        $(this).removeClass('t1').addClass('t2');
+        $('.sina').removeClass('x2').addClass('x1');
+        $('.qqdiv').css('display', 'block');
+        $('.sinadiv').css('display', 'none');
+      });
+      $("#KinSlideshow").KinSlideshow();
+
+    });
+
+  </script>
+</head>
+
+<body><div id='barrierfree_container'>
+
+  <div id="wrap" class="bg">
+
+    <script type="text/javascript">
+      //如果用户登录后，页头显示用户信息，如果没有登录出现登录框
+      $(function () {
+        $.getJSON("http://gaj.lanzhou.gov.cn//Dataservice/member.do?method=isLogin", function (data) {
+          var html = "";
+          if (data.isLogin === true) {
+            html = '  '
+              + '\n                <font style="font-size:14px">欢迎您！</font><span class="orange">' + data.username + '</span>   '
+              + '\n                      <a href="memberConfig.shtml"><font style="font-size:14px"> [修改资料]</font></a>'
+              + '\n                      <a href="#" onclick="loginOut();return false;"><font style="font-size:14px">[安全退出]</font></a>'
+              + '\n            '
+              + '\n';
+
+          }
+          else {
+
+            html = '    <form onsubmit="login();return false;" method="post">'
+              + '\n                    <font style="font-size:14px">用户名：</font><input id="username" name="username" style="display:iline-block;margin:0;padding:0;width:50px;" class="login-txt" type="text" maxlength="30" />'
+              + '\n                    <font style="font-size:14px">密码：</font><input id="password" name="password" style="display:iline-block;margin:0;padding:0;width:50px;" class="login-txt" type="password" maxlength="30" />'
+              + '\n                    <input type="submit" class="login-btn font12" value="登录" />'
+              + '\n                    <a class="zhuce" href="memberRegister.shtml" target="_blank"><font style="font-size:14px">注册</font></a>'
+              + '\n           </form>';
+
+          }
+          $("#member_head").html(html);
+        });
+      });
+
+      //安全退出
+      var loginOut = function () {
+        var html = "";
+        $.getJSON("http://gaj.lanzhou.gov.cn//Dataservice/member.do?method=loginOut", function (data) {
+          if (data.success) {
+            html = '    <form onsubmit="login();return false;" method="post">'
+              + '\n                    <font style="font-size:14px">用户名：</font><input id="username" name="username" style="display:iline-block;margin:0;padding:0" class="login-txt" type="text" maxlength="30" />'
+              + '\n                    <font style="font-size:14px">密码：</font><input id="password" name="password" style="display:iline-block;margin:0;padding:0" class="login-txt" type="password" maxlength="30" />'
+              + '\n                    <input type="submit" class="login-btn font12" value="登录" />'
+              + '\n                    <a class="zhuce" href="memberRegister.shtml" target="_blank"><font style="font-size:14px">注册</font></a>'
+              + '\n           </form>';
+            $("#member_head").html(html);
+          }
+          else {
+            alert("安全退出失败，请重试！")
+          }
+
+        });
+
+      }
+
+      //登录
+      var login = function () {
+        var html = "";
+        var username = $("#username").val();//姓名
+        var password = $("#password").val();//密码
+        if (username == "") {
+          alert('请输入您的登录名！');
+          return;
+        }
+        if (password == "") {
+          alert('请输入您的密码！');
+          return;
+        }
+        $.getJSON("http://gaj.lanzhou.gov.cn//Dataservice/member.do?method=login", { username: username, password: password }, function (data) {
+          if (data.success === true) {
+            html = '  '
+              + '\n                <font style="font-size:14px">欢迎您！</font><span class="orange">' + username + '</span>   '
+              + '\n                      <a href="memberConfig.shtml"><font style="font-size:14px"> [修改资料]</font></a>'
+              + '\n                      <a href="#" onclick="loginOut();return false;"><font style="font-size:14px">[安全退出]</font></a>'
+              + '\n            '
+              + '\n';
+
+            $("#member_head").html(html);
+          }
+          else {
+            alert(data.msg)
+          }
+
+        });
+        //SESSION
+      }
+    </script>
+    <div class="header" style="overflow: hidden;">
+      <div style=" width: 1000px;margin: 0 auto;">
+        <img src="/picture/0/2210121603559651463.jpg">
+      </div>
+      <!--<div class="logo fl">
+  </div>-->
+      <!-- <div class="tq fr">
+   <ul>
+      <li class="d" id="WeatherReport"></li>
+      <li class="w"><a>登录 | 注册</a></li>
+   </ul>
+  </div>-->
+      <div>
+        <script src="/script/0/2107051115327382.js"></script>
+      </div>
+    </div>
+    <!--main start-->
+    <div>
+      <style>
+        .s_top2 {
+          width: 1000px;
+          margin: 5px auto;
+          height: 42px;
+          overflow: hidden;
+          background-color: #fff;
+        }
+
+        .s_top2 .ft {
+          padding-left: 15px;
+          padding-right: 10px;
+          line-height: 40px;
+        }
+
+        .ft {
+          float: left;
+        }
+
+        .s_top2 .ft_we {
+          float: left;
+          height: 42px;
+          overflow: hidden;
+        }
+
+        .s_top2 .fr_search {
+          float: right;
+          padding-top: 6px;
+          padding-right: 4px;
+        }
+
+        .s_top2 .fr_search .fr {
+          line-height: 32px;
+          text-align: center;
+          color: #fff;
+          background: #CB100B;
+          width: 60px;
+          border: 0 none;
+        }
+
+        .fr {
+          float: right;
+        }
+
+        input,
+        textarea {
+          outline: none;
+        }
+
+        .s_top2 .fr_search .inp_1 {
+          float: right;
+          border: 1px #CB100B solid;
+          line-height: 30px;
+          width: 240px;
+          padding-left: 5px;
+          background: url(search_n.jpg) left no-repeat;
+        }
+      </style>
+      <div style="text-align:center;"><img src="/picture/0/2107141101512578044.jpg">
+      </div>
+      <div class="s_top2">
+        <script>
+          setInterval("timenow.innerHTML=new Date().toLocaleString()+' 星期'+'日一二三四五六'.charAt(new Date().getDay());", 1000);
+        </script>
+        <div class="ft">今天是：<span id="timenow">2021/10/27 上午10:09:23 星期三</span> </div>
+      
+        <div class="fr_search">
+          <form id="search-form" target="_blank" method="get" action="http://www.lanzhou.gov.cn/jrobot/search.do">
+            <input id="webid" name="webid" value="35" type="hidden">
+            <input id="pg" name="pg" value="10" type="hidden">
+            <input id="od" name="od" value="2" type="hidden">
+            <input id="p" name="p" value="1" type="hidden">
+            <input class="fr" type="submit" value="搜索"
+              onclick="if ($('.bt-text').val() == '' || $('.bt-text').val() == '请输入关键词') {alert('输入不能为空'); return false;}">
+            <input name="q" class="bt-text inp_1" type="text" autocomplete="off" value="请输入关键词"
+              onfocus="if (value =='请输入关键词'){value =''}" onblur="if (value ==''){value='请输入关键词'}">
+          </form>
+        </div>
+      </div>
+      <div class="container">
+        <div class="tpxw_left"> 
+<style type="text/css">
+.box {
+	width: 638px;
+	height: 318px;
+	margin: 0px auto;
+	overflow: hidden;
+	position: relative;
+}
+.box-1 ul {
+}
+.box-1 ul li {
+	width: 638px;
+	height: 318px;
+	position: relative;
+	overflow: hidden;
+}
+.box-1 ul li img {
+	display: block;
+	width: 638px;
+	height: 318px;
+}
+.box-1 ul li h2 {
+	position: absolute;
+	left: 0;
+	bottom: -12px;
+	height: 40px;
+	width: 300px;
+	background: rgba(125,125,120,.4);
+	text-indent: 1em;
+	padding-right: 500px;
+	font-size: 16px;
+	line-height: 40px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	font-weight: normal;
+	color: ghostwhite
+}
+.box-2 {
+	position: absolute;
+	right: 10px;
+	bottom: 14px;
+}
+.box-2 ul li {
+	float: left;
+	width: 12px;
+	height: 12px;
+	overflow: hidden;
+	margin: 0 5px;
+	border-radius: 50%;
+	background: rgba(0,0,0,0.5);
+	text-indent: 100px;
+	cursor: pointer;
+}
+.box-2 ul .on {
+	background: rgba(255,255,255,0.6);
+}
+
+.box-3 .prev {
+	left: 10px;
+}
+.box-3 .next {
+	right: 10px;
+}
+
+</style>
+<script type="text/javascript">
+window.onload = function(){
+	function $(param){
+		if(arguments[1] == true){
+			return document.querySelectorAll(param);
+		}else{
+			return document.querySelector(param);
+		}
+	}
+	var $box = $(".box");
+	var $box1 = $(".box-1 ul li",true);
+	var $box2 = $(".box-2 ul");
+	var $box3 = $(".box-3");
+	var $length = $box1.length;
+	
+	var str = "";
+	for(var i =0;i<$length;i++){
+		if(i==0){
+			str +="<li class='on'>"+(i+1)+"</li>";
+		}else{
+			str += "<li>"+(i+1)+"</li>";
+		}
+	}
+	$box2.innerHTML = str;
+	
+	var current = 0;
+	
+	var timer;
+	timer = setInterval(go,3000);
+	function go(){
+		for(var j =0;j<$length;j++){
+			$box1[j].style.display = "none";
+			$box2.children[j].className = "";
+		}
+		if($length == current){
+			current = 0;
+		}
+		$box1[current].style.display = "block";
+		$box2.children[current].className = "on";
+		current++;
+	}
+	
+	for(var k=0;k<$length;k++){
+		$box1[k].onmouseover = function(){
+			clearInterval(timer);
+		}
+		$box1[k].onmouseout = function(){
+			timer = setInterval(go,3000);
+		}
+	}
+	for(var p=0;p<$box3.children.length;p++){
+		$box3.children[p].onmouseover = function(){
+			clearInterval(timer);
+		};
+		$box3.children[p].onmouseout = function(){
+			timer = setInterval(go,3000);
+		}
+	}
+	
+	for(var u =0;u<$length;u++){
+		$box2.children[u].index  = u;
+		$box2.children[u].onmouseover = function(){
+			clearInterval(timer);
+			for(var j=0;j<$length;j++){
+				$box1[j].style.display = "none";
+				$box2.children[j].className = "";
+			}
+			this.className = "on";
+			$box1[this.index].style.display = "block";
+			current = this.index +1;
+		}
+		$box2.children[u].onmouseout = function(){
+			timer = setInterval(go,3000);
+		}
+	}
+	
+	$box3.children[0].onclick = function(){
+		back();
+	}
+	$box3.children[1].onclick = function(){
+		go();
+	}
+	function back(){
+		for(var j =0;j<$length;j++){
+			$box1[j].style.display = "none";
+			$box2.children[j].className = "";
+		}
+		if(current == 0){
+			current = $length;
+		}
+		$box1[current-1].style.display = "block";
+		$box2.children[current-1].className = "on";
+		current--;
+	}
+}
+</script>
+<div class="box">
+  <div class="box-1">
+    <ul>
+
+ <li> 
+ <a href="https://liuyan.www.gov.cn/2025wwzfgzbgtjy/bmdf.html?q=gs">
+  <img src="https://www.qilihe.gov.cn/picture/0/8486420a54e3418daa5fb836ef22df76.jpg" >
+        <h2>@国务院 我来说</h2>
+     </a> </li>
+
+ <li> 
+ <a href="/art/2025/8/29/art_3983_1549410.html">
+  <img src="/picture/0/s_18a8a953a3a4420f90bb54f6f2d909ae.png" >
+        <h2>公安报刊服务高质量发展推进会召开</h2>
+     </a> </li>
+
+ <li> 
+ <a href="/art/2025/8/11/art_3983_1540371.html">
+  <img src="/picture/0/s_18a8a953a3a4420f90bb54f6f2d909ae.png" >
+        <h2>人民公安报头版｜兰州榆中民警辅警争分...</h2>
+     </a> </li>
+
+ <li> 
+ <a href="/art/2025/8/10/art_3983_1540369.html">
+  <img src="/picture/0/s_1b2a990ec8764510865f2c0023aad9cb.png" >
+        <h2>海报光影 | 危难时刻 我在现场</h2>
+     </a> </li>
+
+  </ul>
+  </div>
+  <div class="box-2">
+    <ul>
+    </ul>
+  </div>
+  <div class="box-3"> <span class="prev"></span> <span class="next"></span> </div>
+</div> </div>
+        <div class="fr_news fl">
+          <div class="fr_news_h ">
+            <ul>
+              <li class="fw-b tc">
+                
+<a class="xz xxk" index="0" divname="subline" href="/col/col3983/index.html">公安要闻</a>
+                 <a class="xxk" index="1" divname="subline" href="/col/col3986/index.html">金城警讯</a>
+                 <a class="xxk" index="2" divname="subline" href="/col/col23863/index.html">重要信息转载</a>
+              </li>
+            </ul>
+          </div>
+          <div class="subline">
+            <ul>
+              
+ <li><span class="fr">12-20</span><a href="https://liuyan.www.gov.cn/2025wwzfgzbgtjy/bmdf.html?q=gs" target="_blank" class="b" title="">@国务院 我来说</a></li>
+
+ <li><span class="fr">03-17</span><a href="https://mp.weixin.qq.com/s/1aw99QxgF7DKU-3Wo4M0Hg" target="_blank" class="b" title="">小事暖人心，这就是我们身边的特警</a></li>
+
+ <li><span class="fr">03-15</span><a href="https://mp.weixin.qq.com/s/gnhisnbEO-lA9fqetwIMuA" target="_blank" class="b" title="">中川东区派出所：护企业、解民忧、办实...</a></li>
+
+ <li><span class="fr">03-14</span><a href="https://mp.weixin.qq.com/s/Nl156KWGPOhUJlmAHzohBQ" target="_blank" class="b" title="">聚焦“学医景商”难点，“331”工作...</a></li>
+
+ <li><span class="fr">03-12</span><a href="https://mp.weixin.qq.com/s/WBsGGwcn06SnKy2fha7Y7w" target="_blank" class="b" title="">“安澜铁骑”开训！一起感受风驰电掣</a></li>
+
+ <li><span class="fr">03-08</span><a href="https://mp.weixin.qq.com/s/HLswgB8KQ5E80tyTv3DD2Q" target="_blank" class="b" title="">致敬了不起的她 | 《她的光》</a></li>
+
+ <li><span class="fr">03-05</span><a href="https://mp.weixin.qq.com/s/rFocQ5xdV214VPc---thbg" target="_blank" class="b" title="">砺剑铸魂锻铁军 奋楫扬帆启新程——兰...</a></li>
+
+ <li><span class="fr">03-04</span><a href="https://mp.weixin.qq.com/s/amXZHzycQae9c3ztAH8kBA" target="_blank" class="b" title="">你好，全国两会！加油，中国！</a></li>
+
+ <li><span class="fr">03-03</span><a href="https://mp.weixin.qq.com/s/DDwav0GUm0aJUqit21o_QQ" target="_blank" class="b" title="">福满元宵 平安警随！</a></li>
+
+ <li><span class="fr">03-02</span><a href="https://mp.weixin.qq.com/s/p-6U_CW_vBDVrl7GRbywMQ" target="_blank" class="b" title="">“你们真是群众的贴心人！” 手写信背...</a></li>
+
+            </ul>
+            <ul style="display:none;">
+              
+  <li><span class="fr">03-13</span><a href="https://mp.weixin.qq.com/s/bRCe8uQjCiyS0VQzJhjlUQ" target="_blank" class="b" title="">藏匿乡村、设暗哨……兰州七里河警方直...</a></li>
+
+  <li><span class="fr">03-11</span><a href="https://mp.weixin.qq.com/s/wTZIPX5nzWBIjmCI3suC0Q" target="_blank" class="b" title="">已出现严重安全风险！官方再就“龙虾”...</a></li>
+
+  <li><span class="fr">02-28</span><a href="https://mp.weixin.qq.com/s/aAlc-7tOgQMkqUY08JTngA" target="_blank" class="b" title="">【紧急预警】就因为一个验证码，安宁区...</a></li>
+
+  <li><span class="fr">02-17</span><a href="https://mp.weixin.qq.com/s/yVmOZK_x8KZE8cQKucwo4g" target="_blank" class="b" title="">群众遗失4000余元购物卡 警民同心...</a></li>
+
+  <li><span class="fr">02-08</span><a href="https://mp.weixin.qq.com/s/MI4Vgg68oDLNLBP5v4rLUg" target="_blank" class="b" title="">西固分局“安澜.2026”春季行动再...</a></li>
+
+  <li><span class="fr">02-02</span><a href="https://mp.weixin.qq.com/s/KXtfrX45bqI_MWTiZ4vSpg" target="_blank" class="b" title="">兰州公安捣毁一处聚众赌博窝点</a></li>
+
+  <li><span class="fr">01-21</span><a href="https://mp.weixin.qq.com/s/e00LjuYwufbniz-gzmteHA" target="_blank" class="b" title="">半年“温情”全是戏！兰州城关警方紧急...</a></li>
+
+  <li><span class="fr">01-11</span><a href="https://mp.weixin.qq.com/s/70P6DZMUUShNWadcI6esCQ" target="_blank" class="b" title="">兰州警方跨七省连续追击，攻破2起电诈...</a></li>
+
+  <li><span class="fr">01-06</span><a href="https://mp.weixin.qq.com/s/idUtThI1EByWtPgOwZRCNQ" target="_blank" class="b" title="">兰州公安斩断犯罪链条 守护“舌尖安全...</a></li>
+
+  <li><span class="fr">12-27</span><a href="https://mp.weixin.qq.com/s/jEzXFF3Wb2rW0oWlXsZxKA" target="_blank" class="b" title="">豪掷7万块买5台iPhone17pr...</a></li>
+
+            </ul>
+            <ul style="display:none;">
+              
+  <li><span class="fr">07-29</span><a href="https://h.xinhuaxmt.com/vh512/share/12664134?docid=12664134&newstype=1001&d=1350068&channel=weixin" target="_blank" class="b" title="">习近平对防汛救灾工作作出重要指示</a></li>
+
+  <li><span class="fr">03-14</span><a href="https://h.xinhuaxmt.com/vh512/share/13005098?docid=13005098&newstype=1001&d=13525d9" target="_blank" class="b" title="">李强主持召开国务院常务会议</a></li>
+
+  <li><span class="fr">03-10</span><a href="https://content-static.cctvnews.cctv.com/snow-book/index.html?item_id=17989700629994020473&toc_style_id=feeds_default&share_to=wechat&track_id=493e0b0e-a078-4056-b7df-35d0487b8e28" target="_blank" class="b" title="">视频丨代表委员积极建言献策 有关部门全面记录梳理高效转办回应</a></li>
+
+  <li><span class="fr">03-10</span><a href="https://www.peopleapp.com/column/30051596913-500007385075" target="_blank" class="b" title="">第二场部长通道 回应关切真抓实干（现场·部长通道）</a></li>
+
+  <li><span class="fr">03-10</span><a href="https://content-static.cctvnews.cctv.com/snow-book/index.html?item_id=3791285225425095504&toc_style_id=feeds_default&share_to=wechat&track_id=c61b6a85-20bc-4ecf-a644-502987326643" target="_blank" class="b" title="">世界看两会丨国际人士：中国高质量发展为全球经济注入稳定性</a></li>
+
+  <li><span class="fr">03-10</span><a href="https://www.peopleapp.com/column/30051587809-500007383399" target="_blank" class="b" title="">人工智能让产业更“能”（融观察）</a></li>
+
+  <li><span class="fr">03-10</span><a href="https://content-static.cctvnews.cctv.com/snow-book/index.html?item_id=5546596795561239646&toc_style_id=feeds_default&share_to=wechat&track_id=5c826241-1db6-4947-a248-1823997d4994" target="_blank" class="b" title="">中国经济信心说丨读懂“十五五”主要指标的深意</a></li>
+
+  <li><span class="fr">03-10</span><a href="https://h.xinhuaxmt.com/vh512/share/12998093?docid=12998093&newstype=1001&d=13525d4&channel=weixin&time=1772985258837" target="_blank" class="b" title="">听民意 汇民智|“今天的反馈很全面也很务实”——全国人大代表...</a></li>
+
+  <li><span class="fr">03-09</span><a href="https://content-static.cctvnews.cctv.com/snow-book/index.html?item_id=308375160349661952&toc_style_id=feeds_default&share_to=wechat&track_id=adbdccb6-1254-4cc5-b237-c50e0ec9a4ef" target="_blank" class="b" title="">视频丨开启民意“直通车” 两会“旁听员”让基层声音听得到、落...</a></li>
+
+  <li><span class="fr">03-08</span><a href="https://h.xinhuaxmt.com/vh512/share/12995034?docid=12995034&newstype=1001&d=13525d2&channel=weixin" target="_blank" class="b" title="">两会新华视点｜“十五五”规划纲要草案的新指标、新看点</a></li>
+
+            </ul>
+
+          </div>
+        </div>
+        <div class="se_news fl bor1 mt-10 mr-10 ">
+          <div class="se_news_t fl ">
+            <ul>
+                <li><a href="/col/col3985/index.html">最新信息</a></li>
+            </ul>
+          </div>
+          <div class="se_news_c fl" style="padding-left:5px;">
+            <ul>
+              
+<li><a href="https://mp.weixin.qq.com/s/BIkRz3MVtRjRHSkemIBQyQ" title="">维护消费者权益 公安机关在行动</a></li>
+
+<li><a href="https://mp.weixin.qq.com/s/ulSp0Wj1Jxntx6a2625shQ" title="">刘建勋调研全市主动创稳工作</a></li>
+
+<li><a href="https://mp.weixin.qq.com/s/OsfdPszhfrHAuU2ZLVnk9g" title="">恭喜！兰州公安1名个人、1个集体荣获...</a></li>
+
+<li><a href="https://mp.weixin.qq.com/s/Li2K6G1631Wi8gEsqXFBfg" title="">人民公安报丨驾驶人酒后肇事骗保“翻车...</a></li>
+
+<li><a href="https://mp.weixin.qq.com/s/JnYR17Byi4mSQd9l3ePErQ" title="">人民公安报丨数据驱动筋骨强 警网融合...</a></li>
+
+
+            </ul>
+          </div>
+        </div>
+        <div class="se_news fl bor1 mt-10 mr-10 " style="width:338px;">
+          <div class="se_news_t fl " style="width:330px;">
+            <ul>
+                <li><a href="/col/col4011/index.html">政府信息公开指引</a></li>
+            </ul>
+          </div>
+          <div class="se_news_c2 fl mt-5" style="width:324px;">
+            <ul>
+              <script src="/script/0/2107051517161834.js"></script>
+            </ul>
+          </div>
+        </div>
+        <div class="se_news fl bor1 mt-10 ">
+          <div class="se_news_t2 fl gsgg">
+            <ul>
+              <li>
+                  <li><a href="/col/col3984/index.html">公示公告</a></li>
+              </li>
+            </ul>
+          </div>
+          <div class="se_news_c fl zwztdiv" style="padding-left:5px;">
+            <ul>
+
+              
+<li><a href="/art/2025/7/4/art_3984_1522521.html" title="">兰州市公安局2025年面向社会公开招...</a></li>
+
+<li><a href="/art/2026/3/23/art_3984_1689250.html" title="">关于宣布三名外国人居留许可作废的公告</a></li>
+
+<li><a href="https://mp.weixin.qq.com/s/LAI3GNrzBg7ReS3CB3eFbw" title="">关于全面开展无人驾驶航空器备案和安全...</a></li>
+
+<li><a href="https://mp.weixin.qq.com/s/riLHt-v8oTV6pzJmZyi-Pw" title="">全省公安机关优秀警属和成绩突出女民警...</a></li>
+
+<li><a href="https://mp.weixin.qq.com/s/sgMO7cz6Bl8X3pyiEm3Kfw" title="">关于全面开展无人驾驶航空器备案和安全...</a></li>
+
+
+            </ul>
+          </div>
+        </div>
+        <div class="">
+          <a href="/col/col23775/index.html"><img style="width: 1000px;margin-top: 10px;"
+              src="/picture/0/2302152101005522857.jpg" /></a>
+        </div>
+<div class="">
+          <a href="/col/col24563/index.html"><img style="width: 1000px;margin-top: 10px;"
+              src="/picture/0/2601131031410875306.png" /></a>
+        </div>
+        <div class="">
+          <a href="https://www.gov.cn/zhengce/zczhjd/"><img style="width: 496px;margin-top: 10px; height: 100px;"
+              src="/picture/0/2308011039323791396.jpg" /></a>
+ <a href="//www.gansu.gov.cn/gsszf/c117463/202409/173987777.shtml"><img style="width: 496px;margin-top: 10px; height: 100px;    margin-left: 8px;"
+              src="/picture/0/2409141544012096937.png" /></a>
+        </div>
+        <!--办事大厅开始-->
+        <div class=" bor1 fl mt-10" id="bsdt">
+          <div class="con_t">
+            <div class="con_t_t1">
+              <div class="fl con_t_n1"></div>
+              <form name="PspFormSearch" id="PspFormSearch">
+                <input type="hidden" name="siteId" id="siteId" value="3" />
+                <input type="hidden" name="templateName" id="templateName" value="首页搜索模板" />
+                <input type="hidden" name="detailTemplate" id="detailTemplate" value="default_detail_template" />
+                <input type="hidden" name="searchMode" id="searchMode" value="equal" />
+                <!--<div class="con_t_s1 fl" style="width:150px; margin-left:20px;">
+              <input name="waterId" class="search_i fl" value="请输入流水号" onClick="clearDefaultText(this,'请输入流水号')" type="text">
+            </div>
+            <div class="con_t_s1 fl">
+              <input name="waterm" class="search_i fl" value="请输入密码" onClick="clearDefaultText(this,'请输入密码')" type="text">
+              <input class="search_s fl" style="height:20px" id="search_s" value="" type="submit">
+            </div>-->
+              </form>
+              <script type="text/javascript">
+                $(function () {
+                  //默认所有表单都列表认证
+                  $('form[name=PspFormSearch]').validate({
+                    submitHandler: function (form) {
+                      //ajax submit的参数
+                      var options = {
+                        beforeSubmit: function () {
+                          $(form).find('input:submit').attr('disabled', true);
+                        },
+                        success: function (responseText, statusText) {
+                          $(form).find('input:submit').attr('disabled', false);
+                          if (statusText == 'success') {
+                            if (responseText.success) {
+                              window.open(responseText.msg);
+                              $(form)[0].reset();
+                              var src = $(form).find('#authCode_img').attr('src');
+                              $(form).find('#authCode_img').removeAttr('src').attr('src', src);
+                            }
+                            else {
+                              alert('操作失败！' + responseText.msg, null, null, null, null);
+                            }
+                          } else {
+                            alert('操作失败！' + responseText.msg, null, null, null, null);
+                          }
+                        },
+                        url: 'http://gaj.lanzhou.gov.cn//PspForm.do?method=searchService',
+                        type: "post",
+                        dataType: 'json'
+                      };
+                      $(form).ajaxSubmit(options);
+                      return false;
+                    }
+                  });
+                });
+              </script>
+            </div>
+            <div class="con_t_p1 fl mt-10 ml-10" style="border: 1px solid #ccc;">
+              <!-- <a class="bs" href="https://gs.122.gov.cn/"></a>-->
+              <a href="https://zwfw.gat.gansu.gov.cn/gsgazw/"><img
+                  src="/picture/0/2111051142357956814.jpg" /></a>
+            </div>
+            <!--<div class="con_c_n1 fl mt-10 ml-10 bor1">
+          <div class="con_c_n1_t fl">电话查询</div>
+          <div class="con_c_n1_t2 fl">
+        <form name="SearchPhone" id="SearchPhone" action="/Services/PhoneSearchResult.jsp">
+        <div>请选择查询部门所在市州：</div>
+        <div>
+        <dl id="UrbanDl">
+          <select id="Urban" name="Urban" onChange="selectSitePhoneCatalog(this.value,this.name)">
+          <option value="">请选择</option>
+          <option value="80000000">全省看守所</option>
+          <option value="624046">嘉峪关市公安局</option>
+          <option value="623943">甘南州公安局</option>
+          <option value="623882">金昌市公安局</option>
+          <option value="623714">庆阳市公安局</option>
+          <option value="613532">平凉市公安局</option>
+          <option value="613368">定西市公安局</option>
+          <option value="613213">临夏州公安局</option>
+          <option value="613073">武威市公安局</option>
+          <option value="612939">张掖市公安局</option>
+          <option value="612730">陇南市公安局</option>
+          <option value="612565">天水市公安局</option>
+          <option value="612415">酒泉市公安局</option>
+          <option value="611583">白银市公安局</option>
+          <option value="624076">兰州市公安局</option>
+          <option value="620100">甘肃省公安厅</option>
+          </select>
+        </dl>
+          <dl id="PoliceStationDl">
+          <select id="PoliceStation" name="PoliceStation">
+          <option value="">请选择</option>
+          </select>
+        </dl>
+        <dl id="BureauDl" style="margin-left:4px;">
+          <select id="Bureau" name="Bureau" onChange="selectSitePhoneCatalog(this.value,this.name)">
+          <option value="">请选择</option>
+          </select>
+        </dl>
+          <dl style="margin-left:4px;">
+          <input type="submit" value=" " class="dhcxBtn"/>
+        </dl>
+        </div>
+       <div class="clearfix"></div>
+   
+        <div>选择您想要查询的地区后，点击查询按钮进行查询</div>
+        </form>
+        <script type="text/javascript">
+                //加载的时候就显示站点下面的市局电话选择
+        $(function(){
+                    var siteId = $('form[name=SearchPhone]').find('input[name=siteId]').val() ;
+                    var urlAction  = "/infoArticle.do?method=loadSelect&siteId="+siteId;                                  
+                    $.getJSON(urlAction, function(responseText){
+                       if(responseText.success){
+                        var html = responseText.data.html ;  
+                        if(html!=null && html!=""){
+                          $("select[name=Urban]").html(html);    
+                        }                                              
+                       }
+                    });  
+                                      
+                });
+                  
+                //选择
+        function selectSitePhoneCatalog(Value,Type){
+                    var SiteId = $('form[name=SearchPhone]').find('input[name=siteId]').val() ;
+                    $('form[name=SearchPhone]').find('input[name=siteId]').val(SiteId) ;
+                    var actionUrl = "/infoArticle.do?method=getSitePhoneCatalog&parentId="+Value+"&Type="+Type+"&SiteId="+SiteId;  
+                    $.getJSON(actionUrl, function(responseText){
+                      if(responseText.success){
+                        var html = responseText.data.html;
+                        
+                        var isEmpty = responseText.data.isEmpty;                        
+                        if(Type=="Urban"){
+                          //$("#PoliceStationDl").css("display","none");
+                          $("#PoliceStation").html("<option value='' selected>请选择</option>");
+                          $("#Bureau").html(html);
+                                                                          
+                        }    
+                        if(Type=="Bureau"){
+                          $("#PoliceStation").html(html);
+                        }
+                      }
+                    });
+                } 
+            </script>
+          </div>
+        </div>-->
+            <div class="con_c_n2 fl bor1  mt-10 ml-10">
+              <ul>
+                <li class="t "><a>警务查询</a></li>
+            <li class="l mt-10 ml-10" style="width:125px"><a href="http://gs.122.gov.cn/">驾驶人信息查询</a></li>
+            <li class="l mt-10 ml-10" style="width:115px"><a href="http://gs.122.gov.cn/">机动车信息查询</a></li>
+            <li class="l ml-10" style="width:125px"><a href="http://gs.122.gov.cn/">违法代码查询</a></li>
+            <li class="l ml-10" style="width:115px"><a href="http://gs.122.gov.cn/">机动车违法查询</a></li>
+            <li class="b ml-10 " style="width:auto"><a href="https://zwfw.gat.gansu.gov.cn/gsgazw/templates/pages/chaxun/index/">身份证办理进度查询</a></li>
+            <li class="b ml-10" style="width:auto"><a href="https://zwfw.gat.gansu.gov.cn/gsgazw/templates/pages/chaxun/index/">新生儿重名查询</a></li>
+            <li class="e ml-10" onClick="window.open('https://zwfw.gat.gansu.gov.cn/gsgazw/templates/pages/chaxun/index/')"></li>
+              </ul>
+            </div>
+            <div class="con_c_n1 fl mt-10 ml-10 bor1" style="width:327px; height:170px; overflow:hidden">
+              <div class="con_c_n1_t fl " style="width:302px;">
+<div>热点服务</div>
+</div>
+              <div class="con_c_n3">
+                 <ul class=" g  mt-5">
+                    <li><a href="//zwfw.gat.gansu.gov.cn/gsgazw/instruction?taskHandleitem=&taskCode=11620000013897638U2622009013001&taskHandleItem=&projectNo=">临时身份证明</a></li>
+                    <li><a href="//zwfw.gat.gansu.gov.cn/gsgazw/instruction?taskHandleitem=11620000013897638U262200900300001&taskCode=11620000013897638U2622009003000&taskHandleItem=&projectNo=">开具无犯罪记录证明</a></li>
+                    <li><a href="http://61.178.81.183/jb/">道路交通违法视频举报平台</a></li>
+                </ul>
+                <ul class=" q  mt-5">
+                    <li><a href="//zwfw.gat.gansu.gov.cn/gsgazw/instruction?taskHandleitem=11620100013898200M300010903600009&taskCode=11620100013898200M3000109036000&taskHandleItem=&projectNo=">申请变更机动车使用性质</a></li>
+                    <li><a href="//zwfw.gat.gansu.gov.cn/gsgazw/instruction?taskHandleitem=11620000013897638U200200900100001&taskCode=11620000013897638U2002009001000&taskHandleItem=&projectNo=">国际联网备案</a></li>
+                    <li><a href="//zwfw.gat.gansu.gov.cn/gsgazw/instruction?taskHandleitem=11620200013908237G362100901200001&taskCode=11620200013908237G3621009012000&taskHandleItem=&projectNo=">民用爆炸物品生产企业备案</a></li>
+                </ul>
+              </div>
+
+            </div>
+            <div class="con_c_n1 fl mt-10 ml-10 bor1" style="height:170px;width: 307px;">
+              <div class="con_c_n1_t fl">
+                
+<div>在线办理</div>
+
+              </div>
+              <div class="con_c_n4 fl">
+              <ul class="b">
+                  <li  style="margin-right:12px">
+                     <a class="p1" href="https://gs.122.gov.cn/"></a>
+                     <a class="t tc" href="https://gs.122.gov.cn/">交管业务</a>
+                  </li>
+                  <li >
+                     <a class="p3" href="https://zwfw.gat.gansu.gov.cn/gsgazw/templates/pages/banshi/index"></a>
+                     <a class="t tc" href="https://zwfw.gat.gansu.gov.cn/gsgazw/templates/pages/banshi/index">我要办事</a>
+
+                  </li>
+              </ul>
+              <ul class="s mt-10">
+                  <li class="b mr-5"><a class="tc" href="/col/col3991/index.html">办事指南</a></li>
+                  <li class="z"><a class="tc" href="/col/col3992/index.html">表格下载</a></li>
+              </ul>
+          </div>
+            </div>
+            <div class="se_news fl bor1 mt-10  ml-10" style=" width:318px;height:170px; overflow:hidden ">
+              <div class="se_news_t2 fl ">
+                <ul>
+                  <li class="r">
+                    <a index="0" divname="wdtsdiv" xzname="xz2" class="xz2 xxk" href="/col/col3994/index.html">热点问答</a>
+
+                  </li>
+                </ul>
+              </div>
+              <div class="se_news_c p-5 fl wdtsdiv" style="width:310px;">
+                <ul>
+
+                  
+ <li style="line-height:28px; height:28px; background-position-y:1px; width:300px;"><a style="line-height:28px; width:auto;" href="https://mp.weixin.qq.com/s/nBi1hmLPnUWTrX6Qpg8E6A" title="">车被堵了怎么办？用“交管12123”...</a></li>
+
+ <li style="line-height:28px; height:28px; background-position-y:1px; width:300px;"><a style="line-height:28px; width:auto;" href="/art/2025/3/13/art_3994_1678008.html" title="">兰州市考区考生注意！“省考”笔试期间...</a></li>
+
+ <li style="line-height:28px; height:28px; background-position-y:1px; width:300px;"><a style="line-height:28px; width:auto;" href="/art/2024/6/30/art_3994_1367169.html" title="">暑假未成年人办理出入境证件攻略请戳这...</a></li>
+
+ <li style="line-height:28px; height:28px; background-position-y:1px; width:300px;"><a style="line-height:28px; width:auto;" href="/art/2023/11/30/art_3994_1295398.html" title="">恢复驾驶资格考试可以跨省办理吗？</a></li>
+
+                </ul>
+              </div>
+            </div>
+            <div class="se_news fl bor1 mt-10  ml-10" style=" width:318px;height:170px; overflow:hidden ">
+              <div class="se_news_t2 fl ">
+                <ul>
+                  <li class="r">
+                    <a index="1" divname="wdtsdiv" xzname="xz2" class="xxk" href="/col/col3987/index.html">警方提示</a>
+
+                  </li>
+                </ul>
+              </div>
+              <div class="se_news_c p-5 fl wdtsdiv" style="width:310px;">
+
+                <ul>
+
+                  
+ <li style="line-height:28px; height:28px; background-position-y:1px; width:300px;"><a style="line-height:28px; width:auto;" href="https://mp.weixin.qq.com/s/luFyEI4qjD7kzVDUuZ-AQA" title="">【紧急预警】真人真事：一封 “邀请函...</a></li>
+
+ <li style="line-height:28px; height:28px; background-position-y:1px; width:300px;"><a style="line-height:28px; width:auto;" href="https://mp.weixin.qq.com/s/PUzNwRWF7olozb62aZvu4A" title="">元宵月圆人团圆，这份“平安馅”汤圆请...</a></li>
+
+ <li style="line-height:28px; height:28px; background-position-y:1px; width:300px;"><a style="line-height:28px; width:auto;" href="https://mp.weixin.qq.com/s/yf92IBb4Qdle1XddqPB4Rg" title="">开学啦！这份交通安全提示请查收！</a></li>
+
+ <li style="line-height:28px; height:28px; background-position-y:1px; width:300px;"><a style="line-height:28px; width:auto;" href="https://mp.weixin.qq.com/s/Jdu6axqMHAN47k8l2ZlZwA" title="">让速不让道！小心“受害人”变“责任人...</a></li>
+
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--办事大厅结束-->
+
+        <!--交流互动开始-->
+        <div class=" bor1 fl mt-10" style="padding:1px; padding-bottom:0;">
+          <div class="con_t">
+            <div class="con_t_t1">
+              <div class="fl con_t_n2 jlhd active"></div>
+              <div class="fl con_t_n3 jywh"></div>
+            </div>
+
+            <!--交流互动选项卡内容开始-->
+            <div class="jlhdDiv">
+              <!--网上互动按钮开始-->
+              <div class="jl_b fl  ">
+                <ul>
+                     <!--<li style="margin-top:25px;">
+   <a class="a1" href="http://www.lanzhou.gov.cn/lm/front/mailwrite.jsp?sysid=004&sess=0&groupid=0055"></a>
+   </li>-->
+        <li style="margin-top:25px;">
+        <a class="a3" href="http://www.lanzhou.gov.cn/lm/front/mailwrite.jsp?sysid=004&sess=0&groupid=0055"></a>
+        </li>
+        <li style="margin-top:25px;">
+        <a class="a2 ml-8" href="http://www.lanzhou.gov.cn/lm/front/mailwrite.jsp?sysid=004&sess=0&groupid=0055"></a>
+        </li>
+        <!--<li><a class="a4 ml-8" href="http://www.lanzhou.gov.cn/lm/front/mailwrite.jsp?sysid=004&sess=0&groupid=0055"></a></li>-->
+        <li><a class="a5" href="http://www.lanzhou.gov.cn/lm/front/mailwrite.jsp?sysid=004&sess=0&groupid=0055"><img src="/picture/0/2403011417293551408.jpg" alt=""></a></li>
+        <li><a class="a8 ml-8" href="http://www.lanzhou.gov.cn/lm/front/mailwrite.jsp?sysid=004&sess=0&groupid=0055"></a></li>
+                </ul>
+              </div>
+              <!--网上互动按钮结束-->
+              <!--新浪微博开始-->
+              <div class="jl_s fl" style="width: 660px;">
+                <iframe width="100%" height="210" class="share_self" frameborder="0" scrolling="no"
+                  src="//widget.weibo.com/weiboshow/index.php?language=&width=0&height=550&fansRow=2&ptype=4&speed=100&skin=1&isTitle=0&noborder=1&isWeibo=4&isFans=0&uid=1668285003&verifier=1b23f5ad&&colors=d6f3f7,f9eacb,666666,0082cb,ecfbfd&dpc=1"></iframe>
+              </div>
+              <!--新浪微博结束-->
+              <!--公安微博开始-->
+              <div class="jl_v fl  mt-10" style="display:none;"> </div>
+              <!--公安微博结束-->
+            </div>
+            <!--交流互动选项卡内容结束-->
+
+            <!--警营文化选项卡内容开始-->
+            <div class="jywhDiv" style="display:none;">
+              <!--警营风采开始-->
+              <div class="jl_v fl  mt-10 ml-10 bor1" style="width:298px; height:210px">
+                <div class="jl_v_t fl  " style="width:298px;">
+                  <ul>
+                    <li style="width:250px;">
+                      <a class="jyfc" href="/col/col20697/index.html">警营风采</a>
+<li class="mt-10">
+        
+        <a class="more fr" href="/col/col20697/index.html"></a>
+       </li>
+                    </li>
+                    <li class="mt-10">
+                      <a class="jyfc" href="/col/col20697/index.html">警营风采</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="jy_bg">
+                  <ul class="zx_bg">
+
+                    
+<li><a href="https://mp.weixin.qq.com/s/JScmsVkXn7xTBR1BoEG5lA">人民公安报丨排忧解难 点燃警营拼搏新...</a></li>
+
+<li><a href="https://mp.weixin.qq.com/s/dz6P0bs1YRB-r0fQaRL2_A">致敬藏蓝·暖心共建|兰州公安与“爱在...</a></li>
+
+<li><a href="https://mp.weixin.qq.com/s/-hwzAyHPGN2M9toJPldy8Q">藏在“一秒“里的秘密，做好这瞬间，护...</a></li>
+
+<li><a href="https://mp.weixin.qq.com/s/7qW2l4LXqV11uLKGBArynw">陇警先锋丨周思军：10年的“橄榄绿”...</a></li>
+
+<li><a href="https://mp.weixin.qq.com/s/1ny5ZJZT9X_2UCbvyfwtog">扎根瓦罕走廊 他们用青春守护雪域边关</a></li>
+
+
+                  </ul>
+                </div>
+              </div>
+              <!--警营风采结束-->
+              <!---公安文苑---->
+              <div class="jl_s fl " style="width:416px; height:220px">
+                <div class="jw__t1 fl">
+                   <a index="0" divname="gsdiv" class="xz xxk" href="/col/col3997/index.html">公安文苑</a>
+
+
+                </div>
+                <div class="jw_m fl mt-5 gsdiv">
+                  <ul class="mt-10">
+                    
+<li><a href="https://mp.weixin.qq.com/s/yjdhIIvTvRuSm_dbD_5hPA">致敬了不起的她丨杨波：高墙内的铿锵玫...</a></li>
+
+<li><a href="https://mp.weixin.qq.com/s/r1f5IzILKz5vv4SmrdhMbA">今日雨水｜春雨至 万物生</a></li>
+
+<li><a href="https://mp.weixin.qq.com/s/_VW8LCWL73O9W7nIZvkcqw">新春作文挑战丨《想家吗 可怎么会不想...</a></li>
+
+<li><a href="https://mp.weixin.qq.com/s/EJOlmWymD0TQ_igKMncDqg">今天小年 | 过小年迎大年，福气满满...</a></li>
+
+<li><a href="https://mp.weixin.qq.com/s/Jc5Kz7UBZKWMDRkqV0z_gQ">今日立春 | 春天，你好！</a></li>
+
+                  </ul>
+                </div>
+
+              </div>
+              <!---公安文苑--->
+
+            </div>
+            <!--警营文化选项卡内容结束-->
+          </div>
+        </div>
+        <!--交流互动结束-->
+
+        <div class=" clearDiv"></div>
+        <!--友情链接开始-->
+        <div id="link" class="fl mt-10">
+          <div class="link_n fl">
+            <div class="l mt-10 fl"></div>
+            <div class="r" style="width:900px;">
+              <ul>
+                <li class="MenuCC">
+                  <a>全省公安网站群</a>
+                  <div class="dhArea">
+                    <ul>
+                      <TABLE WIDTH=100% CELLSPACING=0 CELLPADDING=0 BORDER=0>
+<TR>
+<TD>
+ <li><a href="http://gat.gansu.gov.cn/">甘肃省公安厅</a> </li>
+</TD><TD>
+ <li><a href="http://gaj.lanzhou.gov.cn/">兰州市公安局</a> </li>
+</TD><TD>
+ <li><a href="http://gaj.jcs.gov.cn/">金昌市公安局</a> </li>
+</TD><TD>
+ <li><a href="https://www.tianshui.gov.cn/gaj/">天水市公安局</a> </li>
+</TD><TD>
+ <li><a href="http://wwsgaj.gswuwei.gov.cn/">武威市公安局</a> </li>
+</TD><TD>
+ <li><a href="http://www.zhangye.gov.cn/sgaj/index.html">张掖市公安局</a> </li>
+</TD><TD>
+ <li><a href="http://gaj.jiuquan.gov.cn/">酒泉市公安局</a> </li>
+</TD><TD>
+ <li><a href="http://gaj.zgqingyang.gov.cn/">庆阳市公安局</a> </li>
+</TD></TR>
+<TR>
+<TD>
+ <li><a href="http://gaj.dingxi.gov.cn/">定西市公安局</a> </li>
+</TD><TD>
+ <li><a href="http://gaj.longnan.gov.cn/">陇南市公安局</a> </li>
+</TD><TD>
+ <li><a href="http://www.jyg.gov.cn/gaj/">嘉峪关公安局</a> </li>
+</TD>
+</TR></TABLE>
+                    </ul>
+                  </div>
+                </li>
+                <li class="MenuCC">
+                  <a>全国公安门户网站</a>
+                  <div class="dhArea">
+                    <ul>
+                      <TABLE WIDTH=100% CELLSPACING=0 CELLPADDING=0 BORDER=0>
+<TR>
+<TD>
+<li><a href="https://www.mps.gov.cn/">公安部</a> </li>
+</TD><TD>
+<li><a href="http://gaj.beijing.gov.cn/">北京市公安局</a> </li>
+</TD><TD>
+<li><a href="http://ga.tj.gov.cn/">天津市公安局</a> </li>
+</TD><TD>
+<li><a href="http://gat.hebei.gov.cn/">河北省公安厅</a> </li>
+</TD><TD>
+<li><a href="http://gat.shanxi.gov.cn/#/home">山西省公安厅</a> </li>
+</TD><TD>
+<li><a href="http://gat.nmg.gov.cn/">内蒙古自治区</a> </li>
+</TD><TD>
+<li><a href="http://gat.ln.gov.cn/">辽宁省公安厅</a> </li>
+</TD><TD>
+<li><a href="http://gat.jl.gov.cn/">吉林省公安厅</a> </li>
+</TD></TR>
+<TR>
+<TD>
+<li><a href="https://gaj.sh.gov.cn/index.html">上海市公安局</a> </li>
+</TD><TD>
+<li><a href="http://gat.jiangsu.gov.cn/">江苏省公安厅</a> </li>
+</TD><TD>
+<li><a href="http://gat.zj.gov.cn/">浙江省公安厅</a> </li>
+</TD><TD>
+<li><a href="http://gat.ah.gov.cn/">安徽省公安厅</a> </li>
+</TD><TD>
+<li><a href="http://gat.fujian.gov.cn/">福建省公安厅</a> </li>
+</TD><TD>
+<li><a href="http://gat.jiangxi.gov.cn/">江西省公安厅</a> </li>
+</TD><TD>
+<li><a href="http://gat.shandong.gov.cn/">山东省公安厅</a> </li>
+</TD><TD>
+<li><a href="http://hnga.henan.gov.cn/">河南省公安厅</a> </li>
+</TD></TR>
+<TR>
+<TD>
+<li><a href="http://gat.hubei.gov.cn/">湖北省公安厅</a> </li>
+</TD><TD>
+<li><a href="http://gat.hunan.gov.cn/">湖南省公安厅</a> </li>
+</TD><TD>
+<li><a href="http://gdga.gd.gov.cn/">广东省公安厅</a> </li>
+</TD><TD>
+<li><a href="http://gat.gxzf.gov.cn/">广西壮族自治区</a> </li>
+</TD><TD>
+<li><a href="http://ga.hainan.gov.cn/">海南省公安厅</a> </li>
+</TD><TD>
+<li><a href="http://gaj.cq.gov.cn/">重庆市公安局</a> </li>
+</TD><TD>
+<li><a href="http://gat.sc.gov.cn/">四川省公安厅</a> </li>
+</TD><TD>
+<li><a href="http://gat.guizhou.gov.cn/">贵州省公安厅</a> </li>
+</TD></TR>
+<TR>
+<TD>
+<li><a href="http://gonganting.yn.gov.cn/">云南省公安厅</a> </li>
+</TD><TD>
+<li><a href="http://gat.shaanxi.gov.cn/">陕西省公安厅</a> </li>
+</TD><TD>
+<li><a href="http://gat.gansu.gov.cn/">甘肃省公安厅</a> </li>
+</TD><TD>
+<li><a href="http://gat.qinghai.gov.cn/stmhwz/">青海省公安厅</a> </li>
+</TD><TD>
+<li><a href="http://gat.nx.gov.cn/">宁夏回族自治区</a> </li>
+</TD><TD>
+<li><a href="http://gat.xinjiang.gov.cn/">新疆维吾尔自治区</a> </li>
+</TD>
+</TR></TABLE>
+                    </ul>
+                  </div>
+                </li>
+
+                <li class="MenuCC">
+                  <a>省级机关门户网站</a>
+                  <div class="dhArea">
+                    <ul>
+                      <TABLE WIDTH=100% CELLSPACING=0 CELLPADDING=0 BORDER=0>
+<TR>
+<TD>
+<li><a href="http://www.gansu.gov.cn/">省人民政府</a> </li>
+</TD><TD>
+<li><a href="http://fzgg.gansu.gov.cn/">省发展改革委</a> </li>
+</TD><TD>
+<li><a href="http://jyt.gansu.gov.cn/">省教育厅</a> </li>
+</TD><TD>
+<li><a href="https://kjt.gansu.gov.cn/">省科技厅</a> </li>
+</TD><TD>
+<li><a href="http://gxt.gansu.gov.cn/">省工信委</a> </li>
+</TD><TD>
+<li><a href="http://gat.gansu.gov.cn/">省公安厅</a> </li>
+</TD><TD>
+<li><a href="http://mzt.gansu.gov.cn/">省民政厅</a> </li>
+</TD><TD>
+<li><a href="http://sft.gansu.gov.cn/">省司法厅</a> </li>
+</TD></TR>
+<TR>
+<TD>
+<li><a href="http://czt.gansu.gov.cn/">省财政厅</a> </li>
+</TD><TD>
+<li><a href="http://zrzy.gansu.gov.cn/">省自然资源厅</a> </li>
+</TD><TD>
+<li><a href="http://sthj.gansu.gov.cn/">省生态环境厅</a> </li>
+</TD><TD>
+<li><a href="http://zjt.gansu.gov.cn/">省建设厅</a> </li>
+</TD><TD>
+<li><a href="http://jtys.gansu.gov.cn/">省交通运输厅</a> </li>
+</TD><TD>
+<li><a href="http://slt.gansu.gov.cn/">省水利厅</a> </li>
+</TD><TD>
+<li><a href="http://nync.gansu.gov.cn/">省农业农村厅</a> </li>
+</TD><TD>
+<li><a href="http://swt.gansu.gov.cn/">省商务厅</a> </li>
+</TD></TR>
+<TR>
+<TD>
+<li><a href="http://wsjk.gansu.gov.cn/">省卫生健康委</a> </li>
+</TD><TD>
+<li><a href="http://rst.gansu.gov.cn/">省人社厅</a> </li>
+</TD><TD>
+<li><a href="http://sjt.gansu.gov.cn/">省审计厅</a> </li>
+</TD>
+</TR></TABLE>
+                    </ul>
+                  </div>
+                </li>
+                <li class="MenuCC">
+                  <a>市级政府门户网站</a>
+                  <div class="dhArea">
+                    <ul>
+                      <TABLE WIDTH=100% CELLSPACING=0 CELLPADDING=0 BORDER=0>
+<TR>
+<TD>
+<li><a href="http://www.lanzhou.gov.cn/">兰州市政府</a> </li>
+</TD><TD>
+<li><a href="http://www.tianshui.gov.cn/">天水市政府</a> </li>
+</TD><TD>
+<li><a href="http://jyg.gov.cn/">嘉峪关市政府</a> </li>
+</TD><TD>
+<li><a href="https://www.gswuwei.gov.cn/">武威市政府</a> </li>
+</TD><TD>
+<li><a href="http://www.jcs.gov.cn/">金昌市政府</a> </li>
+</TD><TD>
+<li><a href="http://www.jiuquan.gov.cn/">酒泉市政府</a> </li>
+</TD><TD>
+<li><a href="http://www.zhangye.gov.cn/">张掖市政府</a> </li>
+</TD><TD>
+<li><a href="http://www.zgqingyang.gov.cn/">庆阳市政府</a> </li>
+</TD></TR>
+<TR>
+<TD>
+<li><a href="http://www.pingliang.gov.cn/">平凉市政府</a> </li>
+</TD><TD>
+<li><a href="http://www.baiyin.gov.cn/">白银市政府</a> </li>
+</TD><TD>
+<li><a href="http://www.dingxi.gov.cn/">定西市政府</a> </li>
+</TD><TD>
+<li><a href="https://www.longnan.gov.cn/">陇南市政府</a> </li>
+</TD><TD>
+<li><a href="http://www.linxia.gov.cn/">临夏州政府</a> </li>
+</TD><TD>
+<li><a href="http://www.gnzrmzf.gov.cn/">甘南州政府</a> </li>
+</TD>
+</TR></TABLE>
+                    </ul>
+                  </div>
+                </li>
+                <li class="MenuCC">
+                  <a>新闻媒体网站</a>
+                  <div class="dhArea">
+                    <ul>
+                      <TABLE WIDTH=100% CELLSPACING=0 CELLPADDING=0 BORDER=0>
+<TR>
+<TD>
+<li><a href="http://www.gov.cn/">中国政府网</a> </li>
+</TD><TD>
+<li><a href="https://www.cctv.com/">中国网络电视台</a> </li>
+</TD><TD>
+<li><a href="http://www.people.com.cn/">人民网</a> </li>
+</TD><TD>
+<li><a href="http://www.xinhuanet.com/">新华网</a> </li>
+</TD><TD>
+<li><a href="http://www.wenming.cn/">中国文明网</a> </li>
+</TD><TD>
+<li><a href="http://www.godppgs.gov.cn/">甘肃文明网</a> </li>
+</TD><TD>
+<li><a href="http://www.cpd.com.cn/">中国警察网</a> </li>
+</TD>
+</TR></TABLE>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+          <div class="clearDiv"></div>
+        </div>
+        <!--友情链接结束-->
+      </div>
+      <div class="clearDiv" style="margin-top:47px;"></div>
+      <!--main end-->
+
+      <!--更改 20180804 gh   -->
+      <script src="/script/0/2107051138162586.js"></script>
+
+
+<!--飘窗-->
+<script src="/script/0/2107071032489880.js"></script><script src="/script/0/2107071024108424.js"></script>
+
+<!--网站年度报表-->
+<div style="display: block;position: fixed;_position: absolute;right:5px;bottom: 20%;z-index: 2147483645;">
+
+
+<a style="float: none;" href="/col/col22186/index.html" target="_blank">
+<img  src="/picture/0/2201201603172808180.jpg" width="100">
+</a>
+</div>
+
+      <script>
+        var imgstr = '';
+        var imgobj = document.getElementsByTagName("img");
+        for (i = 0; i < imgobj.length; i++) {
+          var imgurl = imgobj[i].src;
+          if (imgurl.match("upload.gsgaw")) {
+            imgurl = imgurl.replace("upload.gsgaw.gov.cn", "gat.gansu.gov.cn:81");
+            imgobj[i].src = imgurl
+          }
+        }
+      </script>
+    </div>
+
+</div>
+<!-- visitcount Begin --><iframe src='./module/visitcount/visit.jsp?type=1&i_webid=35&i_columnid=3832' name="vishidden" id="vishidden" frameborder="0" style="width:0; height:0; display:none"></iframe><!-- visitcount End -->
+<a href='http://www.hanweb.com' style='display:none'>Produced By 大汉网络 大汉版通发布系统</a>
+<script language="javascript" src='/script/pagecontrol.js'></script><script language="javascript" src='/script/web_front.js'></script>
+</body>
+
+<script type="text/javascript" src="/images/2652/idangerous.swiper.min.js"></script>
+  <script type="text/javascript" src="/images/2652/public.js"></script>
+  <script type="text/javascript" src="/images/2652/accordion.js"></script>
+  <script type="text/javascript" src="/images/2652/index0321.js"></script>
+
+<style>
+  /*微博*/
+  .gov_weixin_share {
+    position: absolute;
+    width: 110px;
+    font-size: 12px;
+    top: 236px;
+    right: 0;
+  }
+
+  .closeBtn {
+    background-color: #FFFFFF;
+    padding-left: 5px;
+    font-size: 12px;
+    line-height: 22px;
+    color: #999999;
+    text-align: left;
+    cursor: pointer;
+  }
+</style>
+
+<div class="gov_weixin_share" style="right:10px;">
+  <div style="margin-top:20px;"><a href="https://zwfw.gat.gansu.gov.cn/gsgazw/"><img title="甘肃省公安厅便民服务" alt="甘肃省公安厅便民服务"
+        src="/images/2652/bmfwpt.jpg" IGNOREAPD="1"></a>
+    <div class="closeBtn">关闭</div>
+  </div>
+</div>
+<script>
+  $(function () {
+    //右侧浮窗
+    function rigScroll() {
+      var winWidth = $(window).width();
+      if (winWidth < 1200) {
+        $(".gov_weixin_share").css({ "right": 10 })
+      } else {
+        var winRig = (winWidth - 960) / 2 - 120;
+        winRig = winRig / 2;
+        $(".gov_weixin_share").css({ "right": winRig })
+      }
+      $(".closeBtn").click(function () {
+        $(".gov_weixin_share").hide()
+      })
+
+    }
+    rigScroll()
+    $(window).scroll(function () {
+      rigScroll()
+    });
+
+    $(window).resize(function () {
+      rigScroll()
+    });
+  })
+
+</script>
+
+</html>

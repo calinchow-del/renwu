@@ -1,0 +1,1892 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>广州市规划和自然资源局网站</title>
+     <!-- meta标签 -->
+     <meta name="SiteName" content="广州市规划和自然资源局网站"/>
+     <meta name="SiteDomain" content="ghzyj.gz.gov.cn"/>
+     <meta name="SiteIDCode" content="4401000100">
+     <meta name="Keywords" content="规划,土地,矿产,地质环境,测绘,地名,海洋,不动产,森林,野生动物保护,湿地" />
+<meta name="description" content="广州市规划和自然资源局网站主要是提供空间规划、土地、矿产、林业、测绘地理、森林、湿地、水、海洋等主体业务信息的门户网站。" />
+      <meta name="ColumnName" content="广州市规划和自然资源局门户网站首页"/>
+     <meta name="ColumnDescription" content="广州市规划和自然资源局门户网站"> 
+     <meta name="ColumnKeywords" content="广州市规划和自然资源局 政府 网站"> 
+     <meta name="ColumnType" content="首页"/>
+     <script>window.NFCMS_SITE_ID=200026;window.NFCMS_PUB_TYPE="page";window.NFCMS_PAGE_ID="94";</script><script src="//statistics.gd.gov.cn/scripts/s.js?t=1774605736" async></script>
+
+	<!-- 终端判断跳转 -->
+			<script type="text/javascript" charset="utf-8">
+
+				var search = location.search;
+        if (search == "?type=pc") {
+            var orgUA = window.navigator.userAgent;
+            navigator.__defineGetter__('userAgent', function () {
+                return 'pc'
+            });
+        } else {
+            if ((navigator.userAgent.match(/(iPhone|iPod|Android)/i))) {
+                if (window.location.href.indexOf('ref=pc') == -1)
+                    window.location.href = "/m_index.html";
+            }
+        }
+			</script>
+</head>
+<body> 
+    
+<link href="/web2025/common.css" rel="stylesheet">
+<link href="/web2025/index2025.css" rel="stylesheet">
+<script type="text/javascript" src="/web2025/jquery-min.js"></script>
+<script type="text/javascript" src="/global/jquery.SuperSlide.2.1.1.js"></script>
+<style>
+     .zwgk-con-l img{height:196px;}
+</style>
+ <!--header Start-->
+  <script src="/web2025/jquery.movebg.js"></script>
+<link rel="stylesheet" type="text/css" href="/global/barrier_free.css" />
+<script type="text/javascript" src="/global/barrier_free.js"></script>
+<script type="text/javascript" src="/web2025/font2025.js"></script>
+<script type="text/javascript" src="/web2025/common2025.js"></script>
+<div style="opacity:0;text-indent:-9999px;width:0;height:0;overflow:hidden">
+<a tabindex="1" aria-label="欢迎访问广州市规划和自然资源局网站，请用 alt 加右键开启智能盲道功能，按 alt 加 4打开导航区，按 tab 键切换读取导航区元素；按 alt 加 5 打开视窗区，按 tab 键切换读取视窗区元素；按 alt 加 6 打开交互区，按 tab 键切换读取交互区元素；按 alt 加 7 打开服务区，按 tab 键切换读取服务区元素；按 alt 加 L 开启或关闭语音阅读声音；按 shift 加上方向键开启或关闭大字幕；按 alt 加问号打开智能盲道帮助页面；按 alt 加 q 键退出智能盲道；按 alt 加 9 退出无障碍服务。" target="_self"
+role="alert" id="wza-intro"></a>
+</div>
+<!-- tab切换加强 -->
+<script>
+	// tab 切换
+window.$bindArrow = function (obj) {
+    var $tabs = $(obj.tabs);
+    var $tabsPanel = $(obj.tabsPanel);
+    var $index = obj.initPos || 0;
+    $tabs.bind({
+            keydown: function(ev){
+                var LEFT_ARROW = 37;
+                var UP_ARROW = 38;
+                var RIGHT_ARROW = 39;
+                var DOWN_ARROW = 40;
+
+                var k = ev.which || ev.keyCode;
+
+                if (k >= LEFT_ARROW && k <= DOWN_ARROW){
+                    if (k == LEFT_ARROW || k == UP_ARROW){
+                        if ($index > 0) {
+                            $index--;
+                        }
+                        else {
+                            $index = $tabs.length - 1;
+                        }
+                    }
+                    else if (k == RIGHT_ARROW || k == DOWN_ARROW){
+                        if ($index < ($tabs.length - 1)){
+                            $index++;
+                        }
+                        else {
+                            $index = 0;
+                        }
+                    }
+                    setFocus($index);
+                    ev.preventDefault();
+                }
+            },
+        });
+    //初始化
+    init();
+    function setChildNode($index) {
+        $tabs.find(obj.childNode).attr(
+            {
+                tabindex: '-1',
+                'aria-selected': 'false'
+            })
+
+        $($tabs.get($index)).find(obj.childNode).attr(
+            {
+                tabindex: '0',
+                'aria-selected': 'true'
+            })
+    }
+    function init() {
+        var initCount =  0;
+        if (obj.childNode) {
+            setChildNode(initCount)
+        }
+        $tabs.attr({
+                tabindex: '-1',
+                'aria-selected': 'false'
+            }).removeClass(obj.active);
+
+        $($tabs.get($index)).attr({
+                tabindex: '0',
+                'aria-selected': 'true'
+            }).addClass(obj.active)
+    }
+    function initTree(p, cb) {
+        for (var i = 0; i < p.children.length; i++) {
+            // 遍历第一级子元素
+            var child = p.children[i];
+            if(cb){
+                cb(child);
+            }
+            // 递归
+            initTree(child);
+        }
+    }
+    function setFocus($index) {
+        $tabs.attr({
+                tabindex: '-1',
+                'aria-selected': 'false'
+            }).removeClass(obj.active);
+
+        $($tabs.get($index)).attr({
+                tabindex: '0',
+                'aria-selected': 'true'
+            }).addClass(obj.active).focus();
+        // 控制区块显隐方式
+        if(obj.type === 'display'){
+            $tabsPanel.hide();
+            $($tabsPanel.get($index)).show()
+        }else if(obj.type === 'animate'){
+            $tabsPanel.attr(
+                {
+                    tabindex: '-1',
+                });
+            $($tabsPanel.get($index)).attr(
+                {
+                    tabindex: '0',
+                });
+        }
+        if (obj.childNode) {
+            setChildNode($index)
+        }
+    }
+};
+
+// select 切换
+window.$bindSelect = function(obj) {
+    var $selectedItem = $(obj.selectedItem);
+    var $menus = $(obj.menus);
+    var $index = 0;
+    $selectedItem.attr({
+            tabindex: '0',
+            role: 'menu'
+        });
+    $menus.attr({
+            role: 'menuitem'
+        });
+    $selectedItem.bind({
+            keydown: function(ev, inx) {
+                var SPACE = 32;
+                var ESC = 27;
+                var ENTER = 13;
+                var k = ev.which || ev.keyCode;
+                if (k == SPACE || k == ENTER) {
+                    if(ev.preventDefault){
+                        ev.preventDefault();
+                    }else{
+                        window.event.returnValue = false;
+                    }
+                    setFocus(ev)
+                } else if (k == ESC) {
+                    setClose(ev)
+                }
+
+            }
+        });
+
+    function setClose(ev) {
+        var target = $(ev.target);
+        var selectedItem = target.closest(obj.selectedItem);
+        var panel = selectedItem.find(obj.menus);
+        panel.hide();
+        selectedItem.focus()
+    }
+
+    function setFocus(ev) {
+        var panel = $(ev.target).find(obj.menus)
+        $menus.hide()
+        panel.show()
+    }
+};
+</script>
+<div class="head">
+	<div class="container" style="position:relative;" aria-label="您已进入工具栏服务区。" altdes="服务区" wzades="提供网站工具栏服务。">
+		<div class="date">
+			<i></i>
+			<span id="date"></span>
+		</div>
+		<ul class="menu">
+			<li class="email">
+				<a target="_blank" href="http://mail.gz.gov.cn/" title="工作邮箱登录"><i></i><span>工作邮箱登录</span></a>
+			</li>
+			<li><b>|</b></li>
+			<li class="mobile">
+				<a><i></i><span>手机版</span></a>
+				<div class="drop">
+					<ul>
+						<li><img src="/global/ewm_mobile.png" title="手机版" alt="手机版"><span>关注 · 手机版</span></li>
+					</ul>
+				</div>
+			</li>
+			<li><b>|</b></li>
+			<li class="wx">
+				<a><i></i><span>微信</span></a>
+				<div class="drop">
+					<ul>
+						<li><img src="/global/ewm_wx.jpg" title="官方微信二维码" alt="官方微信二维码"><span>关注 · 官方微信</span></li>
+					</ul>
+				</div>
+			</li>
+			<li><b>|</b></li>
+			<li class="wb">
+				<a target="_blank" title="微博" href="https://weibo.com/3186551333"><i></i><span>微博</span></a>
+				<div class="drop">
+					<ul>
+						<li><img src="/global/ewm_wb.png" title="官方微博二维码" alt="官方微博二维码"><span>关注 · 官方微博</span></li>
+					</ul>
+				</div>
+			</li>
+			<li><b>|</b></li>
+			<li class="yhkj">
+				<a target="_blank" title="用户空间" href="https://ghzyj.gz.gov.cn/hdjlpt/znzl/"><i></i><span>用户空间</span></a>
+			</li>
+			<li><b>|</b></li>
+			<li class="wza">
+				<div class="bf_button" style="color: #666666;"><i></i><a id="wza" title="无障碍版|适老化版"><span>无障碍版|适老化版</span></a></div>
+		    </li>
+			<li><b>|</b></li>
+			<li class="znwd">
+				<a target="_blank" title="智能问答" href="/znjqr"><span>智能问答</span></a>
+			</li>
+			<li><b>|</b></li>
+			<li class="cwzb">
+				<a target="_blank" title="纯文字版" href="/cwzb.html"><span>纯文字版</span></a>
+			</li>
+			<li><b>|</b></li>
+			<li class="ftb">
+				<a href="javascript:;" title="繁体版按钮" id="jft" onclick="ClickObject()"><span>繁体版</span></a>
+			</li>
+			<li><b>|</b></li>
+			<li class="ftb">
+				<a target="_blank" title="天地图·广州" href="https://guangdong.tianditu.gov.cn/guangzhou/"><span>天地图·广州</span></a>
+			</li>
+		</ul>
+	</div>
+</div>
+ <div class="header">
+     
+<div class="banner">
+    <div class="searchbox">
+        <div class="search">
+			<div class="ss">
+				<script>
+					var _hmt = _hmt || [];
+					(function() {
+  						var hm = document.createElement("script");
+  						hm.src = "https://hm.baidu.com/hm.js?8c7304286569dd2a656185c1efa70f59";
+ 						var s = document.getElementsByTagName("script")[0]; 
+  						s.parentNode.insertBefore(hm, s);
+					})();
+   
+
+				function sousuo() {
+     				window.location = "http://search.gd.gov.cn/search/local_msg/200026?keywords=" + $("#txt_search").val();
+  				}
+				</script>
+					<input type="hidden" value="" name="siteCode">
+					<input type="hidden" name="color" value="">
+					<input type="text" class="searchTxt" name="keywords" id="txt_search" placeholder="请输入搜索内容...">
+					<input type="submit" class="searchBtn" value="搜索" onclick="sousuo()">
+				
+			</div>
+		<!-- <p id="hot"><b>专项查询：</b>
+		<a href="/ywpd/cxgh/ghxkgsgb/pqgs1/">批前公示</a>
+		<a href="/ywpd/cxgh/ghxkgsgb/phgbnew/gbt/">批后公布</a>
+		<a href="/ywpd/bdcdj/bdcdjgsgg/">不动产登记</a></p> -->
+    </div>
+    </div>
+    <img src="/web2025/index2025_r1_c1_s1.png">
+</div>
+
+<div class="mainnav">
+     <div class="container clearfix">
+          <div class="navbox">
+               <ul class="clearfix">
+                   <!-- 首页 -->
+                   <li><a href="/" title="" target="_parent"><img src="/web2025/index2025_r3_c12_s1.png">首页</a></li>
+                   <!-- 政务公开 -->
+                                      <li><a href="https://ghzyj.gz.gov.cn/zwgk/index.html" title="政务公开" target="_parent"><img src="/web2025/index2025_r3_c26_s1.png">政务公开</a></li>
+                                      <!-- 互动交流 -->
+                                      <li><a href="https://ghzyj.gz.gov.cn/hdjl/index.html" title="互动交流" target="_parent"><img src="/web2025/index2025_r3_c33_s1.png">互动交流</a></li>
+                                      <!-- 政务服务 -->
+                                      <li><a href="https://www.gdzwfw.gov.cn/portal/v2/branch-hall?orgCode=MB2C91103" title="政务服务" target="_parent"><img src="/web2025/index2025_r3_c42_s1.png">政务服务</a></li>
+                                      <!-- 业务信息 -->
+                                      <li><a href="https://ghzyj.gz.gov.cn/ywpd/index.html" title="业务信息" target="_parent"><img src="/web2025/index2025_r3_c63_s1.png">业务信息</a></li>
+                                  </ul>
+               <div class="move-bg"></div>
+          </div>
+     </div>
+</div>
+<script>
+    $(function(){
+        $(".navbox").movebg({width:240,extra:40,speed:300,rebound_speed:400});
+    })
+</script>   
+</div>
+<script src="//slhsrv.southcn.com/wza/aria.js?app=ghzyj.gz.gov.cn"></script>
+<script>
+	ariaTool.setOption({
+		mutationObserver: true,
+		observerSelector: '.aria-observer-selector'
+	})
+    document.getElementById("wza").onclick = function() {
+        ariaTool.init()
+    }
+</script>	
+<!--header End-->  
+        <!--main Start-->
+        <div class="curmb hide">><a href="//ghzyj.gz.gov.cn">首页</a></div>
+        <div class="indexmain">
+        <div class="container">
+             <div class="mb60"></div>   
+             <div class="indexbox1-l">
+             <!-- 轮播图 -->
+             <div class="tpxwbox">
+                <div class="tpxwlb" id="slideBox">
+                    <div class="hd"><ul></ul></div>
+                    <div class="bd">
+                         <ul>
+                                                            <li>
+                                    <a href="https://ghzyj.gz.gov.cn/xwzx/sytpxw/content/post_10529185.html" title="深入学习贯彻党的二十届四中全会精神 为基本实现社会主义现代化而共同奋斗" target="_blank">
+                                         <img src="https://ghzyj.gz.gov.cn/img/1/1522/1522380/10529185.jpg" title="深入学习贯彻党的二十届四中全会精神 为基本实现社会主义现代化而共同奋斗" alt="深入学习贯彻党的二十届四中全会精神 为基本实现社会主义现代化而共同奋斗">
+                                    </a> 
+                                    <b></b>
+                                    <span>
+                                    <a href="https://ghzyj.gz.gov.cn/xwzx/sytpxw/content/post_10529185.html" title="深入学习贯彻党的二十届四中全会精神 为基本实现社会主义现代化而共同奋斗" target="_blank">
+                                         深入学习贯彻党的二十届四中全会精神 为基本实现社会主义现代化而共同奋斗
+                                    </a>
+                                    </span>
+                                </li>
+                                                            <li>
+                                    <a href="https://ghzyj.gz.gov.cn/xwzx/sytpxw/content/post_10529175.html" title="锚定“十五五”发展目标 奋力在推进中国式现代化建设中走在前列" target="_blank">
+                                         <img src="https://ghzyj.gz.gov.cn/img/1/1522/1522379/10529175.jpg" title="锚定“十五五”发展目标 奋力在推进中国式现代化建设中走在前列" alt="锚定“十五五”发展目标 奋力在推进中国式现代化建设中走在前列">
+                                    </a> 
+                                    <b></b>
+                                    <span>
+                                    <a href="https://ghzyj.gz.gov.cn/xwzx/sytpxw/content/post_10529175.html" title="锚定“十五五”发展目标 奋力在推进中国式现代化建设中走在前列" target="_blank">
+                                         锚定“十五五”发展目标 奋力在推进中国式现代化建设中走在前列
+                                    </a>
+                                    </span>
+                                </li>
+                                                            <li>
+                                    <a href="https://ghzyj.gz.gov.cn/xwzx/sytpxw/content/post_10469167.html" title="激情全运会 活力大湾区" target="_blank">
+                                         <img src="https://ghzyj.gz.gov.cn/img/1/1503/1503282/10469167.jpg" title="激情全运会 活力大湾区" alt="激情全运会 活力大湾区">
+                                    </a> 
+                                    <b></b>
+                                    <span>
+                                    <a href="https://ghzyj.gz.gov.cn/xwzx/sytpxw/content/post_10469167.html" title="激情全运会 活力大湾区" target="_blank">
+                                         激情全运会 活力大湾区
+                                    </a>
+                                    </span>
+                                </li>
+                                                            <li>
+                                    <a href="https://ghzyj.gz.gov.cn/xwzx/sytpxw/content/post_10469113.html" title="追梦大湾区 出彩人生路" target="_blank">
+                                         <img src="https://ghzyj.gz.gov.cn/img/1/1503/1503285/10469113.jpg" title="追梦大湾区 出彩人生路" alt="追梦大湾区 出彩人生路">
+                                    </a> 
+                                    <b></b>
+                                    <span>
+                                    <a href="https://ghzyj.gz.gov.cn/xwzx/sytpxw/content/post_10469113.html" title="追梦大湾区 出彩人生路" target="_blank">
+                                         追梦大湾区 出彩人生路
+                                    </a>
+                                    </span>
+                                </li>
+                                                            <li>
+                                    <a href="https://ghzyj.gz.gov.cn/xwzx/sytpxw/content/post_10423847.html" title="全国测绘法宣传日" target="_blank">
+                                         <img src="https://ghzyj.gz.gov.cn/img/1/1486/1486620/10423847.jpg" title="全国测绘法宣传日" alt="全国测绘法宣传日">
+                                    </a> 
+                                    <b></b>
+                                    <span>
+                                    <a href="https://ghzyj.gz.gov.cn/xwzx/sytpxw/content/post_10423847.html" title="全国测绘法宣传日" target="_blank">
+                                         全国测绘法宣传日
+                                    </a>
+                                    </span>
+                                </li>
+                                                            <li>
+                                    <a href="https://ghzyj.gz.gov.cn/xwzx/sytpxw/content/post_10423844.html" title="全国测绘法宣传日" target="_blank">
+                                         <img src="https://ghzyj.gz.gov.cn/img/1/1486/1486617/10423844.jpg" title="全国测绘法宣传日" alt="全国测绘法宣传日">
+                                    </a> 
+                                    <b></b>
+                                    <span>
+                                    <a href="https://ghzyj.gz.gov.cn/xwzx/sytpxw/content/post_10423844.html" title="全国测绘法宣传日" target="_blank">
+                                         全国测绘法宣传日
+                                    </a>
+                                    </span>
+                                </li>
+                                                            <li>
+                                    <a href="https://ghzyj.gz.gov.cn/xwzx/sytpxw/content/post_10327710.html" title="全国土地日" target="_blank">
+                                         <img src="https://ghzyj.gz.gov.cn/img/1/1449/1449260/10327710.png" title="全国土地日" alt="全国土地日">
+                                    </a> 
+                                    <b></b>
+                                    <span>
+                                    <a href="https://ghzyj.gz.gov.cn/xwzx/sytpxw/content/post_10327710.html" title="全国土地日" target="_blank">
+                                         全国土地日
+                                    </a>
+                                    </span>
+                                </li>
+                                                            <li>
+                                    <a href="https://ghzyj.gz.gov.cn/xwzx/sytpxw/content/post_10327703.html" title="全国土地日" target="_blank">
+                                         <img src="https://ghzyj.gz.gov.cn/img/1/1449/1449253/10327703.png" title="全国土地日" alt="全国土地日">
+                                    </a> 
+                                    <b></b>
+                                    <span>
+                                    <a href="https://ghzyj.gz.gov.cn/xwzx/sytpxw/content/post_10327703.html" title="全国土地日" target="_blank">
+                                         全国土地日
+                                    </a>
+                                    </span>
+                                </li>
+                                                            <li>
+                                    <a href="https://ghzyj.gz.gov.cn/xwzx/sytpxw/content/post_10264551.html" title="以走在前列的担当进一步全面深化改革扎实推进中国式现代化的广东实践" target="_blank">
+                                         <img src="https://ghzyj.gz.gov.cn/img/1/1425/1425279/10264551.jpg" title="以走在前列的担当进一步全面深化改革扎实推进中国式现代化的广东实践" alt="以走在前列的担当进一步全面深化改革扎实推进中国式现代化的广东实践">
+                                    </a> 
+                                    <b></b>
+                                    <span>
+                                    <a href="https://ghzyj.gz.gov.cn/xwzx/sytpxw/content/post_10264551.html" title="以走在前列的担当进一步全面深化改革扎实推进中国式现代化的广东实践" target="_blank">
+                                         以走在前列的担当进一步全面深化改革扎实推进中国式现代化的广东实践
+                                    </a>
+                                    </span>
+                                </li>
+                                                            <li>
+                                    <a href="https://ghzyj.gz.gov.cn/xwzx/sytpxw/content/post_10264543.html" title="高质量发展 广州挑大梁" target="_blank">
+                                         <img src="https://ghzyj.gz.gov.cn/img/1/1425/1425278/10264543.png" title="高质量发展 广州挑大梁" alt="高质量发展 广州挑大梁">
+                                    </a> 
+                                    <b></b>
+                                    <span>
+                                    <a href="https://ghzyj.gz.gov.cn/xwzx/sytpxw/content/post_10264543.html" title="高质量发展 广州挑大梁" target="_blank">
+                                         高质量发展 广州挑大梁
+                                    </a>
+                                    </span>
+                                </li>
+                                                            <li>
+                                    <a href="https://ghzyj.gz.gov.cn/xwzx/sytpxw/content/post_10264540.html" title="世界地球日" target="_blank">
+                                         <img src="https://ghzyj.gz.gov.cn/img/1/1425/1425277/10264540.png" title="世界地球日" alt="世界地球日">
+                                    </a> 
+                                    <b></b>
+                                    <span>
+                                    <a href="https://ghzyj.gz.gov.cn/xwzx/sytpxw/content/post_10264540.html" title="世界地球日" target="_blank">
+                                         世界地球日
+                                    </a>
+                                    </span>
+                                </li>
+                                                    </ul>
+                    </div>
+                    </div>
+               </div>
+             </div>
+             <div class="indexbox1-r">
+             <!-- 工作动态/通知公告/政声传递 -->
+              <div class="tabbox dtxw">
+                   <div class="hd">
+                        <ul>
+                            <!-- 工作动态 -->
+                            <li><a href="https://ghzyj.gz.gov.cn/xwzx/gzdt/index.html" title="工作动态" target="_blank">工作动态</a></li>                            <!-- 通知公告 -->
+                            <li><a href="https://ghzyj.gz.gov.cn/xwzx/tzgg/index.html" title="通知公告" target="_blank">通知公告</a></li>                            <!-- 政声传递 -->
+                            <li><a href="https://ghzyj.gz.gov.cn/xwzx/zscd/index.html" title="政声传递" target="_blank">政声传递</a></li>                        </ul>
+                        <div class="more">
+                            <a href="https://ghzyj.gz.gov.cn/xwzx/gzdt/index.html" title="更多" target="_blank">>></a>                            <a href="https://ghzyj.gz.gov.cn/xwzx/tzgg/index.html" title="更多" target="_blank">>></a>                            <a href="https://ghzyj.gz.gov.cn/xwzx/zscd/index.html" title="更多" target="_blank">>></a>                        </div>
+                   </div>
+                   <div class="bd">
+                        <!-- 工作动态 -->
+                        <ul class="index_list1 qrcode">
+                                                        <li><a href="https://ghzyj.gz.gov.cn/xwzx/gzdt/content/post_10745298.html" wx-link="https://ghzyj.gz.gov.cn/xwzx/gzdt/content/post_10745298.html" title="优化供水保障 赋能产业升级——市规划和自然资源局花都区分局全力推动炭步镇茶塘村村镇工业聚集区公共市政供水设施迁改接驳项目落地" target="_blank">
+                                优化供水保障 赋能产业升级——市规划和自然资源局花都区分局全力推动炭步镇茶塘村村镇工业聚集区公共市政供水设施迁改接驳项目落地</a>
+                                <span>2026-03-27</span>
+                            </li>
+                                                        <li><a href="https://ghzyj.gz.gov.cn/xwzx/gzdt/content/post_10743942.html" wx-link="https://ghzyj.gz.gov.cn/xwzx/gzdt/content/post_10743942.html" title="广州市规划和自然资源局以信用赋能持续完善内部控制体系建设" target="_blank">
+                                广州市规划和自然资源局以信用赋能持续完善内部控制体系建设</a>
+                                <span>2026-03-27</span>
+                            </li>
+                                                        <li><a href="https://ghzyj.gz.gov.cn/xwzx/gzdt/content/post_10743736.html" wx-link="https://ghzyj.gz.gov.cn/xwzx/gzdt/content/post_10743736.html" title="危房蝶变，文脉延绵——看荔湾这处百年老宅的重生之路" target="_blank">
+                                危房蝶变，文脉延绵——看荔湾这处百年老宅的重生之路</a>
+                                <span>2026-03-27</span>
+                            </li>
+                                                        <li><a href="https://ghzyj.gz.gov.cn/xwzx/gzdt/content/post_10742500.html" wx-link="https://ghzyj.gz.gov.cn/xwzx/gzdt/content/post_10742500.html" title="凝聚政企合力 擘画发展新篇——2026年广州市白云区优化营商环境促测绘行业发展工作会议圆满召开" target="_blank">
+                                凝聚政企合力 擘画发展新篇——2026年广州市白云区优化营商环境促测绘行业发展工作会议圆满召开</a>
+                                <span>2026-03-26</span>
+                            </li>
+                                                        <li><a href="https://ghzyj.gz.gov.cn/xwzx/gzdt/content/post_10740803.html" wx-link="https://ghzyj.gz.gov.cn/xwzx/gzdt/content/post_10740803.html" title="以“身边事”警示“身边人”海珠这场生态普法深入人心" target="_blank">
+                                以“身边事”警示“身边人”海珠这场生态普法深入人心</a>
+                                <span>2026-03-25</span>
+                            </li>
+                                                        <li><a href="https://ghzyj.gz.gov.cn/xwzx/gzdt/content/post_10740070.html" wx-link="https://ghzyj.gz.gov.cn/xwzx/gzdt/content/post_10740070.html" title="讲政策、话发展、凝共识-花都区工改办赴莲塘村开展村镇工业集聚区升级改造政策宣讲" target="_blank">
+                                讲政策、话发展、凝共识-花都区工改办赴莲塘村开展村镇工业集聚区升级改造政策宣讲</a>
+                                <span>2026-03-25</span>
+                            </li>
+                                                    </ul>
+                        <!-- 通知公告 -->
+                        <ul class="index_list1 qrcode">
+                                                            <li><a href="https://ghzyj.gz.gov.cn/xwzx/tzgg/content/post_10744715.html" wx-link="https://ghzyj.gz.gov.cn/xwzx/tzgg/content/post_10744715.html" title="广州市不动产登记中心2026年清明节放假通知" target="_blank">
+                                    广州市不动产登记中心2026年清明节放假通知</a>
+                                    <span>2026-03-27</span>
+                                </li>
+                                                            <li><a href="https://ghzyj.gz.gov.cn/xwzx/tzgg/content/post_10741477.html" wx-link="https://ghzyj.gz.gov.cn/xwzx/tzgg/content/post_10741477.html" title="广州市规划和自然资源局关于3月30日至4月10日惠企利民“特诊”窗口服务安排的通知" target="_blank">
+                                    广州市规划和自然资源局关于3月30日至4月10日惠企利民“特诊”窗口服务安排的通知</a>
+                                    <span>2026-03-25</span>
+                                </li>
+                                                            <li><a href="https://ghzyj.gz.gov.cn/xwzx/tzgg/content/post_10734811.html" wx-link="https://ghzyj.gz.gov.cn/xwzx/tzgg/content/post_10734811.html" title="广州市规划和自然资源局所属事业单位2026年第一次引进急需人才考核评价及体检有关安排的公告" target="_blank">
+                                    广州市规划和自然资源局所属事业单位2026年第一次引进急需人才考核评价及体检有关安排的公告</a>
+                                    <span>2026-03-20</span>
+                                </li>
+                                                            <li><a href="https://ghzyj.gz.gov.cn/xwzx/tzgg/content/post_10728280.html" wx-link="https://ghzyj.gz.gov.cn/xwzx/tzgg/content/post_10728280.html" title="关于征集深海探测相关产业融资需求的通知" target="_blank">
+                                    关于征集深海探测相关产业融资需求的通知</a>
+                                    <span>2026-03-16</span>
+                                </li>
+                                                            <li><a href="https://ghzyj.gz.gov.cn/xwzx/tzgg/content/post_10723924.html" wx-link="https://ghzyj.gz.gov.cn/xwzx/tzgg/content/post_10723924.html" title="广州市规划和自然资源局关于3月16日至3月27日惠企利民“特诊”窗口服务安排的通知" target="_blank">
+                                    广州市规划和自然资源局关于3月16日至3月27日惠企利民“特诊”窗口服务安排的通知</a>
+                                    <span>2026-03-12</span>
+                                </li>
+                                                            <li><a href="https://ghzyj.gz.gov.cn/xwzx/tzgg/content/post_10721917.html" wx-link="https://ghzyj.gz.gov.cn/xwzx/tzgg/content/post_10721917.html" title="广州市规划和自然资源局关于地籍调查成果统一使用1985国家高程基准的通知" target="_blank">
+                                    广州市规划和自然资源局关于地籍调查成果统一使用1985国家高程基准的通知</a>
+                                    <span>2026-03-11</span>
+                                </li>
+                                                    </ul>
+                        <!-- 政声传递 -->
+                        <ul class="index_list1" id="zscd1">
+                        </ul>
+                   </div>
+              </div>
+              <script>
+                jQuery(".dtxw").slide({delayTime:0,triggerTime:0, targetCell:".more a"});
+              </script>
+              <script>
+                function zscd_pushinfo() {
+  //政声传递
+  $.ajax({
+    url: location.protocol + '//app.gd.gov.cn/xxts/pushinfo_json.php',
+    dataType: "jsonp",
+    jsonp: "pushInfoJsonpCallBack",
+    jsonpCallback: "pushInfoJsonpCallBack",
+    success: function (data) {
+      $.each(data, function (i, json) {
+        if (i > 5) {
+          return;
+        }
+        var title = json.title;
+        var str1 = json.pubDate;
+        $("#zscd1").append("<li><a href='" + location.protocol + "//" + json.link.replace('http:', '').replace('https:', '') + "' title='" + title + "' target=\"_blank\">" + title + "</a><span>" + str1 + "</span>");
+        // 政声传递首条信息标题加粗
+        // if (i > 0) {
+        //   $("#zscd1").append("<li><i></i><a href='" + location.protocol + "//" + json.link.replace('http:', '').replace('https:', '') + "' title='" + title + "' target=\"_blank\">" + title + "</a><span class='time'>" + str1 + "</span>");
+        // } else {
+        //   $("#zscd1").append("<li style='font-weight: 800'><i></i><a href='" + location.protocol + "//" + json.link.replace('http:', '').replace('https:', '') + "' title='" + title + "' target=\"_blank\">" + title + "</a><span class='time'>" + str1 + "</span>");
+        // }
+
+      })
+    },
+    error: function () {
+      setTimeout(function () {
+        zscd_pushinfo();
+      }, 1000);
+    }
+  });
+}
+zscd_pushinfo();
+              </script>
+             </div>
+             <div class="mb40"></div>
+        </div> 
+        <div class="indexbox2">
+             <div class="container">
+                  <!-- 业务信息 -->
+                  <div class="ywxx"> 
+                                    <div class="tylm-title2">
+                       <h1><a href="https://ghzyj.gz.gov.cn/ywpd/index.html" title="业务信息" target="_blank">业务信息</a></h1>
+                       <div class="tylm-more"></div>
+                  </div>
+                                    <div class="ywpd-list">
+                       <ul class="clearfix">
+                                                      <li><a href="https://ghzyj.gz.gov.cn/ywpd/slgsnew/index.html" title="受理公示" target="_blank">
+                            <img src="/web2025/index2025_ywxx_icon_r1_c1_s1.png" title="受理公示" alt="受理公示">
+                            <div class="txt">受理公示</div>
+                           </a></li>
+                                                                                 <li><a href="https://ghzyj.gz.gov.cn/ywpd/cxgh/index.html" title="城乡规划" target="_blank">
+                            <img src="/web2025/index2025_ywxx_icon_r1_c3_s1.png" title="城乡规划" alt="城乡规划">
+                            <div class="txt">城乡规划</div>
+                           </a></li>
+                                                                                 <li><a href="https://ghzyj.gz.gov.cn/ywpd/tdgl/index.html" title="土地管理" target="_blank">
+                            <img src="/web2025/index2025_ywxx_icon_r1_c5_s1.png" title="土地管理" alt="土地管理">
+                            <div class="txt">土地管理</div>
+                           </a></li>
+                                                                                 <li><a href="https://ghzyj.gz.gov.cn/ywpd/bdcdj/index.html" title="不动产登记" target="_blank">
+                            <img src="/web2025/index2025_ywxx_icon_r1_c7_s1.png" title="不动产登记" alt="不动产登记">
+                            <div class="txt">不动产登记</div>
+                           </a></li>
+                                                                                 <li><a href="https://ghzyj.gz.gov.cn/ywpd/dzkc/index.html" title="地质矿产" target="_blank">
+                            <img src="/web2025/index2025_ywxx_icon_r1_c9_s1.png" title="地质矿产" alt="地质矿产">
+                            <div class="txt">地质矿产</div>
+                           </a></li>
+                                                                                 <li><a href="https://ghzyj.gz.gov.cn/ywpd/hyzygl/gg/" title="海洋管理" target="_blank">
+                            <img src="/web2025/index2025_ywxx_icon_r1_c11_s1.png" title="海洋管理" alt="海洋管理">
+                            <div class="txt">海洋管理</div>
+                           </a></li>
+                                                                                 <li><a href="https://ghzyj.gz.gov.cn/ywpd/mcbh/index.html" title="名城保护" target="_blank">
+                            <img src="/web2025/index2025_ywxx_icon_r1_c13_s1.png" title="名城保护" alt="名城保护">
+                            <div class="txt">名城保护</div>
+                           </a></li>
+                                                                                 <li><a href="https://ghzyj.gz.gov.cn/ywpd/csgx/gzsjydsp/" title="城市更新" target="_blank">
+                            <img src="/web2025/index2025_ywxx_icon_r1_c15_s1.png" title="城市更新" alt="城市更新">
+                            <div class="txt">城市更新</div>
+                           </a></li>
+                                                                                 <li class="last"><a href="https://ghzyj.gz.gov.cn/ywpd/chgl/index.html" title="测绘管理" target="_blank">
+                            <img src="/web2025/index2025_ywxx_icon_r1_c17_s1.png" title="测绘管理" alt="测绘管理">
+                            <div class="txt">测绘管理</div>
+                           </a></li>
+                                                  </ul>
+                  </div>
+                  </div>
+                  <div class="mb60"></div>
+                  <!-- 业务系统 -->
+                  <div class="ywxt">
+                                    <div class="tylm-title2">
+                    <h1><a href="https://ghzyj.gz.gov.cn/zwfw/xtzq/index.html" title="系统专区" target="_blank">业务系统</a></h1>
+                    <div class="tylm-more"></div>
+                  </div>
+                                    <div class="ywxt-list">
+                    <ul class="clearfix">
+                         <li class="xx1"><a href="https://guangdong.tianditu.gov.cn/guangzhou/zstdcs/#/" title="招商土地超市" target="_blank">
+                         <img src="/web2025/index2025_ywxt_r99_c3_s1.png" title="招商土地超市" alt="招商土地超市">
+                         <span class="txt">招商土地超市</span>
+                        </a></li>
+                         <li class="xx1"><a href="https://ghh.gzlpc.gov.cn/gzhyzs" title="广海汇" target="_blank">
+                         <img src="/web2025/index2025_ywxt_r1_c3_ghh.png" title="广海汇" alt="广海汇">
+                         <span class="txt">广海汇</span>
+                        </a></li>
+                     <li class="xx1"><a href="https://gzhyyb.gzlpc.gov.cn/yubao/#/" title="广州海洋预报" target="_blank">
+                         <img src="/web2025/index2025_ywxt_r1_c1_hyyb.png" title="广州海洋预报" alt="广州海洋预报">
+                         <span class="txt">广州海洋预报</span>
+                        </a></li>
+                       <li class="xx1"><a href="https://dchy.gzlpc.gov.cn" title="多测合一平台" target="_blank">
+                         <img src="/web2025/index2025_ywxt_r1_c4_dchy.png" title="多测合一平台" alt="多测合一平台">
+                         <span class="txt">多测合一平台</span>
+                        </a></li>
+                         <li class="xx2"><a href="https://bdcws.gzlpc.gov.cn/gzwwsq/#/entry" title="广州市不动产登记网上申请系统" target="_blank">
+                         <img src="/web2025/index2025_ywxt_r1_c3_s1.png" title="广州市不动产登记网上申请系统" alt="广州市不动产登记网上申请系统">
+                         <span class="txt">不动产登记<br>网上申请系统</span>
+                        </a></li>
+                                                <li class="xx3"><a href="https://book.gzlpc.gov.cn/reserveweb/#/login" title="广州市不动产登记网上预约" target="_blank">
+                         <img src="/web2025/index2025_ywxt_r1_c1_s1.png" title="广州市不动产登记网上预约" alt="广州市不动产登记网上预约">
+                         <span class="txt">不动产登记<br>网上预约</span>
+                        </a></li>
+                                                <li class="xx4"><a href="http://ytcf.gzlpc.gov.cn/ytcf/login.html" title="以图查房系统" target="_blank">
+                         <img src="/web2025/index2025_ywxt_r1_c5_s1.png" title="以图查房系统" alt="以图查房系统">
+                         <span class="txt">以图查房</span>
+                        </a></li>
+                                                <li class="xx5"><a href="https://ghzyj.gz.gov.cn/zwgk/ztzl/jszc/index.html" title="政务服务技术支撑网上申请" target="_blank">
+                         <img src="/web2025/index2025_ywxt_r1_c7_s1.png" title="政务服务技术支撑网上申请" alt="政务服务技术支撑网上申请">
+                         <span class="txt">政务服务技术<br>支撑网上申请</span>
+                        </a></li>
+                                                                        <li class="xx6"><a href="http://gsdj.gzlpc.gov.cn/#/home" title="广州市公示地价发布平台" target="_blank">
+                         <img src="/web2025/index2025_ywxt_r1_c9_s1.png" title="广州市公示地价发布平台" alt="广州市公示地价发布平台">
+                         <span class="txt">公示地价发布<br>平台</span>
+                        </a></li>
+                                              
+                    </ul>
+                  </div>
+                  </div>
+             </div>
+        </div>
+        <div class="mb40"></div>
+        <div class="container">
+        <!-- 政务公开 -->
+        <div class="zwgk">
+                         <div class="tylm-title1">
+                <h1><a href="https://ghzyj.gz.gov.cn/zwgk/index.html" title="政务公开" target="_blank">政务公开</a></h1>
+                <div class="tylm-more"></div>
+             </div>
+                         <div class="zwgk-con clearfix">
+                  <div class="zwgk-con-l">
+                                            <a href="https://ghzyj.gz.gov.cn/sjb/zw/zcjd/content/post_10682329.html" title="【一图读懂】关于《广州市历史文化名镇名村、街区、传统村落、历史地段与历史建筑认定管理细则》的政策解读" target="_blank">
+                            <img src="https://ghzyj.gz.gov.cn/img/1/1574/1574488/10682329.png" title="【一图读懂】关于《广州市历史文化名镇名村、街区、传统村落、历史地段与历史建筑认定管理细则》的政策解读" alt="【一图读懂】关于《广州市历史文化名镇名村、街区、传统村落、历史地段与历史建筑认定管理细则》的政策解读">
+                       </a> 
+                       
+                  </div>
+                  <div class="zwgk-con-r">
+                       <div class="tabbox2 zfgz">
+                            <div class="hd">
+                                 <ul>
+                                    <!-- 政策文件 -->
+                                    <li><a href="/gkmlpt/policy" title="政策文件" target="_blank">政策文件</a></li>
+                                    <!-- 政策解读 -->
+                                    <li><a href="/gkmlpt/policy#938" title="政策解读" target="_blank">政策解读</a></li>
+                                 </ul>
+                                 <div class="more">
+                                    <a href="/gkmlpt/policy" title="更多" target="_blank">>></a>
+                                    <a href="/gkmlpt/policy#938" title="更多" target="_blank">>></a>
+                                 </div>
+                            </div>
+                            <div class="bd">
+                                <ul class="index_list2 qrcode" id="ul_zcwj">
+                                    
+                                </ul>
+                                <ul class="index_list2 qrcode" id="ul_zcjd">
+                                   
+                                </ul>
+                            </div>
+                       </div>
+                       <script>
+                        jQuery(".zfgz").slide({delayTime:0,triggerTime:0, targetCell:".more a"});
+                      </script>
+ <!-- 政策解读图片 -->
+ <script>
+      $.ajax({
+                   type: "get",
+                    url:  location.protocol +"//ghzyj.gz.gov.cn/postmeta/g/938_1.json",
+                    dataType: "json",
+                    success: function(data) {
+                      var len = 1;
+                      for(var i = 0; i < len; i++) {
+                        var tp = data.articles[i]; 
+                        var cover = tp.cover ;
+                        var title;
+                      if(tp.title.length > 100){
+                            title = tp.title.substring(0,103)+"...";  
+                      }else{
+                           title = tp.title;
+                      }
+                  
+                      $('#zcjd_pic').append('<a href="' + tp.url + '" title="' + title.replace(/(<br\s*\/?>)/g,'') + '" target="_blank"> <img src="' + cover + '" title="' + title.replace(/(<br\s*\/?>)/g,'') + '"></a>');
+                      }
+                   }  
+})
+ </script>
+
+               <!-- 政策解读 -->
+                       <script>
+     function timestampToTime(first_publish_time) {
+             var date = new Date(first_publish_time * 1000);//时间戳为10位需*1000，时间戳为13位的话不需乘1000
+                 Y = date.getFullYear() + '-';
+                 M = (date.getMonth()+1 < 10 ? '0'+(date.getMonth()+1) : date.getMonth()+1) + '-';
+                 D = (date.getDate() < 10 ? '0'+(date.getDate()) : date.getDate()) + '';
+                 h = date.getHours() + ':';
+                 m = date.getMinutes() + ':';
+                 s = date.getSeconds();
+                 return Y+M+D;
+              }      
+                            
+              $.ajax({
+                   type: "get",
+                    url:  location.protocol +"//ghzyj.gz.gov.cn/postmeta/g/938_1.json",
+                    dataType: "json",
+                    success: function(data) {
+                      var len = 4;
+                      for(var i = 0; i < len; i++) {
+                        var tp = data.articles[i]; 
+                        var title ;
+                      if(tp.title.length > 100){
+                            title = tp.title.substring(0,103)+"...";  
+                      }else{
+                           title = tp.title;
+                      }
+                      var ap=tp.first_publish_time;
+                      var a= timestampToTime(ap);
+                      var todayTimeStamp = new Date(new Date().setHours(0, 0, 0, 0)) / 1000;
+                      var tTimeStamp = todayTimeStamp + 86400;
+                      $('#ul_zcjd').append('<li><a href="' + tp.url + ' "  title="' + title.replace(/(<br\s*\/?>)/g,'') + '"target="_blank"> ' + title.replace(/(<br\s*\/?>)/g,'') + '</a><span>'+a+'</span></li> ');
+                      }
+                   }  
+})
+ </script> 
+               <!-- 政策文件 -->
+                       <script>
+     function timestampToTime(first_publish_time) {
+             var date = new Date(first_publish_time * 1000);//时间戳为10位需*1000，时间戳为13位的话不需乘1000
+                 Y = date.getFullYear() + '-';
+                 M = (date.getMonth()+1 < 10 ? '0'+(date.getMonth()+1) : date.getMonth()+1) + '-';
+                 D = (date.getDate() < 10 ? '0'+(date.getDate()) : date.getDate()) + '';
+                 h = date.getHours() + ':';
+                 m = date.getMinutes() + ':';
+                 s = date.getSeconds();
+                 return Y+M+D;
+              }      
+                            
+              $.ajax({
+                   type: "get",
+                    url:  location.protocol +"//ghzyj.gz.gov.cn/postmeta/g/936_1.json",
+                    dataType: "json",
+                    success: function(data) {
+                      var len = 4;
+                      for(var i = 0; i < len; i++) {
+                        var tp = data.articles[i]; 
+                        var title ;
+                      if(tp.title.length > 100){
+                            title = tp.title.substring(0,103)+"...";  
+                      }else{
+                           title = tp.title;
+                      }
+                      var ap=tp.first_publish_time;
+                      var a= timestampToTime(ap);
+                      var todayTimeStamp = new Date(new Date().setHours(0, 0, 0, 0)) / 1000;
+                      var tTimeStamp = todayTimeStamp + 86400;
+                      $('#ul_zcwj').append('<li><a href="' + tp.url + '" title="' + title.replace(/(<br\s*\/?>)/g,'') + '" target="_blank"> ' + title.replace(/(<br\s*\/?>)/g,'') + '</a><span>'+a+'</span></li> ');
+                      }
+                   }  
+})
+ </script> 
+                  </div>
+             </div>
+             <div class="zwgk-menu">
+                  <ul class="clearfix">
+                                            <li class="xx1"><a href="https://ghzyj.gz.gov.cn/gkmlpt/guide" title="信息公开指南" target="_blank">
+                        <img src="/web2025/index2025_r42_c8_s1.png" title="信息公开指南" alt="信息公开指南">
+                        <span class="txt">信息公开指南</span>
+                      </a></li>
+                                                                  <li class="xx2"><a href="https://ghzyj.gz.gov.cn/gkmlpt/index" title="信息公开目录" target="_blank">
+                        <img src="/web2025/index2025_r42_c24_s1.png" title="信息公开目录" alt="信息公开目录">
+                        <span class="txt">信息公开目录</span>
+                      </a></li>
+                                                                  <li class="xx3"><a href="https://ghzyj.gz.gov.cn/gkmlpt/annualreport" title="信息公开年报" target="_blank">
+                        <img src="/web2025/index2025_r42_c34_s1.png" title="信息公开年报" alt="信息公开年报">
+                        <span class="txt">信息公开年报</span>
+                      </a></li>
+                                                                  <li class="xx4"><a href="//ghzyj.gz.gov.cn/gkmlpt/index#951" title="政府网站工作年度报表" target="_blank">
+                        <img src="/web2025/index2025_r49_c8_s1.png" title="政府网站工作年度报表" alt="政府网站工作年度报表">
+                        <span class="txt">网站工作年度<br>报表</span>
+                      </a></li>
+                                                                  <li class="xx5"><a href="https://ysqgk.gd.gov.cn/200024/choice" title="依申请公开" target="_blank">
+                        <img src="/web2025/index2025_r49_c25_s1.png" title="依申请公开" alt="依申请公开">
+                        <span class="txt">依申请公开</span>
+                      </a></li>
+                                                                  <li class="xx6"><a href="//ghzyj.gz.gov.cn/gkmlpt/index#929" title="组织机构" target="_blank">
+                        <img src="/web2025/index2025_r49_c35_s1.png" title="组织机构" alt="组织机构">
+                        <span class="txt">组织机构</span>
+                      </a></li>
+                                        </ul>
+             </div>
+        </div>
+        <!-- 互动交流 -->
+        <div class="hdjl">
+                         <div class="tylm-title1">
+                <h1><a href="https://ghzyj.gz.gov.cn/hdjl/index.html" title="互动交流" target="_blank">互动交流</a></h1>
+                <div class="tylm-more"></div>
+             </div>
+                         <div class="hdjl-con">
+             <div class="tabbox2 hdjl-tab">
+                  <div class="hd">
+                       <ul>
+                          <!-- 意见征集 -->
+                                                    <li><a href="https://ghzyj.gz.gov.cn/hdjl/zjdc/index.html" title="征集调查" target="_blank">征集调查</a></li>
+                                                    <!-- 来信选登 -->
+                                                    <li><a href="https://ghzyj.gz.gov.cn/hdjl/lxxd/index.html" title="留言选登" target="_blank">留言选登</a></li>
+                                                    <!-- 接访专栏 -->
+                                                    <li><a href="https://ghzyj.gz.gov.cn/hdjl/jfzl/index.html" title="接访专栏" target="_blank">接访专栏</a></li>
+                                                    <!-- 在线访谈 -->
+                                                    <li><a href="https://ghzyj.gz.gov.cn/hdjl/zxft/index.html" title="在线访谈" target="_blank">在线访谈</a></li>
+                                                 </ul>
+                       <div class="more">
+                            <a href="https://ghzyj.gz.gov.cn/hdjl/zjdc/index.html" title="更多" target="_blank">>></a>                            <a href="https://ghzyj.gz.gov.cn/hdjl/lxxd/index.html" title="更多" target="_blank">>></a>                            <a href="https://ghzyj.gz.gov.cn/hdjl/jfzl/index.html" title="更多" target="_blank">>></a>                            <a href="https://ghzyj.gz.gov.cn/hdjl/zxft/index.html" title="更多" target="_blank">>></a>        
+                       </div>
+                  </div>
+                  <div class="bd">
+                       <ul class="yjzj-list">
+                          
+                           <li>
+                              <div class="state">
+                                                            1776873599
+							                              </div>
+                              <div class="yjzj">
+                                   <div class="zjbt">
+                                    <a href="https://ghzyj.gz.gov.cn/hdjlpt/yjzj/answer/49446" title="广钢-广船旧址历史风貌区保护规划（2025-2035年）征求意见公示" target="_blank">
+                                        广钢-广船旧址历史风貌区保护规划（2025-2035年）征求意见公示</a>
+                                   </div>
+                                   <div class="zjsj">
+                                        <img src="/web2025/index2025_r35_c50_s1.png">【征集时间：2026-03-24至2026-04-22】
+                                   </div>
+                              </div>
+                           </li>
+                          
+                           <li>
+                              <div class="state">
+                                                            1776787199
+							                              </div>
+                              <div class="yjzj">
+                                   <div class="zjbt">
+                                    <a href="https://ghzyj.gz.gov.cn/hdjlpt/yjzj/answer/49423" title="南沙区委党校地块（DN0603规划管理单元）控制性详细规划局部调整" target="_blank">
+                                        南沙区委党校地块（DN0603规划管理单元）控制性详细规划局部调整</a>
+                                   </div>
+                                   <div class="zjsj">
+                                        <img src="/web2025/index2025_r35_c50_s1.png">【征集时间：2026-03-23至2026-04-21】
+                                   </div>
+                              </div>
+                           </li>
+                          
+                           <li>
+                              <div class="state">
+                                                            1771862399
+							                              </div>
+                              <div class="yjzj">
+                                   <div class="zjbt">
+                                    <a href="https://ghzyj.gz.gov.cn/hdjlpt/yjzj/answer/48657" title="广州市规划和自然资源局关于公开征求《广州市规划和自然资源局关于实施建设工程规划许可、乡村建设规划许可豁免清单的通知（征求意见稿）》意见的公告" target="_blank">
+                                        广州市规划和自然资源局关于公开征求《广州市规划和自然资源局关于实施建设工程规划许可、乡村建...</a>
+                                   </div>
+                                   <div class="zjsj">
+                                        <img src="/web2025/index2025_r35_c50_s1.png">【征集时间：2026-01-25至2026-02-23】
+                                   </div>
+                              </div>
+                           </li>
+                                               </ul>
+                      
+                       <!-- 来信选登 -->
+                       <ul class="index_list2  qrcode">
+                                                        <li><a href="https://ghzyj.gz.gov.cn/hdjl/lxxd/content/post_10721052.html" title="反映档案业务问题" target="_blank">
+                                     反映档案业务问题</a>
+                                     <span>2026-03-11</span>
+                            </li>
+                                                        <li><a href="https://ghzyj.gz.gov.cn/hdjl/lxxd/content/post_10646680.html" title="反映不动产登记问题" target="_blank">
+                                     反映不动产登记问题</a>
+                                     <span>2026-01-15</span>
+                            </li>
+                                                        <li><a href="https://ghzyj.gz.gov.cn/hdjl/lxxd/content/post_10614123.html" title="邓女士反映不动产登记问题" target="_blank">
+                                     邓女士反映不动产登记问题</a>
+                                     <span>2025-12-29</span>
+                            </li>
+                                                        <li><a href="https://ghzyj.gz.gov.cn/hdjl/lxxd/content/post_10522330.html" title="刘小姐现香港户籍，出入境部门出具的变更前后为同一人的证明是否可以作为证明材料办理房产证自然人身份信息变更" target="_blank">
+                                     刘小姐现香港户籍，出入境部门出具的变更前后为同一人的证明是否可以作为证明材料办理房产证自然人身份信息变更</a>
+                                     <span>2025-10-31</span>
+                            </li>
+                                                        <li><a href="https://ghzyj.gz.gov.cn/hdjl/lxxd/content/post_10435102.html" title="反映房票使用问题" target="_blank">
+                                     反映房票使用问题</a>
+                                     <span>2025-09-05</span>
+                            </li>
+                                                        <li><a href="https://ghzyj.gz.gov.cn/hdjl/lxxd/content/post_10356544.html" title="宅基地证增加权属人" target="_blank">
+                                     宅基地证增加权属人</a>
+                                     <span>2025-07-15</span>
+                            </li>
+                                                   </ul>
+                       <!-- 接访专栏 -->
+                       <ul class="index_list2  qrcode">
+                                                        <li><a href="https://ghzyj.gz.gov.cn/hdjl/jfzl/content/post_10740287.html" title="广州市规划和自然资源局关于2026年4月局领导接访安排的预告" target="_blank">
+                                     广州市规划和自然资源局关于2026年4月局领导接访安排的预告</a>
+                                     <span>2026-03-25</span>
+                            </li>
+                                                        <li><a href="https://ghzyj.gz.gov.cn/hdjl/jfzl/content/post_10718216.html" title="广州市规划和自然资源局关于2026年3月局领导接访安排的预告" target="_blank">
+                                     广州市规划和自然资源局关于2026年3月局领导接访安排的预告</a>
+                                     <span>2026-03-10</span>
+                            </li>
+                                                        <li><a href="https://ghzyj.gz.gov.cn/hdjl/jfzl/content/post_10716389.html" title="广州市规划和自然资源局局领导接访安排(2026年3月9日-3月12日)" target="_blank">
+                                     广州市规划和自然资源局局领导接访安排(2026年3月9日-3月12日)</a>
+                                     <span>2026-03-09</span>
+                            </li>
+                                                        <li><a href="https://ghzyj.gz.gov.cn/hdjl/jfzl/content/post_10700269.html" title="广州市规划和自然资源局局领导接访安排(2026年2月28日-3月8日)" target="_blank">
+                                     广州市规划和自然资源局局领导接访安排(2026年2月28日-3月8日)</a>
+                                     <span>2026-02-27</span>
+                            </li>
+                                                        <li><a href="https://ghzyj.gz.gov.cn/hdjl/jfzl/content/post_10684124.html" title="广州市规划和自然资源局关于2026年2月局领导接访安排的预告" target="_blank">
+                                     广州市规划和自然资源局关于2026年2月局领导接访安排的预告</a>
+                                     <span>2026-02-10</span>
+                            </li>
+                                                        <li><a href="https://ghzyj.gz.gov.cn/hdjl/jfzl/content/post_10606948.html" title="广州市规划和自然资源局关于2026年1月局领导接访安排的预告" target="_blank">
+                                     广州市规划和自然资源局关于2026年1月局领导接访安排的预告</a>
+                                     <span>2025-12-24</span>
+                            </li>
+                                                   </ul>
+                       <!-- 在线访谈 -->
+                       <ul class="index_list2  qrcode">
+                                                        <li><a href="https://ghzyj.gz.gov.cn/hdjlpt/live/index.php?pid=5368" title="2025年《有事好商量》第三期 ——建设口袋公园，打造优美绿色空间" target="_blank">
+                                     2025年《有事好商量》第三期 ——建设口袋公园，打造优美绿色空间</a>
+                                     <span>2025-11-03</span>
+                            </li>
+                                                        <li><a href="https://ghzyj.gz.gov.cn/hdjlpt/live/index.php?pid=5345" title="广州政务讲堂（第72场） ——不动产登记惠企政策宣讲" target="_blank">
+                                     广州政务讲堂（第72场） ——不动产登记惠企政策宣讲</a>
+                                     <span>2025-10-30</span>
+                            </li>
+                                                        <li><a href="https://ghzyj.gz.gov.cn/hdjlpt/live/index.php?pid=5329" title="广州：创新驱动，建设彰显海洋特色的现代化城市" target="_blank">
+                                     广州：创新驱动，建设彰显海洋特色的现代化城市</a>
+                                     <span>2025-10-27</span>
+                            </li>
+                                                        <li><a href="https://ghzyj.gz.gov.cn/hdjlpt/live/index.php?pid=5037" title="规划升维 湾心如何再造" target="_blank">
+                                     规划升维 湾心如何再造</a>
+                                     <span>2025-05-23</span>
+                            </li>
+                                                        <li><a href="https://ghzyj.gz.gov.cn/hdjlpt/live/index.php?pid=4993" title="引领都市圈做强湾区经济" target="_blank">
+                                     引领都市圈做强湾区经济</a>
+                                     <span>2025-04-10</span>
+                            </li>
+                                                        <li><a href="https://ghzyj.gz.gov.cn/hdjlpt/live/index.php?pid=4992" title="服务广州高质量发展， 规划资源打出“六精”组合拳" target="_blank">
+                                     服务广州高质量发展， 规划资源打出“六精”组合拳</a>
+                                     <span>2025-04-10</span>
+                            </li>
+                                                   </ul>
+                  </div>
+             </div>
+             <script>
+                 jQuery(".hdjl-tab").slide({delayTime:0,triggerTime:0, targetCell:".more a"});
+             </script>
+            </div>
+            <div class="hdjl-menu">
+                 <ul class="clearfix">
+                    <!-- 局长信箱 -->
+                                         <li class="xx1">
+                        <a href="https://ts.gdwsxf.gd.gov.cn/gz/web/index" title="局长信箱" target="_blank">
+                            <img src="/web2025/index2025_r48_c43_s1.png" title="局长信箱" alt="局长信箱">
+                            <span>局长信箱</span>
+                        </a>
+                     </li>
+                                        <!-- 信访投诉 -->
+                     <li class="xx2">
+                        <a href="https://ts.gdwsxf.gd.gov.cn/gz/web/index" title="信访投诉" target="_blank">
+                            <img src="/web2025/index2025_r48_c53_s1.png" title="信访投诉" alt="信访投诉">
+                            <span>信访投诉</span>
+                        </a>
+                     </li>
+                     <!-- 12345热线互动 -->
+                                          <li class="xx3">
+                        <a href="https://www.gz.gov.cn/gz12345/" title="广州12345" target="_blank">
+                            <img src="/web2025/index2025_r48_c63_s1.png" title="广州12345" alt="广州12345">
+                            <span>广州12345</span>
+                        </a>
+                     </li>
+                                        <!-- 统计数据 -->
+                                          <li class="xx4">
+                        <a href="https://ghzyj.gz.gov.cn/hdjl/tjsj/index.html" title="统计数据" target="_blank">
+                            <img src="/web2025/index2025_r48_c68_s1.png" title="统计数据" alt="统计数据">
+                            <span>统计数据</span>
+                        </a>
+                     </li>
+                                     </ul>
+            </div>
+        </div>
+        <div class="mb60"></div>
+        <!-- 专题专栏 -->
+        <div class="ztzl">
+                        <div class="tylm-title1">
+                <h1><a href="https://ghzyj.gz.gov.cn/zwgk/ztzl/index.html" title="专题专栏" target="_blank">专题专栏</a></h1>
+                <div class="tylm-more"></div>
+             </div>
+                         <div class="ztzl-con">
+                  <div class="zt-tit">专<br>题</div>
+                  <div class="ztzl-scroll clearfix">
+                    <div class="bd">
+                         <ul>
+                                                        <li>
+                                <div class="HoverImgbox">   
+                                     <a href="https://ghzyj.gz.gov.cn/zwgk/ztzl/slhjxzqzjgxxjy/" title="树立和践行正确政绩观学习教育" target="_blank">
+                                        <img src="https://ghzyj.gz.gov.cn/img/1/1593/1593099/10729357.jpg" title="树立和践行正确政绩观学习教育" alt="树立和践行正确政绩观学习教育">
+                                     </a> 
+                                </div> 
+                            </li>
+                                                        <li>
+                                <div class="HoverImgbox">   
+                                     <a href="https://ghzyj.gz.gov.cn/gkmlpt/index#951" title="政府网站工作年度报表" target="_blank">
+                                        <img src="https://ghzyj.gz.gov.cn/img/1/1444/1444513/6459511.png" title="政府网站工作年度报表" alt="政府网站工作年度报表">
+                                     </a> 
+                                </div> 
+                            </li>
+                                                        <li>
+                                <div class="HoverImgbox">   
+                                     <a href="https://www.gdzwfw.gov.cn/portal/index?region=440100" title="广东政务服务网丨广州市" target="_blank">
+                                        <img src="https://ghzyj.gz.gov.cn/img/1/1444/1444514/10314177.png" title="广东政务服务网丨广州市" alt="广东政务服务网丨广州市">
+                                     </a> 
+                                </div> 
+                            </li>
+                                                        <li>
+                                <div class="HoverImgbox">   
+                                     <a href="https://ghzyj.gz.gov.cn/newyhyshj/" title="优化营商环境专题" target="_blank">
+                                        <img src="https://ghzyj.gz.gov.cn/img/1/1444/1444512/2744740.png" title="优化营商环境专题" alt="优化营商环境专题">
+                                     </a> 
+                                </div> 
+                            </li>
+                                                        <li>
+                                <div class="HoverImgbox">   
+                                     <a href="https://ghzyj.gz.gov.cn/zwgk/ztzl/fjxzcjgxsdgzghzyzxd/" title="奋进新征程 建功新时代——广州规划资源在行动" target="_blank">
+                                        <img src="https://ghzyj.gz.gov.cn/img/0/632/632698/8212100.png" title="奋进新征程 建功新时代——广州规划资源在行动" alt="奋进新征程 建功新时代——广州规划资源在行动">
+                                     </a> 
+                                </div> 
+                            </li>
+                                                        <li>
+                                <div class="HoverImgbox">   
+                                     <a href="https://www.gdzwfw.gov.cn/portal/branch-hall?orgCode=MB2C91103" title="“一件事”专题" target="_blank">
+                                        <img src="https://ghzyj.gz.gov.cn/img/0/13/13925/2744736.jpg" title="“一件事”专题" alt="“一件事”专题">
+                                     </a> 
+                                </div> 
+                            </li>
+                                                        <li>
+                                <div class="HoverImgbox">   
+                                     <a href="https://ghzyj.gz.gov.cn/zwgk/ztzl/zdlyxxgkzl/sjjggg/" title="重点领域信息公开" target="_blank">
+                                        <img src="https://ghzyj.gz.gov.cn/img/0/13/13919/2744745.jpg" title="重点领域信息公开" alt="重点领域信息公开">
+                                     </a> 
+                                </div> 
+                            </li>
+                                                        <li>
+                                <div class="HoverImgbox">   
+                                     <a href="https://ghh.gzlpc.gov.cn/gzhyzs" title="广海汇-广州海洋政产学研金交流平台" target="_blank">
+                                        <img src="https://ghzyj.gz.gov.cn/img/1/1443/1443086/10309935.png" title="广海汇-广州海洋政产学研金交流平台" alt="广海汇-广州海洋政产学研金交流平台">
+                                     </a> 
+                                </div> 
+                            </li>
+                                                        <li>
+                                <div class="HoverImgbox">   
+                                     <a href="https://ghzyj.gz.gov.cn/zwgk/ztzl/ggzypzgkzl/" title="公共资源配置公开专栏" target="_blank">
+                                        <img src="https://ghzyj.gz.gov.cn/img/0/13/13924/2744743.jpg" title="公共资源配置公开专栏" alt="公共资源配置公开专栏">
+                                     </a> 
+                                </div> 
+                            </li>
+                                                        <li>
+                                <div class="HoverImgbox">   
+                                     <a href="https://ghzyj.gz.gov.cn/zwgk/ztzl/zzydxxgk/" title="住宅用地信息公开" target="_blank">
+                                        <img src="https://ghzyj.gz.gov.cn/img/0/469/469422/7755759.jpg" title="住宅用地信息公开" alt="住宅用地信息公开">
+                                     </a> 
+                                </div> 
+                            </li>
+                                                        <li>
+                                <div class="HoverImgbox">   
+                                     <a href="https://ghzyj.gz.gov.cn/zwgk/ztzl/jzdt/" title="加装电梯专栏" target="_blank">
+                                        <img src="https://ghzyj.gz.gov.cn/img/0/13/13935/2744742.jpg" title="加装电梯专栏" alt="加装电梯专栏">
+                                     </a> 
+                                </div> 
+                            </li>
+                                                        <li>
+                                <div class="HoverImgbox">   
+                                     <a href="https://credit1.gz.gov.cn/creditPublicNew/creditXkDepartNew?dwbh=gz10#xygk" title="双公示信息专栏" target="_blank">
+                                        <img src="https://ghzyj.gz.gov.cn/img/0/13/13930/2744746.jpg" title="双公示信息专栏" alt="双公示信息专栏">
+                                     </a> 
+                                </div> 
+                            </li>
+                                                        <li>
+                                <div class="HoverImgbox">   
+                                     <a href="https://ghzyj.gz.gov.cn/zwgk/ztzl/ssjygkzl/" title="“双随机、一公开”执法监督" target="_blank">
+                                        <img src="https://ghzyj.gz.gov.cn/img/0/748/748830/2744752.jpg" title="“双随机、一公开”执法监督" alt="“双随机、一公开”执法监督">
+                                     </a> 
+                                </div> 
+                            </li>
+                                                        <li>
+                                <div class="HoverImgbox">   
+                                     <a href="https://ghzyj.gz.gov.cn/zwgk/ztzl/fzzfjs/" title="法治政府建设专栏" target="_blank">
+                                        <img src="https://ghzyj.gz.gov.cn/img/0/516/516202/7877716.jpg" title="法治政府建设专栏" alt="法治政府建设专栏">
+                                     </a> 
+                                </div> 
+                            </li>
+                                                        <li>
+                                <div class="HoverImgbox">   
+                                     <a href="https://ghzyj.gz.gov.cn/zwgk/ztzl/shcezl/" title="扫黑除恶专栏" target="_blank">
+                                        <img src="https://ghzyj.gz.gov.cn/img/0/13/13923/2744744.jpg" title="扫黑除恶专栏" alt="扫黑除恶专栏">
+                                     </a> 
+                                </div> 
+                            </li>
+                                                        <li>
+                                <div class="HoverImgbox">   
+                                     <a href="https://ghzyj.gz.gov.cn/zwgk/ztzl/gzscsghwyh/" title="广州市规划委员会" target="_blank">
+                                        <img src="https://ghzyj.gz.gov.cn/img/0/622/622479/2744747.png" title="广州市规划委员会" alt="广州市规划委员会">
+                                     </a> 
+                                </div> 
+                            </li>
+                                                        <li>
+                                <div class="HoverImgbox">   
+                                     <a href="https://ghzyj.gz.gov.cn/zwgk/ztzl/gzczjj/czjiztzl.html" title="广州村庄简介" target="_blank">
+                                        <img src="https://ghzyj.gz.gov.cn/img/0/53/53430/5666155.png" title="广州村庄简介" alt="广州村庄简介">
+                                     </a> 
+                                </div> 
+                            </li>
+                                                        <li>
+                                <div class="HoverImgbox">   
+                                     <a href="https://ghzyj.gz.gov.cn/zwgk/ztzl/qgchfxcr/" title="全国测绘法宣传日" target="_blank">
+                                        <img src="https://ghzyj.gz.gov.cn/img/0/207/207771/2744735.jpg" title="全国测绘法宣传日" alt="全国测绘法宣传日">
+                                     </a> 
+                                </div> 
+                            </li>
+                                                        <li>
+                                <div class="HoverImgbox">   
+                                     <a href="https://ghzyj.gz.gov.cn/zwgk/ztzl/sjdqrzt/" title="世界地球日" target="_blank">
+                                        <img src="https://ghzyj.gz.gov.cn/img/0/98/98789/2744738.jpg" title="世界地球日" alt="世界地球日">
+                                     </a> 
+                                </div> 
+                            </li>
+                                                        <li>
+                                <div class="HoverImgbox">   
+                                     <a href="https://ghzyj.gz.gov.cn/zwgk/ztzl/tdrzt/" title="全国土地日" target="_blank">
+                                        <img src="https://ghzyj.gz.gov.cn/img/0/13/13927/2744737.jpg" title="全国土地日" alt="全国土地日">
+                                     </a> 
+                                </div> 
+                            </li>
+                                                        <li>
+                                <div class="HoverImgbox">   
+                                     <a href="https://ghzyj.gz.gov.cn/zwgk/ztzl/sjhyr/" title="世界海洋日" target="_blank">
+                                        <img src="https://ghzyj.gz.gov.cn/img/0/132/132425/5894618.jpg" title="世界海洋日" alt="世界海洋日">
+                                     </a> 
+                                </div> 
+                            </li>
+                                                        <li>
+                                <div class="HoverImgbox">   
+                                     <a href="https://ghzyj.gz.gov.cn/zwgk/ztzl/jszc" title="政务服务技术支撑网上申请" target="_blank">
+                                        <img src="https://ghzyj.gz.gov.cn/img/1/1234/1234010/9752343.jpg" title="政务服务技术支撑网上申请" alt="政务服务技术支撑网上申请">
+                                     </a> 
+                                </div> 
+                            </li>
+                                                        <li>
+                                <div class="HoverImgbox">   
+                                     <a href="https://guangdong.tianditu.gov.cn/guangzhou/" title="天地图 广州" target="_blank">
+                                        <img src="https://ghzyj.gz.gov.cn/img/0/13/13931/2744741.jpg" title="天地图 广州" alt="天地图 广州">
+                                     </a> 
+                                </div> 
+                            </li>
+                                                        <li>
+                                <div class="HoverImgbox">   
+                                     <a href="https://ghzyj.gz.gov.cn/zwgk/ztzl/fdytncbdcdj/" title="“房地一体”农村不动产登记专栏（已归档）" target="_blank">
+                                        <img src="https://ghzyj.gz.gov.cn/img/0/122/122861/5877323.jpg" title="“房地一体”农村不动产登记专栏（已归档）" alt="“房地一体”农村不动产登记专栏（已归档）">
+                                     </a> 
+                                </div> 
+                            </li>
+                                                        <li>
+                                <div class="HoverImgbox">   
+                                     <a href="https://guangdong.tianditu.gov.cn/nr-gdland-web/" title="粤地易购" target="_blank">
+                                        <img src="https://ghzyj.gz.gov.cn/img/1/1594/1594253/10732753.png" title="粤地易购" alt="粤地易购">
+                                     </a> 
+                                </div> 
+                            </li>
+                                                        
+                          </ul>
+                      </div>
+               <div class="hgan"><a class="prev" title="上一张"></a><a class="next" title="下一张"></a></div>
+              </div>
+              <script type="text/javascript">
+                jQuery(".ztzl-scroll").slide({mainCell:".bd ul",autoPage:true,effect:"leftLoop",scroll:3,vis:3});
+               //  jQuery(".ztzl-scroll").slide({mainCell:".bd ul",autoPage:true,effect:"leftLoop",autoPlay:true,scroll:3,vis:3});
+                </script>
+             </div>
+        </div>
+        <div class="mb60"></div>
+        <!-- 友情链接 -->
+         <div class="yqlj">
+            <div class="tylm-title1">
+                <h1>友情链接</h1>
+                <div class="tylm-more"></div>
+             </div>
+            
+             <div class="footer_links">
+                <div class="clearfix">
+                    <div class="nodeSelect">
+                         <span style="margin-right:10px"><a href="http://www.gov.cn/" target="_blank">中国政府网</a></span>
+                         <span style="margin-right:10px"><a href="http://www.gd.gov.cn/" target="_blank">广东省人民政府</a></span>
+                         <span><a href="https://www.gz.gov.cn/" target="_blank">广州市人民政府</a></span>
+                     </div>
+                
+                      <!-- 上级政府部门 -->
+                    <dl tabindex="0">
+                                                <dt class="">上级政府部门<i></i></dt>
+                                                <dd>
+                            <div class="scrolldd">
+                                <!-- <a href="">&nbsp;</a> -->
+                                                                 <a href="https://www.mnr.gov.cn/" title="自然资源部" target="_blank">自然资源部</a>
+                                                                 <a href="https://www.mohurd.gov.cn/" title="住房和城乡建设部" target="_blank">住房和城乡建设部</a>
+                                                                 <a href="https://nr.gd.gov.cn/" title="广东省自然资源厅" target="_blank">广东省自然资源厅</a>
+                                                                 <a href="http://zfcxjst.gd.gov.cn/" title="广东省住房和城乡建设厅" target="_blank">广东省住房和城乡建设厅</a>
+                                                             </div>
+                        </dd>
+                    </dl>
+                    <!-- 市政府部门 -->
+                    <dl tabindex="0">
+                                                 <dt class="">市级机构<i></i></dt>
+                                                <dd>
+                            <div class="scrolldd">
+                                <!-- <a href="">&nbsp;</a> -->
+                                                               <a href="http://www.guangzhou.gov.cn/" title="市委宣传部" target="_blank">市委宣传部</a>
+                                                                <a href="https://www.gztzb.gov.cn/" title="市委统战部" target="_blank">市委统战部</a>
+                                                                <a href="https://www.gzszfw.gov.cn/" title="市委政法委" target="_blank">市委政法委</a>
+                                                                <a href="http://gzbb.gov.cn/gzbb/" title="市委编办" target="_blank">市委编办</a>
+                                                                <a href="https://www.gztb.gov.cn/" title="市委台办" target="_blank">市委台办</a>
+                                                                <a href="http://www.gzswlgbj.gov.cn/" title="市委老干部局" target="_blank">市委老干部局</a>
+                                                                <a href="https://www.gzbm.gov.cn/" title="市保密局" target="_blank">市保密局</a>
+                                                                <a href="http://www.gz.gov.cn/" title="市政府办公厅" target="_blank">市政府办公厅</a>
+                                                                <a href="http://fgw.gz.gov.cn/" title="市发展改革委" target="_blank">市发展改革委</a>
+                                                                <a href="http://jyj.gz.gov.cn/" title="市教育局" target="_blank">市教育局</a>
+                                                                <a href="http://kjj.gz.gov.cn/" title="市科技局" target="_blank">市科技局</a>
+                                                                <a href="https://gxj.gz.gov.cn/" title="市工业和信息化局" target="_blank">市工业和信息化局</a>
+                                                                <a href="http://mzzjj.gz.gov.cn/" title="市民族宗教局" target="_blank">市民族宗教局</a>
+                                                                <a href="https://gaj.gz.gov.cn/" title="市公安局" target="_blank">市公安局</a>
+                                                                <a href="http://mzj.gz.gov.cn/" title="市民政局" target="_blank">市民政局</a>
+                                                                <a href="http://sfj.gz.gov.cn/" title="市司法局" target="_blank">市司法局</a>
+                                                                <a href="https://czj.gz.gov.cn/" title="市财政局" target="_blank">市财政局</a>
+                                                                <a href="https://rsj.gz.gov.cn/" title="市人力资源社会保障局" target="_blank">市人力资源社会保障局</a>
+                                                                <a href="https://ghzyj.gz.gov.cn/" title="市规划和自然资源局" target="_blank">市规划和自然资源局</a>
+                                                                <a href="http://sthjj.gz.gov.cn/" title="市生态环境局" target="_blank">市生态环境局</a>
+                                                                <a href="https://zfcj.gz.gov.cn/" title="市住房城乡建设局" target="_blank">市住房城乡建设局</a>
+                                                                <a href="http://jtj.gz.gov.cn/" title="市交通运输局" target="_blank">市交通运输局</a>
+                                                                <a href="http://swj.gz.gov.cn/" title="市水务局" target="_blank">市水务局</a>
+                                                                <a href="http://nyncj.gz.gov.cn/" title="市农业农村局" target="_blank">市农业农村局</a>
+                                                                <a href="http://sw.gz.gov.cn/" title="市商务局" target="_blank">市商务局</a>
+                                                                <a href="http://wglj.gz.gov.cn/" title="市文化广电旅游局" target="_blank">市文化广电旅游局</a>
+                                                                <a href="http://wjw.gz.gov.cn/" title="市卫生健康委" target="_blank">市卫生健康委</a>
+                                                                <a href="http://tyjrswj.gz.gov.cn/" title="市退役军人事务局" target="_blank">市退役军人事务局</a>
+                                                                <a href="http://yjglj.gz.gov.cn/" title="市应急管理局" target="_blank">市应急管理局</a>
+                                                                <a href="http://sjj.gz.gov.cn/" title="市审计局" target="_blank">市审计局</a>
+                                                                <a href="http://gzw.gz.gov.cn/" title="市国资委" target="_blank">市国资委</a>
+                                                                <a href="https://scjgj.gz.gov.cn/" title="市市场监管局" target="_blank">市市场监管局</a>
+                                                                <a href="http://tyj.gz.gov.cn/" title="市体育局" target="_blank">市体育局</a>
+                                                                <a href="http://tjj.gz.gov.cn/" title="市统计局" target="_blank">市统计局</a>
+                                                                <a href="https://www.gz.gov.cn/gzsylbzj/" title="市医保局" target="_blank">市医保局</a>
+                                                                <a href="http://jrjgj.gz.gov.cn/" title="市地方金融监管局" target="_blank">市地方金融监管局</a>
+                                                                <a href="http://cg.gz.gov.cn/" title="市城市管理综合执法局" target="_blank">市城市管理综合执法局</a>
+                                                                <a href="https://www.gz.gov.cn/gzsfyjs/" title="市政府研究室" target="_blank">市政府研究室</a>
+                                                                <a href="http://xfj.gz.gov.cn/" title="市信访局" target="_blank">市信访局</a>
+                                                                <a href="http://zsj.gz.gov.cn/" title="市政务服务和数据管理局" target="_blank">市政务服务和数据管理局</a>
+                                                                <a href="http://gwj.gz.gov.cn/" title="市港务局" target="_blank">市港务局</a>
+                                                                <a href="http://lyylj.gz.gov.cn/" title="市林业园林局" target="_blank">市林业园林局</a>
+                                                            </div>
+                        </dd>
+                    </dl>
+                    <dl tabindex="0" class="dlEnd">
+                                                <dt class="">区政府<i></i></dt>
+                                                <dd>
+                            <div class="scrolldd">
+                                <!-- <a href="">&nbsp;</a> -->
+                                                                <a href="http://www.yuexiu.gov.cn/" title="越秀区" target="_blank">越秀区</a>
+                                                                 <a href="http://www.haizhu.gov.cn/" title="海珠区" target="_blank">海珠区</a>
+                                                                 <a href="http://www.lw.gov.cn/" title="荔湾区" target="_blank">荔湾区</a>
+                                                                 <a href="http://www.thnet.gov.cn/" title="天河区" target="_blank">天河区</a>
+                                                                 <a href="https://www.by.gov.cn/" title="白云区" target="_blank">白云区</a>
+                                                                 <a href="http://www.hp.gov.cn/" title="黄埔区" target="_blank">黄埔区</a>
+                                                                 <a href="https://www.huadu.gov.cn/" title="花都区" target="_blank">花都区</a>
+                                                                 <a href="http://www.panyu.gov.cn/" title="番禺区" target="_blank">番禺区</a>
+                                                                 <a href="http://www.gzns.gov.cn/" title="南沙区" target="_blank">南沙区</a>
+                                                                 <a href="http://www.conghua.gov.cn/" title="从化区" target="_blank">从化区</a>
+                                                                 <a href="https://www.zc.gov.cn/" title="增城区" target="_blank">增城区</a>
+                                                             </div>
+                        </dd>
+                    </dl>
+                  
+                </div>
+            </div>
+ <script>
+          $(".footer_links dl").hover(function(){
+		$(this).find("dt").addClass("on")
+			   .next("dd").stop().slideDown('fast');
+	},function(){
+		$(this).find("dt").removeClass("on")
+			   .next("dd").stop().slideUp('fast');
+	})
+  </script>
+<style>
+/* .footer_links .nodeSelect p{height: 22px;} */
+.footer_links .nodeSelect span a{color: #333; font-size: 16px; padding-left: 28px;  background:  url(/web2025/pe-gov.png) left center no-repeat; height:44px; line-height:44px;}
+.footer_links .nodeSelect span a:hover{color: #005BAC; font-size:16px}
+
+</style>
+
+       
+         </div>
+        <!-- 友情链接 End -->
+        <div class="mb60"></div>
+        </div>
+        </div>
+<!-- easybtn Start -->
+  
+<div class="easybtn">
+    <div class="easybtn_main">
+         <div class="easybtn_in">
+              <ul class="ul01">
+                  <li id="zstdcs" class="item"><div class="btn">
+                     <a href="https://guangdong.tianditu.gov.cn/guangzhou/zstdcs/#/" title="招商土地超市" target="_blank"><i alt="招商土地超市"></i></a><span class="txt">
+                     <a href="https://guangdong.tianditu.gov.cn/guangzhou/zstdcs/#/" title="招商土地超市" target="_blank">招商土地超市</a></span></div></li>
+                  <li id="ghh" class="item"><div class="btn"><a href="https://ghh.gzlpc.gov.cn/gzhyzs" title="广海汇" target="_blank"><i alt="广海汇"></i></a><span class="txt">
+                     <a href="https://ghh.gzlpc.gov.cn/gzhyzs" title="广海汇" target="_blank">广海汇</a></span></div></li>
+                 <!-- 国土空间规划监督投诉举报 -->
+                  <li id="gtgj" class="item"><div class="btn">
+                     <a href="https://ghzyj.gz.gov.cn/hdjlpt/yjzj/answer/47170" title="国土空间规划监督投诉举报" target="_blank"><i alt="国土空间规划监督投诉举报"></i></a><span class="txt">
+                     <a href="https://ghzyj.gz.gov.cn/hdjlpt/yjzj/answer/47170" title="国土空间规划监督投诉举报" target="_blank">国土空间规划监督投诉举报</a></span></div>
+                     </li>
+<!-- 国土空间规划监督投诉举报 -->
+
+                  <!-- 云上名城广州 -->
+                         <li id="mcgz" class="item">
+                            <div class="btn">
+                               <!-- <a href="https://ghh.gzlpc.gov.cn/gzhyzs" title="云上名城广州" target="_blank"> -->
+                               <i alt="云上名城广州"></i>
+                               <!-- </a> -->
+                        <span  class="txt" style="line-height:1.2;">
+                          <!-- <a href="https://ghh.gzlpc.gov.cn/gzhyzs" title="云上名城广州" target="_blank"> -->
+                          云上名城广州
+                          <!-- </a> -->
+                          </span> 
+                          </div>
+                          <div class="item-hover eas1">
+                        
+                         <div class="sub-btn">
+                         <!-- <a href="https://ghzyj.gz.gov.cn/ywpd/cxgh/ghxkgsgb/pqgs1/index.html" title="云上名城广州" target="_blank"> -->
+                         <img src="/web2025/mcgzxcx.png">
+                          <!-- </a> -->
+                         </div>                    
+                         </div></li>
+                          <!-- 云上名城广州 -->   
+                  <li id="wyc" class="item">
+                        <div class="btn"><i alt="我要查"></i><span class="txt">我要查</span></div>
+                        <div class="item-hover eas1" style="top:-172px;">
+                         
+                          <!-- 批前公示 -->
+                                                       <div class="sub-btn">
+                                <a href="https://ghzyj.gz.gov.cn/ywpd/cxgh/ghxkgsgb/pqgs1/index.html" title="批前公示" target="_blank">
+                                  <img src="/web2025/index2025_wyc_icon01.png">
+                                  <span class="txt">批前公示</span>
+                                </a>
+                             </div>
+                                                    <!-- 批后公布 -->
+                                                       <div class="sub-btn">
+                                <a href="https://ghzyj.gz.gov.cn/ywpd/cxgh/ghxkgsgb/phgbnew/index.html" title="批后公布" target="_blank">
+                                  <img src="/web2025/index2025_wyc_icon02.png">
+                                  <span class="txt">批后公布</span>
+                                </a>
+                             </div>
+                             
+                           <!-- 广州不动产登记资料利用 -->
+                           
+                             <div class="sub-btn">
+                                <a href="https://ghzyj.gz.gov.cn/zwfw/xtzq/gzsbdcdjzlly/index.html" title="广州市不动产登记资料利用" target="_blank">
+                                  <img src="/web2025/index2025_wyc_icon05.png">
+                                  <span class="txt">广州不动产登记<br>资料利用</span>
+                                </a>
+                             </div>
+                                                     <!-- 不动产登记案件办理情况查询 -->
+                           
+                             <div class="sub-btn">
+                                <a href="https://ghzyj.gz.gov.cn/ywpd/bdcdj/ywcx/bdcdjajblqkcxx/index.html" title="不动产登记案件办理情况查询" target="_blank">
+                                  <img src="/web2025/index2025_wyc_icon05.png">
+                                  <span class="txt">不动产登记案件<br>办理情况查询</span>
+                                </a>
+                             </div>
+                                                     <!-- 标准地图 -->
+                             <div class="sub-btn">
+                                <a href="https://guangdong.tianditu.gov.cn/guangzhou/StandardMap/index.html" title="标准地图" target="_blank">
+                                  <img src="/web2025/index2025_wyc_icon04.png">
+                                  <span class="txt">标准地图</span>
+                                </a>
+                             </div>
+                            <!-- 天地图 -->
+                             <div class="sub-btn">
+                                <a href="https://guangdong.tianditu.gov.cn/guangzhou/" title="天地图" target="_blank">
+                                  <img src="/web2025/index2025_wyc_icon08.png">
+                                  <span class="txt">天地图</span>
+                                </a>
+                             </div>
+                        </div>
+                   </li>
+                  <li id="wyb" class="item">
+                        <div class="btn"><i alt="我要办"></i><span class="txt">我要办</span></div>
+                        <div class="item-hover eas2" style="top:-250px">
+                          <!-- 不动产登记网上申请 -->
+                             <div class="sub-btn">
+                                <a href="https://bdcws.gzlpc.gov.cn/gzwwsq/#/entry" title="不动产登记网上申请" target="_blank">
+                                  <img src="/web2025/index2025_wyb_icon01.png">
+                                  <span class="txt">不动产登记网上申请</span>
+                                </a>
+                             </div>
+                          <!-- 不动产登记网上预约 -->
+                           
+                             <div class="sub-btn">
+                                <a href="https://book.gzlpc.gov.cn/reserveweb/#/login" title="广州市不动产登记网上预约" target="_blank">
+                                  <img src="/web2025/index2025_wyb_icon02.png">
+                                  <span class="txt">不动产登记网上预约</span>
+                                </a>
+                             </div>
+                                                    <!-- 政务服务技术支撑网上申请 -->
+                           
+                             <div class="sub-btn">
+                                <a href="https://ghzyj.gz.gov.cn/zwgk/ztzl/jszc/index.html" title="政务服务技术支撑网上申请" target="_blank">
+                                  <img src="/web2025/index2025_wyb_icon03.png">
+                                  <span class="txt" style="line-height: 1 !important;">政务服务技术支撑<br>网上申请</span>
+                                </a>
+                             </div>
+                                                    <!-- 地形图提供利用指引 -->
+                         
+                             <div class="sub-btn">
+                                <a href="https://ghzyj.gz.gov.cn/xwzx/tzgg/content/post_10155122.html" title="地形图提供利用指引" target="_blank">
+                                  <img src="/web2025/index2025_wyb_icon05.png">
+                                  <span class="txt" style="line-height: 1 !important;">地形图提供利用指引</span>
+                                </a>
+                             </div>
+                                                    <!-- 广东政务服务网 -->
+                             <div class="sub-btn">
+                                <a href="https://www.gdzwfw.gov.cn/portal/v2/branch-hall?orgCode=MB2C91103" title="广东政务服务网" target="_blank">
+                                  <img src="/web2025/index2025_wyb_icon04.png">
+                                  <span class="txt">广东政务服务网</span>
+                                </a>
+                             </div>
+                        </div>
+                   </li>
+                  <li id="wyw" class="item">
+                        <div class="btn"><i alt="我要问"></i><span class="txt">我要问</span></div>
+                        <div class="item-hover eas3" style="top:-328px">
+                          <!-- 12345热线互动 -->
+                                                         <div class="sub-btn">
+                                <a href="https://www.gz.gov.cn/gz12345/" title="广州12345" target="_blank">
+                                  <img src="/web2025/index2025_wyw_icon01.png">
+                                  <span class="txt">广州12345</span>
+                                </a>
+                             </div>
+                                                      <!-- 业务知识库 -->
+                                                         <div class="sub-btn">
+                                <a href="https://ghzyj.gz.gov.cn/hdjl/ywzsk/index.html" title="答问知识库" target="_blank">
+                                  <img src="/web2025/index2025_wyw_icon02.png">
+                                  <span class="txt">答问知识库</span>
+                                </a>
+                             </div>
+                                                      <!-- 不动产知识问答 -->
+                                                         <div class="sub-btn">
+                                <a href="https://ghzyj.gz.gov.cn/ywpd/bdcdj/bdczswd/index.html" title="不动产知识问答" target="_blank">
+                                  <img src="/web2025/index2025_wyw_icon03.png">
+                                  <span class="txt">不动产知识问答</span>
+                                </a>
+                             </div>
+                                                      <!-- 办事指南 -->
+                                                         <div class="sub-btn">
+                                <a href="https://www.gdzwfw.gov.cn/portal/branch-hall?orgCode=MB2C91103" title="办事指南" target="_blank">
+                                  <img src="/web2025/index2025_wyw_icon04.png">
+                                  <span class="txt">办事指南</span>
+                                </a>
+                             </div>
+                                                    </div>
+                   </li>
+
+               
+              </ul>
+         </div>
+    </div>
+</div>
+<style>
+   .easybtn .item .eas1:after {top:40%}
+   .easybtn .item .eas2:after {top:56%}
+   .easybtn .item .eas3:after {top:92%}
+</style>
+<script>
+    $(window).scroll(function () {
+        var h = document.documentElement.clientHeight //页面高度
+        var b = document.documentElement.scrollHeight - document.documentElement.scrollTop - document.documentElement.clientHeight; //滚动条到下方的距离
+        var a = document.documentElement.scrollTop; //滚动距离
+        if (a <= 400) {
+            $(".easybtn").css("top", 544-a+"px");
+        } else {
+            $(".easybtn").css("top", "10px");
+        }
+    });
+</script>
+<!-- easybtn End -->        
+<!--main End-->  
+<!--footer Start-->
+    <style>
+  .footer-m{margin:0 2%;}
+  .footer-l{width:33%;}
+  @media (max-width: 1024px) {
+    .footer .container{padding:0}
+    .footer-r{width:62%;}
+  }
+</style>
+<div class="footer">
+    <div class="dbdh">
+        <!-- 网站地图 -->
+                 <a href="https://ghzyj.gz.gov.cn/gywz/wzdt/index.html" title="网站地图" target="_blank">网站地图</a>
+         <span></span>
+                        <!-- 网站声明 -->
+         <a href="https://ghzyj.gz.gov.cn/gywz/wzsm/content/post_2744793.html" title="网站声明" target="_blank">网站声明</a>
+         <span></span>
+                        <!-- 隐私安全 -->
+         <a href="https://ghzyj.gz.gov.cn/gywz/ysaq/content/post_2744794.html" title="隐私安全" target="_blank">隐私安全</a>
+         <span></span>
+                        <!-- 联系我们 -->
+         <a href="https://ghzyj.gz.gov.cn/gywz/lxwm/content/post_10593832.html" title="联系方式" target="_blank">联系方式</a>
+         <span></span>
+                         <!-- 联系我们 -->
+         <a href="https://ghzyj.gz.gov.cn/gywz/sybz/content/post_2747660.html" title="使用帮助" target="_blank">使用帮助</a>
+            </div>
+    <div class="container">
+	<div class="con clearfix">
+		 <div class="footer-l">
+              <div class="wzbs">
+                <span style="margin:0; border:none;">
+                  <!-- <a href="http://bszs.conac.cn/sitename?method=show&amp;id=0C1EE1DB9A2738CAE053022819AC4103">
+                <img id="imgConac" src="/global/red.png" title="党政机关网站标识" alt="党政机关网站标识"></a> -->
+                <script type="text/javascript">document.write(unescape("%3Cspan id='_ideConac' %3E%3C/span%3E%3Cscript  src='https://dcs.conac.cn/js/20/296/0000/40702451/CA202960000407024510002.js' type='text/javascript'%3E%3C/script%3E"));</script>
+                </span>
+              </div>
+              <div class="wzxx1">
+                   <p>主办单位：广州市规划和自然资源局</p>
+                   <p style="line-height:1.5">技术支持：广州市基础地理信息中心<br>　　　　（广州市规划和自然资源自动化中心）</p>
+                   <p class="last fwl">访问量：<span style="color:#bd1111"><span id="NFCMS-SITE-VISIT-7">-</span><script>setTimeout(function(){var s = document.createElement("script");s.type = "text/javascript";s.src = "//statistics.gd.gov.cn/jsonp/site/sum?site=200026&callback=NFCMS_CB_SITE_VISIT_7&t=" + Math.random().toString(35).substr(2);window.NFCMS_CB_SITE_VISIT_7 = function(data){document.getElementById("NFCMS-SITE-VISIT-7").innerHTML = data.count;document.body.removeChild(s);};document.body.appendChild(s);}, 10);</script></NFC_SITE_VISIT></p>
+              </div>
+         </div>
+         <div class="footer-m"></div>
+         <div class="footer-r">
+            <div class="wzxx1">
+              <p>ICP备案号：<a href="https://beian.miit.gov.cn/" target="_blank" >粤ICP备16007440号-3</a></p>
+              <p><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44010402000239" target="_blank"><img class="nfw-cms-img" img-id="215493" src="/global/27f6f788a35c4661a43aa7ce1ae91e7f.png" title="粤公网安备 44010402000239号" alt="粤公网安备 44010402000239号">粤公网安备 44010402000239号</a></p>
+              <p class="last">网站标识码：4401000100</p>
+            </div>
+            <div class="dbtb">
+                  <span class="zwyjc"><a href="https://ghzyj.gz.gov.cn/zwzyyjc/index.html" class="a3">
+                    <img src="/global/footer_yjc.png" title="政务资源一键查" alt="政务资源一键查"></a> </span>
+                <script id="_jiucuo_" sitecode='4401000100' src='https://pucha.kaipuyun.cn/exposure/jiucuo.js'></script>
+                <span><img src="/global/slhwza_icon.jpg" title="适老化改造"></span>
+                <span class="wx"><img src="/global/ewm_wx.jpg" title="官方微信" alt="官方微信" style="width:90px"></span>
+            </div>
+         </div>
+	</div>
+    </div>
+</div> 
+<script src="/web2025/layer.js"></script>
+<link rel="stylesheet" href="/web2025/layer.css">
+<script src="/web2025/my_layer.js"></script>
+
+<script type="text/javascript" src="/global/jq-code.js"></script>
+<script type="text/javascript">
+//当前大栏目
+try{
+	var str = $(".curmb").text(); 
+	var str1 = str.split(">")[1];
+	if($.trim(str1)!=''){
+	  $(".mainnav li").each(function(){
+		if($(this).text().search($.trim(str1))>-1){
+			$(this).addClass("cur").siblings().removeClass("cur");
+		}
+	  });
+	}else{}
+}catch(e){}
+</script>
+<script>
+/**
+ * 全站无障碍优化方案
+ * 1. 使用localStorage保存适老模式状态
+ * 2. 退出模式时完全恢复原有功能
+ * 3. 按钮状态动态更新
+ */
+
+const GlobalAccessibility = {
+  // 初始化状态
+  init() {
+    // 应用视觉样式
+    this.addVisualStyles();
+    
+    // 检查保存的状态
+    const savedState = localStorage.getItem('accessibilityMode');
+    if (savedState === 'true') {
+      this.enableAccessibility();
+    } else {
+      this.disableAccessibility();
+    }
+    
+    // 绑定按钮事件
+    this.bindButtonEvents();
+  },
+  
+  // 启用无障碍模式
+  enableAccessibility() {
+    // 设置body标识
+    document.body.setAttribute('data-accessibility-mode', 'true');
+    localStorage.setItem('accessibilityMode', 'true');
+    
+    // 移除弹窗JS文件
+    this.removeSpecificScripts();
+    
+    // 覆盖弹窗功能
+    this.overridePopupFunctions();
+    
+    // 更新按钮样式
+    this.updateButtonState(true);
+    
+    // 初始化无障碍工具
+    if (typeof ariaTool === 'object' && typeof ariaTool.init === 'function') {
+      ariaTool.init();
+    }
+    
+    console.log('全站无障碍模式已启用');
+  },
+  
+  // 禁用无障碍模式
+  disableAccessibility() {
+    // 移除body标识
+    document.body.removeAttribute('data-accessibility-mode');
+    localStorage.setItem('accessibilityMode', 'false');
+    
+    // 恢复原始弹窗功能
+    this.restorePopupFunctions();
+    
+    // 恢复弹窗JS文件
+    this.restoreScripts();
+    
+    // 更新按钮样式
+    this.updateButtonState(false);
+    
+    console.log('无障碍模式已关闭');
+  },
+  
+  // 移除弹窗JS文件
+  removeSpecificScripts() {
+    // 备份原始脚本路径
+    if (!window._originalScripts) {
+      window._originalScripts = [
+        '/web2025/layer.js',
+        '/web2025/my_layer.js'
+      ];
+    }
+    
+    // 移除脚本标签
+    document.querySelectorAll('script[src]').forEach(script => {
+      const src = script.src;
+      if (window._originalScripts.some(path => src.includes(path))) {
+        script.remove();
+      }
+    });
+  },
+  
+  // 恢复弹窗JS文件
+  restoreScripts() {
+    if (!window._originalScripts) return;
+    
+    // 动态重新加载脚本
+    window._originalScripts.forEach(path => {
+      if (!document.querySelector(`script[src*="${path}"]`)) {
+        const script = document.createElement('script');
+        script.src = path;
+        document.head.appendChild(script);
+      }
+    });
+  },
+  
+  // 覆盖弹窗函数
+  overridePopupFunctions() {
+    // 确保layer对象存在
+    window.layer = window.layer || {};
+    
+    // 备份原始方法
+    if (!window._originalLayerFunctions) {
+      window._originalLayerFunctions = {
+        confirm: window.layer.confirm,
+        alert: window.layer.alert,
+        msg: window.layer.msg
+      };
+    }
+    
+    // 覆盖确认弹窗方法 - 直接放行
+    window.layer.confirm = (content, options, yesCallback) => {
+      if (typeof yesCallback === 'function') {
+        yesCallback();
+      }
+      return false;
+    };
+    
+    // 禁用其他弹窗方法
+    window.layer.alert = window.layer.msg = () => {
+      return false;
+    };
+  },
+  
+  // 恢复原始弹窗功能
+  restorePopupFunctions() {
+    if (!window._originalLayerFunctions) return;
+    
+    window.layer = window.layer || {};
+    Object.assign(window.layer, window._originalLayerFunctions);
+    
+    // 清除备份
+    delete window._originalLayerFunctions;
+  },
+  
+  // 绑定按钮事件
+  bindButtonEvents() {
+    const button = document.getElementById('wza');
+    if (!button) return;
+    
+    // 绑定点击事件
+    button.addEventListener('click', (event) => {
+      event.preventDefault();
+      event.stopImmediatePropagation();
+      
+      // 检查当前状态
+      const isActive = document.body.hasAttribute('data-accessibility-mode');
+      
+      // 切换状态
+      if (isActive) {
+        this.disableAccessibility();
+      } else {
+        this.enableAccessibility();
+      }
+    });
+  },
+  
+  // 更新按钮状态
+  updateButtonState(isActive) {
+    const button = document.getElementById('wza');
+    if (!button) return;
+    
+    button.classList.toggle('accessibility-active', isActive);
+  },
+  
+  // 添加视觉样式
+  addVisualStyles() {
+    const styleId = 'accessibility-styles';
+    if (document.getElementById(styleId)) return;
+    
+    const style = document.createElement('style');
+    style.id = styleId;
+    // style.textContent = `
+    //   #wza.accessibility-active {
+    //     background-color: #4CAF50 !important;
+    //     color: white !important;
+    //     font-weight: bold;
+    //     position: relative;
+    //   }
+    //   #wza.accessibility-active::after {
+    //     content: '•';
+    //     position: absolute;
+    //     top: 3px;
+    //     right: 3px;
+    //     font-size: 10px;
+    //   }
+    // `;
+    document.head.appendChild(style);
+  }
+};
+
+// 页面加载时初始化
+document.addEventListener('DOMContentLoaded', () => {
+  GlobalAccessibility.init();
+});
+
+</script>	
+<style>
+  .status-on, .status-off{display:none;}
+</style>
+<script>
+    $("#_span_jiucuo img").attr("title","政府网站找错").attr("alt","政府网站找错");
+    $("#imgConac").attr("title","党政机关").attr("alt","党政机关");
+</script>    
+<!--footer End-->  
+
+
+<script type="text/javascript">
+jQuery(".tpxwlb").slide({titCell:".hd ul",mainCell:".bd ul",effect:"leftLoop",autoPlay:true,autoPage:true});
+jQuery(".tabbox").slide({delayTime:0,triggerTime:0, targetCell:".more a"});
+</script>
+        
+ <script>
+    for(var i=0;i<$(".state").length;i++){
+        var url_href=$(".text_a").eq(i).attr("href");
+                   
+        var time=$(".state").eq(i).text();
+                   
+        time=(new Date(parseInt(time) * 1000).toLocaleDateString()).replace(/(年|月)/g, '/').replace('日', '').replace(/[^\d-/]/g,'')
+        time=Date.parse(time)/1000;
+        time=time+86340;
+        if(time<(Date.parse(new Date())/1000))
+   {				
+   $(".state").eq(i).html("<span class='end'>已结束</span>");
+        }else{				
+        $(".state").eq(i).attr('href',url_href);
+        $(".state").eq(i).html("<span class='star'>征集中</span>");
+        $(".state").eq(i).removeClass("yjs").addClass('zjz');
+   }
+                   
+   var url_result = $(".text_class").eq(i).attr("href");
+        if(url_result ==''){		
+        $(".text_class").eq(i).removeAttr('href');
+        $(".text_class").eq(i).removeClass("yjs");
+        }
+   }    
+   </script>
+
+</body>
+</html>

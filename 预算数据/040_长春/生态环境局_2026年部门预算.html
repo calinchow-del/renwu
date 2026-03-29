@@ -1,0 +1,707 @@
+<!doctype html>
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+
+
+
+<meta name="SiteName" content="长春市生态环境局"/>
+<meta name="SiteDomain" content="http://hjj.changchun.gov.cn/"/>
+<meta name="SiteIDCode" content="2201000009"/>
+<meta name="ColumnName" content=""/>
+<meta name="ColumnType" content=""/>
+<meta name="ColumnDescription" content="">
+<meta name="ColumnKeywords" content="">
+<meta name="ArticleTitle" content=""/>
+<meta name="PubDate" content=""/>
+<meta name="ContentSource" content="" />
+<meta name="Url" content=""/>
+
+
+	<title>长春市生态环境局</title>
+	<link href="./images/wsy_main.css" type="text/css" rel="stylesheet">
+	<link href="./images/list.css" type="text/css" rel="stylesheet">
+	<link href="http://www.changchun.gov.cn/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+	<script src="./images/base-min.js"></script>
+	<link href="./images/slide.css" rel="stylesheet">
+	<script src="./images/jquery-1.8.3.min.js"></script>
+    <script src="./images/jquery-1.7.1.js" type="text/javascript"></script>
+	<script src="./images/slide.js" type="text/javascript"></script>
+	<script> var closeme= jQuery.noConflict(true); </script>
+
+
+<meta name="SiteName" content="长春市生态环境局"/>
+<meta name="SiteDomain" content="http://hjj.changchun.gov.cn/"/>
+<meta name="SiteIDCode" content="2201000009"/>
+<meta name="ColumnName" content=""/>
+<meta name="ColumnType" content=""/>
+<meta name="ColumnDescription" content="">
+<meta name="ColumnKeywords" content="">
+<meta name="ArticleTitle" content=""/>
+<meta name="PubDate" content=""/>
+<meta name="ContentSource" content="" />
+<meta name="Url" content=""/>
+
+<style>
+    .smarticker .smarticker-news ul li p {
+        width: 91%!important;
+        margin-left: 25px!important;}
+
+    a:focus {outline-style:none; -moz-outline-style: none;}
+    #testUl li {
+        display: block !important;
+        padding-left: 12px;
+        overflow: hidden;
+        height: 30px;
+        line-height: 30px;
+        padding-left: 10px;
+        font-size: 14px;
+    }
+    #testUl li a {
+        color: #000;
+        display: inline-block;
+        height: 30px;
+        line-height: 30px;
+        float: left;
+    }
+    #testUl li .data {
+        float: right;
+    }
+    #testUl1 li {
+        display: block !important;
+        overflow: hidden;
+        height: 30px;
+        line-height: 30px;
+        font-size: 14px;
+    }
+    #testUl1 li a {
+        color: #000;
+        display: inline-block;
+        height: 30px;
+        line-height: 30px;
+        float: left;
+        padding-left: 8px;
+    }
+    #testUl1 li .data {
+        float: right;
+
+    }
+</style>
+
+
+<script>
+    $(function() {
+        $.ajax({
+            url: 'http://www.jl.gov.cn/kzgn/nrtj/demo1/qgyw/',
+            dataType: "jsonp",
+            contentType: "application/x-www-form-urlencoded; charset=gb2312",
+            jsonp: "pushInfoJsonpCallBack",
+            jsonpCallback: "qgywJsonpCallBack",
+            success: function(data) {
+                i = 0;
+                $.each(data, function(i, json) {
+                    i++;
+                    if (i == 9) {
+                        return false;
+                    }
+
+                    var str2 = json.title;
+                    str2 = str2.substr(0, 22);
+                    if (json.title.substr(22) != "") {
+                        str2 += "..."
+                    }
+                    $("#testUl").append("<li><a href='" + json.link + "' target=_blank >" + str2 + "</a><span class='data'>" +json.pubDate+  "</span></li>")
+                })
+
+                $.ajax({
+                    url: 'http://www.jl.gov.cn/kzgn/nrtj/demo1/fbcs/pushinfo2015.html',
+                    dataType: "jsonp",
+                    contentType: "application/x-www-form-urlencoded; charset=gb2312",
+                    jsonp: "pushInfoJsonpCallBack",
+                    jsonpCallback: "pushInfoJsonpCallBack",
+                    success: function(data) {
+                        i = 0;
+                        $.each(data, function(i, json) {
+                            i++;
+                            if (i == 9) {
+                                return false;
+                            }
+
+                            var str2 = json.title;
+                            str2 = str2.substr(0, 22);
+                            if (json.title.substr(22) != "") {
+                                str2 += "..."
+                            }
+                            $("#testUl1").append("<li><a href='" + json.link + "' target=_blank >" + str2 + "</a><span class='data'>" +json.pubDate+  "</span></li>")
+
+                        })
+                    },
+                    error: function() {
+
+                    }
+
+                });
+
+            },
+            error: function() {
+            }
+        });
+    })
+</script>
+
+
+ 
+</head>
+
+
+<body id="mdgov_bodyTag">
+
+<div id="wrap">
+
+	<div id="header">
+	
+		<div class="jb_top">
+			<div class="jb_top1">
+				<ul class="jb_top_left">
+					<li>
+						<a href="http://www.gov.cn/" >中国政府网</a>
+					</li>
+					<li>
+						<a href="http://www.jl.gov.cn/" >吉林省政府网</a>
+					</li>
+					<li>
+						<a href="http://www.changchun.gov.cn/" >长春市政府网</a>
+					</li>
+				</ul>
+<style>
+.tabbox .tab a{padding:0 28px;}
+*{font-family: "微软雅黑";}
+.header_top a{border-right:1px solid #333;height:14px!important;line-height:14px!important;font-size:14px;padding:0 10px;color:#333;}
+.header_top{height:14px;    margin-top: 8px;}
+</style>
+<div class="header_top" style="float:right;">
+ <a href="javascript:void(0);" class="zc" id="zcBtn" >注册</a>
+ <a class="dl" href="javascript:void(0);" id="loginBtn" style="border:none;">登录</a>
+ <a href="javascript:void(0);"  id="tcBtn" style="display:none;margin-left:0px!important;border:none;">退出</a>
+ <script type="text/javascript" src="./images/07030userInfo_4.js"></script>
+ <div style="display: none;">
+ <iframe src="https://user.jl.gov.cn/v1/apigw/none/user/authentication/checklogin?appId=575ecd1d2d70450ea4c5a6b468c50c7f&amp;version=1.0.0&amp;format=json&amp;charset=utf-8&amp;timestamp=2019-08-10%2016:46:13&amp;backUrl=http://hjj.changchun.gov.cn/userInfo/login/"  id="gjdl"></iframe> 
+ </div>
+</div>	
+				<div class="clearfix"></div>
+			</div>
+		</div>
+
+
+		<div class="jb_dh">
+			<ul class="jb_dh1" style="width: 1050px;">
+				<li style="background:url(images/jb_sy.png) no-repeat 0 8px; padding-left:40px;">
+					<a href="./"  class="sy" >首页</a>
+				</li>
+				<li style="background:url(images/jb_zw.png) no-repeat 22px 8px;">
+					<a href="./xxfb/jggk/jgzn/"  class="onfzzf">政府信息公开</a>
+				</li>
+				<li style="background:url(images/jb_fw.png) no-repeat 22px 8px;">
+					<a href="./wrfz/dqwrfz/"  class="onfzzf">污染防治</a>
+				</li>
+				<li style="background:url(images/jb_hd.png) no-repeat 22px 8px;">
+					<a href="./hjgl/stbh/"  class="onfzzf">环境管理</a>
+				</li>
+				<li style="background:url(images/jb_zjcc.png) no-repeat 22px 8px;">
+					<a href="./jgjs/rsjy/"  class="onfzzf">机关建设</a>
+				</li>
+				<li style="background:url(./images/jb_jdhy.png) no-repeat 22px  8px;">
+					<a href="./jdhy/zcjd/"  class="onfzzf">解读回应</a>
+				</li>
+				<li style="background:url(./images/jb_bsfw.png) no-repeat 22px 8px;">
+					<a href="./bsfw/ywpt/"  class="onfzzf">政务服务</a>
+				</li>
+				<li style="background:url(./images/jb_hdjl.png) no-repeat 22px 8px;">
+					<a href="./hdjl/"  >互动交流</a>
+				</li>
+				<div class="clearfix"></div>
+			</ul>
+		</div>
+		
+	</div>
+
+	<div id="content">
+
+		<div class="con">
+
+			<div class="jb_ding" style="position: relative;">
+    <ul class="jb_ding1">
+        <li class="jb_logo">
+            <img src="./images/jb_logo.png" />
+
+        </li>
+        <li class="jb_sousuo">
+
+            <script type="text/javascript">
+                function checkIP() { 
+                    var text = document.getElementById("text").value; 
+                    if (text == ""|| text == "请输入搜索内容") { 
+                        alert("请输入检索词！");
+                        return false; 
+                    }
+                    return true; 
+                }
+            </script>
+
+            <form action="http://intellsearch.changchun.gov.cn/was5/web/search"  onsubmit="return checkIP();" >
+                <input name="searchword1" type="hidden" />
+                <input name="channelid" id="channelid" type="hidden" value="277780" />
+                <input id="searchscope_all" name="searchscope" value="" type="hidden" />
+                <input id="searchscope_title" name="searchscope" value="doctitle" type="hidden" />
+                <input class="jb-sstext" type="text" name="searchword" id="text" value="请输入搜索内容" onfocus="if(this.value=='请输入搜索内容'){this.value='';}" onblur="if(this.value==''){this.value='请输入搜索内容';}" />
+                <input type="submit" class="jb-ssbutton" value="" />
+            </form>
+        </li>
+        <div class="clearfix"></div>
+    </ul>
+</div>
+
+		</div>
+
+		<div class="jb_qh">
+			
+			<div class="jb_qhlef">
+    <div id="focus">
+        
+            <a href="./ywdt/zwdt/tpxw/202603/t20260310_3472448.html" >
+                <img src="./ywdt/zwdt/tpxw/202603/W020260310351203088878_450.jpg" alt="640.jpg" width="450" height="300"/>
+                <s></s>
+                <p>
+                    <span class="text" title="长春市生态环境局召开局党组（扩大）会议研究部署开展树立和践行正确政绩观学习教育">
+                        长春市生态环境局召开局党组（扩大）会议研究...
+                    </span>
+                </p>
+            </a>
+        
+            <a href="./ywdt/zwdt/tpxw/202603/t20260307_3472056.html" >
+                <img src="./ywdt/zwdt/tpxw/202603/W020260307310479090515_450.png" alt="640.png" width="450" height="300"/>
+                <s></s>
+                <p>
+                    <span class="text" title="长春市生态环境局会商推进春季地表水环境质量和秸秆禁烧管控工作">
+                        长春市生态环境局会商推进春季地表水环境质量...
+                    </span>
+                </p>
+            </a>
+        
+            <a href="./ywdt/zwdt/tpxw/202603/t20260305_3471645.html" >
+                <img src="./ywdt/zwdt/tpxw/202603/W020260305383997176524_450.png" alt="640.png" width="450" height="300"/>
+                <s></s>
+                <p>
+                    <span class="text" title="长春市生态环境局调度部署生态环境领域群众信访和安全应急重点工作">
+                        长春市生态环境局调度部署生态环境领域群众信...
+                    </span>
+                </p>
+            </a>
+        
+            <a href="./ywdt/zwdt/tpxw/202602/t20260228_3470735.html" >
+                <img src="./ywdt/zwdt/tpxw/202602/W020260228729934982716_450.jpg" alt="640 (1).jpg" width="450" height="300"/>
+                <s></s>
+                <p>
+                    <span class="text" title="市生态环境保护工作领导小组会议召开">
+                        市生态环境保护工作领导小组会议召开
+                    </span>
+                </p>
+            </a>
+        
+            <a href="./ywdt/zwdt/tpxw/202602/t20260228_3470725.html" >
+                <img src="./ywdt/zwdt/tpxw/202602/W020260228727836184518_450.png" alt="ScreenShot_2026-02-28_200954_787.png" width="450" height="300"/>
+                <s></s>
+                <p>
+                    <span class="text" title="今年六五环境日主题确定！">
+                        今年六五环境日主题确定！
+                    </span>
+                </p>
+            </a>
+        
+        <div id="ctr">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <script type="text/javascript" src="./images/Tab-min.js"></script>
+    <script type="text/javascript">
+        t1 = new Tab("ctr", "span", "focus", "a", {
+            autoPlay: true,
+            timeout: 5000,
+            delay: 200,
+            event: "mouseover"
+        });
+    </script>
+</div>
+
+                <div class="jb_qhrig">
+                    <div class="tabbox">
+                        <div class="lj">
+                            <div class="tab"> <a href="https://www.gov.cn/" target="_blank" class="on">国家要闻</a> 
+                                              <a href="http://www.jl.gov.cn/" target="_blank">吉林要闻</a> 
+                                              <a href=" ./ywdt/zwdt/zxdt/" target="_blank">最新动态</a> 
+                                              <a href=" ./ywdt/tzgg/" target="_blank">通知公告</a> </div>
+                        </div>
+                        <div class="content">
+                            <ul>
+                                <li id="gwy" style="display:block;">
+                                    <ul id="testUl">
+                                    </ul>
+                                </li>
+                                <li id="szf" style="display:none;">
+                                    <ul id="testUl1">
+                                    </ul>
+                                </li>
+                                <li id="zxdt">
+                                    
+                                        <p><a href="./ywdt/zwdt/zxdt/202601/t20260120_3462454.html">
+                                            <a href="./ywdt/zwdt/zxdt/202601/t20260120_3462454.html" target="_blank">政府网站工作年度报表（2025年度）</a>
+                                            </a>
+                                            <span>
+                    2026-01-20
+                 </span>
+                                        </p>
+                                    
+                                        <p><a href="./ywdt/zwdt/zxdt/202603/t20260319_3474677.html">
+                                            <a href="./ywdt/zwdt/zxdt/202603/t20260319_3474677.html" target="_blank">顾刚调研春季重点项目开复工情况，并以“四不两直...</a>
+                                            </a>
+                                            <span>
+                    2026-03-19
+                 </span>
+                                        </p>
+                                    
+                                        <p><a href="./ywdt/zwdt/zxdt/202603/t20260319_3474674.html">
+                                            <a href="./ywdt/zwdt/zxdt/202603/t20260319_3474674.html" target="_blank">关于征集您身边生态环境领域问题的公告</a>
+                                            </a>
+                                            <span>
+                    2026-03-19
+                 </span>
+                                        </p>
+                                    
+                                        <p><a href="./ywdt/zwdt/zxdt/202603/t20260310_3472447.html">
+                                            <a href="./ywdt/zwdt/zxdt/202603/t20260310_3472447.html" target="_blank">长春市生态环境局召开局党组（扩大）会议研究部署...</a>
+                                            </a>
+                                            <span>
+                    2026-03-10
+                 </span>
+                                        </p>
+                                    
+                                        <p><a href="./ywdt/zwdt/zxdt/202603/t20260307_3472055.html">
+                                            <a href="./ywdt/zwdt/zxdt/202603/t20260307_3472055.html" target="_blank">长春市生态环境局会商推进春季地表水环境质量和秸...</a>
+                                            </a>
+                                            <span>
+                    2026-03-07
+                 </span>
+                                        </p>
+                                    
+                                        <p><a href="./ywdt/zwdt/zxdt/202603/t20260305_3471626.html">
+                                            <a href="./ywdt/zwdt/zxdt/202603/t20260305_3471626.html" target="_blank">长春市生态环境局调度部署生态环境领域群众信访和...</a>
+                                            </a>
+                                            <span>
+                    2026-03-05
+                 </span>
+                                        </p>
+                                    
+                                        <p><a href="./ywdt/zwdt/zxdt/202602/t20260228_3470734.html">
+                                            <a href="./ywdt/zwdt/zxdt/202602/t20260228_3470734.html" target="_blank">市生态环境保护工作领导小组会议召开</a>
+                                            </a>
+                                            <span>
+                    2026-02-28
+                 </span>
+                                        </p>
+                                    
+                                        <p><a href="./ywdt/zwdt/zxdt/202602/t20260228_3470730.html">
+                                            <a href="./ywdt/zwdt/zxdt/202602/t20260228_3470730.html" target="_blank">长春市生态环境局公布3起打击重型车辆擅自改装污染...</a>
+                                            </a>
+                                            <span>
+                    2026-02-28
+                 </span>
+                                        </p>
+                                    
+                                </li>
+                                <li id="tzgg">
+                                    
+                                        <p><a href="./ywdt/tzgg/202603/t20260319_3474675.html">
+                                            <a href="./ywdt/tzgg/202603/t20260319_3474675.html" target="_blank">关于征集您身边生态环境领域问题的公告</a>
+                                            </a>
+                                            <span>
+                    2026-03-19
+                  </span>
+                                        </p>
+                                    
+                                        <p><a href="./ywdt/tzgg/202603/t20260318_3474061.html">
+                                            <a href="./ywdt/tzgg/202603/t20260318_3474061.html" target="_blank">关于长春市2025年环境信息依法披露企业名单的公示</a>
+                                            </a>
+                                            <span>
+                    2026-03-17
+                  </span>
+                                        </p>
+                                    
+                                        <p><a href="https://mp.weixin.qq.com/s/Yz-YpIob7Ui5zRFI5v164g">
+                                            <a href="https://mp.weixin.qq.com/s/Yz-YpIob7Ui5zRFI5v164g" target="_blank">喜报！</a>
+                                            </a>
+                                            <span>
+                    2026-03-13
+                  </span>
+                                        </p>
+                                    
+                                        <p><a href="./ywdt/tzgg/202603/t20260313_3473410.html">
+                                            <a href="./ywdt/tzgg/202603/t20260313_3473410.html" target="_blank">关于调整长春市2025年环境信息依法披露企业名单的公告</a>
+                                            </a>
+                                            <span>
+                    2026-03-13
+                  </span>
+                                        </p>
+                                    
+                                        <p><a href="./ywdt/tzgg/202602/t20260211_3468563.html">
+                                            <a href="./ywdt/tzgg/202602/t20260211_3468563.html" target="_blank">长春市排污许可证有效期届满提醒公告（2026年2月-6...</a>
+                                            </a>
+                                            <span>
+                    2026-02-11
+                  </span>
+                                        </p>
+                                    
+                                        <p><a href="https://mp.weixin.qq.com/s/cBHqb7ji3CXpHEMcNzItVQ">
+                                            <a href="https://mp.weixin.qq.com/s/cBHqb7ji3CXpHEMcNzItVQ" target="_blank">禁止燃放烟花爆竹安全提醒</a>
+                                            </a>
+                                            <span>
+                    2026-02-04
+                  </span>
+                                        </p>
+                                    
+                                        <p><a href="./ywdt/tzgg/202601/t20260127_3464121.html">
+                                            <a href="./ywdt/tzgg/202601/t20260127_3464121.html" target="_blank">关于调整长春市2025年环境信息依法披露企业名单的公告</a>
+                                            </a>
+                                            <span>
+                    2026-01-27
+                  </span>
+                                        </p>
+                                    
+                                        <p><a href="https://mp.weixin.qq.com/s/zODWXopE5abL7j4-xQsYCg">
+                                            <a href="https://mp.weixin.qq.com/s/zODWXopE5abL7j4-xQsYCg" target="_blank">全国通报表扬！</a>
+                                            </a>
+                                            <span>
+                    2026-01-14
+                  </span>
+                                        </p>
+                                    
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <script>
+$(function() {
+    // 仅保留鼠标悬浮切换标签的核心功能
+    $(".tabbox .tab a").mouseover(function() {
+        $(this).addClass('on').siblings().removeClass('on');
+        var index = $(this).index();
+        number = index; // 注：number变量可移除（无自动轮播后无实际用途）
+        $('.tabbox .content li').hide();
+        if (index == 0) {
+            $("#gwy").css('display', 'block');
+        } else if (index == 1) {
+            $("#szf").css('display', 'block');
+        } else if(index==2){
+            $("#zxdt").css('display', 'block');
+        }
+        else {
+            $("#tzgg").css('display', 'block');
+        }
+    });
+});
+                    </script>
+                </div>
+
+                <div class="clearfix"></div>
+            </div>
+
+
+		<div style=" width:960px; margin:10px auto 0">
+			<a href="http://125.32.12.186:5006/RT_AQI/index" >
+				<img src="./images/1.png" />
+			</a>
+		</div>
+
+		<h2 style=" width: 960px; margin: 20px auto 10px; background: url(images/ztzl_img.png) no-repeat;height: 33px; ">
+			<a href="./ztzl/xzspxxgkzl/"  style="float: right;margin-top: 1px;"><img src="./images/more.png" /></a>
+		</h2>
+		<div id="owl-demo" class="owl-carousel">
+			<div class="item">
+				<a href="./ztzl/xzspxxgkzl/" >
+				<img class="lazyOwl" src="./images/lunbo-pic01.jpg" />
+				</a>
+			</div>
+			<div class="item">
+				<a href="http://zwgk.changchun.gov.cn/zcbm/shjbhj/xxgkzn/" >
+				<img class="lazyOwl" src="./ztzl/54626/images/P020201210750786319906.jpg" />
+				</a>
+			</div>
+                          <div class="item">
+				<a href="./ztzl/esd/" >
+					<img src="./images/esdjs.jpg" alt="" />
+				</a>
+			</div>
+
+                         <div class="item">
+				<a href="./ztzl/yshjzl/yszcwj/" >
+					<img class="lazyOwl" src="./images/lunbo-pic10.jpg" />
+				</a>
+			</div>
+                       
+
+			<div class="item">
+				<a href="./ztzl/wryhjjgxxgk/zdwryjdxjcxx/" >
+				<img class="lazyOwl" src="./images/lunbo-pic03.jpg" />
+				</a>
+			</div>
+			<div class="item">
+				<a href="./xxfb/ysjsgk/" >
+				<img src="./images/luobo_cw.jpg" alt="" />
+				</a>
+			</div>
+
+                       
+			<div class="item">
+				<a href="./ztzl/shgysyjslyzfxxgkzl/" >
+				<img class="lazyOwl" src="./images/hbjzt1.jpg" />
+				</a>
+			</div>
+
+
+			<div class="item">
+				<a href="https://weibo.com/u/5012406035" >
+					<img class="lazyOwl" src="./images/lunbo-pic06.jpg" />
+				</a>
+			</div>
+			<div class="item">
+				<a href="http://1.202.247.200/netreport/netreport/index" >
+					<img class="lazyOwl" src="./images/lunbo-pic08.jpg" />
+				</a>
+			</div>
+			<div class="item">
+				<a href="https://ljgk.envsc.cn/index.html?rg=26E07A88ECC5B0951FEE320A981ED25E&tdsourcetag=s_pcqq_aiomsg" >
+					<img class="lazyOwl" src="./images/lunbo-pic09.jpg" />
+				</a>
+			</div>
+			
+		</div>
+	
+	</div>
+
+	<style>
+
+a:focus {outline-style:none; -moz-outline-style: none;}
+</style>
+
+<div id="footer_one">
+   
+
+    <script type="text/javascript" src="./images/jquery-1.7.1.js"></script>
+    <script>
+        var jq171 = jQuery.noConflict(true);
+    </script>
+    <script type="text/javascript">
+      
+        $(function () {
+            $(".select").each(function () {
+                var s = $(this);
+                var z = parseInt(s.css("z-index"));
+                var dt = $(this).children("dt");
+                var dd = $(this).children("dd");
+                var _show = function () {
+                    dd.slideDown(200);
+                    dt.addClass("cur");
+                    s.css("z-index", z + 1);
+                }; 
+                var _hide = function () {
+                    dd.slideUp(200);
+                    dt.removeClass("cur");
+                    s.css("z-index", z);
+                }; 
+                dt.click(function () {
+                    dd.is(":hidden") ? _show() : _hide();
+                });
+                dd.find("a").click(function () {
+                    dt.html($(this).html());
+                    _hide();
+                }); 
+                $("body").click(function (i) {
+                    !$(i.target).parents(".select").first().is(s) ? _hide() : "";
+                });
+            })
+        })
+    </script>
+
+
+
+    <div class="footer_box">
+        <div class="footer_one">
+            <div class="footer_img">
+              <a href="//bszs.conac.cn/sitename?method=show&amp;id=497D5B2CA92B7382E053012819AC78E2" target="_blank"><img id="imgConac" vspace="0" hspace="0" border="0" src="//dcs.conac.cn/image/red.png" data-bd-imgshare-binded="1" /></a>
+            </div>
+            <div class="footer_text">
+                <p>
+                    <span>主办单位：长春市生态环境局</span>
+                    <span>电话：0431-85378233</span>
+                    
+                </p>
+                <p>
+                    <span>地址：卫星路7930号 </span>
+                    <span>邮编：130022</span>
+                </p>
+                <p>
+                    <span>网站标识码：2201000009</span>
+                    <span>
+                        <a href="https://beian.miit.gov.cn/" >吉ICP备11002904号</a>
+                    </span>
+                    <span class="footer_ico">
+                        <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=22010402000670" >吉公网安备22010402000670号</a>
+                    </span>
+                </p>
+                <p>
+                    <a href="./gywm/"  style="color:#fff;">关于我们</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                    <a href="./wzdt/" 
+                        style="color:#fff;">网站地图</a>
+                </p>
+            </div>
+            <div class="footer_jc">
+<script id="_jiucuo_" sitecode='2201000009' src='./images/jiucuo.js'></script>
+
+            </div>
+        </div>
+    </div>
+
+
+</div>
+</div>
+
+
+</div>
+<script src="./images/owl.carousel.js"></script>
+<script>
+	$(document).ready(function () {
+		$("#owl-demo").owlCarousel({
+			items: 3,
+			lazyLoad: true,
+			navigation: true
+		});
+	});
+</script>
+
+<link type="text/css" href="./images/fixed_20201201.css" rel="stylesheet" />
+
+
+<script type="text/javascript" src="./images/jquerycookie_20201201.js" charset="UTF-8"></script>
+
+<script type="text/javascript" src="./images/jqueryfixed_20201201.js" charset="UTF-8"></script>
+
+<script type="text/javascript" src="./images/init_fixed_20201201.js" charset="UTF-8"></script>
+
+</body>
+
+</html>

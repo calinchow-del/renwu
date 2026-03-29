@@ -1,0 +1,645 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<!--网站标签-->
+<!--网站名称、网站域名、政府网站标识码、描述、关键字 -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="SiteName" content="太原市科学技术局网站" />
+<meta name="SiteDomain" content="kjj.taiyuan.gov.cn" />
+<meta name="SiteIDCode" content="CA061130000605312120002" />
+<meta name="description" content="太原科技信息网" />
+<meta name="keywords" content="太原科技信息网" />
+<meta name="ColumnName" content="首页">
+<meta name="ColumnDescription" content="太原市科学技术局网站首页。">
+<meta name="ColumnKeywords" content="太原科技信息网">
+<meta name="ColumnType" content="网站首页">
+<title>太原市科学技术局网站</title>
+<link rel="stylesheet" type="text/css" href="/r/cms/site16/default/tyskxjsj/static/css/index_ty.css" />
+<script src="/r/cms/site16/default/tyskxjsj/static/js/jquery-1.7.1.min.js"></script>
+<script src="/r/cms/site16/default/tyskxjsj/static/js/common.js"></script>
+<script language="javascript" type="text/javascript" src="/r/cms/site16/default/tyskxjsj/static/js/jquery.tab.js"></script>
+<script language="javscraipt" type="text/javascript" src="/r/cms/site16/default/tyskxjsj/static/js/jquery.roll.js"></script>
+<script language="javascript" type="text/javascript" src="/r/cms/site16/default/tyskxjsj/static/js/jquery.SuperSlide.js"></script>
+
+<style>
+.boxTy03 {
+    border-top: #1b417d solid 2px;
+    background: #dcdcde;
+    padding: 0 15px;
+    height: 100%;
+}
+.boxTy01 h2 ol li {
+    float: left;
+    display: inline;
+    margin-right: 15px;
+    font-weight: normal;
+    font-size: 20px;
+}
+.boxTy01 h2 ol li.cur {
+    font-weight: bold;
+    color: #015293;
+}
+</style>
+</head>
+<body>
+<!--<div><img src="/r/cms/site16/default/tyskxjsj/static/images/jd100znbm.jpg" style="width:100%;"/></div>-->
+<!-- 国务院互联网+督查开始 -->
+<!--        <script>
+        $(function (){
+        $('.right_float .close').click(function(){
+        $('.right_float').hide();
+        });
+        });
+        </script>
+        <div class="right_float" style="position: fixed;top:50%;right: 0px;width: 220px;border-radius:0 5px 5px 0;overflow: hidden;z-index:30;;margin-top:-190px;">
+            <a class="close" style="width: 30px;height: 18px;line-height: 22px;display: block;float: right;color: #000;">关闭</a>
+            <a href="https://tousu.www.gov.cn/dc/index.htm" target="_blank" target="_blank"><img src="/r/cms/site16/default/tyskxjsj/static/images/gwyhlwjdcpc.jpg"/></a>
+        </div>-->
+<!-- 国务院互联网+督查结束 -->
+<script type="text/javascript">
+/*accessible-read start*/
+	var close = localStorage.getItem("close");
+	var protocol = window.location.protocol
+	if(close=='true'){
+		show()
+	}
+
+	function show(){
+		let xml = window.XMLHttpRequest?new XMLHttpRequest():new ActiveXObject('Microsoft.XMLHttp');
+		xml.open('GET','https://api.jeecms.com/MODULE-ACCESSIBLE-READING/front/readings/checkAvailability?callingCode=4cU3e84wRBad3qyPeq4wU7if3aTD-m3bAkdd33zAtc39AQ1e3oEQBb3qQnxv4rPjd74rP8ym4lTz-j4mUz-b4nEPRv4oS7ek3qyPeq39y49e34A4t93qzkdg4aQjdh4pP7mk4cQl2932ETmS4zU49v39CRW=3fSEyu4XU4ar39TQio4WSBOC3qBjev4eQTig4VT7am3qT7mk4vQPd73eA7mu3fzQ593cy4lc3qzQB93YMh62');
+		xml.send();
+		xml.onreadystatechange=function(){
+			if($('#ABTInterface').length!=0){
+				return
+			}
+			if (xml.readyState==4 && xml.status==200){
+				let res = JSON.parse(xml.responseText);
+				if (res.code == 200) {
+					localStorage.setItem("close", true);
+					let script = document.createElement('script');
+					// script.src = res.data.abtJsUrl;
+					let host = window.location.protocol+"//"+window.location.host;
+					script.src = host+"/r/cms/site16/default/reading/abt.js";
+					//重写为本地js
+					res.data.abtJsUrl=host+"/r/cms/site16/default/reading/abt.js";
+					res.data.gbkJsUrl=host+"/r/cms/site16/default/reading/gbk.js";
+					res.data.helpHtmlUrl=host+"/r/cms/site16/default/reading/help.html";
+					res.data.pinyinJsUrl=host+"/r/cms/site16/default/reading/pinyin.js";
+					res.data.skinCssUrl=host+"/r/cms/site16/default/reading/skin.css";
+					document.body.appendChild(script);
+					console.log(window.location.host)
+					console.log(res.data)
+					script.onload = function(){ABTshow(res.data);}
+				} else if (res.code == 500){
+					alert(res.message);
+				}
+			}
+		}
+	}
+
+</script>
+<script type="text/javascript" language="javascript">
+  function collect() {
+    //加入收藏
+    var ctrl =
+      navigator.userAgent.toLowerCase().indexOf("mac") != -1
+        ? "Command/Cmd"
+        : "CTRL";
+    try {
+      if (document.all) {
+        //IE类浏览器
+        try {
+          window.external.toString(); //360浏览器不支持window.external，无法收藏
+          window.alert(
+            "国内开发的360浏览器等不支持主动加入收藏。\n您可以尝试通过浏览器菜单栏 或快捷键 ctrl+D 试试。"
+          );
+        } catch (e) {
+          try {
+            window.external.addFavorite(window.location, document.title);
+          } catch (e) {
+            window.external.addToFavoritesBar(window.location, document.title); //IE8
+          }
+        }
+      } else if (window.sidebar) {
+        //firfox等浏览器
+        window.sidebar.addPanel(document.title, window.location, "");
+      } else {
+        alert("您可以尝试通过快捷键" + ctrl + " + D 加入到收藏夹~");
+      }
+    } catch (e) {
+      alert("您可以尝试通过快捷键" + ctrl + " + D 加入到收藏夹~");
+    }
+  }
+
+  //设为首页
+
+  function setHome() {
+    url = window.location.href;
+    if (document.all) {
+      document.body.style.behavior = "url(#default#homepage)";
+
+      document.body.setHomePage(url);
+    } else {
+      alert(
+        "您好,您的浏览器不支持自动设置页面为首页功能,请您手动在浏览器里设置该页面为首页!"
+      );
+    }
+  }
+</script>
+<div class="head_top">
+  <div class="head_top_con">
+    <ul class="fr clearfix">
+      <li><a href="javascript:void(0);" onclick="collect();">加入收藏</a></li>
+      <li><a href="javascript:void(0);" onclick="setHome();">设为首页</a></li>
+      <li>
+        <a href="javascript:void(0);" onclick="show();">无障碍通道 </a>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="navbox clearfix">
+  <div class="navbox_con">
+    <ul class="nav_ul fl">
+      <li><a href="http://kjj.taiyuan.gov.cn/index.html">首&emsp;&emsp;页</a></li>
+      <li><a href="/xxgkzn.html">政府信息公开</a></li>
+      <li><a href="https://www.taiyuan.gov.cn/hdjl.html">互动交流</a></li>
+      <li> <a href="http://ty.sxzwfw.gov.cn/icity/icity/departmental_matters?deptid=1401000400"target="_blank">政务服务</a></li>
+      <li><a href="/ztzl.html">专题专栏</a></li> 
+       <li><a href="http://tykjdsc.kjj.taiyuan.gov.cn/">科技资源</a></li>
+    </ul>
+    <ul class="ser_ul fr clearfix">
+      <li class="srk">
+        <input type="text" name="" id="keyword" placeholder="请输入关键字" />
+      </li>
+      <li class="btn">
+        <input
+          type="button"
+          name=""
+          onclick="window.open('/search.htm?q='+$('#keyword').val())"
+        />
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="banner clearfix">
+  <h1 class="logo fl">
+    <a href="http://kjj.taiyuan.gov.cn/index.html" class="fix_bg">太原市科学技术局</a>
+  </h1>
+</div>
+<!--<$[head]>end-->
+<div class="container">
+	<div class="clearfix">
+    	<div class="w755 fl">
+        	<div id="slideBox" class="slideBox01_ty">
+              <div class="bd">
+                  <ul>
+                    	<li><a href="/tpxw2222/20260325/30289757.html" target="_blank" title="智慧春耕展新图"><img src="/u/cms/site16/202603/25141535wtmu.jpg"/></a></li>
+                    	<li><a href="/tpxw2222/20260316/30287932.html" target="_blank" title="产学研融合打造电子束“能量门”"><img src="/u/cms/site16/202603/16112803w3ni.jpg"/></a></li>
+                    	<li><a href="/tpxw2222/20260309/30286557.html" target="_blank" title="协同发力，企业站上科技创新C位 "><img src="/u/cms/site16/202603/09083728jm52.jpg"/></a></li>
+                    	<li><a href="/tpxw2222/20260303/30285641.html" target="_blank" title="一图速览！做好科技金融大文章，20项最新举措来了"><img src="/u/cms/site16/202603/03093142w5qk.jpg"/></a></li>
+                    	<li><a href="/tpxw2222/20260224/30284490.html" target="_blank" title="多方协同构筑国产科学仪器发展新生态"><img src="/u/cms/site16/202602/2409233577t9.jpg"/></a></li>
+                  </ul>
+              </div>
+              <div class="hd">
+                <ul>
+                      <li class="on"><p><a href="/tpxw2222/20260325/30289757.html" target="_blank">智慧春耕展新图</a></p></li>
+                      <li class="on"><p><a href="/tpxw2222/20260316/30287932.html" target="_blank">产学研融合打造电子束“能量门”</a></p></li>
+                      <li class="on"><p><a href="/tpxw2222/20260309/30286557.html" target="_blank">协同发力，企业站上科技创新C位 </a></p></li>
+                      <li class="on"><p><a href="/tpxw2222/20260303/30285641.html" target="_blank">一图速览！做好科技金融大文章，20项最新举措...</a></p></li>
+                      <li class="on"><p><a href="/tpxw2222/20260224/30284490.html" target="_blank">多方协同构筑国产科学仪器发展新生态</a></p></li>
+                </ul>
+              </div>
+            </div>
+         	<script type="text/javascript">jQuery(".slideBox01_ty").slide( { mainCell:".bd ul",effect:"fade",interTime:4000,autoPlay:true} );</script>
+        </div>
+        <div class="w315 fr">
+        	<div class="boxTy01 gzdt_h">
+            	<h2 class="clearfix">
+                        <ol class="clearfix">
+                            <li>
+                                时政要闻
+                            </li>
+                            <li>
+                                科技动态
+                            </li>
+                        </ol>
+                </h2>
+                    <div class="boxTy01_con">
+                        <span style="margin-top: -34px;float:right;"><a href="/szyw.html">更多&gt;&gt;</a></span>
+                        <div class="uproll01">
+                            <div class="div1">
+                                <ul class="listTy01 font14">
+                                    <li>
+                                        <a href="/szyw/20260327/30290301.html" target="_blank" title="国调（太原）产业投资基金赋能大会举行  ">国调（太原）产业投资基金赋能大会举行  </a>
+                                        <span>&emsp;03-27</span>
+                                    </li>
+                                    <li>
+                                        <a href="/szyw/20260325/30289756.html" target="_blank" title="林红玉主持召开市委审计委员会会议 ">林红玉主持召开市委审计委员会会议 </a>
+                                        <span>&emsp;03-25</span>
+                                    </li>
+                                    <li>
+                                        <a href="/szyw/20260325/30289755.html" target="_blank" title="范兆森调研督导汾河生态治理工作  ">范兆森调研督导汾河生态治理工作  </a>
+                                        <span>&emsp;03-25</span>
+                                    </li>
+                                    <li>
+                                        <a href="/szyw/20260324/30289431.html" target="_blank" title="我市召开中央生态环境保护督察整改工作推进会 林红玉主持并讲话 ">我市召开中央生态环境保护督察整改工作推进会 林红玉主持并讲话 </a>
+                                        <span>&emsp;03-24</span>
+                                    </li>
+                                    <li>
+                                        <a href="/szyw/20260323/30289208.html" target="_blank" title="太原市重点项目建设现场推进会召开 ">太原市重点项目建设现场推进会召开 </a>
+                                        <span>&emsp;03-23</span>
+                                    </li>
+                                    <li>
+                                        <a href="/szyw/20260319/30288607.html" target="_blank" title="林红玉调研督导中央生态环境保护督察反馈问题整改工作 ">林红玉调研督导中央生态环境保护督察反馈问题整改工作 </a>
+                                        <span>&emsp;03-19</span>
+                                    </li>
+                                    <li>
+                                        <a href="/szyw/20260318/30288358.html" target="_blank" title="市委常委会召开会议 林红玉主持  ">市委常委会召开会议 林红玉主持  </a>
+                                        <span>&emsp;03-18</span>
+                                    </li>
+                                    <li>
+                                        <a href="/szyw/20260317/30288137.html" target="_blank" title="市委常委会召开扩大会议 林红玉主持">市委常委会召开扩大会议 林红玉主持</a>
+                                        <span>&emsp;03-17</span>
+                                    </li>
+                                    <li>
+                                        <a href="/szyw/20260317/30288136.html" target="_blank" title="市政府党组召开会议 范兆森主持  ">市政府党组召开会议 范兆森主持  </a>
+                                        <span>&emsp;03-17</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="div2">
+                                <ul class="listTy01 font14"></ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="boxTy01_con">
+                        <span style="margin-top: -34px;float:right;"><a href="/kjdt2.html">更多&gt;&gt;</a></span>
+                        <div class="uproll02">
+                            <div class="div1">
+                                <ul class="listTy01 font14">
+                                    <li>
+                                        <a href="/kjdt2/20260327/30290300.html" target="_blank" title="2026中关村论坛年会凸显“科技办会”">2026中关村论坛年会凸显“科技办会”</a>
+                                        <span>&emsp;03-27</span>
+                                    </li>
+                                    <li>
+                                        <a href="/kjdt2/20260327/30290299.html" target="_blank" title="美开发持久耐用核动力光伏电池">美开发持久耐用核动力光伏电池</a>
+                                        <span>&emsp;03-27</span>
+                                    </li>
+                                    <li>
+                                        <a href="/kjdt2/20260326/30289960.html" target="_blank" title="“中国-金砖国家新质生产力发展论坛”举办">“中国-金砖国家新质生产力发展论坛”举办</a>
+                                        <span>&emsp;03-26</span>
+                                    </li>
+                                    <li>
+                                        <a href="/kjdt2/20260326/30289959.html" target="_blank" title="铁路隧道双动力智能捣固车下线">铁路隧道双动力智能捣固车下线</a>
+                                        <span>&emsp;03-26</span>
+                                    </li>
+                                    <li>
+                                        <a href="/kjdt2/20260325/30289754.html" target="_blank" title="2026年度专精特新“小巨人”企业认定和复核工作启动">2026年度专精特新“小巨人”企业认定和复核工作启动</a>
+                                        <span>&emsp;03-25</span>
+                                    </li>
+                                    <li>
+                                        <a href="/kjdt2/20260325/30289753.html" target="_blank" title="高能同步辐射光源启动首轮课题征集">高能同步辐射光源启动首轮课题征集</a>
+                                        <span>&emsp;03-25</span>
+                                    </li>
+                                    <li>
+                                        <a href="/kjdt2/20260324/30289430.html" target="_blank" title="“人工智能+产业”论坛即将举办">“人工智能+产业”论坛即将举办</a>
+                                        <span>&emsp;03-24</span>
+                                    </li>
+                                    <li>
+                                        <a href="/kjdt2/20260324/30289429.html" target="_blank" title="重庆人工智能学院举行首届研究生开学典礼">重庆人工智能学院举行首届研究生开学典礼</a>
+                                        <span>&emsp;03-24</span>
+                                    </li>
+                                    <li>
+                                        <a href="/kjdt2/20260323/30289210.html" target="_blank" title="2026中关村论坛年会将推进国际技术交易对接">2026中关村论坛年会将推进国际技术交易对接</a>
+                                        <span>&emsp;03-23</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="div2">
+                                <ul class="listTy01 font14"></ul>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix mgt15">
+    
+        <div id="slideBox2" class="slideBox">
+            <div class="bd">
+                <ul>
+                        <li><a href="http://www.gov.cn/hudong/index.htm"><img src="/r/cms/site16/default/tyskxjsj/static/images/gwywls.jpg" style="width:100%" /></a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="slideBox2" class="slideBox" style="    margin-top: 10px;">
+            <div class="bd">
+                <ul>
+                        <li><a href="https://kjj.taiyuan.gov.cn/jcgty.html"><img src="/r/cms/site16/default/tyskxjsj/static/images/jcgty.jpg" style="width:100%" /></a></li>
+                </ul>
+            </div>
+        </div>
+        <script type="text/javascript">jQuery(".slideBox").slide( { mainCell:".bd ul",autoPlay:true,interTime : 5500} );</script>       
+    
+    	<div class="w755 fl mgt15" style="border-top:#1b417d solid 2px;">
+        	<div class="clearfix">
+            	<div class="w335 fl">
+                	<h2 class="h2_sty01 blue">信息公开</h2>
+                    <div class="boxTy02 mgt15 boxTy02_sty01">
+                    	<h3 class="clearfix">
+                        <span class="tit font16 fl">公告公示</span>
+                        <span class="more grey font14 fr"><a href="/gggs2.html" target="_blank">更多>></a>  </span>
+                      </h3>
+                        <div class="boxTy02_con">
+                        	<ul class="listTy02 font14 lh28">
+                              <li>
+                                <span class="grey fr">08-01</span>
+                                <a href="/gggs2/20240801/30149160.html" title="关于公布太原市科技类校外培训机构监督举报电话的公告" target="_blank">关于公布太原市科技类校外培训机构...</a>
+                              </li>
+                              <li>
+                                <span class="grey fr">03-25</span>
+                                <a href="/gggs2/20260325/30289829.html" title="关于开展2026年度山西省科技创新券兑现工作的通知" target="_blank">关于开展2026年度山西省科技创新券...</a>
+                              </li>
+                              <li>
+                                <span class="grey fr">03-04</span>
+                                <a href="/gggs2/20260304/30285944.html" title="关于征集2026年“晋创谷·太原”具身智能领域科技成果转化和产业化项目的通知" target="_blank">关于征集2026年“晋创谷·太原”具...</a>
+                              </li>
+                              <li>
+                                <span class="grey fr">01-23</span>
+                                <a href="/gggs2/20260123/30279883.html" title="关于征集太原市科技成果转化典型案例的通知" target="_blank">关于征集太原市科技成果转化典型案...</a>
+                              </li>
+                              <li>
+                                <span class="grey fr">01-07</span>
+                                <a href="/gggs2/20260107/30276278.html" title="关于开展2025年度科技成果在线登记工作的通知" target="_blank">关于开展2025年度科技成果在线登记...</a>
+                              </li>
+                              <li>
+                                <span class="grey fr">01-07</span>
+                                <a href="/gggs2/20260107/30276014.html" title="太原市科学技术局2025年度政府网站工作年度报表" target="_blank">太原市科学技术局2025年度政府网站...</a>
+                              </li>
+                              <li>
+                                <span class="grey fr">01-06</span>
+                                <a href="/gggs2/20260106/30275842.html" title="关于公布2025年度太原市新型研发机构认定名单的通知" target="_blank">关于公布2025年度太原市新型研发机...</a>
+                              </li>
+                              <li>
+                                <span class="grey fr">12-31</span>
+                                <a href="/gggs2/20251231/30275161.html" title="太原市新型研发机构2024年度绩效评价结果公示" target="_blank">太原市新型研发机构2024年度绩效评...</a>
+                              </li>
+                              <li>
+                                <span class="grey fr">12-31</span>
+                                <a href="/gggs2/20251231/30275137.html" title="关于公布郭艳等8人自然科学研究系列助理研究员职称评审结果的通知" target="_blank">关于公布郭艳等8人自然科学研究系...</a>
+                              </li>
+                              <li>
+                                <span class="grey fr">12-31</span>
+                                <a href="/gggs2/20251231/30275135.html" title="关于公布段张勤等4名同志自然科学研究系列初级职称评审结果的通知" target="_blank">关于公布段张勤等4名同志自然科学...</a>
+                              </li>
+                              <li>
+                                <span class="grey fr">12-30</span>
+                                <a href="/gggs2/20251230/30274944.html" title="关于组织申报2026年联合国科技创新论坛创新方案的通知" target="_blank">关于组织申报2026年联合国科技创新...</a>
+                              </li>
+                              <li>
+                                <span class="grey fr">12-23</span>
+                                <a href="/gggs2/20251223/30273733.html" title="关于“晋创谷·太原”科技成果转化和产业化拟支持项目（第二批）的公示" target="_blank">关于“晋创谷·太原”科技成果转化...</a>
+                              </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="boxTy02 mgt15">
+                    	<h3 class="clearfix"><span class="tit font16 fl">法定主动公开内容</span></h3>
+                            <div class="boxTy02_con">                   	
+                           <p class="pTy_sty01 font14 lh25">
+                                  <a href="/dwgk.html" target="_blank" title="单位概况">单位概况</a> <em>|</em> 
+                                  <a href="/fgwjjjd.html" target="_blank" title="法规文件及解读">法规文件及解读</a> <em>|</em> 
+                                  <a href="/ghjh.html" target="_blank" title="规划计划">规划计划</a> <em>|</em> 
+                                  <a href="/rsxx.html" target="_blank" title="人事信息">人事信息</a>  <br>
+                                  <a href="/jytajggk.html" target="_blank" title="建议提案结果公开">建议提案结果公开</a> <em>|</em>  
+                                  <a href="/bmyjs.html" target="_blank" title="部门预决算及三公经费">部门预决算及三公经费</a>  
+                            </p>
+                            <p class="pTy_sty02 white mgt10 clearfix">
+                              <a href="/xxgkgzndbg.html" target="_blank" title="信息公开工作年度报告">信息公开工作年度报告</a>
+                            </p>
+                        </div>   
+                    </div>
+                </div>
+                <div class="w378 fr">
+                <h2 class="h2_sty01 blue">
+                    法规文件及解读 
+                    <span style="float:right;"><a  style="color: #a4a4a4;font-size: 14px;font-weight: initial;line-height: 30px;" href="/fgwjjjd.html">更多&gt;&gt;</a></span>
+                </h2>
+                    <ul class="listTy02 font14 lh28" style="padding-top:12px;">
+                    	  <li>
+                          <a href="/szfwj/20260114/30285277.html" title="太原市人民政府办公室关于印发太原市声环境功能区划方案的通知" target="_blank">太原市人民政府办公室关于印发太原市声...</a>
+                          <span class="fr">01-14</span>
+                        </li>
+                    	  <li>
+                          <a href="/szfwj/20260107/30285284.html" title="太原市人民政府办公室关于印发太原市行政机关行政应诉办法的通知" target="_blank">太原市人民政府办公室关于印发太原市行...</a>
+                          <span class="fr">01-07</span>
+                        </li>
+                    	  <li>
+                          <a href="https://kjt.shanxi.gov.cn/xxgk/zfxxgkml/acs_11737/zhbgs/202601/t20260107_10033307.shtml" title="一图读懂《关于加快能源科技创新支撑能源转型发展的实施意见》" target="_blank">一图读懂《关于加快能源科技创新支撑能...</a>
+                          <span class="fr">01-07</span>
+                        </li>
+                    	  <li>
+                          <a href="/bmwj/20251208/30278029.html" title="太原市科学技术局关于印发«太原市新一代半导体产业链2025年行动计划»的通知" target="_blank">太原市科学技术局关于印发«太原市新一...</a>
+                          <span class="fr">12-08</span>
+                        </li>
+                    	  <li>
+                          <a href="/qtwj/20250901/30251063.html" title="国务院关于深入实施“人工智能+”行动的意见" target="_blank">国务院关于深入实施“人工智能+”行动...</a>
+                          <span class="fr">09-01</span>
+                        </li>
+                    	  <li>
+                          <a href="/qtwj/20250901/30251062.html" title="中共中央办公厅 国务院办公厅关于推进绿色低碳转型加强全国碳市场建设的意见" target="_blank">中共中央办公厅 国务院办公厅关于推进...</a>
+                          <span class="fr">09-01</span>
+                        </li>
+                    	  <li>
+                          <a href="https://www.taiyuan.gov.cn/fgfxwj2/20250516/30219152.html" title="太原市人民政府办公室关于印发太原市自然灾害救助应急预案的通知" target="_blank">太原市人民政府办公室关于印发太原市自...</a>
+                          <span class="fr">07-17</span>
+                        </li>
+                    	  <li>
+                          <a href="/qtwj/20250711/30240102.html" title="关于公布第二批国家技术转移人才培养基地的通知" target="_blank">关于公布第二批国家技术转移人才培养基...</a>
+                          <span class="fr">07-11</span>
+                        </li>
+                    	  <li>
+                          <a href="/qtwj/20250711/30240078.html" title="关于加强国家技术转移人才培养基地建设的通知" target="_blank">关于加强国家技术转移人才培养基地建设...</a>
+                          <span class="fr">07-11</span>
+                        </li>
+                    	  <li>
+                          <a href="/qtwj/20250711/30240027.html" title="关于印发《高质量培养科技成果转移转化人才行动方案》的通知" target="_blank">关于印发《高质量培养科技成果转移转化...</a>
+                          <span class="fr">07-11</span>
+                        </li>
+                    	  <li>
+                          <a href="/qtwj/20250711/30240022.html" title="关于印发《国家技术转移人才培养基地工作指引（试行）》的通知" target="_blank">关于印发《国家技术转移人才培养基地工...</a>
+                          <span class="fr">07-11</span>
+                        </li>
+                    	  <li>
+                          <a href="/zcjd/20250623/30227629.html" title="“硬核服务”培育更多硬科技企业（政策解读）" target="_blank">“硬核服务”培育更多硬科技企业（政策...</a>
+                          <span class="fr">06-23</span>
+                        </li>
+                    	  <li>
+                          <a href="https://www.most.gov.cn/xxgk/xinxifenlei/fdzdgknr/fgzc/flfg/202412/t20241226_192778.html" title="中华人民共和国科学技术普及法（2024年修订）" target="_blank">中华人民共和国科学技术普及法（2024年...</a>
+                          <span class="fr">05-16</span>
+                        </li>
+                    	  <li>
+                          <a href="/bmwj/20250415/30218847.html" title="太原市科学技术局关于印发《太原市建设国家能源技术革命策源地工作方案(2024-2025年)》的通知" target="_blank">太原市科学技术局关于印发《太原市建设...</a>
+                          <span class="fr">04-15</span>
+                        </li>
+                    	  <li>
+                          <a href="/qtwj/20250123/30192887.html" title="太原市科学技术局行政执法事项目录清单（2024年版）" target="_blank">太原市科学技术局行政执法事项目录清单...</a>
+                          <span class="fr">01-23</span>
+                        </li>
+                    	  <li>
+                          <a href="/szfwj/20241220/30184632.html" title="太原市人民政府关于印发国家碳达峰试点（太原）实施方案的通知" target="_blank">太原市人民政府关于印发国家碳达峰试点...</a>
+                          <span class="fr">12-20</span>
+                        </li>
+                    	  <li>
+                          <a href="/zcjd/20241205/30181127.html" title="太原市支持“晋创谷•太原”建设政策解读" target="_blank">太原市支持“晋创谷•太原”建设政策解读</a>
+                          <span class="fr">12-05</span>
+                        </li>
+                    	  <li>
+                          <a href="/bmwj/20241028/30171855.html" title="“晋创谷·太原”科技成果转化和产业化项目管理办法(试行)" target="_blank">“晋创谷·太原”科技成果转化和产业化...</a>
+                          <span class="fr">10-28</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+		<div class="w315 fr mgt15">
+        	<div class="boxTy03" style="padding-bottom:20px;">
+            	<h2 class="blue">互动交流</h2>
+               
+                <div class="boxTy02 boxTy02_sty01" style="margin-top:5px;"></div>
+
+                <p class="pTy_sty03" style="padding:30px 0;font-size: 24px;background-color: #377ec0;margin-top: 20x;"><a style="color:#fff" href="http://www.taiyuan.gov.cn/hdjl.html">来信办理平台</a></p>
+                <p class="pTy_sty03" style="padding:30px 0;font-size: 24px;background-color: #377ec0;margin-top: 20px;"><a style="color:#fff" href="http://www.taiyuan.gov.cn/hdjl.html">写信须知</a></p>
+                <p class="pTy_sty03" style="padding:30px 0;font-size: 24px;background-color: #377ec0;margin-top: 20px;"><a style="color:#fff" href="http://www.taiyuan.gov.cn/hdjl.html">我要写信</a></p>
+                <p class="pTy_sty03" style="padding:30px 0;font-size: 24px;background-color: #377ec0;margin-top: 20px;"><img src="/r/cms/site16/default/tyskxjsj/static/images/dh.png" /></p>
+            </div>
+        </div>
+    </div>
+    <div class="boxTy04 mgt25">
+    	<h2 class="clearfix"><span class="tit fl">专题专栏</span></h2>
+        <div class="boxTy04_con clearfix" style="margin-top: 30px;">
+
+            <div class="leftLoop fl" style="width:auto;">
+                <div class="bd">
+                    <ul class="picList">
+                      <li style="width:25%;"><a href="/zwdt.html" target="_blank"><img src="/u/cms/site16/202308/1615424590su.jpg" /></a></li>
+                      <li style="width:25%;"><a href="/djgz.html" target="_blank"><img src="/u/cms/site16/202308/16154231lvw3.jpg" /></a></li>
+                      <li style="width:25%;"><a href="/jswmjsygz.html" target="_blank"><img src="/u/cms/site16/202308/16154217eg1e.jpg" /></a></li>
+                      <li style="width:25%;"><a href="/kjgz.html" target="_blank"><img src="/u/cms/site16/202308/16154141x406.jpg" /></a></li>
+                    </ul>
+                </div>
+            </div>
+
+	    <!--<script type="text/javascript">jQuery(".leftLoop").slide({ mainCell:".bd ul",effect:"leftLoop",vis:3,scroll:3,autoPlay:true});</script>-->
+        </div>
+    </div>
+<style>
+.foot_link{ margin-top:15px; margin-bottom:-15px; background:#fff; border-top:1px solid #e3e3e3; background:#f5f5f5}
+.foot_link dl{ width:1090px; margin:0 auto; padding:10px 0; line-height:24px; overflow:hidden; zoom:1}
+.foot_link dt{ float:left; width:100px; text-align:right; font-size:18px}
+.foot_link dd{ float:right; width:96%; word-wrap:break-word;padding-bottom: 10px;}
+.foot_link dd a{ display:inline-block; margin-left:15px; white-space:nowrap}
+.foot_link dd select{ margin-left:15px}
+.foot_link dd a img{width:220px;height:80px;}
+</style>
+
+ <div class="foot_link" style="margin-top:20px;margin-bottom:20px;">
+  <dl>
+    <dt>友情链接：</dt>
+    <dd>
+    	<a href="http://www.most.gov.cn"><img src="/uploadfiles/201803/19/2018031915192963241162.jpg" /></a>
+    	<a href="http://kjt.shanxi.gov.cn"><img src="/uploadfiles/201803/19/2018031915185476545963.jpg" /></a>
+    	<a href="http://www.shanxi.gov.cn"><img src="/uploadfiles/201803/19/2018031915181111571290.jpg" /></a>
+    	<a href="http://www.taiyuan.gov.cn"><img src="/uploadfiles/201901/11/2019011117261751106294.jpg" /></a>
+   </dd>
+   <dd>
+    <select name="上级科技部门" onchange="javascript:var jmpURL=this.options[selectedIndex].value; if(jmpURL!='') {window.open(jmpURL);} else {this.selectedIndex=0;}" size="1" style="margin-left: 16px;width: 219px;height: 22px;">
+    <option value="">上级科技部门</option>
+			<option value="http://www.most.gov.cn">中华人民共和国科学技术部</option>
+			<option value="http://kjt.shanxi.gov.cn">山西省科学技术厅</option>
+    </select>
+    <select name="省市人民政府" onchange="javascript:var jmpURL=this.options[selectedIndex].value; if(jmpURL!='') {window.open(jmpURL);} else {this.selectedIndex=0;}" size="1" style="margin-left: 16px;width: 219px;height: 22px;">
+    <option value="">省市人民政府</option>
+			<option value="http://www.shanxi.gov.cn">山西省人民政府办公厅</option>
+			<option value="http://www.taiyuan.gov.cn">太原市人民政府</option>
+    </select>
+     <select name="省会城市科技局" onchange="javascript:var jmpURL=this.options[selectedIndex].value; if(jmpURL!='') {window.open(jmpURL);} else {this.selectedIndex=0;}" size="1" style="margin-left: 16px;width: 219px;height: 22px;">
+      <option value="">省会城市科技局</option>
+			<option value="http://kjj.nc.gov.cn">南昌市科学技术局</option>
+			<option value="http://zzkj.zhengzhou.gov.cn">郑州市科学技术局</option>
+			<option value="http://kjj.changsha.gov.cn">长沙市科学技术局</option>
+			<option value="http://kjj.hefei.gov.cn">合肥市科学技术局</option>
+			<option value="http://kjj.wuhan.gov.cn">武汉市科学技术局</option>
+			<option value="http://xakj.xa.gov.cn">西安市科学技术局</option>
+			<option value="http://kjj.huhhot.gov.cn">呼和浩特市科学技术局</option>
+			<option value="http://kjj.sjz.gov.cn">石家庄市科学技术局</option>
+			<option value="http://kjj.changchun.gov.cn">长春市科学技术局</option>
+			<option value="http://jnsti.jinan.gov.cn">济南市科学技术局</option>
+    </select>
+     <!--链接打不开的有：晋城、吕梁--->
+    <select name="省内科技局" onchange="javascript:var jmpURL=this.options[selectedIndex].value; if(jmpURL!='') {window.open(jmpURL);} else {this.selectedIndex=0;}" size="1" style="margin-left: 16px;width: 219px;height: 22px;">
+    <option value="">省内科技局</option>
+			<option value="http://kjj.yq.gov.cn">阳泉市科学技术局</option>
+			<option value="http://szkj.shuozhou.gov.cn">朔州市科学技术局</option>
+			<option value="http://kjj.sxxz.gov.cn">忻州市科学技术局</option>
+			<option value="http://kjj.sxjz.gov.cn">晋中市科学技术局</option>
+    </select>
+    </dd>
+  </dl>
+</div>
+
+</div>
+    <script type="text/javascript">
+        $(function () {
+            $(".uproll01").myScrollTop(50);
+            $(".uproll02").myScrollTop(50);
+        })
+        $(".boxTy01").tab({ tabs: "h2 ol li", evtype: "mouseover", box: ".boxTy01_con" });
+    </script>
+<div id="foot" class="white">
+  <p>
+    主办单位：太原市科学技术局&emsp;&emsp;技术支持：太原技术转移促进中心&emsp;&emsp;
+    <a href="/wzdt.html"> 网站地图
+  </p>
+  <p>
+    地址：太原市杏花岭区新建路 69号&nbsp;&nbsp;电话：0351-4227139&nbsp;&nbsp;
+  </p>
+  <p>
+    <a href="https://beian.miit.gov.cn">晋ICP备05003854号</a
+    >&emsp;&emsp;访问统计,网站总访问量：<em id="pvTotal"></em>
+    <script src="/r/cms/site16/default/js/front.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+      $(function () {
+        Cms.siteFlow(""); 
+      });
+    </script>
+  </p>
+  <p>
+    <a
+      href="http://bszs.conac.cn/sitename?method=show&id=54158FD6EB392A0DE053012819AC0E12"
+      target="_blank"
+      ><span class="fix_bg"
+        ><img src="/r/cms/site16/default/tyskxjsj/static/images/jinghui.png" /></span
+      >&nbsp;&nbsp;晋公网安备 14010002001529号<!--14010002001530 -->&emsp;&emsp;网站标识码：1401000014</a
+    >
+  </p>
+  <p>
+    <a
+      href="http://bszs.conac.cn/sitename?method=show&id=54158FD6EB392A0DE053012819AC0E12"
+      class="fix_bg"
+      target="_blank"
+      ><img src="/r/cms/site16/default/tyskxjsj/static/images/red.png"
+    /></a>
+    <span
+      ><script
+        id="_jiucuo_"
+        sitecode="1401000014"
+        src="/r/cms/site16/default/tyskxjsj/static/js/jiucuo.js"
+      ></script
+    ></span>
+  </p>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"/>
+    <title>包头市公安局（综合服务平台）</title>
+    <link rel="stylesheet" href="/assets/btassets/lib/layui/css/layui.css"/>
+    <link rel="stylesheet" href="/assets/btassets/css/style.css"/>
+    <link rel="stylesheet" href="/assets/btassets/css/slider.css"/>
+    <link rel="stylesheet" href="/assets/btassets/css/tobig.css"/>
+</head>
+<div>
+    <!-- 添加全局js变量ctxPath -->
+    <script>
+        var ctxPath = "";
+        var rootOrgId = "1";
+        var rootOrgCode = "150200";
+    </script>
+</div>
+<div>
+    <script src="/assets/lib/jquery/jquery-3.7.0.min.js"></script>
+    <script src="/assets/btassets/lib/layui/layui.all.js"></script>
+    <script src="/assets/btassets/lib/jianrong.js"></script>
+    <script src="/assets/btassets/lib/jquery.SuperSlide.2.1.3.js"></script>
+</div>
+
+<style>
+    .mui-bar {
+        position: fixed;
+        z-index: 10;
+        right: 0;
+        left: 0;
+        height: 44px;
+        padding-right: 10px;
+        padding-left: 10px;
+        border-bottom: 0;
+        background-color: #f7f7f7;
+        -webkit-box-shadow: 0 0 1px rgb(0 0 0 / 85%);
+        box-shadow: 0 0 1px rgb(0 0 0 / 85%);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+
+    .inline-box-3 img {
+        width: 300px;
+        height: 90px;
+    }
+</style>
+
+<body>
+<div class="g-index" style="height:100%">
+    <div class="wrapperIndex">
+        <header class="mui-bar mui-bar-nav" style="background: rgb(1,82,147);margin-top:-1px; ">
+            
+            <div>
+                <a href="javascript:;" onclick="aria.start()"
+                   style="color: #ffffff;float:right;margin:10px;margin-top:12px;font-size:14px;">网站无障碍</a>
+                <a href="javascript:;" onclick="aria.oldFixedStart()"
+                   style="color: #ffffff;float:right;margin:10px;margin-top:12px;font-size:14px;">适老版</a>
+                <a id="wyb2" class="mui-pull-left" href="/index"
+                   style="color: #ffffff;float:right;margin:10px;margin-top:12px;font-size:14px;">网页版</a>
+                <a id="sjb2" class="mui-pull-left" href="/mobile/index"
+                   style="color: #ffffff;float:right;margin:10px;margin-top:12px;font-size:14px;">手机版</a>
+            </div>
+            <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" style="color: #ffffff"></a>
+            <!--      <h1 class="mui-title" style="color: #ffffff; font-weight: bold; text-align: left;width:120px;">-->
+            <!--        石拐区人民政府-->
+            <!--      </h1>-->
+        </header>
+        <!--    <img src="/assets/img/home_pic4.jpg" alt="" style=" width: 100%; height: 165px; " />-->
+        <a target="_blank" href="http://www.gov.cn/zhuanti/zggcddescqgdbdh/index.htm">
+            <img src="/assets/img/ershida.jpg" alt="" style=" width: 100%; height: 100%;"/></a>
+        <img
+                src="/assets/img/zh.jpg" alt="" style=" width: 100%; height: 150px;"/>
+
+        <div class="m-banner" style="background-size: 100%;margin-bottom: 112px">
+    <a href="javascript:;" onclick="aria.start()"
+       style="color: #ffffff;float:right;margin:10px;margin-top:12px;font-size:14px;">网站无障碍</a>
+    <a href="javascript:;" onclick="aria.oldFixedStart()"
+       style="color: #ffffff;float:right;margin:10px;margin-top:12px;font-size:14px;">适老版</a>
+    <div class="m-cont">
+        <div class="top">
+    <div class="m-tit">
+        <div class="logoWrapper">
+            <img src="/assets/btassets/img/index/logo.png" alt=""/>
+        </div>
+        <div class="language">
+            <div class="mainTit">
+                包头市公安局
+            </div>
+            <div class="subTit">
+                互&nbsp;&nbsp;联&nbsp;&nbsp;网&nbsp;&nbsp;+&nbsp;&nbsp;综&nbsp;&nbsp;合&nbsp;&nbsp;服&nbsp;&nbsp;务&nbsp;&nbsp;平&nbsp;&nbsp;台
+            </div>
+        </div>
+    </div>
+    <div class="m-info">
+        <p>
+            <span class="nowDate">今天是2020年04月08日 星期三</span><br/>
+            <iframe name="weather_inc" src="https://i.tianqi.com/index.php?c=code&id=99&color=%23FFFFFF&site=10"
+                    width="160" height="36" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"
+                    allowtransparency="true"></iframe>
+            <script>
+                setToday();
+
+                function setToday() {
+                    var date = new Date();
+                    // var currentDate = date.toLocaleDateString().split('/').join('-');
+                    var currentDate = getNowFormatDate();
+                    var week = date.getDay();
+                    var weekday = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
+                    $(".nowDate").html("今天是" + currentDate + " " + weekday[week]);
+                }
+
+                /**
+                 * 获取当前日期
+                 * @returns {string} 当前日期
+                 */
+                function getNowFormatDate() {
+                    var date = new Date();
+                    var seperator = "-";
+                    var year = date.getFullYear();
+                    var month = date.getMonth() + 1;
+                    var strDate = date.getDate();
+                    if (month >= 1 && month <= 9) {
+                        month = "0" + month;
+                    }
+                    if (strDate >= 0 && strDate <= 9) {
+                        strDate = "0" + strDate;
+                    }
+                    var currentdate = year + "年" + month + "月" + strDate + "日";
+                    return currentdate;
+                }
+            </script>
+        </p>
+        <div class="operateBox">
+            <a class="login" href="/members/loginTest">登录</a>
+            <a class="register" href="/members/register">注册</a>
+        </div>
+        
+    </div>
+</div>
+        <div class="m-searchbox">
+    <input type="text" class="searchTxt" name="keyWords" placeholder="请输入搜索内容"
+           onkeypress="listenKyecode();"/><input type="button" class="searchBtn" onclick="search();"/>
+    <p>
+        <span class="sp-1-1" id="topic">热门搜索：</span>
+        <!--<span class="sp-1-2">身份证办理进度查询</span>-->
+        <!--<span class="sp-1-2">流动人口异地查询</span>-->
+    </p>
+    <script>
+        loadTopic();
+
+        //加载热门话题
+        function loadTopic() {
+            $.ajax({
+                type: "POST",
+                url: ctxPath + "/jffb/article/listQuestionData",
+                data: {},
+                success: function (data) {
+                    var result = data.data;
+                    var html = "";
+                    for (var i = 0; i < result.length; i++) {
+                        if (i >= 3) {
+                            break;
+                        }
+                        var tempTitle = result[i].title;
+                        if (tempTitle.length > 10) {
+                            tempTitle = tempTitle.substring(0, 10);
+                        }
+                        html += '<span style="cursor: pointer;" onclick="searchByRecordId(\'' + result[
+                            i].id + '\',\'' + result[i].title + '\');">' + tempTitle + '</span>';
+                    }
+                    $("#topic").after(html);
+                }
+            });
+        }
+
+        /**
+         * 鉴别回车键
+         */
+        function listenKyecode() {
+            if (event.keyCode == 13) {
+                search();
+            }
+        }
+
+        /**
+         * 搜索
+         */
+        function search() {
+            var keyWords = $("input[name='keyWords']").val();
+            if (keyWords == undefined || keyWords == "") {
+                layer.msg('请输入检索关键词！');
+                return false;
+            }
+            //一般检索
+            window.location.href = ctxPath + "/search?keyword=" + keyWords;
+        }
+
+
+        function clickToBigImg() { //绑定图片函数
+            //var clickImgId = $(this).attr("id");
+            var imgsrc = "/assets/btassets/img/index/webzhan.jpg"
+            console.log(imgsrc)
+            //alert (imgsrc);
+            var opacityBottom = '<div id="opacityBottom" style="display: none">' +
+                '<img class="bigImg" src="' + imgsrc + '" ></div>';
+            $(document.body).append(opacityBottom);
+            toBigImg(); //变大函数
+        }
+
+        function toBigImg() {
+
+            $("#opacityBottom").addClass("opacityBottom");
+            $("#opacityBottom").show();
+            $("html,body").addClass("none-scroll"); //下层不可滑动
+            $(".bigImg").addClass("bigImg");
+            /*隐藏*/
+            $("#opacityBottom").bind("click", clickToSmallImg);
+            $(".bigImg").bind("click", clickToSmallImg);
+            var imgHeight = $(".bigImg").prop("height");
+            if (imgHeight < h) {
+                $(".bigImg").css({
+                    "top": (h - imgHeight) / 2 + 'px'
+                });
+
+            } else {
+                $(".bigImg").css({
+                    "top": '50px'
+                });
+            }
+
+            function clickToSmallImg() {
+                $("html,body").removeClass("none-scroll");
+                $("#opacityBottom").remove();
+            }
+        }
+
+        /**
+         * 搜索
+         */
+        function searchByRecordId(id, title) {
+            if (id == undefined || id == "" || title == undefined || title == "") {
+                return false;
+            }
+            window.location.href = ctxPath + "/consult/center?keyWords=" + title + "&uniqueId=" + id;
+        }
+
+
+    </script>
+</div>
+        <!-- 轮播20230518 -->
+
+        <div class="layui-carousel" id="lb1" style="width: 100%;height: 150px;margin-top: 37px;">
+            <div carousel-item>
+                <img src="/assets/img/415.jpg" style="width: 100%;height: 150px;"/>
+                <img src="/assets/img/415.jpg" style="width: 100%;height: 150px;"/>
+                <img src="/assets/img/415.jpg" style="width: 100%;height: 150px;"/>
+                <img src="/assets/img/415.jpg" style="width: 100%;height: 150px;"/>
+                <img src="/assets/img/415.jpg" style="width: 100%;height: 150px;"/>
+            </div>
+        </div>
+        <!-- <img src="/assets/img/415.jpg" style="width: 100%;height: 150px;margin-top: 15px;"/> -->
+        <ul class="nav" style="top: 475px">
+            <li id="index"><a href="/index">网站首页</a></li>
+            <li id="police_release"><a href="/jffb/index">警方发布</a></li>
+            <li id="government"><a href="/jwgk">政府信息公开</a></li>
+            <li id="open_police"><a href="/jwfb/articles">警务公开</a></li>
+            <li id="service_center"><a href="/cases">办事中心</a></li>
+            <li id="inquiry_center"><a href="/query">查询中心</a></li>
+            <!--<li id="advisory_center"><a th:href="${ctxPath +'/consult/center'}">咨询中心</a></li>-->
+            <li id="interaction_center"><a href="/interaction/center/listWeb">互动中心</a></li>
+            <!--            <li id="jz_center"><a th:href="${ctxPath +'/lfReising/list'}">集资报案</a></li>-->
+            <li id="zwfw_center"><a
+                    href="https://zwfw.nmg.gov.cn/OrgItem_index?regionCode=150200000000&orgCode=111502000115361504&record=istrue">政务服务</a>
+            </li>
+        </ul>
+    </div>
+    <script>
+        loadLb1();
+
+        //加载首页轮播一
+        function loadLb1() {
+            var url = "http://gaj.baotou.gov.cn/";
+            $.ajax({
+                type: "POST",
+                url: ctxPath + "/mobile/rotationChart/list",
+                data: {type: "网站轮播一"},
+                success: function (data) {
+                    var result = data.data;
+                    var html = "";
+                    for (var i = 0; i < result.length; i++) {
+                        if (result[i].hrefUrl == null || result[i].hrefUrl == '') {
+                            html += '<img src="' + url + result[i].photoUrl + '" style="width: 100%;height: 150px;"/>';
+                        } else {
+                            html += '<a href="' + result[i].hrefUrl + '"><img src="' + url + result[i].photoUrl + '" style="width: 100%;height: 150px;"/></a>';
+                        }
+                    }
+                    $("#lb1 div").html(html);
+                    //   <!-- 轮播20230518 -->
+                    layui.use('carousel', function () {
+                        var carousel = layui.carousel;
+                        //建造实例
+                        carousel.render({
+                            elem: '#lb1',
+                            width: '100%', //设置容器宽度,
+                            height: '150px',
+                            arrow: 'hover' //始终显示箭头
+                            //,anim: 'updown' //切换动画方式
+                        });
+                    });
+
+                }
+            });
+        }
+
+    </script>
+</div>
+        <div class="m-main">
+            <div class="wrapper">
+                <div class="notice">
+                    <span class="tit"><b class="square"></b>最新公告</span>
+                    <ul class="news">
+                        <!--<li class="">-->
+                        <!--<a href=""-->
+                        <!--&gt;<b class="dot"></b>-->
+                        <!--<span class="newsBrief f-ellipsis"-->
+                        <!--&gt;党的十八大以来全国公安刑侦哪些亮点</span-->
+                        <!--&gt;<span class="date">[2017-10-25]</span></a-->
+                        <!--&gt;-->
+                        <!--</li>-->
+                    </ul>
+                    <div class="slider">
+                        <span class="prev"><img src="/assets/btassets/img/index/prev.jpg"
+                                                alt=""/></span>
+                        <span class="next"><img src="/assets/btassets/img/index/next.jpg"
+                                                alt=""/></span>
+                    </div>
+                </div>
+                <div class="m-news">
+                    <div class="slider">
+                        <div id="slideBox" class="slideBox">
+                            <div class="hd">
+                                <!--<span class="text">李克强3出席全国政协十二届常委会第十三次会议开幕会,李克强出席全国政协十二届</span>-->
+                                <ul class="circle">
+                                    <li class="on"></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                            </div>
+                            <div class="bd">
+                                <ul>
+                                    <li>
+                                        <a href="/jffb/article/detail?articleId=1233490560224989184">
+                                            <img src="http://gaj.baotou.gov.cn/btga_files/upload/ueditor/image/20260323/1774253518.jpg"/>
+                                            <div class="hds">
+                                                <span class="text">包头市公安局党委举办树立和践行正确政绩观学习...</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/jffb/article/detail?articleId=1229146319130595328">
+                                            <img src="http://gaj.baotou.gov.cn/btga_files/upload/ueditor/image/20260311/1773217763.jpg"/>
+                                            <div class="hds">
+                                                <span class="text">包头市公安局党委部署开展树立和践行正确政绩观...</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/jffb/article/detail?articleId=1227031338381611008">
+                                            <img src="http://gaj.baotou.gov.cn/btga_files/upload/ueditor/image/20260305/1772713514.jpg"/>
+                                            <div class="hds">
+                                                <span class="text">刘国明深入高速出入口调研督导全国两会安保工作...</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/jffb/article/detail?articleId=1227030891105226752">
+                                            <img src="http://gaj.baotou.gov.cn/btga_files/upload/ueditor/image/20260305/1772713402.jpg"/>
+                                            <div class="hds">
+                                                <span class="text">刘国明调研督导元宵节活动安保工作</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="policePublic">
+                        <div style="display: flex">
+                            <div class="header">
+                                <div id='1' class="tit">警方发布</div>
+                                <div id='2' class="tit2">交管发布</div>
+
+                            </div>
+                            <a class="more" id="more">更多&gt;</a>
+                        </div>
+                        <ul class="newsList" id="newList">
+
+                        </ul>
+                    </div>
+                </div>
+                <style>
+                    .ct-center {
+                        padding-top: 20px;
+                        width: 1200px;
+                    }
+
+                    .ct-center a img {
+                        width: 100%;
+                    }
+                </style>
+                <!--        <div class="ct-center">-->
+                <!--          &lt;!&ndash;<a href="http://www.baotou.gov.cn/ztzl/asnmg/asnmg.htm"><img src="/assets/img/home_pic.jpg" alt="" /></a>&ndash;&gt;-->
+                <!--          <a target="_blank" href="http://bg.yj.baotou.gov.cn/index.php?s=/Reg/Reg/Url/WEB.html"><img src="/assets/img/luoshi_2021.jpg" alt="" /></a>-->
+                <!--        </div>-->
+                <!-- 轮播20230518 -->
+
+                <div class="layui-carousel" id="lb2" style="width: 100%;height: 150px;margin-top: 37px;">
+                    <div carousel-item>
+                        <img src="/assets/img/415.jpg" style="width: 100%;height: 150px;"/>
+                        <img src="/assets/img/415.jpg" style="width: 100%;height: 150px;"/>
+                        <img src="/assets/img/415.jpg" style="width: 100%;height: 150px;"/>
+                        <img src="/assets/img/415.jpg" style="width: 100%;height: 150px;"/>
+                        <img src="/assets/img/415.jpg" style="width: 100%;height: 150px;"/>
+                    </div>
+                </div>
+                <script>
+                    //   <!-- 轮播20230518 -->
+
+                    loadLb2();
+
+                    //加载首页轮播一
+                    function loadLb2() {
+                        var url = "http://gaj.baotou.gov.cn/";
+                        $.ajax({
+                            type: "POST",
+                            url: ctxPath + "/mobile/rotationChart/list",
+                            data: {type: "网站轮播二"},
+                            success: function (data) {
+                                var result = data.data;
+                                var html = "";
+                                for (var i = 0; i < result.length; i++) {
+                                    if (result[i].hrefUrl == null || result[i].hrefUrl == '') {
+                                        html += '<img src="' + url + result[i].photoUrl + '" style="width: 100%;height: 150px;"/>';
+                                    } else {
+                                        html += '<a href="' + result[i].hrefUrl + '"><img src="' + url + result[i].photoUrl + '" style="width: 100%;height: 150px;"/></a>';
+                                    }
+                                }
+                                $("#lb2 div").html(html);
+                                //   <!-- 轮播20230518 -->
+                                layui.use('carousel', function () {
+                                    var carousel = layui.carousel;
+                                    //建造实例
+                                    carousel.render({
+                                        elem: '#lb2',
+                                        width: '100%', //设置容器宽度,
+                                        height: '150px',
+                                        arrow: 'hover' //始终显示箭头
+                                        //,anim: 'updown' //切换动画方式
+                                    });
+                                });
+
+                            }
+                        });
+                    }
+                </script>
+                <!-- 警种服务 -->
+                <div class="m-policeService2">
+                    <div class="commonTit f-clearFix">
+                        <div class="leftLine"></div>
+                        <div class="wrapperTit">
+                            <img src="/assets/btassets/img/index/leftLeaf.png" alt=""/>
+                            <div class="titBox">
+                                警种服务
+                            </div>
+                            <img src="/assets/btassets/img/index/rightLeaf.png" alt=""/>
+                        </div>
+                        <div class="rightLine"></div>
+                    </div>
+                    <ul class="categoryList f-clearFix">
+                        <li class="item" data-type="1">
+                            <div>
+                                <img src="/assets/btassets/img/index/icon-norm/01.png" alt=""/>
+                            </div>
+                            <p>户籍业务</p>
+                        </li>
+                        <li class="item" data-type="2">
+                            <div>
+                                <img src="/assets/btassets/img/index/icon-norm/02.png" alt=""/>
+                            </div>
+                            <p>治安业务</p>
+                        </li>
+                        <li class="item" data-type="3">
+                            <div>
+                                <img src="/assets/btassets/img/index/icon-norm/03.png" alt=""/>
+                            </div>
+                            <p>出入境业务</p>
+                        </li>
+                        <li class="item" data-type="13">
+                            <div>
+                                <img src="/assets/btassets/img/index/icon-norm/04.png" alt=""/>
+                            </div>
+                            <p>交警业务</p>
+                        </li>
+                        <li class="item" data-type="16">
+                            <div>
+                                <img src="/assets/btassets/img/index/icon-norm/05.png" alt=""/>
+                            </div>
+                            <p>边防业务</p>
+                        </li>
+                        <li class="item" data-type="">
+                            <div>
+                                <img src="/assets/btassets/img/index/icon-norm/06.png" alt=""/>
+                            </div>
+                            <p>内保业务</p>
+                        </li>
+                        <li class="item" data-type="11">
+                            <div>
+                                <img src="/assets/btassets/img/index/icon-norm/07.png" alt=""/>
+                            </div>
+                            <p>网安业务</p>
+                        </li>
+                        <li class="item" data-type="">
+                            <div>
+                                <img src="/assets/btassets/img/index/icon-norm/08.png" alt=""/>
+                            </div>
+                            <p>保安业务</p>
+                        </li>
+                        <li class="item" data-type="">
+                            <div>
+                                <img src="/assets/btassets/img/index/icon-norm/09.png" alt=""/>
+                            </div>
+                            <p>消防业务</p>
+                        </li>
+                        <li class="item" data-type="12">
+                            <div>
+                                <img src="/assets/btassets/img/index/icon-norm/10.png" alt=""/>
+                            </div>
+                            <p>法制业务</p>
+                        </li>
+                        <li class="item" data-type="6">
+                            <div>
+                                <img src="/assets/btassets/img/index/icon-norm/11.png" alt=""/>
+                            </div>
+                            <p>监管业务</p>
+                        </li>
+                        <li class="item" data-type="5">
+                            <div>
+                                <img src="/assets/btassets/img/index/icon-norm/12.png" alt=""/>
+                            </div>
+                            <p>禁毒业务</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="m-link">
+                <div class="m-link-wrap">
+                    <div class="linkTit f-clearFix">
+                        <div class="leftLine"></div>
+                        <div class="link">
+                            <div><img src="/assets/btassets/img/index/mgubao.png" alt=""/></div>
+                            <p>快速链接</p>
+                        </div>
+                        <div class="rightLine"></div>
+                    </div>
+                    <ul class="linkList f-clearFix">
+                        <li><a href="/query/sameNameSearch">重名查询</a></li>
+<!--                        <li><a th:href="${ctxPath+'/query/idCardSearch'}">身份证查询</a></li>-->
+                        <li><a href="/interaction/center/query/xjcx">互动信件查询</a></li>
+                        <li><a href="/orgRecordInfo/list">单位备案信息</a></li>
+                        <li><a href="/case/caseSearchCenter">网办事项办理进度查询</a></li>
+                        <li><a href="http://gaj.baotou.gov.cn/24h">24小时警局</a></li>
+                        <li><a href="/query/unlock">开锁名录查询</a></li>
+                        <li><a href="/consult/center">咨询中心</a></li>
+                        <li><a href="/query">查询中心</a></li>
+
+                        <li>
+                            <a href="http://116.113.93.83:7777/mbxtwlfwpt/loginService.do?method=getFbxx#">内蒙古自治区民爆信息网</a>
+                        </li>
+                        <li><a href="http://www.nmgbaoan.com/">内蒙古自治区保安信息网</a></li>
+                        <li><a href="http://www.gayzd.com/#/login">全国易制毒化学品管理信息网</a></li>
+                        <li>
+                            <a href="https://zwfwj.baotou.gov.cn/btzjfw/ReplyConsultation/ReplyConsultation.do?method=orgDepart">行政审批中介服务网上超市</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--首页3个图标外连接-->
+                <div>
+                    <div class="" style="width: 1200px;margin: 0px auto 0;padding-bottom: 25px;">
+                        <ul style="display: inline-flex;">
+<!--                            <li class="inline-box-3">-->
+<!--                                <a href="https://www.baotou.gov.cn/ztzl/tdbtgzlfz.htm"><img-->
+<!--                                        src="/assets/img/index/gzl.jpg" alt=""/></a>-->
+<!--                            </li>-->
+                            <li class="inline-box-3" style="margin:0 15px;">
+                                <a href="/jwgk/articles?categoryId=813450256871198720"><img
+                                        src="/assets/img/index/ndbb.jpg" alt=""/></a>
+                            </li>
+                            <li class="inline-box-3" style="margin-right: 15px">
+                                <a href="https://www.baotou.gov.cn/ztzl/yhyshj/"><img src="/assets/img/index/03.png"
+                                                                                      alt=""/></a>
+                            </li>
+                            <li class="inline-box-3">
+                                <a href="https://www.gov.cn/zhengce/zczhjd/"><img src="/assets/img/index/zdjc.jpg"
+                                                                                      alt=""/></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="" style="width: 1200px;margin: 0px auto 0;">
+                        <ul>
+                            <!-- 轮播20230518 -->
+
+                            <div class="layui-carousel" id="lb3" style="width: 100%;height: 150px;margin-top: 37px;">
+                                <div carousel-item>
+                                    <li>
+                                        <a href="http://bt.nmgzf.gov.cn/djylfz/"><img src="/assets/img/index/yl.jpg"
+                                                                                      alt=""/></a>
+                                    </li>
+                                    <li>
+                                        <a href="http://bt.nmgzf.gov.cn/djylfz/"><img src="/assets/img/index/yl.jpg"
+                                                                                      alt=""/></a>
+                                    </li>
+                                    <li>
+                                        <a href="http://bt.nmgzf.gov.cn/djylfz/"><img src="/assets/img/index/yl.jpg"
+                                                                                      alt=""/></a>
+                                    </li>
+                                </div>
+                            </div>
+                            <!-- <li >
+                              <a href="http://bt.nmgzf.gov.cn/djylfz/"><img src="/assets/img/index/yl.jpg" alt="" /></a>
+                            </li> -->
+                            <!--            <li >-->
+                            <!--              <a href="https://gaj.baotou.gov.cn/jffb/articles?categoryId=782676024142991360"><img src="/assets/img/index/ershi.jpg" alt="" /></a>-->
+                            <!--            </li>-->
+                        </ul>
+                    </div>
+                    <script>
+                        loadLb3();
+
+                        //加载首页轮播一
+                        function loadLb3() {
+                            var url = "http://gaj.baotou.gov.cn/";
+                            $.ajax({
+                                type: "POST",
+                                url: ctxPath + "/mobile/rotationChart/list",
+                                data: {type: "网站轮播三"},
+                                success: function (data) {
+                                    var result = data.data;
+                                    var html = "";
+                                    for (var i = 0; i < result.length; i++) {
+                                        if (result[i].hrefUrl == null || result[i].hrefUrl == '') {
+                                            html += '<img src="' + url + result[i].photoUrl + '" style="width: 100%;height: 150px;"/>';
+                                        } else {
+                                            html += '<a href="' + result[i].hrefUrl + '"><img src="' + url + result[i].photoUrl + '" style="width: 100%;height: 150px;"/></a>';
+                                        }
+                                    }
+                                    $("#lb3 div").html(html);
+                                    //   <!-- 轮播20230518 -->
+                                    layui.use('carousel', function () {
+                                        var carousel = layui.carousel;
+                                        //建造实例
+                                        carousel.render({
+                                            elem: '#lb3',
+                                            width: '100%', //设置容器宽度,
+                                            height: '150px',
+                                            arrow: 'hover' //始终显示箭头
+                                            //,anim: 'updown' //切换动画方式
+                                        });
+                                    });
+
+                                }
+                            });
+                        }
+                    </script>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="g-footer">
+        <div class="m-footer">
+    <ul class="textList" style="width: 556px;">
+        <li>
+            <a href="/sitemap">网站地图</a>
+        </li>
+        <li>
+            <a href="">Copyright 2013 版权所有：包头市公安局
+                网站主办单位：包头市公安局办公室</a>
+        </li>
+        <li>
+            <a href="https://beian.miit.gov.cn">地址：包头市青山区建设路191号 ICP备案编号：蒙ICP备08000074号</a>
+        </li>
+        <li>
+            <a href="https://beian.mps.gov.cn/#/query/webSearch">蒙公网安备15020402000621号 政府网站标识码：1502000038</a>
+        </li>
+    </ul>
+    <div class="right" style="width: 382px;">
+        <div class="error">
+            <img src="/assets/btassets/img/index/wza.png" alt="" style="max-height: 71px;"/>
+        </div>
+        <div class="error">
+            <script id="_jiucuo_" sitecode='1502000038' src='https://zfwzgl.www.gov.cn/exposure/jiucuo.js'></script>
+        </div>
+        <div class="jiguan">
+            <a href="http://bszs.conac.cn/sitename?method=show&id=09D76771BEC4512DE053012819AC237B"><img src="/assets/btassets/img/index/jiguan.png" alt=""/></a>
+        </div>
+        <div class="xxx" style="float: right;margin-right: -461px;margin-top: 6px;">
+            <img style="height: 60px;border: 0;display: block;margin: auto;margin-top: 60px;"
+                 onclick="clickToBigImg()" src="/assets/btassets/img/index/webzhan.jpg" alt=""/>
+            <div style="text-align: center; display: block;">手机wap站</div>
+        </div>
+    </div>
+    <script defer async type="text/javascript" src="//gov.govwza.cn/dist/aria.js?appid=d2797984db50059f5198b1f0b5303b53" charset="utf-8" wapForceOldFixed="false" loadData="false" id="ariascripts"></script>
+</div>
+    </div>
+</div>
+
+<div>
+    <div id="NavTop">
+        <div id="NavCon">
+            <ul>
+                <!--        <li><a href="javaScript:"><img th:src="${ctxPath + '/assets/img/azApp.png'}"/></a><span>安卓APP</span></li>-->
+                <!--        <li><a href="javaScript:"><img th:src="${ctxPath + '/assets/img/iodApp.png'}"/></a><span>苹果APP</span></li>-->
+                <li><a href="javaScript:"><img src="/assets/img/wx.jpg"/></a><span>微信公众号</span></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<style type="text/css">
+
+
+    #NavTop {
+        width: 140px;
+        height: 270px;
+        margin-top: 50px;
+        position: fixed;
+        right: 0px;
+        top: 150px;
+        z-index: 10000;
+    }
+
+    #NavTop #NavCon {
+        width: 140px;
+        height: 270px;
+        background: url('images/d.png') repeat-y;
+        position: relative;
+    }
+
+    #NavTop #NavCon li {
+        text-align: center;
+        height: 120px;
+    }
+
+    #NavTop #NavCon li span {
+        display: block;
+        text-align: center;
+    }
+
+    #NavTop #NavCon ul {
+        margin-top: 40px;
+    }
+
+    #NavTop #NavCon img {
+        width: 100px;
+        height: 100px;
+    }
+</style>
+
+<div id="photo-list" style="position:absolute;z-index:10;left:100px;top:100px">
+    <p style="color:red;float:right;font-size:12px;cursor:pointer;" onClick="img.style.visibility = 'hidden'">关闭</p>
+    <br><img src="/assets/img/pc_qmfz.jpg" alt="" width="300" border="0"/></a>
+    <!-- <a href="#" title="平安包头全民反诈">
+       <br><img th:src="${ctxPath+'/assets/img/pc_qmfz.jpg'}" alt="" width="200" border="0" /></a>-->
+</div>
+
+<div id="photo-list1" style="position:absolute;z-index:10;left:100px;top:100px">
+    <p style="color:red;float:right;font-size:12px;cursor:pointer;" onClick="img1.style.visibility = 'hidden'">关闭</p>
+    <br><img src="/assets/img/gwywls.jpg" alt="" width="300" border="0"/></a>
+    <!-- <a href="#" title="平安包头全民反诈">
+       <br><img th:src="${ctxPath+'/assets/img/pc_qmfz.jpg'}" alt="" width="200" border="0" /></a>-->
+</div>
+
+<!--<div id="photo-list2" style="position:absolute;z-index:10;left:100px;top:100px">-->
+<!--    <p style="color:red;float:right;font-size:12px;cursor:pointer;" onClick="img2.style.visibility = 'hidden'">关闭</p>-->
+<!--    <br><img th:src="${ctxPath+'/assets/img/bmhq.jpg'}" alt="" width="300" border="0"/></a>-->
+<!--</div>-->
+
+<script>
+    tapChangeCom(1);
+    $('.policePublic .header div').hover(function () {
+        $(this).attr('class', 'tit');
+        $(this).siblings().attr('class', 'tit2')
+        //调用方法
+        var id = $(this)[0].id;
+        tapChangeCom(id);
+
+
+    }, function () {
+        return
+    })
+
+    // 第二个模块
+    function tapChangeCom(value) {
+        if (value == '1') {
+            $('#more').attr('href', '/jffb/articles?categoryId=215186262477377536&id=1');
+        } else {
+            $('#more').attr('href', '/jffb/articles?categoryId=215186560684003328&id=2');
+        }
+        $.get(ctxPath + '/getRecentNews', {
+            regionCode: rootOrgCode,
+            id: value
+        }, function (data) {
+            var html = '';
+            data.forEach(function (d) {
+                let title = d.title;
+                let dateHtml = d.postTime;
+                if (!dateHtml) {
+                    dateHtml = d.createTime;
+                }
+                dateHtml = getMyDateString(dateHtml, "MM-dd");
+                if (title.length > 30) {
+                    title = title.substring(0, 30) + "......";
+                }
+                let href = '/jffb/article/detail?articleId=' + d.id;
+                html += '<li><a href="' + href + '">' + title + '</a><span class="date">[' + dateHtml + ']</span></li>';
+            });
+            $(".newsList").html(html);
+        }, 'json');
+
+
+    }
+
+    $('#photo-list img').on('click', function () {
+        layer.photos({
+            photos: '#photo-list',
+            shadeClose: false,
+            closeBtn: 2,
+            anim: 0
+        });
+    })
+
+    $('#photo-list1 img').on('click', function () {
+        window.location.href = "https://liuyan.www.gov.cn/2024wwzfgzbgtjy/bmdf.html?q=nmg";
+    })
+
+    $('#photo-list2 img').on('click', function () {
+        window.location.href = "https://www.baotou.gov.cn/ztzl/hqzczq/bmzc.htm";
+    })
+
+    var img = document.getElementById("photo-list");
+    var ggRoll = { //创建对象直接量
+        roll: img, //获取id属性为roll的对象
+        speed: 20, //飘动速度，即为定时器函数多长时间执行一次
+        statusX: 1, //规定每执行一次函数，left属性值变化的幅度
+        statusY: 1, //规定每执行一次函数，top属性值变化的幅度
+        x: 100, //规定初始状态下left属性的值
+        y: 300, //规定初始状态下top属性的值
+        //差值用来测算left属性值的极限
+        winW: document.documentElement.clientWidth -img.offsetWidth,
+        //差值用来测算top属性值的极限
+        winH: document.documentElement.clientHeight - img.offsetHeight,
+        //声明函数
+        Go: function () {
+            //设置div的left属性值
+            this.roll.style.left = this.x + 'px';
+            //设置div的top属性值
+            this.roll.style.top = this.y + 'px';
+            //如果statusX=1则每次减少1px,否则减少1px
+            this.x = this.x + (this.statusX ? -1 : 1)
+            //如果left属性值小于0，也就是div要超出左边界了，就将statusX设置为0
+            if (this.x < 0) {
+                this.statusX = 0
+            }
+            //如果top属性值大于winW，也就是div要超出右边界了，就将statusX设置为1
+            if (this.x > this.winW) {
+                this.statusX = 1
+            }
+
+            this.y = this.y + (this.statusY ? -1 : 1)
+            if (this.y < 50) {
+                this.statusY = 0
+            }
+            if (this.y > this.winH) {
+                this.statusY = 1
+            }
+
+        }
+    };
+
+    var interval = setInterval("ggRoll.Go()", ggRoll.speed);
+    ggRoll.roll.onmouseover = function () {
+        clearInterval(interval)
+    }; //onmouseover属性：鼠标移动到元素上时触发
+    ggRoll.roll.onmouseout = function () {
+        interval = setInterval("ggRoll.Go()", ggRoll.speed)
+    }; //onmouseout属性:鼠标离开元素时触发
+
+    var img1 = document.getElementById("photo-list1");
+    var ggRoll1 = { //创建对象直接量
+        roll: img1, //获取id属性为roll的对象
+        speed: 20, //飘动速度，即为定时器函数多长时间执行一次
+        statusX: 1, //规定每执行一次函数，left属性值变化的幅度
+        statusY: 1, //规定每执行一次函数，top属性值变化的幅度
+        x: 800, //规定初始状态下left属性的值
+        y: 700, //规定初始状态下top属性的值
+        //差值用来测算left属性值的极限
+        winW: document.documentElement.clientWidth - img1.offsetWidth,
+        //差值用来测算top属性值的极限
+        winH: document.documentElement.clientHeight - img1.offsetHeight,
+        //声明函数
+        Go: function () {
+            //设置div的left属性值
+            this.roll.style.left = this.x + 'px';
+            //设置div的top属性值
+            this.roll.style.top = this.y + 'px';
+            //如果statusX=1则每次减少1px,否则减少1px
+            this.x = this.x + (this.statusX ? -1 : 1)
+            //如果left属性值小于0，也就是div要超出左边界了，就将statusX设置为0
+            if (this.x < 0) {
+                this.statusX = 0
+            }
+            //如果top属性值大于winW，也就是div要超出右边界了，就将statusX设置为1
+            if (this.x > this.winW) {
+                this.statusX = 1
+            }
+
+            this.y = this.y + (this.statusY ? -1 : 1)
+            if (this.y < 50) {
+                this.statusY = 0
+            }
+            if (this.y > this.winH) {
+                this.statusY = 1
+            }
+
+        }
+    };
+
+    var interval1 = setInterval("ggRoll1.Go()", ggRoll1.speed);
+    ggRoll1.roll.onmouseover = function () {
+        clearInterval(interval1)
+    }; //onmouseover属性：鼠标移动到元素上时触发
+    ggRoll1.roll.onmouseout = function () {
+        interval1 = setInterval("ggRoll1.Go()", ggRoll1.speed)
+    }; //onmouseout属性:鼠标离开元素时触发
+
+    var img2 = document.getElementById("photo-list2");
+    var ggRoll2 = { //创建对象直接量
+        roll: img2, //获取id属性为roll的对象
+        speed: 20, //飘动速度，即为定时器函数多长时间执行一次
+        statusX: 1, //规定每执行一次函数，left属性值变化的幅度
+        statusY: 1, //规定每执行一次函数，top属性值变化的幅度
+        x: 800, //规定初始状态下left属性的值
+        y: 700, //规定初始状态下top属性的值
+        //差值用来测算left属性值的极限
+        winW: document.documentElement.clientWidth - img2.offsetWidth,
+        //差值用来测算top属性值的极限
+        winH: document.documentElement.clientHeight - img2.offsetHeight,
+        //声明函数
+        Go: function () {
+            //设置div的left属性值
+            this.roll.style.left = this.x + 'px';
+            //设置div的top属性值
+            this.roll.style.top = this.y + 'px';
+            //如果statusX=1则每次减少1px,否则减少1px
+            this.x = this.x + (this.statusX ? -1 : 1)
+            //如果left属性值小于0，也就是div要超出左边界了，就将statusX设置为0
+            if (this.x < 0) {
+                this.statusX = 0
+            }
+            //如果top属性值大于winW，也就是div要超出右边界了，就将statusX设置为1
+            if (this.x > this.winW) {
+                this.statusX = 1
+            }
+
+            this.y = this.y + (this.statusY ? -1 : 1)
+            if (this.y < 50) {
+                this.statusY = 0
+            }
+            if (this.y > this.winH) {
+                this.statusY = 1
+            }
+
+        }
+    };
+
+    var interval2 = setInterval("ggRoll2.Go()", ggRoll2.speed);
+    ggRoll2.roll.onmouseover = function () {
+        clearInterval(interval2)
+    }; //onmouseover属性：鼠标移动到元素上时触发
+    ggRoll2.roll.onmouseout = function () {
+        interval2 = setInterval("ggRoll2.Go()", ggRoll2.speed)
+    }; //onmouseout属性:鼠标离开元素时触发
+
+</script>
+
+<script>
+    $(".slideBox").slide({mainCell: ".bd ul", autoPlay: true});
+</script>
+
+<script>
+    // 控制选中样式
+    $("#index").addClass("selected")
+
+    var loginUser = {};
+    /*<![CDATA[*/
+    loginUser = null;
+    /*]]>*/
+
+    //最新公告翻页 页码变量
+    let newsPage = 1;
+
+    !(function () {
+        //最新公告
+        showNews();
+        //警方发布9条
+
+
+        $(".prev").click(function () {
+            showNews("prev")
+        });
+        $(".next").click(function () {
+            showNews("next")
+        });
+
+        $(".item").mouseover(function () {
+            var berforeSrc = $(this).find("img").attr("src");
+            var afterSrc = berforeSrc.replace("/icon-norm/", "/icon-sel/");
+            $(this).find("img").attr("src", afterSrc);
+        });
+
+        $(".item").mouseout(function () {
+            var berforeSrc = $(this).find("img").attr("src");
+            var afterSrc = berforeSrc.replace("/icon-sel/", "/icon-norm/");
+            $(this).find("img").attr("src", afterSrc);
+        });
+
+        $(".item").click(function () {
+            let type = $(this).attr("data-type");
+            window.location.href = ctxPath + "/cases#" + type;
+        });
+
+    })();
+
+    /**
+     * 字符串转特定时间格式字符串 MM-dd
+     */
+    function getMyDateString(dateHtml, type) {
+        if (dateHtml) {
+            let tempDate = new Date(dateHtml);
+            if (tempDate == "Invalid Date") {
+                dateHtml = dateHtml.replace(new RegExp(/-/gm), "/"); 　　//将所有的'-'转为'/'即可
+                tempDate = new Date(dateHtml);
+            }
+            let myyear = tempDate.getFullYear();
+            let mymonth = tempDate.getMonth() + 1;
+            let myweekday = tempDate.getDate();
+            if (mymonth < 10) {
+                mymonth = "0" + mymonth;
+            }
+            if (myweekday < 10) {
+                myweekday = "0" + myweekday;
+            }
+            if (type == "MM-dd") {
+                return mymonth + '-' + myweekday;
+            } else {
+                return myyear + '-' + mymonth + '-' + myweekday;
+            }
+        }
+        return "";
+    }
+
+    function showNews(type) {
+        let page = newsPage;
+        if (type == "prev") {
+            page = (page - 1) > 0 ? page - 1 : 1;
+        } else if (type == "next") {
+            page++;
+        }
+        //最新公告
+        $.get(ctxPath + '/jffb/article/listData?length=2', {
+            page: page,
+            categoryId: "215186376658915328",
+            regionCode: rootOrgCode
+        }, function (res) {
+            let html = '';
+            res.data.forEach(function (d) {
+                let title = d.title;
+                let timeHtml = getMyDateString(d.updateTime);
+                let href = ctxPath + '/jffb/article/detail?articleId=' + d.id;
+                html += '<li class=""><a href="' + href + '"><b class="dot"></b>' +
+                    '   <span class="newsBrief f-ellipsis">' + title + '</span><span ' +
+                    '     class="date">[' + timeHtml + ']</span></a></li>'
+            })
+            if (html == "") {
+                return;
+            }
+            newsPage = page;
+            $(".news").html("");
+            $(".news").append(html);
+        }, 'json');
+    }
+
+</script>
+</body>
+</html>

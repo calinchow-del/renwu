@@ -1,0 +1,1602 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>包头市发展和改革委员会</title>
+    <meta name="SiteName" content="包头市发展和改革委员会">
+<meta name="SiteDomain" content="http://fgw.baotou.gov.cn">
+<meta name="SiteIDCode" content="">
+<link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./images/swiper-bundle_1.min.css" />
+    <link rel="stylesheet" href="./images/initialize_2.css" />
+    <link rel="stylesheet" href="./images/header_footer_2.css" />
+    <link rel="stylesheet" href="./images/header_footer_h5_2.css" media="screen and (max-width:750px)" />
+    <link rel="stylesheet" href="./images/index.css" />
+    <link rel="stylesheet" href="./images/index_h5.css" media="screen and (max-width:750px)" />
+    <script src="./images/jquery_2.min.js"></script>
+    <script src="./images/swiper-bundle.min.js"></script>
+    <script src="./images/jquery.SuperSlide.2.1.3.js"></script>
+    <script src="./images/resize_2.js"></script>
+    <script src="./images/h5_2.js"></script>
+
+    <style>
+      .main .hf {
+        background-color: transparent;
+      }
+      .main .headlines .text {
+         text-align: center; 
+      }
+    </style>
+  </head>
+  <body>
+    <style type="text/css">
+      .adv {
+        width: 300px;
+        height: 146px;
+        z-index: 9999999;
+      }
+
+      .adv img {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+
+      .adv .close {
+        position: absolute;
+        top: -30px;
+        right: 0;
+        font-size: 16px;
+      }
+    </style>
+
+
+<!--
+    <div class="adv" id="adv">
+      <div class="close" id="adv_close">关闭</div>
+      <a href="http://116.114.161.151:200/btsfgw_11/jlhd/jlhd_yjzq/202509/t20250903_398600.html">
+        <img src="./images/img_adv_1.png" alt="img_adv_1.png" title="img_adv_1.png" />
+      </a>
+    </div>
+-->
+
+    <script>
+      (function ($) {
+        $.fn.adFloat = function (options) {
+          return new AdFloat(this, options);
+        };
+        var AdFloat = function (element, options) {
+          this.element = $(element);
+          this.options = $.extend(
+            {
+              width: 230, //默认的广告的宽
+              height: 118, //默认的广告的高
+              top: 0, //默认的广告的Y坐标
+              left: 0, //默认的广告的X坐标
+              delay: 30, //延迟
+              step: 2, //默认的广告每次移动的距离(像素)
+            },
+            options
+          );
+          this.interval = null;
+          this.xPos = this.options.left;
+          this.yPos = this.options.top;
+          this.yon = 0;
+          this.xon = 0;
+          this.isPause = false;
+          this.init();
+        };
+        AdFloat.prototype = {
+          init: function () {
+            var me = this;
+            me.element.css("display", "block");
+            me.element.css({
+              position: "absolute",
+              left: me.options.left,
+              top: me.options.top,
+              width: me.options.width,
+              height: me.options.height,
+            });
+            me.element.hover(
+              function () {
+                clearInterval(me.interval);
+              },
+              function () {
+                me.interval = setInterval(function () {
+                  me.changePos();
+                }, me.options.delay);
+              }
+            );
+            $(document).ready(function () {
+              me.start();
+            });
+          },
+          changePos: function () {
+            var me = this;
+            var clientWidth = $(window).width();
+            var clientHeight = $(window).height();
+            var Hoffset = me.options.height;
+            var Woffset = me.options.width;
+            me.element.css({ left: me.xPos + $(document).scrollLeft(), top: me.yPos + $(document).scrollTop() });
+            if (me.yon) {
+              me.yPos = me.yPos + me.options.step;
+            } else {
+              me.yPos = me.yPos - me.options.step;
+            }
+            if (me.yPos < 0) {
+              me.yon = 1;
+              me.yPos = 0;
+            }
+            if (me.yPos >= clientHeight - Hoffset) {
+              me.yon = 0;
+              me.yPos = clientHeight - Hoffset;
+            }
+            if (me.xon) {
+              me.xPos = me.xPos + me.options.step;
+            } else {
+              me.xPos = me.xPos - me.options.step;
+            }
+            if (me.xPos < 0) {
+              me.xon = 1;
+              me.xPos = 0;
+            }
+            if (me.xPos >= clientWidth - Woffset) {
+              me.xon = 0;
+              me.xPos = clientWidth - Woffset;
+            }
+          },
+          start: function () {
+            var me = this;
+            me.element.css("top", me.yPos);
+            me.interval = setInterval(function () {
+              me.changePos();
+            }, me.options.delay);
+          },
+        };
+      })(jQuery);
+      //飘窗展示
+      $(function () {
+        $("#adv").adFloat({ width: 300, height: 146, top: 0, left: 0 });
+      });
+      //飘窗关闭
+      $("#adv_close").click(function () {
+        $("#adv").css("display", "none");
+      });
+    </script>
+    <style>
+    .affix {
+      position: fixed;
+      bottom: 200px;
+      right: 60px;;
+      width: 200px;
+      height: 242px;
+      z-index: 9999;
+    }
+
+    .affix .affix_close {
+      position: absolute;
+      top: 0;
+      right: -40px;
+      font-size: 16px;
+      color: #333;
+      cursor: pointer;
+    }
+
+    .affix img {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+
+  <div class="affix">
+    <div class="affix_close" id="affix_close">关闭 </div>
+    <a href="#">
+      <img src="./images/affix_img_1.png" alt="affix_img_1.png" title="affix_img_1.png" />
+    </a>
+  </div>
+
+  <script>
+    $('#affix_close').click(function () {
+      $('.affix').hide()
+    })
+  </script>
+    <!-- 公共头部 -->
+    <style>
+.header {
+    background-image: url(./bg_header.png);
+}
+
+.header .nav .navlist li .panel {
+    width: 151px;
+    z-index: 9999;
+}
+body {
+     font-family: Microsoft YaHei;
+}
+
+.header .nav .navlist li .panel .panel_item a {
+  font-size: 17px;
+  font-family: Microsoft YaHei;
+}
+</style>
+
+<div class="header">
+      <div class="banner">
+        <div class="shortcut w">
+          <ul class="wza">
+            <li>
+              <a style="cursor: pointer;" id='wza_id'>无障碍</a>
+            </li>
+            <li>|</li>
+            <li>
+              <a style="cursor: pointer;" id="zoomIn">长者模式</a>
+              <a style="cursor: pointer; display: none;" id="resetZoom">退出</a>
+            </li>
+            <li style=" margin: 0 10px;">|</li>
+            <li>
+            <a class="userInfo1" href="javascript:void(0)" onclick="goLogin()">登录/注册</a>
+            <a class="userInfo2" href="https://zwfw.nmg.gov.cn/personal_center_profile" target="_blank"  style="display: none;">用户中心</a>
+          </li>
+          </ul>
+
+          <div class="brand">
+            <img src="./images/icon_zgbt.png" alt="" />
+          </div>
+        </div>
+
+        <div class="search w">
+          <div class="today" id="date"></div>
+          <div class="search_box">
+            <input id="searchInput" type="text" placeholder="请输入搜索关键词" />
+            <button class="btn"  id="searchBtn">
+              <img src="./images/search-btn.png" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="nav">
+        <ul class="navlist w">
+          <li>
+            <a href="./">网站首页</a>
+          </li>
+          <li>
+            <a href="./gzdt/">工作动态</a>
+            <div class="panel">
+              
+              <div class="panel_item">
+                <a href="./gzdt/gzdt_szyw/">时政要闻</a>
+              </div>
+              
+              <div class="panel_item">
+                <a href="./gzdt/gzdt_tzgg/">通知公告</a>
+              </div>
+              
+              <div class="panel_item">
+                <a href="./gzdt/gzdt_gzdt/">工作动态</a>
+              </div>
+              
+              <div class="panel_item">
+                <a href="./gzdt/gzdt_tpxw/">图片新闻</a>
+              </div>
+              
+            </div>
+          </li>
+          <li>
+            <a href="./dwgk/">党务公开</a>
+          </li>
+          <li>
+            <a href="./zcwj/">政策文件</a>
+          </li>
+          <li>
+            <a href="https://zwfw.nmg.gov.cn/OrgItem_index?regionCode=150200000000&orgCode=11150200011536011D&record=istrue">政务服务</a>
+          </li>
+          <li>
+            <a href="./zwgk/">政务公开</a>
+            <div class="panel">
+              
+              <div class="panel_item">
+                <a href="./zwgk/zwgk_sgs/">双公示</a>
+              </div>
+              
+              <div class="panel_item">
+                <a href="./zwgk/zwgk_zxgk/">执行公开</a>
+              </div>
+              
+              <div class="panel_item">
+                <a href="https://zwfw.nmg.gov.cn/baselist/accrual_list?regionCode=150200000000&flag=%E6%9D%83%E8%B4%A3%E6%B8%85%E5%8D%95&record=istrue">权责清单</a>
+              </div>
+              
+              <div class="panel_item">
+                <a href="./zwgk/zwgk_zdjsxm/">重大建设项目</a>
+              </div>
+              
+              <div class="panel_item">
+                <a href="./zwgk/zwgk_pfxc/">普法宣传</a>
+              </div>
+              
+            </div>
+          </li>
+          <li>
+            <a href="./zfxxgk/fdzdgknr/jgzn/">机构职能</a>
+            <!--<div class="panel">
+              
+              <div class="panel_item">
+                <a href="./zfxxgk/fdzdgknr/jgzn/ldxx/">领导信息</a>
+              </div>
+              
+              <div class="panel_item">
+                <a href="./zfxxgk/fdzdgknr/jgzn/jgzn_jgzn/">机构职能</a>
+              </div>
+              
+              <div class="panel_item">
+                <a href="./zfxxgk/fdzdgknr/jgzn/jgzn_bmsz/">部门设置</a>
+              </div>
+              
+            </div>-->
+          </li>
+          <li>
+            <a href="./zfxxgk/">政府信息公开</a>
+            <div class="panel">
+              
+              <div class="panel_item">
+                <a href="./zfxxgk/zc/">
+                   政策
+                </a>
+              </div>
+              
+              <div class="panel_item">
+                <a href="./zfxxgk/zfxxgkzn/">
+                   政府信息公开指南
+                </a>
+              </div>
+              
+              <div class="panel_item">
+                <a href="./zfxxgk/zfxxgkzd/">
+                   政府信息公开制度
+                </a>
+              </div>
+              
+              <div class="panel_item">
+                <a href="./zfxxgk/fdzdgknr/">
+                   法定主动公开内容
+                </a>
+              </div>
+              
+              <div class="panel_item">
+                <a href="./zfxxgk/zfxxgknb/">
+                   政府信息公开年报
+                </a>
+              </div>
+              
+              <div class="panel_item">
+                <a href="https://zwfw.nmg.gov.cn/sso//sso/login?utype=0&redirect=istrue&client_id=LFWKGMPAY&goto=https://www.nmg.gov.cn/zwgk/zfxxgk/ysqgk/index_351.html?deptId=717">
+                   依申请公开
+                </a>
+              </div>
+              
+              <div class="panel_item">
+                <a href="./zfxxgk/yjsgk/">
+                   预决算公开
+                </a>
+              </div>
+              
+              <div class="panel_item">
+                <a href="./zfxxgk/wzndgzbg/">
+                   网站年度工作报告
+                </a>
+              </div>
+              
+              <div class="panel_item">
+                <a href="./zfxxgk/ghjh/">
+                   规划计划
+                </a>
+              </div>
+              
+              <div class="panel_item">
+                <a href="http://1.180.60.79:8082/sjjd/zwfk.html?org=TURBeE1EQTFNREF5">
+                   公开监督
+                </a>
+              </div>
+              
+
+            </div>
+          </li>
+          <li>
+            <a href="http://fgw.baotou.gov.cn/credit#/">信用中国<br />(内蒙古包头)</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <script>
+      function getDate() {
+        // 创建一个 Date 对象，表示当前时间
+        const now = new Date();
+
+        // 获取年份
+        const year = now.getFullYear();
+
+        // 获取月份（0-11，0 表示 1 月）
+        const month = now.getMonth() + 1;
+
+        // 获取日期
+        const date = now.getDate();
+
+        // 获取星期几（0-6，0 表示星期日）
+        const day = now.getDay();
+
+        // 将数字转换为对应的星期几名称
+        const daysOfWeek = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
+        const dayName = daysOfWeek[day];
+
+        const str = year + '年' + month + '月' + date + '日 ' + dayName
+
+        document.getElementById("date").textContent = str;
+      }
+
+      getDate()
+
+    </script>
+
+   <script>
+      document.getElementById("searchBtn").addEventListener("click", function () {
+        var keyword = document.getElementById("searchInput").value;
+          if (keyword) {
+            window.location.href = "/searchweb-dept/#/Door?siteTag=1&siteid=11&keywords=" + keyword;
+          } else {
+            alert("请输入您需要查询的关键词");
+          }
+        });
+    </script>
+
+    <div class="main w">
+      <!-- 头条 -->
+      <div class="headlines">
+        <a href="./tt/">
+          <img src="./images/icon_headlines.png" alt="" />
+        </a>
+        
+        <div class="text">
+          
+            <a href="./tt/202603/t20260327_847425.html">
+              总书记两会后首次考察指引“十五五”开局起步
+            </a>
+          
+        
+        </div>
+      </div>
+
+      <!-- 横幅 -->
+      <div class="hf">
+        <div class="swiper hfSwiper">
+          <div class="swiper-wrapper">
+            
+              <div class="swiper-slide">
+                <a href="./wzgj/wzgj_wzhf/wzhf_zlzhmzgttys/">
+                  <img src="./wzgj/wzgj_wzhf/wzhf_zlzhmzgttys/images/P020250809560324848024.jpg" />
+                </a>
+              </div>
+            
+              <div class="swiper-slide">
+                <a href="./wzgj/wzgj_wzhf/wzhf_dzh/">
+                  <img src="./wzgj/wzgj_wzhf/wzhf_dzh/images/P020250809560391978532.jpg" />
+                </a>
+              </div>
+            
+          </div>
+        </div>
+      </div>
+
+      <!-- 道中华之美 -->
+      <!-- <div class="dao">
+        <a href="#">
+          <img src="./images/dzhzm_img.png" alt="" />
+        </a>
+      </div> -->
+
+      <!-- 要闻动态 -->
+      <div class="news">
+        <div class="news_l">
+          <div class="swiper newsSwiper">
+            <div class="swiper-wrapper">
+              
+                <div class="swiper-slide">
+                  <a href="https://www.gov.cn/hudong/">
+                    <img src="./gzdt/gzdt_tpxw/202509/W020250928357628953554.jpg" />
+                  </a>
+                  <div class="mask">
+                    @国务院 我来说
+                  </div>
+                </div>
+              
+                <div class="swiper-slide">
+                  <a href="https://www.peopleapp.com/column/30051622671-500007390047">
+                    <img src="./gzdt/gzdt_tpxw/202603/W020260319354560307585.jpg" />
+                  </a>
+                  <div class="mask">
+                    中华人民共和国国家发展规划法
+                  </div>
+                </div>
+              
+                <div class="swiper-slide">
+                  <a href="https://www.baotou.gov.cn/ztzl/ztzl_ls1571gzbs/">
+                    <img src="./gzdt/gzdt_tpxw/202601/W020260319340587571829.png" />
+                  </a>
+                  <div class="mask">
+                    落实“1571”工作部署 在全区高质量发展中挑大梁
+                  </div>
+                </div>
+              
+                <div class="swiper-slide">
+                  <a href="https://www.gov.cn/zhengce/jiedu/jdzl/gxbcyjs/index.htm">
+                    <img src="./gzdt/gzdt_tpxw/202510/W020251028338268786569.jpg" />
+                  </a>
+                  <div class="mask">
+                    健全“高效办成一件事”重点事项常态化推进机制 解读专栏
+                  </div>
+                </div>
+              
+            </div>
+            <div class="swiper-pagination swiper-news-pagination"></div>
+          </div>
+        </div>
+        <div class="news_r newsSlide">
+          <div class="hd">
+            <ul class="head">
+              <li>
+                <a href="./gzdt/gzdt_szyw/">时政要闻</a>
+              </li>
+              <li>
+                <a href="./gzdt/gzdt_gzdt/">工作动态</a>
+              </li>
+              <li>
+                <a href="./gzdt/gzdt_tzgg/">通知公告</a>
+              </li>
+            </ul>
+          </div>
+          <div class="bd">
+            <ul class="list">
+              
+                <li>
+                  <a href="./gzdt/gzdt_szyw/202603/t20260327_847429.html">
+                    <span>
+                      李强签署国务院令 公布修订后的《全国农业普查条例》
+                    </span>
+                    <span class="date">
+                      2026-03-27
+                    </span>
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="./gzdt/gzdt_szyw/202603/t20260324_842990.html">
+                    <span>
+                      李强出席中国发展高层论坛2026年年会开幕式并发表主旨演讲
+                    </span>
+                    <span class="date">
+                      2026-03-24
+                    </span>
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="./gzdt/gzdt_szyw/202603/t20260319_841117.html">
+                    <span>
+                      《习近平经济文选》第一卷和《习近平与大学生朋友们》第一、...
+                    </span>
+                    <span class="date">
+                      2026-03-19
+                    </span>
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="./gzdt/gzdt_szyw/202603/t20260317_832743.html">
+                    <span>
+                      李强主持召开国务院第十一次全体会议深入学习贯彻习近平总书...
+                    </span>
+                    <span class="date">
+                      2026-03-17
+                    </span>
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="./gzdt/gzdt_szyw/202603/t20260316_829771.html">
+                    <span>
+                      李强主持召开国务院常务会议 讨论通过《国务院2026年重点工作...
+                    </span>
+                    <span class="date">
+                      2026-03-16
+                    </span>
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="./gzdt/gzdt_szyw/202603/t20260313_824991.html">
+                    <span>
+                      蓝图已经绘就 奋进正当其时——习近平总书记同出席2026年全国...
+                    </span>
+                    <span class="date">
+                      2026-03-13
+                    </span>
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="./gzdt/gzdt_szyw/202603/t20260312_817660.html">
+                    <span>
+                      2025年全年经济社会发展主要目标任务顺利完成
+                    </span>
+                    <span class="date">
+                      2026-03-12
+                    </span>
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="./gzdt/gzdt_szyw/202603/t20260316_829790.html">
+                    <span>
+                      图表：2026年前2个月我国进出口增速达18.3%
+                    </span>
+                    <span class="date">
+                      2026-03-11
+                    </span>
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="./gzdt/gzdt_szyw/202603/t20260306_804092.html">
+                    <span>
+                      《政府工作报告》上的二维码
+                    </span>
+                    <span class="date">
+                      2026-03-06
+                    </span>
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="./gzdt/gzdt_szyw/202603/t20260306_804090.html">
+                    <span>
+                      李强在参加云南代表团审议时强调：发展特色产业 打造开放前沿...
+                    </span>
+                    <span class="date">
+                      2026-03-06
+                    </span>
+                  </a>
+                </li>
+              
+            </ul>
+            <ul class="list">
+              
+                <li>
+                  <a href="./gzdt/gzdt_gzdt/202603/t20260326_846790.html">
+                    <span>
+                      联审联批破“壁垒”内蒙古上半年新建重大项目开工手续办结率...
+                    </span>
+                    <span class="date">
+                      2026-03-26
+                    </span>
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="./gzdt/gzdt_gzdt/202603/t20260320_841419.html">
+                    <span>
+                      我区构建零碳园区建设与评估认定新体系
+                    </span>
+                    <span class="date">
+                      2026-03-20
+                    </span>
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="./gzdt/gzdt_gzdt/202603/t20260319_841184.html">
+                    <span>
+                      国家发展改革委推出新一批重大外资项目
+                    </span>
+                    <span class="date">
+                      2026-03-19
+                    </span>
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="./gzdt/gzdt_gzdt/202603/t20260316_829784.html">
+                    <span>
+                      市发改委召开党组（扩大）会议——研究部署树立和践行正确政...
+                    </span>
+                    <span class="date">
+                      2026-03-16
+                    </span>
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="./gzdt/gzdt_gzdt/202603/t20260311_817455.html">
+                    <span>
+                      内蒙古全面开展联审联批推动重大项目“开春即开工”
+                    </span>
+                    <span class="date">
+                      2026-03-11
+                    </span>
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="./gzdt/gzdt_gzdt/202602/t20260228_802709.html">
+                    <span>
+                      锚定蓝图  真抓实干  奋力推动“十五五”取得良好开局——全...
+                    </span>
+                    <span class="date">
+                      2026-02-28
+                    </span>
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="./gzdt/gzdt_gzdt/202602/t20260227_801596.html">
+                    <span>
+                      擂响新春第一鼓
+                    </span>
+                    <span class="date">
+                      2026-02-27
+                    </span>
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="https://fgw.nmg.gov.cn/xxgk/zxzx/fgdt/202602/t20260224_2863876.html">
+                    <span>
+                      我区2026年春节期间节日氛围浓厚 主要食品市场价格基本稳定
+                    </span>
+                    <span class="date">
+                      2026-02-26
+                    </span>
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="./gzdt/gzdt_gzdt/202602/t20260212_797815.html">
+                    <span>
+                      包头市发改委联合多部门开展重要民生商品节日市场保供稳价专...
+                    </span>
+                    <span class="date">
+                      2026-02-12
+                    </span>
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="./gzdt/gzdt_gzdt/202601/t20260127_743776.html">
+                    <span>
+                      包头市发展和改革委员会主任石钟琴带队检查安全生产工作
+                    </span>
+                    <span class="date">
+                      2026-01-27
+                    </span>
+                  </a>
+                </li>
+              
+            </ul>
+            <ul class="list">
+              
+                <li>
+                  <a href="./gzdt/gzdt_tzgg/202603/t20260312_817691.html">
+                    <span>
+                      国务院办公厅关于加强基层消防工作的意见
+                    </span>
+                    <span class="date">
+                      2026-03-12
+                    </span>
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="./gzdt/gzdt_tzgg/202602/t20260226_801224.html">
+                    <span>
+                      2026年2月24日国内成品油价格按机制调整
+                    </span>
+                    <span class="date">
+                      2026-02-26
+                    </span>
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="./gzdt/gzdt_tzgg/202602/t20260214_800194.html">
+                    <span>
+                      关于加强投资项目在线审批监管平台和工程建设项目审批管理系...
+                    </span>
+                    <span class="date">
+                      2026-02-14
+                    </span>
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="./gzdt/gzdt_tzgg/202602/t20260214_800161.html">
+                    <span>
+                      包头市发展和改革委员会关于独立新型储能电站验收结果的公示
+                    </span>
+                    <span class="date">
+                      2026-02-13
+                    </span>
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="./gzdt/gzdt_tzgg/202602/t20260211_794472.html">
+                    <span>
+                      关于加快招标投标领域人工智能推广应用的实施意见(发改法规〔...
+                    </span>
+                    <span class="date">
+                      2026-02-11
+                    </span>
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="./gzdt/gzdt_tzgg/202603/t20260325_846183.html">
+                    <span>
+                      包头市发展和改革委员会关于2025年法治政府建设情况的报告
+                    </span>
+                    <span class="date">
+                      2026-02-10
+                    </span>
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="./gzdt/gzdt_tzgg/202602/t20260206_770326.html">
+                    <span>
+                      关于做好2026年春耕及全年化肥保供稳价工作的通知(发改经贸〔...
+                    </span>
+                    <span class="date">
+                      2026-02-06
+                    </span>
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="./gzdt/gzdt_tzgg/202602/t20260202_763168.html">
+                    <span>
+                      关于完善发电侧容量电价机制的通知(发改价格〔2026〕114号)
+                    </span>
+                    <span class="date">
+                      2026-02-02
+                    </span>
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="./gzdt/gzdt_tzgg/202601/t20260128_748048.html">
+                    <span>
+                      关于进一步完善殡葬服务收费政策的通知(发改价格〔2026〕108号)
+                    </span>
+                    <span class="date">
+                      2026-01-28
+                    </span>
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="./gzdt/gzdt_tzgg/202601/t20260119_726580.html">
+                    <span>
+                      包头市发展和改革委员会关于2025年行政规范性文件清理结果公示
+                    </span>
+                    <span class="date">
+                      2026-01-19
+                    </span>
+                  </a>
+                </li>
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 政务公开 -->
+    <div class="major w">
+      <div class="major_item majorSlide">
+        <div class="hd">
+          <ul class="head">
+            <li>
+              <a href="./zwgk/">政务公开</a>
+            </li>
+          </ul>
+        </div>
+        <div class="bd">
+          <ul class="list">
+            
+              <li>
+                <a href="./zwgk/zwgk_zxgk/202603/t20260327_847462.html">
+                  <span>
+                    关于内蒙古自治区包头市阴山北麓(河套平原)综合治理项目（二...
+                  </span>
+                  <span class="date">
+                    2026-03-10
+                  </span>
+                </a>
+              </li>
+            
+              <li>
+                <a href="./zwgk/zwgk_zxgk/202603/t20260327_847460.html">
+                  <span>
+                    关于达茂旗大苏吉、口子35千伏变电站第二电源工程的批复
+                  </span>
+                  <span class="date">
+                    2026-03-04
+                  </span>
+                </a>
+              </li>
+            
+              <li>
+                <a href="./zwgk/zwgk_zxgk/202603/t20260327_847459.html">
+                  <span>
+                    关于金力永磁项目110千伏供电工程的批复
+                  </span>
+                  <span class="date">
+                    2026-03-04
+                  </span>
+                </a>
+              </li>
+            
+              <li>
+                <a href="./zwgk/zwgk_zxgk/202603/t20260327_847458.html">
+                  <span>
+                    关于内蒙古自治区包头黄河国家湿地公园候鸟关键栖息地保护修...
+                  </span>
+                  <span class="date">
+                    2026-03-04
+                  </span>
+                </a>
+              </li>
+            
+              <li>
+                <a href="./zwgk/zwgk_zxgk/202603/t20260327_847457.html">
+                  <span>
+                    [变更项目] 关于包头市检验检测中心药品检验检测设备更新项目...
+                  </span>
+                  <span class="date">
+                    2026-02-28
+                  </span>
+                </a>
+              </li>
+            
+              <li>
+                <a href="./zwgk/zwgk_zxgk/202603/t20260327_847456.html">
+                  <span>
+                    [变更项目] 关于包头市检验检测中心食品检验检测设备更新项目...
+                  </span>
+                  <span class="date">
+                    2026-02-28
+                  </span>
+                </a>
+              </li>
+            
+              <li>
+                <a href="./zwgk/zwgk_zxgk/202603/t20260327_847449.html">
+                  <span>
+                    关于包头市检验检测中心药品检验检测设备更新项目项目可行性...
+                  </span>
+                  <span class="date">
+                    2026-02-25
+                  </span>
+                </a>
+              </li>
+            
+              <li>
+                <a href="./zwgk/zwgk_zxgk/202603/t20260327_847448.html">
+                  <span>
+                    关于包头市检验检测中心食品检验检测设备更新项目可行性研究...
+                  </span>
+                  <span class="date">
+                    2026-02-25
+                  </span>
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+      <div class="major_item majorSlide">
+        <div class="hd">
+          <ul class="head">
+            <li>
+               <a href="./zwgk/zwgk_zdjsxm/">重大建设项目</a>
+            </li>
+          </ul>
+        </div>
+        <div class="bd">
+          <ul class="list">
+            
+              <li>
+                <a href="./zwgk/zwgk_zdjsxm/202601/t20260129_755519.html">
+                  <span>
+                    固阳县风电帮扶（驭风行动）试点项目正式获得批复
+                  </span>
+                  <span class="date">
+                    2026-01-14
+                  </span>
+                </a>
+              </li>
+            
+              <li>
+                <a href="./zwgk/zwgk_zdjsxm/202512/t20251215_718363.html">
+                  <span>
+                    昆都仑区：重大项目建设开启“冬季冲刺”
+                  </span>
+                  <span class="date">
+                    2025-12-15
+                  </span>
+                </a>
+              </li>
+            
+              <li>
+                <a href="./zwgk/zwgk_zdjsxm/202511/t20251121_714134.html">
+                  <span>
+                    达茂旗项目建设热潮激荡寒冬
+                  </span>
+                  <span class="date">
+                    2025-11-21
+                  </span>
+                </a>
+              </li>
+            
+              <li>
+                <a href="./zwgk/zwgk_zdjsxm/202510/t20251028_709410.html">
+                  <span>
+                    风电锻件项目开工
+                  </span>
+                  <span class="date">
+                    2025-10-28
+                  </span>
+                </a>
+              </li>
+            
+              <li>
+                <a href="./zwgk/zwgk_zdjsxm/202510/t20251011_665462.html">
+                  <span>
+                    全市重大项目建设与谋划调度工作会议召开
+                  </span>
+                  <span class="date">
+                    2025-10-11
+                  </span>
+                </a>
+              </li>
+            
+              <li>
+                <a href="./zwgk/zwgk_zdjsxm/202509/t20250921_525644.html">
+                  <span>
+                    360个项目“加速跑”！我市工业重点项目建设稳中有进
+                  </span>
+                  <span class="date">
+                    2025-08-25
+                  </span>
+                </a>
+              </li>
+            
+              <li>
+                <a href="./zwgk/zwgk_zdjsxm/202509/t20250921_525643.html">
+                  <span>
+                    包头又一新能源项目竣工
+                  </span>
+                  <span class="date">
+                    2025-08-20
+                  </span>
+                </a>
+              </li>
+            
+              <li>
+                <a href="./zwgk/zwgk_zdjsxm/202509/t20250921_525642.html">
+                  <span>
+                    石拐区 项目为“笔”绘新景
+                  </span>
+                  <span class="date">
+                    2025-08-13
+                  </span>
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 专题专栏 -->
+    <div class="special w">
+      <div class="specialSlide">
+        <div class="hd">
+          <ul class="indicator">
+            
+              <li>
+                1
+              </li>
+            
+              <li>
+                2
+              </li>
+            
+              <li>
+                3
+              </li>
+            
+              <li>
+                4
+              </li>
+            
+              <li>
+                5
+              </li>
+            
+              <li>
+                6
+              </li>
+            
+          </ul>
+        </div>
+        <div class="bd">
+          <ul class="list">
+            
+              <li>
+                 <a href="./ztzl/ztzl_bmhqzczq/">
+                  <img src="./ztzl/ztzl_bmhqzczq/images/P020250809554069729748.png" />
+                </a>
+              </li>
+            
+              <li>
+                 <a href="https://zwfw.nmg.gov.cn/baselist/accrual_list?regionCode=150200000000&flag=%E6%9D%83%E8%B4%A3%E6%B8%85%E5%8D%95&record=istrue">
+                  <img src="./ztzl/283/images/P020250809554296351987.jpg" />
+                </a>
+              </li>
+            
+              <li>
+                 <a href="./ztzl/ztzl_sswgh/">
+                  <img src="./ztzl/ztzl_sswgh/images/P020250809554812783546.png" />
+                </a>
+              </li>
+            
+              <li>
+                 <a href="./ztzl/sgszl/">
+                  <img src="./ztzl/sgszl/images/P020250925753729834810.jpg" />
+                </a>
+              </li>
+            
+              <li>
+                 <a href="./ztzl/ztzl_yhyshj/">
+                  <img src="./ztzl/ztzl_yhyshj/images/P020250809554987114110.png" />
+                </a>
+              </li>
+            
+              <li>
+                 <a href="http://fgw.baotou.gov.cn/credit#/articleList?id=6F32041D-B2B6-5568-EE3C-3A0B536B39AE">
+                  <img src="./ztzl/288/images/P020250809556578121735.jpg" />
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 政府信息公开 -->
+    <div class="public w">
+      <div class="public_item">
+        <div class="head">
+          <a href="./zfxxgk/" class="title">政府信息公开</a>
+        </div>
+        <ul class="gov_list">
+          <li>
+            <a href="./zfxxgk/zfxxgkzn/">政府信息公开指南</a>
+          </li>
+          <li>
+            <a href="./zfxxgk/zfxxgkzd/">政府信息公开制度</a>
+          </li>
+          <li>
+            <a href="./zfxxgk/fdzdgknr/">法定主动公开内容</a>
+          </li>
+          <li>
+            <a href="./zfxxgk/zfxxgknb/">政府信息公开年报</a>
+          </li>
+          <li>
+            <a href="./zfxxgk/wzndgzbg/">网站年度工作报告</a>
+          </li>
+          <li>
+            <a href="./zfxxgk/yjsgk/">预决算公开</a>
+          </li>
+          <li>
+            <a href="./zfxxgk/ghjh/">规划计划</a>
+          </li>
+          <li>
+            <a href="https://zwfw.nmg.gov.cn/sso//sso/login?utype=0&redirect=istrue&client_id=LFWKGMPAY&goto=https://www.nmg.gov.cn/zwgk/zfxxgk/ysqgk/index_351.html?deptId=717">依申请公开</a>
+          </li>
+          <li>
+            <a href="http://1.180.60.79:8082/sjjd/zwfk.html?org=TURBeE1EQTFNREF5">公开监督</a>
+          </li>
+        </ul>
+      </div>
+      <div class="public_item">
+        <div class="head">
+          <a href="./jlhd/" class="title">交流互动</a>
+        </div>
+
+        <div class="top">
+          <ul class="exchange_list">
+            <li>
+              <a href="./jlhd/jlhd_zrxx/">
+                <img class="icon" src="./images/icon_exchange_1.png" alt="" />
+                <span>主任信箱</span>
+              </a>
+            </li>
+            <li>
+              <a href="./jlhd/jlhd_zcjd/">
+                <img class="icon" src="./images/icon_exchange_2.png" alt="" />
+                <span>政策解读</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="bottom">
+          <div class="left">
+            <div class="item_l">
+              <a href="https://zwfw.nmg.gov.cn/OrgItem_index?regionCode=150200000000&orgCode=11150200011536011D&record=istrue">
+                <img class="icon" src="./images/icon_exchange_3.png" alt="" />
+                <span>办事指南</span>
+              </a>
+            </div>
+            <div class="item_l">
+              <a href="./jlhd/jlhd_yjzq/">
+                <img class="icon" src="./images/icon_exchange_5.png" alt="" />
+                <span>意见征求</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="right">
+            <a href="http://12325.lswz.gov.cn:8800/outregister/reportMain">
+              <img class="img" src="./images/icon_exchange_4.png" alt="" />
+              <div class="title">全国粮食和物资储备监管热线</div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 友情链接 -->
+    <div class="friendship w">
+      <div class="head">
+        <div class="title">友情链接</div>
+      </div>
+      <ul class="links">
+        <li>
+          <select style="width: 200px" class="link-select">
+            <option select="" value="">政府网站</option>
+            <option value="http://www.ndrc.gov.cn/">国家发展和改革委员会</option>
+            <option value="http://www.miit.gov.cn/">工业和信息化部</option>
+            <option value="http://www.moj.gov.cn/">司法部</option>
+            <option value="http://www.mohurd.gov.cn/">住房和城乡建设部</option>
+            <option value="http://www.mot.gov.cn/">交通运输部</option>
+            <option value="http://www.mofcom.gov.cn/">商务部</option>
+          </select>
+        </li>
+        <li>
+          <select style="width: 200px" class="link-select">
+            <option select="" value="">各省发改委网站</option>
+
+            <option value="http://www.ndrc.gov.cn/">国家发展和改革委员会</option>
+            <option value="http://fgw.gz.gov.cn/">广州市发展和改革委员会</option>
+            <option value="http://fgw.nmg.gov.cn/">内蒙古自治区发展和改革委员会</option>
+            <option value="http://fgw.gxzf.gov.cn/">广西壮族自治区发展和改革委员会</option>
+            <option value="http://fzggw.zj.gov.cn/">浙江省发展和改革委员会</option>
+            <option value="http://fgw.hubei.gov.cn/">湖北省发展和改革委员会</option>
+            <option value="http://fgw.hunan.gov.cn/">湖南省发展和改革委员会</option>
+            <option value="http://fgw.fujian.gov.cn/">福建省发展和改革委员会</option>
+            <option value="http://drc.jiangxi.gov.cn/">江西省发展和改革委员会</option>
+            <option value="http://fgw.shandong.gov.cn">山东省发展和改革委员会</option>
+            <option value="https://fgw.henan.gov.cn/">河南省发展和改革委员会</option>
+            <option value="http://yndrc.yn.gov.cn/">云南省发展和改革委员会</option>
+            <option value="http://drc.gd.gov.cn/">广东省发展和改革委员会</option>
+            <option value="http://plan.hainan.gov.cn/">海南省发展和改革委员会</option>
+          </select>
+        </li>
+        <li>
+          <select style="width: 200px" class="link-select">
+            <option select="" value="">副省级城市发改委网站</option>
+
+            <option value="http://www.pc.dl.gov.cn/">大连市发展和改革委员会</option>
+            <option value="http://jndpc.jinan.gov.cn/">济南市发展和改革委员会</option>
+            <option value="http://xadrc.xa.gov.cn/">西安市发展和改革委员会</option>
+            <option value="http://dpc.xm.gov.cn/">厦门市发展和改革委员会</option>
+            <option value="http://fgw.wuhan.gov.cn/">武汉市发展和改革委员会</option>
+            <option value="http://fgw.ningbo.gov.cn/">宁波市发展和改革委员会</option>
+          </select>
+        </li>
+        <li>
+          <select style="width: 200px" class="link-select">
+            <option select="" value="">盟市发改委网站</option>
+
+            <option value="http://fgw.tongliao.gov.cn/">通辽市发展和改革委员会</option>
+            <option value="http://fgw.wuhai.gov.cn/">乌海市发展和改革委员会</option>
+            <option value="http://fgw.baotou.gov.cn/">包头市发展和改革委员会</option>
+            <option value="http://fgw.xam.gov.cn/">兴安盟发展和改革委员会</option>
+            <option value="http://fgw.als.gov.cn/">阿拉善盟发展和改革委员会</option>
+            <option value="http://fgw.xlgl.gov.cn/">锡林郭勒盟发展和改革委员会</option>
+          </select>
+        </li>
+        <li>
+          <select style="width: 200px" class="link-select">
+            <option select="" value="">相关网站</option>
+
+            <option value="http://www.baotou.gov.cn">包头政府网</option>
+            <option value="http://fgw.baotou.gov.cn">包头发展和改革委员会</option>
+            <option value="http://www.btjy.net">包头市教育局</option>
+            <option value="http://czj.baotou.gov.cn">包头市财政局</option>
+          </select>
+        </li>
+      </ul>
+    </div>
+
+    <!-- 公共底部 -->
+    <div class="footer">
+      <div class="w">
+        <!--<div class="zongzhi">|</div>-->
+
+        <ul class="footer_nav">
+          <li><a href="./">首页</a></li>
+          <li>|</li>
+          <li><a href="./gzdt/">工作动态</a></li>
+          <li>|</li>
+          <li><a href="./dwgk/">党务公开</a></li>
+          <li>|</li>
+          <li><a href="./zcwj/">政策文件</a></li>
+          <li>|</li>
+          <li><a href="https://zwfw.nmg.gov.cn/OrgItem_index?regionCode=150200000000&orgCode=11150200011536011D&record=istrue">政务服务</a></li>
+          <li>|</li>
+          <li><a href="./zwgk/">政务公开</a></li>
+          <li>|</li>
+          <li><a href="./zfxxgk/fdzdgknr/jgzn/">机构职能</a></li>
+          <li>|</li>
+          <li><a href="./zfxxgk/">政府信息公开</a></li>
+          <li>|</li>
+          <li><a href="./wzxx/wzxx_wzdt/">网站地图</a></li>
+        </ul>
+
+        <div class="copyright">
+          <p>版权所有：包头市发展和改革委员会</p>
+          <p>地址：包头市九原区赛汗街道办事处乌拉特大街240号 邮编：014030 E-mail：btfgwxxzx@163.com</p>
+          <p>
+            <a href="https://beian.miit.gov.cn/#/Integrated/index">备案号：蒙ICP备19004505号</a>
+            <span>网站标识码：1502000025</span>
+            <span>主办单位：包头市发展和改革委员会</span>
+            <span>本网申明：未经允许，不得转载</span>
+          </p>
+          <p>
+            <a href="https://beian.miit.gov.cn/#/Integrated/index">
+              <img src="./images/icon_mga.png" alt="" />
+              <span>蒙公网安备15020702000321</span>
+            </a>
+          </p>
+          <p>
+            监督举报邮箱和电话：纪检组邮箱btfgwjjz@163.com 电话:6135436 机关纪委邮箱btsfgwjgjw@163.com 电话:6135525
+          </p>
+        </div>
+
+        <div class="other">
+          <a href="https://bszs.conac.cn/sitename?method=show&id=91D9992159D561BCE05310291AACE67F" class="dang">
+            <img src="./images/img_dang.png" alt="" />
+          </a>
+          <a href="https://zfwzgl.www.gov.cn/exposure/jiucuo.html?site_code=1502000025&url=http%3A%2F%2Ffgw.baotou.gov.cn%2F" class="jiucuo">
+            <img src="./images/jiucuo.png" alt="" />
+          </a>
+          <a  class="weixin">
+            <img src="./images/img_ewm.jpg" alt="" />
+            <div>微信公众号</div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+<script>
+$(function() {
+    const zoomFactor = 1.25;
+
+    function getTargetElements() {
+        return $('p, span, a, h1, h2, h3, h4, h5, h6, li, td, th, label, div:not(:has(*))');
+    }
+
+    // --- 开启长者模式 ---
+    $('#zoomIn').on('click', function() {
+        if ($('body').hasClass('senior-mode-active')) {
+            return;
+        }
+
+        const currentElements = getTargetElements();
+        // ... (字体放大的两步走逻辑，此处省略以保持简洁) ...
+        currentElements.each(function() { /* 保存原始大小 */
+             const currentSizeStr = $(this).css('font-size');
+             $(this).data('original-font-size', currentSizeStr);
+        });
+        currentElements.each(function() { /* 计算并应用新大小 */
+             const originalSizeStr = $(this).data('original-font-size');
+             if (originalSizeStr) {
+                 const originalSizeNum = parseFloat(originalSizeStr);
+                 if (!isNaN(originalSizeNum) && originalSizeNum > 0) {
+                    $(this).css('font-size', (originalSizeNum * zoomFactor) + 'px');
+                 }
+             }
+        });
+
+        $('body').addClass('senior-mode-active'); // 仍然建议保留class用于状态判断
+
+        // --- 切换按钮显示 ---
+        $(this).hide(); // 隐藏自己（“开启”按钮）
+        $('#resetZoom').show(); // 查找并显示“关闭”按钮
+    });
+
+    // --- 关闭长者模式 ---
+    $('#resetZoom').on('click', function() {
+        const currentElements = getTargetElements();
+        // ... (字体恢复的逻辑) ...
+        currentElements.each(function() {
+            const originalSize = $(this).data('original-font-size');
+            if (originalSize) {
+                $(this).css('font-size', originalSize);
+                $(this).removeData('original-font-size');
+            }
+        });
+        
+        $('body').removeClass('senior-mode-active');
+
+        // --- 切换按钮显示 ---
+        $(this).hide(); // 隐藏自己（“关闭”按钮）
+        $('#zoomIn').show(); // 查找并显示“开启”按钮
+    });
+})
+</script>
+    <!-- 无障碍 -->
+    <script type="text/javascript" src="./images/toolbar_init.js"></script>
+    <!-- 网脉 -->
+    <script id="_trs_ta_js" src="//ta.trs.cn/c/js/ta.js?mpid=6555" async="async" defer="defer"></script>
+    <!-- 点击量 -->
+    <script type="text/javascript" src="./images/trs_report_sdk.js"></script>
+
+ 
+  <script type="text/javascript">
+	//上传点击数据
+    let eventReport = new EventReport("/hx-api/receive/receiveData")
+    let siteName = "包头市发展和改革委员会"
+    let chnlRelation = "包头市发展和改革委员会"
+    chnlRelation = chnlRelation.replace(siteName+">","")
+    let docid = ""
+    let doc_id = 0
+    if(docid.length > 0){
+        doc_id = parseInt(docid)
+    }
+    let url = "####"
+    let title ='';
+    var reg =/<[^<>]+>/g;
+    title = title.replace(reg, "");
+    let docpubtime = ""
+    
+    if (doc_id== 0) {
+    doc_id = 0;
+    url = document.URL
+    title = document.title
+    docpubtime = ""
+    }
+    let doc_channel = ""
+    let siteid = parseInt("")
+    if (siteid.length == 0) {
+    siteid = 0
+    }
+    
+    let channel_id = parseInt("")
+    
+    if(channel_id.length == 0){
+    channel_id = 0
+    }
+    //appkey
+    let appKey = "dda1bee997e29182febbe848dd3b313a"
+    
+    let myParam = {
+		title: title,
+		url: url,
+		doc_id: doc_id,
+		siteid: siteid,
+		site_name: siteName,
+		doc_channel: doc_channel,
+		channel_relation: chnlRelation,
+		channel_id: channel_id,
+		doc_pub_time: docpubtime,
+		app_key: appKey
+    }
+    //统计外链
+    InitExternalLinks("/hx-api/receive/receiveLink",myParam,"trs.nmsuny.com")
+    eventReport.trackUserData(myParam)
+    // 点击量埋点结束
+  </script>
+    
+  <!-- 用户一号登录 -->
+  <script>
+  function goLogin(){
+        window.open("/personal/validate/gotoLogin.do?client_id=UHTE12F8A&goto="+decodeURIComponent("http://fgw.baotou.gov.cn/"));
+  }
+  var ovUserInfo;
+  var ovData;
+  // 获取用户登录状态
+  function getUserObj() {
+      $.ajax({
+          url: '/personal/usrlogin/getUserInfo',//根据实际事情情况更换域名
+          type: 'get',
+          dataType: 'json',
+          success: function(data) {
+              if(!data.success){ 
+                  $(".userInfo2").hide();
+                  $(".userInfo1").show();
+              }else{
+                  ovUserInfo = data.data;
+                  $(".userInfo1").hide();
+                  $(".userInfo2").show();
+                  $('.userInfo2').html("欢迎："+ovUserInfo.USER_NAME);
+              }
+          },
+          error: function (err) {
+              console.log('不好意思，您请求的接口出错了！')
+          }
+      })
+      return ovData;
+  }
+
+  $(function () {
+      $(".userInfo2").hide();
+      $(".userInfo1").show();
+      getUserObj();
+  })
+  </script>
+
+    <script>
+
+
+      $(function(){
+        $('.link-select').change(function(){
+          if(!$(this).val()){
+            return
+          }
+          window.open($(this).val())
+        })
+      })
+  
+      // 横幅Swiper
+      new Swiper(".hfSwiper", {
+        autoplay: {
+          delay: 3000,
+        },
+      });
+
+      // 新闻Swiper
+      new Swiper(".newsSwiper", {
+        autoplay: true,
+        pagination: {
+          el: ".swiper-news-pagination",
+          clickable: true,
+        },
+      });
+
+      // 要闻动态Slide
+      $(".newsSlide").slide({});
+
+      $(".majorSlide").slide({});
+
+      $(".specialSlide").slide({
+        mainCell: ".bd ul",
+        autoPlay: true,
+      });
+    </script>
+  </body>
+</html>

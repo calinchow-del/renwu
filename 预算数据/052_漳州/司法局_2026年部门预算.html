@@ -1,0 +1,305 @@
+<!DOCTYPE html><html><head><meta http-equiv=Content-Type content="text/html; charset=utf-8"><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><meta name=apple-mobile-web-app-capable content=yes><meta name=apple-mobile-web-app-status-bar-style content=black><meta name=format-detection content="telephone=no"><meta http-equiv=X-UA-Compatible content="chrome=1"><script>function getQueryString(name) {
+				var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
+				var r = window.location.search.substr(1).match(reg);
+				if (r != null) {
+					return unescape(r[2]);
+				}
+				return null;
+			}
+			// 自助一体机使用
+            var limitArr = ["/licensePublicAutomatic", "/licenseDetailAutomatic", "/accumulationFund",
+                "/website/gbzw/index.html", "",'/weChat','/toLoginUser','/DynamicForm'
+            ];
+			if( window.navigator.userAgent.indexOf('mzt')!=-1){
+				var other=['/overseas/english/index','/overseas/english/tab/foreignAffairsguidance','/overseas/english/tab/selectArea','/overseas/chinese-character/index','/overseas/english/todo-fingerpost']
+				limitArr=limitArr.concat(other)
+			}//涉外闽政通去掉省政府头部
+			var isExistObj = true;
+			limitArr.forEach(function(item) {
+				item == window.location.pathname ? isExistObj = false : ''
+			})
+			if (isExistObj && getQueryString("rmComp_swb") != "1" ) {
+				document.write(
+					'<script src=\"https://www.fujian.gov.cn/images/header_zwfw.js\" charset=\"UTF-8\"><\/script>') //含登录模块
+			}
+			window.location.origin ? "" : window.location.origin = window.location.protocol + '//' + window.location.hostname +
+				':' + window.location.port</script><link rel=stylesheet href=/bsfw/cdn/element-ui/2.14.1/theme-chalk/index.css><link rel=stylesheet href=/bsfw/cdn/animate/3.5.2/animate.css><link rel=stylesheet href=/bsfw/cdn/swiper.min.css><link href=/bsfw/cdn/baiduMap.css rel=stylesheet><link rel=icon href=/favicon.ico><title>福建省网上办事大厅-福建政务服务网-马上就办 · 全程网办 · 一网通办</title><meta name=keywords content="福建,福建政务服务网,福建省网上办事大厅,马上就办,全程网办 ,一网通办"><meta name=description content="福建,福建政务服务网,福建省网上办事大厅,马上就办,全程网办 ,一网通办"><style>html,
+			body,
+			#app {
+				height: 100%;
+				margin: 0;
+				padding: 0;
+				background: #f0f0f0;
+				/* min-width: 1200px; */
+			}
+
+			#app {
+				height: calc(100% - 128px);
+			}
+
+			body .hide {
+				display: none;
+			}
+            .top-link_2021{
+				border-bottom-color: #fff!important; 
+			}
+			/* 省政府头部过渡动画 */
+			.top-link-wap_2021 {
+				transition: transform 0.5s ease, opacity 0.5s ease;
+			}
+			.top-link-wap_2021.gov-header-hidden {
+				transform: translateY(-100%);
+				opacity: 0;
+				pointer-events: none;
+				position: absolute;
+			}
+			/* 头部隐藏时，调整整体布局 */
+			html.gov-header-hidden,
+			html.gov-header-hidden body {
+				overflow: hidden;
+			}
+			html.gov-header-hidden #app {
+				height: 100% !important;
+				margin-top: 0;
+			}
+			/* 头部隐藏时，让头部不占用文档流空间 */
+			html.gov-header-hidden .top-link-wap_2021 {
+				position: fixed;
+				top: 0;
+				left: 0;
+				right: 0;
+				z-index: 9999;
+			}
+			.avue-home {
+				text-align: center;
+				width: 100%;
+				background-color: white;
+				height: 100%;
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+			}
+
+			.avue-home__main {
+				position: absolute;
+				top: 33%;
+				user-select: none;
+				width: 100%;
+				flex-grow: 1;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+			}
+
+			.avue-home__footer {
+				width: 100%;
+				flex-grow: 0;
+				text-align: center;
+				padding: 1em 0;
+			}
+
+			.avue-home__footer>a {
+				font-size: 12px;
+				color: #ABABAB;
+				text-decoration: none;
+			}
+
+			.avue-home__loading {
+				height: 131px;
+				width: 131px;
+				margin-bottom: 20px;
+			}
+
+			.avue-home__title {
+				color: #333333;
+				font-size: 20px;
+				line-height: 36px;
+				/*margin-bottom: 10px;*/
+			}
+
+			.avue-home__sub-title {
+				color: #666666;
+				line-height: 36px;
+				font-size: 16px;
+			}
+
+			.avue-home__sub-titleInfo {
+				margin-top: 10px;
+				color: #0396FF;
+				font-size: 20px;
+			}
+
+			.top-link-wap_2021 {
+				/* overflow: hidden !important; */
+				z-index: 1000;
+				position: relative;
+
+			}
+
+			.top-link_2021 {
+				z-index: 1000 !important;
+			}
+
+			.nav_2021 {
+				/* margin-top: 20px !important; */
+			}
+
+			.el-autocomplete-suggestion li {
+				white-space: inherit !important;
+				line-height: 1.4;
+				padding: 3px 15px;
+			}
+
+			.el-autocomplete-suggestion li:nth-child(even):not(:last-child) {
+				background-color: #f5f7fa;
+			}
+
+			.el-autocomplete-suggestion li:last-child:hover {
+				background-color: #fff !important;
+				cursor: inherit;
+			}
+
+			.el-autocomplete-suggestion__wrap {
+				max-height: 400px !important;
+			}
+
+			.el-notification {
+				right: calc(50% - 120px) !important;
+			}
+
+			.el-pagination.is-background .el-pager li:not(.disabled).active {
+				background-color: #1658a0;
+			}
+			.el-select-dropdown__wrap{
+				margin-bottom: 0 !important;
+			}
+            .overhide.el-popper{
+            	max-height: 200px !important;
+            	overflow: hidden;
+            	overflow-y: auto;
+            }
+			.el-button--text{
+				border: none !important;
+			}
+			@keyframes dialog-fade-in {
+				0% {
+					opacity: 0;
+					transform: scale(.3)
+				}
+
+				100% {
+					opacity: 1;
+					transform: scale(1)
+				}
+			}
+
+			@keyframes dialog-fade-out {
+				0% {
+					opacity: 1;
+					transform: scale(1)
+				}
+
+				100% {
+					opacity: 0;
+					transform: scale(.6)
+				}
+			}
+
+			.layer .el-message-box__btns {
+				width: 100px;
+				margin: 0 auto;
+				overflow: hidden;
+			}
+
+			.layer-cancel {
+				float: right;
+			}
+
+			.layer-confirm {
+				float: left;
+				margin-left: 0 !important;
+			}
+			@media screen and (max-width: 768px) {
+				.el-autocomplete-suggestion__wrap {
+					max-height: 200px !important;
+				}
+			}</style><link href=/bsfw/css/app.4e2008fb.css rel=stylesheet></head><body><noscript><strong></strong></noscript><div id=app><div class=avue-home><div class=avue-home__main><img class=avue-home__loading src=https://zwfw.fujian.gov.cn/img/loding/indexLoding.gif alt=loading><div class=avue-home__title>网站资源正在加载中</div><div class=avue-home__sub-title>初次加载资源可能需要较多时间 请耐心等待</div><div class=avue-home__sub-titleInfo id=lowVer></div></div></div></div><script defer>//alert(window.location.href )
+			/*设置在html执行完后执行*/
+			loadPage();
+
+			function loadPage() {
+				//要执行的js代码段
+				var ieVer = IEVersion();
+				if (ieVer != 'edge' && ieVer > 0 && ieVer < 10) {
+					//alert("当前IE浏览器过低，请升级至IE10及以上或者下载谷歌浏览器访问");
+					document.getElementById("lowVer").innerHTML =
+						"当前IE浏览器过低，请升级至IE10及以上或者下载<a href='https://www.google.cn/chrome/'>谷歌浏览器</a>访问";
+					return;
+				}
+			}
+			// 获取IE版本
+			function IEVersion() {
+				// 取得浏览器的userAgent字符串
+				var userAgent = navigator.userAgent;
+				// 判断是否为小于IE11的浏览器
+				var isLessIE11 = userAgent.indexOf('compatible') > -1 && userAgent.indexOf('MSIE') > -1;
+				// 判断是否为IE的Edge浏览器
+				var isEdge = userAgent.indexOf('Edge') > -1 && !isLessIE11;
+				// 判断是否为IE11浏览器
+				var isIE11 = userAgent.indexOf('Trident') > -1 && userAgent.indexOf('rv:11.0') > -1;
+				if (isLessIE11) {
+					var IEReg = new RegExp('MSIE (\\d+\\.\\d+);');
+					// 正则表达式匹配浏览器的userAgent字符串中MSIE后的数字部分，，这一步不可省略！！！
+					IEReg.test(userAgent);
+					// 取正则表达式中第一个小括号里匹配到的值
+					var IEVersionNum = parseFloat(RegExp['$1']);
+					if (IEVersionNum === 7) {
+						// IE7
+						return 7
+					} else if (IEVersionNum === 8) {
+						// IE8
+						return 8
+					} else if (IEVersionNum === 9) {
+						// IE9
+						return 9
+					} else if (IEVersionNum === 10) {
+						// IE10
+						return 10
+					} else {
+						// IE版本<7
+						return 6
+					}
+				} else if (isEdge) {
+					// edge
+					return 'edge'
+				} else if (isIE11) {
+					// IE11
+					return 11
+				} else {
+					// 不是ie浏览器
+					return -1
+				}
+			}</script><script defer>var login = {};
+			$("#loginInfo").show();
+			$("#loginInfo2").hide();
+
+			function __setLoginStatus(logData) {
+				if (!logData.error) {
+					login.isLogin = true;
+					$("#loginInfo").hide();
+					$("#loginInfo2").show();
+					$("#username").html(logData.data.user_account);
+
+				}
+			}
+
+			setTimeout(function() {
+
+				var script = document.createElement('script');
+				script.type = 'text/javascript';
+				script.setAttribute('ignoreapd', 1);
+				script.src = 'https://www.fujian.gov.cn/suc/login/isLoginJs';
+				document.body.appendChild(script);
+
+			}, 1000)</script><script src=/bsfw/util/aes.js charset=utf-8></script><script src=/bsfw/cdn/vue/2.5.2/vue.min.js charset=utf-8></script><script src=/bsfw/cdn/vuex/2.4.1/vuex.min.js charset=utf-8></script><script src=/bsfw/cdn/vue-router/3.0.1/vue-router.min.js charset=utf-8></script><script src=/bsfw/cdn/axios/1.0.0/axios.min.js charset=utf-8></script><script src=/bsfw/cdn/element-ui/2.14.1/index.js charset=utf-8></script><script src=/bsfw/cdn/md4/sm2.js charset=utf-8></script><script src=/bsfw/cdn/md4/byteAndstring.js charset=utf-8></script><script src=/bsfw/cdn/md4/smutils.js charset=utf-8></script><script src=/bsfw/cdn/swiper_v3.4.2.min.js charset=utf-8></script><link href=/bsfw/cdn/indeci/assets/css/bf/barrierfree.css rel=stylesheet type=text/css><script src=/bsfw/cdn/dzqz/crypto-js.js charset=utf-8></script><script src=/bsfw/cdn/dzqz/reader-aes.js charset=utf-8></script><script src=//js.users.51.la/21889365.js defer></script><script src=/bsfw/js/runtime.c8220efd.js></script><script src=/bsfw/js/app.04774c87.js></script></body></html>

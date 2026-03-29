@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+        宜宾市住房和城乡建设局
+    </title>
+    <script type="text/javascript" src="http://www.yibin.gov.cn/images/write.js"></script>
+    <link rel="stylesheet" href="./images/common.css">
+    <link rel="stylesheet" href="./images/style.css">
+    <link rel="stylesheet" href="/material/gwyszf.css">
+    <script type="text/javascript" src="./images/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+    <!-- header -->
+    <script type="text/javascript" src="http://jsj.yibin.gov.cn/images/layer.js"></script>
+<!--检索-->
+<script>
+    function SubsiteSearch() {
+        var SearchKey = $("#textfield").val();
+        SearchKey = $.trim(SearchKey);
+        var reg = /[`~!@#$%^&*_+<>{}\/'[\]]/im;
+        if (reg.test(SearchKey)) {
+            layer.msg('您输入的信息包含非法字符!');
+            return false;
+        }
+        if (SearchKey == "" || SearchKey == null) {
+            layer.msg("请输入检索条件!");
+            return false;
+        } else {
+            SearchKey = SearchKey.replace("-", "\-");
+            SearchKey = SearchKey.replace("(", "\(");
+            SearchKey = SearchKey.replace(")", "\)");
+        }
+        //window.open("/site/ybszjj/search.html?searchWord=" + SearchKey + "&siteId=222&orderBy=time&timeOrder=desc")  ;
+        window.open("/irs-c-web/search.html?searchWord=" + SearchKey + "&tenantId=6750&code=18808a48f3b");
+    }
+</script>
+<style>
+    .top a,
+    .top span {
+        padding-left: 10px;
+    }
+
+    @media screen and (max-width:768px) {
+        body{
+            width: 1200px;
+        }
+    }
+</style>
+<div class="header">
+    <div class="top w-container clearfix">
+        <a target='_blank' href="http://www.gov.cn/">中央人民政府</a>
+        <span> | </span>
+        <a target='_blank' href="http://www.sc.gov.cn/" class="xhy-hra">四川省人民政府 </a>
+        <span> | </span>
+        <a href="http://www.yibin.gov.cn/" target="_blank">宜宾市政府网站集约化站群</a>
+        <span> | </span>
+        <a id="toolbarSwitch" href="javascript:void(0);">无障碍浏览</a>
+        <span> | </span>
+        <a href="/zzzq">长者专区</a>
+        <div class="top-l rt">
+            <a href="javascript:void(0)" onclick="SetHome(window.location)">设为首页</a>
+            <span>|</span>
+            <a href="javascript:void(0)" onclick="AddFavorite(window.location,document.title)">加入收藏</a>
+        </div>
+    </div>
+    <div class="header-con w-container">
+        <a class="logo" href="../../../"><img src="http://jsj.yibin.gov.cn/images/logo.png" /></a>
+        <div class="search-box rt">
+            <input type="text" name="" placeholder="请输入关键字查询" id="textfield" />
+            <button onclick="SubsiteSearch()">搜索</button>
+        </div>
+    </div>
+</div>
+<div class="nav">
+    <div class="w-container">
+        <ul class="nav-l clearfix">
+            <li><a href="http://jsj.yibin.gov.cn/" target="_blank">首页</a></li>
+            <li class="drop">
+                <a class="tag" href="javascript:void(0);">
+                    机构设置
+                </a>
+                <ul class="drop-l" style="z-index: 99999;">
+                    
+                        <li><a href="http://jsj.yibin.gov.cn/jgsz/ldfg/" target="_blank">
+                                领导分工
+                            </a></li>
+                    
+                        <li><a href="http://jsj.yibin.gov.cn/jgsz/zzjg/" target="_blank">
+                                组织机构
+                            </a></li>
+                    
+                        <li><a href="http://jsj.yibin.gov.cn/jgsz/znzz/" target="_blank">
+                                职能职责
+                            </a></li>
+                    
+                </ul>
+            </li>
+            <li><a href="http://jsj.yibin.gov.cn/gzdt_4318/"
+                    target="_blank">
+                    工作动态
+                </a></li>
+            <li><a href="http://jsj.yibin.gov.cn/tzgg/" target="_blank">
+                    通知公告
+                </a></li>
+            <li><a href="http://jsj.yibin.gov.cn/wjk/" target="_blank">
+                    文件库
+                </a></li>
+
+            <li class="drop">
+                <a class="tag" href="javascript:void(0);">
+                    信息发布
+                </a>
+                <ul class="drop-l" style="z-index: 99999;">
+                    
+                        <li><a href="http://jsj.yibin.gov.cn/zwgk/ldxx/" target="_blank">
+                                咨询信箱
+                            </a></li>
+                    
+                        <li><a href="http://jsj.yibin.gov.cn/zwgk/ysbaxxgs2024/" target="_blank">
+                                预售备案信息公示
+                            </a></li>
+                    
+                </ul>
+            </li>
+
+
+
+
+            <li><a href="http://jsj.yibin.gov.cn/bsfw/" target="_blank">
+                    办事服务
+                </a></li>
+
+            <li><a href="http://jsj.yibin.gov.cn/wygl/" target="_blank">
+                    物业管理
+                </a></li>
+
+                
+
+        </ul>
+    </div>
+</div>
+
+<script type="text/javascript" language="javascript">
+    //加入收藏
+    function AddFavorite(sURL, sTitle) {
+        sURL = encodeURI(sURL);
+        try {
+            window.external.addFavorite(sURL, sTitle);
+        } catch (e) {
+            try {
+                window.sidebar.addPanel(sTitle, sURL, "");
+            } catch (e) {
+                alert("加入收藏失败，请使用Ctrl+D进行添加,或手动在浏览器里进行设置.");
+            }
+        }
+    }
+    //设为首页
+    function SetHome(url) {
+        if (document.all) {
+            document.body.style.behavior = 'url(#default#homepage)';
+            document.body.setHomePage(url);
+        } else {
+            alert("您好,您的浏览器不支持自动设置页面为首页功能,请您手动在浏览器里设置该页面为首页!");
+        }
+    }
+</script>
+    <!-- header-end -->
+
+    <div id="windows_r" class="sy_show ftyg_show"
+        style="z-index: 9999; position: fixed;right: 0;bottom: 0px; width: 328px; height: 210px;">
+        <span
+            style="position: absolute; top: -20px; cursor: pointer;  right: 0px;font-weight: bold;color: red;font-size: 14px;"
+            id="productDetailDiv">关闭</span>
+        <iframe style="border: none;" src="http://www.yibin.gov.cn/qt_297/test/test1/index.html" width="328"
+            height="210"></iframe>
+    </div>
+    <script type="text/javascript">
+        $('#productDetailDiv').click(function () {
+            $('#windows_r').hide();
+        });
+    </script>
+
+    <a style="display:block;width:1200px;height:80px;margin:0 auto;margin-top:0px;margin-bottom:30px;"
+        href="https://www.sc.gov.cn/" target="_blank"><img width="1200" src="//www.yibin.gov.cn/images/szfpic_blue.jpg" /></a>
+    <div class="main w-container">
+        <div class="index-headline clearfix">
+            <div class="index-headline-btn">
+                <span class="prev" style="transform: rotate(-90deg);"></span>
+                <span class="next" style="transform: rotate(-90deg);"></span>
+            </div>
+            <img class="lf" src="./images/icon4.png" />
+            <div class="index-headline-tab lf">
+                
+                    <div class="index-headline-item">
+                        <a href="./gzdt_4318/202603/t20260325_2215272.html" target="_blank">
+                            <span>
+                                喜报！宜宾市住建局代表队在全国职业技能竞赛（四川赛区）白蚁防治工选拔赛中载誉而归！
+                            </span>
+                            <p>
+                                为深入贯彻落实习近平总书记关于技能人才培养工作的重要指示精神，大力弘扬 “工匠精神”，健全人才培养、选拔与激励机制，持续提升白蚁防治行业公共服务能力，2026年3月18日至20日，2026年全国行业职业技能竞赛——第四届全国物业管理行业职业技能竞赛（四川赛区）...
+                            </p>
+                        </a>
+                    </div>
+                
+                    <div class="index-headline-item">
+                        <a href="./gzdt_4318/202603/t20260325_2215269.html" target="_blank">
+                            <span>
+                                宜宾住建开展“送政策下乡”活动 推动农房建设规范与传统村落保护
+                            </span>
+                            <p>
+                                3月11日、3月24日，宜宾市住房和城乡建设局联合长宁县、珙县住建部门，组织人员深入乡镇集市，集中开展《四川省农村住房建设管理办法》《四川省传统村落保护条例》等政策宣传活动。活动现场，通过悬挂横幅、发放宣传手册、设置咨询台等方式，工作人员围绕农房建设审...
+                            </p>
+                        </a>
+                    </div>
+                
+                    <div class="index-headline-item">
+                        <a href="./gzdt_4318/202603/t20260324_2214885.html" target="_blank">
+                            <span>
+                                直击现场！李英雄局长带队暗访督查宜宾中心城区在建项目安全
+                            </span>
+                            <p>
+                                为深入贯彻落实近期关于加强安全生产工作的系列决策部署，深刻吸取相关事故教训，进一步压实企业安全生产主体责任，坚决防范和遏制建筑施工领域生产安全事故发生，2026年3月23日，市住房城乡建设局党组书记、局长李英雄带队，采取“四不两直”（不发通知、不打招呼、...
+                            </p>
+                        </a>
+                    </div>
+                
+            </div>
+        </div>
+        <div class="index-wrap1 clearfix">
+            <div class="index-wrap1-col1 lf">
+                <div class="index-wrap1-btn">
+                    <img class="prev" src="./images/left.png" />
+                    <img class="next" src="./images/right.png" />
+                </div>
+                <ul class="index-newspic">
+                    
+                        <li><a href="./gzdt_4318/202603/t20260325_2215272.html" target="_blank">
+                                <img src="./gzdt_4318/202603/W020260325417333199508.jpg" /></a>
+                        </li>
+                    
+                        <li><a href="./gzdt_4318/202603/t20260325_2215269.html" target="_blank">
+                                <img src="./gzdt_4318/202603/W020260325413915816040.jpg" /></a>
+                        </li>
+                    
+                        <li><a href="./gzdt_4318/202603/t20260324_2214885.html" target="_blank">
+                                <img src="./gzdt_4318/202603/W020260324390100183894.jpg" /></a>
+                        </li>
+                    
+                        <li><a href="./gzdt_4318/202603/t20260316_2213058.html" target="_blank">
+                                <img src="./gzdt_4318/202603/W020260316539988495961.png" /></a>
+                        </li>
+                    
+                        <li><a href="./gzdt_4318/202603/t20260312_2212207.html" target="_blank">
+                                <img src="./gzdt_4318/202603/W020260312378536672341.jpg" /></a>
+                        </li>
+                    
+                </ul>
+                <ul class="index-pictt">
+                    
+                        <li><a href="./gzdt_4318/202603/t20260325_2215272.html" target="_blank">
+                                喜报！宜宾市住建局代表队在全国职业技能竞赛（四...
+                            </a></li>
+                    
+                        <li><a href="./gzdt_4318/202603/t20260325_2215269.html" target="_blank">
+                                宜宾住建开展“送政策下乡”活动 推动农房建设规范...
+                            </a></li>
+                    
+                        <li><a href="./gzdt_4318/202603/t20260324_2214885.html" target="_blank">
+                                直击现场！李英雄局长带队暗访督查宜宾中心城区在...
+                            </a></li>
+                    
+                        <li><a href="./gzdt_4318/202603/t20260316_2213058.html" target="_blank">
+                                全市住房城乡建设系统党风廉政建设 工作会召开
+                            </a></li>
+                    
+                        <li><a href="./gzdt_4318/202603/t20260312_2212207.html" target="_blank">
+                                宜宾市2026年度市政固投工作推进会
+                            </a></li>
+                    
+                </ul>
+                <ul class="index-picpg clearfix">
+                    
+                        
+                            <li class="cur"></li>
+                        
+                        
+                            <li></li>
+                        
+                            <li></li>
+                        
+                            <li></li>
+                        
+                            <li></li>
+                        
+                    
+
+                </ul>
+            </div>
+            <div class="index-wrap1-col2 rt">
+                <div class="index-wrap1-col2-t zj-tit clearfix">
+                    <a href="https://www.yibin.gov.cn/xxgk/gsyw/gwyxx/" target="_Blank" class="tit cur"
+                        style=" font-size: 18px;">党中央国务院信息</a>
+                    <a href="https://www.sc.gov.cn/10462/c110462/list_ft.shtml" target="_Blank" class="tit"
+                        style=" font-size: 18px;">省委省政府信息</a>
+                    <a class="tit "
+                        href="http://jsj.yibin.gov.cn/gzdt_4318/"
+                        target="_blank" style=" font-size: 18px;">
+                        工作动态
+                    </a>
+                    <img class="line" src="./images/icon7.png" />
+                    <a class="tit" href="http://jsj.yibin.gov.cn/tzgg/"
+                        target="_blank" style=" font-size: 18px;">
+                        通知公告
+                    </a>
+
+                    <a class="more"
+                        href="http://jsj.yibin.gov.cn/gzdt_4318/"
+                        id="manage" target="_blank">更多>></a>
+
+
+
+                </div>
+                <div class="zj-tab">
+                    <div class="zj-item zj-list1">
+                        <ul id="gwyinfo"></ul>
+
+                        <ul class="wenjianku">
+                            <li class="gwylastli gwylastlishengzf">
+                                <a href="https://www.gov.cn/zhengce/xxgk/index.htm" target="_blank"
+                                    style="display: inline;">
+                                    <span
+                                        style="font-weight: bold; color: #cc272d; float: none; padding: 0;">国家政策文件库：</span></a>
+                                <div class="link-container" id="gwywjk"> </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="zj-item zj-list1" style="overflow: hidden;height: 360px;">
+                        <script src="https://www.sc.gov.cn/10462/szfxx/szfxx.js"> </script>
+                        <ul class="szfwenjianku">
+                            <li class="gwylastli gwylastlishengzf">
+                                <a class="red" href="https://www.sc.gov.cn/10462/scszcwjkss/scszcwjkss.shtml"
+                                    target="_blank" style="display: inline;">省政府政策文件：</a>
+                                <div class="link-container" id="szfwjk"></div>
+                            </li>
+                        </ul>
+                    </div>
+
+
+
+                    <ul class="zj-item zj-list1">
+                        
+                            <li><a href="./gzdt_4318/202603/t20260325_2215272.html" target="_blank">
+                                    喜报！宜宾市住建局代表队在全国职业技能竞赛（四川赛区）白蚁防治工选拔赛中载誉...
+                                </a>
+                                <span>
+                                    2026-03-25
+                                </span>
+                            </li>
+                        
+                            <li><a href="./gzdt_4318/202603/t20260325_2215269.html" target="_blank">
+                                    宜宾住建开展“送政策下乡”活动 推动农房建设规范与传统村落保护
+                                </a>
+                                <span>
+                                    2026-03-25
+                                </span>
+                            </li>
+                        
+                            <li><a href="./gzdt_4318/202603/t20260324_2214885.html" target="_blank">
+                                    直击现场！李英雄局长带队暗访督查宜宾中心城区在建项目安全
+                                </a>
+                                <span>
+                                    2026-03-24
+                                </span>
+                            </li>
+                        
+                            <li><a href="./gzdt_4318/202603/t20260316_2213058.html" target="_blank">
+                                    全市住房城乡建设系统党风廉政建设 工作会召开
+                                </a>
+                                <span>
+                                    2026-03-16
+                                </span>
+                            </li>
+                        
+                            <li><a href="./gzdt_4318/202603/t20260312_2212207.html" target="_blank">
+                                    宜宾市2026年度市政固投工作推进会
+                                </a>
+                                <span>
+                                    2026-03-12
+                                </span>
+                            </li>
+                        
+                            <li><a href="./gzdt_4318/202603/t20260310_2211776.html" target="_blank">
+                                    宜宾市召开2026年市容环卫工作部署会
+                                </a>
+                                <span>
+                                    2026-03-09
+                                </span>
+                            </li>
+                        
+                            <li><a href="./gzdt_4318/202603/t20260309_2211136.html" target="_blank">
+                                    县（区）动态——高县综合行政执法局开展绿化养护
+                                </a>
+                                <span>
+                                    2026-03-09
+                                </span>
+                            </li>
+                        
+                            <li><a href="./gzdt_4318/202603/t20260306_2210838.html" target="_blank">
+                                    宜宾市住房和城乡建设局党组班子召开2025年度民主生活会
+                                </a>
+                                <span>
+                                    2026-03-06
+                                </span>
+                            </li>
+                        
+                            <li><a href="./gzdt_4318/202603/t20260302_2207016.html" target="_blank">
+                                    你好，我是宜居宜宾——长江首城在细节中寻找“宜美共生”
+                                </a>
+                                <span>
+                                    2026-03-01
+                                </span>
+                            </li>
+                        
+                    </ul>
+                    <ul class="zj-item zj-list1">
+                        
+                            <li><a href="./tzgg/202603/t20260326_2215800.html" target="_blank">
+                                    2026 年第一季度政务公开网络平台自查报告
+                                </a>
+                                <span>
+                                    2026-03-26
+                                </span>
+                            </li>
+                        
+                            <li><a href="./tzgg/202603/t20260320_2214274.html" target="_blank">
+                                    关于公开征集燃气安装使用价格收费不规范问题线索的通告
+                                </a>
+                                <span>
+                                    2026-03-20
+                                </span>
+                            </li>
+                        
+                            <li><a href="./tzgg/202603/t20260320_2214092.html" target="_blank">
+                                    关于四川华西建科建高新材料有限公司预拌砂浆企业登记备案的公示
+                                </a>
+                                <span>
+                                    2026-03-20
+                                </span>
+                            </li>
+                        
+                            <li><a href="./tzgg/202602/t20260228_2206763.html" target="_blank">
+                                    2025年度法治政府建设年度报告
+                                </a>
+                                <span>
+                                    2026-02-28
+                                </span>
+                            </li>
+                        
+                            <li><a href="./tzgg/202602/t20260227_2206727.html" target="_blank">
+                                    宜宾市关于加强犬只管理的通告
+                                </a>
+                                <span>
+                                    2026-02-24
+                                </span>
+                            </li>
+                        
+                            <li><a href="./tzgg/202602/t20260210_2203211.html" target="_blank">
+                                    宜宾市经纪机构备案情况表
+                                </a>
+                                <span>
+                                    2026-02-10
+                                </span>
+                            </li>
+                        
+                            <li><a href="./tzgg/202602/t20260205_2202023.html" target="_blank">
+                                    文明养犬倡议书
+                                </a>
+                                <span>
+                                    2026-02-05
+                                </span>
+                            </li>
+                        
+                            <li><a href="./tzgg/202602/t20260202_2200866.html" target="_blank">
+                                    关于拟评定全市“无废小区”名单的公示
+                                </a>
+                                <span>
+                                    2026-01-30
+                                </span>
+                            </li>
+                        
+                            <li><a href="./tzgg/202601/t20260128_2199302.html" target="_blank">
+                                    关于宜宾市第一届“好房子”设计竞赛获奖名单的公示
+                                </a>
+                                <span>
+                                    2026-01-28
+                                </span>
+                            </li>
+                        
+                    </ul>
+
+                    <script>
+                        // $.ajax({
+                        //     url: 'http://www.yibin.gov.cn/qt_297/gwy_6722.json',
+                        //     dataType: "jsonp",
+                        //     jsonp: "gwyxx",
+                        //     jsonpCallback: "gwyxx",
+                        //     success: function (data) {
+                        //         var data = data.datas;
+                        //         $.each(data, function (i, json) {
+                        //             if (i == 7) {
+                        //                 return false;
+                        //             }
+                        //             date = json.docreltime;
+                        //             var temp = json.title;
+                        //             if (temp.length > 25) {
+                        //                 temp = temp.substring(0, 25) + "...";
+                        //             }
+                        //             $("#gwyinfo").append("<li><a href='" + json.url + "' target='_Blank' title='标题：" + json.title + "'>" + json.title + "</a><span>" + date + "</span></li>");
+
+
+
+                        //         })
+                        //     },
+                        //     error: function () { }
+                        // });
+
+                        $.ajax({
+                            url: 'https://www.yibin.gov.cn/qt_297/gwy_6722.json',
+                            dataType: "jsonp",
+                            jsonp: "gwyxx",
+                            jsonpCallback: "gwyxx",
+                            success: function (data) {
+                                var data = data.datas;
+                                $.each(data, function (i, json) {
+                                    if (i == 6) {
+                                        return false;
+                                    }
+                                    date = json.docreltime;
+                                    var temp = json.title;
+                                    if (temp.length > 50) {
+                                        temp = temp.substring(0, 50) + "...";
+                                    }
+
+
+
+                                    $("#gwyinfo").append("<li><a href='" + json.url + "'>" + temp + "</a><span></span></li>");
+
+
+
+
+
+                                })
+                            },
+                            error: function () { }
+                        });
+
+                    </script>
+                </div>
+            </div>
+        </div>
+        <div class="index-wrap2 mt20 clearfix">
+            <div class="index-banner1 lf">
+                <a href="http://jsj.yibin.gov.cn/zfxxgk/"
+                    target="_blank"><img src="./images/img2.png" />
+                    <p>
+                        政府信息公开
+                    </p>
+                </a>
+                <!--<a href="http://jsj.yibin.gov.cn/zfxxgk/xxgkzn/" target="_blank"><img src="./images/img3.png" />
+                <p>信息公开指南</p></a>
+                <a href="http://jsj.yibin.gov.cn/zfxxgk/xxgkndbg/" target="_blank"><img src="./images/img4.png" />
+                <p>信息公开年度报告</p></a>-->
+                <a href="http://jsj.yibin.gov.cn/wzndgzbb/"
+                    target="_blank"><img src="./images/img5.png" />
+                    <p>
+                        网站工作年度报表
+                    </p>
+                </a>
+                <a href="./zwgk/ldxx/" target="_blank"><img src="./images/xhy-letter_03.png" />
+                    <p>
+                        咨询信箱
+                    </p>
+                </a>
+
+                <a href="./ymjygtcz/" target="_blank">
+                    <img src="http://jsj.yibin.gov.cn/material/宜美家园共同创造.png" alt="" class="img" />
+
+                    <p>
+                        宜美家园共同创造
+                    </p>
+                </a>
+              <!--  <a href="./zsdw/" target="_blank">
+                    <img src="./images/v2025-zsbm.png" alt="" class="img" />
+
+                    <p>
+                        直属单位
+                    </p>
+                </a>-->
+
+            </div>
+            <div class="index-banner2 rt">
+                <ul class="index-banner2-pic">
+                    <li><a href="./sy/zjbgt/" target="_blank"><img src="./sy/zjbgt/images/P020210310395166179081.jpg" /></a></li>
+                    <li><a href="http://www.xinhuanet.com/politics/fdbnlqhxzc/" target="_blank"><img src="./sy/13365/images/P020210518388973489430.jpg" /></a></li>
+                    <li><a href="https://jsj.yibin.gov.cn/sy/zdlyxxgk/zzsptcwtxtzl/" target="_blank"><img src="http://jsj.yibin.gov.cn/material/宜宾市住房城乡建设系统资质审批专栏.png" /></a></li>
+                    <li><a href="./sy/zyhbdcbdbgxxzl/" target="_blank"><img src="./sy/zyhbdcbdbgxxzl/images/P020190301387000452066.png" /></a></li>
+
+
+                    <!--
+                    <li><a href="./sy/zdlyxxgk/" target="_blank"><img src="./sy/zdlyxxgk/images/P020190318551024095745.jpg" /></a></li>
+                    <li><a href="./zsdw/szsnzl/" target="_blank"><img src="./zsdw/szsnzl/images/P020190318550828419516.jpg" /></a></li>
+-->
+                </ul>
+                <ul class="index-banner2-p">
+                    <li class="cur"></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+
+                </ul>
+                <!--            
+                <a href="http://jsj.yibin.gov.cn/sy/zyhbdcbdbgxxzl/" target="_blank">
+                <img src="http://jsj.yibin.gov.cn/sy/zyhbdcbdbgxxzl/images/P020190301387000452066.png" /></a>
+-->
+            </div>
+        </div>
+        <div class="index-wrap3 mt20 clearfix">
+            <div class="index-wrap3-box lf">
+                <div class="index-wrap3-t zj-tit clearfix">
+                    <a class="tit cur" href=""
+                        target="_blank">
+                        部门文件
+                    </a>
+                    <a class="more" href="http://jsj.yibin.gov.cn/wjk/zewj/"
+                        target="_blank">更多>></a>
+                </div>
+                <div class="zj-tab">
+                    <ul class="zj-item zj-list2">
+                        
+                            <li><a href="./wjk/zewj/202601/t20260109_2194141.html" target="_blank">
+                                    关于2026年第一季度宜宾市建筑施工企业信用等级划...
+                                </a></li>
+                        
+                            <li><a href="./wjk/zewj/202601/t20260109_2194135.html" target="_blank">
+                                    关于2026年第一季度宜宾市监理企业信用等级划分标...
+                                </a></li>
+                        
+                            <li><a href="./wjk/zewj/202601/t20260109_2194151.html" target="_blank">
+                                    关于印发《关于推动智能建造及装配式建筑等新型建...
+                                </a></li>
+                        
+                            <li><a href="./wjk/zewj/202601/t20260128_2199380.html" target="_blank">
+                                    关于印发《宜宾市房屋建筑和市政工程建设项目招标...
+                                </a></li>
+                        
+                            <li><a href="./wjk/zewj/202512/t20251217_2180543.html" target="_blank">
+                                    关于公布2025年全市物业服务企业信用分值级别的通告
+                                </a></li>
+                        
+                            <li><a href="./wjk/zewj/202511/t20251106_2166091.html" target="_blank">
+                                    关于进一步加强建筑业企业施工劳务备案工作的通知
+                                </a></li>
+                        
+                    </ul>
+                </div>
+            </div>
+            <div class="index-wrap3-box lf">
+                <div class="index-wrap3-t zj-tit clearfix">
+                    <a class="tit cur" href="http://jsj.yibin.gov.cn/zwgk/"
+                        target="_blank">
+                        信息发布
+                    </a>
+                    <a class="more" href="http://jsj.yibin.gov.cn/zwgk/"
+                        target="_blank">更多>></a>
+                </div>
+                <div class="zj-tab">
+                    <ul class="zj-item zj-list2">
+                        
+                            <li><a href="./zwgk/202603/t20260327_2216179.html" target="_blank">
+                                    关于燃气经营行政许可审批决定的通告（2026年燃第2...
+                                </a></li>
+                        
+                            <li><a href="./zwgk/202603/t20260325_2215281.html" target="_blank">
+                                    关于建设类行政许可事项初审意见的公示（2026房第1...
+                                </a></li>
+                        
+                            <li><a href="./zwgk/202603/t20260325_2215275.html" target="_blank">
+                                    关于建设类行政许可审批决定的通告（2026年房第9号）
+                                </a></li>
+                        
+                            <li><a href="./zwgk/202603/t20260319_2213980.html" target="_blank">
+                                    关于建设类行政许可事项初审意见的公示（2026房第1...
+                                </a></li>
+                        
+                            <li><a href="./zwgk/202603/t20260316_2212991.html" target="_blank">
+                                    关于建设类行政许可事项初审意见的公示（2026施第5...
+                                </a></li>
+                        
+                            <li><a href="./zwgk/202603/t20260316_2212988.html" target="_blank">
+                                    关于建设类行政许可事项初审意见的公示（2026房第1...
+                                </a></li>
+                        
+                    </ul>
+                </div>
+            </div>
+            <div class="index-wrap3-box rt">
+                <div class="index-wrap3-t zj-tit clearfix">
+                    <a class="tit cur"
+                        href="http://jsj.yibin.gov.cn/sy/zdlyxxgk/"
+                        target="_blank">
+                        重点领域信息公开
+                    </a>
+                    <a class="more"
+                        href="http://jsj.yibin.gov.cn/sy/zdlyxxgk/"
+                        target="_blank">更多>></a>
+                </div>
+                <div class="zj-tab">
+                    <ul class="zj-item zj-list2">
+                        
+                            <li><a href="./sy/zdlyxxgk/jzqycxgg/202512/t20251215_2179692.html" target="_blank">
+                                    关于转发《四川省住房和城乡建设厅关于开展2025年...
+                                </a></li>
+                        
+                            <li><a href="./sy/zdlyxxgk/jzqycxgg/202512/t20251210_2178276.html" target="_blank">
+                                    情况说明
+                                </a></li>
+                        
+                            <li><a href="./sy/zdlyxxgk/zzsptcwtxtzl/202512/t20251210_2178502.html" target="_blank">
+                                    四川省住房和城乡建设厅关于进一步完善建筑业企业...
+                                </a></li>
+                        
+                            <li><a href="./sy/zdlyxxgk/zzsptcwtxtzl/202411/t20241122_2055342.html" target="_blank">
+                                    宜宾市住房和城乡建设局 关于进一步明确建筑业企业...
+                                </a></li>
+                        
+                            <li><a href="./sy/zdlyxxgk/jzqycxgg/202411/t20241101_2036793.html" target="_blank">
+                                    关于2023年建筑业诚信企业名单的通报
+                                </a></li>
+                        
+                            <li><a href="./sy/zdlyxxgk/jzqycxgg/202411/t20241101_2036786.html" target="_blank">
+                                    关于表扬2023年宜宾市建筑业优秀企业的通报
+                                </a></li>
+                        
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        <!--<table width="1002" border="0" align="center" cellpadding="0" cellspacing="0"> 
+   <tbody>
+    <tr> 
+     <td align="left"><a href="" target="_blank">
+     <img src="" /></a></td> 
+<p>&emsp;&emsp;</p>
+     
+     <td align="right"><a href="https://ybyc.hgyun.net:99" target="_blank">
+     <img src="http://jsj.yibin.gov.cn/bsfw/12988/images/P020210308549546831671.jpg" /></a></td> 
+    </tr> 
+   </tbody>
+  </table> -->
+        <table width="1200" border="0" align="center" cellpadding="0" cellspacing="0">
+            <a style="display:block;width:1200px;height:80px;margin:0 auto;margin-top:10px;margin-bottom:0px;"
+                href="https://ybyc.hgyun.net:99/login" target="_blank"><img src="http://jsj.yibin.gov.cn/material/宜宾市建筑工地扬尘治理平台.png" /></a>
+        </table>
+        <table width="1200" border="0" align="center" cellpadding="0" cellspacing="0">
+            <a style="display:block;width:1200px;height:80px;margin:0 auto;margin-top:10px;margin-bottom:10px;"
+                href="https://218.6.151.163:18013/#/login/form" target="_blank"><img src="./images/ybsjzgrsmzpt.png" /></a>
+            <a style="display:block;width:1200px;height:80px;margin:0 auto;margin-top:0px;margin-bottom:30px;"
+                href="http://218.6.151.125:8004/Default.aspx" target="_blank"><img src="http://jsj.yibin.gov.cn/material/宜宾市住建领域信用信息管理系统.png" /></a>
+        </table>
+    </div>
+
+    <!-- footer -->
+    <div class="footer">
+    <div class="f-help">
+
+        <!--
+        <a href="http://bszs.conac.cn/sitename?method=show&id=747B064AFC5A080CE053022E1AAC05E7" target="_blank">
+            <img class="f-img1" src="http://jsj.yibin.gov.cn/images/f-img1.png" />
+        </a>
+
+-->
+        <div class="f-text">
+            <p class="f-text1"><span>主办单位/内容保障单位：宜宾市住房和城乡建设局</span><span>建设维护单位：宜宾市政府信息服务保障中心</span>
+                <script type="text/javascript">document.write(unescape("%3Cspan id='cnzz_stat_icon_1279132642'%3E%3C/span%3E%3Cscript src='https://v1.cnzz.com/z_stat.php%3Fid%3D1279132642%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
+            </p>
+            <p class="f-text2"><span>网站标识码 5115000047</span>
+
+                <span>
+                    <a href="https://jsj.yibin.gov.cn/wzdt/index.html" class="tt" target="_blank" style="color:#003f6b;">
+                        网站地图</a>
+                    <a href="https://beian.miit.gov.cn/" class="tt" target="_blank" style="color:#003f6b;">
+                        蜀ICP备2021007551号-2</a>
+
+                    <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=51152102000068" class="tt"
+                        target="_blank" style="color:#003f6b;"><img src="http://jsj.yibin.gov.cn/images/20190428ga.png" style="vertical-align:middle;" />川公网安备 51152102000068号</a>
+                    <span>联系电话：0831—8224250</span>
+            </p>
+
+
+            </span>
+
+        </div>
+        <span>
+
+
+    </div>
+
+    <div style="text-align: center;">
+        <script type="text/javascript">document.write(unescape("%3Cspan id='_ideConac' %3E%3C/span%3E%3Cscript src='http://dcs.conac.cn/js/23/344/0000/60926349/CA233440000609263490002.js' type='text/javascript'%3E%3C/script%3E"));</script>
+        <script id='_jiucuo_' sitecode='5115000047' src='https://zfwzgl.www.gov.cn/exposure/jiucuo.js'></script></span>
+
+    </div>
+</div>
+<script src="https://auth.mangren.com/boots/jsj.yibin.gov.cn/esdToolsInit.js" charset="UTF-8"></script>
+<script id="_trs_ta_js" src="//ta.trs.cn/c/js/ta.js?mpid=2904" async="async" defer="defer"></script>
+    <!-- footer-end -->
+
+</body>
+<script>
+
+
+    /*鼠标经过更改更多的链接地址*/
+
+    $(".index-wrap1-col2-t .tit").mouseover(function () {
+        var url = $(this).attr("href");
+        $(this).siblings(".more").attr("href", url);
+    });
+
+
+</script>
+
+<script type="text/javascript" src="./images/common.js"></script>
+<script type="text/javascript" src="./images/tool.js"></script>
+<script type="text/javascript" src="./images/base.js"></script>
+
+
+<script type="text/javascript" src="/material/gwyszf.js"></script>
+
+</html>
