@@ -39,19 +39,12 @@ HEADERS = {
     'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8',
     'Accept-Encoding': 'gzip, deflate',
 }
-# Rotate User-Agents to reduce blocking
-USER_AGENTS = [
-    'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36',
-    'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:128.0) Gecko/20100101 Firefox/128.0',
-    'Mozilla/5.0 (Macintosh; Intel Mac OS X 14_5) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.5 Safari/605.1.15',
-    'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36',
-]
-TIMEOUT = 20
+TIMEOUT = 15
 RETRY = 2
 MAX_LIST_PAGES = 50       # 最多翻50页列表页
 MAX_DETAIL_PER_DEPT = 3   # 每个部门最多进3个详情页找PDF
-DELAY_PAGE = 0.2
-DELAY_CITY = 1.5
+DELAY_PAGE = 0.3
+DELAY_CITY = 2
 MIN_DEPT_COVERAGE = 15    # 至少找到15个部门才算合格
 
 # ========== 32+目标委办局 ==========
@@ -68,9 +61,9 @@ TARGET_DEPTS = [
 ]
 
 MATCH_RULES = [
-    (["公安局交通警察", "公安交通管理", "交警局", "交通警察局", "交警支队", "公安局交通管理", "公安交警", "交警大队", "交通警察支队", "公安局交警", "交通警察总队", "交管局", "公安局交管", "公安交通警察", "交通管理局"], "公安局交通警察局"),
+    (["公安局交通警察", "公安交通管理", "交警局", "交通警察局", "交警支队", "公安局交通管理"], "公安局交通警察局"),
     (["卫生健康委", "卫健委", "卫生健康局", "卫生局"], "卫生健康委员会"),
-    (["教育局", "教育委员会", "教育委", "教委", "教育体育局", "教体局"], "教育局"),
+    (["教育局", "教育委员会", "教育委"], "教育局"),
     (["发展和改革", "发展改革", "发改委", "发改局"], "发展和改革局"),
     (["规划和自然资源", "自然资源和规划", "自然资源局", "规划局", "国土资源"], "规划和自然资源局"),
     (["交通运输局", "交通运输委", "交通局", "交通委"], "交通运输局"),
@@ -80,27 +73,27 @@ MATCH_RULES = [
     (["工业和信息化", "工信局", "经济和信息化", "经信局", "经信委"], "工业和信息化局"),
     (["市场监督管理", "市场监管"], "市场监督管理局"),
     (["国有资产监督管理", "国资委"], "国有资产监督管理委员会"),
-    (["口岸办公室", "口岸办", "口岸事务", "口岸管理", "口岸局", "口岸管理局", "口岸和物流", "口岸服务", "口岸工作"], "口岸办公室"),
+    (["口岸办公室", "口岸办", "口岸事务", "口岸局", "口岸管理"], "口岸办公室"),
     (["公安局", "市公安局"], "公安局"),
     (["医疗保障局", "医保局"], "医疗保障局"),
     (["商务局", "商务委"], "商务局"),
-    (["文化广电旅游体育", "文化广电旅游", "文化和旅游", "文旅局", "文广旅体", "文化体育旅游", "文广旅局", "文体旅游", "文广新旅", "文化旅游", "文体广旅", "文体广电旅游"], "文化广电旅游体育局"),
+    (["文化广电旅游体育", "文化广电旅游", "文化和旅游", "文旅局", "文广旅体", "文化体育旅游"], "文化广电旅游体育局"),
     (["生态环境局", "环境保护局", "环保局"], "生态环境局"),
-    (["政务服务和数据管理", "政务服务数据管理", "政务服务局", "大数据管理局", "数据局", "行政审批局", "政数局", "大数据发展局", "政务和大数据", "行政审批服务", "数据管理局", "政务服务管理"], "政务服务和数据管理局"),
-    (["城市管理和综合执法", "城市管理综合执法", "城市管理局", "城管局", "城管执法", "综合行政执法", "城管和综合执法", "城市管理行政执法", "城市管理委员会", "综合执法局"], "城市管理和综合执法局"),
+    (["政务服务和数据管理", "政务服务数据管理", "政务服务局", "大数据管理局", "数据局", "行政审批局"], "政务服务和数据管理局"),
+    (["城市管理和综合执法", "城市管理综合执法", "城市管理局", "城管局", "城管执法", "综合行政执法"], "城市管理和综合执法局"),
     (["退役军人事务", "退役军人局"], "退役军人事务局"),
-    (["宣传部", "市委宣传", "宣传部门", "中共.*宣传", "党委宣传", "委宣传部", "宣传部（", "宣传部门预算", "宣传部2026", "中共.*市委宣传", "市委.*宣传部", "宣传事务", "党委宣传部", "市委宣传部门预算", "精神文明.*办", "宣传部（网信办）", "市委宣传部（", "宣传网信"], "宣传部"),
+    (["宣传部", "市委宣传部", "中共", "委宣传部"], "宣传部"),
     (["司法局"], "司法局"),
-    (["住房和建设", "住房和城乡建设", "住建局", "住房建设", "住房城乡建设", "住建委", "住房保障和房屋管理", "住房保障和房管"], "住房和建设局"),
-    (["建筑工务署", "建筑工务中心", "建设工程事务", "工务署", "建筑工务", "建设工务署", "建设工务局", "建设工务中心"], "建筑工务署"),
+    (["住房和建设", "住房和城乡建设", "住建局", "住房建设", "住房城乡建设"], "住房和建设局"),
+    (["建筑工务署", "建筑工务中心", "建设工程事务", "建筑工务", "工务署"], "建筑工务署"),
     (["民政局"], "民政局"),
     (["财政局"], "财政局"),
-    (["气象局", "气象台", "气象部门", "气象服务", "气象中心", "气象事业", "市气象局", "气象灾害防御", "气象预警", "气象局（", "气象局部门预算"], "气象局"),
+    (["气象局", "气象台", "气象部门", "气象服务"], "气象局"),
     (["应急管理局", "应急局", "安全生产监督"], "应急管理局"),
     (["审计局"], "审计局"),
     (["政府办公厅", "政府办公室", "人民政府办公"], "政府办公厅"),
     (["统计局"], "统计局"),
-    (["信访局", "信访办", "信访办公室", "信访事务中心", "群众来访接待"], "信访局"),
+    (["信访局", "信访办"], "信访局"),
 ]
 
 # 子单位关键词 - 用于过滤掉下属单位
@@ -110,7 +103,7 @@ SUB_UNIT_KEYWORDS = [
     "服务中心", "事务中心", "管理所", "监测", "培训", "幼儿园",
     "纪念馆", "博物馆", "图书馆", "文化馆", "美术馆", "展示馆",
     "福利院", "救助", "戒毒", "疗养", "供应站", "试验场",
-    "分局", "监管局",
+    "分局", "管理局", "监管局",
 ]
 
 # ========== 日志 ==========
@@ -168,44 +161,27 @@ def create_session():
     session.verify = False
     return session
 
-import random
-
 def fetch(session, url, timeout=TIMEOUT):
-    # Rotate UA per request
-    session.headers['User-Agent'] = random.choice(USER_AGENTS)
-    # Add Referer to reduce 403 blocks
-    parsed = urlparse(url)
-    session.headers['Referer'] = f"{parsed.scheme}://{parsed.netloc}/"
-    urls_to_try = [url]
-    if url.startswith('https://'):
-        urls_to_try.append(url.replace('https://', 'http://', 1))
-    elif url.startswith('http://'):
-        urls_to_try.append(url.replace('http://', 'https://', 1))
-
-    for try_url in urls_to_try:
-        for i in range(RETRY):
-            try:
-                r = session.get(try_url, timeout=(8, timeout), allow_redirects=True, verify=False)
-                r.encoding = r.apparent_encoding or 'utf-8'
-                if r.status_code == 200:
-                    return r
-                if r.status_code in (403, 503):
-                    # May be rate-limited, wait with exponential backoff
-                    time.sleep(2 + i * 2)
-                    continue
-                if r.status_code >= 400:
-                    break  # Don't retry client errors other than 403
-            except requests.exceptions.SSLError:
-                break  # Try next URL (http/https switch)
-            except requests.exceptions.ConnectionError:
-                if i < RETRY - 1:
-                    time.sleep(2 + i * 2)
-            except (requests.exceptions.ReadTimeout, requests.exceptions.ChunkedEncodingError):
-                if i < RETRY - 1:
-                    time.sleep(2 + i)
-            except Exception:
-                if i < RETRY - 1:
-                    time.sleep(1)
+    for i in range(RETRY):
+        try:
+            r = session.get(url, timeout=timeout, allow_redirects=True, verify=False)
+            r.encoding = r.apparent_encoding or 'utf-8'
+            if r.status_code == 200:
+                return r
+        except requests.exceptions.SSLError:
+            # SSL失败时尝试http
+            if url.startswith('https://'):
+                http_url = url.replace('https://', 'http://', 1)
+                try:
+                    r = session.get(http_url, timeout=timeout, allow_redirects=True, verify=False)
+                    r.encoding = r.apparent_encoding or 'utf-8'
+                    if r.status_code == 200:
+                        return r
+                except Exception:
+                    pass
+        except Exception:
+            if i < RETRY - 1:
+                time.sleep(1)
     return None
 
 def match_dept(text, city=""):
@@ -216,12 +192,15 @@ def match_dept(text, city=""):
     for p in [city + "市", city, "市"]:
         if p and t.startswith(p):
             t = t[len(p):]
+    # 去掉"中共XX市委"前缀
+    m_prefix = re.match(r'中共.{2,6}(?:市委|县委|区委)', t)
+    if m_prefix:
+        rest = t[m_prefix.end():]
+        if rest:
+            t = rest
     for keywords, dept in MATCH_RULES:
         for kw in keywords:
-            if '.*' in kw:
-                if re.search(kw, t):
-                    return dept
-            elif kw in t:
+            if kw in t:
                 if dept == "公安局" and ("交通" in t or "交警" in t):
                     return "公安局交通警察局"
                 return dept
@@ -245,11 +224,7 @@ def is_main_dept_budget(text, dept_name, city=""):
     for keywords, dept in MATCH_RULES:
         if dept == dept_name:
             for kw in keywords:
-                if '.*' in kw:
-                    if re.search(kw, t):
-                        score += 50
-                        break
-                elif kw in t:
+                if kw in t:
                     score += 50
                     break
             break
@@ -297,7 +272,7 @@ def safe_filename(s, maxlen=80):
 
 def detect_pagination(soup, base_url):
     """检测分页模式, 返回总页数和URL模板"""
-    # 模式1: index_N.html / index_N.shtml (深圳等)
+    # 模式1: index_N.html (深圳等)
     for a in soup.find_all('a', href=True):
         href = a['href']
         text = a.get_text(strip=True)
@@ -307,105 +282,41 @@ def detect_pagination(soup, base_url):
                 total = int(m.group(1))
                 return total, 'index_N'
 
-    # 模式1a2: list_N.html (部分城市如淮安、连云港)
+    # 模式2: ?page=N 或 &page=N
     for a in soup.find_all('a', href=True):
         href = a['href']
         text = a.get_text(strip=True)
         if text in ['尾页', '末页', '最后一页']:
-            m = re.search(r'list_(\d+)', href)
-            if m:
-                total = int(m.group(1))
-                return total, 'list_N'
-
-    # 模式1b: column-index-N.shtml (成都等)
-    for a in soup.find_all('a', href=True):
-        href = a['href']
-        text = a.get_text(strip=True)
-        if text in ['尾页', '末页', '最后一页', '下一页', '>>']:
-            m = re.search(r'column-index-(\d+)', href)
-            if m:
-                total = int(m.group(1))
-                return total, 'column_index_N'
-    # 也从所有链接中找column-index模式
-    col_idx_nums = []
-    for a in soup.find_all('a', href=True):
-        m = re.search(r'column-index-(\d+)', a['href'])
-        if m:
-            col_idx_nums.append(int(m.group(1)))
-    if col_idx_nums:
-        return max(col_idx_nums), 'column_index_N'
-
-    # 模式1c: t_N.html / t/N.html (一些政府网站)
-    for a in soup.find_all('a', href=True):
-        href = a['href']
-        text = a.get_text(strip=True)
-        if text in ['尾页', '末页', '最后一页', '下一页', '>>']:
-            m = re.search(r't[/_](\d+)\.html', href)
-            if m:
-                total = int(m.group(1))
-                return total, 'page_param'
-
-    # 模式2: ?page=N 或 &page=N 或 ?PageIndex=N 或 ?pageNo=N
-    for a in soup.find_all('a', href=True):
-        href = a['href']
-        text = a.get_text(strip=True)
-        if text in ['尾页', '末页', '最后一页']:
-            m = re.search(r'[?&](?:page|PageIndex|pageNo|pageNum|currPage|pn|p)=(\d+)', href, re.I)
+            m = re.search(r'[?&]page=(\d+)', href)
             if m:
                 return int(m.group(1)), 'page_param'
-    # 模式2 fallback: 从"下一页"/">"链接推断, 至少有2页
+
+    # 模式2.5: ?pageIndex=N 或 &pageNum=N
     for a in soup.find_all('a', href=True):
         href = a['href']
         text = a.get_text(strip=True)
-        if text in ['下一页', '>', '>>', '›', '»']:
-            m = re.search(r'[?&](?:page|PageIndex|pageNo|pageNum|currPage|pn|p)=(\d+)', href, re.I)
+        if text in ['尾页', '末页', '最后一页']:
+            m = re.search(r'[?&](?:pageIndex|pageNum|pageNo|pn|p)=(\d+)', href)
             if m:
-                # 下一页链接指向的页码作为下限, 估算至少有10页
-                next_page = int(m.group(1))
-                return max(next_page * 5, 10), 'page_param'
+                return int(m.group(1)), 'page_param'
 
-    # 模式2b: /N.html 数字路径分页 (如 /1.html, /2.html)
+    # 模式2.6: /N or _N pattern in URL for "尾页"
     for a in soup.find_all('a', href=True):
         href = a['href']
         text = a.get_text(strip=True)
         if text in ['尾页', '末页', '最后一页']:
             m = re.search(r'/(\d+)\.html', href)
-            if m:
-                total = int(m.group(1))
-                return total, 'num_html'
-
-    # 模式2c: list_N.html 分页
-    for a in soup.find_all('a', href=True):
-        href = a['href']
-        text = a.get_text(strip=True)
-        if text in ['尾页', '末页', '最后一页', '下一页', '>>']:
-            m = re.search(r'list_(\d+)', href)
-            if m:
-                total = int(m.group(1))
-                return total, 'list_N'
+            if m and int(m.group(1)) > 1:
+                return int(m.group(1)), 'index_N'
 
     # 模式3: 从JS中提取总页数
     for script in soup.find_all('script'):
         if script.string:
-            # contenpage/totalPage/pageCount/countPage 等变量
-            m = re.search(r'(?:contenpage|totalPage|pageCount|countPage|pages)\s*[=:]\s*(\d+)', script.string)
+            # contenpage/totalPage 等变量
+            m = re.search(r'(?:contenpage|totalPage|pageCount|countPage|total_page)\s*[=:]\s*(\d+)', script.string)
             if m:
                 total = int(m.group(1))
                 # 判断URL模式
-                if 'column-index' in str(soup):
-                    return min(total, 200), 'column_index_N'
-                if 'list_' in str(soup):
-                    return min(total, 200), 'list_N'
-                if 'index_' in str(soup):
-                    return min(total, 200), 'index_N'
-                return min(total, 200), 'page_param'
-
-    # 模式3b: 从JS中查找 var countPage 或 createPageHTML(N) 模式
-    for script in soup.find_all('script'):
-        if script.string:
-            m = re.search(r'createPageHTML\s*\(\s*(\d+)', script.string)
-            if m:
-                total = int(m.group(1))
                 if 'index_' in str(soup):
                     return min(total, 200), 'index_N'
                 return min(total, 200), 'page_param'
@@ -422,17 +333,10 @@ def detect_pagination(soup, base_url):
         for a in soup.find_all('a', href=True):
             if a.get_text(strip=True) == str(max_visible):
                 href = a['href']
-                if 'column-index' in href:
-                    return max_visible, 'column_index_N'
-                if 'list_' in href:
-                    return max_visible, 'list_N'
                 if 'index_' in href:
                     return max_visible, 'index_N'
                 if 'page=' in href:
                     return max_visible, 'page_param'
-                m = re.search(r'/(\d+)\.html', href)
-                if m:
-                    return max_visible, 'num_html'
 
     return 1, 'single'
 
@@ -440,31 +344,19 @@ def build_page_url(base_url, page_num, pattern):
     """根据分页模式构建第N页URL"""
     if pattern == 'index_N':
         if page_num == 1:
-            return re.sub(r'index(_\d+)?\.(html|shtml)', r'index.\2', base_url)
-        base = re.sub(r'index(_\d+)?\.(html|shtml)', f'index_{page_num}.\\2', base_url)
-        if base == base_url and not re.search(r'\.(html|shtml)$', base_url):
+            # 第1页: index.html
+            return re.sub(r'index(_\d+)?\.html', 'index.html', base_url)
+        # 第N页: index_N.html
+        base = re.sub(r'index(_\d+)?\.html', f'index_{page_num}.html', base_url)
+        if base == base_url and not base_url.endswith('.html'):
             base = base_url.rstrip('/') + f'/index_{page_num}.html'
         return base
-    elif pattern == 'list_N':
-        if page_num == 1:
-            return re.sub(r'list(_\d+)?\.(html|shtml)', r'list.\2', base_url)
-        base = re.sub(r'list(_\d+)?\.(html|shtml)', f'list_{page_num}.\\2', base_url)
-        if base == base_url and not re.search(r'\.(html|shtml)$', base_url):
-            base = base_url.rstrip('/') + f'/list_{page_num}.html'
-        return base
-    elif pattern == 'column_index_N':
-        if page_num == 1:
-            return re.sub(r'column-index-\d+', 'column-index-1', base_url)
-        return re.sub(r'column-index-\d+', f'column-index-{page_num}', base_url)
     elif pattern == 'page_param':
         parsed = urlparse(base_url)
         if 'page=' in parsed.query:
             return re.sub(r'page=\d+', f'page={page_num}', base_url)
         sep = '&' if parsed.query else '?'
         return f"{base_url}{sep}page={page_num}"
-    elif pattern == 'num_html':
-        # /1.html -> /2.html
-        return re.sub(r'/\d+\.html$', f'/{page_num}.html', base_url)
     return base_url
 
 def extract_links_from_page(soup, base_url, city):
@@ -481,13 +373,6 @@ def extract_links_from_page(soup, base_url, city):
             continue
         seen.add(full)
         dept = match_dept(text, city)
-        # Also check title attribute if text didn't match
-        if not dept:
-            title_attr = a.get('title', '')
-            if title_attr:
-                dept = match_dept(title_attr, city)
-                if dept:
-                    text = title_attr  # use title for scoring
         is_pdf = full.lower().endswith('.pdf')
         results.append({
             'text': text,
@@ -512,35 +397,6 @@ def strategy_paginated_list(session, budget_url, city, needed_depts):
         r = fetch(session, alt)
         if r:
             budget_url = alt
-    if not r and budget_url.startswith('https://'):
-        # 尝试http回退
-        http_url = budget_url.replace('https://', 'http://', 1)
-        r = fetch(session, http_url)
-        if r:
-            budget_url = http_url
-    if not r:
-        # 尝试index.shtml
-        alt = budget_url.rstrip('/') + '/index.shtml'
-        r = fetch(session, alt)
-        if r:
-            budget_url = alt
-    if not r:
-        # 尝试list.html
-        alt = budget_url.rstrip('/') + '/list.html'
-        r = fetch(session, alt)
-        if r:
-            budget_url = alt
-    if not r:
-        # 尝试去掉末尾路径层级
-        parsed = urlparse(budget_url)
-        parent = parsed.path.rstrip('/').rsplit('/', 1)[0] + '/'
-        if parent != parsed.path:
-            parent_url = f"{parsed.scheme}://{parsed.netloc}{parent}"
-            r = fetch(session, parent_url)
-            if r and '预算' in (r.text or ''):
-                budget_url = parent_url
-            else:
-                r = None
     if not r:
         logger.warning(f"  [{city}] 无法访问预算页")
         return found
@@ -553,13 +409,9 @@ def strategy_paginated_list(session, budget_url, city, needed_depts):
     total_pages, pattern = detect_pagination(soup, budget_url)
     logger.info(f"  [{city}] 检测到 {total_pages} 页, 模式: {pattern}")
 
-    # 确保base_url有index.html/shtml用于替换
-    if pattern == 'index_N' and not re.search(r'\.(html|shtml)$', budget_url):
+    # 确保base_url有index.html用于替换
+    if pattern == 'index_N' and not budget_url.endswith('.html'):
         budget_url = budget_url.rstrip('/') + '/index.html'
-    if pattern == 'list_N' and not re.search(r'list(_\d+)?\.(html|shtml)$', budget_url):
-        budget_url = budget_url.rstrip('/') + '/list.html'
-    if pattern == 'column_index_N' and 'column-index' not in budget_url:
-        budget_url = budget_url.rstrip('/') + '/column-index-1.shtml'
 
     pages_to_scan = min(total_pages, MAX_LIST_PAGES)
 
@@ -644,54 +496,20 @@ def extract_pdf_from_detail(session, detail_url, dept_name, city):
             full = urljoin(detail_url, src)
             pdf_candidates.append(("iframe_pdf", full, 10))
 
-    # 方法3: embed/object标签中的PDF
+    # 方法3: embed/object标签
     for tag in soup.find_all(['embed', 'object']):
         src = tag.get('src') or tag.get('data') or ''
         if src.lower().endswith('.pdf'):
             full = urljoin(detail_url, src)
             pdf_candidates.append(("embed_pdf", full, 10))
 
-    # 方法4: 从onclick/href中提取PDF URL
-    for a in soup.find_all(['a', 'span', 'div'], onclick=True):
-        onclick = a['onclick']
-        m = re.search(r"['\"]([^'\"]*\.pdf)['\"]", onclick, re.I)
-        if m:
-            full = urljoin(detail_url, m.group(1))
-            pdf_candidates.append(("onclick_pdf", full, 5))
-
-    # 方法5: 从页面文本中正则提取PDF链接
+    # 方法4: JS中的PDF链接
     if not pdf_candidates:
-        pdf_urls_in_text = re.findall(r'(?:href|src|url)\s*[=:]\s*["\']?([^"\'>\s]+\.pdf)', r.text, re.I)
-        for purl in pdf_urls_in_text[:5]:
-            full = urljoin(detail_url, purl)
-            pdf_candidates.append(("regex_pdf", full, 3))
-
-    # 方法6: 查找PDF预览器URL (如 /pdfjs/viewer?file=xxx.pdf)
-    if not pdf_candidates:
-        viewer_matches = re.findall(r'[?&]file=([^&"\'>\s]+\.pdf)', r.text, re.I)
-        for purl in viewer_matches[:3]:
-            full = urljoin(detail_url, unquote(purl))
-            pdf_candidates.append(("viewer_pdf", full, 5))
-
-    # 方法7: window.open 或 location.href 中的PDF
-    if not pdf_candidates:
-        js_matches = re.findall(r'(?:window\.open|location\.href)\s*[=(]\s*["\']([^"\']+\.pdf)', r.text, re.I)
-        for purl in js_matches[:3]:
-            full = urljoin(detail_url, purl)
-            pdf_candidates.append(("js_pdf", full, 4))
-
-    # 方法8: 附件下载链接 (data-href, download属性, 或含"附件"/"下载"文字的链接)
-    if not pdf_candidates:
-        for a in soup.find_all('a', href=True):
-            href = a['href'].strip()
-            text = a.get_text(strip=True)
-            data_href = a.get('data-href', '')
-            download_attr = a.get('download', '')
-            target_url = data_href or href
-            if any(kw in (text + download_attr).lower() for kw in ['附件', '下载', 'download', '.pdf']):
-                full = urljoin(detail_url, target_url)
-                if '.pdf' in full.lower() or 'download' in full.lower() or 'attach' in full.lower():
-                    pdf_candidates.append((text or "attachment", full, 3))
+        for script in soup.find_all('script'):
+            if script.string:
+                for m in re.finditer(r'["\']([^"\']*\.pdf)["\']', script.string, re.I):
+                    pdf_url = urljoin(detail_url, m.group(1))
+                    pdf_candidates.append(("js_pdf", pdf_url, 5))
 
     if not pdf_candidates:
         return None
@@ -710,44 +528,15 @@ SEARCH_URL_PATTERNS = [
     "/was5/web/search?channelid=&searchword={query}",
     "/jrobotfront/search.action?webid=1&searchWord={query}",
     "/site/tpl/szfbmczyjs/?searchWord={query}",
-    "/search.do?searchWord={query}",
     "/search?keyword={query}",
+    "/search.html?keyword={query}",
     "/search?wd={query}",
-    "/search.jsp?keyword={query}",
-    "/search.aspx?q={query}",
-    "/opensearch?searchWord={query}",
-    "/fullsearch?q={query}",
-    "/site/zgnj/search.html?searchWord={query}&siteId=10",
-    "/igs/front/search.html?searchWord={query}",
     "/search/index.html?searchWord={query}",
-    "/search/index.do?searchWord={query}",
-    "/search_result.jsp?q={query}",
-    "/search?key={query}",
-    "/search?words={query}",
-    "/search?content={query}",
-    "/search/index.jsp?searchWord={query}",
-    "/was5/web/search?searchWord={query}",
-    "/search?type=0&searchWord={query}",
-    "/search.html?keyword={query}",
-    "/search.html?q={query}",
-    "/search/index?searchWord={query}",
-    "/fullTextSearch?key={query}",
-    "/search?text={query}",
-    "/search.shtml?searchWord={query}",
-    "/search/data?searchWord={query}",
-    "/search.html?keyword={query}",
-    "/search?channelId=0&searchWord={query}",
+    "/search/index?keyword={query}",
+    "/so/s?q={query}",
+    "/irs/front/search?searchWord={query}",
+    "/search?searchContent={query}",
     "/jrobotfront/search.action?searchWord={query}",
-    "/search?appid=1&searchWord={query}",
-    "/search/s?searchWord={query}",
-    "/search/index.html?keyword={query}",
-    "/search/index.html?q={query}",
-    "/search?tab=all&searchWord={query}",
-    "/search.html?word={query}",
-    "/search?kw={query}",
-    "/search/list?keyword={query}",
-    "/was5/web/search?searchword={query}&channelid=0",
-    "/jrobotfront/search.action?webid=1&pg=1&searchWord={query}",
 ]
 
 def detect_search_endpoint(session, website, city):
@@ -763,39 +552,24 @@ def detect_search_endpoint(session, website, city):
                     # 找搜索参数名
                     for inp in form.find_all('input'):
                         name = inp.get('name', '')
-                        if name and name.lower() in ('searchword', 'q', 'keyword', 'wd', 'searchcontent', 'key', 'kw', 'words', 'search', 'query'):
+                        if name and name.lower() in ('searchword', 'q', 'keyword', 'wd', 'searchcontent'):
                             search_base = urljoin(website, action)
                             return f"{search_base}?{name}={{query}}"
         except:
             pass
 
-    # 也检查页面中的搜索链接 (如 /search 开头的链接)
-    if r:
-        try:
-            for a in soup.find_all('a', href=True):
-                href = a.get('href', '')
-                if '/search' in href.lower() and 'searchword' not in href.lower():
-                    search_base = urljoin(website, href.split('?')[0])
-                    test_url = f"{search_base}?searchWord={quote('2026年预算')}"
-                    tr = fetch(session, test_url, timeout=8)
-                    if tr and len(tr.text) > 1000 and ('搜索' in tr.text or '结果' in tr.text or '预算' in tr.text):
-                        logger.info(f"  [{city}] 探测到搜索接口(链接): {search_base}?searchWord={{query}}")
-                        return f"{search_base}?searchWord={{query}}"
-        except:
-            pass
-
-    # 尝试常见模式 (试前25个最常见的)
+    # 尝试常见模式
     test_query = quote("2026年预算")
-    for pattern in SEARCH_URL_PATTERNS[:25]:
+    for pattern in SEARCH_URL_PATTERNS:
         url = urljoin(website, pattern.format(query=test_query))
         try:
-            r = fetch(session, url, timeout=5)
+            r = fetch(session, url, timeout=8)
             if r and len(r.text) > 1000 and ('搜索' in r.text or '结果' in r.text or '预算' in r.text):
                 logger.info(f"  [{city}] 探测到搜索接口: {pattern}")
                 return urljoin(website, pattern)
         except:
             pass
-        time.sleep(0.1)
+        time.sleep(0.2)
 
     return None
 
@@ -898,183 +672,34 @@ COMMON_BUDGET_PATHS = [
     "/zwgk/zfxxgk/czxx/",
     "/ztzl/yjsgk/", "/ztzl/ysgk/",
     "/col/col_budget/index.html",
-    "/gkml/czyjs/",
-    "/gkml/czyjs/column-index-1.shtml",
-    "/zdxxgk/czzjxx/szfbmczyjs/",
-    "/zdxxgk/czzjxx/szfbmczyjs/2026/",
-    "/zwgk/zdly/czxx/bmczyjs/2026n/",
-    "/zwgk/czxx/czyjs/bmczys/",
-    "/zwgk/fdzdgknr/czxx/czyjs/",
-    "/zwgk/fdzdgknr/czxx/czyjs/bmczys/",
-    "/columns/zhuzhan/tsczxx/",
-    "/zwgk/fdzdgknr/ysjs/bmczyjsbgjsgjf/bmysnew/2026nbmys/",
-    "/zdlyxxgk/czyjshsgjf/czyjs/",
-    "/zdlyxxgk/czyjshsg/bmyjs/",
-    "/zwgk/zdly/czxx/bmczyjs/index.html",
-    "/zwgk/zdly/czxx/bmczyjs/index.shtml",
-    "/zfxxgk/fdzdgknr/czxx/bmczyjs/index.html",
-    "/zwgk/zfxxgkzl/fdzdgknr/czxx/bmczyjs/",
-    "/zwgk/zfxxgkzl/fdzdgknr/ysjs/bmczyjsbgjsgjf/",
-    "/xxgk/fdzdgk/czxx/bmczyjs/2026/",
-    "/zwgk/zdly/czsj/bmys/",
-    "/zwgk/zdly/czsj/czyjs/",
-    "/zwgk/zdly/czxx/czyjs/2026/",
-    "/zwgk/zdly/czxx/bmysjsgk/",
-    "/zwgk/zdzl/czyjs/",
     "/zwgk/zdly/czzj/bmys/",
-    "/zfxxgk/zdgk/czxx/bmys/",
-    "/zfxxgk/zdgk/czxx/bmczyjs/",
-    "/zwgk/zdly/czxx/bmyjs/",
-    "/zwgk/zdly/czxx/bmyjs/2026/",
-    "/zwgk/czsj/bmczyjs/",
-    "/zwgk/czsj/bmczyjs/2026/",
-    "/czj/xxgk/bmys/",
-    "/czj/xxgk/bmys/2026/",
-    "/czj/ysjs/",
-    "/czj/ysjs/bmys/",
-    "/openness/detail/content/",
-    "/col/col_bmys/index.html",
-    "/xxgk/bmys/",
-    "/xxgk/bmys/2026/",
-    "/zfxxgk/fdzdgknr/czxx/czyjs/bmczys/2026/",
-    "/zwgk/czxx/yjshsg/bmczys/",
-    "/zwgk/czxx/yjshsg/bmczys/2026/",
-    "/zwgk/zfxxgk/czxx/bmczyjs/2026/",
-    "/zwgk/zdly/czxx/bmczyjs/index_1.shtml",
-    "/zwgk/zdly/czgk/bmys/",
-    "/zwgk/zdly/czgk/bmys/2026/",
-    "/zfxxgk/fdzdgknr/czxx/bmczyjs/index.shtml",
-    "/col/col_bmys/",
-    "/col/col_czyjs/index.html",
-    "/zfxxgk/czxx/czyjs/bmczys/",
-    "/zfxxgk/czxx/czyjs/bmczys/2026/",
-    "/zwgk/czxx/yjshsg/bmczys/index.html",
-    "/zwgk/zdly/czzj/bmczyjs/2026n/",
-    "/xxgk/czgk/bmys/",
-    "/xxgk/czgk/bmys/2026/",
-    "/zfxxgk/fdzdgknr/czxx/czyjs/bmczys/index.html",
-    "/zwgk/bmys/2026/",
-    "/zwgk/ysjs/bmys/",
-    "/zwgk/ysjs/bmys/2026/",
-    # 新增 - 更多常见结构
-    "/ztzl/2026ys/",
-    "/ztzl/2026bmys/",
-    "/ztzl/ysgk/2026/",
-    "/ztzl/bmys/2026/",
-    "/ztzl/ysgk/bmys/",
-    "/bmys-26-002/index.html",
-    "/col/col_budget_2026/index.html",
-    "/zwgk/zdly/czxx/2026bmczyjs/",
-    "/zwgk/zdly/czxx/czyjs/bmczys/2026/",
-    "/zfxxgk/fdzdgknr/czxx/2026bmczyjs/",
-    "/zfxxgk/fdzdgknr/czxx/czyjs/2026bmczys/",
-    "/zwgk/zfxxgk/czxx/2026bmczyjs/",
-    "/col/col1229063412/index.html",
-    "/zfxxgk/fdzdgknr/ysjs/bmczyjsbgjsgjf/2026/",
-    "/zwgk/zdly/czzj/2026bmczyjs/",
-    "/xxgk/fdzdgk/czxx/2026bmczyjs/",
-    # list.html 变体
-    "/zwgk/zdly/czxx/bmczyjs/list.html",
-    "/zfxxgk/fdzdgknr/czxx/bmczyjs/list.html",
-    "/xxgk/czsj/list.html",
-    "/xxgk/fdzdgk/czxx/bmczyjs/list.html",
-    "/zwgk/czxx/bmczyjs/list.html",
-    # 新增路径 - 基于常见政府网站结构
-    "/zfxxgk/fdzdgknr/czyjshsg/bmczys/",
-    "/zfxxgk/fdzdgknr/czyjshsg/bmczys/2026/",
-    "/zwgk/zdly/czxx/bmys/2026/",
-    "/zwgk/zdly/czxx/yjsgk/",
-    "/zwgk/zdly/czxx/yjsgk/2026/",
-    "/zfxxgk/zdlyxxgk/czxx/bmczyjs/",
-    "/zfxxgk/zdlyxxgk/czxx/bmczyjs/2026/",
-    "/zwgk/zdly/czzj/yjsgk/",
-    "/zwgk/zdly/czzj/yjsgk/2026/",
-    "/szf/ztzl/ysgk/bmys/",
-    "/szf/ztzl/ysgk/bmys/2026/",
-    "/zwgk/zfxxgk/fdzdgknr/czxx/bmczyjs/",
-    "/zfxxgk/fdzdgknr/bmys/",
-    "/zfxxgk/fdzdgknr/bmys/2026/",
-    "/xxgk/czxx/bmczyjs/",
-    "/xxgk/czxx/bmczyjs/2026/",
-    "/xxgk/fdzdgk/czyjs/",
-    "/xxgk/fdzdgk/czyjs/2026/",
-    "/zwgk/fdzdgknr/ysjs/bmys/",
-    "/zwgk/fdzdgknr/ysjs/bmys/2026/",
-    # 新增路径 - 基于失败城市分析
-    "/zfxxgk/czxx/bmczyjs/",
-    "/zfxxgk/czxx/bmczyjs/2026/",
-    "/zwgk/czxx/czyjs/",
-    "/zwgk/czxx/czyjs/2026/",
-    "/czj/czyjs/",
-    "/czj/czyjs/2026/",
-    "/czj/zwgk/bmys/",
-    "/czj/zwgk/bmys/2026/",
-    "/czj/bmczyjs/",
-    "/czj/bmczyjs/2026/",
-    "/zwgk/ysjs/",
-    "/zwgk/ysjs/2026/",
-    "/zwgk/zdly/czxx/czyjs/bmys/",
-    "/zwgk/zdly/czxx/czyjs/bmys/2026/",
-    "/zfxxgk/zdlyxxgk/czyjshsg/bmczyjs/",
-    "/zfxxgk/zdlyxxgk/czyjshsg/bmczyjs/2026/",
     "/zwgk/zdly/czzj/bmys/2026/",
-    "/zwgk/zdly/czxx/bmys/",
-    "/zwgk/czgk/bmys/",
-    "/zwgk/czgk/bmys/2026/",
-    "/zwgk/czgk/czyjs/",
-    "/zwgk/xxgk/czxx/",
-    "/zwgk/xxgk/czxx/bmczyjs/",
-    "/zfxxgk/czxx/yjshsg/bmys/",
-    "/zfxxgk/czxx/yjshsg/bmys/2026/",
+    "/zwgk/czxx/czyjs/2026/",
+    "/zwgk/czxx/bmys/",
+    "/zwgk/czxx/bmys/2026/",
+    "/zfxxgk/czxx/bmczyjs/2026/",
+    "/zfxxgk/czxx/bmys/",
+    "/xxgk/fdzdgk/czxx/bmczyjs/2026/",
+    "/xxgk/czxx/bmczyjs/",
+    "/zwgk/bmyjs/",
+    "/zwgk/bmyjs/2026/",
+    "/zfxxgk/fdzdgknr/czxx/czyjs/",
+    "/zfxxgk/fdzdgknr/czxx/czyjs/2026/",
+    "/czj/zwgk/yjshsg/bmyjs/",
+    "/czj/xxgk/bmczyjs/",
 ]
 
 def probe_budget_page(session, website, city):
-    # Try standard paths on the main website
     for path in COMMON_BUDGET_PATHS:
         url = urljoin(website, path)
         try:
-            r = fetch(session, url, timeout=10)
+            r = fetch(session, url, timeout=8)
             if r and len(r.text) > 500 and '预算' in r.text:
                 logger.info(f"  [{city}] 探测到预算页: {url}")
                 return url
         except:
             pass
-        time.sleep(0.1)
-
-    # Try financial bureau subdomain (czj.xxx.gov.cn or cz.xxx.gov.cn)
-    parsed = urlparse(website)
-    domain = parsed.netloc.replace('www.', '')
-    cz_domains = [f"czj.{domain}", f"cz.{domain}", f"caizj.{domain}", f"caizheng.{domain}"]
-    cz_paths = ["/", "/zwgk/", "/xxgk/bmys/", "/ysjs/", "/ysgk/",
-                "/zwgk/czyjsgk/", "/xxgk/czsj/list.html",
-                "/zwgk_53713/yjsgktypt/ysgk/2026bmys/",
-                "/xxgk/bmys/2026/", "/zwgk/bmys/", "/zwgk/bmys/2026/",
-                "/zfxxgk/fdzdgknr/czxx/bmczyjs/",
-                "/xxgk/gkml/czyjs/", "/ysgkpt/",
-                "/gkml/czyjs/", "/bmys/", "/czyjs/",
-                "/zwgk/zdly/czxx/bmczyjs/",
-                "/zwgk/zdly/czzj/bmczyjs/",
-                "/zfxxgk/fdzdgknr/ysjs/bmczyjsbgjsgjf/bmysnew/2026nbmys/",
-                "/zwgk/fdzdgknr/czxx/bmczyjs/",
-                "/zfxxgk/zdlyxxgk/czxx/bmczyjs/",
-                "/zfxxgk/zdlyxxgk/czyjshsg/bmyjs/",
-                "/ztzl/2026ys/", "/ztzl/ysgk/bmys/",
-                "/xxgk/fdzdgk/czyjs/", "/xxgk/fdzdgk/czyjs/2026/",
-                "/xxgk/bmys/list.html", "/zwgk/bmys/list.html",
-                "/czyjs/2026/", "/bmys/2026/",
-                "/ysgkpt/bmys/", "/ysgkpt/bmys/2026/"]
-    for cz_domain in cz_domains:
-        for cz_path in cz_paths:
-            cz_url = f"http://{cz_domain}{cz_path}"
-            try:
-                r = fetch(session, cz_url, timeout=12)
-                if r and len(r.text) > 500 and '预算' in r.text:
-                    logger.info(f"  [{city}] 探测到财政局预算页: {cz_url}")
-                    return cz_url
-            except:
-                pass
-            time.sleep(0.2)
-
+        time.sleep(0.2)
     return None
 
 # ========== 处理单个城市 ==========
@@ -1116,7 +741,7 @@ def process_city(city_info, progress, force=False):
     existing_depts = set()
     try:
         for f in Path(city_folder).iterdir():
-            if f.suffix in ('.pdf', '.html') and f.name != '.gitkeep' and f.name != '爬取汇总.txt':
+            if f.suffix == '.pdf' and f.name != '.gitkeep' and f.name != '爬取汇总.txt':
                 if f.stat().st_size > 1000:
                     for dept in TARGET_DEPTS:
                         clean = safe_filename(dept)
@@ -1137,7 +762,7 @@ def process_city(city_info, progress, force=False):
     still_missing = needed_depts - found_new - existing_depts
     strategy_used = "paginated_list"
 
-    if len(still_missing) > 3:
+    if len(still_missing) > 5:
         # ===== 策略2: 搜索接口 =====
         logger.info(f"  [{city}] 还缺 {len(still_missing)} 个部门, 启用搜索策略")
         search_results = strategy_search(session, website, city, still_missing)
@@ -1188,22 +813,7 @@ def process_city(city_info, progress, force=False):
                             break
 
             if not pdf_downloaded:
-                # 保存为HTML兜底 - 但要验证内容确实是预算文档
-                if links_sorted:
-                    r = fetch(session, links_sorted[0][1])
-                    if r and r.text:
-                        # Only save HTML if it contains budget-related content
-                        has_budget = ("部门预算" in r.text or "预算公开" in r.text
-                                      or ("预算" in r.text and "2026" in r.text))
-                        if has_budget:
-                            hpath = os.path.join(city_folder, f"{clean_dept}_2026年部门预算.html")
-                            with open(hpath, 'w', encoding='utf-8') as f:
-                                f.write(r.text)
-                            found_depts.append(dept_name)
-                            downloaded += 1
-                            logger.info(f"  [{city}] ✓ {dept_name} (HTML兜底)")
-                        else:
-                            logger.info(f"  [{city}] ✗ {dept_name} HTML无预算内容, 跳过")
+                logger.info(f"  [{city}] ✗ {dept_name} 未找到PDF")
 
             time.sleep(DELAY_PAGE)
         except Exception as e:

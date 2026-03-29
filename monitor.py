@@ -40,7 +40,6 @@ def count_files(city_key):
     if not folder.exists():
         return 0, 0
     pdfs = 0
-    htmls = 0
     for f in folder.iterdir():
         if f.name in ('.gitkeep', '爬取汇总.txt'):
             continue
@@ -48,9 +47,7 @@ def count_files(city_key):
             continue
         if f.suffix == '.pdf':
             pdfs += 1
-        elif f.suffix == '.html':
-            htmls += 1
-    return pdfs, htmls
+    return pdfs, 0
 
 
 def load_progress():
