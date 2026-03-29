@@ -797,7 +797,8 @@ def process_city(city_info, progress, force=False):
                 if f.stat().st_size > 1000:
                     for dept in TARGET_DEPTS:
                         clean = safe_filename(dept)
-                        if f.name.startswith(clean):
+                        # 支持新旧两种命名格式
+                        if f.name.startswith(clean) or f"市{clean}部门预算" in f.name or f"市{clean}（" in f.name:
                             existing_depts.add(dept)
     except:
         pass
@@ -835,7 +836,7 @@ def process_city(city_info, progress, force=False):
             links_sorted = sorted(links, key=lambda x: x[3], reverse=True)
 
             clean_dept = safe_filename(dept_name)
-            save_path = os.path.join(city_folder, f"{clean_dept}_2026年部门预算.pdf")
+            save_path = os.path.join(city_folder, f"2026年{city}市{clean_dept}部门预算.pdf")
 
             # 已有则跳过
             if os.path.exists(save_path) and os.path.getsize(save_path) > 1000:
