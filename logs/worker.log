@@ -10790,3 +10790,17 @@ Fast-forward
 2026-03-29 08:50:11 任务标记running但进程已死，自动重启
 2026-03-29 08:50:11 自动重启爬取 PID: 1720549
 2026-03-29 08:50:11 统计: 69城市, 233个PDF, 爬取未运行
+From https://github.com/calinchow-del/renwu
+ * branch            main       -> FETCH_HEAD
+   ce52c1b..5531ac3  main       -> origin/main
+error: cannot rebase: You have unstaged changes.
+error: Please commit or stash them.
+From https://github.com/calinchow-del/renwu
+ * branch            main       -> FETCH_HEAD
+Merge made by the 'ort' strategy.
+ monitor.py    |  7 ++++++-
+ scrape_v12.py | 28 ++++++++++++++++++----------
+ 2 files changed, 24 insertions(+), 11 deletions(-)
+2026-03-29 09:15:04 任务标记running但进程已死，自动重启
+2026-03-29 09:15:04 自动重启爬取 PID: 1732890
+2026-03-29 09:15:04 统计: 69城市, 284个PDF, 爬取运行中 (PID: 1732890)
